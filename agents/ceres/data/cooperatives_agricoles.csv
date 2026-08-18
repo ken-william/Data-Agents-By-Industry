@@ -1,0 +1,9 @@
+id_cooperative,nom_cooperative,siren,nom_region,code_departement,capacite_stockage_tonnes,filiere_principale
+COO_4001,Coopérative Arterris,104332181,Occitanie,31 - Haute-Garonne,450000.0,Grandes cultures
+COO_4002,Coopérative Euralis,960013389,Nouvelle-Aquitaine,64 - Pyrénées-Atlantiques,380000.0,Grandes cultures
+COO_4003,Coopérative Lur Berri,083863794,Nouvelle-Aquitaine,64 - Pyrénées-Atlantiques,290000.0,Elevage
+COO_4004,Coopérative Axereal,026542351,Centre-Val de Loire,28 - Eure-et-Loir,620000.0,Grandes cultures
+COO_4005,Coopérative Vivescia,161559407,Grand Est,51 - Marne,750000.0,Grandes cultures
+COO_4006,Coopérative Tereos,816184959,Hauts-de-France,02 - Aisne,890000.0,Grandes cultures
+COO_4007,Coopérative Agrial,310341316,Normandie,14 - Calvados,510000.0,Maraichage
+COO_4008,Coopérative Cristal Union,475255341,Grand Est,51 - Marne,680000.0,Grandes cultures

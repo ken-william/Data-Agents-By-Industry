@@ -1,0 +1,28 @@
+id_prevision,annee_saison,code_departement,nom_region,temperature_anomalie_c,precipitations_anomalie_pct,indice_secheresse_evapotranspiration_prevu,baisse_rendement_predite_pct
+PREV_2026_001,2026-ETE,31 - Haute-Garonne,Occitanie,3.7,-42.1,0.9,24.4
+PREV_2026_002,2026-ETE,32 - Gers,Occitanie,1.2,-5.1,0.46,10.3
+PREV_2026_003,2026-ETE,81 - Tarn,Occitanie,3.8,-30.7,0.91,25.1
+PREV_2026_004,2026-ETE,34 - Hérault,Occitanie,0.8,-11.8,0.37,7.0
+PREV_2026_005,2026-ETE,11 - Aude,Occitanie,4.1,-30.1,0.81,30.0
+PREV_2026_006,2026-ETE,82 - Tarn-et-Garonne,Occitanie,1.2,-5.9,0.41,7.5
+PREV_2026_007,2026-ETE,33 - Gironde,Nouvelle-Aquitaine,3.1,-35.5,0.8,29.2
+PREV_2026_008,2026-ETE,47 - Lot-et-Garonne,Nouvelle-Aquitaine,1.7,-11.0,0.35,14.5
+PREV_2026_009,2026-ETE,24 - Dordogne,Nouvelle-Aquitaine,3.5,-43.5,0.76,23.8
+PREV_2026_010,2026-ETE,64 - Pyrénées-Atlantiques,Nouvelle-Aquitaine,1.4,-7.1,0.41,5.6
+PREV_2026_011,2026-ETE,79 - Deux-Sèvres,Nouvelle-Aquitaine,3.3,-28.1,0.86,33.7
+PREV_2026_012,2026-ETE,63 - Puy-de-Dôme,Auvergne-Rhône-Alpes,1.7,-14.9,0.48,11.5
+PREV_2026_013,2026-ETE,01 - Ain,Auvergne-Rhône-Alpes,1.3,-12.3,0.46,6.1
+PREV_2026_014,2026-ETE,26 - Drôme,Auvergne-Rhône-Alpes,1.2,-10.5,0.54,13.3
+PREV_2026_015,2026-ETE,38 - Isère,Auvergne-Rhône-Alpes,1.1,-10.0,0.34,13.7
+PREV_2026_016,2026-ETE,69 - Rhône,Auvergne-Rhône-Alpes,1.7,-12.0,0.46,10.8
+PREV_2026_017,2026-ETE,28 - Eure-et-Loir,Centre-Val de Loire,3.0,-32.0,0.86,31.5
+PREV_2026_018,2026-ETE,45 - Loiret,Centre-Val de Loire,1.3,-15.0,0.38,5.2
+PREV_2026_019,2026-ETE,37 - Indre-et-Loire,Centre-Val de Loire,4.1,-30.1,0.92,26.0
+PREV_2026_020,2026-ETE,80 - Somme,Hauts-de-France,0.9,-6.2,0.54,5.8
+PREV_2026_021,2026-ETE,59 - Nord,Hauts-de-France,1.3,-14.3,0.49,12.3
+PREV_2026_022,2026-ETE,60 - Oise,Hauts-de-France,0.9,-10.2,0.44,7.5
+PREV_2026_023,2026-ETE,62 - Pas-de-Calais,Hauts-de-France,1.7,-10.8,0.35,10.1
+PREV_2026_024,2026-ETE,51 - Marne,Grand Est,1.5,-13.0,0.38,14.5
+PREV_2026_025,2026-ETE,10 - Aube,Grand Est,1.4,-10.6,0.43,6.1
+PREV_2026_026,2026-ETE,68 - Haut-Rhin,Grand Est,1.0,-11.6,0.45,7.2
+PREV_2026_027,2026-ETE,67 - Bas-Rhin,Grand Est,1.0,-14.3,0.46,7.2

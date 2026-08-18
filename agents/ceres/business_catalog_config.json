@@ -1,0 +1,59 @@
+{
+  "agent_id": "ceres-agent",
+  "displayName": "Ceres - Transition Agroécologique",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/agriculture-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/agriculture-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier Agriculture & Ruralité",
+    "description": "Glossaire d'empreinte carbone ADEME, stress hydrique ETP et conversion bio AB pour Ceres.",
+    "categories": [
+      {
+        "categoryId": "empreinte-ecologique",
+        "displayName": "Catégorie : Bilan Carbone ADEME & Impact Sols",
+        "description": "Indicateurs d'impact environnemental des produits issus d'Agribalyse ADEME",
+        "terms": [
+          {
+            "termId": "agribalyse-co2",
+            "displayName": "Empreinte Carbone Agribalyse ADEME",
+            "definition": "Émissions de CO2 kg/kg de produit agricole selon la base officielle ADEME.",
+            "mapped_bigquery_column": "co2_kg_par_kg_produit",
+            "mapped_bigquery_table": "ademe_impact_agribalyse"
+          },
+          {
+            "termId": "acidification-sols",
+            "displayName": "Indice d'Acidification des Sols",
+            "definition": "Impact d'acidification des sols et eutrophisation de l'eau.",
+            "mapped_bigquery_column": "impact_acidification_sols",
+            "mapped_bigquery_table": "ademe_impact_agribalyse"
+          }
+        ]
+      },
+      {
+        "categoryId": "resilience-climatique",
+        "displayName": "Catégorie : Stress Hydrique & Conversion Agroécologique",
+        "description": "Mesure des risques sécheresse et certification de conversion bio AB",
+        "terms": [
+          {
+            "termId": "stress-hydrique-etp",
+            "displayName": "Indice de Stress Hydrique Evapotranspiration",
+            "definition": "Mesure du déficit hydrique des cultures face à la sécheresse et hausse des températures.",
+            "mapped_bigquery_column": "indice_stress_hydrique_evapotranspiration",
+            "mapped_bigquery_table": "meteo_climat_impact_agri"
+          },
+          {
+            "termId": "conversion-bio-ab",
+            "displayName": "Conversion Agroécologique Bio AB",
+            "definition": "Pourcentage de surface agricole SAU convertie en Agriculture Biologique (AB).",
+            "mapped_bigquery_column": "surface_bio_ab_ha",
+            "mapped_bigquery_table": "exploitations_agricoles"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}
