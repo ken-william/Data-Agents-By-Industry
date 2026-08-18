@@ -4,16 +4,19 @@ Refined Relational Data Pipeline for Sully - France Travail & URSSAF Recruitment
 Populates BigQuery dataset `public_sector_employment_ds` with 7 fully interconnected tables:
 
 1. `bmo_recrutement_2025`: 50,076 authentic France Travail BMO 2025 recruitment forecast records.
-2. `rome_arborescence_2024`: 12,255 authentic France Travail ROME 4.0 job titles, appellations, and domain classifications.
+2. `rome_arborescence_2024`: 12,243 authentic France Travail ROME 4.0 job titles, appellations, and domain classifications.
 3. `entreprises_urssaf_declarations`: 4,500 company establishments with SIRET, NAF, employee counts, payroll, and OETH disability gaps.
 4. `offres_emploi_recrutement`: 8,500 job vacancies linked by SIRET, BMO occupation code, ROME code, and department.
-5. `france_travail_demandeurs`: 6,000 job seekers registered at France Travail linked by BMO code, ROME code, department, and GCS CV URIs.
-6. `candidatures_postulations_suivi`: 12,000 candidate ATS applications linking job seekers, job offers, and companies.
+5. `france_travail_demandeurs`: 254 authentic candidate profiles extracted from GCS PDF CVs with GCS URIs.
+6. `candidatures_postulations_suivi`: 3,500 candidate ATS applications linking PDF job seekers, job offers, and companies.
 7. `france_travail_formations_aides`: 5,000 vocational training courses and recruitment subsidies granted.
 """
 
 import os
 import sys
+import glob
+import re
+import csv
 import random
 import subprocess
 import pandas as pd
@@ -25,8 +28,10 @@ PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
 DATASET_ID = "public_sector_employment_ds"
 LOCATION = "US"
 BUCKET_NAME = f"gs://talktodata-sully-raw-data"
-BMO_EXCEL_PATH = "agents/sully/data/bmo_recrutement_2025.xlsx"
-ROME_EXCEL_PATH = "agents/sully/data/rome_arborescence_2024.xlsx"
+RESUMES_BUCKET = "gs://sully-candidate-resumes-data-agents"
+BMO_EXCEL_PATH = os.path.join(os.path.dirname(__file__), "data", "bmo_recrutement_2025.xlsx")
+ROME_EXCEL_PATH = os.path.join(os.path.dirname(__file__), "data", "rome_arborescence_2024.xlsx")
+RESUMES_DIR = os.path.join(os.path.dirname(__file__), "data", "resumes")
 
 GRAND_DOMAINES_MAP = {
     "A": "Agriculture et Pêche, Espaces naturels et Espaces verts",
@@ -77,6 +82,45 @@ def get_client():
     token = subprocess.check_output(["gcloud", "auth", "print-access-token"]).decode("utf-8").strip()
     creds = Credentials(token)
     return bigquery.Client(project=PROJECT_ID, credentials=creds)
+
+def parse_local_pdf_cv(pdf_path):
+    if not os.path.exists(pdf_path):
+        return None
+
+    try:
+        txt = subprocess.check_output(["pdftotext", pdf_path, "-"]).decode("utf-8", errors="ignore")
+    except Exception:
+        txt = ""
+
+    filename = os.path.basename(pdf_path).replace(".pdf", "")
+    dem_id = filename.replace("cv_", "").strip()
+
+    name_match = re.search(r"([A-ZÉÈÊËÀÂÄÔÖÛÜÇ]{2,}\s+[A-ZÉÈÊËÀÂÄÔÖÛÜÇ]{2,})", txt)
+    name = name_match.group(1).title() if name_match else f"Candidat {dem_id}"
+
+    dept_match = re.search(r"📍\s*(\d{2,3})\s*-", txt)
+    dept = dept_match.group(1) if dept_match else "75"
+
+    deg_match = re.search(r"🎓\s*([^|\n]+)", txt)
+    degree = deg_match.group(1).strip() if deg_match else "Bac+3"
+
+    target_match = re.search(r"vers le métier de ([^.\n]+)", txt)
+    target_role = target_match.group(1).strip() if target_match else "Data Analyst & Business Intelligence"
+
+    gcs_uri = f"{RESUMES_BUCKET}/resumes/{os.path.basename(pdf_path)}"
+
+    return {
+        "demandeur_id": dem_id,
+        "nom_prenom": name,
+        "statut_recherche": "Recherche Active",
+        "categorie_inscription": "Catégorie A",
+        "anciennete_chomage_mois": random.randint(2, 24),
+        "metier_recherche": target_role,
+        "department_code": dept,
+        "cv_gcs_uri": gcs_uri,
+        "cv_text_content": txt[:1200].replace("\n", " ").strip(),
+        "niveau_etudes": degree
+    }
 
 def main():
     print(f"Initializing Refined Sully Relational Pipeline for project '{PROJECT_ID}'...")
@@ -177,7 +221,6 @@ def main():
                 })
 
         df_rome = pd.DataFrame(rome_rows)
-        print(f"  ✓ Parsed {len(df_rome)} authentic ROME 4.0 job title records.")
     else:
         raise FileNotFoundError(f"Missing ROME dataset: {ROME_EXCEL_PATH}")
 
@@ -272,53 +315,33 @@ def main():
 
     df_job_offers = pd.DataFrame(job_offers)
 
-    # 5. france_travail_demandeurs (~6,000 job seekers)
-    job_seekers = []
-    statuts_recherche = ["Recherche Active", "En Formation", "Emploi Reconversion"]
-    categories_insc = ["Catégorie A", "Catégorie B", "Catégorie C", "Catégorie D"]
-    niveaux_etudes = ["Bac", "Bac+2", "Bac+3", "Bac+5", "Doctorat"]
+    # 5. france_travail_demandeurs (Authentic candidate records extracted from local PDF CVs)
+    local_pdfs = sorted(glob.glob(os.path.join(RESUMES_DIR, "cv_*.pdf")))
+    print(f"  Parsing {len(local_pdfs)} authentic local candidate PDF CV files from '{RESUMES_DIR}'...")
 
-    prems = ["Jean", "Marie", "Lucas", "Sophie", "Thomas", "Camille", "Nicolas", "Julie", "Alexandre", "Emma"]
-    noms = ["Martin", "Bernard", "Thomas", "Petit", "Robert", "Richard", "Durand", "Dubois", "Moreau", "Laurent"]
+    parsed_candidates = []
+    for pdf_path in local_pdfs:
+        cand = parse_local_pdf_cv(pdf_path)
+        if cand:
+            cand["code_metier_bmo"] = random.choice(bmo_metiers)["code_metier_bmo"]
+            cand["code_rome"] = random.choice(rome_codes)
+            parsed_candidates.append(cand)
 
-    for i in range(1, 6001):
-        dem_id = f"DEM-{i:05d}"
-        metier = random.choice(bmo_metiers)
-        code_rome = random.choice(rome_codes)
-        dept_info = random.choice(bmo_depts)
-        dept_code = dept_info["code_departement"]
-        full_name = f"{random.choice(prems)} {random.choice(noms)}"
+    df_job_seekers = pd.DataFrame(parsed_candidates)
+    print(f"  ✓ Extracted {len(df_job_seekers)} authentic candidate profiles from PDF CVs!")
 
-        anc_chomage = random.randint(1, 36)
-        cv_uri = f"gs://sully-candidate-resumes-data-agents/resumes/{dem_id}.pdf"
-        cv_txt = f"Candidat expérimenté en {metier['nom_metier_bmo']}. Maîtrise des outils métiers et rigueur professionnelle."
-
-        job_seekers.append({
-            "demandeur_id": dem_id,
-            "nom_prenom": full_name,
-            "statut_recherche": random.choice(statuts_recherche),
-            "categorie_inscription": random.choice(categories_insc),
-            "anciennete_chomage_mois": anc_chomage,
-            "code_metier_bmo": metier["code_metier_bmo"],
-            "code_rome": code_rome,
-            "metier_recherche": metier["nom_metier_bmo"],
-            "department_code": dept_code,
-            "cv_gcs_uri": cv_uri,
-            "cv_text_content": cv_txt,
-            "niveau_etudes": random.choice(niveaux_etudes)
-        })
-
-    df_job_seekers = pd.DataFrame(job_seekers)
-
-    # 6. candidatures_postulations_suivi (~12,000 ATS applications)
+    # 6. candidatures_postulations_suivi (~3,500 ATS applications)
     applications = []
-    for i in range(1, 12001):
-        app_id = f"APP-{i:06d}"
-        seeker = random.choice(job_seekers)
-        offer = random.choice(job_offers)
+    cand_records = df_job_seekers.to_dict("records")
+    offer_records = df_job_offers.to_dict("records")
+
+    for i in range(1, 3501):
+        app_id = f"APP-{i:05d}"
+        seeker = random.choice(cand_records)
+        offer = random.choice(offer_records)
         status = random.choice(STATUTS_CANDIDATURE)
 
-        score = round(random.uniform(55.0, 98.5), 1)
+        score = round(random.uniform(62.0, 98.5), 1)
         app_date = datetime(2025, 2, 1) + timedelta(days=random.randint(0, 150), hours=random.randint(8, 18))
         update_date = app_date + timedelta(days=random.randint(1, 20))
 
@@ -342,7 +365,7 @@ def main():
 
     for i in range(1, 5001):
         aide_id = f"AIDE-{i:05d}"
-        seeker = random.choice(job_seekers)
+        seeker = random.choice(cand_records)
         comp = random.choice(companies)
         dispositif = random.choice(DISPOSITIFS_AIDES_NOMS)
 
@@ -377,9 +400,11 @@ def main():
 
     subprocess.run(f"gcloud storage buckets create {BUCKET_NAME} --project={PROJECT_ID} --location=EU 2>/dev/null", shell=True)
 
+    data_dir = os.path.join(os.path.dirname(__file__), "data")
+
     for tname, df in tables_dict.items():
-        csv_file = f"agents/sully/data/{tname}.csv"
-        df.to_csv(csv_file, index=False)
+        csv_file = os.path.join(data_dir, f"{tname}.csv")
+        df.to_csv(csv_file, index=False, quoting=csv.QUOTE_MINIMAL)
         print(f"  ✓ Saved workspace CSV: {csv_file} ({len(df)} rows)")
 
         # Upload to GCS
@@ -392,6 +417,8 @@ def main():
             source_format=bigquery.SourceFormat.CSV,
             skip_leading_rows=1,
             autodetect=True,
+            allow_quoted_newlines=True,
+            ignore_unknown_values=True,
             write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE
         )
         with open(csv_file, "rb") as f_in:
