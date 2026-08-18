@@ -1,14 +1,15 @@
 -- ============================================================================
--- Schema DDL for PulseChecker - Santé, Urgences Hospitalières & FINESS
+-- Schema DDL for PulseChecker - Santé, Urgences Hospitalières, FINESS & Open BIO
 -- Dataset: healthcare_medical_ds (Project: data-agents-by-industry)
 -- Relational Architecture linking Official FINESS French Hospital Master,
--- Emergency Room Occupancy, Surgical Operating Blocks, Drug Shortages, and Medical Staff On-Call Plannings.
+-- Emergency Room Occupancy, Surgical Operating Blocks, Drug Shortages, Medical Staff Plannings,
+-- and Official Assurance Maladie Open Bio Medical Biology Expenses.
 -- ============================================================================
 
 CREATE SCHEMA IF NOT EXISTS `healthcare_medical_ds`
 OPTIONS (
   location = 'US',
-  description = 'Dataset PulseChecker : Operations hospitalieres, urgences, suivi des lits, blocs operatoires, ruptures de medicaments et planning medical.'
+  description = 'Dataset PulseChecker : Operations hospitalieres, urgences, lits, blocs operatoires, medicaments et depenses Open Bio de l Assurance Maladie.'
 );
 
 -- 1. Table: finess_etablissements_sante (Official FINESS Master of French Hospitals, CHU & Clinics)
@@ -30,7 +31,7 @@ OPTIONS (
   description = "Répertoire master FINESS des hôpitaux, CHU, CHR et cliniques privées de France."
 );
 
--- 2. Table: hopitaux_flux_admissions_urgences (Emergency Room Admissions, Wait Times & Saturation)
+-- 2. Table: hopitaux_flux_admissions_urgences (Emergency Room Admissions, Wait Times & Plan Blanc)
 CREATE OR REPLACE TABLE `healthcare_medical_ds.hopitaux_flux_admissions_urgences` (
   id_releve_urgences STRING OPTIONS(description="Identifiant unique du relevé horaire aux urgences"),
   id_finess_etablissement STRING OPTIONS(description="Clé étrangère vers finess_etablissements_sante.id_finess_etablissement"),
@@ -93,4 +94,20 @@ CREATE OR REPLACE TABLE `healthcare_medical_ds.personnel_medical_garde_planning`
 )
 OPTIONS (
   description = "Planning des gardes médicales, suivi des sous-effectifs et absentéisme soignant."
+);
+
+-- 6. Table: assurance_maladie_open_bio_depenses (Official Ameli Open Bio Medical Biology Expenses)
+CREATE OR REPLACE TABLE `healthcare_medical_ds.assurance_maladie_open_bio_depenses` (
+  annee INT64 OPTIONS(description="Année de comptabilisation des actes de biologie médicale"),
+  code_groupe_biologie INT64 OPTIONS(description="Code officiel du groupe d'actes de biologie médicale (ex: 1=Hématologie, 2=Biochimie, 4=Microbiologie)"),
+  libelle_groupe_biologie STRING OPTIONS(description="Libellé du groupe d'actes (Hématologie courante, Biochimie, Microbiologie, Immunologie)"),
+  code_region_beneficiaire STRING OPTIONS(description="Code région du bénéficiaire selon le référentiel INSEE / CNAM"),
+  nom_region STRING OPTIONS(description="Région administrative du bénéficiaire"),
+  nombre_beneficiaires_consommateurs INT64 OPTIONS(description="Nombre total de patients bénéficiaires consommateurs d'actes sur l'année"),
+  nombre_actes_biologie_realises INT64 OPTIONS(description="Dénombrement total des actes de biologie médicale exécutés"),
+  montant_base_remboursement_eur NUMERIC OPTIONS(description="Montant total de la base de remboursement en Euros (€)"),
+  montant_rembourse_assurance_maladie_eur NUMERIC OPTIONS(description="Montant total pris en charge et remboursé par l'Assurance Maladie (€)")
+)
+OPTIONS (
+  description = "Séries statistiques officielles Open Bio de l'Assurance Maladie sur les dépenses et volumes d'actes de biologie médicale en France."
 );

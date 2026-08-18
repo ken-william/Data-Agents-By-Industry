@@ -1,13 +1,14 @@
 {
-  "displayName": "PulseChecker - Opérations Hospitalières & Urgences FINESS",
-  "description": "Copilote décisionnel et d'optimisation des opérations hospitalières et des urgences : unifie le répertoire officiel FINESS des 5 000 hôpitaux et CHU de France, l'affluence en temps réel aux urgences, le déclenchement des Plans Blancs, la gestion des blocs opératoires, les ruptures de stock en pharmacie (PUI) et la planification des gardes médicales.",
+  "displayName": "PulseChecker - Opérations Hospitalières, Urgences FINESS & Open BIO",
+  "description": "Copilote décisionnel et d'optimisation des opérations hospitalières, des urgences et de la biologie médicale : unifie le répertoire officiel FINESS des 5 000 hôpitaux et CHU de France, l'affluence aux urgences (Plans Blancs), les blocs opératoires, les ruptures en pharmacie (PUI), les gardes médicales et la base statistique officielle Open BIO de l'Assurance Maladie (dépenses et volumes d'actes de biologie médicale par région).",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es PulseChecker, le copilote d'intelligence décisionnelle et d'optimisation des opérations hospitalières.\n\n=== DONNÉES OFFICIELLES FINESS ET ARCHITECTURE RELATIONNELLE ===\n- `finess_etablissements_sante` : Répertoire master officiel FINESS des 5 000 centres hospitaliers, CHU, CHR et cliniques de France (Capacités en lits d'hospitalisation, réanimation et urgences).\n- `hopitaux_flux_admissions_urgences` : Suivi horaire de l'affluence aux urgences, temps d'attente moyen (minutes), taux d'occupation des lits et déclenchement des Plans Blancs (TENSION_EXTREME_PLAN_BLANC).\n- `hopitaux_blocs_operatoires_chirurgie` : Taux d'occupation des salles d'opération par spécialité chirurgicale et délais d'attente pour la chirurgie programmée.\n- `pharmacie_stock_medicaments_tension` : Suivi des tensions d'approvisionnement et ruptures de stock critiques en pharmacie à usage intérieur (Doses et jours d'autonomie restants).\n- `personnel_medical_garde_planning` : Planning des gardes médicales, sous-effectifs urgences/réanimation, heures supplémentaires et taux d'absentéisme.\n\n🔒 RESPECT DU SECRET MÉDICAL ET CONFIDENTIALITÉ SANITAIRE :\n- Protéger les données de santé et anonymiser les informations patients.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il me est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es PulseChecker, le copilote d'intelligence décisionnelle et d'optimisation des opérations hospitalières et de la biologie médicale.\n\n=== DONNÉES OFFICIELLES FINESS & OPEN BIO (ASSURANCE MALADIE) ===\n- `finess_etablissements_sante` : Répertoire master officiel FINESS des 5 000 centres hospitaliers, CHU, CHR et cliniques de France (Capacités en lits d'hospitalisation, réanimation et urgences).\n- `assurance_maladie_open_bio_depenses` : Base officielle Open BIO de l'Assurance Maladie (interrégimes) sur les dépenses et volumes d'actes de biologie médicale par groupe (Hématologie, Biochimie, Microbiologie, Immunologie) et par région.\n- `hopitaux_flux_admissions_urgences` : Suivi horaire de l'affluence aux urgences, temps d'attente moyen (minutes), taux d'occupation des lits et déclenchement des Plans Blancs (TENSION_EXTREME_PLAN_BLANC).\n- `hopitaux_blocs_operatoires_chirurgie` : Taux d'occupation des salles d'opération par spécialité chirurgicale et délais d'attente pour la chirurgie programmée.\n- `pharmacie_stock_medicaments_tension` : Suivi des tensions d'approvisionnement et ruptures de stock critiques en pharmacie à usage intérieur (Doses et jours d'autonomie restants).\n- `personnel_medical_garde_planning` : Planning des gardes médicales, sous-effectifs urgences/réanimation, heures supplémentaires et taux d'absentéisme.\n\n🔒 RESPECT DU SECRET MÉDICAL ET CONFIDENTIALITÉ SANITAIRE :\n- Protéger les données de santé et anonymiser les informations patients.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
             {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "finess_etablissements_sante"},
+            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "assurance_maladie_open_bio_depenses"},
             {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "hopitaux_flux_admissions_urgences"},
             {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "hopitaux_blocs_operatoires_chirurgie"},
             {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "pharmacie_stock_medicaments_tension"},
@@ -17,26 +18,26 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quels sont les volumes totaux d'actes et les montants remboursés par l'Assurance Maladie (Open BIO) pour les actes d'hématologie et de biochimie médicale par région ?",
+          "sqlQuery": "SELECT nom_region, libelle_groupe_biologie, SUM(nombre_beneficiaires_consommateurs) AS total_beneficiaires, SUM(nombre_actes_biologie_realises) AS total_actes, ROUND(SUM(montant_rembourse_assurance_maladie_eur), 2) AS total_rembourse_eur FROM `${PROJECT_ID}.healthcare_medical_ds.assurance_maladie_open_bio_depenses` GROUP BY nom_region, libelle_groupe_biologie ORDER BY total_rembourse_eur DESC LIMIT 25"
+        },
+        {
           "naturalLanguageQuestion": "Quels services d'urgences hospitalières connaissent actuellement la plus forte saturation (taux d'occupation > 110 %) et nécessitent le déclenchement d'un Plan Blanc ?",
           "sqlQuery": "SELECT nom_etablissement, commune, code_departement, temps_attente_moyen_minutes, taux_occupation_lits_urgences_pct, statut_tension_urgences FROM `${PROJECT_ID}.healthcare_medical_ds.hopitaux_flux_admissions_urgences` WHERE statut_tension_urgences = 'TENSION_EXTREME_PLAN_BLANC' ORDER BY taux_occupation_lits_urgences_pct DESC LIMIT 25"
         },
         {
           "naturalLanguageQuestion": "Quelles substances actives et médicaments vitaux présentent une rupture de stock critique (< 3 jours d'autonomie) dans les pharmacies hospitalières ?",
           "sqlQuery": "SELECT nom_etablissement, nom_substance_active, code_cip13, quantite_en_stock_doses, jours_autonomie_restants, statut_approvisionnement FROM `${PROJECT_ID}.healthcare_medical_ds.pharmacie_stock_medicaments_tension` WHERE jours_autonomie_restants <= 3 ORDER BY jours_autonomie_restants ASC LIMIT 30"
-        },
-        {
-          "naturalLanguageQuestion": "Quels CHU et centres hospitaliers affichent le plus fort taux d'absentéisme soignant et un sous-effectif critique sur les gardes médicales ?",
-          "sqlQuery": "SELECT nom_etablissement, categorie_personnel, effectif_present, effectif_requis_h24, taux_absenteisme_pct, statut_garde FROM `${PROJECT_ID}.healthcare_medical_ds.personnel_medical_garde_planning` WHERE statut_garde = 'SOUS_EFFECTIF_SEVERE' ORDER BY taux_absenteisme_pct DESC LIMIT 30"
         }
       ],
       "glossaryTerms": [
         {
-          "displayName": "FINESS - Fichier National des Établissements Sanitaires",
-          "description": "Référentiel officiel français d'immatriculation des établissements de santé publics et privés."
+          "displayName": "Open BIO - Assurance Maladie",
+          "description": "Base de données statistique officielle de la CNAM recensant l'ensemble des dépenses et volumes d'actes de biologie médicale en France."
         },
         {
-          "displayName": "Plan Blanc Hospitalier",
-          "description": "Dispositif de crise mobilisant l'ensemble des moyens et personnels lors d'une saturation extrême des urgences ou d'un flux massif de victimes."
+          "displayName": "FINESS - Fichier National des Établissements Sanitaires",
+          "description": "Référentiel officiel français d'immatriculation des établissements de santé publics et privés."
         }
       ]
     }
