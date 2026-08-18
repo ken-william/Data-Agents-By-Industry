@@ -1,0 +1,11 @@
+commune,departement,region,croissance_demographique_annuelle_pct,deficit_equipements_homologues_pct,equipement_manquant_prioritaire
+Paris,75,Île-de-France,1.04,29.8,Court de tennis
+Toulouse,31,Occitanie,2.27,50.9,Piscine couverte
+Marseille,13,Provence-Alpes-Côte d'Azur,1.35,42.6,Gymnase polyvalent
+Lyon,69,Auvergne-Rhône-Alpes,0.88,65.6,Dojo
+Lille,59,Hauts-de-France,2.33,65.2,Piscine couverte
+Bordeaux,33,Nouvelle-Aquitaine,2.29,57.0,Terrain synthétique
+Nantes,44,Pays de la Loire,1.87,27.9,Gymnase polyvalent
+Strasbourg,67,Grand Est,1.09,53.7,Gymnase polyvalent
+Rennes,35,Bretagne,2.15,51.5,Piscine couverte
+Grenoble,38,Auvergne-Rhône-Alpes,1.16,30.9,Dojo

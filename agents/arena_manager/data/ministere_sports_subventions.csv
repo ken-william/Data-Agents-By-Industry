@@ -1,0 +1,51 @@
+id_subvention,commune,nom_association_club,montant_subvention_ans_eur,projet_renovation,impact_hausse_inscriptions_jeunes_pct,cout_subvention_par_jeune_inscrit_eur
+SUB-ANS-2025-0001,Paris,Club Omnisports Paris Association N°1,97119.88,Désamiantage et Isolation Complexe Omnisports,18.0,359.7
+SUB-ANS-2025-0002,Paris,Club Omnisports Paris Association N°2,93763.94,Modernisation Système Chauffage Piscine Municipale,9.5,657.99
+SUB-ANS-2025-0003,Paris,Club Omnisports Paris Association N°3,52495.15,Rénovation Thermique & Éclairage LED Stade,11.7,299.12
+SUB-ANS-2025-0004,Paris,Club Omnisports Paris Association N°4,289520.47,Programme Inscription Jeunes Quartiers Prioritaires,16.4,1176.91
+SUB-ANS-2025-0005,Paris,Club Omnisports Paris Association N°5,296715.14,Désamiantage et Isolation Complexe Omnisports,17.6,1123.92
+SUB-ANS-2025-0006,Toulouse,Club Omnisports Toulouse Association N°1,303202.55,Installation Panneaux Photovoltaïques Toiture Arena,17.9,1129.25
+SUB-ANS-2025-0007,Toulouse,Club Omnisports Toulouse Association N°2,107180.25,Programme Inscription Jeunes Quartiers Prioritaires,22.9,312.02
+SUB-ANS-2025-0008,Toulouse,Club Omnisports Toulouse Association N°3,136724.79,Modernisation Système Chauffage Piscine Municipale,24.9,366.06
+SUB-ANS-2025-0009,Toulouse,Club Omnisports Toulouse Association N°4,343376.43,Désamiantage et Isolation Complexe Omnisports,11.4,2008.05
+SUB-ANS-2025-0010,Toulouse,Club Omnisports Toulouse Association N°5,259028.98,Modernisation Système Chauffage Piscine Municipale,26.3,656.6
+SUB-ANS-2025-0011,Marseille,Club Omnisports Marseille Association N°1,347475.83,Désamiantage et Isolation Complexe Omnisports,22.8,1016.01
+SUB-ANS-2025-0012,Marseille,Club Omnisports Marseille Association N°2,297437.44,Désamiantage et Isolation Complexe Omnisports,11.3,1754.79
+SUB-ANS-2025-0013,Marseille,Club Omnisports Marseille Association N°3,205204.49,Désamiantage et Isolation Complexe Omnisports,24.4,560.67
+SUB-ANS-2025-0014,Marseille,Club Omnisports Marseille Association N°4,239562.87,Installation Panneaux Photovoltaïques Toiture Arena,30.5,523.63
+SUB-ANS-2025-0015,Marseille,Club Omnisports Marseille Association N°5,246724.78,Rénovation Thermique & Éclairage LED Stade,26.9,611.46
+SUB-ANS-2025-0016,Lyon,Club Omnisports Lyon Association N°1,108913.87,Désamiantage et Isolation Complexe Omnisports,31.7,229.05
+SUB-ANS-2025-0017,Lyon,Club Omnisports Lyon Association N°2,102508.37,Modernisation Système Chauffage Piscine Municipale,12.0,569.49
+SUB-ANS-2025-0018,Lyon,Club Omnisports Lyon Association N°3,70047.65,Modernisation Système Chauffage Piscine Municipale,15.1,309.26
+SUB-ANS-2025-0019,Lyon,Club Omnisports Lyon Association N°4,341439.04,Désamiantage et Isolation Complexe Omnisports,12.9,1764.54
+SUB-ANS-2025-0020,Lyon,Club Omnisports Lyon Association N°5,260318.93,Modernisation Système Chauffage Piscine Municipale,29.2,594.34
+SUB-ANS-2025-0021,Lille,Club Omnisports Lille Association N°1,174720.27,Installation Panneaux Photovoltaïques Toiture Arena,17.6,661.82
+SUB-ANS-2025-0022,Lille,Club Omnisports Lille Association N°2,199032.75,Rénovation Thermique & Éclairage LED Stade,16.4,809.08
+SUB-ANS-2025-0023,Lille,Club Omnisports Lille Association N°3,50052.79,Rénovation Thermique & Éclairage LED Stade,20.5,162.77
+SUB-ANS-2025-0024,Lille,Club Omnisports Lille Association N°4,32489.26,Modernisation Système Chauffage Piscine Municipale,22.1,98.01
+SUB-ANS-2025-0025,Lille,Club Omnisports Lille Association N°5,79127.46,Rénovation Thermique & Éclairage LED Stade,10.7,493.01
+SUB-ANS-2025-0026,Bordeaux,Club Omnisports Bordeaux Association N°1,312257.43,Modernisation Système Chauffage Piscine Municipale,20.4,1020.45
+SUB-ANS-2025-0027,Bordeaux,Club Omnisports Bordeaux Association N°2,144922.05,Rénovation Thermique & Éclairage LED Stade,11.9,811.89
+SUB-ANS-2025-0028,Bordeaux,Club Omnisports Bordeaux Association N°3,276601.4,Programme Inscription Jeunes Quartiers Prioritaires,8.8,2095.47
+SUB-ANS-2025-0029,Bordeaux,Club Omnisports Bordeaux Association N°4,337747.49,Programme Inscription Jeunes Quartiers Prioritaires,18.0,1250.92
+SUB-ANS-2025-0030,Bordeaux,Club Omnisports Bordeaux Association N°5,262235.53,Rénovation Thermique & Éclairage LED Stade,20.9,836.48
+SUB-ANS-2025-0031,Nantes,Club Omnisports Nantes Association N°1,50985.32,Installation Panneaux Photovoltaïques Toiture Arena,25.7,132.26
+SUB-ANS-2025-0032,Nantes,Club Omnisports Nantes Association N°2,40098.82,Désamiantage et Isolation Complexe Omnisports,13.7,195.13
+SUB-ANS-2025-0033,Nantes,Club Omnisports Nantes Association N°3,139144.26,Installation Panneaux Photovoltaïques Toiture Arena,20.6,450.31
+SUB-ANS-2025-0034,Nantes,Club Omnisports Nantes Association N°4,113395.32,Programme Inscription Jeunes Quartiers Prioritaires,30.5,247.86
+SUB-ANS-2025-0035,Nantes,Club Omnisports Nantes Association N°5,70879.58,Rénovation Thermique & Éclairage LED Stade,31.3,150.97
+SUB-ANS-2025-0036,Strasbourg,Club Omnisports Strasbourg Association N°1,110655.46,Modernisation Système Chauffage Piscine Municipale,31.7,232.71
+SUB-ANS-2025-0037,Strasbourg,Club Omnisports Strasbourg Association N°2,349145.93,Installation Panneaux Photovoltaïques Toiture Arena,20.0,1163.82
+SUB-ANS-2025-0038,Strasbourg,Club Omnisports Strasbourg Association N°3,135715.73,Modernisation Système Chauffage Piscine Municipale,15.2,595.24
+SUB-ANS-2025-0039,Strasbourg,Club Omnisports Strasbourg Association N°4,266478.46,Rénovation Thermique & Éclairage LED Stade,21.4,830.15
+SUB-ANS-2025-0040,Strasbourg,Club Omnisports Strasbourg Association N°5,197274.12,Rénovation Thermique & Éclairage LED Stade,24.2,543.45
+SUB-ANS-2025-0041,Rennes,Club Omnisports Rennes Association N°1,249591.21,Rénovation Thermique & Éclairage LED Stade,9.6,1733.27
+SUB-ANS-2025-0042,Rennes,Club Omnisports Rennes Association N°2,210256.66,Rénovation Thermique & Éclairage LED Stade,30.7,456.58
+SUB-ANS-2025-0043,Rennes,Club Omnisports Rennes Association N°3,130388.07,Programme Inscription Jeunes Quartiers Prioritaires,23.2,374.68
+SUB-ANS-2025-0044,Rennes,Club Omnisports Rennes Association N°4,147063.33,Modernisation Système Chauffage Piscine Municipale,27.1,361.78
+SUB-ANS-2025-0045,Rennes,Club Omnisports Rennes Association N°5,224935.75,Programme Inscription Jeunes Quartiers Prioritaires,18.2,823.94
+SUB-ANS-2025-0046,Grenoble,Club Omnisports Grenoble Association N°1,29209.01,Installation Panneaux Photovoltaïques Toiture Arena,21.6,90.15
+SUB-ANS-2025-0047,Grenoble,Club Omnisports Grenoble Association N°2,33044.47,Modernisation Système Chauffage Piscine Municipale,18.1,121.71
+SUB-ANS-2025-0048,Grenoble,Club Omnisports Grenoble Association N°3,331175.45,Rénovation Thermique & Éclairage LED Stade,31.5,700.9
+SUB-ANS-2025-0049,Grenoble,Club Omnisports Grenoble Association N°4,123737.41,Modernisation Système Chauffage Piscine Municipale,28.5,289.44
+SUB-ANS-2025-0050,Grenoble,Club Omnisports Grenoble Association N°5,204795.93,Désamiantage et Isolation Complexe Omnisports,9.6,1422.19

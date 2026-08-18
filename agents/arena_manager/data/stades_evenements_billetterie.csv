@@ -1,0 +1,1001 @@
+event_id,nom_equipement,commune,nom_evenement,categorie_evenement,date_heure_evenement,capacite_stade,billets_vendus_grand_public,billets_vip_hospitalite_vendus,taux_remplissage_pct,recette_billetterie_brute_eur
+EVT-STADE-2025-0001,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-06-27 15:00:00,60000,31934,4486,60.7,2079520.0
+EVT-STADE-2025-0002,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-03-09 15:00:00,60000,50588,8392,98.3,4374460.0
+EVT-STADE-2025-0003,Stade de la Meinau,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-11-21 15:00:00,35000,27249,3831,88.8,2183955.0
+EVT-STADE-2025-0004,Complexe Bréquigny,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-03-17 21:00:00,15000,10985,1000,79.9,1183725.0
+EVT-STADE-2025-0005,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-04-17 18:00:00,15000,10657,1087,78.3,591460.0
+EVT-STADE-2025-0006,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-12-10 21:00:00,25000,13415,1810,60.9,854950.0
+EVT-STADE-2025-0007,Arena du Pays d'Aix,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-12-27 18:00:00,42000,31019,4009,83.4,1932820.0
+EVT-STADE-2025-0008,Halle Clémenceau,Grenoble,Tournoi National Jeunes - Grenoble,Tournoi Jeunes,2025-08-05 18:00:00,25000,17998,3127,84.5,1321690.0
+EVT-STADE-2025-0009,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-11-15 18:00:00,42000,35703,5625,98.4,2477340.0
+EVT-STADE-2025-0010,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-09-04 21:00:00,60000,53287,5033,97.2,3656165.0
+EVT-STADE-2025-0011,Stade de la Meinau,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-10-26 15:00:00,35000,24372,3837,80.6,1690410.0
+EVT-STADE-2025-0012,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-02-27 20:00:00,15000,8787,977,65.1,639665.0
+EVT-STADE-2025-0013,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-10-09 18:00:00,35000,25543,2877,81.2,2890405.0
+EVT-STADE-2025-0014,Stade des Alpes,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-11-10 21:00:00,15000,12346,1379,91.5,1394160.0
+EVT-STADE-2025-0015,Stade de la Meinau,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-12-26 15:00:00,35000,27530,2780,86.6,1520900.0
+EVT-STADE-2025-0016,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-11-21 20:00:00,80000,43810,7070,63.6,3081800.0
+EVT-STADE-2025-0017,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-04-12 15:00:00,15000,9076,1034,67.4,666920.0
+EVT-STADE-2025-0018,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-07-28 20:00:00,25000,20902,2373,93.1,1533840.0
+EVT-STADE-2025-0019,Halle de la Trocardière,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-01-13 21:00:00,42000,31237,3707,83.2,2332415.0
+EVT-STADE-2025-0020,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-11-06 18:00:00,15000,12539,1906,96.3,852670.0
+EVT-STADE-2025-0021,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-09-26 15:00:00,60000,37088,5452,70.9,3031960.0
+EVT-STADE-2025-0022,Arena du Pays d'Aix,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-03-23 21:00:00,42000,24087,2583,63.5,1368360.0
+EVT-STADE-2025-0023,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-12 20:00:00,35000,31616,2929,98.7,2154970.0
+EVT-STADE-2025-0024,Complexe Mangin-Beaulieu,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-11-24 21:00:00,80000,65882,6038,89.9,4474190.0
+EVT-STADE-2025-0025,Halle de la Trocardière,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-08-22 15:00:00,42000,25200,2855,66.8,1847750.0
+EVT-STADE-2025-0026,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-04-22 21:00:00,35000,24573,3602,80.5,2989205.0
+EVT-STADE-2025-0027,Stade de la Meinau,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-10-05 21:00:00,35000,25446,4094,84.4,3186410.0
+EVT-STADE-2025-0028,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-12-28 15:00:00,35000,22569,2316,71.1,1594605.0
+EVT-STADE-2025-0029,Stade Ernest-Wallon,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-08-01 18:00:00,60000,52791,4749,95.9,3562845.0
+EVT-STADE-2025-0030,Accor Arena,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-07-28 15:00:00,25000,13975,1900,63.5,1103875.0
+EVT-STADE-2025-0031,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-07-23 18:00:00,15000,9277,1418,71.3,771965.0
+EVT-STADE-2025-0032,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-04-26 21:00:00,35000,24807,2668,78.5,2775595.0
+EVT-STADE-2025-0033,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-04-21 20:00:00,15000,8971,1109,67.2,680945.0
+EVT-STADE-2025-0034,Complexe Sportif Hautepierre,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-02-02 21:00:00,42000,24625,3346,66.6,1575250.0
+EVT-STADE-2025-0035,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-12-23 21:00:00,25000,17514,1786,77.2,1935190.0
+EVT-STADE-2025-0036,Stade de Gerland,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-02-16 21:00:00,80000,62686,9714,90.5,5249370.0
+EVT-STADE-2025-0037,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-13 15:00:00,42000,36184,5564,99.4,3019280.0
+EVT-STADE-2025-0038,Stade de Gerland,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-06-11 20:00:00,80000,41893,6427,60.4,3491935.0
+EVT-STADE-2025-0039,Accor Arena,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-01-22 18:00:00,25000,14966,1884,67.4,1144470.0
+EVT-STADE-2025-0040,Stade Pierre-Mauroy,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-03-17 20:00:00,35000,24773,4032,82.3,1751190.0
+EVT-STADE-2025-0041,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-08-09 21:00:00,80000,53625,4775,73.0,2802500.0
+EVT-STADE-2025-0042,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-08-17 15:00:00,60000,49680,5579,92.1,3630350.0
+EVT-STADE-2025-0043,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-10-16 20:00:00,35000,20686,2064,65.0,1446870.0
+EVT-STADE-2025-0044,Stade Chaban-Delmas,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-01-02 18:00:00,60000,49293,5127,90.7,2760540.0
+EVT-STADE-2025-0045,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-09-13 20:00:00,15000,8416,809,61.5,454730.0
+EVT-STADE-2025-0046,Accor Arena,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-11-27 18:00:00,25000,16239,2785,76.1,1427005.0
+EVT-STADE-2025-0047,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-10-07 20:00:00,15000,11861,1624,89.9,939745.0
+EVT-STADE-2025-0048,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-09-11 18:00:00,60000,47656,4964,87.7,2670680.0
+EVT-STADE-2025-0049,Halle de la Trocardière,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-04-06 21:00:00,42000,33197,4771,90.4,2188660.0
+EVT-STADE-2025-0050,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-05-12 21:00:00,60000,43273,4427,79.5,2404940.0
+EVT-STADE-2025-0051,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-10-20 18:00:00,15000,12637,2078,98.1,898610.0
+EVT-STADE-2025-0052,Stade de la Beaujoire,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-08-21 21:00:00,25000,15199,1626,67.3,1698415.0
+EVT-STADE-2025-0053,Stade Ernest-Wallon,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-04-01 18:00:00,60000,35996,5104,68.5,2895820.0
+EVT-STADE-2025-0054,Palais des Sports de Marseille,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-04-09 18:00:00,35000,25219,4356,84.5,2223855.0
+EVT-STADE-2025-0055,Stade Pierre-Mauroy,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-01-06 18:00:00,35000,28198,4772,94.2,2038940.0
+EVT-STADE-2025-0056,Stade des Alpes,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-08-03 20:00:00,15000,9615,960,70.5,1057275.0
+EVT-STADE-2025-0057,Stade de France,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-05-23 21:00:00,80000,43361,5839,61.5,5145435.0
+EVT-STADE-2025-0058,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-04-19 20:00:00,15000,8893,1532,69.5,649790.0
+EVT-STADE-2025-0059,Palais des Sports de Marseille,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-10-01 18:00:00,35000,26227,3138,83.9,3013795.0
+EVT-STADE-2025-0060,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-06-16 15:00:00,15000,9084,1101,67.9,547770.0
+EVT-STADE-2025-0061,Stade Ernest-Wallon,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-09-27 15:00:00,60000,33078,5022,63.5,4067130.0
+EVT-STADE-2025-0062,Stade Ernest-Wallon,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-06-09 20:00:00,60000,34815,4544,65.6,2180450.0
+EVT-STADE-2025-0063,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-11-18 20:00:00,35000,22715,3325,74.4,1853425.0
+EVT-STADE-2025-0064,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-05-14 18:00:00,25000,17770,2180,79.8,1078100.0
+EVT-STADE-2025-0065,Stade de Gerland,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-12-27 21:00:00,80000,60354,6846,84.0,4427430.0
+EVT-STADE-2025-0066,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-10-22 15:00:00,80000,47017,4103,63.9,2436260.0
+EVT-STADE-2025-0067,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-05-06 20:00:00,80000,64967,11193,95.2,4747260.0
+EVT-STADE-2025-0068,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-03-04 18:00:00,35000,27497,2848,86.7,1536910.0
+EVT-STADE-2025-0069,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-01-19 21:00:00,35000,25216,2293,78.6,1707970.0
+EVT-STADE-2025-0070,Roazhon Park,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-10-09 21:00:00,80000,42646,6474,61.4,5243410.0
+EVT-STADE-2025-0071,Patinoire Pôle Sud,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-01-25 20:00:00,15000,11655,1695,89.0,948225.0
+EVT-STADE-2025-0072,Accor Arena,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-11-19 21:00:00,25000,21385,2290,94.7,1534825.0
+EVT-STADE-2025-0073,Halle de la Trocardière,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-07-11 15:00:00,42000,30066,4710,82.8,2530470.0
+EVT-STADE-2025-0074,Complexe Sportif Hautepierre,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-04-08 18:00:00,42000,30567,2781,79.4,3293445.0
+EVT-STADE-2025-0075,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-07-08 20:00:00,80000,49312,5248,68.2,2791360.0
+EVT-STADE-2025-0076,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-09-20 18:00:00,15000,8743,1532,68.5,776435.0
+EVT-STADE-2025-0077,Stadium de Toulouse,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-05-01 15:00:00,15000,9959,1066,73.5,714655.0
+EVT-STADE-2025-0078,Halle Clémenceau,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-05-17 20:00:00,25000,17000,2075,76.3,1283750.0
+EVT-STADE-2025-0079,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-07 18:00:00,42000,23847,2991,63.9,1820865.0
+EVT-STADE-2025-0080,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-04-12 15:00:00,60000,51980,7360,98.9,4179100.0
+EVT-STADE-2025-0081,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-04-17 20:00:00,25000,13604,2396,64.0,1211180.0
+EVT-STADE-2025-0082,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-02-27 15:00:00,25000,20890,2710,94.4,2453150.0
+EVT-STADE-2025-0083,Halle Clémenceau,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-03-17 15:00:00,25000,18201,2524,82.9,1450045.0
+EVT-STADE-2025-0084,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-01-02 18:00:00,15000,9205,800,66.7,476150.0
+EVT-STADE-2025-0085,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-12-22 21:00:00,25000,18286,2264,82.2,1114580.0
+EVT-STADE-2025-0086,Groupama Stadium,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-04-07 21:00:00,35000,26570,2830,84.0,1504600.0
+EVT-STADE-2025-0087,Palais des Sports André-Brouat,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-04-10 15:00:00,25000,16361,2114,73.9,1019330.0
+EVT-STADE-2025-0088,Stade Pierre-Mauroy,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-12-21 21:00:00,35000,18883,2257,60.4,2169305.0
+EVT-STADE-2025-0089,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-12-14 21:00:00,80000,46865,5455,65.4,2769700.0
+EVT-STADE-2025-0090,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-10-12 20:00:00,25000,17108,2017,76.5,1274110.0
+EVT-STADE-2025-0091,Complexe Sportif de Marcq,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-08-21 20:00:00,80000,68087,7753,94.8,7725645.0
+EVT-STADE-2025-0092,Patinoire Pôle Sud,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-04-06 18:00:00,15000,11261,1294,83.7,1280685.0
+EVT-STADE-2025-0093,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-12-12 20:00:00,25000,14161,1539,62.8,809580.0
+EVT-STADE-2025-0094,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-02-15 21:00:00,42000,23647,3821,65.4,2965245.0
+EVT-STADE-2025-0095,Stade des Alpes,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-08-12 15:00:00,15000,11989,1780,91.8,804670.0
+EVT-STADE-2025-0096,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-10-24 21:00:00,25000,20299,3376,94.7,1452970.0
+EVT-STADE-2025-0097,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-06-04 20:00:00,15000,11882,1903,91.9,832210.0
+EVT-STADE-2025-0098,Accor Arena,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-06-23 21:00:00,25000,14058,2091,64.6,1717680.0
+EVT-STADE-2025-0099,Stade Chaban-Delmas,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-03-28 15:00:00,60000,53805,5775,99.3,3057900.0
+EVT-STADE-2025-0100,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-03-22 21:00:00,80000,61491,10349,89.8,7813985.0
+EVT-STADE-2025-0101,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-03-23 18:00:00,15000,9404,946,69.0,518620.0
+EVT-STADE-2025-0102,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-12-03 20:00:00,80000,58158,7522,82.1,3625240.0
+EVT-STADE-2025-0103,Palais des Sports de Marseille,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-05-10 15:00:00,35000,24603,2381,77.1,1702385.0
+EVT-STADE-2025-0104,Stade de France,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-10-06 20:00:00,80000,47537,4942,65.6,3374665.0
+EVT-STADE-2025-0105,LDLC Arena,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-07-28 21:00:00,15000,8423,1297,64.8,576940.0
+EVT-STADE-2025-0106,Groupama Stadium,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-10-17 18:00:00,35000,20908,2682,67.4,1297740.0
+EVT-STADE-2025-0107,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-10-11 21:00:00,35000,24365,4230,81.7,3128525.0
+EVT-STADE-2025-0108,LDLC Arena,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-09-02 20:00:00,15000,8448,1077,63.5,522690.0
+EVT-STADE-2025-0109,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-06-17 18:00:00,35000,21170,3155,69.5,1741400.0
+EVT-STADE-2025-0110,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-06-27 18:00:00,35000,21154,2855,68.6,1665680.0
+EVT-STADE-2025-0111,Complexe Bréquigny,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-08-27 15:00:00,15000,10975,1340,82.1,828875.0
+EVT-STADE-2025-0112,Complexe Sportif de Marcq,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-10-14 20:00:00,80000,66560,9280,94.8,4316800.0
+EVT-STADE-2025-0113,Stade de la Beaujoire,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-12-09 15:00:00,25000,13880,1970,63.4,1117100.0
+EVT-STADE-2025-0114,Palais des Sports de Marseille,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-01-27 21:00:00,35000,24399,4266,81.9,3140415.0
+EVT-STADE-2025-0115,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-02-20 18:00:00,25000,19909,3441,93.4,1457520.0
+EVT-STADE-2025-0116,Palais des Sports André-Brouat,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-04-26 18:00:00,25000,20159,3441,94.4,1767405.0
+EVT-STADE-2025-0117,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-09-03 21:00:00,15000,10627,983,77.4,1149045.0
+EVT-STADE-2025-0118,Halle de la Trocardière,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-01-05 18:00:00,42000,34484,5332,94.8,2367520.0
+EVT-STADE-2025-0119,Arena du Pays d'Aix,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-09-10 21:00:00,42000,31667,5544,88.6,2336010.0
+EVT-STADE-2025-0120,Complexe Sportif de Marcq,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-06-13 15:00:00,80000,56802,9838,83.3,5015590.0
+EVT-STADE-2025-0121,Accor Arena,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-08-11 15:00:00,25000,14527,1323,63.4,1565545.0
+EVT-STADE-2025-0122,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-08-19 21:00:00,15000,12642,1233,92.5,877140.0
+EVT-STADE-2025-0123,Stade Chaban-Delmas,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-04-16 18:00:00,60000,40017,6962,78.3,3541265.0
+EVT-STADE-2025-0124,Stade de la Meinau,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-09-16 20:00:00,35000,22678,3781,75.6,2872880.0
+EVT-STADE-2025-0125,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-01-11 15:00:00,15000,11395,1685,87.2,934025.0
+EVT-STADE-2025-0126,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-09-24 18:00:00,80000,46204,4196,63.0,2435120.0
+EVT-STADE-2025-0127,Le Liberté,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-06-24 18:00:00,15000,9093,1001,67.3,659435.0
+EVT-STADE-2025-0128,Stade de France,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-05-26 15:00:00,80000,64801,9119,92.4,7787835.0
+EVT-STADE-2025-0129,Palais des Sports André-Brouat,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-08-01 20:00:00,25000,20341,2234,90.3,1168730.0
+EVT-STADE-2025-0130,Palais des Sports André-Brouat,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-04-17 15:00:00,25000,15228,1772,68.0,899840.0
+EVT-STADE-2025-0131,Matmut Atlantique,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-09-19 21:00:00,35000,27769,3836,90.3,1792070.0
+EVT-STADE-2025-0132,Parc des Princes,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-12-10 20:00:00,25000,18178,2547,82.9,1182090.0
+EVT-STADE-2025-0133,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-04-22 18:00:00,15000,9023,1222,68.3,711535.0
+EVT-STADE-2025-0134,Arkéa Arena,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-12-08 15:00:00,25000,14857,2568,69.7,1087710.0
+EVT-STADE-2025-0135,Orange Vélodrome,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-05-03 20:00:00,35000,24995,3705,82.0,3050825.0
+EVT-STADE-2025-0136,Halle Clémenceau,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-09-14 20:00:00,25000,16477,1873,73.4,1868795.0
+EVT-STADE-2025-0137,Halle Clémenceau,Grenoble,Tournoi National Jeunes - Grenoble,Tournoi Jeunes,2025-02-04 20:00:00,25000,18190,2235,81.7,1104450.0
+EVT-STADE-2025-0138,Stade des Alpes,Grenoble,Tournoi National Jeunes - Grenoble,Tournoi Jeunes,2025-08-16 18:00:00,15000,12837,1503,95.6,760860.0
+EVT-STADE-2025-0139,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-01-10 21:00:00,25000,14777,2173,67.8,986560.0
+EVT-STADE-2025-0140,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-08-19 20:00:00,60000,45803,5137,84.9,3345385.0
+EVT-STADE-2025-0141,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-03-03 15:00:00,60000,50034,6606,94.4,3152520.0
+EVT-STADE-2025-0142,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-08-23 21:00:00,42000,32299,2939,83.9,3480165.0
+EVT-STADE-2025-0143,Stade de la Beaujoire,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-02-17 21:00:00,25000,16678,1897,74.3,1224760.0
+EVT-STADE-2025-0144,Patinoire Pôle Sud,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-03-22 15:00:00,15000,13108,1157,95.1,1403430.0
+EVT-STADE-2025-0145,Patinoire Pôle Sud,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-07-07 21:00:00,15000,10704,1356,80.4,1248840.0
+EVT-STADE-2025-0146,Complexe Sportif de Marcq,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-03-20 21:00:00,80000,47313,6207,66.9,3680835.0
+EVT-STADE-2025-0147,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-01-05 20:00:00,35000,28365,3660,91.5,2191425.0
+EVT-STADE-2025-0148,Stade Pierre-Mauroy,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-06-09 15:00:00,35000,20320,1905,63.5,1085850.0
+EVT-STADE-2025-0149,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-12-22 15:00:00,15000,8648,1221,65.8,564690.0
+EVT-STADE-2025-0150,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-01-13 21:00:00,60000,39539,4261,73.0,2844505.0
+EVT-STADE-2025-0151,Complexe Bréquigny,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-02-28 21:00:00,15000,10075,1040,74.1,1116375.0
+EVT-STADE-2025-0152,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-08-15 18:00:00,25000,16542,2108,74.6,1023260.0
+EVT-STADE-2025-0153,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-05-01 15:00:00,80000,45216,5984,64.0,2852480.0
+EVT-STADE-2025-0154,Palais des Sports de Marseille,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-10-03 18:00:00,35000,30764,3851,98.9,1885670.0
+EVT-STADE-2025-0155,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-12-06 15:00:00,25000,17704,3071,83.1,2272590.0
+EVT-STADE-2025-0156,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-01-18 21:00:00,42000,23452,3469,64.1,1570810.0
+EVT-STADE-2025-0157,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-04-28 15:00:00,15000,13169,1336,96.7,926605.0
+EVT-STADE-2025-0158,Roazhon Park,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-01-28 18:00:00,80000,63229,10691,92.4,5518055.0
+EVT-STADE-2025-0159,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-01-17 18:00:00,35000,25225,2950,80.5,1872625.0
+EVT-STADE-2025-0160,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-05-20 18:00:00,15000,9781,1364,74.3,1172385.0
+EVT-STADE-2025-0161,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-06-17 20:00:00,25000,17560,1990,78.2,1024300.0
+EVT-STADE-2025-0162,Stade Pierre-Mauroy,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-08-14 15:00:00,35000,24088,2896,77.1,1807960.0
+EVT-STADE-2025-0163,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-10-23 18:00:00,25000,19705,2770,89.9,1283650.0
+EVT-STADE-2025-0164,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-09-07 15:00:00,15000,11293,1967,88.4,830540.0
+EVT-STADE-2025-0165,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-08-22 18:00:00,42000,31778,4300,85.9,3776130.0
+EVT-STADE-2025-0166,Complexe Sportif de Marcq,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-11-10 20:00:00,80000,44104,7656,64.7,3898680.0
+EVT-STADE-2025-0167,Stade Chaban-Delmas,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-11-05 20:00:00,60000,46631,6289,88.2,3670645.0
+EVT-STADE-2025-0168,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-06-11 18:00:00,15000,8248,1366,64.1,588940.0
+EVT-STADE-2025-0169,Palais des Sports André-Brouat,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-07-12 15:00:00,25000,15287,1913,68.8,936860.0
+EVT-STADE-2025-0170,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-05-06 18:00:00,35000,23436,3864,78.0,2020620.0
+EVT-STADE-2025-0171,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-08-11 15:00:00,60000,33539,5401,64.9,2356420.0
+EVT-STADE-2025-0172,Groupama Stadium,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-12-01 20:00:00,35000,19678,3247,65.5,1402090.0
+EVT-STADE-2025-0173,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-01-11 15:00:00,25000,19665,3460,92.5,2536525.0
+EVT-STADE-2025-0174,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-10-12 18:00:00,15000,11322,1728,87.0,941490.0
+EVT-STADE-2025-0175,Le Liberté,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-11-23 21:00:00,15000,10754,1726,83.2,915430.0
+EVT-STADE-2025-0176,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-02-03 18:00:00,60000,50570,8350,98.2,3604600.0
+EVT-STADE-2025-0177,Stade Ernest-Wallon,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-07-06 21:00:00,60000,41558,7222,81.3,3052240.0
+EVT-STADE-2025-0178,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-01-11 21:00:00,15000,8743,1276,66.8,712435.0
+EVT-STADE-2025-0179,Parc des Princes,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-06-05 21:00:00,25000,15316,2034,69.4,1197720.0
+EVT-STADE-2025-0180,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-05-09 20:00:00,60000,47727,5913,89.4,5535045.0
+EVT-STADE-2025-0181,Palais des Sports Saint-Sauveur,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-12-09 21:00:00,15000,8803,1172,66.5,557090.0
+EVT-STADE-2025-0182,Stade de la Beaujoire,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-10-28 15:00:00,25000,13628,1847,61.9,1075010.0
+EVT-STADE-2025-0183,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-05-21 20:00:00,60000,52570,6410,98.3,3968150.0
+EVT-STADE-2025-0184,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-11-25 18:00:00,80000,62474,6966,86.8,3615720.0
+EVT-STADE-2025-0185,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-08-14 21:00:00,60000,34669,3790,64.1,2507605.0
+EVT-STADE-2025-0186,Accor Arena,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-09-27 21:00:00,25000,14856,2294,68.6,1242020.0
+EVT-STADE-2025-0187,Arkéa Arena,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-08-12 21:00:00,25000,18299,2301,82.4,1124220.0
+EVT-STADE-2025-0188,Stade Pierre-Mauroy,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-12-09 21:00:00,35000,28819,3276,91.7,2115855.0
+EVT-STADE-2025-0189,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-08-24 18:00:00,80000,60282,6758,83.8,3497960.0
+EVT-STADE-2025-0190,Stade des Alpes,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-12-04 18:00:00,15000,12731,1188,92.8,678930.0
+EVT-STADE-2025-0191,Matmut Atlantique,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-08-03 20:00:00,35000,23962,3233,77.7,1886540.0
+EVT-STADE-2025-0192,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-08-26 20:00:00,15000,9229,1571,72.0,808055.0
+EVT-STADE-2025-0193,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-10-05 18:00:00,35000,26304,2711,82.9,1466870.0
+EVT-STADE-2025-0194,Arkéa Arena,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-05-12 20:00:00,25000,15616,1809,69.7,1779610.0
+EVT-STADE-2025-0195,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-01-04 18:00:00,15000,8539,1316,65.7,585170.0
+EVT-STADE-2025-0196,Arena du Pays d'Aix,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-04-20 18:00:00,42000,36423,4779,98.1,2833785.0
+EVT-STADE-2025-0197,Patinoire Pôle Sud,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-07-21 15:00:00,15000,8430,750,61.2,566850.0
+EVT-STADE-2025-0198,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-06-22 20:00:00,60000,54342,5058,99.0,2894760.0
+EVT-STADE-2025-0199,Parc des Princes,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-09-28 15:00:00,25000,16482,2068,74.2,1917970.0
+EVT-STADE-2025-0200,Complexe Bréquigny,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-04-27 18:00:00,15000,12882,2013,99.3,1082940.0
+EVT-STADE-2025-0201,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-08-16 21:00:00,25000,19027,1723,83.0,2048045.0
+EVT-STADE-2025-0202,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-11-23 21:00:00,25000,14135,1990,64.5,1133575.0
+EVT-STADE-2025-0203,Stade de France,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-06-02 21:00:00,80000,46022,5098,63.9,5186370.0
+EVT-STADE-2025-0204,Stade Ernest-Wallon,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-12-18 15:00:00,60000,33562,5018,64.3,2261360.0
+EVT-STADE-2025-0205,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-06-15 21:00:00,60000,48253,8387,94.4,4268135.0
+EVT-STADE-2025-0206,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-12-06 15:00:00,60000,44758,6482,85.4,3634610.0
+EVT-STADE-2025-0207,Stade Ernest-Wallon,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-07-20 18:00:00,60000,48055,4205,87.1,2492900.0
+EVT-STADE-2025-0208,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-03-02 15:00:00,15000,12799,1301,94.0,709220.0
+EVT-STADE-2025-0209,Groupama Stadium,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-08-05 20:00:00,35000,20782,2177,65.6,1167710.0
+EVT-STADE-2025-0210,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-03-04 20:00:00,60000,46024,4076,83.5,3090080.0
+EVT-STADE-2025-0211,Groupama Stadium,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-02-16 15:00:00,35000,22681,3254,74.1,1493930.0
+EVT-STADE-2025-0212,Matmut Atlantique,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-06-06 21:00:00,35000,29292,3888,94.8,2290140.0
+EVT-STADE-2025-0213,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-03-21 18:00:00,25000,14008,1992,64.0,918240.0
+EVT-STADE-2025-0214,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-04-28 20:00:00,25000,19184,2416,86.4,2234640.0
+EVT-STADE-2025-0215,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-04-25 21:00:00,35000,19449,2636,63.1,1534205.0
+EVT-STADE-2025-0216,Stade de la Beaujoire,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-05-02 15:00:00,25000,20065,1834,87.6,1361425.0
+EVT-STADE-2025-0217,LDLC Arena,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-07-02 21:00:00,15000,12257,1182,89.6,847065.0
+EVT-STADE-2025-0218,Stade Ernest-Wallon,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-01-08 21:00:00,60000,43943,5917,83.1,5214405.0
+EVT-STADE-2025-0219,Roazhon Park,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-10-05 20:00:00,80000,60138,7462,84.5,3669640.0
+EVT-STADE-2025-0220,Complexe Sportif Hautepierre,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-10-19 21:00:00,42000,34474,3830,91.2,2508830.0
+EVT-STADE-2025-0221,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-01-26 21:00:00,25000,14412,2313,66.9,1226790.0
+EVT-STADE-2025-0222,Stade de France,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-07-14 21:00:00,80000,50811,8469,74.1,6436185.0
+EVT-STADE-2025-0223,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-11-12 21:00:00,35000,25403,2842,80.7,2869755.0
+EVT-STADE-2025-0224,Stade de la Beaujoire,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-10-21 21:00:00,25000,20519,3106,94.5,1699855.0
+EVT-STADE-2025-0225,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-09-12 21:00:00,15000,8655,1425,67.2,615900.0
+EVT-STADE-2025-0226,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-11-23 15:00:00,25000,19558,2917,89.9,1609360.0
+EVT-STADE-2025-0227,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-03-10 15:00:00,80000,65934,11106,96.3,4754520.0
+EVT-STADE-2025-0228,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-06-02 21:00:00,80000,47604,6635,67.8,5705090.0
+EVT-STADE-2025-0229,Complexe Sportif de Marcq,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-11-11 18:00:00,80000,46133,7306,66.8,3902485.0
+EVT-STADE-2025-0230,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-11-19 18:00:00,60000,50969,5251,93.7,2841820.0
+EVT-STADE-2025-0231,Parc des Princes,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-11-03 21:00:00,25000,15777,1623,69.6,1746795.0
+EVT-STADE-2025-0232,Complexe Sportif Hautepierre,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-06-24 15:00:00,42000,26316,3042,69.9,1549980.0
+EVT-STADE-2025-0233,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-12-13 21:00:00,25000,20306,1819,88.5,1368520.0
+EVT-STADE-2025-0234,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-12-01 21:00:00,60000,34889,6091,68.3,2569420.0
+EVT-STADE-2025-0235,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-11-16 20:00:00,15000,8429,1410,65.6,731805.0
+EVT-STADE-2025-0236,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-05-01 20:00:00,60000,49040,8140,95.3,3506200.0
+EVT-STADE-2025-0237,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-11-17 18:00:00,60000,33294,4086,62.3,2519730.0
+EVT-STADE-2025-0238,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-10-20 18:00:00,35000,28809,3636,92.7,2205405.0
+EVT-STADE-2025-0239,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-12-24 21:00:00,80000,55177,9062,80.3,3920810.0
+EVT-STADE-2025-0240,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-04-13 18:00:00,25000,15555,1795,69.4,915400.0
+EVT-STADE-2025-0241,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-09-11 20:00:00,25000,15103,2272,69.5,1021090.0
+EVT-STADE-2025-0242,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-07-13 18:00:00,25000,13580,1570,60.6,799900.0
+EVT-STADE-2025-0243,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-09-14 21:00:00,25000,19893,2432,89.3,1503185.0
+EVT-STADE-2025-0244,Accor Arena,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-06-11 21:00:00,25000,18906,2919,87.3,1296930.0
+EVT-STADE-2025-0245,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-02-17 15:00:00,35000,19497,2553,63.0,1515615.0
+EVT-STADE-2025-0246,Stade de Gerland,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-02-14 18:00:00,80000,49999,8641,73.3,4410205.0
+EVT-STADE-2025-0247,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-04-08 15:00:00,35000,30225,3970,97.7,2352625.0
+EVT-STADE-2025-0248,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-10-17 20:00:00,25000,20098,1877,87.9,1072190.0
+EVT-STADE-2025-0249,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-12-05 21:00:00,80000,69212,8548,97.2,4213360.0
+EVT-STADE-2025-0250,Complexe Bréquigny,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-01-16 20:00:00,15000,11711,1999,91.4,1026745.0
+EVT-STADE-2025-0251,Stade des Alpes,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-06-04 21:00:00,15000,11999,1920,92.8,1019955.0
+EVT-STADE-2025-0252,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-04-09 20:00:00,15000,10212,1788,80.0,906540.0
+EVT-STADE-2025-0253,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-04-08 18:00:00,15000,9650,1045,71.3,550750.0
+EVT-STADE-2025-0254,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-08-08 20:00:00,42000,37277,4345,99.1,2204560.0
+EVT-STADE-2025-0255,Palais des Sports Saint-Sauveur,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-05-04 15:00:00,15000,11409,1791,88.0,1417515.0
+EVT-STADE-2025-0256,Palais des Sports André-Brouat,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-04-08 20:00:00,25000,15351,1549,67.6,1078045.0
+EVT-STADE-2025-0257,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-10-25 20:00:00,25000,21156,3369,98.1,1794270.0
+EVT-STADE-2025-0258,Stade de Gerland,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-12-28 18:00:00,80000,56200,7720,79.9,4459000.0
+EVT-STADE-2025-0259,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-10-09 20:00:00,60000,42137,5563,79.5,4972395.0
+EVT-STADE-2025-0260,Roazhon Park,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-10-10 20:00:00,80000,71468,6772,97.8,4909060.0
+EVT-STADE-2025-0261,Stade de France,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-02-10 18:00:00,80000,48618,8502,71.4,4313310.0
+EVT-STADE-2025-0262,Complexe Sportif Hautepierre,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-04-06 18:00:00,42000,28088,4000,76.4,1842640.0
+EVT-STADE-2025-0263,Complexe Sportif de Marcq,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-01-28 21:00:00,80000,57718,7242,81.2,6716530.0
+EVT-STADE-2025-0264,Stadium de Toulouse,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-06-02 15:00:00,15000,12285,2085,95.8,1565475.0
+EVT-STADE-2025-0265,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-04-10 21:00:00,42000,25353,3291,68.2,2977755.0
+EVT-STADE-2025-0266,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-01-19 20:00:00,60000,47222,6237,89.1,2975910.0
+EVT-STADE-2025-0267,Palais des Sports de Marseille,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-10-23 20:00:00,35000,28068,4307,92.5,2339810.0
+EVT-STADE-2025-0268,Stade de Gerland,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-11-23 20:00:00,80000,67379,9501,96.1,5407305.0
+EVT-STADE-2025-0269,Arkéa Arena,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-05-02 20:00:00,25000,20901,1998,91.6,2276085.0
+EVT-STADE-2025-0270,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-03-13 20:00:00,35000,29361,3609,94.2,2223495.0
+EVT-STADE-2025-0271,Matmut Atlantique,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-02-24 20:00:00,35000,25457,3033,81.4,1521960.0
+EVT-STADE-2025-0272,Stade Pierre-Mauroy,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-09-21 20:00:00,35000,25247,2648,79.7,1419410.0
+EVT-STADE-2025-0273,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-01-26 21:00:00,80000,48739,4300,66.3,5217815.0
+EVT-STADE-2025-0274,Stade de la Meinau,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-11-08 20:00:00,35000,29952,4838,99.4,2108060.0
+EVT-STADE-2025-0275,Stade des Alpes,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-03-07 20:00:00,15000,13111,1379,96.6,934745.0
+EVT-STADE-2025-0276,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-06-13 15:00:00,42000,22756,3032,61.4,2692260.0
+EVT-STADE-2025-0277,Palais des Sports Saint-Sauveur,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-09-25 18:00:00,15000,8124,1116,61.6,969540.0
+EVT-STADE-2025-0278,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-07-16 21:00:00,42000,23802,2952,63.7,1452060.0
+EVT-STADE-2025-0279,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-01-22 15:00:00,15000,8770,890,64.4,485600.0
+EVT-STADE-2025-0280,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-03-21 21:00:00,42000,34046,4930,92.8,2253880.0
+EVT-STADE-2025-0281,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-11-18 15:00:00,35000,27266,3954,89.2,2215470.0
+EVT-STADE-2025-0282,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-10-07 18:00:00,15000,8353,1202,63.7,676385.0
+EVT-STADE-2025-0283,Halle de la Trocardière,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-05-04 18:00:00,42000,25444,2360,66.2,2752740.0
+EVT-STADE-2025-0284,Stade des Alpes,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-10-20 21:00:00,15000,12719,1456,94.5,745570.0
+EVT-STADE-2025-0285,Palais des Sports de Marseille,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-06-08 18:00:00,35000,23201,3364,75.9,1885045.0
+EVT-STADE-2025-0286,Complexe Bréquigny,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-06-02 18:00:00,15000,9843,1482,75.5,665790.0
+EVT-STADE-2025-0287,Parc des Princes,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-05-10 15:00:00,25000,17286,1564,75.4,909580.0
+EVT-STADE-2025-0288,Stade de la Beaujoire,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-11-17 21:00:00,25000,21309,2091,93.6,2334015.0
+EVT-STADE-2025-0289,Matmut Atlantique,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-01-11 21:00:00,35000,29742,3123,93.9,1673010.0
+EVT-STADE-2025-0290,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-06-27 15:00:00,15000,10899,1311,81.4,654720.0
+EVT-STADE-2025-0291,Accor Arena,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-03-06 21:00:00,25000,15151,2424,70.3,1287795.0
+EVT-STADE-2025-0292,Orange Vélodrome,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-09-17 20:00:00,35000,21051,2678,67.8,2458835.0
+EVT-STADE-2025-0293,Stade Pierre-Mauroy,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-03-15 18:00:00,35000,18404,2771,60.5,1520930.0
+EVT-STADE-2025-0294,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-07-09 21:00:00,25000,15572,1628,68.8,1107740.0
+EVT-STADE-2025-0295,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-09-10 21:00:00,35000,23680,2745,75.5,1751850.0
+EVT-STADE-2025-0296,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-05-22 21:00:00,25000,22335,2340,98.7,1255050.0
+EVT-STADE-2025-0297,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-05-12 21:00:00,42000,22807,3989,63.8,1681460.0
+EVT-STADE-2025-0298,Complexe Sportif Hautepierre,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-03-28 15:00:00,42000,34389,3327,89.8,2379255.0
+EVT-STADE-2025-0299,Complexe Bréquigny,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-06-04 18:00:00,15000,11986,1978,93.1,1513310.0
+EVT-STADE-2025-0300,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-09-01 21:00:00,80000,58278,7802,82.6,3698840.0
+EVT-STADE-2025-0301,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-03-06 20:00:00,35000,20539,3576,68.9,1818255.0
+EVT-STADE-2025-0302,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-12-03 18:00:00,42000,27196,3968,74.2,2215820.0
+EVT-STADE-2025-0303,Stade Ernest-Wallon,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-06-17 20:00:00,60000,49240,5780,91.7,5630400.0
+EVT-STADE-2025-0304,Accor Arena,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-04-22 15:00:00,25000,15050,2525,70.3,1308500.0
+EVT-STADE-2025-0305,Stade de la Meinau,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-10-15 20:00:00,35000,22948,2252,72.0,1251440.0
+EVT-STADE-2025-0306,Le Liberté,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-02-22 18:00:00,15000,10965,1275,81.6,812175.0
+EVT-STADE-2025-0307,Complexe Sportif Hautepierre,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-08-02 15:00:00,42000,22517,3817,62.7,2868195.0
+EVT-STADE-2025-0308,Palais des Sports André-Brouat,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-12-14 21:00:00,25000,21377,3373,99.0,1805215.0
+EVT-STADE-2025-0309,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-10-10 20:00:00,15000,9461,1249,71.4,737995.0
+EVT-STADE-2025-0310,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-04-24 21:00:00,80000,53752,6888,75.8,3334560.0
+EVT-STADE-2025-0311,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-09-13 20:00:00,60000,36097,4462,67.6,2739865.0
+EVT-STADE-2025-0312,Palais des Sports Saint-Sauveur,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-02-13 20:00:00,15000,13084,1376,96.4,932780.0
+EVT-STADE-2025-0313,Stadium de Toulouse,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-01-17 15:00:00,15000,10691,1564,81.7,872095.0
+EVT-STADE-2025-0314,Rhenus Sport,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-09-06 15:00:00,60000,32876,4204,61.8,2037280.0
+EVT-STADE-2025-0315,Palais des Sports Saint-Sauveur,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-06-14 21:00:00,15000,12100,1594,91.3,1427000.0
+EVT-STADE-2025-0316,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-03-18 20:00:00,35000,30487,4198,99.1,3640895.0
+EVT-STADE-2025-0317,Arkéa Arena,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-07-18 18:00:00,25000,13289,1786,60.3,845170.0
+EVT-STADE-2025-0318,Palais des Sports de Marseille,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-05-24 15:00:00,35000,18032,3108,60.4,1317960.0
+EVT-STADE-2025-0319,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-02-13 15:00:00,42000,27478,2510,71.4,1864010.0
+EVT-STADE-2025-0320,Stade de France,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-04-07 21:00:00,80000,41273,6727,60.0,3539035.0
+EVT-STADE-2025-0321,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-10-04 15:00:00,15000,11674,1406,87.2,876830.0
+EVT-STADE-2025-0322,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-06-13 15:00:00,15000,13371,1374,98.3,1480035.0
+EVT-STADE-2025-0323,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-12-24 20:00:00,42000,31449,2991,82.0,3420915.0
+EVT-STADE-2025-0324,Halle Clémenceau,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-01-22 20:00:00,25000,13750,2350,64.4,1206250.0
+EVT-STADE-2025-0325,Stade Chaban-Delmas,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-11-21 18:00:00,60000,38177,5683,73.1,4665795.0
+EVT-STADE-2025-0326,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-01-05 20:00:00,60000,52789,5891,97.8,3848255.0
+EVT-STADE-2025-0327,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-04-13 21:00:00,35000,22414,2191,70.3,2452940.0
+EVT-STADE-2025-0328,Stade Pierre-Mauroy,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-07-27 20:00:00,35000,25286,3939,83.5,2122620.0
+EVT-STADE-2025-0329,Palais des Sports André-Brouat,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-10-09 18:00:00,25000,16929,2595,78.1,1410555.0
+EVT-STADE-2025-0330,Stade de la Beaujoire,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-01-18 20:00:00,25000,18949,1926,83.5,2092165.0
+EVT-STADE-2025-0331,Halle de la Trocardière,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-02-14 21:00:00,42000,34713,4137,92.5,2596335.0
+EVT-STADE-2025-0332,Palais des Sports de Marseille,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-03-20 20:00:00,35000,22009,2036,68.7,2379765.0
+EVT-STADE-2025-0333,Stade de France,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-12-03 21:00:00,80000,59036,7524,83.2,3652080.0
+EVT-STADE-2025-0334,Accor Arena,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-12-11 21:00:00,25000,16760,2764,78.1,1193800.0
+EVT-STADE-2025-0335,Groupama Stadium,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-02-26 15:00:00,35000,26492,3328,85.2,1626760.0
+EVT-STADE-2025-0336,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-01-22 20:00:00,25000,20953,3572,98.1,1835885.0
+EVT-STADE-2025-0337,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-12-15 21:00:00,60000,49067,5833,91.5,3666265.0
+EVT-STADE-2025-0338,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-11-18 21:00:00,35000,29284,4281,95.9,1948770.0
+EVT-STADE-2025-0339,Stade de la Meinau,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-04-12 20:00:00,35000,25592,2442,80.1,1762140.0
+EVT-STADE-2025-0340,Accor Arena,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-11-20 20:00:00,25000,16320,2155,73.9,1028350.0
+EVT-STADE-2025-0341,Patinoire Pôle Sud,Grenoble,Tournoi National Jeunes - Grenoble,Tournoi Jeunes,2025-09-17 21:00:00,15000,12895,1445,95.6,748100.0
+EVT-STADE-2025-0342,Palais des Sports de Marseille,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-08-14 18:00:00,35000,18201,2974,60.5,1289530.0
+EVT-STADE-2025-0343,Stade de la Beaujoire,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-12-08 21:00:00,25000,16781,1993,75.1,1253395.0
+EVT-STADE-2025-0344,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-12-20 21:00:00,60000,37780,3380,68.6,1978400.0
+EVT-STADE-2025-0345,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-10-21 15:00:00,80000,64159,9761,92.4,4365020.0
+EVT-STADE-2025-0346,Halle Clémenceau,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-11-03 18:00:00,25000,16012,2438,73.8,1970520.0
+EVT-STADE-2025-0347,Accor Arena,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-08-25 18:00:00,25000,20054,2470,90.1,2322090.0
+EVT-STADE-2025-0348,Arena du Pays d'Aix,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-10-08 21:00:00,42000,34971,4887,94.9,2270880.0
+EVT-STADE-2025-0349,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-02-07 18:00:00,42000,25934,2290,67.2,1350520.0
+EVT-STADE-2025-0350,Stade Pierre-Mauroy,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-03-23 18:00:00,35000,30585,3540,97.5,1802550.0
+EVT-STADE-2025-0351,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-02-13 21:00:00,60000,38965,3995,71.6,2167700.0
+EVT-STADE-2025-0352,Patinoire Pôle Sud,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-11-24 15:00:00,15000,11872,1463,88.9,1374870.0
+EVT-STADE-2025-0353,Matmut Atlantique,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-08-01 15:00:00,35000,21048,2506,67.3,1257940.0
+EVT-STADE-2025-0354,Palais des Sports Saint-Sauveur,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-04-19 20:00:00,15000,8394,1101,63.3,988740.0
+EVT-STADE-2025-0355,Roazhon Park,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-03-14 21:00:00,80000,67627,9333,96.2,8081545.0
+EVT-STADE-2025-0356,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-09-12 20:00:00,80000,48289,6111,68.0,2976420.0
+EVT-STADE-2025-0357,Arena du Pays d'Aix,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-04-25 18:00:00,42000,27789,3165,73.7,1624920.0
+EVT-STADE-2025-0358,Matmut Atlantique,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-03-08 18:00:00,35000,29057,3213,92.2,1674960.0
+EVT-STADE-2025-0359,Palais des Sports Saint-Sauveur,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-01-15 21:00:00,15000,11059,1481,83.6,867905.0
+EVT-STADE-2025-0360,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-01-22 21:00:00,15000,11269,1976,88.3,832070.0
+EVT-STADE-2025-0361,Arkéa Arena,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-08-20 15:00:00,25000,16340,1585,71.7,886450.0
+EVT-STADE-2025-0362,Le Liberté,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-03-23 15:00:00,15000,8471,1293,65.1,704445.0
+EVT-STADE-2025-0363,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-11-23 20:00:00,15000,13325,1435,98.4,758500.0
+EVT-STADE-2025-0364,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-02-01 18:00:00,35000,27520,4189,90.6,3386450.0
+EVT-STADE-2025-0365,Roazhon Park,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-05-14 20:00:00,80000,63927,5593,86.9,4274965.0
+EVT-STADE-2025-0366,LDLC Arena,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-10-24 15:00:00,15000,11360,1615,86.5,744550.0
+EVT-STADE-2025-0367,Stade de la Beaujoire,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-04-01 15:00:00,25000,15590,2535,72.5,1335300.0
+EVT-STADE-2025-0368,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-07-09 21:00:00,15000,9432,1068,70.0,549960.0
+EVT-STADE-2025-0369,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-10-01 20:00:00,60000,46272,6948,88.7,3819240.0
+EVT-STADE-2025-0370,Stadium de Toulouse,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-01-05 15:00:00,15000,9183,867,67.0,629985.0
+EVT-STADE-2025-0371,Parc des Princes,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-09-05 21:00:00,25000,18777,2823,86.4,2301795.0
+EVT-STADE-2025-0372,Stade Chaban-Delmas,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-04-18 20:00:00,60000,45513,6207,86.2,5420355.0
+EVT-STADE-2025-0373,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-10-24 21:00:00,60000,31102,5438,60.9,2292560.0
+EVT-STADE-2025-0374,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-02-05 15:00:00,15000,11916,1284,88.0,678480.0
+EVT-STADE-2025-0375,Palais des Sports de Marseille,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-11-03 20:00:00,35000,24285,3785,80.2,2039075.0
+EVT-STADE-2025-0376,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-10-18 21:00:00,42000,22922,3328,62.5,1863490.0
+EVT-STADE-2025-0377,Arkéa Arena,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-09-17 15:00:00,25000,20178,1846,88.1,2176630.0
+EVT-STADE-2025-0378,Palais des Sports André-Brouat,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-09-22 21:00:00,25000,15914,1911,71.3,955170.0
+EVT-STADE-2025-0379,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-11-24 18:00:00,42000,25128,2466,65.7,1370340.0
+EVT-STADE-2025-0380,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-02-08 18:00:00,25000,15872,1503,69.5,1089990.0
+EVT-STADE-2025-0381,Stade des Alpes,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-07-18 15:00:00,15000,10179,1656,78.9,872055.0
+EVT-STADE-2025-0382,Orange Vélodrome,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-01-13 20:00:00,35000,19131,2534,61.9,2259635.0
+EVT-STADE-2025-0383,Complexe Sportif de Marcq,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-10-13 20:00:00,80000,49529,5271,68.5,2803620.0
+EVT-STADE-2025-0384,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-01-23 20:00:00,35000,26856,3174,85.8,3076260.0
+EVT-STADE-2025-0385,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-09-11 21:00:00,25000,15207,1568,67.1,1076315.0
+EVT-STADE-2025-0386,Stade Chaban-Delmas,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-07-14 18:00:00,60000,42134,7126,82.1,3045520.0
+EVT-STADE-2025-0387,Accor Arena,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-02-06 18:00:00,25000,20296,3454,95.0,2588660.0
+EVT-STADE-2025-0388,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-01-11 21:00:00,80000,46913,7726,68.3,3338890.0
+EVT-STADE-2025-0389,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-06-06 20:00:00,35000,24614,2161,76.5,1647880.0
+EVT-STADE-2025-0390,Orange Vélodrome,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-08-27 18:00:00,35000,29622,4993,98.9,2136910.0
+EVT-STADE-2025-0391,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-07-09 20:00:00,60000,36447,5493,69.9,3013365.0
+EVT-STADE-2025-0392,Patinoire Pôle Sud,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-07-07 18:00:00,15000,11748,1077,85.5,797910.0
+EVT-STADE-2025-0393,Stade Chaban-Delmas,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-03-01 15:00:00,60000,37996,4364,70.6,4320660.0
+EVT-STADE-2025-0394,Orange Vélodrome,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-05-05 18:00:00,35000,19184,3181,63.9,2425890.0
+EVT-STADE-2025-0395,Stadium de Toulouse,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-04-04 15:00:00,15000,12183,1227,89.4,854985.0
+EVT-STADE-2025-0396,Complexe Sportif de Marcq,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-05-09 18:00:00,80000,44327,5913,62.8,3472965.0
+EVT-STADE-2025-0397,Accor Arena,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-11-09 15:00:00,25000,19471,2704,88.7,2331035.0
+EVT-STADE-2025-0398,Stade Chaban-Delmas,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-11-26 20:00:00,60000,42047,5232,78.8,3200115.0
+EVT-STADE-2025-0399,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-02-08 15:00:00,25000,19624,3426,92.2,1739580.0
+EVT-STADE-2025-0400,Palais des Sports de Marseille,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-11-24 18:00:00,35000,19319,1716,60.1,1008570.0
+EVT-STADE-2025-0401,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-02-05 15:00:00,25000,16008,2817,75.3,1184490.0
+EVT-STADE-2025-0402,Stade de Gerland,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-12-24 15:00:00,80000,57367,6793,80.2,4279765.0
+EVT-STADE-2025-0403,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-02-23 15:00:00,80000,69043,7677,95.9,3990540.0
+EVT-STADE-2025-0404,Halle Clémenceau,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-06-03 21:00:00,25000,14601,1899,66.0,1715835.0
+EVT-STADE-2025-0405,Complexe Bréquigny,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-01-15 18:00:00,15000,10465,1504,79.8,689950.0
+EVT-STADE-2025-0406,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-09-05 20:00:00,42000,28688,4324,78.6,3519480.0
+EVT-STADE-2025-0407,Stade Pierre-Mauroy,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-07-28 21:00:00,35000,28581,3339,91.2,2120895.0
+EVT-STADE-2025-0408,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-11-11 18:00:00,42000,32523,3261,85.2,2278785.0
+EVT-STADE-2025-0409,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-03-09 21:00:00,42000,24142,3662,66.2,2967570.0
+EVT-STADE-2025-0410,Roazhon Park,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-12-08 20:00:00,80000,65456,9024,93.1,5201520.0
+EVT-STADE-2025-0411,Complexe Mangin-Beaulieu,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-12-20 18:00:00,80000,58351,6209,80.7,4178045.0
+EVT-STADE-2025-0412,Groupama Stadium,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-02-20 21:00:00,35000,21599,3566,71.9,1539470.0
+EVT-STADE-2025-0413,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-03-08 15:00:00,25000,21199,3626,99.3,1860455.0
+EVT-STADE-2025-0414,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-11-14 15:00:00,42000,25217,4224,70.1,1812510.0
+EVT-STADE-2025-0415,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-03-17 21:00:00,60000,37607,5173,71.3,2421460.0
+EVT-STADE-2025-0416,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-11-08 18:00:00,80000,57381,5339,78.4,6212135.0
+EVT-STADE-2025-0417,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-24 20:00:00,42000,29576,3436,78.6,2189920.0
+EVT-STADE-2025-0418,Halle Clémenceau,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-05-01 21:00:00,25000,13289,2261,62.2,1163255.0
+EVT-STADE-2025-0419,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-06-08 21:00:00,25000,21431,2519,95.8,1272680.0
+EVT-STADE-2025-0420,Complexe Sportif Hautepierre,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-12-02 18:00:00,42000,29044,4598,80.1,2020820.0
+EVT-STADE-2025-0421,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-04-25 18:00:00,35000,28622,3332,91.3,2120990.0
+EVT-STADE-2025-0422,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-21 18:00:00,35000,24215,3225,78.4,1895925.0
+EVT-STADE-2025-0423,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-02-26 18:00:00,15000,9944,1620,77.1,703320.0
+EVT-STADE-2025-0424,Stade des Alpes,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-06-05 20:00:00,15000,8799,1311,67.4,591720.0
+EVT-STADE-2025-0425,Complexe Mangin-Beaulieu,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-02-26 18:00:00,80000,45380,4780,62.7,3237100.0
+EVT-STADE-2025-0426,Complexe Bréquigny,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-07-19 21:00:00,15000,9646,959,70.7,529130.0
+EVT-STADE-2025-0427,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-01-09 21:00:00,80000,55399,8280,79.6,3731970.0
+EVT-STADE-2025-0428,Roazhon Park,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-12-16 20:00:00,80000,69662,6338,95.0,4719290.0
+EVT-STADE-2025-0429,Complexe Bréquigny,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-03-09 15:00:00,15000,12354,1791,94.3,1003680.0
+EVT-STADE-2025-0430,Stade Ernest-Wallon,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-04-13 21:00:00,60000,47998,7261,92.1,5895080.0
+EVT-STADE-2025-0431,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-02-26 15:00:00,80000,53812,5148,73.7,2901360.0
+EVT-STADE-2025-0432,Complexe Sportif de Marcq,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-09-22 18:00:00,80000,44722,5518,62.8,5180870.0
+EVT-STADE-2025-0433,Complexe Sportif de Marcq,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-06-16 18:00:00,80000,66521,7079,92.0,3765380.0
+EVT-STADE-2025-0434,Arkéa Arena,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-07-07 18:00:00,25000,18030,1970,80.0,2025050.0
+EVT-STADE-2025-0435,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-09-21 18:00:00,25000,17786,2564,81.4,1441370.0
+EVT-STADE-2025-0436,Matmut Atlantique,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-12-19 15:00:00,35000,29454,4636,97.4,2042620.0
+EVT-STADE-2025-0437,Stadium de Toulouse,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-11-20 21:00:00,15000,8164,1151,62.1,655130.0
+EVT-STADE-2025-0438,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-14 20:00:00,42000,23707,2585,62.6,1713065.0
+EVT-STADE-2025-0439,Stade Ernest-Wallon,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-03-16 21:00:00,60000,44340,6000,83.9,3495300.0
+EVT-STADE-2025-0440,Le Liberté,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-10-05 21:00:00,15000,10170,1605,78.5,1265700.0
+EVT-STADE-2025-0441,Parc des Princes,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-03-04 18:00:00,25000,18823,3252,88.3,2412955.0
+EVT-STADE-2025-0442,Stade Pierre-Mauroy,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-04-07 21:00:00,35000,29743,2772,92.9,3221155.0
+EVT-STADE-2025-0443,Palais des Sports André-Brouat,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-09-24 15:00:00,25000,21090,3310,97.6,1776550.0
+EVT-STADE-2025-0444,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-04-17 20:00:00,15000,11792,1483,88.5,724510.0
+EVT-STADE-2025-0445,Complexe Sportif Hautepierre,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-06-06 15:00:00,42000,24621,3014,65.8,1861445.0
+EVT-STADE-2025-0446,Stade de la Beaujoire,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-01-04 15:00:00,25000,16608,2092,74.8,1270360.0
+EVT-STADE-2025-0447,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-11-03 15:00:00,80000,66442,9318,94.7,7977070.0
+EVT-STADE-2025-0448,Stade de France,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-04-20 15:00:00,80000,60119,6601,83.4,4355605.0
+EVT-STADE-2025-0449,Stade Pierre-Mauroy,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-04-04 18:00:00,35000,27230,2380,84.6,2909550.0
+EVT-STADE-2025-0450,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-07-15 20:00:00,80000,69284,8796,97.6,4277520.0
+EVT-STADE-2025-0451,Palais des Sports de Marseille,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-04-07 18:00:00,35000,20743,2777,67.2,2457405.0
+EVT-STADE-2025-0452,Complexe Mangin-Beaulieu,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-12-04 21:00:00,80000,62193,10927,91.4,5530435.0
+EVT-STADE-2025-0453,Palais des Sports André-Brouat,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-09-15 20:00:00,25000,19726,3349,92.3,1429030.0
+EVT-STADE-2025-0454,Stade de la Beaujoire,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-06-28 20:00:00,25000,18156,2969,84.5,2285510.0
+EVT-STADE-2025-0455,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-07-01 18:00:00,15000,8609,1426,66.9,614770.0
+EVT-STADE-2025-0456,LDLC Arena,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-01-08 21:00:00,15000,8459,1186,64.3,550270.0
+EVT-STADE-2025-0457,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-09-23 21:00:00,35000,28107,3847,91.3,2226565.0
+EVT-STADE-2025-0458,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-11-16 15:00:00,60000,43464,5256,81.2,2617920.0
+EVT-STADE-2025-0459,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-10-22 21:00:00,42000,31414,4286,85.0,2485130.0
+EVT-STADE-2025-0460,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-08-03 18:00:00,60000,51066,8274,98.9,6409110.0
+EVT-STADE-2025-0461,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-12-13 21:00:00,60000,43941,5559,82.5,3367095.0
+EVT-STADE-2025-0462,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-05-09 18:00:00,25000,16927,2772,78.8,1200810.0
+EVT-STADE-2025-0463,Groupama Stadium,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-12-23 15:00:00,35000,31328,2867,97.7,1656590.0
+EVT-STADE-2025-0464,Orange Vélodrome,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-01-20 15:00:00,35000,26573,2442,82.9,1407690.0
+EVT-STADE-2025-0465,LDLC Arena,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-06-07 15:00:00,15000,7852,1238,60.6,662840.0
+EVT-STADE-2025-0466,Stade Pierre-Mauroy,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-05-19 21:00:00,35000,19418,2037,61.3,2159780.0
+EVT-STADE-2025-0467,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-04-02 18:00:00,42000,22377,3159,60.8,1461060.0
+EVT-STADE-2025-0468,Stade de France,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-12-08 20:00:00,80000,61634,10526,90.2,5405030.0
+EVT-STADE-2025-0469,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-08-21 20:00:00,80000,44863,7216,65.1,3149890.0
+EVT-STADE-2025-0470,Complexe Sportif de Marcq,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-05-09 15:00:00,80000,45619,4941,63.2,2603820.0
+EVT-STADE-2025-0471,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-01-22 21:00:00,42000,23610,3438,64.4,1567800.0
+EVT-STADE-2025-0472,Matmut Atlantique,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-12-25 21:00:00,35000,26854,3141,85.7,1590870.0
+EVT-STADE-2025-0473,Accor Arena,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-07-20 18:00:00,25000,16267,2783,76.2,1183760.0
+EVT-STADE-2025-0474,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-09-28 18:00:00,35000,29372,3773,94.7,2264990.0
+EVT-STADE-2025-0475,Halle de la Trocardière,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-02-03 18:00:00,42000,26061,2414,67.8,2818685.0
+EVT-STADE-2025-0476,Palais des Sports André-Brouat,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-09-06 20:00:00,25000,13559,1591,60.6,804520.0
+EVT-STADE-2025-0477,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-01-09 18:00:00,60000,35279,5701,68.3,3012805.0
+EVT-STADE-2025-0478,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-11-16 20:00:00,35000,22167,3628,73.7,1904515.0
+EVT-STADE-2025-0479,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-07-19 20:00:00,35000,25975,3740,84.9,3142875.0
+EVT-STADE-2025-0480,Stade Ernest-Wallon,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-04-18 15:00:00,60000,47550,8250,93.0,4202250.0
+EVT-STADE-2025-0481,Le Liberté,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-08-22 15:00:00,15000,12034,1721,91.7,971780.0
+EVT-STADE-2025-0482,Parc des Princes,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-02-19 18:00:00,25000,15513,2312,71.3,1276085.0
+EVT-STADE-2025-0483,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-12-17 20:00:00,35000,23137,3113,75.0,1819415.0
+EVT-STADE-2025-0484,Stadium de Toulouse,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-12-27 20:00:00,15000,9118,1112,68.2,688310.0
+EVT-STADE-2025-0485,Stadium de Toulouse,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-04-03 15:00:00,15000,12265,2150,96.1,1089425.0
+EVT-STADE-2025-0486,Halle de la Trocardière,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-02-26 15:00:00,42000,26259,4107,72.3,3258765.0
+EVT-STADE-2025-0487,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-03-24 18:00:00,42000,33326,4138,89.2,2534170.0
+EVT-STADE-2025-0488,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-04-04 20:00:00,15000,11951,1579,90.2,932545.0
+EVT-STADE-2025-0489,Stade des Alpes,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-11-25 21:00:00,15000,11500,1025,83.5,1233750.0
+EVT-STADE-2025-0490,Roazhon Park,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-08-16 20:00:00,80000,54262,7817,77.6,3582110.0
+EVT-STADE-2025-0491,Roazhon Park,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-11-17 18:00:00,80000,47216,6463,67.1,3740470.0
+EVT-STADE-2025-0492,Stade de la Beaujoire,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-11-13 21:00:00,25000,17172,1653,75.3,1185990.0
+EVT-STADE-2025-0493,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-07-26 15:00:00,35000,29388,3021,92.6,2077710.0
+EVT-STADE-2025-0494,LDLC Arena,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-01-17 15:00:00,15000,11469,1670,87.6,933605.0
+EVT-STADE-2025-0495,Complexe Sportif de Marcq,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-10-16 20:00:00,80000,63858,9902,92.2,5349110.0
+EVT-STADE-2025-0496,Roazhon Park,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-11-18 18:00:00,80000,46510,5810,65.4,3545450.0
+EVT-STADE-2025-0497,Parc des Princes,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-10-18 21:00:00,25000,18341,2934,85.1,2292485.0
+EVT-STADE-2025-0498,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-05-24 20:00:00,35000,24272,4182,81.3,3108620.0
+EVT-STADE-2025-0499,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-03-24 20:00:00,25000,14963,2562,70.1,1089390.0
+EVT-STADE-2025-0500,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-02-01 21:00:00,15000,11844,1370,88.1,697820.0
+EVT-STADE-2025-0501,Stade Pierre-Mauroy,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-10-07 21:00:00,35000,28412,3122,90.1,2059040.0
+EVT-STADE-2025-0502,Halle de la Trocardière,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-01-15 15:00:00,42000,33793,4763,91.8,4063155.0
+EVT-STADE-2025-0503,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-03-04 20:00:00,80000,59688,9512,86.5,4168640.0
+EVT-STADE-2025-0504,Halle de la Trocardière,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-08-21 18:00:00,42000,26931,2468,70.0,1424930.0
+EVT-STADE-2025-0505,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-08-09 18:00:00,25000,19399,2526,87.7,1213470.0
+EVT-STADE-2025-0506,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-01-15 18:00:00,80000,56209,5551,77.2,3074020.0
+EVT-STADE-2025-0507,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-07-23 15:00:00,60000,42231,6429,81.1,3507645.0
+EVT-STADE-2025-0508,Le Liberté,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-04-10 18:00:00,15000,8968,1171,67.6,696310.0
+EVT-STADE-2025-0509,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-10-23 18:00:00,15000,8893,1157,67.0,556040.0
+EVT-STADE-2025-0510,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-07-09 21:00:00,25000,14855,1419,65.1,1617425.0
+EVT-STADE-2025-0511,Le Liberté,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-05-18 18:00:00,15000,9880,1400,75.2,1189800.0
+EVT-STADE-2025-0512,Stade de la Meinau,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-02-02 15:00:00,35000,26989,3426,86.9,2071005.0
+EVT-STADE-2025-0513,Matmut Atlantique,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-05-25 20:00:00,35000,23522,3918,78.4,1685160.0
+EVT-STADE-2025-0514,Stade Pierre-Mauroy,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-03-05 21:00:00,35000,30208,3672,96.8,2277360.0
+EVT-STADE-2025-0515,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-03-08 18:00:00,80000,67956,9804,97.2,4489680.0
+EVT-STADE-2025-0516,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-04-19 18:00:00,80000,63909,7531,89.3,7315015.0
+EVT-STADE-2025-0517,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-04 21:00:00,42000,23191,2933,62.2,1776845.0
+EVT-STADE-2025-0518,Patinoire Pôle Sud,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-05-01 21:00:00,15000,12186,1194,89.2,846870.0
+EVT-STADE-2025-0519,Stade Pierre-Mauroy,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-11-12 20:00:00,35000,19657,2428,63.1,2277845.0
+EVT-STADE-2025-0520,Complexe Sportif de Marcq,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-09-20 18:00:00,80000,59005,7155,82.7,4443975.0
+EVT-STADE-2025-0521,Halle de la Trocardière,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-04-12 20:00:00,42000,26570,3922,72.6,1777600.0
+EVT-STADE-2025-0522,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-08-16 18:00:00,80000,45371,5269,63.3,2678380.0
+EVT-STADE-2025-0523,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-12-28 18:00:00,42000,29662,3266,78.4,1706360.0
+EVT-STADE-2025-0524,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-07-23 15:00:00,80000,51136,4543,69.6,2669830.0
+EVT-STADE-2025-0525,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-01-23 21:00:00,60000,41788,5852,79.4,5014980.0
+EVT-STADE-2025-0526,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-05-10 21:00:00,80000,59134,9826,86.2,7482890.0
+EVT-STADE-2025-0527,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-08-03 21:00:00,35000,20971,3459,69.8,1808445.0
+EVT-STADE-2025-0528,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-02-09 18:00:00,80000,55341,9138,80.6,6988485.0
+EVT-STADE-2025-0529,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-01-25 21:00:00,25000,22212,2588,99.2,1313360.0
+EVT-STADE-2025-0530,Roazhon Park,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-08-26 20:00:00,80000,68871,7369,95.3,7696285.0
+EVT-STADE-2025-0531,Groupama Stadium,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-03-15 18:00:00,35000,23899,2246,74.7,1636955.0
+EVT-STADE-2025-0532,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-09-12 15:00:00,25000,21718,2207,95.7,1203290.0
+EVT-STADE-2025-0533,Orange Vélodrome,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-08-14 21:00:00,35000,18627,2758,61.1,1248310.0
+EVT-STADE-2025-0534,Stadium de Toulouse,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-08-22 21:00:00,15000,8476,869,62.3,598670.0
+EVT-STADE-2025-0535,LDLC Arena,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-11-07 20:00:00,15000,12630,2160,98.6,918900.0
+EVT-STADE-2025-0536,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-11-02 20:00:00,15000,10126,1244,75.8,766670.0
+EVT-STADE-2025-0537,Roazhon Park,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-08-07 15:00:00,80000,44448,4672,61.4,2501440.0
+EVT-STADE-2025-0538,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-05-19 21:00:00,80000,58034,5645,79.6,3152270.0
+EVT-STADE-2025-0539,Stade de Gerland,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-09-14 15:00:00,80000,70148,6652,96.0,4819660.0
+EVT-STADE-2025-0540,Arena du Pays d'Aix,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-04-01 15:00:00,42000,25739,2485,67.2,1779505.0
+EVT-STADE-2025-0541,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-06-16 21:00:00,35000,26806,3189,85.7,2003520.0
+EVT-STADE-2025-0542,Accor Arena,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-10-10 21:00:00,25000,14263,2311,66.3,1219585.0
+EVT-STADE-2025-0543,Stade de France,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-04-23 18:00:00,80000,53703,7337,76.3,4250885.0
+EVT-STADE-2025-0544,LDLC Arena,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-04-25 21:00:00,15000,9109,1181,68.6,568520.0
+EVT-STADE-2025-0545,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-06-19 20:00:00,42000,22752,2910,61.1,1751340.0
+EVT-STADE-2025-0546,Palais des Sports de Marseille,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-08-03 15:00:00,35000,27698,4781,92.8,2026190.0
+EVT-STADE-2025-0547,Parc des Princes,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-01-14 20:00:00,25000,20885,2740,94.5,1624825.0
+EVT-STADE-2025-0548,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-09-18 18:00:00,15000,12747,2133,99.2,915660.0
+EVT-STADE-2025-0549,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-03-15 21:00:00,60000,40004,4996,75.0,2449120.0
+EVT-STADE-2025-0550,Stade des Alpes,Grenoble,Tournoi National Jeunes - Grenoble,Tournoi Jeunes,2025-04-19 15:00:00,15000,8258,1132,62.6,530740.0
+EVT-STADE-2025-0551,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-08-10 20:00:00,42000,36500,5206,99.3,2944000.0
+EVT-STADE-2025-0552,Complexe Sportif Hautepierre,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-01-26 21:00:00,42000,24936,4169,69.3,1790330.0
+EVT-STADE-2025-0553,LDLC Arena,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-05-11 15:00:00,15000,13249,1361,97.4,737720.0
+EVT-STADE-2025-0554,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-04-13 18:00:00,25000,14813,2362,68.7,1034890.0
+EVT-STADE-2025-0555,Accor Arena,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-03-08 18:00:00,25000,17581,3044,82.5,2255385.0
+EVT-STADE-2025-0556,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-08-10 15:00:00,25000,18021,2004,80.1,1311945.0
+EVT-STADE-2025-0557,Stade de la Meinau,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-08-15 18:00:00,35000,28146,4719,93.9,3572160.0
+EVT-STADE-2025-0558,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-10-28 15:00:00,25000,17315,2209,78.1,1331425.0
+EVT-STADE-2025-0559,Stade de France,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-02-22 21:00:00,80000,64220,9460,92.1,7823700.0
+EVT-STADE-2025-0560,Stade de Gerland,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-09-12 20:00:00,80000,48769,5391,67.7,2810820.0
+EVT-STADE-2025-0561,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-09-25 21:00:00,15000,9779,1485,75.1,664620.0
+EVT-STADE-2025-0562,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-06-04 18:00:00,42000,23871,2673,63.2,1384380.0
+EVT-STADE-2025-0563,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-03-09 15:00:00,80000,59135,7585,83.4,3670300.0
+EVT-STADE-2025-0564,Stade Pierre-Mauroy,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-07-19 21:00:00,35000,29735,2849,93.1,2050325.0
+EVT-STADE-2025-0565,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-07-27 18:00:00,35000,18595,2930,61.5,2313075.0
+EVT-STADE-2025-0566,Stadium de Toulouse,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-03-12 21:00:00,15000,9922,1417,75.6,1197620.0
+EVT-STADE-2025-0567,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-07-11 15:00:00,15000,8173,1157,62.2,534440.0
+EVT-STADE-2025-0568,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-03-05 21:00:00,25000,19870,1880,87.0,1364150.0
+EVT-STADE-2025-0569,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-11-02 18:00:00,15000,8494,746,61.6,441320.0
+EVT-STADE-2025-0570,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-07-12 20:00:00,80000,66944,11456,98.0,4872320.0
+EVT-STADE-2025-0571,LDLC Arena,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-12-08 21:00:00,15000,9707,1243,73.0,601960.0
+EVT-STADE-2025-0572,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-11-21 20:00:00,35000,30645,3585,97.8,2275275.0
+EVT-STADE-2025-0573,Orange Vélodrome,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-04-03 15:00:00,35000,20169,2581,65.0,1250320.0
+EVT-STADE-2025-0574,Stade Pierre-Mauroy,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-06-21 20:00:00,35000,24305,3904,80.6,3041925.0
+EVT-STADE-2025-0575,Palais des Sports André-Brouat,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-05-26 15:00:00,25000,20452,2723,92.7,1294310.0
+EVT-STADE-2025-0576,Groupama Stadium,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-11-15 18:00:00,35000,24757,2893,79.0,1465960.0
+EVT-STADE-2025-0577,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-02-17 21:00:00,25000,15445,1480,67.7,833350.0
+EVT-STADE-2025-0578,Halle Clémenceau,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-09-28 15:00:00,25000,17673,2202,79.5,2052705.0
+EVT-STADE-2025-0579,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-02-06 20:00:00,15000,12692,1858,97.0,1543320.0
+EVT-STADE-2025-0580,Parc des Princes,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-01-11 20:00:00,25000,20060,2464,90.1,1217800.0
+EVT-STADE-2025-0581,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-05-28 18:00:00,15000,13112,1378,96.6,737860.0
+EVT-STADE-2025-0582,Complexe Sportif Hautepierre,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-08-14 20:00:00,42000,24767,3414,67.1,1968015.0
+EVT-STADE-2025-0583,Arkéa Arena,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-10-23 20:00:00,25000,20664,2035,90.8,2265190.0
+EVT-STADE-2025-0584,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-09-28 21:00:00,42000,27324,4470,75.7,1937220.0
+EVT-STADE-2025-0585,Stade Pierre-Mauroy,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-01-12 20:00:00,35000,23178,3877,77.3,2012260.0
+EVT-STADE-2025-0586,Complexe Mangin-Beaulieu,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-08-28 21:00:00,80000,51567,6113,72.1,3848765.0
+EVT-STADE-2025-0587,Le Liberté,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-02-28 21:00:00,15000,10608,1452,80.4,840360.0
+EVT-STADE-2025-0588,Stade de Gerland,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-12-11 21:00:00,80000,69016,10104,98.9,5631720.0
+EVT-STADE-2025-0589,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-04-06 18:00:00,60000,45408,5292,84.5,2685240.0
+EVT-STADE-2025-0590,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-11-13 20:00:00,80000,44920,7559,65.6,3237350.0
+EVT-STADE-2025-0591,Arkéa Arena,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-09-14 20:00:00,25000,16845,1855,74.8,1221775.0
+EVT-STADE-2025-0592,Stade de la Meinau,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-09-09 18:00:00,35000,30886,3169,97.3,3417560.0
+EVT-STADE-2025-0593,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-08-04 20:00:00,42000,29224,2737,76.1,1560970.0
+EVT-STADE-2025-0594,Halle de la Trocardière,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-01-16 20:00:00,42000,24314,2817,64.6,1798380.0
+EVT-STADE-2025-0595,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-10-10 15:00:00,15000,8762,1152,66.1,550860.0
+EVT-STADE-2025-0596,Palais des Sports de Marseille,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-07-11 15:00:00,35000,29805,4600,98.3,2491225.0
+EVT-STADE-2025-0597,Palais des Sports André-Brouat,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-02-01 21:00:00,25000,18591,2684,85.1,1507595.0
+EVT-STADE-2025-0598,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-07-08 20:00:00,25000,20934,3516,97.8,1507020.0
+EVT-STADE-2025-0599,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-03-12 21:00:00,35000,29459,3581,94.4,3399265.0
+EVT-STADE-2025-0600,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-03-22 21:00:00,25000,17404,1946,77.4,1008620.0
+EVT-STADE-2025-0601,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-02-16 18:00:00,35000,21210,3010,69.2,1706950.0
+EVT-STADE-2025-0602,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-06-20 18:00:00,15000,9649,1361,73.4,629720.0
+EVT-STADE-2025-0603,Palais des Sports de Marseille,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-03-11 18:00:00,35000,27389,3445,88.1,2093755.0
+EVT-STADE-2025-0604,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-04-03 21:00:00,25000,17513,2712,80.9,1203390.0
+EVT-STADE-2025-0605,Complexe Bréquigny,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-09-20 18:00:00,15000,11660,1255,86.1,663550.0
+EVT-STADE-2025-0606,Arkéa Arena,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-06-18 15:00:00,25000,21717,2108,95.3,1178510.0
+EVT-STADE-2025-0607,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-05-20 18:00:00,35000,22189,1995,69.1,1497255.0
+EVT-STADE-2025-0608,Complexe Sportif Hautepierre,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-09-09 15:00:00,42000,28469,3031,75.0,2038855.0
+EVT-STADE-2025-0609,Matmut Atlantique,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-05-25 21:00:00,35000,27076,2849,85.5,1524530.0
+EVT-STADE-2025-0610,Palais des Sports André-Brouat,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-09-11 15:00:00,25000,16243,1507,71.0,1107685.0
+EVT-STADE-2025-0611,Palais des Sports André-Brouat,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-05-16 15:00:00,25000,13039,2036,60.3,900170.0
+EVT-STADE-2025-0612,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-11-23 15:00:00,60000,43119,4760,79.8,2483570.0
+EVT-STADE-2025-0613,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-05-06 18:00:00,42000,26323,3455,70.9,1653440.0
+EVT-STADE-2025-0614,Complexe Sportif Hautepierre,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-02-08 18:00:00,42000,29333,3469,78.1,3360555.0
+EVT-STADE-2025-0615,Stade Chaban-Delmas,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-07-18 20:00:00,60000,41156,7203,80.6,5299010.0
+EVT-STADE-2025-0616,Stade Pierre-Mauroy,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-10-22 15:00:00,35000,28501,2789,89.4,3119835.0
+EVT-STADE-2025-0617,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-09-16 18:00:00,25000,19134,1816,83.8,1028020.0
+EVT-STADE-2025-0618,Stade de France,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-08-24 20:00:00,80000,45059,4141,61.5,3062905.0
+EVT-STADE-2025-0619,Complexe Sportif Hautepierre,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-01-28 18:00:00,42000,24792,3852,68.2,1706760.0
+EVT-STADE-2025-0620,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-07-23 21:00:00,42000,32669,3493,86.1,1853320.0
+EVT-STADE-2025-0621,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-04-15 18:00:00,15000,10228,1727,79.7,892010.0
+EVT-STADE-2025-0622,Stade de Gerland,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-02-02 18:00:00,80000,60337,6703,83.8,6804395.0
+EVT-STADE-2025-0623,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-12-14 15:00:00,60000,42386,4654,78.4,2435080.0
+EVT-STADE-2025-0624,Stade Chaban-Delmas,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-01-05 20:00:00,60000,42549,7071,82.7,3044220.0
+EVT-STADE-2025-0625,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-03-08 15:00:00,42000,32199,3081,84.0,2219205.0
+EVT-STADE-2025-0626,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-02-01 18:00:00,25000,18878,2847,86.9,1561260.0
+EVT-STADE-2025-0627,Halle de la Trocardière,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-07-24 18:00:00,42000,25606,3835,70.1,1726930.0
+EVT-STADE-2025-0628,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-08-14 18:00:00,42000,29727,4125,80.6,2368965.0
+EVT-STADE-2025-0629,LDLC Arena,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-09-21 15:00:00,15000,9528,1137,71.1,570090.0
+EVT-STADE-2025-0630,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-04-16 18:00:00,25000,20587,2938,94.1,1660915.0
+EVT-STADE-2025-0631,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-11-13 15:00:00,15000,12877,1163,93.6,870215.0
+EVT-STADE-2025-0632,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-12-28 20:00:00,35000,23167,2943,74.6,1430760.0
+EVT-STADE-2025-0633,Matmut Atlantique,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-05-10 20:00:00,35000,26854,3176,85.8,2002430.0
+EVT-STADE-2025-0634,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-06-03 21:00:00,15000,12540,1349,92.6,713450.0
+EVT-STADE-2025-0635,Complexe Sportif de Marcq,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-04-20 20:00:00,80000,47391,6529,67.4,3053980.0
+EVT-STADE-2025-0636,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-11-28 15:00:00,60000,49045,5135,90.3,2755100.0
+EVT-STADE-2025-0637,Arkéa Arena,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-10-16 20:00:00,25000,15552,1673,68.9,884810.0
+EVT-STADE-2025-0638,Orange Vélodrome,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-04-24 20:00:00,35000,30264,2846,94.6,1619420.0
+EVT-STADE-2025-0639,Accor Arena,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-06-05 18:00:00,25000,21595,2805,97.6,1673025.0
+EVT-STADE-2025-0640,Palais des Sports André-Brouat,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-06-05 20:00:00,25000,13850,1400,61.0,973250.0
+EVT-STADE-2025-0641,Orange Vélodrome,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-11-02 21:00:00,35000,22056,1989,68.7,2372010.0
+EVT-STADE-2025-0642,Stade des Alpes,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-12-24 18:00:00,15000,13070,1585,97.7,984400.0
+EVT-STADE-2025-0643,Stadium de Toulouse,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-07-02 20:00:00,15000,8052,1128,61.2,966420.0
+EVT-STADE-2025-0644,Parc des Princes,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-11-22 15:00:00,25000,15914,1661,70.3,1767940.0
+EVT-STADE-2025-0645,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-12-06 18:00:00,35000,27366,4659,91.5,2396220.0
+EVT-STADE-2025-0646,Stade de la Meinau,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-06-22 15:00:00,35000,27514,3111,87.5,2015880.0
+EVT-STADE-2025-0647,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-11-18 20:00:00,35000,21742,3283,71.5,2668820.0
+EVT-STADE-2025-0648,Orange Vélodrome,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-12-22 15:00:00,35000,21893,3657,73.0,2775155.0
+EVT-STADE-2025-0649,Complexe Sportif Hautepierre,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-01-22 21:00:00,42000,23024,3310,62.7,2784540.0
+EVT-STADE-2025-0650,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-08-08 20:00:00,15000,10955,1810,85.1,945475.0
+EVT-STADE-2025-0651,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-08-19 15:00:00,60000,51354,7566,98.2,3432120.0
+EVT-STADE-2025-0652,Complexe Sportif de Marcq,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-09-03 21:00:00,80000,59268,9852,86.4,4241040.0
+EVT-STADE-2025-0653,Halle Clémenceau,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-08-13 18:00:00,25000,14818,2307,68.5,1243560.0
+EVT-STADE-2025-0654,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-01-21 20:00:00,42000,35358,3198,91.8,1860240.0
+EVT-STADE-2025-0655,Patinoire Pôle Sud,Grenoble,Tournoi National Jeunes - Grenoble,Tournoi Jeunes,2025-09-23 15:00:00,15000,12180,1815,93.3,819150.0
+EVT-STADE-2025-0656,Stade de Gerland,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-02-06 20:00:00,80000,44539,7781,65.4,3281420.0
+EVT-STADE-2025-0657,Arkéa Arena,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-11-19 18:00:00,25000,16629,2121,75.0,1029120.0
+EVT-STADE-2025-0658,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-05-17 21:00:00,25000,13072,2053,60.5,905410.0
+EVT-STADE-2025-0659,Orange Vélodrome,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-10-16 15:00:00,35000,24884,2556,78.4,2754140.0
+EVT-STADE-2025-0660,Rhenus Sport,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-08-20 20:00:00,60000,49881,6759,94.4,3186180.0
+EVT-STADE-2025-0661,Rhenus Sport,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-11-18 21:00:00,60000,46365,7515,89.8,3269700.0
+EVT-STADE-2025-0662,Groupama Stadium,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-09-10 20:00:00,35000,27197,2798,85.7,1923365.0
+EVT-STADE-2025-0663,Orange Vélodrome,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-08-23 21:00:00,35000,26497,3953,87.0,1783160.0
+EVT-STADE-2025-0664,Stade des Alpes,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-05-24 18:00:00,15000,10635,1334,79.8,812075.0
+EVT-STADE-2025-0665,Stade Chaban-Delmas,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-02-07 21:00:00,60000,35395,3245,64.4,3819825.0
+EVT-STADE-2025-0666,Complexe Sportif de Marcq,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-10-02 21:00:00,80000,41867,7333,61.5,3717265.0
+EVT-STADE-2025-0667,Stade de la Meinau,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-02-01 20:00:00,35000,29491,5019,98.6,2139480.0
+EVT-STADE-2025-0668,Stade de France,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-10-07 21:00:00,80000,70718,6322,96.3,4762810.0
+EVT-STADE-2025-0669,Stade Chaban-Delmas,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-08-15 20:00:00,60000,32828,3292,60.2,1807840.0
+EVT-STADE-2025-0670,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-12-03 21:00:00,80000,65465,5895,89.2,3437700.0
+EVT-STADE-2025-0671,Arena du Pays d'Aix,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-09-24 20:00:00,42000,30821,2821,80.1,2092195.0
+EVT-STADE-2025-0672,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-09-22 21:00:00,35000,23874,2306,74.8,1650830.0
+EVT-STADE-2025-0673,Complexe Bréquigny,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-06-25 18:00:00,15000,12962,1423,95.9,1457520.0
+EVT-STADE-2025-0674,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-01-01 15:00:00,25000,15035,2490,70.1,1900475.0
+EVT-STADE-2025-0675,Stade de Gerland,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-12-02 21:00:00,80000,67062,7818,93.6,7654770.0
+EVT-STADE-2025-0676,Palais des Sports André-Brouat,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-08-21 18:00:00,25000,16951,1624,74.3,914530.0
+EVT-STADE-2025-0677,Stade de France,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-05-04 20:00:00,80000,67751,7689,94.3,4971045.0
+EVT-STADE-2025-0678,Stade de France,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-10-25 18:00:00,80000,47060,4940,65.0,3352700.0
+EVT-STADE-2025-0679,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-07-18 21:00:00,35000,23704,3841,78.7,1671370.0
+EVT-STADE-2025-0680,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-04-09 15:00:00,80000,56217,6343,78.2,6364195.0
+EVT-STADE-2025-0681,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-01-10 18:00:00,25000,15175,2275,69.8,1024000.0
+EVT-STADE-2025-0682,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-03-22 15:00:00,35000,19408,1872,60.8,1341360.0
+EVT-STADE-2025-0683,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-01-22 20:00:00,35000,30850,3170,97.2,3414750.0
+EVT-STADE-2025-0684,Halle de la Trocardière,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-06-06 20:00:00,42000,30682,4388,83.5,2477690.0
+EVT-STADE-2025-0685,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-12-11 20:00:00,25000,16020,2380,73.6,1956700.0
+EVT-STADE-2025-0686,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-12-13 15:00:00,60000,40131,5289,75.7,3128145.0
+EVT-STADE-2025-0687,Complexe Sportif Hautepierre,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-07-19 15:00:00,42000,28307,4579,78.3,2418565.0
+EVT-STADE-2025-0688,Orange Vélodrome,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-02-08 15:00:00,35000,22449,2331,70.8,1256220.0
+EVT-STADE-2025-0689,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-08-08 15:00:00,15000,13072,1313,95.9,720410.0
+EVT-STADE-2025-0690,Complexe Sportif de Marcq,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-05-18 20:00:00,80000,54785,9054,79.8,6920225.0
+EVT-STADE-2025-0691,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-05-10 21:00:00,42000,25302,3846,69.4,2100090.0
+EVT-STADE-2025-0692,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-05-26 20:00:00,15000,11439,1911,89.0,1450065.0
+EVT-STADE-2025-0693,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-07-21 15:00:00,35000,29268,4262,95.8,3553280.0
+EVT-STADE-2025-0694,Palais des Sports André-Brouat,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-04-28 20:00:00,25000,19421,2529,87.8,1214880.0
+EVT-STADE-2025-0695,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-11-26 21:00:00,80000,69236,9724,98.7,4508080.0
+EVT-STADE-2025-0696,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-01-18 18:00:00,42000,25569,2445,66.7,1378320.0
+EVT-STADE-2025-0697,Complexe Sportif Hautepierre,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-07-27 15:00:00,42000,35133,4221,93.7,2109240.0
+EVT-STADE-2025-0698,LDLC Arena,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-06-08 15:00:00,15000,11239,1226,83.1,812255.0
+EVT-STADE-2025-0699,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-06-12 18:00:00,25000,18567,1983,82.2,1052760.0
+EVT-STADE-2025-0700,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-03-15 20:00:00,35000,26429,4476,88.3,2308305.0
+EVT-STADE-2025-0701,Accor Arena,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-09-03 15:00:00,25000,18665,2560,84.9,1199950.0
+EVT-STADE-2025-0702,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-05-03 21:00:00,60000,49916,5584,92.5,3642220.0
+EVT-STADE-2025-0703,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-10-16 20:00:00,15000,12821,1594,96.1,975445.0
+EVT-STADE-2025-0704,Stade des Alpes,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-04-06 18:00:00,15000,12583,1142,91.5,1355055.0
+EVT-STADE-2025-0705,Stade de Gerland,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-01-21 18:00:00,80000,47789,7250,68.8,3963005.0
+EVT-STADE-2025-0706,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-01-11 18:00:00,15000,10645,1655,82.0,733100.0
+EVT-STADE-2025-0707,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-07-05 18:00:00,80000,55213,4866,75.1,5909605.0
+EVT-STADE-2025-0708,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-12-17 20:00:00,35000,26971,3724,87.7,1740130.0
+EVT-STADE-2025-0709,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-05-18 15:00:00,25000,16685,2665,77.4,1166800.0
+EVT-STADE-2025-0710,LDLC Arena,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-11-08 15:00:00,15000,10853,1177,80.2,619840.0
+EVT-STADE-2025-0711,Stade Ernest-Wallon,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-07-15 20:00:00,60000,33056,3184,60.4,2283520.0
+EVT-STADE-2025-0712,Stade Ernest-Wallon,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-06-09 20:00:00,60000,35097,4143,65.4,2615115.0
+EVT-STADE-2025-0713,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-12-19 21:00:00,42000,31785,4671,86.8,2121300.0
+EVT-STADE-2025-0714,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-08-05 20:00:00,80000,69700,6300,95.0,7499500.0
+EVT-STADE-2025-0715,Palais des Sports Saint-Sauveur,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-09-13 20:00:00,15000,9184,1286,69.8,734780.0
+EVT-STADE-2025-0716,Palais des Sports de Marseille,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-09-01 18:00:00,35000,24507,4088,81.7,1757210.0
+EVT-STADE-2025-0717,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-09-11 18:00:00,15000,9977,1573,77.0,692560.0
+EVT-STADE-2025-0718,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-11-03 15:00:00,15000,8779,941,64.8,630305.0
+EVT-STADE-2025-0719,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-05-23 18:00:00,25000,18419,2431,83.4,1160320.0
+EVT-STADE-2025-0720,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-09-28 15:00:00,15000,8121,1404,63.5,594630.0
+EVT-STADE-2025-0721,Palais des Sports Saint-Sauveur,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-11-12 21:00:00,15000,10662,1038,78.0,579360.0
+EVT-STADE-2025-0722,Halle de la Trocardière,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-02-26 20:00:00,42000,27257,2437,70.7,1426960.0
+EVT-STADE-2025-0723,Stade de France,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-05-04 18:00:00,80000,66749,8051,93.5,7686415.0
+EVT-STADE-2025-0724,Stade de la Meinau,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-04-25 15:00:00,35000,18586,3114,62.0,1336080.0
+EVT-STADE-2025-0725,LDLC Arena,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-02-11 15:00:00,15000,11373,1602,86.5,741690.0
+EVT-STADE-2025-0726,Accor Arena,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-05-16 21:00:00,25000,17706,1943,78.6,1282520.0
+EVT-STADE-2025-0727,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-04-28 21:00:00,80000,67314,6126,91.8,3550920.0
+EVT-STADE-2025-0728,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-02-18 18:00:00,60000,48903,5876,91.3,2936090.0
+EVT-STADE-2025-0729,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-06-01 20:00:00,15000,11991,1164,87.7,830595.0
+EVT-STADE-2025-0730,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-07-18 20:00:00,35000,23435,2745,74.8,1740825.0
+EVT-STADE-2025-0731,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-03-19 21:00:00,15000,13412,1303,98.1,728110.0
+EVT-STADE-2025-0732,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-07-22 21:00:00,80000,58001,7119,81.4,3519780.0
+EVT-STADE-2025-0733,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-03-06 15:00:00,80000,64301,6419,88.4,3533780.0
+EVT-STADE-2025-0734,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-12-02 15:00:00,15000,11970,1994,93.1,857600.0
+EVT-STADE-2025-0735,LDLC Arena,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-10-02 21:00:00,15000,9945,1335,75.2,632100.0
+EVT-STADE-2025-0736,Palais des Sports Saint-Sauveur,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-10-26 15:00:00,15000,10975,1025,80.0,750125.0
+EVT-STADE-2025-0737,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-05-26 15:00:00,15000,10656,1464,80.8,845520.0
+EVT-STADE-2025-0738,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-02-04 18:00:00,80000,56979,6621,79.5,3364620.0
+EVT-STADE-2025-0739,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-10-16 21:00:00,35000,21789,2186,68.5,1200170.0
+EVT-STADE-2025-0740,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-03-21 15:00:00,15000,13001,1774,98.5,833530.0
+EVT-STADE-2025-0741,Stade Ernest-Wallon,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-01-22 15:00:00,60000,35544,4296,66.4,2140320.0
+EVT-STADE-2025-0742,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-06-15 20:00:00,80000,65756,10564,95.4,4613680.0
+EVT-STADE-2025-0743,LDLC Arena,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-10-11 20:00:00,15000,12657,2103,98.4,1095315.0
+EVT-STADE-2025-0744,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-10-09 21:00:00,35000,31054,3106,97.6,2173930.0
+EVT-STADE-2025-0745,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-09-09 18:00:00,80000,52439,9001,76.8,3823420.0
+EVT-STADE-2025-0746,Palais des Sports de Marseille,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-05-19 18:00:00,35000,29437,4058,95.7,3516645.0
+EVT-STADE-2025-0747,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-12-24 18:00:00,80000,56645,7915,80.7,3678100.0
+EVT-STADE-2025-0748,Stade de France,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-12-03 15:00:00,80000,65057,5663,88.4,3367460.0
+EVT-STADE-2025-0749,Stade Pierre-Mauroy,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-05-16 18:00:00,35000,31667,2843,98.6,1660760.0
+EVT-STADE-2025-0750,Patinoire Pôle Sud,Grenoble,Tournoi National Jeunes - Grenoble,Tournoi Jeunes,2025-08-28 18:00:00,15000,11264,1771,86.9,780670.0
+EVT-STADE-2025-0751,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-08-10 18:00:00,80000,62690,10270,91.2,4448200.0
+EVT-STADE-2025-0752,Stade des Alpes,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-02-02 20:00:00,15000,12047,1467,90.1,908865.0
+EVT-STADE-2025-0753,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-10-28 18:00:00,60000,32669,5431,63.5,2827855.0
+EVT-STADE-2025-0754,Stade des Alpes,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-02-22 20:00:00,15000,7896,1374,61.8,1014660.0
+EVT-STADE-2025-0755,Stade des Alpes,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-01-22 21:00:00,15000,10615,1460,80.5,683450.0
+EVT-STADE-2025-0756,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-12-15 18:00:00,25000,18588,1862,81.8,1023140.0
+EVT-STADE-2025-0757,Parc des Princes,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-02-26 18:00:00,25000,19977,2373,89.4,1192560.0
+EVT-STADE-2025-0758,Parc des Princes,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-09-07 20:00:00,25000,17400,2900,81.2,1508000.0
+EVT-STADE-2025-0759,Orange Vélodrome,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-11-07 20:00:00,35000,25706,2434,80.4,1379680.0
+EVT-STADE-2025-0760,Stade de la Meinau,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-06-20 18:00:00,35000,21120,2855,68.5,1347350.0
+EVT-STADE-2025-0761,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-02-07 18:00:00,15000,12290,1105,89.3,644950.0
+EVT-STADE-2025-0762,Stade de France,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-06-16 18:00:00,80000,63796,10204,92.5,7973660.0
+EVT-STADE-2025-0763,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-02-17 21:00:00,80000,61488,8672,87.7,4012640.0
+EVT-STADE-2025-0764,Accor Arena,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-03-04 18:00:00,25000,14928,1397,65.3,797090.0
+EVT-STADE-2025-0765,Rhenus Sport,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-07-04 20:00:00,60000,46678,6722,89.0,3080840.0
+EVT-STADE-2025-0766,Parc des Princes,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-01-28 15:00:00,25000,18195,1955,80.6,2035325.0
+EVT-STADE-2025-0767,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-05-07 15:00:00,80000,65770,6950,90.9,3710600.0
+EVT-STADE-2025-0768,Stade de la Meinau,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-10-15 18:00:00,35000,20345,2650,65.7,2391825.0
+EVT-STADE-2025-0769,Stade des Alpes,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-12-25 20:00:00,15000,10708,1652,82.4,894860.0
+EVT-STADE-2025-0770,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-08-01 21:00:00,60000,46431,7509,89.9,3966645.0
+EVT-STADE-2025-0771,Palais des Sports Saint-Sauveur,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-08-03 21:00:00,15000,9928,1457,75.9,662090.0
+EVT-STADE-2025-0772,Roazhon Park,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-08-28 18:00:00,80000,43179,4901,60.1,3168305.0
+EVT-STADE-2025-0773,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-12-07 18:00:00,60000,45105,6915,86.7,5562675.0
+EVT-STADE-2025-0774,Complexe Bréquigny,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-09-14 21:00:00,15000,10696,1784,83.2,766880.0
+EVT-STADE-2025-0775,Palais des Sports André-Brouat,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-06-04 18:00:00,25000,21116,3159,97.1,1423230.0
+EVT-STADE-2025-0776,Halle de la Trocardière,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-03-23 18:00:00,42000,34186,3488,89.7,2410370.0
+EVT-STADE-2025-0777,Complexe Bréquigny,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-03-08 15:00:00,15000,9185,1420,70.7,630550.0
+EVT-STADE-2025-0778,Complexe Sportif Hautepierre,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-12-02 21:00:00,42000,25907,4375,72.1,3295845.0
+EVT-STADE-2025-0779,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-05-13 18:00:00,42000,23055,3741,63.8,2894925.0
+EVT-STADE-2025-0780,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-05-06 21:00:00,15000,8349,831,61.2,458220.0
+EVT-STADE-2025-0781,Stade Ernest-Wallon,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-07-16 20:00:00,60000,38463,4137,71.0,2765085.0
+EVT-STADE-2025-0782,Roazhon Park,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-01-23 15:00:00,80000,57545,8535,82.6,3860100.0
+EVT-STADE-2025-0783,Complexe Sportif Hautepierre,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-05-08 18:00:00,42000,24158,2302,63.0,1662610.0
+EVT-STADE-2025-0784,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-07-18 15:00:00,15000,12150,1800,93.0,1482750.0
+EVT-STADE-2025-0785,Stadium de Toulouse,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-08-05 18:00:00,15000,8306,889,61.3,928260.0
+EVT-STADE-2025-0786,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-03-09 20:00:00,35000,18724,3221,62.7,1647830.0
+EVT-STADE-2025-0787,LDLC Arena,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-12-21 15:00:00,15000,9485,940,69.5,519550.0
+EVT-STADE-2025-0788,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-11-01 21:00:00,15000,12660,1590,95.0,1473600.0
+EVT-STADE-2025-0789,LDLC Arena,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-05-05 15:00:00,15000,12415,1130,90.3,841175.0
+EVT-STADE-2025-0790,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-11-24 21:00:00,15000,10594,1466,80.4,684320.0
+EVT-STADE-2025-0791,Matmut Atlantique,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-04-24 21:00:00,35000,28029,4836,93.9,2049870.0
+EVT-STADE-2025-0792,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-12-10 21:00:00,25000,15295,2280,70.3,1028850.0
+EVT-STADE-2025-0793,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-11-25 21:00:00,35000,29469,4376,96.7,2420105.0
+EVT-STADE-2025-0794,Accor Arena,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-07-19 21:00:00,25000,14248,1327,62.3,972910.0
+EVT-STADE-2025-0795,Stade des Alpes,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-07-15 20:00:00,15000,12433,1217,91.0,863735.0
+EVT-STADE-2025-0796,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-10-18 21:00:00,60000,41643,4616,77.1,3027935.0
+EVT-STADE-2025-0797,Rhenus Sport,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-06-18 18:00:00,60000,44237,6523,84.6,2957860.0
+EVT-STADE-2025-0798,Arena du Pays d'Aix,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-11-06 15:00:00,42000,33786,4854,92.0,2733870.0
+EVT-STADE-2025-0799,Stade de la Beaujoire,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-03-18 15:00:00,25000,19533,2616,88.6,1532985.0
+EVT-STADE-2025-0800,Complexe Sportif Hautepierre,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-12-22 21:00:00,42000,32818,3932,87.5,2459810.0
+EVT-STADE-2025-0801,Palais des Sports André-Brouat,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-09-17 15:00:00,25000,16766,2008,75.1,1256470.0
+EVT-STADE-2025-0802,Rhenus Sport,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-02-04 20:00:00,60000,37043,5077,70.2,2380540.0
+EVT-STADE-2025-0803,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-08-12 18:00:00,35000,24413,4252,81.9,2161585.0
+EVT-STADE-2025-0804,Stade Pierre-Mauroy,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-09-09 20:00:00,35000,25178,3312,81.4,1961010.0
+EVT-STADE-2025-0805,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-04-08 20:00:00,25000,19626,1899,86.1,1063530.0
+EVT-STADE-2025-0806,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-11-17 21:00:00,80000,44369,5791,62.7,2778820.0
+EVT-STADE-2025-0807,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-07-28 20:00:00,80000,51398,6682,72.6,3212440.0
+EVT-STADE-2025-0808,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-04-06 18:00:00,15000,11465,1060,83.5,608950.0
+EVT-STADE-2025-0809,Stade Ernest-Wallon,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-02-21 21:00:00,60000,44211,7329,85.9,3821745.0
+EVT-STADE-2025-0810,Matmut Atlantique,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-05-04 21:00:00,35000,25354,2400,79.3,1740930.0
+EVT-STADE-2025-0811,Accor Arena,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-06-22 18:00:00,25000,19531,3094,90.5,1359430.0
+EVT-STADE-2025-0812,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-06-09 20:00:00,80000,66635,10965,97.0,4740300.0
+EVT-STADE-2025-0813,Arkéa Arena,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-06-15 21:00:00,25000,16787,1738,74.1,1861395.0
+EVT-STADE-2025-0814,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-10-11 18:00:00,60000,52821,5379,97.0,5834535.0
+EVT-STADE-2025-0815,Rhenus Sport,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-02-13 20:00:00,60000,39190,5330,74.2,3096050.0
+EVT-STADE-2025-0816,Stade des Alpes,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-03-04 15:00:00,15000,12441,1809,95.0,1509735.0
+EVT-STADE-2025-0817,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-07-18 20:00:00,15000,12785,1825,97.4,839800.0
+EVT-STADE-2025-0818,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-03-13 20:00:00,15000,8388,927,62.1,483390.0
+EVT-STADE-2025-0819,Complexe Sportif Hautepierre,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-09-28 18:00:00,42000,33092,4456,89.4,2603140.0
+EVT-STADE-2025-0820,Stade Chaban-Delmas,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-05-15 15:00:00,60000,39508,6751,77.1,2872990.0
+EVT-STADE-2025-0821,Complexe Sportif Hautepierre,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-01-24 18:00:00,42000,31620,4290,85.5,2495400.0
+EVT-STADE-2025-0822,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-08-20 15:00:00,80000,50685,4594,69.1,2669050.0
+EVT-STADE-2025-0823,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-04-28 15:00:00,25000,16144,2581,74.9,1129570.0
+EVT-STADE-2025-0824,Roazhon Park,Rennes,Concert Star Arena Tour - Rennes,Concert / Spectacle,2025-07-06 21:00:00,80000,65780,9900,94.6,8066300.0
+EVT-STADE-2025-0825,Groupama Stadium,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-11-06 15:00:00,35000,27737,2783,87.2,1943915.0
+EVT-STADE-2025-0826,Palais des Sports de Marseille,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-01-18 20:00:00,35000,23646,2219,73.9,2564660.0
+EVT-STADE-2025-0827,Stade de la Meinau,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-12-17 15:00:00,35000,20436,3118,67.3,1392580.0
+EVT-STADE-2025-0828,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-04-06 21:00:00,60000,33234,4146,62.3,2532030.0
+EVT-STADE-2025-0829,Groupama Stadium,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-09-12 20:00:00,35000,20836,2579,66.9,1582370.0
+EVT-STADE-2025-0830,Halle de la Trocardière,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-02-27 20:00:00,42000,23557,2315,61.6,2581095.0
+EVT-STADE-2025-0831,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-09-03 21:00:00,15000,7812,1278,60.6,671040.0
+EVT-STADE-2025-0832,Halle Clémenceau,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-03-12 21:00:00,25000,18423,2677,84.4,1498285.0
+EVT-STADE-2025-0833,Stade Chaban-Delmas,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-12-04 15:00:00,60000,49887,7053,94.9,3259860.0
+EVT-STADE-2025-0834,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-01-01 21:00:00,60000,34976,4503,65.8,4098710.0
+EVT-STADE-2025-0835,Complexe Sportif de Marcq,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-08-03 15:00:00,80000,64678,7322,90.0,4741010.0
+EVT-STADE-2025-0836,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-02-13 21:00:00,15000,8797,1478,68.5,633410.0
+EVT-STADE-2025-0837,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-03-09 18:00:00,15000,11775,1919,91.3,1009625.0
+EVT-STADE-2025-0838,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-01-15 15:00:00,15000,11585,1030,84.1,605050.0
+EVT-STADE-2025-0839,Stade de France,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-09-12 20:00:00,80000,54499,9180,79.6,4747455.0
+EVT-STADE-2025-0840,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-02-05 21:00:00,15000,8264,931,61.3,604630.0
+EVT-STADE-2025-0841,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-04-19 18:00:00,60000,34444,4376,64.7,2127320.0
+EVT-STADE-2025-0842,Rhenus Sport,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-06-18 15:00:00,60000,43132,5588,81.2,3337940.0
+EVT-STADE-2025-0843,Complexe Sportif de Marcq,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-08-18 20:00:00,80000,61538,9741,89.1,5204460.0
+EVT-STADE-2025-0844,Stade de France,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-06-15 18:00:00,80000,68315,10805,98.9,4750700.0
+EVT-STADE-2025-0845,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-02-02 15:00:00,25000,13765,1335,60.4,953175.0
+EVT-STADE-2025-0846,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-09-09 20:00:00,42000,29760,2790,77.5,2036700.0
+EVT-STADE-2025-0847,Stade de France,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-06-06 15:00:00,80000,51344,6976,72.9,3284320.0
+EVT-STADE-2025-0848,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-02-27 18:00:00,25000,20966,2934,95.6,1676970.0
+EVT-STADE-2025-0849,Orange Vélodrome,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-12-11 21:00:00,35000,28459,2725,89.1,1535020.0
+EVT-STADE-2025-0850,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-12-07 21:00:00,25000,14502,2498,68.0,1059560.0
+EVT-STADE-2025-0851,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-10-16 15:00:00,25000,21019,3356,97.5,1469570.0
+EVT-STADE-2025-0852,Le Liberté,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-11-15 21:00:00,15000,12679,1436,94.1,739370.0
+EVT-STADE-2025-0853,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-03-18 21:00:00,15000,9940,1385,75.5,644450.0
+EVT-STADE-2025-0854,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-05-26 18:00:00,15000,13375,1520,99.3,981875.0
+EVT-STADE-2025-0855,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-12-22 18:00:00,15000,10939,1436,82.5,687170.0
+EVT-STADE-2025-0856,Stade de France,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-12-07 18:00:00,80000,50972,8548,74.4,4430740.0
+EVT-STADE-2025-0857,Stade de la Meinau,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-01-21 18:00:00,35000,18317,3033,61.0,1582515.0
+EVT-STADE-2025-0858,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-08-12 18:00:00,15000,10180,1084,75.1,576400.0
+EVT-STADE-2025-0859,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-10-22 21:00:00,42000,32718,3738,86.8,3715530.0
+EVT-STADE-2025-0860,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-03-03 21:00:00,80000,67782,6778,93.2,3727960.0
+EVT-STADE-2025-0861,Groupama Stadium,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-04-04 15:00:00,35000,20072,2957,65.8,1341410.0
+EVT-STADE-2025-0862,LDLC Arena,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-03-12 15:00:00,15000,12705,1155,92.4,860475.0
+EVT-STADE-2025-0863,Stade de la Meinau,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-06-06 20:00:00,35000,19502,2373,62.5,2250920.0
+EVT-STADE-2025-0864,Complexe Bréquigny,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-06-27 18:00:00,15000,12644,1651,95.3,981730.0
+EVT-STADE-2025-0865,Stade de la Meinau,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-06-21 18:00:00,35000,29098,4082,94.8,1893440.0
+EVT-STADE-2025-0866,Arkéa Arena,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-08-19 15:00:00,25000,21331,3194,98.1,1758395.0
+EVT-STADE-2025-0867,Stade Pierre-Mauroy,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-04-19 15:00:00,35000,22246,3724,74.2,1598380.0
+EVT-STADE-2025-0868,Complexe Mangin-Beaulieu,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-06-19 21:00:00,80000,58057,6182,80.3,6480345.0
+EVT-STADE-2025-0869,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-02-07 18:00:00,42000,34062,2982,88.2,1767360.0
+EVT-STADE-2025-0870,Stade de la Beaujoire,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-11-20 21:00:00,25000,19339,2861,88.8,1295420.0
+EVT-STADE-2025-0871,Palais des Sports André-Brouat,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-10-14 15:00:00,25000,18164,1986,80.6,2040440.0
+EVT-STADE-2025-0872,Orange Vélodrome,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-11-20 18:00:00,35000,28860,3305,91.9,2124950.0
+EVT-STADE-2025-0873,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-09-13 21:00:00,42000,36976,4814,99.5,2312780.0
+EVT-STADE-2025-0874,Complexe Bréquigny,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-09-18 15:00:00,15000,10612,1688,82.0,740360.0
+EVT-STADE-2025-0875,Stade de la Meinau,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-07-26 15:00:00,35000,28307,3752,91.6,1787210.0
+EVT-STADE-2025-0876,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-08-27 18:00:00,60000,44977,5903,84.8,2825060.0
+EVT-STADE-2025-0877,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-11-03 20:00:00,35000,18176,2929,60.3,2277210.0
+EVT-STADE-2025-0878,Stade de la Beaujoire,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-09-19 20:00:00,25000,18339,2536,83.5,1459255.0
+EVT-STADE-2025-0879,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-05-17 21:00:00,42000,29628,4140,80.4,3553380.0
+EVT-STADE-2025-0880,Stade Pierre-Mauroy,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-06-28 20:00:00,35000,27659,2861,87.2,1959905.0
+EVT-STADE-2025-0881,Complexe Sportif de Marcq,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-07-18 18:00:00,80000,65672,9048,93.4,4232160.0
+EVT-STADE-2025-0882,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-12-18 20:00:00,15000,11939,2025,93.1,1043505.0
+EVT-STADE-2025-0883,Stade Chaban-Delmas,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-01-15 18:00:00,60000,40484,6736,78.7,5125140.0
+EVT-STADE-2025-0884,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-09-20 15:00:00,25000,16301,2749,76.2,1176280.0
+EVT-STADE-2025-0885,Matmut Atlantique,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-09-22 18:00:00,35000,28363,3346,90.6,2112835.0
+EVT-STADE-2025-0886,Stade Ernest-Wallon,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-09-03 18:00:00,60000,33842,5217,65.1,4180820.0
+EVT-STADE-2025-0887,Halle Clémenceau,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-11-17 20:00:00,25000,20170,2680,91.4,2384450.0
+EVT-STADE-2025-0888,Complexe Sportif de Marcq,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-06-17 21:00:00,80000,64296,8024,90.4,3934880.0
+EVT-STADE-2025-0889,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-05-17 20:00:00,35000,22964,2376,72.4,2545940.0
+EVT-STADE-2025-0890,Stade des Alpes,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-08-12 18:00:00,15000,9893,1057,73.0,561040.0
+EVT-STADE-2025-0891,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-11-07 20:00:00,80000,65200,10560,94.7,4596000.0
+EVT-STADE-2025-0892,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-07-07 15:00:00,60000,39910,5570,75.8,3188450.0
+EVT-STADE-2025-0893,Stade Ernest-Wallon,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-03-08 18:00:00,60000,34942,4238,65.3,2631890.0
+EVT-STADE-2025-0894,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-03-04 18:00:00,42000,26325,4503,73.4,2310375.0
+EVT-STADE-2025-0895,Palais des Sports de Marseille,Marseille,Tournoi National Jeunes - Marseille,Tournoi Jeunes,2025-05-14 15:00:00,35000,29643,3817,95.6,1843540.0
+EVT-STADE-2025-0896,Stade de la Meinau,Strasbourg,Match Championnat Ligue 1 - Strasbourg,Match Championnat,2025-09-16 20:00:00,35000,26450,4350,88.0,2277750.0
+EVT-STADE-2025-0897,Stadium de Toulouse,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-03-27 21:00:00,15000,9994,1061,73.7,565070.0
+EVT-STADE-2025-0898,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-11-23 20:00:00,15000,13015,1175,94.6,1400025.0
+EVT-STADE-2025-0899,Complexe Mangin-Beaulieu,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-10-26 18:00:00,80000,46628,5451,65.1,3461010.0
+EVT-STADE-2025-0900,Arena du Pays d'Aix,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-03-08 20:00:00,42000,32493,3291,85.2,1797540.0
+EVT-STADE-2025-0901,Stade Pierre-Mauroy,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-03-06 21:00:00,35000,23339,2701,74.4,1725505.0
+EVT-STADE-2025-0902,Stadium de Toulouse,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-05-27 21:00:00,15000,12847,1583,96.2,973865.0
+EVT-STADE-2025-0903,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-09-18 18:00:00,60000,32749,3851,61.0,1945220.0
+EVT-STADE-2025-0904,Stade de la Beaujoire,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-08-10 18:00:00,25000,21170,2780,95.8,1330100.0
+EVT-STADE-2025-0905,Complexe Mangin-Beaulieu,Nantes,Tournoi National Jeunes - Nantes,Tournoi Jeunes,2025-11-27 15:00:00,80000,66806,6554,91.7,3642680.0
+EVT-STADE-2025-0906,Stade de Gerland,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-08-11 21:00:00,80000,58822,8378,84.0,7094370.0
+EVT-STADE-2025-0907,Accor Arena,Paris,Concert Star Arena Tour - Paris,Concert / Spectacle,2025-12-12 18:00:00,25000,17291,2934,80.9,2203235.0
+EVT-STADE-2025-0908,Palais des Sports Saint-Sauveur,Lille,Finale Coupe de France - Lille,Rencontre Internationale,2025-08-10 21:00:00,15000,9065,910,66.5,499450.0
+EVT-STADE-2025-0909,Halle Clémenceau,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-11-16 21:00:00,25000,13244,2306,62.2,973820.0
+EVT-STADE-2025-0910,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-06-02 18:00:00,35000,27499,2566,85.9,1878955.0
+EVT-STADE-2025-0911,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-05-20 15:00:00,42000,31315,4973,86.4,2652425.0
+EVT-STADE-2025-0912,Palais des Sports André-Brouat,Toulouse,Match Championnat Ligue 1 - Toulouse,Match Championnat,2025-11-13 18:00:00,25000,16961,1764,74.9,1204245.0
+EVT-STADE-2025-0913,Stade Chaban-Delmas,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-11-02 15:00:00,60000,34679,4021,64.5,3952965.0
+EVT-STADE-2025-0914,Groupama Stadium,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-07-24 20:00:00,35000,29899,4716,98.9,2524455.0
+EVT-STADE-2025-0915,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-10-11 21:00:00,60000,47854,7886,92.9,3407120.0
+EVT-STADE-2025-0916,Palais des Sports Saint-Sauveur,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-10-23 21:00:00,15000,10691,1264,79.7,797095.0
+EVT-STADE-2025-0917,Accor Arena,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-12-04 18:00:00,25000,20060,2240,89.2,1161800.0
+EVT-STADE-2025-0918,Roazhon Park,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-04-10 15:00:00,80000,52711,7449,75.2,4234245.0
+EVT-STADE-2025-0919,Stade de Gerland,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-09-04 18:00:00,80000,42035,6445,60.6,2872300.0
+EVT-STADE-2025-0920,Stade des Alpes,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-02-01 20:00:00,15000,8217,1278,63.3,689265.0
+EVT-STADE-2025-0921,Stade des Alpes,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-03-15 15:00:00,15000,11708,1806,90.1,978360.0
+EVT-STADE-2025-0922,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-03-23 18:00:00,15000,10603,1111,78.1,754885.0
+EVT-STADE-2025-0923,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-09-04 21:00:00,35000,22509,3006,72.9,2664765.0
+EVT-STADE-2025-0924,Patinoire Pôle Sud,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-01-22 21:00:00,15000,11008,1862,85.8,960860.0
+EVT-STADE-2025-0925,Accor Arena,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-11-23 18:00:00,25000,14034,2341,65.5,1216780.0
+EVT-STADE-2025-0926,Stade Chaban-Delmas,Bordeaux,Match Championnat Ligue 1 - Bordeaux,Match Championnat,2025-09-03 21:00:00,60000,50382,8538,98.2,4401690.0
+EVT-STADE-2025-0927,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-09-17 20:00:00,15000,11045,1660,84.7,912025.0
+EVT-STADE-2025-0928,Halle de la Trocardière,Nantes,Rencontre Top 14 Rugby - Nantes,Match Championnat,2025-11-08 21:00:00,42000,29865,3315,79.0,2172675.0
+EVT-STADE-2025-0929,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-01-07 15:00:00,15000,12364,2021,95.9,876170.0
+EVT-STADE-2025-0930,Roazhon Park,Rennes,Rencontre Top 14 Rugby - Rennes,Match Championnat,2025-11-14 15:00:00,80000,53750,5930,74.6,3901250.0
+EVT-STADE-2025-0931,Matmut Atlantique,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-02-28 20:00:00,35000,23962,4178,80.4,1763360.0
+EVT-STADE-2025-0932,Roazhon Park,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-01-13 21:00:00,80000,63187,10813,92.5,5546665.0
+EVT-STADE-2025-0933,Arkéa Arena,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-01-09 15:00:00,25000,21103,3322,97.7,1463590.0
+EVT-STADE-2025-0934,LDLC Arena,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-07-08 21:00:00,15000,7999,1151,61.0,967665.0
+EVT-STADE-2025-0935,Roazhon Park,Rennes,Tournoi National Jeunes - Rennes,Tournoi Jeunes,2025-08-14 20:00:00,80000,65842,7518,91.7,3854760.0
+EVT-STADE-2025-0936,Patinoire Pôle Sud,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-12-17 18:00:00,15000,11660,1825,89.9,1447350.0
+EVT-STADE-2025-0937,Stadium de Toulouse,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-06-28 18:00:00,15000,9067,1208,68.5,574010.0
+EVT-STADE-2025-0938,Complexe Sportif de Marcq,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-08-03 15:00:00,80000,55445,5275,75.9,6031575.0
+EVT-STADE-2025-0939,Complexe Mangin-Beaulieu,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-01-12 20:00:00,80000,64306,7694,90.0,3852680.0
+EVT-STADE-2025-0940,Groupama Stadium,Lyon,Finale Coupe de France - Lyon,Rencontre Internationale,2025-12-21 20:00:00,35000,20611,1964,64.5,1109330.0
+EVT-STADE-2025-0941,Stade de Gerland,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-08-04 21:00:00,80000,49945,6775,70.9,3941275.0
+EVT-STADE-2025-0942,Matmut Atlantique,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-11-24 18:00:00,35000,19140,2420,61.6,1179200.0
+EVT-STADE-2025-0943,Stade de France,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-03-01 15:00:00,80000,63658,9702,91.7,5290110.0
+EVT-STADE-2025-0944,Accor Arena,Paris,Match Championnat Ligue 1 - Paris,Match Championnat,2025-07-11 15:00:00,25000,19633,1742,85.5,1318985.0
+EVT-STADE-2025-0945,Stade de Gerland,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-10-07 18:00:00,80000,47211,4629,64.8,2573580.0
+EVT-STADE-2025-0946,Stade Ernest-Wallon,Toulouse,Finale Coupe de France - Toulouse,Rencontre Internationale,2025-08-23 20:00:00,60000,50289,6231,94.2,3066420.0
+EVT-STADE-2025-0947,Palais des Sports André-Brouat,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-02-16 15:00:00,25000,17960,1840,79.2,998800.0
+EVT-STADE-2025-0948,Complexe Sportif Hautepierre,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-12-21 15:00:00,42000,30559,3671,81.5,1834520.0
+EVT-STADE-2025-0949,Palais des Sports de Marseille,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-01-02 18:00:00,35000,27416,2684,86.0,1493480.0
+EVT-STADE-2025-0950,Stade de la Beaujoire,Nantes,Match Championnat Ligue 1 - Nantes,Match Championnat,2025-02-17 18:00:00,25000,17560,2865,81.7,1506450.0
+EVT-STADE-2025-0951,Groupama Stadium,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-03-19 15:00:00,35000,27579,3396,88.5,3193215.0
+EVT-STADE-2025-0952,Groupama Stadium,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-09-06 18:00:00,35000,19694,1936,61.8,1370230.0
+EVT-STADE-2025-0953,Stade de la Beaujoire,Nantes,Concert Star Arena Tour - Nantes,Concert / Spectacle,2025-03-17 18:00:00,25000,17597,2978,82.3,2240245.0
+EVT-STADE-2025-0954,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-08-03 21:00:00,60000,50879,6241,95.2,3086620.0
+EVT-STADE-2025-0955,Stade Chaban-Delmas,Bordeaux,Finale Coupe de France - Bordeaux,Rencontre Internationale,2025-02-15 20:00:00,60000,39805,3695,72.5,2117900.0
+EVT-STADE-2025-0956,Complexe Sportif de Marcq,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-03-10 15:00:00,80000,45819,6820,65.8,3766855.0
+EVT-STADE-2025-0957,Complexe Bréquigny,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-04-18 18:00:00,15000,12869,1951,98.8,1066855.0
+EVT-STADE-2025-0958,Stade Pierre-Mauroy,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-09-25 15:00:00,35000,21664,3781,72.7,1595170.0
+EVT-STADE-2025-0959,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-08-12 21:00:00,15000,10292,1153,76.3,597010.0
+EVT-STADE-2025-0960,Stade de Gerland,Lyon,Match Championnat Ligue 1 - Lyon,Match Championnat,2025-06-01 18:00:00,80000,65084,11076,95.2,5697780.0
+EVT-STADE-2025-0961,Stade Ernest-Wallon,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-11-05 20:00:00,60000,43980,3960,79.9,4728300.0
+EVT-STADE-2025-0962,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-11-16 20:00:00,42000,32432,3184,84.8,1768960.0
+EVT-STADE-2025-0963,Stade de France,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-08-12 20:00:00,80000,61344,9616,88.7,4244320.0
+EVT-STADE-2025-0964,Matmut Atlantique,Bordeaux,Concert Star Arena Tour - Bordeaux,Concert / Spectacle,2025-04-17 15:00:00,35000,29495,4665,97.6,3673325.0
+EVT-STADE-2025-0965,Stade Pierre-Mauroy,Lille,Match Championnat Ligue 1 - Lille,Match Championnat,2025-06-04 21:00:00,35000,23070,2165,72.1,1579400.0
+EVT-STADE-2025-0966,Roazhon Park,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-03-15 20:00:00,80000,69196,10084,99.1,4596880.0
+EVT-STADE-2025-0967,Stade de Gerland,Lyon,Tournoi National Jeunes - Lyon,Tournoi Jeunes,2025-03-10 18:00:00,80000,56078,9042,81.4,3942840.0
+EVT-STADE-2025-0968,Stade de la Meinau,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-10-25 20:00:00,35000,24785,2480,77.9,2726725.0
+EVT-STADE-2025-0969,Le Liberté,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-04-20 15:00:00,15000,10294,1675,79.8,727570.0
+EVT-STADE-2025-0970,Patinoire Pôle Sud,Grenoble,Concert Star Arena Tour - Grenoble,Concert / Spectacle,2025-04-26 21:00:00,15000,13232,1498,98.2,1499220.0
+EVT-STADE-2025-0971,Rhenus Sport,Strasbourg,Concert Star Arena Tour - Strasbourg,Concert / Spectacle,2025-07-27 20:00:00,60000,50799,8541,98.9,6453165.0
+EVT-STADE-2025-0972,Stade Ernest-Wallon,Toulouse,Concert Star Arena Tour - Toulouse,Concert / Spectacle,2025-11-24 21:00:00,60000,42717,6963,82.8,5371695.0
+EVT-STADE-2025-0973,Rhenus Sport,Strasbourg,Tournoi National Jeunes - Strasbourg,Tournoi Jeunes,2025-01-15 15:00:00,60000,41395,5825,78.7,2698100.0
+EVT-STADE-2025-0974,Arena du Pays d'Aix,Marseille,Concert Star Arena Tour - Marseille,Concert / Spectacle,2025-06-10 21:00:00,42000,30851,5311,86.1,3950085.0
+EVT-STADE-2025-0975,Arena du Pays d'Aix,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-06-14 20:00:00,42000,34534,3392,90.3,2402030.0
+EVT-STADE-2025-0976,Orange Vélodrome,Marseille,Finale Coupe de France - Marseille,Rencontre Internationale,2025-12-25 18:00:00,35000,31306,2854,97.6,1652680.0
+EVT-STADE-2025-0977,Rhenus Sport,Strasbourg,Finale Coupe de France - Strasbourg,Rencontre Internationale,2025-07-08 18:00:00,60000,34311,5409,66.2,2381580.0
+EVT-STADE-2025-0978,Complexe Bréquigny,Rennes,Finale Coupe de France - Rennes,Rencontre Internationale,2025-04-16 21:00:00,15000,12084,1671,91.7,780270.0
+EVT-STADE-2025-0979,Palais des Sports Saint-Sauveur,Lille,Tournoi National Jeunes - Lille,Tournoi Jeunes,2025-12-24 20:00:00,15000,9265,1565,72.2,669200.0
+EVT-STADE-2025-0980,Patinoire Pôle Sud,Grenoble,Finale Coupe de France - Grenoble,Rencontre Internationale,2025-03-22 15:00:00,15000,7788,1317,60.7,562890.0
+EVT-STADE-2025-0981,Matmut Atlantique,Bordeaux,Rencontre Top 14 Rugby - Bordeaux,Match Championnat,2025-05-20 20:00:00,35000,26826,4499,89.5,2331920.0
+EVT-STADE-2025-0982,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-08-27 18:00:00,15000,9521,1429,73.0,785695.0
+EVT-STADE-2025-0983,Stade de la Meinau,Strasbourg,Rencontre Top 14 Rugby - Strasbourg,Match Championnat,2025-09-21 20:00:00,35000,19745,2620,63.9,1543525.0
+EVT-STADE-2025-0984,LDLC Arena,Lyon,Rencontre Top 14 Rugby - Lyon,Match Championnat,2025-07-27 20:00:00,15000,11937,1652,90.6,950165.0
+EVT-STADE-2025-0985,Parc des Princes,Paris,Finale Coupe de France - Paris,Rencontre Internationale,2025-03-26 18:00:00,25000,17328,2222,78.2,1075340.0
+EVT-STADE-2025-0986,Stade Ernest-Wallon,Toulouse,Tournoi National Jeunes - Toulouse,Tournoi Jeunes,2025-09-12 21:00:00,60000,44383,5177,82.6,2625740.0
+EVT-STADE-2025-0987,Stade de Gerland,Lyon,Concert Star Arena Tour - Lyon,Concert / Spectacle,2025-08-10 20:00:00,80000,58591,6369,81.2,6572485.0
+EVT-STADE-2025-0988,Parc des Princes,Paris,Tournoi National Jeunes - Paris,Tournoi Jeunes,2025-09-24 15:00:00,25000,19429,3296,90.9,1406870.0
+EVT-STADE-2025-0989,Palais des Sports de Marseille,Marseille,Match Championnat Ligue 1 - Marseille,Match Championnat,2025-06-27 15:00:00,35000,21513,3092,70.3,1741085.0
+EVT-STADE-2025-0990,Halle Clémenceau,Grenoble,Rencontre Top 14 Rugby - Grenoble,Match Championnat,2025-01-17 20:00:00,25000,15352,1673,68.1,1109090.0
+EVT-STADE-2025-0991,Roazhon Park,Rennes,Match Championnat Ligue 1 - Rennes,Match Championnat,2025-09-19 21:00:00,80000,59255,8905,85.2,4892725.0
+EVT-STADE-2025-0992,Parc des Princes,Paris,Rencontre Top 14 Rugby - Paris,Match Championnat,2025-01-27 20:00:00,25000,18843,2757,86.4,1537185.0
+EVT-STADE-2025-0993,Palais des Sports Saint-Sauveur,Lille,Rencontre Top 14 Rugby - Lille,Match Championnat,2025-03-23 21:00:00,15000,8690,940,64.2,626050.0
+EVT-STADE-2025-0994,Palais des Sports André-Brouat,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-02-05 18:00:00,25000,22744,2056,99.2,1537480.0
+EVT-STADE-2025-0995,Patinoire Pôle Sud,Grenoble,Match Championnat Ligue 1 - Grenoble,Match Championnat,2025-01-20 21:00:00,15000,11133,1422,83.7,856485.0
+EVT-STADE-2025-0996,Matmut Atlantique,Bordeaux,Tournoi National Jeunes - Bordeaux,Tournoi Jeunes,2025-08-11 21:00:00,35000,26143,2767,82.6,1476040.0
+EVT-STADE-2025-0997,Palais des Sports Saint-Sauveur,Lille,Concert Star Arena Tour - Lille,Concert / Spectacle,2025-12-21 21:00:00,15000,13093,1427,96.8,1469655.0
+EVT-STADE-2025-0998,Stadium de Toulouse,Toulouse,Rencontre Top 14 Rugby - Toulouse,Match Championnat,2025-04-09 15:00:00,15000,11049,1071,80.8,764955.0
+EVT-STADE-2025-0999,Orange Vélodrome,Marseille,Rencontre Top 14 Rugby - Marseille,Match Championnat,2025-10-24 15:00:00,35000,26425,4200,87.5,2239125.0
+EVT-STADE-2025-1000,Halle de la Trocardière,Nantes,Finale Coupe de France - Nantes,Rencontre Internationale,2025-08-16 15:00:00,42000,29452,4736,81.4,2067560.0

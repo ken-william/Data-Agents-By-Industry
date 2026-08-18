@@ -1,0 +1,71 @@
+id_licence,region,departement,commune,federation_sportive,nombre_licencies_total,part_jeunes_moins_18ans_pct,croissance_licencies_pct,potentiel_sponsoring_premium_stade
+LIC-75-0001,Île-de-France,75,Paris,Fédération Française de Football,10543,48.5,18.2,Très Élevé
+LIC-75-0002,Île-de-France,75,Paris,Fédération Française de Rugby,30217,78.0,11.3,Très Élevé
+LIC-75-0003,Île-de-France,75,Paris,Fédération Française de Handball,2414,52.1,6.3,Élevé
+LIC-75-0004,Île-de-France,75,Paris,Fédération Française de Basketball,3019,44.5,0.7,Standard
+LIC-75-0005,Île-de-France,75,Paris,Fédération Française de Tennis,23279,56.9,-2.9,Standard
+LIC-75-0006,Île-de-France,75,Paris,Fédération Française de Judo,21588,47.1,14.5,Très Élevé
+LIC-75-0007,Île-de-France,75,Paris,Fédération Française de Natation,9433,38.3,18.1,Très Élevé
+LIC-31-0008,Occitanie,31,Toulouse,Fédération Française de Football,32347,47.7,16.9,Très Élevé
+LIC-31-0009,Occitanie,31,Toulouse,Fédération Française de Rugby,19063,64.1,16.3,Très Élevé
+LIC-31-0010,Occitanie,31,Toulouse,Fédération Française de Handball,16753,76.7,10.6,Très Élevé
+LIC-31-0011,Occitanie,31,Toulouse,Fédération Française de Basketball,33724,54.1,5.8,Élevé
+LIC-31-0012,Occitanie,31,Toulouse,Fédération Française de Tennis,4051,69.7,12.7,Très Élevé
+LIC-31-0013,Occitanie,31,Toulouse,Fédération Française de Judo,34153,38.0,-2.4,Standard
+LIC-31-0014,Occitanie,31,Toulouse,Fédération Française de Natation,29149,59.1,13.6,Très Élevé
+LIC-13-0015,Provence-Alpes-Côte d'Azur,13,Marseille,Fédération Française de Football,6302,64.1,0.9,Standard
+LIC-13-0016,Provence-Alpes-Côte d'Azur,13,Marseille,Fédération Française de Rugby,25588,69.5,-2.4,Standard
+LIC-13-0017,Provence-Alpes-Côte d'Azur,13,Marseille,Fédération Française de Handball,20318,65.8,2.8,Standard
+LIC-13-0018,Provence-Alpes-Côte d'Azur,13,Marseille,Fédération Française de Basketball,28960,72.8,1.3,Standard
+LIC-13-0019,Provence-Alpes-Côte d'Azur,13,Marseille,Fédération Française de Tennis,6489,45.0,-2.7,Standard
+LIC-13-0020,Provence-Alpes-Côte d'Azur,13,Marseille,Fédération Française de Judo,9654,48.3,14.4,Très Élevé
+LIC-13-0021,Provence-Alpes-Côte d'Azur,13,Marseille,Fédération Française de Natation,32433,41.4,11.7,Très Élevé
+LIC-69-0022,Auvergne-Rhône-Alpes,69,Lyon,Fédération Française de Football,34767,64.4,16.5,Très Élevé
+LIC-69-0023,Auvergne-Rhône-Alpes,69,Lyon,Fédération Française de Rugby,32448,71.9,15.7,Très Élevé
+LIC-69-0024,Auvergne-Rhône-Alpes,69,Lyon,Fédération Française de Handball,23690,51.5,3.3,Standard
+LIC-69-0025,Auvergne-Rhône-Alpes,69,Lyon,Fédération Française de Basketball,11626,43.1,-1.9,Standard
+LIC-69-0026,Auvergne-Rhône-Alpes,69,Lyon,Fédération Française de Tennis,20297,64.4,14.7,Très Élevé
+LIC-69-0027,Auvergne-Rhône-Alpes,69,Lyon,Fédération Française de Judo,7546,40.0,12.2,Très Élevé
+LIC-69-0028,Auvergne-Rhône-Alpes,69,Lyon,Fédération Française de Natation,31703,37.0,17.6,Très Élevé
+LIC-59-0029,Hauts-de-France,59,Lille,Fédération Française de Football,7542,59.9,5.7,Élevé
+LIC-59-0030,Hauts-de-France,59,Lille,Fédération Française de Rugby,2836,38.2,6.9,Élevé
+LIC-59-0031,Hauts-de-France,59,Lille,Fédération Française de Handball,15664,40.0,1.5,Standard
+LIC-59-0032,Hauts-de-France,59,Lille,Fédération Française de Basketball,20863,41.2,-3.5,Standard
+LIC-59-0033,Hauts-de-France,59,Lille,Fédération Française de Tennis,11731,69.2,-2.4,Standard
+LIC-59-0034,Hauts-de-France,59,Lille,Fédération Française de Judo,34979,63.1,18.2,Très Élevé
+LIC-59-0035,Hauts-de-France,59,Lille,Fédération Française de Natation,10280,48.0,-2.1,Standard
+LIC-33-0036,Nouvelle-Aquitaine,33,Bordeaux,Fédération Française de Football,10137,39.6,7.7,Élevé
+LIC-33-0037,Nouvelle-Aquitaine,33,Bordeaux,Fédération Française de Rugby,8032,59.4,14.2,Très Élevé
+LIC-33-0038,Nouvelle-Aquitaine,33,Bordeaux,Fédération Française de Handball,20758,35.3,4.5,Standard
+LIC-33-0039,Nouvelle-Aquitaine,33,Bordeaux,Fédération Française de Basketball,8485,66.6,14.5,Très Élevé
+LIC-33-0040,Nouvelle-Aquitaine,33,Bordeaux,Fédération Française de Tennis,20110,37.0,-2.3,Standard
+LIC-33-0041,Nouvelle-Aquitaine,33,Bordeaux,Fédération Française de Judo,34918,43.8,16.4,Très Élevé
+LIC-33-0042,Nouvelle-Aquitaine,33,Bordeaux,Fédération Française de Natation,9700,45.2,8.6,Élevé
+LIC-44-0043,Pays de la Loire,44,Nantes,Fédération Française de Football,29127,73.4,-1.0,Standard
+LIC-44-0044,Pays de la Loire,44,Nantes,Fédération Française de Rugby,1885,49.4,7.3,Élevé
+LIC-44-0045,Pays de la Loire,44,Nantes,Fédération Française de Handball,25157,39.1,0.7,Standard
+LIC-44-0046,Pays de la Loire,44,Nantes,Fédération Française de Basketball,26209,47.6,-0.1,Standard
+LIC-44-0047,Pays de la Loire,44,Nantes,Fédération Française de Tennis,27968,58.1,16.8,Très Élevé
+LIC-44-0048,Pays de la Loire,44,Nantes,Fédération Française de Judo,14946,61.9,3.8,Standard
+LIC-44-0049,Pays de la Loire,44,Nantes,Fédération Française de Natation,31033,57.9,-1.3,Standard
+LIC-67-0050,Grand Est,67,Strasbourg,Fédération Française de Football,6611,72.2,5.4,Élevé
+LIC-67-0051,Grand Est,67,Strasbourg,Fédération Française de Rugby,28652,64.1,11.8,Très Élevé
+LIC-67-0052,Grand Est,67,Strasbourg,Fédération Française de Handball,8093,56.5,1.3,Standard
+LIC-67-0053,Grand Est,67,Strasbourg,Fédération Française de Basketball,21848,77.3,7.6,Élevé
+LIC-67-0054,Grand Est,67,Strasbourg,Fédération Française de Tennis,8033,44.9,17.6,Très Élevé
+LIC-67-0055,Grand Est,67,Strasbourg,Fédération Française de Judo,2911,61.3,7.4,Élevé
+LIC-67-0056,Grand Est,67,Strasbourg,Fédération Française de Natation,18092,53.3,11.5,Très Élevé
+LIC-35-0057,Bretagne,35,Rennes,Fédération Française de Football,5652,71.3,11.8,Très Élevé
+LIC-35-0058,Bretagne,35,Rennes,Fédération Française de Rugby,22367,51.2,7.7,Élevé
+LIC-35-0059,Bretagne,35,Rennes,Fédération Française de Handball,30462,55.9,0.0,Standard
+LIC-35-0060,Bretagne,35,Rennes,Fédération Française de Basketball,16452,72.6,1.6,Standard
+LIC-35-0061,Bretagne,35,Rennes,Fédération Française de Tennis,9193,53.4,-0.7,Standard
+LIC-35-0062,Bretagne,35,Rennes,Fédération Française de Judo,1877,73.2,-2.6,Standard
+LIC-35-0063,Bretagne,35,Rennes,Fédération Française de Natation,25525,63.7,2.0,Standard
+LIC-38-0064,Auvergne-Rhône-Alpes,38,Grenoble,Fédération Française de Football,17651,60.7,6.5,Élevé
+LIC-38-0065,Auvergne-Rhône-Alpes,38,Grenoble,Fédération Française de Rugby,12985,47.3,-1.0,Standard
+LIC-38-0066,Auvergne-Rhône-Alpes,38,Grenoble,Fédération Française de Handball,34854,47.6,-0.4,Standard
+LIC-38-0067,Auvergne-Rhône-Alpes,38,Grenoble,Fédération Française de Basketball,28803,43.6,2.8,Standard
+LIC-38-0068,Auvergne-Rhône-Alpes,38,Grenoble,Fédération Française de Tennis,19857,47.1,11.0,Très Élevé
+LIC-38-0069,Auvergne-Rhône-Alpes,38,Grenoble,Fédération Française de Judo,31927,72.0,1.1,Standard
+LIC-38-0070,Auvergne-Rhône-Alpes,38,Grenoble,Fédération Française de Natation,15722,49.6,5.5,Élevé

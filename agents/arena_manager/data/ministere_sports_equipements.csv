@@ -1,0 +1,171 @@
+id_equipement,nom_equipement,type_equipement,commune,departement,region,capacite_accueil_spectateurs,surface_m2,etat_vetuste,consommation_energetique_annuelle_mwh,gaspillage_kwh_par_m2,taux_utilisation_semaine_pct,alerte_gaspillage_energetique
+EQ-75-001,Parc des Princes,Gymnase,Paris,75,Île-de-France,25000,11250.0,À rénover,1776.8,157.9,40.3,False
+EQ-75-002,Stade de France,Stade omnisports,Paris,75,Île-de-France,80000,36000.0,Neuf / Récent,1827.6,50.8,63.6,False
+EQ-75-003,Accor Arena,Palais des Sports / Arena,Paris,75,Île-de-France,25000,11250.0,Neuf / Récent,2003.1,178.1,71.1,False
+EQ-75-004,Piscine olympique Municipal Paris N°1,Piscine olympique,Paris,75,Île-de-France,270,562.9,Vétuste urgent,163.4,290.3,43.9,False
+EQ-75-005,Patinoire Municipal Paris N°2,Patinoire,Paris,75,Île-de-France,1526,2275.6,À rénover,628.3,276.1,66.2,False
+EQ-75-006,Piscine olympique Municipal Paris N°3,Piscine olympique,Paris,75,Île-de-France,2166,1279.2,Vétuste urgent,268.1,209.6,49.7,False
+EQ-75-007,Gymnase Municipal Paris N°4,Gymnase,Paris,75,Île-de-France,2408,1609.4,À rénover,335.0,208.2,69.9,False
+EQ-75-008,Gymnase Municipal Paris N°5,Gymnase,Paris,75,Île-de-France,694,2325.9,Bon état,288.1,123.9,16.5,True
+EQ-75-009,Gymnase Municipal Paris N°6,Gymnase,Paris,75,Île-de-France,2223,719.9,Neuf / Récent,415.9,577.7,20.5,True
+EQ-75-010,Stade omnisports Municipal Paris N°7,Stade omnisports,Paris,75,Île-de-France,1507,1516.3,Neuf / Récent,712.4,469.8,64.4,False
+EQ-75-011,Dojo Municipal Paris N°8,Dojo,Paris,75,Île-de-France,2096,2298.7,Neuf / Récent,802.2,349.0,62.0,False
+EQ-75-012,Court de tennis Municipal Paris N°9,Court de tennis,Paris,75,Île-de-France,1147,1559.0,À rénover,663.3,425.5,60.6,False
+EQ-75-013,Stade omnisports Municipal Paris N°10,Stade omnisports,Paris,75,Île-de-France,1631,3480.5,Bon état,724.1,208.0,58.3,False
+EQ-75-014,Stade omnisports Municipal Paris N°11,Stade omnisports,Paris,75,Île-de-France,1618,2475.9,À rénover,387.3,156.4,72.6,False
+EQ-75-015,Patinoire Municipal Paris N°12,Patinoire,Paris,75,Île-de-France,1189,1126.9,Bon état,351.6,312.0,24.8,True
+EQ-75-016,Stade omnisports Municipal Paris N°13,Stade omnisports,Paris,75,Île-de-France,1681,524.5,Bon état,326.3,622.1,30.0,False
+EQ-75-017,Dojo Municipal Paris N°14,Dojo,Paris,75,Île-de-France,2039,556.5,Bon état,827.4,1486.8,64.9,False
+EQ-31-018,Stade Ernest-Wallon,Stade omnisports,Toulouse,31,Occitanie,60000,27000.0,Vétuste urgent,3089.3,114.4,63.9,False
+EQ-31-019,Stadium de Toulouse,Stade omnisports,Toulouse,31,Occitanie,15000,6750.0,Bon état,1211.3,179.5,29.6,True
+EQ-31-020,Palais des Sports André-Brouat,Palais des Sports / Arena,Toulouse,31,Occitanie,25000,11250.0,Bon état,2706.7,240.6,63.0,False
+EQ-31-021,Court de tennis Municipal Toulouse N°1,Court de tennis,Toulouse,31,Occitanie,1715,819.1,Neuf / Récent,511.6,624.6,64.8,False
+EQ-31-022,Court de tennis Municipal Toulouse N°2,Court de tennis,Toulouse,31,Occitanie,1153,1103.6,Bon état,923.8,837.1,48.6,False
+EQ-31-023,Stade omnisports Municipal Toulouse N°3,Stade omnisports,Toulouse,31,Occitanie,2442,691.0,Bon état,167.3,242.1,64.0,False
+EQ-31-024,Dojo Municipal Toulouse N°4,Dojo,Toulouse,31,Occitanie,327,824.8,À rénover,560.9,680.0,48.6,False
+EQ-31-025,Court de tennis Municipal Toulouse N°5,Court de tennis,Toulouse,31,Occitanie,1185,846.5,Vétuste urgent,233.6,276.0,60.3,False
+EQ-31-026,Dojo Municipal Toulouse N°6,Dojo,Toulouse,31,Occitanie,2439,1669.4,Neuf / Récent,718.6,430.5,18.6,True
+EQ-31-027,Stade omnisports Municipal Toulouse N°7,Stade omnisports,Toulouse,31,Occitanie,1550,1113.3,Vétuste urgent,326.0,292.8,20.2,True
+EQ-31-028,Gymnase Municipal Toulouse N°8,Gymnase,Toulouse,31,Occitanie,848,1873.6,Neuf / Récent,749.7,400.1,55.1,False
+EQ-31-029,Stade omnisports Municipal Toulouse N°9,Stade omnisports,Toulouse,31,Occitanie,2240,1049.6,Neuf / Récent,357.6,340.7,42.8,False
+EQ-31-030,Stade omnisports Municipal Toulouse N°10,Stade omnisports,Toulouse,31,Occitanie,1628,728.1,À rénover,217.5,298.7,71.1,False
+EQ-31-031,Dojo Municipal Toulouse N°11,Dojo,Toulouse,31,Occitanie,1607,2411.7,Neuf / Récent,308.9,128.1,21.7,True
+EQ-31-032,Stade omnisports Municipal Toulouse N°12,Stade omnisports,Toulouse,31,Occitanie,1114,2874.7,Neuf / Récent,585.3,203.6,70.9,False
+EQ-31-033,Dojo Municipal Toulouse N°13,Dojo,Toulouse,31,Occitanie,395,694.6,À rénover,408.1,587.5,36.3,False
+EQ-31-034,Court de tennis Municipal Toulouse N°14,Court de tennis,Toulouse,31,Occitanie,2210,1114.3,Neuf / Récent,908.8,815.6,62.0,False
+EQ-13-035,Orange Vélodrome,Gymnase,Marseille,13,Provence-Alpes-Côte d'Azur,35000,15750.0,Bon état,4198.6,266.6,79.7,False
+EQ-13-036,Palais des Sports de Marseille,Palais des Sports / Arena,Marseille,13,Provence-Alpes-Côte d'Azur,35000,15750.0,À rénover,2961.5,188.0,57.6,False
+EQ-13-037,Arena du Pays d'Aix,Palais des Sports / Arena,Marseille,13,Provence-Alpes-Côte d'Azur,42000,18900.0,À rénover,2110.9,111.7,20.2,False
+EQ-13-038,Court de tennis Municipal Marseille N°1,Court de tennis,Marseille,13,Provence-Alpes-Côte d'Azur,2145,2521.3,Neuf / Récent,310.4,123.1,54.9,False
+EQ-13-039,Patinoire Municipal Marseille N°2,Patinoire,Marseille,13,Provence-Alpes-Côte d'Azur,406,902.2,Vétuste urgent,466.3,516.8,19.9,True
+EQ-13-040,Patinoire Municipal Marseille N°3,Patinoire,Marseille,13,Provence-Alpes-Côte d'Azur,885,1642.2,Bon état,173.6,105.7,43.8,False
+EQ-13-041,Dojo Municipal Marseille N°4,Dojo,Marseille,13,Provence-Alpes-Côte d'Azur,887,953.5,Bon état,519.4,544.7,60.5,False
+EQ-13-042,Piscine olympique Municipal Marseille N°5,Piscine olympique,Marseille,13,Provence-Alpes-Côte d'Azur,2027,3133.3,Bon état,752.9,240.3,53.6,False
+EQ-13-043,Stade omnisports Municipal Marseille N°6,Stade omnisports,Marseille,13,Provence-Alpes-Côte d'Azur,1551,2144.8,Vétuste urgent,699.9,326.3,53.1,False
+EQ-13-044,Dojo Municipal Marseille N°7,Dojo,Marseille,13,Provence-Alpes-Côte d'Azur,540,2200.1,Bon état,498.4,226.5,46.0,False
+EQ-13-045,Piscine olympique Municipal Marseille N°8,Piscine olympique,Marseille,13,Provence-Alpes-Côte d'Azur,1594,2056.3,Neuf / Récent,207.2,100.8,64.3,False
+EQ-13-046,Piscine olympique Municipal Marseille N°9,Piscine olympique,Marseille,13,Provence-Alpes-Côte d'Azur,1846,1083.3,Bon état,295.8,273.1,31.8,False
+EQ-13-047,Stade omnisports Municipal Marseille N°10,Stade omnisports,Marseille,13,Provence-Alpes-Côte d'Azur,1567,3000.9,Neuf / Récent,577.2,192.3,73.7,False
+EQ-13-048,Piscine olympique Municipal Marseille N°11,Piscine olympique,Marseille,13,Provence-Alpes-Côte d'Azur,916,3158.1,Neuf / Récent,685.7,217.1,26.1,True
+EQ-13-049,Gymnase Municipal Marseille N°12,Gymnase,Marseille,13,Provence-Alpes-Côte d'Azur,1482,1368.4,À rénover,314.3,229.7,20.1,True
+EQ-13-050,Piscine olympique Municipal Marseille N°13,Piscine olympique,Marseille,13,Provence-Alpes-Côte d'Azur,2121,2619.9,Vétuste urgent,307.7,117.4,61.3,False
+EQ-13-051,Court de tennis Municipal Marseille N°14,Court de tennis,Marseille,13,Provence-Alpes-Côte d'Azur,1277,942.2,À rénover,593.1,629.5,34.0,False
+EQ-69-052,Groupama Stadium,Stade omnisports,Lyon,69,Auvergne-Rhône-Alpes,35000,15750.0,À rénover,2938.8,186.6,44.4,False
+EQ-69-053,LDLC Arena,Palais des Sports / Arena,Lyon,69,Auvergne-Rhône-Alpes,15000,6750.0,Bon état,2288.5,339.0,43.4,False
+EQ-69-054,Stade de Gerland,Stade omnisports,Lyon,69,Auvergne-Rhône-Alpes,80000,36000.0,Bon état,4190.4,116.4,35.3,False
+EQ-69-055,Court de tennis Municipal Lyon N°1,Court de tennis,Lyon,69,Auvergne-Rhône-Alpes,1833,2211.5,Bon état,778.9,352.2,32.9,False
+EQ-69-056,Stade omnisports Municipal Lyon N°2,Stade omnisports,Lyon,69,Auvergne-Rhône-Alpes,985,1926.6,Bon état,523.9,271.9,52.2,False
+EQ-69-057,Piscine olympique Municipal Lyon N°3,Piscine olympique,Lyon,69,Auvergne-Rhône-Alpes,1445,2006.5,À rénover,918.4,457.7,38.7,False
+EQ-69-058,Gymnase Municipal Lyon N°4,Gymnase,Lyon,69,Auvergne-Rhône-Alpes,1151,3174.3,Neuf / Récent,170.7,53.8,65.9,False
+EQ-69-059,Gymnase Municipal Lyon N°5,Gymnase,Lyon,69,Auvergne-Rhône-Alpes,1236,2384.1,À rénover,381.4,160.0,26.7,True
+EQ-69-060,Patinoire Municipal Lyon N°6,Patinoire,Lyon,69,Auvergne-Rhône-Alpes,1463,2843.8,Neuf / Récent,250.8,88.2,45.0,False
+EQ-69-061,Dojo Municipal Lyon N°7,Dojo,Lyon,69,Auvergne-Rhône-Alpes,881,552.6,Neuf / Récent,587.1,1062.4,16.1,True
+EQ-69-062,Patinoire Municipal Lyon N°8,Patinoire,Lyon,69,Auvergne-Rhône-Alpes,2151,1265.9,Neuf / Récent,530.5,419.1,52.0,False
+EQ-69-063,Piscine olympique Municipal Lyon N°9,Piscine olympique,Lyon,69,Auvergne-Rhône-Alpes,1128,1897.5,Neuf / Récent,483.7,254.9,40.6,False
+EQ-69-064,Gymnase Municipal Lyon N°10,Gymnase,Lyon,69,Auvergne-Rhône-Alpes,1590,2813.0,Vétuste urgent,799.7,284.3,37.9,False
+EQ-69-065,Piscine olympique Municipal Lyon N°11,Piscine olympique,Lyon,69,Auvergne-Rhône-Alpes,2200,1634.0,Vétuste urgent,662.6,405.5,22.1,True
+EQ-69-066,Dojo Municipal Lyon N°12,Dojo,Lyon,69,Auvergne-Rhône-Alpes,235,2120.4,Vétuste urgent,852.7,402.1,66.2,False
+EQ-69-067,Dojo Municipal Lyon N°13,Dojo,Lyon,69,Auvergne-Rhône-Alpes,2174,716.9,Vétuste urgent,728.7,1016.5,58.5,False
+EQ-69-068,Gymnase Municipal Lyon N°14,Gymnase,Lyon,69,Auvergne-Rhône-Alpes,1166,576.1,Vétuste urgent,469.7,815.3,50.8,False
+EQ-59-069,Stade Pierre-Mauroy,Stade omnisports,Lille,59,Hauts-de-France,35000,15750.0,Vétuste urgent,3109.5,197.4,25.6,True
+EQ-59-070,Palais des Sports Saint-Sauveur,Palais des Sports / Arena,Lille,59,Hauts-de-France,15000,6750.0,Bon état,847.0,125.5,65.9,False
+EQ-59-071,Complexe Sportif de Marcq,Gymnase,Lille,59,Hauts-de-France,80000,36000.0,Vétuste urgent,2969.3,82.5,55.6,False
+EQ-59-072,Piscine olympique Municipal Lille N°1,Piscine olympique,Lille,59,Hauts-de-France,825,2945.6,À rénover,480.7,163.2,38.9,False
+EQ-59-073,Patinoire Municipal Lille N°2,Patinoire,Lille,59,Hauts-de-France,2494,2785.6,Bon état,330.3,118.6,52.0,False
+EQ-59-074,Court de tennis Municipal Lille N°3,Court de tennis,Lille,59,Hauts-de-France,1060,3356.6,Vétuste urgent,727.1,216.6,42.6,False
+EQ-59-075,Piscine olympique Municipal Lille N°4,Piscine olympique,Lille,59,Hauts-de-France,1693,2249.8,Bon état,923.7,410.6,55.9,False
+EQ-59-076,Stade omnisports Municipal Lille N°5,Stade omnisports,Lille,59,Hauts-de-France,986,2395.5,À rénover,480.2,200.5,17.7,True
+EQ-59-077,Court de tennis Municipal Lille N°6,Court de tennis,Lille,59,Hauts-de-France,770,1170.3,À rénover,157.6,134.7,44.7,False
+EQ-59-078,Court de tennis Municipal Lille N°7,Court de tennis,Lille,59,Hauts-de-France,2178,2796.5,Neuf / Récent,596.6,213.3,50.1,False
+EQ-59-079,Patinoire Municipal Lille N°8,Patinoire,Lille,59,Hauts-de-France,1317,2011.2,Neuf / Récent,329.0,163.6,44.9,False
+EQ-59-080,Dojo Municipal Lille N°9,Dojo,Lille,59,Hauts-de-France,2150,2858.0,Bon état,362.6,126.9,22.0,True
+EQ-59-081,Dojo Municipal Lille N°10,Dojo,Lille,59,Hauts-de-France,2140,3148.5,Vétuste urgent,357.0,113.4,25.4,False
+EQ-59-082,Patinoire Municipal Lille N°11,Patinoire,Lille,59,Hauts-de-France,522,3267.0,Neuf / Récent,869.2,266.1,47.3,False
+EQ-59-083,Dojo Municipal Lille N°12,Dojo,Lille,59,Hauts-de-France,1730,2240.1,Neuf / Récent,947.8,423.1,27.4,True
+EQ-59-084,Patinoire Municipal Lille N°13,Patinoire,Lille,59,Hauts-de-France,2259,537.6,À rénover,784.5,1459.3,42.4,False
+EQ-59-085,Gymnase Municipal Lille N°14,Gymnase,Lille,59,Hauts-de-France,593,1472.3,Vétuste urgent,879.0,597.0,56.9,False
+EQ-33-086,Matmut Atlantique,Gymnase,Bordeaux,33,Nouvelle-Aquitaine,35000,15750.0,Neuf / Récent,3990.1,253.3,36.9,False
+EQ-33-087,Arkéa Arena,Palais des Sports / Arena,Bordeaux,33,Nouvelle-Aquitaine,25000,11250.0,Bon état,3596.6,319.7,63.4,False
+EQ-33-088,Stade Chaban-Delmas,Stade omnisports,Bordeaux,33,Nouvelle-Aquitaine,60000,27000.0,Neuf / Récent,1229.8,45.5,37.4,False
+EQ-33-089,Piscine olympique Municipal Bordeaux N°1,Piscine olympique,Bordeaux,33,Nouvelle-Aquitaine,1910,2976.4,Neuf / Récent,453.3,152.3,32.6,False
+EQ-33-090,Stade omnisports Municipal Bordeaux N°2,Stade omnisports,Bordeaux,33,Nouvelle-Aquitaine,746,2716.2,Vétuste urgent,571.4,210.4,32.3,False
+EQ-33-091,Gymnase Municipal Bordeaux N°3,Gymnase,Bordeaux,33,Nouvelle-Aquitaine,1334,826.9,Bon état,305.0,368.8,31.0,False
+EQ-33-092,Court de tennis Municipal Bordeaux N°4,Court de tennis,Bordeaux,33,Nouvelle-Aquitaine,981,1791.3,Bon état,654.0,365.1,28.0,True
+EQ-33-093,Patinoire Municipal Bordeaux N°5,Patinoire,Bordeaux,33,Nouvelle-Aquitaine,1811,1955.3,Neuf / Récent,544.1,278.3,40.4,False
+EQ-33-094,Court de tennis Municipal Bordeaux N°6,Court de tennis,Bordeaux,33,Nouvelle-Aquitaine,596,1664.7,Vétuste urgent,649.0,389.9,68.1,False
+EQ-33-095,Piscine olympique Municipal Bordeaux N°7,Piscine olympique,Bordeaux,33,Nouvelle-Aquitaine,714,634.6,Bon état,754.6,1189.1,49.8,False
+EQ-33-096,Court de tennis Municipal Bordeaux N°8,Court de tennis,Bordeaux,33,Nouvelle-Aquitaine,1436,1004.1,Neuf / Récent,403.9,402.3,16.1,True
+EQ-33-097,Stade omnisports Municipal Bordeaux N°9,Stade omnisports,Bordeaux,33,Nouvelle-Aquitaine,438,1742.5,À rénover,696.4,399.7,25.6,True
+EQ-33-098,Dojo Municipal Bordeaux N°10,Dojo,Bordeaux,33,Nouvelle-Aquitaine,341,1256.0,Neuf / Récent,752.1,598.8,38.7,False
+EQ-33-099,Court de tennis Municipal Bordeaux N°11,Court de tennis,Bordeaux,33,Nouvelle-Aquitaine,349,1396.1,Bon état,350.0,250.7,24.4,True
+EQ-33-100,Court de tennis Municipal Bordeaux N°12,Court de tennis,Bordeaux,33,Nouvelle-Aquitaine,2450,3164.5,Bon état,426.8,134.9,63.5,False
+EQ-33-101,Dojo Municipal Bordeaux N°13,Dojo,Bordeaux,33,Nouvelle-Aquitaine,257,646.8,Neuf / Récent,333.7,515.9,52.6,False
+EQ-33-102,Gymnase Municipal Bordeaux N°14,Gymnase,Bordeaux,33,Nouvelle-Aquitaine,779,1631.9,Vétuste urgent,539.3,330.5,49.0,False
+EQ-44-103,Stade de la Beaujoire,Stade omnisports,Nantes,44,Pays de la Loire,25000,11250.0,À rénover,4016.2,357.0,44.8,False
+EQ-44-104,Halle de la Trocardière,Gymnase,Nantes,44,Pays de la Loire,42000,18900.0,Neuf / Récent,2682.0,141.9,44.0,False
+EQ-44-105,Complexe Mangin-Beaulieu,Gymnase,Nantes,44,Pays de la Loire,80000,36000.0,Bon état,2326.6,64.6,22.4,False
+EQ-44-106,Stade omnisports Municipal Nantes N°1,Stade omnisports,Nantes,44,Pays de la Loire,1301,3111.9,Neuf / Récent,945.6,303.9,51.1,False
+EQ-44-107,Piscine olympique Municipal Nantes N°2,Piscine olympique,Nantes,44,Pays de la Loire,1903,1540.2,Bon état,443.0,287.6,61.3,False
+EQ-44-108,Stade omnisports Municipal Nantes N°3,Stade omnisports,Nantes,44,Pays de la Loire,1118,1968.4,Vétuste urgent,398.0,202.2,65.8,False
+EQ-44-109,Dojo Municipal Nantes N°4,Dojo,Nantes,44,Pays de la Loire,1135,1886.7,À rénover,642.8,340.7,51.4,False
+EQ-44-110,Dojo Municipal Nantes N°5,Dojo,Nantes,44,Pays de la Loire,912,2670.7,Neuf / Récent,157.6,59.0,68.1,False
+EQ-44-111,Stade omnisports Municipal Nantes N°6,Stade omnisports,Nantes,44,Pays de la Loire,679,1935.7,Neuf / Récent,552.4,285.4,47.4,False
+EQ-44-112,Stade omnisports Municipal Nantes N°7,Stade omnisports,Nantes,44,Pays de la Loire,1378,1821.6,Vétuste urgent,770.2,422.8,52.2,False
+EQ-44-113,Gymnase Municipal Nantes N°8,Gymnase,Nantes,44,Pays de la Loire,772,3209.2,Neuf / Récent,898.3,279.9,34.6,False
+EQ-44-114,Dojo Municipal Nantes N°9,Dojo,Nantes,44,Pays de la Loire,2364,2315.3,Bon état,942.6,407.1,21.9,True
+EQ-44-115,Dojo Municipal Nantes N°10,Dojo,Nantes,44,Pays de la Loire,535,1337.3,À rénover,345.9,258.7,47.4,False
+EQ-44-116,Piscine olympique Municipal Nantes N°11,Piscine olympique,Nantes,44,Pays de la Loire,1105,2056.9,Neuf / Récent,860.3,418.3,32.1,False
+EQ-44-117,Stade omnisports Municipal Nantes N°12,Stade omnisports,Nantes,44,Pays de la Loire,1322,1308.5,À rénover,428.2,327.2,71.8,False
+EQ-44-118,Piscine olympique Municipal Nantes N°13,Piscine olympique,Nantes,44,Pays de la Loire,2090,2874.6,Vétuste urgent,480.2,167.0,63.1,False
+EQ-44-119,Patinoire Municipal Nantes N°14,Patinoire,Nantes,44,Pays de la Loire,2352,1574.9,Bon état,601.8,382.1,49.8,False
+EQ-67-120,Stade de la Meinau,Stade omnisports,Strasbourg,67,Grand Est,35000,15750.0,À rénover,2108.8,133.9,22.9,True
+EQ-67-121,Rhenus Sport,Gymnase,Strasbourg,67,Grand Est,60000,27000.0,Neuf / Récent,2631.1,97.4,51.5,False
+EQ-67-122,Complexe Sportif Hautepierre,Gymnase,Strasbourg,67,Grand Est,42000,18900.0,À rénover,1813.5,96.0,69.1,False
+EQ-67-123,Gymnase Municipal Strasbourg N°1,Gymnase,Strasbourg,67,Grand Est,1953,1753.6,Neuf / Récent,700.9,399.7,61.5,False
+EQ-67-124,Dojo Municipal Strasbourg N°2,Dojo,Strasbourg,67,Grand Est,919,2625.9,Neuf / Récent,640.4,243.9,43.8,False
+EQ-67-125,Patinoire Municipal Strasbourg N°3,Patinoire,Strasbourg,67,Grand Est,1135,3139.2,À rénover,902.3,287.4,43.7,False
+EQ-67-126,Patinoire Municipal Strasbourg N°4,Patinoire,Strasbourg,67,Grand Est,682,1808.1,À rénover,285.0,157.6,17.1,True
+EQ-67-127,Dojo Municipal Strasbourg N°5,Dojo,Strasbourg,67,Grand Est,1876,2459.7,Vétuste urgent,650.9,264.6,68.5,False
+EQ-67-128,Patinoire Municipal Strasbourg N°6,Patinoire,Strasbourg,67,Grand Est,387,1173.9,Bon état,562.3,479.0,67.7,False
+EQ-67-129,Court de tennis Municipal Strasbourg N°7,Court de tennis,Strasbourg,67,Grand Est,320,610.6,À rénover,568.7,931.4,54.2,False
+EQ-67-130,Patinoire Municipal Strasbourg N°8,Patinoire,Strasbourg,67,Grand Est,1521,2814.8,Vétuste urgent,312.8,111.1,17.2,False
+EQ-67-131,Gymnase Municipal Strasbourg N°9,Gymnase,Strasbourg,67,Grand Est,2102,3325.3,Neuf / Récent,703.7,211.6,68.0,False
+EQ-67-132,Piscine olympique Municipal Strasbourg N°10,Piscine olympique,Strasbourg,67,Grand Est,910,2651.0,Neuf / Récent,169.8,64.1,45.9,False
+EQ-67-133,Gymnase Municipal Strasbourg N°11,Gymnase,Strasbourg,67,Grand Est,967,1550.6,Vétuste urgent,582.2,375.5,74.4,False
+EQ-67-134,Piscine olympique Municipal Strasbourg N°12,Piscine olympique,Strasbourg,67,Grand Est,2200,2745.5,Bon état,590.6,215.1,72.9,False
+EQ-67-135,Court de tennis Municipal Strasbourg N°13,Court de tennis,Strasbourg,67,Grand Est,1114,1908.5,Bon état,517.9,271.4,30.4,False
+EQ-67-136,Dojo Municipal Strasbourg N°14,Dojo,Strasbourg,67,Grand Est,2428,1794.2,Bon état,449.2,250.4,32.5,False
+EQ-35-137,Roazhon Park,Gymnase,Rennes,35,Bretagne,80000,36000.0,À rénover,1333.0,37.0,20.2,False
+EQ-35-138,Le Liberté,Gymnase,Rennes,35,Bretagne,15000,6750.0,Bon état,932.9,138.2,49.7,False
+EQ-35-139,Complexe Bréquigny,Gymnase,Rennes,35,Bretagne,15000,6750.0,Bon état,3563.9,528.0,60.7,False
+EQ-35-140,Gymnase Municipal Rennes N°1,Gymnase,Rennes,35,Bretagne,272,2702.6,Vétuste urgent,753.8,278.9,57.6,False
+EQ-35-141,Dojo Municipal Rennes N°2,Dojo,Rennes,35,Bretagne,856,1104.8,Bon état,805.8,729.4,30.2,False
+EQ-35-142,Piscine olympique Municipal Rennes N°3,Piscine olympique,Rennes,35,Bretagne,1166,904.0,Vétuste urgent,754.3,834.4,38.6,False
+EQ-35-143,Gymnase Municipal Rennes N°4,Gymnase,Rennes,35,Bretagne,451,2629.1,À rénover,648.7,246.7,70.5,False
+EQ-35-144,Stade omnisports Municipal Rennes N°5,Stade omnisports,Rennes,35,Bretagne,216,1622.7,Vétuste urgent,561.5,346.0,36.9,False
+EQ-35-145,Piscine olympique Municipal Rennes N°6,Piscine olympique,Rennes,35,Bretagne,807,2976.5,À rénover,281.5,94.6,39.6,False
+EQ-35-146,Stade omnisports Municipal Rennes N°7,Stade omnisports,Rennes,35,Bretagne,512,2040.1,Bon état,846.7,415.0,73.0,False
+EQ-35-147,Court de tennis Municipal Rennes N°8,Court de tennis,Rennes,35,Bretagne,355,2270.7,À rénover,873.3,384.6,66.1,False
+EQ-35-148,Piscine olympique Municipal Rennes N°9,Piscine olympique,Rennes,35,Bretagne,1675,639.1,Neuf / Récent,764.1,1195.6,63.2,False
+EQ-35-149,Patinoire Municipal Rennes N°10,Patinoire,Rennes,35,Bretagne,496,996.2,À rénover,279.7,280.8,39.2,False
+EQ-35-150,Piscine olympique Municipal Rennes N°11,Piscine olympique,Rennes,35,Bretagne,1985,1901.3,Vétuste urgent,327.5,172.3,60.4,False
+EQ-35-151,Patinoire Municipal Rennes N°12,Patinoire,Rennes,35,Bretagne,431,3108.4,À rénover,324.6,104.4,59.4,False
+EQ-35-152,Stade omnisports Municipal Rennes N°13,Stade omnisports,Rennes,35,Bretagne,1741,3353.7,Bon état,809.5,241.4,44.6,False
+EQ-35-153,Stade omnisports Municipal Rennes N°14,Stade omnisports,Rennes,35,Bretagne,1452,3295.2,À rénover,805.5,244.4,66.0,False
+EQ-38-154,Stade des Alpes,Stade omnisports,Grenoble,38,Auvergne-Rhône-Alpes,15000,6750.0,Bon état,3297.4,488.5,20.8,True
+EQ-38-155,Patinoire Pôle Sud,Gymnase,Grenoble,38,Auvergne-Rhône-Alpes,15000,6750.0,Neuf / Récent,4441.8,658.0,24.5,True
+EQ-38-156,Halle Clémenceau,Gymnase,Grenoble,38,Auvergne-Rhône-Alpes,25000,11250.0,Vétuste urgent,1728.0,153.6,43.3,False
+EQ-38-157,Stade omnisports Municipal Grenoble N°1,Stade omnisports,Grenoble,38,Auvergne-Rhône-Alpes,2289,2592.4,Bon état,929.1,358.4,60.4,False
+EQ-38-158,Dojo Municipal Grenoble N°2,Dojo,Grenoble,38,Auvergne-Rhône-Alpes,1643,1962.3,Bon état,584.7,298.0,56.3,False
+EQ-38-159,Patinoire Municipal Grenoble N°3,Patinoire,Grenoble,38,Auvergne-Rhône-Alpes,2158,2701.2,Neuf / Récent,207.7,76.9,31.4,False
+EQ-38-160,Court de tennis Municipal Grenoble N°4,Court de tennis,Grenoble,38,Auvergne-Rhône-Alpes,975,3059.0,À rénover,188.8,61.7,60.8,False
+EQ-38-161,Court de tennis Municipal Grenoble N°5,Court de tennis,Grenoble,38,Auvergne-Rhône-Alpes,566,1195.2,Bon état,399.1,333.9,49.3,False
+EQ-38-162,Patinoire Municipal Grenoble N°6,Patinoire,Grenoble,38,Auvergne-Rhône-Alpes,1116,520.5,Neuf / Récent,198.8,381.9,37.2,False
+EQ-38-163,Dojo Municipal Grenoble N°7,Dojo,Grenoble,38,Auvergne-Rhône-Alpes,456,2097.7,Neuf / Récent,459.7,219.1,19.6,True
+EQ-38-164,Piscine olympique Municipal Grenoble N°8,Piscine olympique,Grenoble,38,Auvergne-Rhône-Alpes,2451,2734.5,À rénover,505.0,184.7,44.1,False
+EQ-38-165,Court de tennis Municipal Grenoble N°9,Court de tennis,Grenoble,38,Auvergne-Rhône-Alpes,634,1752.1,À rénover,390.9,223.1,30.3,False
+EQ-38-166,Gymnase Municipal Grenoble N°10,Gymnase,Grenoble,38,Auvergne-Rhône-Alpes,795,1131.9,À rénover,200.3,177.0,40.2,False
+EQ-38-167,Gymnase Municipal Grenoble N°11,Gymnase,Grenoble,38,Auvergne-Rhône-Alpes,1321,1279.2,À rénover,505.8,395.4,35.8,False
+EQ-38-168,Court de tennis Municipal Grenoble N°12,Court de tennis,Grenoble,38,Auvergne-Rhône-Alpes,1115,1672.9,À rénover,755.1,451.4,59.9,False
+EQ-38-169,Gymnase Municipal Grenoble N°13,Gymnase,Grenoble,38,Auvergne-Rhône-Alpes,1560,3165.0,À rénover,766.2,242.1,54.9,False
+EQ-38-170,Court de tennis Municipal Grenoble N°14,Court de tennis,Grenoble,38,Auvergne-Rhône-Alpes,2363,2759.1,Neuf / Récent,376.4,136.4,39.1,False
