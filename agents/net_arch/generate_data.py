@@ -6,8 +6,8 @@ Populates 12 refined relational tables:
 2. arcep_historique_deploiement_5g (5G deployment history by operator & frequency band)
 3. telecom_qualite_service_metrique (QoS download/upload throughputs & ping latency)
 4. telecom_incidents_equipements_reseau (Equipment outages, micro-cuts & SLAs)
-5. catalogue_forfaits_abonnements (Reference catalog of plans: eco, student, surf, max, family, pro)
-6. abonnes_master_customers (Central subscriber CRM: B2B/B2C, contract, NPS, churn, 5G upsell)
+5. catalogue_forfaits_abonnements (Reference catalog of plans: eco, student, surf, max, family, pro_flex, enterprise_unlimited)
+6. abonnes_master_customers (Central subscriber CRM: B2B Pro 500GB-3TB & B2C, real names, emails, postal codes)
 7. parc_equipements_sim_imei (IMEI hardware codes, IMSI SIM tag codes, ICCID & 5G SA capabilities)
 8. network_traffic_flows (Partitioned GEOGRAPHY traffic flows table with IMEI, antenna, app & MB volumes)
 9. maintenance_predictive_pylones (IoT sensors, CPU temp, battery health, 7-day failure probability %)
@@ -47,6 +47,9 @@ CITY_DEPT_REGION = {
     "Nantes": ("44 - Loire-Atlantique", "Pays de la Loire", 47.2184, -1.5536, "44000"),
     "Rennes": ("35 - Ille-et-Vilaine", "Bretagne", 48.1173, -1.6778, "35000")
 }
+
+FIRST_NAMES = ["Sophie", "Thomas", "Lucas", "Camille", "Élodie", "Alexandre", "Nicolas", "Julie", "Marie", "Jean", "Maxime", "Léa", "Antoine", "Chloé", "Pierre", "Manon", "Hugo", "Sarah", "Gabriel", "Inès"]
+LAST_NAMES = ["Bernard", "Martin", "Moreau", "Petit", "Dubois", "Richard", "Durand", "Laurent", "Lefebvre", "Michel", "Garcia", "David", "Bertrand", "Roux", "Fournier", "Girard", "Bonnet", "Dupont"]
 
 DEPARTEMENTS_FTTH = [
     ("75 - Paris", "Paris", "Île-de-France", 1250000, 1260000, 99.2),
@@ -259,14 +262,14 @@ def main():
         })
     df_incidents = pd.DataFrame(rows_incidents)
 
-    # 5. Table 5: catalogue_forfaits_abonnements (Matching user's exact plan schema)
+    # 5. Table 5: catalogue_forfaits_abonnements
     plans = [
         ("bcd0ce84-2380-4b0f-b6b1-8804cfd4c3e2", "eco", 9.99, 20, 50, 2.0, False),
         ("0202ab7d-f966-4ea5-a694-88c52f4a0403", "student", 12.99, 80, 100, 1.5, False),
         ("d2546cfe-cafb-4f3b-936c-d3eba3ca61b5", "surf", 15.99, 130, 150, 1.0, False),
         ("d8e5fbf0-1264-43be-b31d-d017a7441f42", "max", 19.99, 200, 500, 1.0, True),
         ("e6bc3465-258f-4342-9477-4369d089a6d9", "family", 29.99, 300, 1000, 1.0, True),
-        ("f7a9128d-1144-48cd-b12e-9901ad8991aa", "pro", 59.99, 500, 2000, 1.0, True)
+        ("f7a9128d-1144-48cd-b12e-9901ad8991aa", "pro_flex_enterprise", 89.99, 1500, 2000, 0.5, True)
     ]
     df_plans = pd.DataFrame(plans, columns=[
         "plan_id", "plan_name", "monthly_price_eur", "data_quota_gb",
@@ -278,55 +281,85 @@ def main():
     rows_hardware = []
     rows_traffic = []
 
-    company_names = ["Thales Optronics", "Capgemini Engineering", "Sanofi Pharma", "Airbus Cyber", "Dassault Systems", "OVHcloud", "TotalEnergies IT", "Michelin Digital", "Stellantis R&D", "Atos Worldline"]
+    company_names = ["TotalEnergies IT Fleet", "Sanofi Pharma Digital", "OVHcloud Infrastructure", "Airbus Cyber Defense", "Capgemini Engineering", "Atos Worldline Systems", "Stellantis R&D Mobile", "Dassault Systems Telecom", "Michelin Digital Fleet", "Thales Optronics Pro"]
     anfr_site_ids = df_sites["id_station_anfr"].tolist() if len(df_sites) > 0 else [f"ANFR-000000{i}" for i in range(1, 10)]
 
     for idx in range(1, 5001):
         cid = f"CLI-{idx:05d}"
         is_b2b = (idx <= 1500)
-        c_type = "B2B_PROFESSIONNEL" if is_b2b else "B2C_PARTICULIER"
-        c_name = f"{random.choice(company_names)} #{idx}" if is_b2b else f"Client {random.choice(['Dupont', 'Martin', 'Bernard', 'Petit', 'Robert'])} {idx}"
-        email = f"contact.{idx}@company-b2b.fr" if is_b2b else f"client.{idx}@email.fr"
-        phone = f"+336{random.randint(10000000, 99999999)}"
-        siret = f"450{random.randint(10000000, 99999999)}" if is_b2b else None
         
+        fn = random.choice(FIRST_NAMES)
+        ln = random.choice(LAST_NAMES)
+        
+        if is_b2b:
+            c_type = "B2B_PROFESSIONNEL"
+            comp = random.choice(company_names)
+            c_name = f"{comp} - {fn} {ln}"
+            email = f"{fn.lower()}.{ln.lower()}@{comp.split()[0].lower()}.fr"
+            siret = f"450{random.randint(10000000, 99999999)}"
+        else:
+            c_type = "B2C_PARTICULIER"
+            c_name = f"{fn} {ln}"
+            email = f"{fn.lower()}.{ln.lower()}@email-client.fr"
+            siret = None
+
+        phone = f"+336{random.randint(10000000, 99999999)}"
         commune = random.choice(cities)
         dept, region, lat_c, lon_c, pcode = CITY_DEPT_REGION[commune]
 
-        # 5G Upsell target scenario: 5G compatible device but 4G plan!
+        # Realistic Professional B2B High Data Usage (500 GB to 3,500 GB / month!)
         is_5g_target = (idx <= 1800)
-        if is_5g_target:
-            m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
-            plan_id = "d2546cfe-cafb-4f3b-936c-d3eba3ca61b5"
-            plan_name = "surf"
-            plan_5g = False
-        else:
-            if random.random() < 0.60:
+        if is_b2b:
+            if is_5g_target:
                 m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
+                plan_id = "d2546cfe-cafb-4f3b-936c-d3eba3ca61b5"
+                plan_name = "surf"
+                plan_5g = False
+                quota_gb = 130.0
+                # Enterprise B2B high usage: 650 Go to 2,850 Go/month!
+                conso_gb = round(random.uniform(650.0, 2850.0), 1)
+                usage_pct = round((conso_gb / quota_gb) * 100.0, 1)
+                fees_eur = round((conso_gb - quota_gb) * 1.0, 2)
             else:
-                m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_4G)
-            plan_5g = (random.random() < 0.40) if dev_5g else False
-            plan_id = "d8e5fbf0-1264-43be-b31d-d017a7441f42" if plan_5g else "d2546cfe-cafb-4f3b-936c-d3eba3ca61b5"
-            plan_name = "max" if plan_5g else "surf"
-
-        quota_gb = float(200 if plan_name == "max" else 130)
-
-        # Quota usage & fees
-        if is_5g_target and idx <= 900:
-            usage_pct = round(random.uniform(82.5, 125.0), 1)
-            conso_gb = round((quota_gb * usage_pct) / 100.0, 1)
-            fees_eur = round(random.uniform(18.50, 95.00), 2)
+                m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
+                plan_id = "f7a9128d-1144-48cd-b12e-9901ad8991aa"
+                plan_name = "pro_flex_enterprise"
+                plan_5g = True
+                quota_gb = 1500.0
+                conso_gb = round(random.uniform(850.0, 3200.0), 1)
+                usage_pct = round((conso_gb / quota_gb) * 100.0, 1)
+                fees_eur = round(max(0.0, (conso_gb - quota_gb) * 0.5), 2)
+            arpu_actuel = round(89.99 if plan_5g else 45.99, 2)
         else:
-            conso_gb = round(quota_gb * random.uniform(0.30, 0.95), 1)
-            usage_pct = round((conso_gb / quota_gb) * 100.0, 1)
-            fees_eur = 0.00
+            # B2C Consumer Data Usage
+            if is_5g_target:
+                m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
+                plan_id = "d2546cfe-cafb-4f3b-936c-d3eba3ca61b5"
+                plan_name = "surf"
+                plan_5g = False
+                quota_gb = 130.0
+                usage_pct = round(random.uniform(85.0, 135.0), 1)
+                conso_gb = round((quota_gb * usage_pct) / 100.0, 1)
+                fees_eur = round(max(0.0, (conso_gb - quota_gb) * 1.0), 2)
+            else:
+                if random.random() < 0.60:
+                    m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
+                else:
+                    m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_4G)
+                plan_5g = (random.random() < 0.40) if dev_5g else False
+                plan_id = "d8e5fbf0-1264-43be-b31d-d017a7441f42" if plan_5g else "0202ab7d-f966-4ea5-a694-88c52f4a0403"
+                plan_name = "max" if plan_5g else "student"
+                quota_gb = float(200 if plan_5g else 80)
+                conso_gb = round(quota_gb * random.uniform(0.35, 0.95), 1)
+                usage_pct = round((conso_gb / quota_gb) * 100.0, 1)
+                fees_eur = 0.00
+            arpu_actuel = round(19.99 if plan_5g else 15.99, 2)
 
-        arpu_actuel = round(15.99 if plan_name == "surf" else 19.99, 2)
-        arpu_pot_5g = round(arpu_actuel + 15.00, 2)
-        gain_arpu = 15.00
+        arpu_pot_5g = round(arpu_actuel + 25.00 if is_b2b else arpu_actuel + 10.00, 2)
+        gain_arpu = round(arpu_pot_5g - arpu_actuel, 2)
 
-        micro_cuts = random.randint(6, 25) if (is_b2b and random.random() < 0.35) else random.randint(0, 3)
-        churn_risk = round(min(98.5, 15.0 + micro_cuts * 4.0 + (20.0 if usage_pct > 100 else 0)), 1)
+        micro_cuts = random.randint(6, 28) if (is_b2b and random.random() < 0.35) else random.randint(0, 3)
+        churn_risk = round(min(98.5, 15.0 + micro_cuts * 3.8 + (20.0 if usage_pct > 100 else 0)), 1)
         upsell_propensity = round(min(99.0, 85.0 + (10.0 if dev_5g and not plan_5g else 0.0)), 1)
 
         sub_date = (datetime(2023, 1, 1) + timedelta(days=random.randint(1, 600))).strftime("%Y-%m-%d")
@@ -394,8 +427,8 @@ def main():
                     "timestamp": ts_str,
                     "application_name": app_name,
                     "traffic_type": t_type,
-                    "volume_mb_uplink": round(random.uniform(2.0, 150.0), 2),
-                    "volume_mb_downlink": round(random.uniform(25.0, 1850.0), 2),
+                    "volume_mb_uplink": round(random.uniform(15.0, 850.0) if is_b2b else random.uniform(2.0, 150.0), 2),
+                    "volume_mb_downlink": round(random.uniform(450.0, 14800.0) if is_b2b else random.uniform(25.0, 1850.0), 2),
                     "user_location": wkt_point,
                     "latency_ms": random.randint(12, 65),
                     "postal_code": pcode
@@ -466,12 +499,12 @@ def main():
 
     # 10. consommation_historique_trimestrielle_previsions
     rows_forecast = [
-        {"periode_id": "PER-2025-01", "mois_label": "Janvier 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 112.5, "consommation_totale_reseau_tb": 14500.0, "taux_croissance_mensuel_pct": 4.2},
-        {"periode_id": "PER-2025-02", "mois_label": "Février 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 124.8, "consommation_totale_reseau_tb": 16200.0, "taux_croissance_mensuel_pct": 10.9},
-        {"periode_id": "PER-2025-03", "mois_label": "Mars 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 138.2, "consommation_totale_reseau_tb": 18100.0, "taux_croissance_mensuel_pct": 10.7},
-        {"periode_id": "PER-2025-04", "mois_label": "Avril 2025 (Prévision)", "trimestre": "Q2 2025", "est_prevision": True, "consommation_moyenne_par_abonne_go": 152.0, "consommation_totale_reseau_tb": 20200.0, "taux_croissance_mensuel_pct": 10.0},
-        {"periode_id": "PER-2025-05", "mois_label": "Mai 2025 (Prévision)", "trimestre": "Q2 2025", "est_prevision": True, "consommation_moyenne_par_abonne_go": 168.5, "consommation_totale_reseau_tb": 22500.0, "taux_croissance_mensuel_pct": 10.8},
-        {"periode_id": "PER-2025-06", "mois_label": "Juin 2025 (Prévision)", "trimestre": "Q2 2025", "est_prevision": True, "consommation_moyenne_par_abonne_go": 185.0, "consommation_totale_reseau_tb": 25100.0, "taux_croissance_mensuel_pct": 9.8}
+        {"periode_id": "PER-2025-01", "mois_label": "Janvier 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 450.5, "consommation_totale_reseau_tb": 48500.0, "taux_croissance_mensuel_pct": 5.2},
+        {"periode_id": "PER-2025-02", "mois_label": "Février 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 520.8, "consommation_totale_reseau_tb": 56200.0, "taux_croissance_mensuel_pct": 15.6},
+        {"periode_id": "PER-2025-03", "mois_label": "Mars 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 610.2, "consommation_totale_reseau_tb": 68100.0, "taux_croissance_mensuel_pct": 17.1},
+        {"periode_id": "PER-2025-04", "mois_label": "Avril 2025 (Prévision)", "trimestre": "Q2 2025", "est_prevision": True, "consommation_moyenne_par_abonne_go": 720.0, "consommation_totale_reseau_tb": 79200.0, "taux_croissance_mensuel_pct": 18.0},
+        {"periode_id": "PER-2025-05", "mois_label": "Mai 2025 (Prévision)", "trimestre": "Q2 2025", "est_prevision": True, "consommation_moyenne_par_abonne_go": 850.5, "consommation_totale_reseau_tb": 92500.0, "taux_croissance_mensuel_pct": 18.1},
+        {"periode_id": "PER-2025-06", "mois_label": "Juin 2025 (Prévision)", "trimestre": "Q2 2025", "est_prevision": True, "consommation_moyenne_par_abonne_go": 980.0, "consommation_totale_reseau_tb": 108100.0, "taux_croissance_mensuel_pct": 15.2}
     ]
     df_forecast = pd.DataFrame(rows_forecast)
 
