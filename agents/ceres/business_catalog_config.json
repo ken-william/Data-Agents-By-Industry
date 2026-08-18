@@ -23,6 +23,78 @@
               "Score Unique EF Environmental Footprint",
               "Empreinte CO2e kg/kg produit",
               "Eutrophisation & Acidification"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Analyse du Cycle de Vie (ACV) ADEME Agribalyse 3.1** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `ademe_agribalyse_31_synthese` (colonne `score_unique_ef_impact`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/ademe_agribalyse_31_synthese",
+                "table_name": "ademe_agribalyse_31_synthese",
+                "column_name": "score_unique_ef_impact",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.ademe_agribalyse_31_synthese.score_unique_ef_impact"
+              }
             ]
           },
           {
@@ -36,6 +108,78 @@
               "Tonnes CO2e Séquestrées",
               "Valorisation Crédits Carbone €",
               "Non-Labourage & Couverts Végétaux"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Label Bas-Carbone & Crédits Carbone** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Valorisation des pratiques de séquestration de carbone dans les sols agricoles.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bilans_carbone_subventions_hve` (colonne `credits_carbone_generes_tco2e`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/bilans_carbone_subventions_hve",
+                "table_name": "bilans_carbone_subventions_hve",
+                "column_name": "credits_carbone_generes_tco2e",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.bilans_carbone_subventions_hve.credits_carbone_generes_tco2e"
+              }
             ]
           },
           {
@@ -49,6 +193,78 @@
               "Volume Récolte Tonnes",
               "Rendement Quintaux par Hectare",
               "Collecte Céréalière Viticole"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Flux Coopératifs & Rendements Récoltes** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `cooperatives_agricoles` (colonne `chiffre_affaires_annuel_eur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/cooperatives_agricoles",
+                "table_name": "cooperatives_agricoles",
+                "column_name": "chiffre_affaires_annuel_eur",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.cooperatives_agricoles.chiffre_affaires_annuel_eur"
+              }
             ]
           },
           {
@@ -62,6 +278,78 @@
               "Reporting Durabilité CSRD",
               "Taxonomie Européenne Verte",
               "Performance Extra-Financière"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Rapports de Performance ESG Investisseurs** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Indicateurs certifiés de durabilité environnementale pour les fonds à impact.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `rapports_performance_esg_chaine` (colonne `score_esg_global_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/rapports_performance_esg_chaine",
+                "table_name": "rapports_performance_esg_chaine",
+                "column_name": "score_esg_global_pct",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.rapports_performance_esg_chaine.score_esg_global_pct"
+              }
             ]
           },
           {
@@ -75,6 +363,78 @@
               "Déficit Pluviométrique mm",
               "Indice Sécheresse des Sols",
               "Alerte Stress Hydrique Cultures"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Prévisions d'Anomalies Météo d'Été** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Détection précoce des écarts de température et déficits de précipitation estivaux.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `previsions_anomalies_meteo_ete` (colonne `anomalie_temperature_celsius`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/previsions_anomalies_meteo_ete",
+                "table_name": "previsions_anomalies_meteo_ete",
+                "column_name": "anomalie_temperature_celsius",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.previsions_anomalies_meteo_ete.anomalie_temperature_celsius"
+              }
             ]
           },
           {
@@ -88,6 +448,78 @@
               "Surface Agricole Utile SAU",
               "Cultures Principales & Assolement",
               "Géolocalisation Parcelles"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Cartographie des Parcelles & Registre Parcellaire (RPG)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Délimitation géographique et historique d'assolement des parcelles exploitées.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `parcelles_agricoles` (colonne `surface_hectares`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/parcelles_agricoles",
+                "table_name": "parcelles_agricoles",
+                "column_name": "surface_hectares",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.parcelles_agricoles.surface_hectares"
+              }
             ]
           },
           {
@@ -101,6 +533,78 @@
               "Capteurs Tension-Métriques",
               "Pilotage Irrigation de Précision",
               "Économie d'Eau m³"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Télédétection IoT Humidité des Sols** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Mesure en temps réel de l'humidité et tension matricielle des sols par sondes IoT.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `capteurs_iot_sols_meteo` (colonne `humidite_sol_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/capteurs_iot_sols_meteo",
+                "table_name": "capteurs_iot_sols_meteo",
+                "column_name": "humidite_sol_pct",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.capteurs_iot_sols_meteo.humidite_sol_pct"
+              }
             ]
           },
           {
@@ -114,6 +618,78 @@
               "Biodiversité & Stratégie Phytosanitaire",
               "Gestion de la Fertilisation",
               "Primes Qualité Filières"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Certification Haute Valeur Environnementale (HVE)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Niveau 3 de certification environnementale des exploitations agricoles.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bilans_carbone_subventions_hve` (colonne `niveau_certification_hve`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/bilans_carbone_subventions_hve",
+                "table_name": "bilans_carbone_subventions_hve",
+                "column_name": "niveau_certification_hve",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.bilans_carbone_subventions_hve.niveau_certification_hve"
+              }
             ]
           },
           {
@@ -127,6 +703,78 @@
               "Méthanisation Effluents",
               "Bilan Carbone Exploitation",
               "Plan de Décarbonation Agricole"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Bilan Gaz à Effet de Serre (GES) Exploitations** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Comptabilité carbone brute des émissions de N2O, CH4 et CO2 de l'exploitation.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bilans_carbone_subventions_hve` (colonne `emissions_ges_totales_tco2e`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/bilans_carbone_subventions_hve",
+                "table_name": "bilans_carbone_subventions_hve",
+                "column_name": "emissions_ges_totales_tco2e",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.bilans_carbone_subventions_hve.emissions_ges_totales_tco2e"
+              }
             ]
           },
           {
@@ -140,6 +788,78 @@
               "Valeur Ajoutée Exploitation",
               "Agriculture Biologique AB",
               "Traçabilité du Champ à l'Assiette"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Valorisation Filières & Circuits Courts** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Part des volumes agricoles distribués en vente directe et valorisation locale.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `exploitations_agricoles` (colonne `part_vente_directe_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "agriculture_rural",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/agriculture_rural_ds/tables/exploitations_agricoles",
+                "table_name": "exploitations_agricoles",
+                "column_name": "part_vente_directe_pct",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.agriculture_rural_ds.exploitations_agricoles.part_vente_directe_pct"
+              }
             ]
           }
         ]

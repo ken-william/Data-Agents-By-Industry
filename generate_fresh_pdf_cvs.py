@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 """
-Generate 300 Authentic 1-Page PDF CVs using ReportLab (Clean Text "Kengni Théophane" Model: NO EMOJIS, NO FT ID, Clean Alignment),
-Upload to GCS gs://sully-candidate-resumes-data-agents/resumes/,
-Clean up local PDF files, and Reload BigQuery Dataset public_sector_employment_ds.
+Generate 300 Authentic 1-Page PDF CVs using ReportLab matching the exact 'KENGNI THEOPHANE CV' Model:
+- Centered Header (Candidate Name + Target Role)
+- Clean Contact Line (Email | Phone | Location | LinkedIn) -> NO EMOJIS, NO FT ID!
+- Horizontal divider lines
+- 5 Standardized Sections: ABOUT ME, TECHNICAL SKILLS, EXPERIENCE PROFESSIONNELLE, EDUCATION & FORMATION, CERTIFICATIONS & INTERESTS.
+- Upload to GCS gs://sully-candidate-resumes-data-agents/resumes/,
+- Delete all local PDF files from disk,
+- Reload BigQuery Dataset public_sector_employment_ds.
 """
 
 import os
@@ -24,7 +29,7 @@ PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
 DATASET_ID = "public_sector_employment_ds"
 RESUMES_BUCKET = "gs://sully-candidate-resumes-data-agents"
 SULLY_BUCKET = "gs://talktodata-sully-raw-data"
-TEMP_RESUMES_DIR = os.path.join(os.path.dirname(__file__), "agents", "sully", "data", "temp_resumes")
+TEMP_RESUMES_DIR = os.path.join(os.path.dirname(__file__), "agents", "sully", "data", "temp_kengni_resumes")
 
 FIRST_NAMES = [
     "Sophie", "Thomas", "Lucas", "Camille", "Élodie", "Alexandre", "Nicolas", "Julie", "Marie", "Jean",
@@ -62,56 +67,67 @@ def get_client():
     creds = Credentials(token)
     return bigquery.Client(project=PROJECT_ID, credentials=creds)
 
-def build_clean_kengni_pdf_cv(pdf_path, full_name, target_role, dept_code, dept_name, degree_level, degree_title, company):
+def build_exact_kengni_pdf_cv(pdf_path, full_name, target_role, dept_code, dept_name, degree_level, degree_title, company):
     doc = SimpleDocTemplate(pdf_path, pagesize=letter, leftMargin=36, rightMargin=36, topMargin=36, bottomMargin=36)
     styles = getSampleStyleSheet()
 
-    title_style = ParagraphStyle('TitleStyle', parent=styles['Heading1'], fontSize=16, textColor=colors.HexColor('#1A202C'), spaceAfter=2, alignment=1)
-    subtitle_style = ParagraphStyle('SubTitleStyle', parent=styles['Heading2'], fontSize=11, textColor=colors.HexColor('#2B6CB0'), spaceAfter=4, alignment=1)
-    contact_style = ParagraphStyle('ContactStyle', parent=styles['Normal'], fontSize=9, textColor=colors.HexColor('#4A5568'), spaceAfter=10, alignment=1)
+    header_name_style = ParagraphStyle('HeaderName', parent=styles['Heading1'], fontSize=16, textColor=colors.HexColor('#1A202C'), spaceAfter=2, alignment=1)
+    header_sub_style = ParagraphStyle('HeaderSub', parent=styles['Heading2'], fontSize=11, textColor=colors.HexColor('#2B6CB0'), spaceAfter=4, alignment=1)
+    contact_style = ParagraphStyle('ContactStyle', parent=styles['Normal'], fontSize=9, textColor=colors.HexColor('#4A5568'), spaceAfter=8, alignment=1)
 
-    section_heading = ParagraphStyle('SecHeading', parent=styles['Heading3'], fontSize=10, textColor=colors.HexColor('#1A365D'), spaceBefore=6, spaceAfter=4)
+    section_heading = ParagraphStyle('SecHeading', parent=styles['Heading3'], fontSize=10, textColor=colors.HexColor('#1A365D'), spaceBefore=8, spaceAfter=4)
     body_style = ParagraphStyle('BodyStyle', parent=styles['Normal'], fontSize=8.5, textColor=colors.HexColor('#2D3748'), leading=11.5)
 
+    clean_slug = full_name.lower().replace(' ', '')
     email = f"{full_name.lower().replace(' ', '.')}@francetravail-candidats.fr"
+    phone = f"+33 6 {random.randint(10,99)} {random.randint(10,99)} {random.randint(10,99)} {random.randint(10,99)}"
 
     story = [
-        Paragraph(f"<b>{full_name.upper()}</b>", title_style),
-        Paragraph(f"<b>{target_role}</b>", subtitle_style),
-        Paragraph(f"Email: {email} | Téléphone: +33 6 {random.randint(10,99)} {random.randint(10,99)} {random.randint(10,99)} {random.randint(10,99)} | Localisation: {dept_name} ({dept_code})", contact_style),
+        Paragraph(f"<b>{full_name.upper()}</b>", header_name_style),
+        Paragraph(f"<b>{target_role}</b>", header_sub_style),
+        Paragraph(f"Email: {email} | Téléphone: {phone} | Localisation: {dept_name} ({dept_code}) | linkedin.com/in/{clean_slug}", contact_style),
         HRFlowable(width="100%", thickness=0.8, color=colors.HexColor('#CBD5E0'), spaceBefore=2, spaceAfter=8),
 
-        Paragraph("<b>RÉSUMÉ PROFESSIONNEL</b>", section_heading),
-        Paragraph(f"Professionnel diplômé ({degree_level}) bénéficiant d'une expérience confirmée dans le domaine <b>{target_role}</b>. Fort de réalisations probantes chez <b>{company}</b>, je maîtrise l'optimisation des processus métiers, la gestion des projets complexes et la modélisation décisionnelle. Rigoureux et orienté résultats.", body_style),
+        Paragraph("<b>ABOUT ME / PROFIL PROFESSIONNEL</b>", section_heading),
+        Paragraph(f"Professionnel diplômé en Data & IA combinant une forte rigueur analytique avec un sens aigu de l'innovation et de la création de valeur business. Passionné par la transformation des données brutes en leviers décisionnels stratégiques, j'excelle dans la modélisation de schémas relationnels, la création de tableaux de bord décisionnels et l'alignement entre exigences techniques et valeur entreprise.<br/>"
+                  f"<b>Langues :</b> Français (Native), Anglais (Courant)", body_style),
         HRFlowable(width="100%", thickness=0.5, color=colors.HexColor('#E2E8F0'), spaceBefore=6, spaceAfter=6),
 
-        Paragraph("<b>COMPÉTENCES MÉTIONALES & TECHNIQUES</b>", section_heading),
-        Paragraph("• <b>Compétences Métiers :</b> Gestion de projet, analyse décisionnelle, modélisation relationnelle SQL, reporting RH.<br/>"
-                  "• <b>Outils & Technologies :</b> BigQuery, Google Cloud Platform, Python, SQL, Tableau, Power BI.<br/>"
-                  "• <b>Savoir-être :</b> Rigueur analytique, autonomie, esprit d'équipe et capacité d'adaptation aux besoins métier.", body_style),
+        Paragraph("<b>TECHNICAL SKILLS & COMPÉTENCES</b>", section_heading),
+        Paragraph("<b>Data & Business Intelligence:</b> Data Analysis, Business Intelligence (BI), Data-Driven Decision Making (DDDM), Reporting & KPI Analysis, BigQuery, SQL, Looker Studio, Power BI.<br/>"
+                  "<b>Cloud & Tech Stack:</b> Google Cloud Platform (GCP), Python, PostgreSQL, Data Governance, DevSecOps, Git/GitHub.<br/>"
+                  "<b>Soft Skills & Leadership:</b> Vision produit, communication stratégique, esprit d'analyse, autonomie et capacité d'adaptation aux besoins métier.", body_style),
         HRFlowable(width="100%", thickness=0.5, color=colors.HexColor('#E2E8F0'), spaceBefore=6, spaceAfter=6),
 
-        Paragraph("<b>EXPÉRIENCE PROFESSIONNELLE</b>", section_heading),
-        Paragraph(f"<b>2022 - 2024 : Chargé d'Études / Specialist - {company} ({dept_name})</b><br/>"
-                  f"• Pilotage opérationnel et conception de tableaux de bord décisionnels pour la direction des ressources humaines.<br/>"
-                  f"• Automatisation des flux d'information et optimisation des requêtes analytiques sur plateforme cloud.<br/>"
+        Paragraph("<b>EXPERIENCE PROFESSIONNELLE</b>", section_heading),
+        Paragraph(f"<b>Customer Engineer Cloud & Data Analyst</b><br/>"
+                  f"<b>{company}, {dept_name} — 09/2023 – Présent</b><br/>"
+                  f"• Conception et déploiement d'architectures décisionnelles sur Google Cloud Platform et BigQuery pour de grands comptes.<br/>"
+                  f"• Création de dashboards analytiques automatisés réduisant de 35% le temps d'obtention des rapports de synthèse RH et financiers.<br/>"
+                  f"• Animation des ateliers utilisateurs et accompagnement du changement auprès des équipes métiers client.<br/>"
                   f"<br/>"
-                  f"<b>2020 - 2022 : Coordination & Assistant Métier - Établissement Régional ({dept_name})</b><br/>"
-                  f"• Analyse des indicateurs d'activité et contribution aux politiques publiques d'insertion professionnelle.", body_style),
+                  f"<b>Chargé d'Études Statistiques & BI</b><br/>"
+                  f"<b>Établissement Régional, {dept_name} — 06/2021 – 08/2023</b><br/>"
+                  f"• Analyse prédictive des flux d'admission et modélisation des besoins en ressources humaines hospitalières et d'insertion.", body_style),
         HRFlowable(width="100%", thickness=0.5, color=colors.HexColor('#E2E8F0'), spaceBefore=6, spaceAfter=6),
 
-        Paragraph("<b>FORMATION & DIPLÔMES</b>", section_heading),
-        Paragraph(f"• <b>2020 : {degree_title} ({degree_level})</b> - Université de {dept_name}<br/>"
-                  f"• <b>2018 : Licence Informatique & Mathématiques Appliquées</b> - Établissement Supérieur Régional", body_style)
+        Paragraph("<b>EDUCATION & FORMATION</b>", section_heading),
+        Paragraph(f"<b>{degree_title} ({degree_level})</b> — Université de {dept_name} (2023)<br/>"
+                  f"<b>Bachelor Data Science & Statistique Appliquée</b> — Établissement Supérieur Régional (2021)", body_style),
+        HRFlowable(width="100%", thickness=0.5, color=colors.HexColor('#E2E8F0'), spaceBefore=6, spaceAfter=6),
+
+        Paragraph("<b>CERTIFICATIONS & INTERESTS</b>", section_heading),
+        Paragraph("<b>Certifications:</b> Google Professional Data Engineer, Inside LVMH Certificate.<br/>"
+                  "<b>Interêts:</b> Innovation & Technology, Arts & Culture, Sports.", body_style)
     ]
 
     doc.build(story)
 
-    cv_text = f"{full_name} - {target_role}. Diplômé {degree_level} ({degree_title}) basé à {dept_name} ({dept_code}). Expérience chez {company}. Compétences : BigQuery, SQL, Python, gestion de projet, analyse décisionnelle."
+    cv_text = f"{full_name} - {target_role}. Diplômé {degree_level} ({degree_title}) basé à {dept_name} ({dept_code}). Expérience chez {company}. Compétences : BigQuery, GCP, SQL, Python, Business Intelligence, Data Analysis."
     return cv_text
 
 def main():
-    print("Generating 300 clean text 'Kengni' model PDF CVs (NO EMOJIS, NO FT ID)...")
+    print("Generating 300 clean text 'Kengni Théophane' model PDF CVs (NO EMOJIS, NO FT ID)...")
     os.makedirs(TEMP_RESUMES_DIR, exist_ok=True)
 
     df_bmo = pd.read_csv("agents/sully/data/bmo_recrutement_2025.csv")
@@ -140,7 +156,7 @@ def main():
 
         gcs_uri = f"{RESUMES_BUCKET}/resumes/{pdf_filename}"
 
-        cv_text = build_clean_kengni_pdf_cv(
+        cv_text = build_exact_kengni_pdf_cv(
             local_pdf_path, full_name, bmo_item["nom_metier_bmo"],
             dept_code, dept_name, deg_level, deg_title, company
         )
@@ -161,7 +177,7 @@ def main():
         })
 
         if i % 50 == 0:
-            print(f"  ✓ Generated {i} / 300 clean PDF CVs...")
+            print(f"  ✓ Generated {i} / 300 clean Kengni model PDF CVs...")
 
     df_cand = pd.DataFrame(candidates)
     cand_csv = "agents/sully/data/france_travail_demandeurs.csv"
@@ -169,7 +185,7 @@ def main():
     print(f"  ✓ Saved {len(df_cand)} candidate records to {cand_csv}")
 
     # Upload all 300 PDF CVs to GCS
-    print(f"Uploading 300 clean PDF CVs to GCS bucket '{RESUMES_BUCKET}/resumes/'...")
+    print(f"Uploading 300 clean Kengni model PDF CVs to GCS bucket '{RESUMES_BUCKET}/resumes/'...")
     subprocess.run(f"gcloud storage cp {TEMP_RESUMES_DIR}/cv_*.pdf {RESUMES_BUCKET}/resumes/", shell=True, capture_output=True)
     print("  ✓ Upload to GCS complete!")
 
@@ -224,7 +240,6 @@ def main():
 
         tref = f"{PROJECT_ID}.{DATASET_ID}.{tname}"
 
-        # Drop table first to guarantee clean reload without schema distortion
         client.delete_table(tref, not_found_ok=True)
 
         job_config = bigquery.LoadJobConfig(

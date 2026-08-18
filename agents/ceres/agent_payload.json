@@ -72,43 +72,43 @@
       "glossaryTerms": [
         {
           "displayName": "Analyse du Cycle de Vie (ACV) ADEME Agribalyse 3.1",
-          "description": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles. Termes liés & Ontologies : Base ADEME Agribalyse 3.1, Score Unique EF Environmental Footprint, Empreinte CO2e kg/kg produit, Eutrophisation & Acidification."
+          "description": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles. [Table: ademe_agribalyse_31_synthese, Colonne: score_unique_ef_impact]. Termes associés : Base ADEME Agribalyse 3.1, Score Unique EF Environmental Footprint, Empreinte CO2e kg/kg produit, Eutrophisation & Acidification. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Label Bas-Carbone & Crédits Carbone",
-          "description": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles. Termes liés & Ontologies : Certification Label Bas-Carbone, Tonnes CO2e Séquestrées, Valorisation Crédits Carbone €, Non-Labourage & Couverts Végétaux."
+          "description": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles. [Table: bilans_carbone_subventions_hve, Colonne: credits_carbone_generes_tco2e]. Termes associés : Certification Label Bas-Carbone, Tonnes CO2e Séquestrées, Valorisation Crédits Carbone €, Non-Labourage & Couverts Végétaux. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Flux Coopératifs & Rendements Récoltes",
-          "description": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives. Termes liés & Ontologies : Chiffre d'Affaires Coopérative, Volume Récolte Tonnes, Rendement Quintaux par Hectare, Collecte Céréalière Viticole."
+          "description": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives. [Table: cooperatives_agricoles, Colonne: chiffre_affaires_annuel_eur]. Termes associés : Chiffre d'Affaires Coopérative, Volume Récolte Tonnes, Rendement Quintaux par Hectare, Collecte Céréalière Viticole. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Rapports de Performance ESG Investisseurs",
-          "description": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact. Termes liés & Ontologies : Score ESG Global %, Reporting Durabilité CSRD, Taxonomie Européenne Verte, Performance Extra-Financière."
+          "description": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact. [Table: rapports_performance_esg_chaine, Colonne: score_esg_global_pct]. Termes associés : Score ESG Global %, Reporting Durabilité CSRD, Taxonomie Européenne Verte, Performance Extra-Financière. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Prévisions d'Anomalies Météo d'Été",
-          "description": "Détection précoce des écarts de température et déficits de précipitation estivaux. Termes liés & Ontologies : Anomalies Température °C, Déficit Pluviométrique mm, Indice Sécheresse des Sols, Alerte Stress Hydrique Cultures."
+          "description": "Détection précoce des écarts de température et déficits de précipitation estivaux. [Table: previsions_anomalies_meteo_ete, Colonne: anomalie_temperature_celsius]. Termes associés : Anomalies Température °C, Déficit Pluviométrique mm, Indice Sécheresse des Sols, Alerte Stress Hydrique Cultures. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Cartographie des Parcelles & Registre Parcellaire (RPG)",
-          "description": "Délimitation géographique et historique d'assolement des parcelles exploitées. Termes liés & Ontologies : Registre Parcellaire Graphique RPG, Surface Agricole Utile SAU, Cultures Principales & Assolement, Géolocalisation Parcelles."
+          "description": "Délimitation géographique et historique d'assolement des parcelles exploitées. [Table: parcelles_agricoles, Colonne: surface_hectares]. Termes associés : Registre Parcellaire Graphique RPG, Surface Agricole Utile SAU, Cultures Principales & Assolement, Géolocalisation Parcelles. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Télédétection IoT Humidité des Sols",
-          "description": "Mesure en temps réel de l'humidité et tension matricielle des sols par sondes IoT. Termes liés & Ontologies : Sondes IoT Humidité Sol, Capteurs Tension-Métriques, Pilotage Irrigation de Précision, Économie d'Eau m³."
+          "description": "Mesure en temps réel de l'humidité et tension matricielle des sols par sondes IoT. [Table: capteurs_iot_sols_meteo, Colonne: humidite_sol_pct]. Termes associés : Sondes IoT Humidité Sol, Capteurs Tension-Métriques, Pilotage Irrigation de Précision, Économie d'Eau m³. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Certification Haute Valeur Environnementale (HVE)",
-          "description": "Niveau 3 de certification environnementale des exploitations agricoles. Termes liés & Ontologies : Certification HVE Niveau 3, Biodiversité & Stratégie Phytosanitaire, Gestion de la Fertilisation, Primes Qualité Filières."
+          "description": "Niveau 3 de certification environnementale des exploitations agricoles. [Table: bilans_carbone_subventions_hve, Colonne: niveau_certification_hve]. Termes associés : Certification HVE Niveau 3, Biodiversité & Stratégie Phytosanitaire, Gestion de la Fertilisation, Primes Qualité Filières. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Bilan Gaz à Effet de Serre (GES) Exploitations",
-          "description": "Comptabilité carbone brute des émissions de N2O, CH4 et CO2 de l'exploitation. Termes liés & Ontologies : Émissions N2O Élevage/Engrais, Méthanisation Effluents, Bilan Carbone Exploitation, Plan de Décarbonation Agricole."
+          "description": "Comptabilité carbone brute des émissions de N2O, CH4 et CO2 de l'exploitation. [Table: bilans_carbone_subventions_hve, Colonne: emissions_ges_totales_tco2e]. Termes associés : Émissions N2O Élevage/Engrais, Méthanisation Effluents, Bilan Carbone Exploitation, Plan de Décarbonation Agricole. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Valorisation Filières & Circuits Courts",
-          "description": "Part des volumes agricoles distribués en vente directe et valorisation locale. Termes liés & Ontologies : Circuits Courts Vente Directe, Valeur Ajoutée Exploitation, Agriculture Biologique AB, Traçabilité du Champ à l'Assiette."
+          "description": "Part des volumes agricoles distribués en vente directe et valorisation locale. [Table: exploitations_agricoles, Colonne: part_vente_directe_pct]. Termes associés : Circuits Courts Vente Directe, Valeur Ajoutée Exploitation, Agriculture Biologique AB, Traçabilité du Champ à l'Assiette. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

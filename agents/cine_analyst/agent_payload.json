@@ -52,43 +52,43 @@
       "glossaryTerms": [
         {
           "displayName": "Séries Historiques CNC Box-Office",
-          "description": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945. Termes liés & Ontologies : Entrées Annuelles CNC Millions, Recettes Guichet Box-Office, Séries Temporelles Cinéma, Historique Fréquentation 1945-2025."
+          "description": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945. [Table: cnc_frequentation_historique, Colonne: nombre_total_entrees_millions]. Termes associés : Entrées Annuelles CNC Millions, Recettes Guichet Box-Office, Séries Temporelles Cinéma, Historique Fréquentation 1945-2025. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Indicateurs de Fréquentation & Prix Billet",
-          "description": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles. Termes liés & Ontologies : Prix Moyen de la Place €, Taux de Remplissage Salles, Recette Moyenne par Entrée, Chiffre d'Affaires Exploitation."
+          "description": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles. [Table: cnc_performance_box_office_tops, Colonne: prix_moyen_billet_eur]. Termes associés : Prix Moyen de la Place €, Taux de Remplissage Salles, Recette Moyenne par Entrée, Chiffre d'Affaires Exploitation. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Répartition par Genres & Nationalités",
-          "description": "Performances comparées des films français, américains et art & essai par territoire. Termes liés & Ontologies : Part de Marché Films Français, Films Américains Blockbusters, Cinéma d'Art et Essai, Répartition Genres Comédie Drame Sci-Fi."
+          "description": "Performances comparées des films français, américains et art & essai par territoire. [Table: cnc_films_exploitation_nationalite, Colonne: part_marche_entrees_pct]. Termes associés : Part de Marché Films Français, Films Américains Blockbusters, Cinéma d'Art et Essai, Répartition Genres Comédie Drame Sci-Fi. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Parc des Établissements & Multiplexes",
-          "description": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes. Termes liés & Ontologies : Nombre d'Écrans & Fauteuils, Multiplexes vs Salles Indépendantes, Classement Art et Essai, Densité d'Équipement Écrans."
+          "description": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes. [Table: salles_cinema_etablissements, Colonne: nombre_ecrans]. Termes associés : Nombre d'Écrans & Fauteuils, Multiplexes vs Salles Indépendantes, Classement Art et Essai, Densité d'Équipement Écrans. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Performance des Nouveautés & Semaines d'Exploitation",
-          "description": "Suivi des entrées en 1ère semaine et coefficient de maintien à l'affiche. Termes liés & Ontologies : Semaines à l'Affiche, Entrées Première Semaine, Coefficient de Maintien Box-Office, Nombre de Copies Écrans."
+          "description": "Suivi des entrées en 1ère semaine et coefficient de maintien à l'affiche. [Table: cnc_films_nouveautes_genres, Colonne: semaines_maintien_affiche]. Termes associés : Semaines à l'Affiche, Entrées Première Semaine, Coefficient de Maintien Box-Office, Nombre de Copies Écrans. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Compte de Soutien CNC & Subventions Cinéma",
-          "description": "Ressources générées par la taxe TSCA et réinvesties dans le soutien automatique. Termes liés & Ontologies : Taxe TSCA sur les Entrées, Fonds de Soutien Automatique CNC, Aide Sélective à la Production, Financement de la Création."
+          "description": "Ressources générées par la taxe TSCA et réinvesties dans le soutien automatique. [Table: cnc_frequentation_historique, Colonne: taxe_tsca_recette_eur]. Termes associés : Taxe TSCA sur les Entrées, Fonds de Soutien Automatique CNC, Aide Sélective à la Production, Financement de la Création. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Fréquentation par Tranche d'Âge & Publics",
-          "description": "Pénétration du cinéma auprès des 15-24 ans et détenteurs de Pass Illimités. Termes liés & Ontologies : Public 15-24 ans, Cinéphiles Réguliers, Abonnements Pass Cinéma Unlimited, Habitudes de Sortie Salles."
+          "description": "Pénétration du cinéma auprès des 15-24 ans et détenteurs de Pass Illimités. [Table: salles_cinema_etablissements, Colonne: taux_frequentation_jeunes_pct]. Termes associés : Public 15-24 ans, Cinéphiles Réguliers, Abonnements Pass Cinéma Unlimited, Habitudes de Sortie Salles. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Programmation & Entrées par Région",
-          "description": "Analyse géographique de la fréquentation des salles en région. Termes liés & Ontologies : Entrées par Région Administrative, Succès Régionaux Nouveautés, Densité de Fauteuils pour 1000 Hab, Disparités Territoriales Salles."
+          "description": "Analyse géographique de la fréquentation des salles en région. [Table: salles_cinema_etablissements, Colonne: region_nom]. Termes associés : Entrées par Région Administrative, Succès Régionaux Nouveautés, Densité de Fauteuils pour 1000 Hab, Disparités Territoriales Salles. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Format de Projection & Salles Premium",
-          "description": "Déploiement des salles premium IMAX, 4DX, Dolby Cinema et séances 3D. Termes liés & Ontologies : Salles IMAX 4DX Dolby Cinema, Projection Numérique 4K, Majoration Billet Séance Premium, Expérience Spectateur."
+          "description": "Déploiement des salles premium IMAX, 4DX, Dolby Cinema et séances 3D. [Table: salles_cinema_etablissements, Colonne: equipement_projection_3d_imax]. Termes associés : Salles IMAX 4DX Dolby Cinema, Projection Numérique 4K, Majoration Billet Séance Premium, Expérience Spectateur. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Taux d'Occupation Fauteuils par Séance",
-          "description": "Optimisation des grilles d'horaires et rentabilité par fauteuil de cinéma. Termes liés & Ontologies : Taux d'Occupation Séance, Séances du Soir & Week-End, Optimisation Grille de Horaires, Rentabilité par Salle."
+          "description": "Optimisation des grilles d'horaires et rentabilité par fauteuil de cinéma. [Table: cnc_performance_box_office_tops, Colonne: taux_occupation_fauteuils_pct]. Termes associés : Taux d'Occupation Séance, Séances du Soir & Week-End, Optimisation Grille de Horaires, Rentabilité par Salle. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }
