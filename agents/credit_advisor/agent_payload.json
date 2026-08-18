@@ -1,0 +1,84 @@
+{
+  "displayName": "CreditAdvisor - Risque Crédit & Finance",
+  "description": "Copilote décisionnel et d'intelligence macro-financière à 360° pour les banques et institutions financières : expert dans la détection préventive des risques de faillite d'entreprises, le conseil stratégique sur les politiques d'octroi de crédit, la modélisation du risque IFRS 9 et le lancement de campagnes d'upsell commercial B2B auprès des PME résilientes.",
+  "dataAnalyticsAgent": {
+    "publishedContext": {
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 CONFIDENTIALITÉ ET ANONYMISATION DES DONNÉES (FSI / BANQUE) :\n- Masquage des données sensibles : Ne jamais afficher d'identifiants bancaires bruts ou noms de dirigeants si confidentiels. Utiliser des identifiants anonymisés (ex: 'Entreprise Client #1042').\n- Anonymisation de la géolocalisation des actifs immobiliers assurés.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Analyse combinée des bilans financiers structurés et des documents PDF confidentiels (Object Tables GCP).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "datasourceReferences": {
+        "bq": {
+          "tableReferences": [
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "entreprises"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "bilans_financiers"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "encours_credit"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "produits_bancaires"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "souscriptions_produits"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "bdf_taux_marche"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "bdf_enquete_octroi_bls"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "bdf_defaillances_sectorielles_diren"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "fsi_creditadvisor_dataset",
+              "tableId": "bdf_indices_immobiliers_rpp"
+            }
+          ]
+        }
+      },
+      "exampleQueries": [
+        {
+          "naturalLanguageQuestion": "Analyse nos encours de crédit et prédis quelles entreprises de notre portefeuille ont un risque de défaillance supérieur à 75 % d'ici 6 mois face aux taux d'intérêt actuels.",
+          "sqlQuery": "SELECT e.nom_entreprise, e.siren, e.categorie_entreprise, e.secteur_activite, b.ratio_dscr, c.montant_encours_eur, c.taux_interet_actuel, c.probabilite_defaillance_6m, c.stage_ifrs9, c.montant_ecl_ifrs9_eur FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit` c JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises` e ON c.id_entreprise = e.id_entreprise JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.bilans_financiers` b ON e.id_entreprise = b.id_entreprise AND b.annee_exercice = 2025 WHERE c.probabilite_defaillance_6m > 0.75 ORDER BY c.probabilite_defaillance_6m DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Identifie les 50 PME les plus solides financièrement en Occitanie n'ayant pas encore souscrit à notre offre de crédit de trésorerie automatisée, pour lancer une campagne d'upsell ciblée.",
+          "sqlQuery": "SELECT e.nom_entreprise, e.siren, e.secteur_activite, e.nom_region, b.score_sante_financiere, b.chiffre_affaires_eur FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises` e JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.bilans_financiers` b ON e.id_entreprise = b.id_entreprise AND b.annee_exercice = 2025 WHERE e.categorie_entreprise = 'PME' AND e.nom_region = 'Occitanie' AND b.score_sante_financiere >= 75 AND e.id_entreprise NOT IN (SELECT id_entreprise FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.souscriptions_produits` s JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.produits_bancaires` p ON s.id_produit = p.id_produit WHERE p.code_produit = 'TRES_AUTO' OR p.id_produit = 'PROD_TRES_AUTO') ORDER BY b.score_sante_financiere DESC LIMIT 50"
+        },
+        {
+          "naturalLanguageQuestion": "Génère un rapport de synthèse des risques et des opportunités commerciales pour le prochain comité d'audit, avec les montants de provisionnement suggérés.",
+          "sqlQuery": "SELECT c.stage_ifrs9, COUNT(DISTINCT e.id_entreprise) AS nombre_entreprises, SUM(c.montant_encours_eur) AS encours_total_eur, SUM(c.montant_ecl_ifrs9_eur) AS provisionnement_suggere_ecl_eur, AVG(c.probabilite_defaillance_6m) AS probabilite_defaillance_moyenne FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit` c JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises` e ON c.id_entreprise = e.id_entreprise GROUP BY c.stage_ifrs9 ORDER BY c.stage_ifrs9 ASC"
+        }
+      ],
+      "glossaryTerms": [
+        {
+          "displayName": "Défaillance de Crédit (probabilite_defaillance_6m)",
+          "description": "Risque algorithmique de faillite d'entreprise mesuré sur un horizon de 6 mois basé sur le ratio DSCR et le fonds de roulement."
+        },
+        {
+          "displayName": "Provisionnement IFRS 9 ECL",
+          "description": "Montant des pertes de crédit attendues (Expected Credit Loss) calculé par Stage Prudentiel IFRS 9."
+        }
+      ]
+    }
+  }
+}

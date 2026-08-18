@@ -1,0 +1,73 @@
+{
+  "agent_id": "credit-advisor-agent",
+  "displayName": "CreditAdvisor - Risque Crédit & Finance",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/fsi-banking-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/fsi-banking-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier FSI Banque & Assurance",
+    "description": "Glossaire prudentiel, risque de crédit et analyse financière B2B pour CreditAdvisor.",
+    "categories": [
+      {
+        "categoryId": "risques-prudentiel",
+        "displayName": "Catégorie : Risques de Crédit & Prudentiel",
+        "description": "Indicateurs prudentiels, prédiction de faillite et provisionnement des pertes d'emprunts IFRS 9",
+        "terms": [
+          {
+            "termId": "ratio-dscr",
+            "displayName": "Ratio DSCR (Debt Service Coverage Ratio)",
+            "definition": "Couverture du service de la dette via l'EBE. Mappé sur ratio_dscr dans encours_credit.",
+            "mapped_bigquery_column": "ratio_dscr",
+            "mapped_bigquery_table": "encours_credit"
+          },
+          {
+            "termId": "probabilite-defaillance",
+            "displayName": "Probabilité de Défaillance à 6 Mois",
+            "definition": "Risque de faillite ou défaut de paiement à 6 mois. Mappé sur probabilite_defaillance_6m.",
+            "mapped_bigquery_column": "probabilite_defaillance_6m",
+            "mapped_bigquery_table": "encours_credit"
+          },
+          {
+            "termId": "ecl-ifrs9-provision",
+            "displayName": "Montant ECL IFRS 9 (Expected Credit Loss)",
+            "definition": "Provisionnement prudentiel des pertes de crédit attendues sous la norme IFRS 9.",
+            "mapped_bigquery_column": "montant_ecl_ifrs9_eur",
+            "mapped_bigquery_table": "encours_credit"
+          },
+          {
+            "termId": "ratio-ltv",
+            "displayName": "Ratio LTV (Loan-to-Value)",
+            "definition": "Ratio entre le montant du prêt et la valeur du bien immobilier gagé.",
+            "mapped_bigquery_column": "ratio_ltv_pct",
+            "mapped_bigquery_table": "encours_credit"
+          }
+        ]
+      },
+      {
+        "categoryId": "analyse-financiere",
+        "displayName": "Catégorie : Analyse Financière & Solvabilité B2B",
+        "description": "Indicateurs bilanciels, rentabilité d'entreprise et cotation Banque de France",
+        "terms": [
+          {
+            "termId": "excedent-brut-exploitation",
+            "displayName": "Excédent Brut d'Exploitation (EBE)",
+            "definition": "Flux de trésorerie généré par l'activité opérationnelle de l'entreprise.",
+            "mapped_bigquery_column": "ebe_eur",
+            "mapped_bigquery_table": "bilans_financiers"
+          },
+          {
+            "termId": "solvabilite-b2b",
+            "displayName": "Ratio de Solvabilité & Fonds Propres",
+            "definition": "Part des fonds propres dans le bilan de l'entreprise.",
+            "mapped_bigquery_column": "ratio_solvabilite_pct",
+            "mapped_bigquery_table": "bilans_financiers"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}
