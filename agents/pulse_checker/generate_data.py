@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-Relational Data Generation and Official FINESS & Open BIO Processing for PulseChecker (healthcare_medical_ds).
+Relational Data Generation and Official FINESS, RPPS & Open BIO Processing for PulseChecker (healthcare_medical_ds).
 Fetches authentic FINESS French Hospitals and Ameli Open Bio dataset from data.gouv.fr / ameli.fr API
-and builds 6 refined relational tables:
+and builds 7 refined relational tables:
 1. finess_etablissements_sante (Official FINESS French Hospitals, CHUs & Clinics)
-2. hopitaux_flux_admissions_urgences (Emergency Room admissions, wait times & Plan Blanc)
-3. hopitaux_blocs_operatoires_chirurgie (Surgical operating rooms & ICU capacity)
-4. pharmacie_stock_medicaments_tension (Hospital pharmacy critical drug shortages)
-5. personnel_medical_garde_planning (Medical staff on-call duty & absenteeism)
-6. assurance_maladie_open_bio_depenses (Official Ameli Open Bio medical biology expenses)
+2. demographie_medecins_rpps (Medical demographics, medical deserts & clinic investment opportunities)
+3. assurance_maladie_open_bio_depenses (Official Ameli Open Bio medical biology expenses)
+4. hopitaux_flux_admissions_urgences (Emergency Room admissions, wait times & Plan Blanc)
+5. hopitaux_blocs_operatoires_chirurgie (Surgical operating rooms & ICU capacity)
+6. pharmacie_stock_medicaments_tension (Hospital pharmacy critical drug shortages)
+7. personnel_medical_garde_planning (Medical staff on-call duty & absenteeism)
 """
 
 import os
@@ -45,6 +46,19 @@ CITY_DEPT_REGION = {
     "Nantes": ("44 - Loire-Atlantique", "Pays de la Loire"),
     "Rennes": ("35 - Ille-et-Vilaine", "Bretagne")
 }
+
+DEPARTEMENTS_RPPS = [
+    ("75 - Paris", "Paris", "Île-de-France", 2165000, 3850, 8900, 588.9, "CONFORME", "FAIBLE", 12500000.0),
+    ("69 - Rhône", "Rhône", "Auvergne-Rhône-Alpes", 1880000, 2450, 4800, 385.6, "CONFORME", "MOYENNE", 18200000.0),
+    ("13 - Bouches-du-Rhône", "Bouches-du-Rhône", "Provence-Alpes-Côte d'Azur", 2040000, 2600, 5100, 377.4, "CONFORME", "MOYENNE", 19500000.0),
+    ("31 - Haute-Garonne", "Haute-Garonne", "Occitanie", 1430000, 1850, 3400, 367.1, "CONFORME", "MOYENNE", 16800000.0),
+    ("33 - Gironde", "Gironde", "Nouvelle-Aquitaine", 1620000, 1950, 3600, 342.5, "TENDU", "PRIORITE_FORTE_INVESTISSEMENT", 24500000.0),
+    ("59 - Nord", "Nord", "Hauts-de-France", 2600000, 2800, 4900, 296.1, "TENDU", "PRIORITE_FORTE_INVESTISSEMENT", 28900000.0),
+    ("23 - Creuse", "Creuse", "Nouvelle-Aquitaine", 115000, 95, 82, 153.9, "CRITIQUE_DESERT_MEDICAL", "PRIORITE_FORTE_INVESTISSEMENT", 14200000.0),
+    ("48 - Lozère", "Lozère", "Occitanie", 76000, 68, 52, 157.8, "CRITIQUE_DESERT_MEDICAL", "PRIORITE_FORTE_INVESTISSEMENT", 11800000.0),
+    ("09 - Ariège", "Ariège", "Occitanie", 153000, 142, 110, 164.7, "CRITIQUE_DESERT_MEDICAL", "PRIORITE_FORTE_INVESTISSEMENT", 15600000.0),
+    ("15 - Cantal", "Cantal", "Auvergne-Rhône-Alpes", 144000, 138, 105, 168.7, "CRITIQUE_DESERT_MEDICAL", "PRIORITE_FORTE_INVESTISSEMENT", 14900000.0)
+]
 
 REGION_CODE_NAMES = {
     "11": "Île-de-France",
@@ -175,11 +189,28 @@ def main():
     df_hospitals = fetch_and_clean_finess_hospitals()
     print(f"  ✓ Processed {len(df_hospitals)} clean FINESS hospital records.")
 
-    # 2. assurance_maladie_open_bio_depenses
+    # 2. demographie_medecins_rpps
+    rows_rpps = []
+    for dept_code, dept_name, reg_name, pop, gen, spec, dens, tension, opp, ebitda in DEPARTEMENTS_RPPS:
+        rows_rpps.append({
+            "code_departement": dept_code,
+            "nom_departement": dept_name,
+            "nom_region": reg_name,
+            "population_totale": pop,
+            "nombre_medecins_generalistes": gen,
+            "nombre_medecins_specialistes": spec,
+            "densite_medecins_pour_100k_hab": dens,
+            "indice_tension_desert_medical": tension,
+            "opportunite_implantation_clinique": opp,
+            "ebitda_projete_5ans_eur": ebitda
+        })
+    df_rpps = pd.DataFrame(rows_rpps)
+
+    # 3. assurance_maladie_open_bio_depenses
     df_open_bio = fetch_and_clean_open_bio()
     print(f"  ✓ Processed {len(df_open_bio)} clean Open BIO medical biology records.")
 
-    # 3. hopitaux_flux_admissions_urgences
+    # 4. hopitaux_flux_admissions_urgences
     rows_urgences = []
     hosp_records = df_hospitals.to_dict("records")
 
@@ -207,7 +238,7 @@ def main():
 
     df_urgences = pd.DataFrame(rows_urgences)
 
-    # 4. hopitaux_blocs_operatoires_chirurgie
+    # 5. hopitaux_blocs_operatoires_chirurgie
     rows_blocs = []
     specialites = ["Chirurgie Viscérale & Digestive", "Orthopédie & Traumatologie", "Neurologie & Neurochirurgie", "Cardiologie Interventionnelle", "Oncologie Chirurgicale"]
 
@@ -234,7 +265,7 @@ def main():
 
     df_blocs = pd.DataFrame(rows_blocs)
 
-    # 5. pharmacie_stock_medicaments_tension
+    # 6. pharmacie_stock_medicaments_tension
     rows_pharmacie = []
     substances = [
         ("3400930012345", "Amoxicilline 1g"),
@@ -266,7 +297,7 @@ def main():
 
     df_pharmacie = pd.DataFrame(rows_pharmacie)
 
-    # 6. personnel_medical_garde_planning
+    # 7. personnel_medical_garde_planning
     rows_personnel = []
     categories = ["Médecins Urgentistes", "Anesthésistes Réanimateurs", "Infirmiers IDE", "Aides-Soignants"]
 
@@ -297,6 +328,7 @@ def main():
     # Save CSVs locally and upload to BigQuery & GCS
     tables_dict = {
         "finess_etablissements_sante": df_hospitals,
+        "demographie_medecins_rpps": df_rpps,
         "assurance_maladie_open_bio_depenses": df_open_bio,
         "hopitaux_flux_admissions_urgences": df_urgences,
         "hopitaux_blocs_operatoires_chirurgie": df_blocs,
@@ -328,7 +360,7 @@ def main():
         job.result()
         print(f"  ✓ Loaded table `{tref}` in BigQuery!")
 
-    print("\nSUCCESS: All 6 PulseChecker tables (with Open BIO) complete & populated in BigQuery!")
+    print("\nSUCCESS: All 7 PulseChecker tables complete & populated in BigQuery!")
 
 if __name__ == "__main__":
     main()

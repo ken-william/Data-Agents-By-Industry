@@ -1,0 +1,11 @@
+code_departement,nom_departement,nom_region,population_totale,nombre_medecins_generalistes,nombre_medecins_specialistes,densite_medecins_pour_100k_hab,indice_tension_desert_medical,opportunite_implantation_clinique,ebitda_projete_5ans_eur
+75 - Paris,Paris,Île-de-France,2165000,3850,8900,588.9,CONFORME,FAIBLE,12500000.0
+69 - Rhône,Rhône,Auvergne-Rhône-Alpes,1880000,2450,4800,385.6,CONFORME,MOYENNE,18200000.0
+13 - Bouches-du-Rhône,Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2040000,2600,5100,377.4,CONFORME,MOYENNE,19500000.0
+31 - Haute-Garonne,Haute-Garonne,Occitanie,1430000,1850,3400,367.1,CONFORME,MOYENNE,16800000.0
+33 - Gironde,Gironde,Nouvelle-Aquitaine,1620000,1950,3600,342.5,TENDU,PRIORITE_FORTE_INVESTISSEMENT,24500000.0
+59 - Nord,Nord,Hauts-de-France,2600000,2800,4900,296.1,TENDU,PRIORITE_FORTE_INVESTISSEMENT,28900000.0
+23 - Creuse,Creuse,Nouvelle-Aquitaine,115000,95,82,153.9,CRITIQUE_DESERT_MEDICAL,PRIORITE_FORTE_INVESTISSEMENT,14200000.0
+48 - Lozère,Lozère,Occitanie,76000,68,52,157.8,CRITIQUE_DESERT_MEDICAL,PRIORITE_FORTE_INVESTISSEMENT,11800000.0
+09 - Ariège,Ariège,Occitanie,153000,142,110,164.7,CRITIQUE_DESERT_MEDICAL,PRIORITE_FORTE_INVESTISSEMENT,15600000.0
+15 - Cantal,Cantal,Auvergne-Rhône-Alpes,144000,138,105,168.7,CRITIQUE_DESERT_MEDICAL,PRIORITE_FORTE_INVESTISSEMENT,14900000.0
