@@ -16,7 +16,7 @@ def deploy_net_arch_agent():
 
     print(f"Deploying NetArch Data Agent to Project: '{project_id}', Location: '{location}', Agent ID: '{agent_id}'...")
 
-    payload_path = os.path.join(os.path.dirname(__file__), "netarch_payload.json")
+    payload_path = os.path.join(os.path.dirname(__file__), "agent_payload.json")
     with open(payload_path, "r", encoding="utf-8") as f:
         raw_payload = f.read()
 
