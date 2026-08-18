@@ -4,7 +4,7 @@ Welcome to the `agents/` core directory of **TalkToData**. This folder contains 
 
 ---
 
-## 🏛️ Standard Agent Directory Structure
+## Standard Agent Directory Structure
 
 Every Data Agent directory adheres to a strict, standardized production architecture:
 
@@ -20,7 +20,7 @@ agents/<agent_name>/
 
 ---
 
-## 📊 Summary of the 11 Industry Data Agents
+## Summary of the 11 Industry Data Agents
 
 | Agent Folder | Agent ID | Display Name | Industry Domain & Executive ROI | BigQuery Dataset |
 | :--- | :--- | :--- | :--- | :--- |
@@ -38,7 +38,7 @@ agents/<agent_name>/
 
 ---
 
-## 🛠️ How to Add a New Industry Data Agent
+## How to Add a New Industry Data Agent
 
 To add a 12th Data Agent to TalkToData:
 
