@@ -1,601 +1,601 @@
 id_magasin,nom_magasin,enseigne,commune,code_departement,nom_region,tranche_horaire,affluence_clients_jour,taux_conversion_passage_caisses_pct,demarque_pertes_produits_frais_14j_eur,consigne_reassort_automatique
-MAG-0001,Auchan Super Lyon #1,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,575,69.2,10421.68,CONFORME
-MAG-0001,Auchan Super Lyon #1,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,652,65.7,14105.98,REASSORT_URGENT_AUTOMATIQUE
-MAG-0001,Auchan Super Lyon #1,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,951,78.2,14437.46,REASSORT_URGENT_AUTOMATIQUE
-MAG-0001,Auchan Super Lyon #1,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1697,71.7,15319.71,REASSORT_URGENT_AUTOMATIQUE
-MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,2557,75.7,11125.88,CONFORME
-MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,1543,80.6,4489.56,CONFORME
-MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,1160,74.0,3303.48,CONFORME
-MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,1844,66.1,6524.74,CONFORME
-MAG-0003,Monoprix Toulouse #3,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,698,77.0,7253.18,CONFORME
-MAG-0003,Monoprix Toulouse #3,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1905,68.9,7849.45,CONFORME
-MAG-0003,Monoprix Toulouse #3,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1723,78.1,14327.08,REASSORT_URGENT_AUTOMATIQUE
-MAG-0003,Monoprix Toulouse #3,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2786,87.7,16344.16,REASSORT_URGENT_AUTOMATIQUE
-MAG-0004,Carrefour Hyper Marseille #4,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,370,63.8,16791.63,REASSORT_URGENT_AUTOMATIQUE
-MAG-0004,Carrefour Hyper Marseille #4,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2190,83.8,3053.17,CONFORME
-MAG-0004,Carrefour Hyper Marseille #4,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2232,65.8,14780.07,REASSORT_URGENT_AUTOMATIQUE
-MAG-0004,Carrefour Hyper Marseille #4,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1476,73.9,7245.47,CONFORME
-MAG-0005,Intermarché Toulouse #5,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,709,62.7,5054.62,CONFORME
-MAG-0005,Intermarché Toulouse #5,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2676,80.1,6482.02,CONFORME
-MAG-0005,Intermarché Toulouse #5,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1580,63.7,14181.31,REASSORT_URGENT_AUTOMATIQUE
-MAG-0005,Intermarché Toulouse #5,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,683,69.5,14761.53,REASSORT_URGENT_AUTOMATIQUE
-MAG-0006,Carrefour Hyper Strasbourg #6,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2105,72.0,12747.07,REASSORT_URGENT_AUTOMATIQUE
-MAG-0006,Carrefour Hyper Strasbourg #6,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,946,69.3,15516.77,REASSORT_URGENT_AUTOMATIQUE
-MAG-0006,Carrefour Hyper Strasbourg #6,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2626,85.2,10259.6,CONFORME
-MAG-0006,Carrefour Hyper Strasbourg #6,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1251,75.6,3112.74,CONFORME
-MAG-0007,Monoprix Nantes #7,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2476,80.6,9522.14,CONFORME
-MAG-0007,Monoprix Nantes #7,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1754,66.4,8985.02,CONFORME
-MAG-0007,Monoprix Nantes #7,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1096,65.9,6052.07,CONFORME
-MAG-0007,Monoprix Nantes #7,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,573,87.1,2470.14,CONFORME
-MAG-0008,Carrefour Hyper Toulouse #8,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1323,78.3,16358.23,REASSORT_URGENT_AUTOMATIQUE
-MAG-0008,Carrefour Hyper Toulouse #8,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2731,81.3,1593.75,CONFORME
-MAG-0008,Carrefour Hyper Toulouse #8,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1188,79.4,3308.58,CONFORME
-MAG-0008,Carrefour Hyper Toulouse #8,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2138,75.1,10977.5,CONFORME
-MAG-0009,Carrefour Hyper Lyon #9,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,851,78.9,10236.28,CONFORME
-MAG-0009,Carrefour Hyper Lyon #9,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2452,67.3,16730.25,REASSORT_URGENT_AUTOMATIQUE
-MAG-0009,Carrefour Hyper Lyon #9,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2068,86.8,12660.22,REASSORT_URGENT_AUTOMATIQUE
-MAG-0009,Carrefour Hyper Lyon #9,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1584,81.9,18208.96,REASSORT_URGENT_AUTOMATIQUE
-MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,861,79.4,4930.3,CONFORME
-MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,1095,74.0,16190.21,REASSORT_URGENT_AUTOMATIQUE
-MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,1154,73.1,8646.45,CONFORME
-MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,1016,71.3,11896.89,CONFORME
-MAG-0011,Carrefour Hyper Lille #11,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,2237,83.3,3499.45,CONFORME
-MAG-0011,Carrefour Hyper Lille #11,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,1790,67.5,1950.04,CONFORME
-MAG-0011,Carrefour Hyper Lille #11,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,1285,74.7,18032.14,REASSORT_URGENT_AUTOMATIQUE
-MAG-0011,Carrefour Hyper Lille #11,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,1225,79.8,1896.56,CONFORME
-MAG-0012,Auchan Super Rennes #12,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,878,79.8,6479.19,CONFORME
-MAG-0012,Auchan Super Rennes #12,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1795,69.7,13405.0,REASSORT_URGENT_AUTOMATIQUE
-MAG-0012,Auchan Super Rennes #12,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1681,81.8,7529.84,CONFORME
-MAG-0012,Auchan Super Rennes #12,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1505,70.7,15160.07,REASSORT_URGENT_AUTOMATIQUE
-MAG-0013,Auchan Super Lyon #13,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1768,70.8,12685.38,REASSORT_URGENT_AUTOMATIQUE
-MAG-0013,Auchan Super Lyon #13,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1017,69.0,12854.56,REASSORT_URGENT_AUTOMATIQUE
-MAG-0013,Auchan Super Lyon #13,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,1553,82.8,11696.31,CONFORME
-MAG-0013,Auchan Super Lyon #13,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1695,63.8,5092.18,CONFORME
-MAG-0014,E.Leclerc Rennes #14,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1628,85.6,9901.03,CONFORME
-MAG-0014,E.Leclerc Rennes #14,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1957,74.9,7719.12,CONFORME
-MAG-0014,E.Leclerc Rennes #14,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1324,81.3,11472.6,CONFORME
-MAG-0014,E.Leclerc Rennes #14,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,812,63.1,9070.08,CONFORME
-MAG-0015,E.Leclerc Strasbourg #15,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1224,73.9,16865.64,REASSORT_URGENT_AUTOMATIQUE
-MAG-0015,E.Leclerc Strasbourg #15,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,2702,70.1,13395.58,REASSORT_URGENT_AUTOMATIQUE
-MAG-0015,E.Leclerc Strasbourg #15,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2616,62.3,8846.06,CONFORME
-MAG-0015,E.Leclerc Strasbourg #15,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,993,76.0,2555.91,CONFORME
-MAG-0016,Auchan Super Strasbourg #16,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,979,69.8,7919.94,CONFORME
-MAG-0016,Auchan Super Strasbourg #16,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,861,67.6,9848.69,CONFORME
-MAG-0016,Auchan Super Strasbourg #16,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1104,62.5,11169.45,CONFORME
-MAG-0016,Auchan Super Strasbourg #16,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1484,65.5,17550.07,REASSORT_URGENT_AUTOMATIQUE
-MAG-0017,Auchan Super Nantes #17,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1229,65.0,2715.9,CONFORME
-MAG-0017,Auchan Super Nantes #17,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,684,76.7,17876.13,REASSORT_URGENT_AUTOMATIQUE
-MAG-0017,Auchan Super Nantes #17,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,557,69.7,15723.88,REASSORT_URGENT_AUTOMATIQUE
-MAG-0017,Auchan Super Nantes #17,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1234,83.4,14420.45,REASSORT_URGENT_AUTOMATIQUE
-MAG-0018,Monoprix Strasbourg #18,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2175,64.5,17182.72,REASSORT_URGENT_AUTOMATIQUE
-MAG-0018,Monoprix Strasbourg #18,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1717,71.9,11091.5,CONFORME
-MAG-0018,Monoprix Strasbourg #18,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2677,79.1,10702.85,CONFORME
-MAG-0018,Monoprix Strasbourg #18,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,881,82.4,13707.49,REASSORT_URGENT_AUTOMATIQUE
-MAG-0019,Monoprix Rennes #19,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2679,81.8,6443.02,CONFORME
-MAG-0019,Monoprix Rennes #19,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1913,72.7,6544.63,CONFORME
-MAG-0019,Monoprix Rennes #19,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,805,64.7,4876.09,CONFORME
-MAG-0019,Monoprix Rennes #19,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1691,66.8,9346.33,CONFORME
-MAG-0020,E.Leclerc Nantes #20,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,376,82.1,12615.85,REASSORT_URGENT_AUTOMATIQUE
-MAG-0020,E.Leclerc Nantes #20,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,563,82.8,2095.1,CONFORME
-MAG-0020,E.Leclerc Nantes #20,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,910,81.1,16298.21,REASSORT_URGENT_AUTOMATIQUE
-MAG-0020,E.Leclerc Nantes #20,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2575,71.8,3885.01,CONFORME
-MAG-0021,E.Leclerc Nantes #21,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2440,65.1,12965.86,REASSORT_URGENT_AUTOMATIQUE
-MAG-0021,E.Leclerc Nantes #21,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,657,70.1,15843.22,REASSORT_URGENT_AUTOMATIQUE
-MAG-0021,E.Leclerc Nantes #21,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1890,85.3,11544.78,CONFORME
-MAG-0021,E.Leclerc Nantes #21,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1746,63.6,9227.41,CONFORME
-MAG-0022,E.Leclerc Paris #22,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,884,76.9,9128.97,CONFORME
-MAG-0022,E.Leclerc Paris #22,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,2793,65.1,3654.32,CONFORME
-MAG-0022,E.Leclerc Paris #22,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,1313,79.8,5823.34,CONFORME
-MAG-0022,E.Leclerc Paris #22,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,1596,65.6,16024.92,REASSORT_URGENT_AUTOMATIQUE
-MAG-0023,E.Leclerc Rennes #23,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,432,76.6,9687.26,CONFORME
-MAG-0023,E.Leclerc Rennes #23,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,465,86.8,7194.67,CONFORME
-MAG-0023,E.Leclerc Rennes #23,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1843,64.0,14394.92,REASSORT_URGENT_AUTOMATIQUE
-MAG-0023,E.Leclerc Rennes #23,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,393,84.8,16925.3,REASSORT_URGENT_AUTOMATIQUE
-MAG-0024,Carrefour Hyper Toulouse #24,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1358,75.3,4674.43,CONFORME
-MAG-0024,Carrefour Hyper Toulouse #24,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,405,68.8,13324.28,REASSORT_URGENT_AUTOMATIQUE
-MAG-0024,Carrefour Hyper Toulouse #24,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,588,67.3,18003.69,REASSORT_URGENT_AUTOMATIQUE
-MAG-0024,Carrefour Hyper Toulouse #24,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1028,81.8,12285.98,REASSORT_URGENT_AUTOMATIQUE
-MAG-0025,Carrefour Hyper Marseille #25,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2562,63.4,6971.81,CONFORME
-MAG-0025,Carrefour Hyper Marseille #25,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,805,86.2,14128.43,REASSORT_URGENT_AUTOMATIQUE
-MAG-0025,Carrefour Hyper Marseille #25,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2170,76.8,12701.4,REASSORT_URGENT_AUTOMATIQUE
-MAG-0025,Carrefour Hyper Marseille #25,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1689,80.1,10284.03,CONFORME
-MAG-0026,E.Leclerc Bordeaux #26,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1677,73.7,7896.02,CONFORME
-MAG-0026,E.Leclerc Bordeaux #26,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1152,71.1,14454.36,REASSORT_URGENT_AUTOMATIQUE
-MAG-0026,E.Leclerc Bordeaux #26,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2406,82.5,1412.09,CONFORME
-MAG-0026,E.Leclerc Bordeaux #26,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,766,62.5,14805.93,REASSORT_URGENT_AUTOMATIQUE
-MAG-0027,Monoprix Nantes #27,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2082,88.1,15230.11,REASSORT_URGENT_AUTOMATIQUE
-MAG-0027,Monoprix Nantes #27,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1324,75.4,5704.0,CONFORME
-MAG-0027,Monoprix Nantes #27,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2044,81.4,14177.3,REASSORT_URGENT_AUTOMATIQUE
-MAG-0027,Monoprix Nantes #27,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1224,68.8,18336.67,REASSORT_URGENT_AUTOMATIQUE
-MAG-0028,Monoprix Lille #28,Monoprix,Lille,59 - Nord,Hauts-de-France,08h-11h,563,85.4,4478.78,CONFORME
-MAG-0028,Monoprix Lille #28,Monoprix,Lille,59 - Nord,Hauts-de-France,11h-14h,1765,86.2,4128.3,CONFORME
-MAG-0028,Monoprix Lille #28,Monoprix,Lille,59 - Nord,Hauts-de-France,14h-17h,1921,76.5,4727.39,CONFORME
-MAG-0028,Monoprix Lille #28,Monoprix,Lille,59 - Nord,Hauts-de-France,17h-20h,1143,63.9,7663.76,CONFORME
-MAG-0029,Intermarché Marseille #29,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2735,74.6,15568.51,REASSORT_URGENT_AUTOMATIQUE
-MAG-0029,Intermarché Marseille #29,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2462,79.8,15754.08,REASSORT_URGENT_AUTOMATIQUE
-MAG-0029,Intermarché Marseille #29,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2171,77.6,9853.1,CONFORME
-MAG-0029,Intermarché Marseille #29,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1038,63.9,7682.51,CONFORME
-MAG-0030,Auchan Super Bordeaux #30,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2592,82.5,7568.96,CONFORME
-MAG-0030,Auchan Super Bordeaux #30,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,682,86.0,18146.62,REASSORT_URGENT_AUTOMATIQUE
-MAG-0030,Auchan Super Bordeaux #30,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2715,83.1,6298.84,CONFORME
-MAG-0030,Auchan Super Bordeaux #30,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1891,63.0,8831.65,CONFORME
-MAG-0031,Carrefour Hyper Marseille #31,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1992,81.6,5944.39,CONFORME
-MAG-0031,Carrefour Hyper Marseille #31,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1316,64.0,1596.06,CONFORME
-MAG-0031,Carrefour Hyper Marseille #31,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,742,65.2,9413.71,CONFORME
-MAG-0031,Carrefour Hyper Marseille #31,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,836,83.5,18458.25,REASSORT_URGENT_AUTOMATIQUE
-MAG-0032,Monoprix Nantes #32,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1580,72.7,7489.39,CONFORME
-MAG-0032,Monoprix Nantes #32,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1459,66.3,7394.66,CONFORME
-MAG-0032,Monoprix Nantes #32,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1399,82.8,17115.77,REASSORT_URGENT_AUTOMATIQUE
-MAG-0032,Monoprix Nantes #32,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1002,73.4,17683.13,REASSORT_URGENT_AUTOMATIQUE
-MAG-0033,Carrefour Hyper Strasbourg #33,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2073,67.7,1310.48,CONFORME
-MAG-0033,Carrefour Hyper Strasbourg #33,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,430,63.0,11247.95,CONFORME
-MAG-0033,Carrefour Hyper Strasbourg #33,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2440,67.7,18084.3,REASSORT_URGENT_AUTOMATIQUE
-MAG-0033,Carrefour Hyper Strasbourg #33,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2263,86.2,4664.62,CONFORME
-MAG-0034,Carrefour Hyper Paris #34,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,1847,63.5,8444.86,CONFORME
-MAG-0034,Carrefour Hyper Paris #34,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,2245,65.0,11172.65,CONFORME
-MAG-0034,Carrefour Hyper Paris #34,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,1223,88.4,4106.9,CONFORME
-MAG-0034,Carrefour Hyper Paris #34,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,1939,78.2,6508.7,CONFORME
-MAG-0035,Auchan Super Bordeaux #35,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2299,71.1,11438.18,CONFORME
-MAG-0035,Auchan Super Bordeaux #35,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2633,66.2,15415.0,REASSORT_URGENT_AUTOMATIQUE
-MAG-0035,Auchan Super Bordeaux #35,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2076,78.9,8237.88,CONFORME
-MAG-0035,Auchan Super Bordeaux #35,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2548,86.1,2811.18,CONFORME
-MAG-0036,Intermarché Rennes #36,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1880,74.0,8426.0,CONFORME
-MAG-0036,Intermarché Rennes #36,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1512,80.9,13448.19,REASSORT_URGENT_AUTOMATIQUE
-MAG-0036,Intermarché Rennes #36,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,2590,73.5,8549.69,CONFORME
-MAG-0036,Intermarché Rennes #36,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1015,86.8,8666.99,CONFORME
-MAG-0037,Intermarché Rennes #37,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,751,75.5,4448.91,CONFORME
-MAG-0037,Intermarché Rennes #37,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1854,69.9,16371.54,REASSORT_URGENT_AUTOMATIQUE
-MAG-0037,Intermarché Rennes #37,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1981,84.7,10603.33,CONFORME
-MAG-0037,Intermarché Rennes #37,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2315,82.2,8819.19,CONFORME
-MAG-0038,Carrefour Hyper Toulouse #38,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,808,63.5,4776.92,CONFORME
-MAG-0038,Carrefour Hyper Toulouse #38,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2239,75.5,17143.77,REASSORT_URGENT_AUTOMATIQUE
-MAG-0038,Carrefour Hyper Toulouse #38,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2259,62.7,10233.43,CONFORME
-MAG-0038,Carrefour Hyper Toulouse #38,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1564,71.0,9427.29,CONFORME
-MAG-0039,E.Leclerc Paris #39,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,2710,82.6,7442.85,CONFORME
-MAG-0039,E.Leclerc Paris #39,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,394,73.4,16716.72,REASSORT_URGENT_AUTOMATIQUE
-MAG-0039,E.Leclerc Paris #39,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,698,62.1,3543.98,CONFORME
-MAG-0039,E.Leclerc Paris #39,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,2230,86.7,12051.52,REASSORT_URGENT_AUTOMATIQUE
-MAG-0040,Monoprix Strasbourg #40,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1239,79.7,11716.28,CONFORME
-MAG-0040,Monoprix Strasbourg #40,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1180,78.2,15903.81,REASSORT_URGENT_AUTOMATIQUE
-MAG-0040,Monoprix Strasbourg #40,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2064,72.2,4139.08,CONFORME
-MAG-0040,Monoprix Strasbourg #40,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1912,76.5,9338.69,CONFORME
-MAG-0041,Carrefour Hyper Rennes #41,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1011,78.6,13909.42,REASSORT_URGENT_AUTOMATIQUE
-MAG-0041,Carrefour Hyper Rennes #41,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1472,81.8,17614.46,REASSORT_URGENT_AUTOMATIQUE
-MAG-0041,Carrefour Hyper Rennes #41,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,926,78.2,7168.91,CONFORME
-MAG-0041,Carrefour Hyper Rennes #41,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2115,67.1,18139.7,REASSORT_URGENT_AUTOMATIQUE
-MAG-0042,Intermarché Toulouse #42,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,550,88.3,10814.83,CONFORME
-MAG-0042,Intermarché Toulouse #42,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1889,68.0,17629.96,REASSORT_URGENT_AUTOMATIQUE
-MAG-0042,Intermarché Toulouse #42,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2694,87.6,16551.3,REASSORT_URGENT_AUTOMATIQUE
-MAG-0042,Intermarché Toulouse #42,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1532,81.6,3948.4,CONFORME
-MAG-0043,Carrefour Hyper Lille #43,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,1982,72.0,6822.22,CONFORME
-MAG-0043,Carrefour Hyper Lille #43,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,1753,73.2,16894.85,REASSORT_URGENT_AUTOMATIQUE
-MAG-0043,Carrefour Hyper Lille #43,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,2588,76.0,18316.41,REASSORT_URGENT_AUTOMATIQUE
-MAG-0043,Carrefour Hyper Lille #43,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,1635,82.3,10947.27,CONFORME
-MAG-0044,Auchan Super Toulouse #44,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1829,74.4,11831.91,CONFORME
-MAG-0044,Auchan Super Toulouse #44,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1658,73.4,9502.08,CONFORME
-MAG-0044,Auchan Super Toulouse #44,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2322,71.9,5293.76,CONFORME
-MAG-0044,Auchan Super Toulouse #44,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2005,71.0,3863.46,CONFORME
-MAG-0045,Auchan Super Toulouse #45,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1004,63.4,8724.23,CONFORME
-MAG-0045,Auchan Super Toulouse #45,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1346,77.7,11218.49,CONFORME
-MAG-0045,Auchan Super Toulouse #45,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,622,84.7,16264.99,REASSORT_URGENT_AUTOMATIQUE
-MAG-0045,Auchan Super Toulouse #45,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2276,64.7,13466.03,REASSORT_URGENT_AUTOMATIQUE
-MAG-0046,E.Leclerc Bordeaux #46,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2609,81.0,17775.86,REASSORT_URGENT_AUTOMATIQUE
-MAG-0046,E.Leclerc Bordeaux #46,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2643,64.0,17045.24,REASSORT_URGENT_AUTOMATIQUE
-MAG-0046,E.Leclerc Bordeaux #46,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,990,85.5,3487.18,CONFORME
-MAG-0046,E.Leclerc Bordeaux #46,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1330,83.9,2892.13,CONFORME
-MAG-0047,E.Leclerc Bordeaux #47,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,706,87.4,12669.35,REASSORT_URGENT_AUTOMATIQUE
-MAG-0047,E.Leclerc Bordeaux #47,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1976,62.7,6957.8,CONFORME
-MAG-0047,E.Leclerc Bordeaux #47,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1480,80.3,4178.97,CONFORME
-MAG-0047,E.Leclerc Bordeaux #47,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2273,70.5,9235.99,CONFORME
-MAG-0048,Monoprix Strasbourg #48,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1069,87.0,9885.15,CONFORME
-MAG-0048,Monoprix Strasbourg #48,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1942,65.4,9122.67,CONFORME
-MAG-0048,Monoprix Strasbourg #48,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2555,69.2,11834.2,CONFORME
-MAG-0048,Monoprix Strasbourg #48,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,700,82.6,9938.28,CONFORME
-MAG-0049,Auchan Super Lille #49,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,1257,72.3,2826.47,CONFORME
-MAG-0049,Auchan Super Lille #49,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,1479,65.1,15646.27,REASSORT_URGENT_AUTOMATIQUE
-MAG-0049,Auchan Super Lille #49,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,376,64.5,5601.4,CONFORME
-MAG-0049,Auchan Super Lille #49,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,923,66.2,17397.43,REASSORT_URGENT_AUTOMATIQUE
-MAG-0050,Intermarché Nantes #50,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2183,76.9,7241.72,CONFORME
-MAG-0050,Intermarché Nantes #50,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,677,70.3,17821.9,REASSORT_URGENT_AUTOMATIQUE
-MAG-0050,Intermarché Nantes #50,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1483,69.0,1756.94,CONFORME
-MAG-0050,Intermarché Nantes #50,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1592,73.2,1742.56,CONFORME
-MAG-0051,Carrefour Hyper Lille #51,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,512,76.5,6311.72,CONFORME
-MAG-0051,Carrefour Hyper Lille #51,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,696,63.5,17823.13,REASSORT_URGENT_AUTOMATIQUE
-MAG-0051,Carrefour Hyper Lille #51,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,542,87.2,5876.19,CONFORME
-MAG-0051,Carrefour Hyper Lille #51,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,1944,72.2,4685.46,CONFORME
-MAG-0052,E.Leclerc Strasbourg #52,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1288,76.6,5844.44,CONFORME
-MAG-0052,E.Leclerc Strasbourg #52,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1167,76.2,5138.57,CONFORME
-MAG-0052,E.Leclerc Strasbourg #52,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,960,77.0,11564.5,CONFORME
-MAG-0052,E.Leclerc Strasbourg #52,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2561,78.1,1615.69,CONFORME
-MAG-0053,Auchan Super Marseille #53,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2145,81.6,14233.53,REASSORT_URGENT_AUTOMATIQUE
-MAG-0053,Auchan Super Marseille #53,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1193,73.0,8293.61,CONFORME
-MAG-0053,Auchan Super Marseille #53,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1275,65.0,1637.97,CONFORME
-MAG-0053,Auchan Super Marseille #53,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1916,65.1,9302.65,CONFORME
-MAG-0054,Monoprix Strasbourg #54,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1209,85.2,10790.72,CONFORME
-MAG-0054,Monoprix Strasbourg #54,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1529,73.9,2826.01,CONFORME
-MAG-0054,Monoprix Strasbourg #54,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,950,86.5,15949.92,REASSORT_URGENT_AUTOMATIQUE
-MAG-0054,Monoprix Strasbourg #54,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2599,81.4,13637.02,REASSORT_URGENT_AUTOMATIQUE
-MAG-0055,Auchan Super Paris #55,Auchan Super,Paris,75 - Paris,Île-de-France,08h-11h,2001,78.3,1853.57,CONFORME
-MAG-0055,Auchan Super Paris #55,Auchan Super,Paris,75 - Paris,Île-de-France,11h-14h,1915,78.5,11686.11,CONFORME
-MAG-0055,Auchan Super Paris #55,Auchan Super,Paris,75 - Paris,Île-de-France,14h-17h,1639,77.7,13882.22,REASSORT_URGENT_AUTOMATIQUE
-MAG-0055,Auchan Super Paris #55,Auchan Super,Paris,75 - Paris,Île-de-France,17h-20h,999,82.9,11161.4,CONFORME
-MAG-0056,Auchan Super Lille #56,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,1599,62.5,10904.45,CONFORME
-MAG-0056,Auchan Super Lille #56,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,1811,62.3,15915.56,REASSORT_URGENT_AUTOMATIQUE
-MAG-0056,Auchan Super Lille #56,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,863,81.6,1977.05,CONFORME
-MAG-0056,Auchan Super Lille #56,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,2372,87.0,7730.68,CONFORME
-MAG-0057,Intermarché Toulouse #57,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,553,87.3,11141.07,CONFORME
-MAG-0057,Intermarché Toulouse #57,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1488,80.3,16980.11,REASSORT_URGENT_AUTOMATIQUE
-MAG-0057,Intermarché Toulouse #57,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1073,75.1,1735.09,CONFORME
-MAG-0057,Intermarché Toulouse #57,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1921,75.4,9800.5,CONFORME
-MAG-0058,Auchan Super Lyon #58,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,2632,71.2,9644.0,CONFORME
-MAG-0058,Auchan Super Lyon #58,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2780,66.8,2830.19,CONFORME
-MAG-0058,Auchan Super Lyon #58,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,969,76.9,14409.83,REASSORT_URGENT_AUTOMATIQUE
-MAG-0058,Auchan Super Lyon #58,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2004,66.0,13530.76,REASSORT_URGENT_AUTOMATIQUE
-MAG-0059,E.Leclerc Bordeaux #59,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,885,63.0,10060.25,CONFORME
-MAG-0059,E.Leclerc Bordeaux #59,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1202,83.7,8392.81,CONFORME
-MAG-0059,E.Leclerc Bordeaux #59,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,976,74.2,3450.99,CONFORME
-MAG-0059,E.Leclerc Bordeaux #59,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2275,72.2,17337.4,REASSORT_URGENT_AUTOMATIQUE
-MAG-0060,Monoprix Nantes #60,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,378,66.7,9752.98,CONFORME
-MAG-0060,Monoprix Nantes #60,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,2590,81.1,13463.9,REASSORT_URGENT_AUTOMATIQUE
-MAG-0060,Monoprix Nantes #60,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,546,66.4,2784.67,CONFORME
-MAG-0060,Monoprix Nantes #60,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2400,68.5,4875.28,CONFORME
-MAG-0061,Auchan Super Lille #61,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,2785,77.4,5268.0,CONFORME
-MAG-0061,Auchan Super Lille #61,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,2419,78.0,9024.15,CONFORME
-MAG-0061,Auchan Super Lille #61,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,1203,68.1,13987.15,REASSORT_URGENT_AUTOMATIQUE
-MAG-0061,Auchan Super Lille #61,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,1873,65.0,14827.35,REASSORT_URGENT_AUTOMATIQUE
-MAG-0062,Auchan Super Bordeaux #62,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1265,76.1,3556.76,CONFORME
-MAG-0062,Auchan Super Bordeaux #62,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1967,86.8,15978.04,REASSORT_URGENT_AUTOMATIQUE
-MAG-0062,Auchan Super Bordeaux #62,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1012,78.0,10294.0,CONFORME
-MAG-0062,Auchan Super Bordeaux #62,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2420,70.8,1735.41,CONFORME
-MAG-0063,E.Leclerc Bordeaux #63,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,555,64.0,10232.42,CONFORME
-MAG-0063,E.Leclerc Bordeaux #63,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1540,87.0,10512.57,CONFORME
-MAG-0063,E.Leclerc Bordeaux #63,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,906,85.7,3069.72,CONFORME
-MAG-0063,E.Leclerc Bordeaux #63,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2361,86.7,2424.17,CONFORME
-MAG-0064,Auchan Super Bordeaux #64,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2101,82.4,2813.35,CONFORME
-MAG-0064,Auchan Super Bordeaux #64,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2747,84.8,5572.52,CONFORME
-MAG-0064,Auchan Super Bordeaux #64,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,421,87.0,10604.56,CONFORME
-MAG-0064,Auchan Super Bordeaux #64,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,526,78.9,5854.59,CONFORME
-MAG-0065,Carrefour Hyper Toulouse #65,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1913,76.6,14756.57,REASSORT_URGENT_AUTOMATIQUE
-MAG-0065,Carrefour Hyper Toulouse #65,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1715,63.1,16648.93,REASSORT_URGENT_AUTOMATIQUE
-MAG-0065,Carrefour Hyper Toulouse #65,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2361,66.3,14504.7,REASSORT_URGENT_AUTOMATIQUE
-MAG-0065,Carrefour Hyper Toulouse #65,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1595,69.6,5899.47,CONFORME
-MAG-0066,Carrefour Hyper Bordeaux #66,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1944,77.6,4001.07,CONFORME
-MAG-0066,Carrefour Hyper Bordeaux #66,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1170,67.6,16923.39,REASSORT_URGENT_AUTOMATIQUE
-MAG-0066,Carrefour Hyper Bordeaux #66,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,944,69.8,7632.11,CONFORME
-MAG-0066,Carrefour Hyper Bordeaux #66,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1802,85.1,10310.17,CONFORME
-MAG-0067,Monoprix Toulouse #67,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1544,66.4,2007.6,CONFORME
-MAG-0067,Monoprix Toulouse #67,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,822,80.7,14235.63,REASSORT_URGENT_AUTOMATIQUE
-MAG-0067,Monoprix Toulouse #67,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1243,63.2,5174.94,CONFORME
-MAG-0067,Monoprix Toulouse #67,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1057,72.5,18042.07,REASSORT_URGENT_AUTOMATIQUE
-MAG-0068,E.Leclerc Lille #68,E.Leclerc,Lille,59 - Nord,Hauts-de-France,08h-11h,2775,69.3,11658.33,CONFORME
-MAG-0068,E.Leclerc Lille #68,E.Leclerc,Lille,59 - Nord,Hauts-de-France,11h-14h,524,74.3,13559.85,REASSORT_URGENT_AUTOMATIQUE
-MAG-0068,E.Leclerc Lille #68,E.Leclerc,Lille,59 - Nord,Hauts-de-France,14h-17h,668,64.7,1453.15,CONFORME
-MAG-0068,E.Leclerc Lille #68,E.Leclerc,Lille,59 - Nord,Hauts-de-France,17h-20h,1796,78.3,11250.1,CONFORME
-MAG-0069,Monoprix Marseille #69,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1033,77.5,14139.14,REASSORT_URGENT_AUTOMATIQUE
-MAG-0069,Monoprix Marseille #69,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2256,74.8,13198.72,REASSORT_URGENT_AUTOMATIQUE
-MAG-0069,Monoprix Marseille #69,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2069,74.8,14216.77,REASSORT_URGENT_AUTOMATIQUE
-MAG-0069,Monoprix Marseille #69,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1319,81.9,17887.52,REASSORT_URGENT_AUTOMATIQUE
-MAG-0070,E.Leclerc Nantes #70,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,500,65.5,12146.68,REASSORT_URGENT_AUTOMATIQUE
-MAG-0070,E.Leclerc Nantes #70,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,366,63.6,17980.28,REASSORT_URGENT_AUTOMATIQUE
-MAG-0070,E.Leclerc Nantes #70,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2536,66.0,18074.99,REASSORT_URGENT_AUTOMATIQUE
-MAG-0070,E.Leclerc Nantes #70,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2025,73.8,11026.12,CONFORME
-MAG-0071,Auchan Super Lille #71,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,1318,74.8,16764.1,REASSORT_URGENT_AUTOMATIQUE
-MAG-0071,Auchan Super Lille #71,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,2413,82.2,18095.99,REASSORT_URGENT_AUTOMATIQUE
-MAG-0071,Auchan Super Lille #71,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,1036,63.0,7527.2,CONFORME
-MAG-0071,Auchan Super Lille #71,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,2177,71.0,14686.53,REASSORT_URGENT_AUTOMATIQUE
-MAG-0072,Carrefour Hyper Marseille #72,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1345,76.2,17493.15,REASSORT_URGENT_AUTOMATIQUE
-MAG-0072,Carrefour Hyper Marseille #72,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,879,65.3,1683.67,CONFORME
-MAG-0072,Carrefour Hyper Marseille #72,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1965,83.3,6245.86,CONFORME
-MAG-0072,Carrefour Hyper Marseille #72,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1841,77.0,10578.23,CONFORME
-MAG-0073,Auchan Super Paris #73,Auchan Super,Paris,75 - Paris,Île-de-France,08h-11h,2612,70.0,16186.24,REASSORT_URGENT_AUTOMATIQUE
-MAG-0073,Auchan Super Paris #73,Auchan Super,Paris,75 - Paris,Île-de-France,11h-14h,1081,68.7,15539.19,REASSORT_URGENT_AUTOMATIQUE
-MAG-0073,Auchan Super Paris #73,Auchan Super,Paris,75 - Paris,Île-de-France,14h-17h,2622,65.3,16481.84,REASSORT_URGENT_AUTOMATIQUE
-MAG-0073,Auchan Super Paris #73,Auchan Super,Paris,75 - Paris,Île-de-France,17h-20h,991,81.7,7532.8,CONFORME
-MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2695,75.9,15481.48,REASSORT_URGENT_AUTOMATIQUE
-MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1923,83.1,2038.73,CONFORME
-MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2444,66.5,4428.23,CONFORME
-MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2295,70.9,10482.6,CONFORME
-MAG-0075,Intermarché Marseille #75,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,647,62.6,2306.52,CONFORME
-MAG-0075,Intermarché Marseille #75,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,980,71.1,6091.96,CONFORME
-MAG-0075,Intermarché Marseille #75,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,759,74.5,3798.39,CONFORME
-MAG-0075,Intermarché Marseille #75,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2402,67.7,4157.99,CONFORME
-MAG-0076,Auchan Super Toulouse #76,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1026,83.5,6850.98,CONFORME
-MAG-0076,Auchan Super Toulouse #76,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1348,81.6,12510.18,REASSORT_URGENT_AUTOMATIQUE
-MAG-0076,Auchan Super Toulouse #76,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1391,75.9,18009.36,REASSORT_URGENT_AUTOMATIQUE
-MAG-0076,Auchan Super Toulouse #76,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1754,86.3,6062.76,CONFORME
-MAG-0077,Intermarché Nantes #77,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2069,84.6,6245.68,CONFORME
-MAG-0077,Intermarché Nantes #77,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,2329,82.0,5655.33,CONFORME
-MAG-0077,Intermarché Nantes #77,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1861,65.7,1312.99,CONFORME
-MAG-0077,Intermarché Nantes #77,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2454,80.0,5619.52,CONFORME
-MAG-0078,Carrefour Hyper Nantes #78,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2523,70.6,12098.59,REASSORT_URGENT_AUTOMATIQUE
-MAG-0078,Carrefour Hyper Nantes #78,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1248,65.1,11157.09,CONFORME
-MAG-0078,Carrefour Hyper Nantes #78,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,371,88.2,15168.95,REASSORT_URGENT_AUTOMATIQUE
-MAG-0078,Carrefour Hyper Nantes #78,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,948,70.8,9686.94,CONFORME
-MAG-0079,Intermarché Lyon #79,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,2132,78.7,10257.14,CONFORME
-MAG-0079,Intermarché Lyon #79,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2691,85.7,16810.47,REASSORT_URGENT_AUTOMATIQUE
-MAG-0079,Intermarché Lyon #79,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2603,69.7,16133.08,REASSORT_URGENT_AUTOMATIQUE
-MAG-0079,Intermarché Lyon #79,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1480,64.8,9160.29,CONFORME
-MAG-0080,Intermarché Lyon #80,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,732,71.1,6970.62,CONFORME
-MAG-0080,Intermarché Lyon #80,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1353,66.8,16752.56,REASSORT_URGENT_AUTOMATIQUE
-MAG-0080,Intermarché Lyon #80,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2472,70.8,8013.03,CONFORME
-MAG-0080,Intermarché Lyon #80,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2772,84.7,17882.71,REASSORT_URGENT_AUTOMATIQUE
-MAG-0081,Intermarché Marseille #81,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,837,65.8,7703.14,CONFORME
-MAG-0081,Intermarché Marseille #81,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,708,74.8,10985.76,CONFORME
-MAG-0081,Intermarché Marseille #81,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1095,84.0,14240.02,REASSORT_URGENT_AUTOMATIQUE
-MAG-0081,Intermarché Marseille #81,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,971,64.3,18490.07,REASSORT_URGENT_AUTOMATIQUE
-MAG-0082,Intermarché Paris #82,Intermarché,Paris,75 - Paris,Île-de-France,08h-11h,2485,76.9,11900.69,CONFORME
-MAG-0082,Intermarché Paris #82,Intermarché,Paris,75 - Paris,Île-de-France,11h-14h,1073,72.2,11658.92,CONFORME
-MAG-0082,Intermarché Paris #82,Intermarché,Paris,75 - Paris,Île-de-France,14h-17h,1323,85.3,6749.74,CONFORME
-MAG-0082,Intermarché Paris #82,Intermarché,Paris,75 - Paris,Île-de-France,17h-20h,369,80.8,2006.73,CONFORME
-MAG-0083,Intermarché Strasbourg #83,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2281,68.2,8548.28,CONFORME
-MAG-0083,Intermarché Strasbourg #83,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,2575,81.7,16232.19,REASSORT_URGENT_AUTOMATIQUE
-MAG-0083,Intermarché Strasbourg #83,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,724,79.8,9020.76,CONFORME
-MAG-0083,Intermarché Strasbourg #83,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2109,72.3,13115.97,REASSORT_URGENT_AUTOMATIQUE
-MAG-0084,Intermarché Bordeaux #84,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1801,74.6,2428.65,CONFORME
-MAG-0084,Intermarché Bordeaux #84,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2507,71.9,16157.17,REASSORT_URGENT_AUTOMATIQUE
-MAG-0084,Intermarché Bordeaux #84,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2247,85.7,6901.3,CONFORME
-MAG-0084,Intermarché Bordeaux #84,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,643,74.0,14064.4,REASSORT_URGENT_AUTOMATIQUE
-MAG-0085,Intermarché Nantes #85,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,662,76.6,14692.05,REASSORT_URGENT_AUTOMATIQUE
-MAG-0085,Intermarché Nantes #85,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1326,65.4,8567.63,CONFORME
-MAG-0085,Intermarché Nantes #85,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1840,67.0,15667.9,REASSORT_URGENT_AUTOMATIQUE
-MAG-0085,Intermarché Nantes #85,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1194,66.2,14083.9,REASSORT_URGENT_AUTOMATIQUE
-MAG-0086,Intermarché Lille #86,Intermarché,Lille,59 - Nord,Hauts-de-France,08h-11h,2769,77.9,13346.06,REASSORT_URGENT_AUTOMATIQUE
-MAG-0086,Intermarché Lille #86,Intermarché,Lille,59 - Nord,Hauts-de-France,11h-14h,755,73.7,18082.0,REASSORT_URGENT_AUTOMATIQUE
-MAG-0086,Intermarché Lille #86,Intermarché,Lille,59 - Nord,Hauts-de-France,14h-17h,2463,64.9,7326.67,CONFORME
-MAG-0086,Intermarché Lille #86,Intermarché,Lille,59 - Nord,Hauts-de-France,17h-20h,1299,79.4,11211.67,CONFORME
-MAG-0087,Carrefour Hyper Toulouse #87,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1798,79.2,10050.79,CONFORME
-MAG-0087,Carrefour Hyper Toulouse #87,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1907,85.1,4056.72,CONFORME
-MAG-0087,Carrefour Hyper Toulouse #87,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,774,81.4,2567.61,CONFORME
-MAG-0087,Carrefour Hyper Toulouse #87,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2704,83.4,15078.34,REASSORT_URGENT_AUTOMATIQUE
-MAG-0088,Auchan Super Rennes #88,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1304,83.8,16762.3,REASSORT_URGENT_AUTOMATIQUE
-MAG-0088,Auchan Super Rennes #88,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,2565,65.4,9486.24,CONFORME
-MAG-0088,Auchan Super Rennes #88,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,811,69.1,8933.57,CONFORME
-MAG-0088,Auchan Super Rennes #88,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2768,84.4,1952.66,CONFORME
-MAG-0089,Monoprix Toulouse #89,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,2457,83.3,17565.7,REASSORT_URGENT_AUTOMATIQUE
-MAG-0089,Monoprix Toulouse #89,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1814,86.1,13685.22,REASSORT_URGENT_AUTOMATIQUE
-MAG-0089,Monoprix Toulouse #89,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2176,68.7,10947.92,CONFORME
-MAG-0089,Monoprix Toulouse #89,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2756,74.3,11411.21,CONFORME
-MAG-0090,Carrefour Hyper Lille #90,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,2109,68.1,11898.3,CONFORME
-MAG-0090,Carrefour Hyper Lille #90,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,2003,88.1,6453.43,CONFORME
-MAG-0090,Carrefour Hyper Lille #90,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,879,83.9,16401.52,REASSORT_URGENT_AUTOMATIQUE
-MAG-0090,Carrefour Hyper Lille #90,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,661,67.8,9007.22,CONFORME
-MAG-0091,Auchan Super Marseille #91,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,736,64.2,10831.18,CONFORME
-MAG-0091,Auchan Super Marseille #91,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,383,72.1,10126.56,CONFORME
-MAG-0091,Auchan Super Marseille #91,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2474,79.4,1398.88,CONFORME
-MAG-0091,Auchan Super Marseille #91,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1825,80.0,12038.46,REASSORT_URGENT_AUTOMATIQUE
-MAG-0092,Carrefour Hyper Bordeaux #92,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,353,73.0,3747.94,CONFORME
-MAG-0092,Carrefour Hyper Bordeaux #92,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2151,66.9,2024.26,CONFORME
-MAG-0092,Carrefour Hyper Bordeaux #92,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2399,65.5,5691.09,CONFORME
-MAG-0092,Carrefour Hyper Bordeaux #92,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,648,64.5,5042.42,CONFORME
-MAG-0093,Auchan Super Strasbourg #93,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1004,63.8,4273.91,CONFORME
-MAG-0093,Auchan Super Strasbourg #93,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1145,85.5,12031.62,REASSORT_URGENT_AUTOMATIQUE
-MAG-0093,Auchan Super Strasbourg #93,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2128,62.6,10214.94,CONFORME
-MAG-0093,Auchan Super Strasbourg #93,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2063,74.9,2817.02,CONFORME
-MAG-0094,Monoprix Marseille #94,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,372,64.1,2356.98,CONFORME
-MAG-0094,Monoprix Marseille #94,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2023,77.4,14108.65,REASSORT_URGENT_AUTOMATIQUE
-MAG-0094,Monoprix Marseille #94,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2364,69.3,9629.78,CONFORME
-MAG-0094,Monoprix Marseille #94,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2085,88.5,6290.7,CONFORME
-MAG-0095,Intermarché Paris #95,Intermarché,Paris,75 - Paris,Île-de-France,08h-11h,2199,79.7,4497.17,CONFORME
-MAG-0095,Intermarché Paris #95,Intermarché,Paris,75 - Paris,Île-de-France,11h-14h,2291,73.9,3647.29,CONFORME
-MAG-0095,Intermarché Paris #95,Intermarché,Paris,75 - Paris,Île-de-France,14h-17h,2579,66.7,18388.91,REASSORT_URGENT_AUTOMATIQUE
-MAG-0095,Intermarché Paris #95,Intermarché,Paris,75 - Paris,Île-de-France,17h-20h,1457,83.2,11796.4,CONFORME
-MAG-0096,Monoprix Lyon #96,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1534,68.4,7235.59,CONFORME
-MAG-0096,Monoprix Lyon #96,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,520,69.8,15436.76,REASSORT_URGENT_AUTOMATIQUE
-MAG-0096,Monoprix Lyon #96,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2334,63.1,11480.43,CONFORME
-MAG-0096,Monoprix Lyon #96,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2773,63.9,9423.0,CONFORME
-MAG-0097,Monoprix Bordeaux #97,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2070,84.0,9434.01,CONFORME
-MAG-0097,Monoprix Bordeaux #97,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2083,82.9,8465.13,CONFORME
-MAG-0097,Monoprix Bordeaux #97,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1537,80.0,18233.28,REASSORT_URGENT_AUTOMATIQUE
-MAG-0097,Monoprix Bordeaux #97,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,970,77.2,6915.98,CONFORME
-MAG-0098,E.Leclerc Lille #98,E.Leclerc,Lille,59 - Nord,Hauts-de-France,08h-11h,1040,84.9,1242.53,CONFORME
-MAG-0098,E.Leclerc Lille #98,E.Leclerc,Lille,59 - Nord,Hauts-de-France,11h-14h,696,76.2,6983.93,CONFORME
-MAG-0098,E.Leclerc Lille #98,E.Leclerc,Lille,59 - Nord,Hauts-de-France,14h-17h,626,63.6,3219.62,CONFORME
-MAG-0098,E.Leclerc Lille #98,E.Leclerc,Lille,59 - Nord,Hauts-de-France,17h-20h,992,63.0,8274.17,CONFORME
-MAG-0099,E.Leclerc Lyon #99,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,587,77.2,10243.89,CONFORME
-MAG-0099,E.Leclerc Lyon #99,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1239,85.9,7437.66,CONFORME
-MAG-0099,E.Leclerc Lyon #99,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,1978,75.8,3388.34,CONFORME
-MAG-0099,E.Leclerc Lyon #99,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1260,68.8,9820.59,CONFORME
-MAG-0100,Monoprix Bordeaux #100,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2208,62.1,13104.52,REASSORT_URGENT_AUTOMATIQUE
-MAG-0100,Monoprix Bordeaux #100,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1231,81.6,15212.07,REASSORT_URGENT_AUTOMATIQUE
-MAG-0100,Monoprix Bordeaux #100,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2251,69.6,14173.26,REASSORT_URGENT_AUTOMATIQUE
-MAG-0100,Monoprix Bordeaux #100,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2339,85.4,9456.56,CONFORME
-MAG-0101,E.Leclerc Marseille #101,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1829,79.4,8412.6,CONFORME
-MAG-0101,E.Leclerc Marseille #101,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,978,69.3,7482.71,CONFORME
-MAG-0101,E.Leclerc Marseille #101,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2465,85.1,17891.62,REASSORT_URGENT_AUTOMATIQUE
-MAG-0101,E.Leclerc Marseille #101,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2782,79.5,2149.1,CONFORME
-MAG-0102,E.Leclerc Toulouse #102,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,525,71.2,6443.69,CONFORME
-MAG-0102,E.Leclerc Toulouse #102,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,779,76.4,11755.96,CONFORME
-MAG-0102,E.Leclerc Toulouse #102,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2558,77.7,1291.38,CONFORME
-MAG-0102,E.Leclerc Toulouse #102,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2049,78.3,1514.31,CONFORME
-MAG-0103,Auchan Super Lille #103,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,580,67.6,17260.69,REASSORT_URGENT_AUTOMATIQUE
-MAG-0103,Auchan Super Lille #103,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,829,71.1,2151.97,CONFORME
-MAG-0103,Auchan Super Lille #103,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,2693,81.7,5222.94,CONFORME
-MAG-0103,Auchan Super Lille #103,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,1152,85.0,7566.81,CONFORME
-MAG-0104,Monoprix Lille #104,Monoprix,Lille,59 - Nord,Hauts-de-France,08h-11h,371,62.3,7671.92,CONFORME
-MAG-0104,Monoprix Lille #104,Monoprix,Lille,59 - Nord,Hauts-de-France,11h-14h,1120,86.8,3035.91,CONFORME
-MAG-0104,Monoprix Lille #104,Monoprix,Lille,59 - Nord,Hauts-de-France,14h-17h,2075,78.1,1922.62,CONFORME
-MAG-0104,Monoprix Lille #104,Monoprix,Lille,59 - Nord,Hauts-de-France,17h-20h,1022,79.1,5535.53,CONFORME
-MAG-0105,E.Leclerc Paris #105,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,763,73.8,6656.48,CONFORME
-MAG-0105,E.Leclerc Paris #105,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,1392,81.3,8181.04,CONFORME
-MAG-0105,E.Leclerc Paris #105,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,1760,82.2,1402.41,CONFORME
-MAG-0105,E.Leclerc Paris #105,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,1630,81.5,11156.94,CONFORME
-MAG-0106,Auchan Super Lille #106,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,2471,83.4,4876.2,CONFORME
-MAG-0106,Auchan Super Lille #106,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,2573,64.2,17508.45,REASSORT_URGENT_AUTOMATIQUE
-MAG-0106,Auchan Super Lille #106,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,2087,84.4,7645.2,CONFORME
-MAG-0106,Auchan Super Lille #106,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,1670,67.8,5127.54,CONFORME
-MAG-0107,Carrefour Hyper Strasbourg #107,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1482,65.3,16083.35,REASSORT_URGENT_AUTOMATIQUE
-MAG-0107,Carrefour Hyper Strasbourg #107,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1182,65.3,8494.85,CONFORME
-MAG-0107,Carrefour Hyper Strasbourg #107,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1616,65.0,11508.32,CONFORME
-MAG-0107,Carrefour Hyper Strasbourg #107,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,826,66.5,17501.38,REASSORT_URGENT_AUTOMATIQUE
-MAG-0108,E.Leclerc Nantes #108,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1563,83.4,16563.49,REASSORT_URGENT_AUTOMATIQUE
-MAG-0108,E.Leclerc Nantes #108,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1607,62.4,1637.74,CONFORME
-MAG-0108,E.Leclerc Nantes #108,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1822,84.3,11887.36,CONFORME
-MAG-0108,E.Leclerc Nantes #108,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,406,87.4,11030.06,CONFORME
-MAG-0109,Carrefour Hyper Paris #109,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,2535,88.3,7752.2,CONFORME
-MAG-0109,Carrefour Hyper Paris #109,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,1127,74.0,6579.97,CONFORME
-MAG-0109,Carrefour Hyper Paris #109,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,1318,80.3,12637.99,REASSORT_URGENT_AUTOMATIQUE
-MAG-0109,Carrefour Hyper Paris #109,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,602,65.4,7144.34,CONFORME
-MAG-0110,Monoprix Paris #110,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,2721,80.0,8873.69,CONFORME
-MAG-0110,Monoprix Paris #110,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,524,88.4,18288.0,REASSORT_URGENT_AUTOMATIQUE
-MAG-0110,Monoprix Paris #110,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,648,72.2,13870.38,REASSORT_URGENT_AUTOMATIQUE
-MAG-0110,Monoprix Paris #110,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,936,72.8,15058.17,REASSORT_URGENT_AUTOMATIQUE
-MAG-0111,Auchan Super Rennes #111,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1521,81.8,18437.34,REASSORT_URGENT_AUTOMATIQUE
-MAG-0111,Auchan Super Rennes #111,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,687,81.0,3971.78,CONFORME
-MAG-0111,Auchan Super Rennes #111,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1381,78.7,2313.09,CONFORME
-MAG-0111,Auchan Super Rennes #111,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1791,72.5,11529.39,CONFORME
-MAG-0112,Intermarché Paris #112,Intermarché,Paris,75 - Paris,Île-de-France,08h-11h,1973,72.2,12630.44,REASSORT_URGENT_AUTOMATIQUE
-MAG-0112,Intermarché Paris #112,Intermarché,Paris,75 - Paris,Île-de-France,11h-14h,1841,73.1,8895.68,CONFORME
-MAG-0112,Intermarché Paris #112,Intermarché,Paris,75 - Paris,Île-de-France,14h-17h,1838,69.5,5467.32,CONFORME
-MAG-0112,Intermarché Paris #112,Intermarché,Paris,75 - Paris,Île-de-France,17h-20h,851,75.5,2299.84,CONFORME
-MAG-0113,E.Leclerc Marseille #113,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1231,76.5,14099.14,REASSORT_URGENT_AUTOMATIQUE
-MAG-0113,E.Leclerc Marseille #113,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1307,78.2,4984.47,CONFORME
-MAG-0113,E.Leclerc Marseille #113,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,866,72.9,12766.57,REASSORT_URGENT_AUTOMATIQUE
-MAG-0113,E.Leclerc Marseille #113,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1487,74.3,17954.88,REASSORT_URGENT_AUTOMATIQUE
-MAG-0114,Carrefour Hyper Bordeaux #114,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1284,80.7,5649.39,CONFORME
-MAG-0114,Carrefour Hyper Bordeaux #114,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,698,69.4,16255.11,REASSORT_URGENT_AUTOMATIQUE
-MAG-0114,Carrefour Hyper Bordeaux #114,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2543,63.8,6809.43,CONFORME
-MAG-0114,Carrefour Hyper Bordeaux #114,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,469,81.8,13150.68,REASSORT_URGENT_AUTOMATIQUE
-MAG-0115,Intermarché Bordeaux #115,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2328,83.4,13899.55,REASSORT_URGENT_AUTOMATIQUE
-MAG-0115,Intermarché Bordeaux #115,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2716,86.6,3410.39,CONFORME
-MAG-0115,Intermarché Bordeaux #115,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,826,69.7,5146.67,CONFORME
-MAG-0115,Intermarché Bordeaux #115,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,406,75.0,2959.02,CONFORME
-MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1126,64.7,4613.01,CONFORME
-MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,815,74.4,9390.92,CONFORME
-MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2009,77.7,14920.49,REASSORT_URGENT_AUTOMATIQUE
-MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2554,67.0,12896.82,REASSORT_URGENT_AUTOMATIQUE
-MAG-0117,E.Leclerc Paris #117,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,2484,79.4,15616.62,REASSORT_URGENT_AUTOMATIQUE
-MAG-0117,E.Leclerc Paris #117,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,2418,78.7,4452.99,CONFORME
-MAG-0117,E.Leclerc Paris #117,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,2074,81.3,10246.95,CONFORME
-MAG-0117,E.Leclerc Paris #117,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,1183,86.1,1638.38,CONFORME
-MAG-0118,Intermarché Marseille #118,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2533,75.1,3670.22,CONFORME
-MAG-0118,Intermarché Marseille #118,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2707,78.9,6552.4,CONFORME
-MAG-0118,Intermarché Marseille #118,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2042,77.7,8880.0,CONFORME
-MAG-0118,Intermarché Marseille #118,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,398,74.9,13692.26,REASSORT_URGENT_AUTOMATIQUE
-MAG-0119,Monoprix Strasbourg #119,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,573,68.7,9584.24,CONFORME
-MAG-0119,Monoprix Strasbourg #119,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1205,81.9,12125.12,REASSORT_URGENT_AUTOMATIQUE
-MAG-0119,Monoprix Strasbourg #119,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1285,85.2,1960.53,CONFORME
-MAG-0119,Monoprix Strasbourg #119,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2748,85.3,18273.64,REASSORT_URGENT_AUTOMATIQUE
-MAG-0120,Carrefour Hyper Nantes #120,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1304,73.0,4043.59,CONFORME
-MAG-0120,Carrefour Hyper Nantes #120,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,842,63.3,9315.32,CONFORME
-MAG-0120,Carrefour Hyper Nantes #120,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2288,79.2,15266.95,REASSORT_URGENT_AUTOMATIQUE
-MAG-0120,Carrefour Hyper Nantes #120,Carrefour Hyper,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,822,63.9,4022.83,CONFORME
-MAG-0121,Monoprix Marseille #121,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2065,80.4,4097.96,CONFORME
-MAG-0121,Monoprix Marseille #121,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,587,75.0,2328.59,CONFORME
-MAG-0121,Monoprix Marseille #121,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1948,63.6,8956.12,CONFORME
-MAG-0121,Monoprix Marseille #121,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1778,65.6,1995.8,CONFORME
-MAG-0122,Intermarché Rennes #122,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1378,71.9,15605.67,REASSORT_URGENT_AUTOMATIQUE
-MAG-0122,Intermarché Rennes #122,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1531,64.1,4882.31,CONFORME
-MAG-0122,Intermarché Rennes #122,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,709,88.4,18007.61,REASSORT_URGENT_AUTOMATIQUE
-MAG-0122,Intermarché Rennes #122,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1619,80.2,4920.55,CONFORME
-MAG-0123,Monoprix Bordeaux #123,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,449,64.6,12914.53,REASSORT_URGENT_AUTOMATIQUE
-MAG-0123,Monoprix Bordeaux #123,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2575,88.3,4423.43,CONFORME
-MAG-0123,Monoprix Bordeaux #123,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,971,66.8,3604.11,CONFORME
-MAG-0123,Monoprix Bordeaux #123,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2327,82.2,2937.93,CONFORME
-MAG-0124,Auchan Super Nantes #124,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2160,75.6,4344.82,CONFORME
-MAG-0124,Auchan Super Nantes #124,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,2693,64.5,5019.29,CONFORME
-MAG-0124,Auchan Super Nantes #124,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,403,77.5,16603.66,REASSORT_URGENT_AUTOMATIQUE
-MAG-0124,Auchan Super Nantes #124,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,605,63.3,17094.54,REASSORT_URGENT_AUTOMATIQUE
-MAG-0125,Auchan Super Lyon #125,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,780,64.9,13071.26,REASSORT_URGENT_AUTOMATIQUE
-MAG-0125,Auchan Super Lyon #125,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2316,78.7,15075.34,REASSORT_URGENT_AUTOMATIQUE
-MAG-0125,Auchan Super Lyon #125,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2006,78.4,14874.09,REASSORT_URGENT_AUTOMATIQUE
-MAG-0125,Auchan Super Lyon #125,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2210,80.6,13717.88,REASSORT_URGENT_AUTOMATIQUE
-MAG-0126,Auchan Super Nantes #126,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1153,77.8,11090.42,CONFORME
-MAG-0126,Auchan Super Nantes #126,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,629,67.1,11376.01,CONFORME
-MAG-0126,Auchan Super Nantes #126,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1441,85.2,16235.39,REASSORT_URGENT_AUTOMATIQUE
-MAG-0126,Auchan Super Nantes #126,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1383,81.4,16963.57,REASSORT_URGENT_AUTOMATIQUE
-MAG-0127,Intermarché Paris #127,Intermarché,Paris,75 - Paris,Île-de-France,08h-11h,2301,87.4,16347.6,REASSORT_URGENT_AUTOMATIQUE
-MAG-0127,Intermarché Paris #127,Intermarché,Paris,75 - Paris,Île-de-France,11h-14h,1756,87.0,17686.22,REASSORT_URGENT_AUTOMATIQUE
-MAG-0127,Intermarché Paris #127,Intermarché,Paris,75 - Paris,Île-de-France,14h-17h,1011,78.7,2658.5,CONFORME
-MAG-0127,Intermarché Paris #127,Intermarché,Paris,75 - Paris,Île-de-France,17h-20h,806,75.4,17997.49,REASSORT_URGENT_AUTOMATIQUE
-MAG-0128,E.Leclerc Lyon #128,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1338,80.4,5500.89,CONFORME
-MAG-0128,E.Leclerc Lyon #128,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1952,62.4,18108.29,REASSORT_URGENT_AUTOMATIQUE
-MAG-0128,E.Leclerc Lyon #128,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2792,66.1,5709.31,CONFORME
-MAG-0128,E.Leclerc Lyon #128,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2510,67.9,8040.08,CONFORME
-MAG-0129,Auchan Super Strasbourg #129,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1120,69.7,9812.79,CONFORME
-MAG-0129,Auchan Super Strasbourg #129,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1857,66.0,6134.36,CONFORME
-MAG-0129,Auchan Super Strasbourg #129,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2231,86.2,6025.28,CONFORME
-MAG-0129,Auchan Super Strasbourg #129,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,498,65.0,13278.44,REASSORT_URGENT_AUTOMATIQUE
-MAG-0130,Monoprix Rennes #130,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2406,84.7,1905.55,CONFORME
-MAG-0130,Monoprix Rennes #130,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,416,65.5,17552.6,REASSORT_URGENT_AUTOMATIQUE
-MAG-0130,Monoprix Rennes #130,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,405,64.0,6215.37,CONFORME
-MAG-0130,Monoprix Rennes #130,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,885,78.0,13597.49,REASSORT_URGENT_AUTOMATIQUE
-MAG-0131,Monoprix Rennes #131,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,496,68.0,14279.66,REASSORT_URGENT_AUTOMATIQUE
-MAG-0131,Monoprix Rennes #131,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,2125,76.2,8719.28,CONFORME
-MAG-0131,Monoprix Rennes #131,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,679,75.8,6763.62,CONFORME
-MAG-0131,Monoprix Rennes #131,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2120,62.4,6123.91,CONFORME
-MAG-0132,Monoprix Paris #132,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,1752,63.1,7340.13,CONFORME
-MAG-0132,Monoprix Paris #132,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,1942,64.0,13993.21,REASSORT_URGENT_AUTOMATIQUE
-MAG-0132,Monoprix Paris #132,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,950,77.3,14031.86,REASSORT_URGENT_AUTOMATIQUE
-MAG-0132,Monoprix Paris #132,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,2743,72.3,8101.39,CONFORME
-MAG-0133,Monoprix Lille #133,Monoprix,Lille,59 - Nord,Hauts-de-France,08h-11h,2498,63.0,16438.18,REASSORT_URGENT_AUTOMATIQUE
-MAG-0133,Monoprix Lille #133,Monoprix,Lille,59 - Nord,Hauts-de-France,11h-14h,2286,62.8,8050.87,CONFORME
-MAG-0133,Monoprix Lille #133,Monoprix,Lille,59 - Nord,Hauts-de-France,14h-17h,2593,81.9,6254.17,CONFORME
-MAG-0133,Monoprix Lille #133,Monoprix,Lille,59 - Nord,Hauts-de-France,17h-20h,996,62.8,16552.78,REASSORT_URGENT_AUTOMATIQUE
-MAG-0134,Intermarché Marseille #134,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2564,86.0,11290.53,CONFORME
-MAG-0134,Intermarché Marseille #134,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,408,75.2,1802.31,CONFORME
-MAG-0134,Intermarché Marseille #134,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,855,65.0,13984.46,REASSORT_URGENT_AUTOMATIQUE
-MAG-0134,Intermarché Marseille #134,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,381,65.3,6065.86,CONFORME
-MAG-0135,Intermarché Toulouse #135,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1879,82.5,1779.99,CONFORME
-MAG-0135,Intermarché Toulouse #135,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1379,85.0,12190.34,REASSORT_URGENT_AUTOMATIQUE
-MAG-0135,Intermarché Toulouse #135,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2473,83.1,2198.34,CONFORME
-MAG-0135,Intermarché Toulouse #135,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2351,66.7,1888.81,CONFORME
-MAG-0136,Carrefour Hyper Paris #136,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,2692,69.4,6392.98,CONFORME
-MAG-0136,Carrefour Hyper Paris #136,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,1066,73.2,8735.85,CONFORME
-MAG-0136,Carrefour Hyper Paris #136,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,2339,67.4,10676.71,CONFORME
-MAG-0136,Carrefour Hyper Paris #136,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,2052,84.8,2943.23,CONFORME
-MAG-0137,Monoprix Nantes #137,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2672,70.5,12832.41,REASSORT_URGENT_AUTOMATIQUE
-MAG-0137,Monoprix Nantes #137,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1563,83.0,3310.92,CONFORME
-MAG-0137,Monoprix Nantes #137,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2488,81.9,17598.41,REASSORT_URGENT_AUTOMATIQUE
-MAG-0137,Monoprix Nantes #137,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,990,64.2,3109.62,CONFORME
-MAG-0138,Auchan Super Lille #138,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,476,73.8,17606.96,REASSORT_URGENT_AUTOMATIQUE
-MAG-0138,Auchan Super Lille #138,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,631,81.6,12164.04,REASSORT_URGENT_AUTOMATIQUE
-MAG-0138,Auchan Super Lille #138,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,967,62.8,18070.31,REASSORT_URGENT_AUTOMATIQUE
-MAG-0138,Auchan Super Lille #138,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,2036,76.4,8342.23,CONFORME
-MAG-0139,E.Leclerc Bordeaux #139,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,717,87.5,10776.83,CONFORME
-MAG-0139,E.Leclerc Bordeaux #139,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2473,65.4,17319.5,REASSORT_URGENT_AUTOMATIQUE
-MAG-0139,E.Leclerc Bordeaux #139,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2665,84.1,5201.77,CONFORME
-MAG-0139,E.Leclerc Bordeaux #139,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1139,85.0,2909.16,CONFORME
-MAG-0140,Intermarché Toulouse #140,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1356,85.0,7713.86,CONFORME
-MAG-0140,Intermarché Toulouse #140,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2322,81.7,17852.06,REASSORT_URGENT_AUTOMATIQUE
-MAG-0140,Intermarché Toulouse #140,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,924,71.9,8716.77,CONFORME
-MAG-0140,Intermarché Toulouse #140,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1209,88.0,14713.25,REASSORT_URGENT_AUTOMATIQUE
-MAG-0141,Monoprix Bordeaux #141,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1165,87.8,6811.53,CONFORME
-MAG-0141,Monoprix Bordeaux #141,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1233,70.6,10775.78,CONFORME
-MAG-0141,Monoprix Bordeaux #141,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2429,66.1,16155.23,REASSORT_URGENT_AUTOMATIQUE
-MAG-0141,Monoprix Bordeaux #141,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,505,62.0,12739.08,REASSORT_URGENT_AUTOMATIQUE
-MAG-0142,Carrefour Hyper Lille #142,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,418,77.9,5765.14,CONFORME
-MAG-0142,Carrefour Hyper Lille #142,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,1805,63.6,15663.5,REASSORT_URGENT_AUTOMATIQUE
-MAG-0142,Carrefour Hyper Lille #142,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,1511,62.5,4587.04,CONFORME
-MAG-0142,Carrefour Hyper Lille #142,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,966,64.6,16024.28,REASSORT_URGENT_AUTOMATIQUE
-MAG-0143,Intermarché Rennes #143,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,782,77.3,7535.01,CONFORME
-MAG-0143,Intermarché Rennes #143,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,2620,74.5,10270.5,CONFORME
-MAG-0143,Intermarché Rennes #143,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1182,63.7,8948.04,CONFORME
-MAG-0143,Intermarché Rennes #143,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2424,87.8,1426.52,CONFORME
-MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1606,80.0,13713.39,REASSORT_URGENT_AUTOMATIQUE
-MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2079,82.5,14523.9,REASSORT_URGENT_AUTOMATIQUE
-MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,718,73.0,4402.34,CONFORME
-MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1686,78.9,4459.06,CONFORME
-MAG-0145,Intermarché Toulouse #145,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,2179,84.0,3643.48,CONFORME
-MAG-0145,Intermarché Toulouse #145,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2658,70.8,5416.68,CONFORME
-MAG-0145,Intermarché Toulouse #145,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2077,68.6,3495.55,CONFORME
-MAG-0145,Intermarché Toulouse #145,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2285,83.3,15516.03,REASSORT_URGENT_AUTOMATIQUE
-MAG-0146,Auchan Super Strasbourg #146,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2218,74.7,2734.93,CONFORME
-MAG-0146,Auchan Super Strasbourg #146,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,2603,76.7,14101.32,REASSORT_URGENT_AUTOMATIQUE
-MAG-0146,Auchan Super Strasbourg #146,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1843,78.5,11911.84,CONFORME
-MAG-0146,Auchan Super Strasbourg #146,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1500,77.2,5989.25,CONFORME
-MAG-0147,Intermarché Toulouse #147,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,844,87.8,13693.1,REASSORT_URGENT_AUTOMATIQUE
-MAG-0147,Intermarché Toulouse #147,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2308,79.3,2532.67,CONFORME
-MAG-0147,Intermarché Toulouse #147,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,440,65.0,11719.87,CONFORME
-MAG-0147,Intermarché Toulouse #147,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,526,86.1,11124.54,CONFORME
-MAG-0148,Carrefour Hyper Bordeaux #148,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2336,76.7,15589.83,REASSORT_URGENT_AUTOMATIQUE
-MAG-0148,Carrefour Hyper Bordeaux #148,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,723,86.5,6993.26,CONFORME
-MAG-0148,Carrefour Hyper Bordeaux #148,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2695,87.6,10902.7,CONFORME
-MAG-0148,Carrefour Hyper Bordeaux #148,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,387,75.4,7091.31,CONFORME
-MAG-0149,Intermarché Nantes #149,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,945,85.7,16816.2,REASSORT_URGENT_AUTOMATIQUE
-MAG-0149,Intermarché Nantes #149,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,2461,67.6,13936.12,REASSORT_URGENT_AUTOMATIQUE
-MAG-0149,Intermarché Nantes #149,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,519,80.9,5639.2,CONFORME
-MAG-0149,Intermarché Nantes #149,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1407,85.3,15502.13,REASSORT_URGENT_AUTOMATIQUE
-MAG-0150,Intermarché Marseille #150,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2345,63.7,4483.95,CONFORME
-MAG-0150,Intermarché Marseille #150,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1454,80.3,16622.9,REASSORT_URGENT_AUTOMATIQUE
-MAG-0150,Intermarché Marseille #150,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1923,82.3,7154.95,CONFORME
-MAG-0150,Intermarché Marseille #150,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,484,67.9,10166.28,CONFORME
+MAG-0001,E.Leclerc Lyon #1,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1351,70.3,3077.72,CONFORME
+MAG-0001,E.Leclerc Lyon #1,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,580,66.1,3607.84,CONFORME
+MAG-0001,E.Leclerc Lyon #1,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,1278,66.9,8395.31,CONFORME
+MAG-0001,E.Leclerc Lyon #1,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2035,62.2,17018.84,REASSORT_URGENT_AUTOMATIQUE
+MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,846,81.0,15127.33,REASSORT_URGENT_AUTOMATIQUE
+MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,1615,79.3,1566.14,CONFORME
+MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,1838,81.9,8507.61,CONFORME
+MAG-0002,E.Leclerc Paris #2,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,1708,76.1,17776.5,REASSORT_URGENT_AUTOMATIQUE
+MAG-0003,E.Leclerc Toulouse #3,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,2778,72.7,4891.77,CONFORME
+MAG-0003,E.Leclerc Toulouse #3,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,607,87.6,9562.73,CONFORME
+MAG-0003,E.Leclerc Toulouse #3,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1237,85.7,12129.38,REASSORT_URGENT_AUTOMATIQUE
+MAG-0003,E.Leclerc Toulouse #3,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1416,75.3,11072.45,CONFORME
+MAG-0004,E.Leclerc Strasbourg #4,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2213,80.8,14644.67,REASSORT_URGENT_AUTOMATIQUE
+MAG-0004,E.Leclerc Strasbourg #4,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1601,78.0,7060.51,CONFORME
+MAG-0004,E.Leclerc Strasbourg #4,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1138,78.9,7739.44,CONFORME
+MAG-0004,E.Leclerc Strasbourg #4,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2287,84.3,13545.94,REASSORT_URGENT_AUTOMATIQUE
+MAG-0005,Carrefour Hyper Rennes #5,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,740,72.3,12411.03,REASSORT_URGENT_AUTOMATIQUE
+MAG-0005,Carrefour Hyper Rennes #5,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1235,69.9,16958.74,REASSORT_URGENT_AUTOMATIQUE
+MAG-0005,Carrefour Hyper Rennes #5,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1107,84.0,8551.72,CONFORME
+MAG-0005,Carrefour Hyper Rennes #5,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2523,88.2,8223.15,CONFORME
+MAG-0006,Auchan Super Strasbourg #6,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1702,86.0,12063.66,REASSORT_URGENT_AUTOMATIQUE
+MAG-0006,Auchan Super Strasbourg #6,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,972,88.1,17107.53,REASSORT_URGENT_AUTOMATIQUE
+MAG-0006,Auchan Super Strasbourg #6,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,954,65.9,11515.73,CONFORME
+MAG-0006,Auchan Super Strasbourg #6,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2680,85.1,16098.15,REASSORT_URGENT_AUTOMATIQUE
+MAG-0007,Intermarché Lyon #7,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1930,66.7,18083.53,REASSORT_URGENT_AUTOMATIQUE
+MAG-0007,Intermarché Lyon #7,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2776,70.0,15250.34,REASSORT_URGENT_AUTOMATIQUE
+MAG-0007,Intermarché Lyon #7,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,798,63.0,1799.48,CONFORME
+MAG-0007,Intermarché Lyon #7,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2286,73.5,7478.09,CONFORME
+MAG-0008,E.Leclerc Rennes #8,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2415,87.4,2935.87,CONFORME
+MAG-0008,E.Leclerc Rennes #8,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1026,78.2,15801.47,REASSORT_URGENT_AUTOMATIQUE
+MAG-0008,E.Leclerc Rennes #8,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,455,66.9,15131.73,REASSORT_URGENT_AUTOMATIQUE
+MAG-0008,E.Leclerc Rennes #8,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1784,70.9,1303.67,CONFORME
+MAG-0009,Intermarché Marseille #9,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1956,72.8,17946.77,REASSORT_URGENT_AUTOMATIQUE
+MAG-0009,Intermarché Marseille #9,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1404,78.8,13495.65,REASSORT_URGENT_AUTOMATIQUE
+MAG-0009,Intermarché Marseille #9,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1241,85.3,7070.23,CONFORME
+MAG-0009,Intermarché Marseille #9,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2599,63.2,17583.64,REASSORT_URGENT_AUTOMATIQUE
+MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,2155,64.1,11932.97,CONFORME
+MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,528,68.8,8511.24,CONFORME
+MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,1877,77.3,13234.3,REASSORT_URGENT_AUTOMATIQUE
+MAG-0010,Carrefour Hyper Paris #10,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,1750,80.6,18187.89,REASSORT_URGENT_AUTOMATIQUE
+MAG-0011,Monoprix Paris #11,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,1676,71.7,14496.82,REASSORT_URGENT_AUTOMATIQUE
+MAG-0011,Monoprix Paris #11,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,681,63.0,16899.48,REASSORT_URGENT_AUTOMATIQUE
+MAG-0011,Monoprix Paris #11,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,996,82.6,3483.0,CONFORME
+MAG-0011,Monoprix Paris #11,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,2440,83.0,7122.54,CONFORME
+MAG-0012,Intermarché Lyon #12,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,536,67.6,10332.29,CONFORME
+MAG-0012,Intermarché Lyon #12,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1754,62.5,14201.39,REASSORT_URGENT_AUTOMATIQUE
+MAG-0012,Intermarché Lyon #12,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,1235,63.7,2620.33,CONFORME
+MAG-0012,Intermarché Lyon #12,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,690,68.1,3747.57,CONFORME
+MAG-0013,Carrefour Hyper Lyon #13,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1788,65.1,10789.1,CONFORME
+MAG-0013,Carrefour Hyper Lyon #13,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2543,82.5,8893.23,CONFORME
+MAG-0013,Carrefour Hyper Lyon #13,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2228,69.9,18094.05,REASSORT_URGENT_AUTOMATIQUE
+MAG-0013,Carrefour Hyper Lyon #13,Carrefour Hyper,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1374,70.4,11940.49,CONFORME
+MAG-0014,Intermarché Strasbourg #14,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2506,66.9,12037.97,REASSORT_URGENT_AUTOMATIQUE
+MAG-0014,Intermarché Strasbourg #14,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,2685,67.9,7203.82,CONFORME
+MAG-0014,Intermarché Strasbourg #14,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1908,80.9,7612.01,CONFORME
+MAG-0014,Intermarché Strasbourg #14,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,859,69.4,8504.04,CONFORME
+MAG-0015,E.Leclerc Nantes #15,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1819,68.7,4838.01,CONFORME
+MAG-0015,E.Leclerc Nantes #15,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1100,88.2,11014.88,CONFORME
+MAG-0015,E.Leclerc Nantes #15,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2759,84.8,8607.81,CONFORME
+MAG-0015,E.Leclerc Nantes #15,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2488,82.1,15449.41,REASSORT_URGENT_AUTOMATIQUE
+MAG-0016,Monoprix Bordeaux #16,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,384,84.5,4153.04,CONFORME
+MAG-0016,Monoprix Bordeaux #16,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,607,75.4,15075.13,REASSORT_URGENT_AUTOMATIQUE
+MAG-0016,Monoprix Bordeaux #16,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1357,68.5,10323.7,CONFORME
+MAG-0016,Monoprix Bordeaux #16,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,824,78.8,1273.14,CONFORME
+MAG-0017,E.Leclerc Rennes #17,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2139,83.9,6767.11,CONFORME
+MAG-0017,E.Leclerc Rennes #17,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,2417,72.4,6924.57,CONFORME
+MAG-0017,E.Leclerc Rennes #17,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1489,70.0,18330.47,REASSORT_URGENT_AUTOMATIQUE
+MAG-0017,E.Leclerc Rennes #17,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1219,87.3,7402.4,CONFORME
+MAG-0018,Monoprix Toulouse #18,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,383,79.9,16590.45,REASSORT_URGENT_AUTOMATIQUE
+MAG-0018,Monoprix Toulouse #18,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2453,67.5,13791.31,REASSORT_URGENT_AUTOMATIQUE
+MAG-0018,Monoprix Toulouse #18,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2763,67.7,8541.2,CONFORME
+MAG-0018,Monoprix Toulouse #18,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1974,64.8,1601.8,CONFORME
+MAG-0019,E.Leclerc Marseille #19,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1077,68.4,12800.78,REASSORT_URGENT_AUTOMATIQUE
+MAG-0019,E.Leclerc Marseille #19,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1621,88.0,2261.61,CONFORME
+MAG-0019,E.Leclerc Marseille #19,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2046,80.5,10759.25,CONFORME
+MAG-0019,E.Leclerc Marseille #19,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1320,69.5,18113.5,REASSORT_URGENT_AUTOMATIQUE
+MAG-0020,Monoprix Paris #20,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,1372,66.8,2833.89,CONFORME
+MAG-0020,Monoprix Paris #20,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,2649,83.1,8619.35,CONFORME
+MAG-0020,Monoprix Paris #20,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,792,86.1,14932.03,REASSORT_URGENT_AUTOMATIQUE
+MAG-0020,Monoprix Paris #20,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,2419,73.3,15996.77,REASSORT_URGENT_AUTOMATIQUE
+MAG-0021,Intermarché Lille #21,Intermarché,Lille,59 - Nord,Hauts-de-France,08h-11h,444,85.5,17355.24,REASSORT_URGENT_AUTOMATIQUE
+MAG-0021,Intermarché Lille #21,Intermarché,Lille,59 - Nord,Hauts-de-France,11h-14h,1730,76.3,5414.0,CONFORME
+MAG-0021,Intermarché Lille #21,Intermarché,Lille,59 - Nord,Hauts-de-France,14h-17h,1370,77.1,6522.99,CONFORME
+MAG-0021,Intermarché Lille #21,Intermarché,Lille,59 - Nord,Hauts-de-France,17h-20h,2008,65.4,2156.03,CONFORME
+MAG-0022,Auchan Super Rennes #22,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,921,77.7,1205.41,CONFORME
+MAG-0022,Auchan Super Rennes #22,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,2280,80.1,7343.91,CONFORME
+MAG-0022,Auchan Super Rennes #22,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,936,73.0,4260.86,CONFORME
+MAG-0022,Auchan Super Rennes #22,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1525,76.9,3801.93,CONFORME
+MAG-0023,Intermarché Bordeaux #23,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1972,74.8,18405.89,REASSORT_URGENT_AUTOMATIQUE
+MAG-0023,Intermarché Bordeaux #23,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1960,64.3,12601.54,REASSORT_URGENT_AUTOMATIQUE
+MAG-0023,Intermarché Bordeaux #23,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,779,71.0,13217.62,REASSORT_URGENT_AUTOMATIQUE
+MAG-0023,Intermarché Bordeaux #23,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,868,86.5,8683.0,CONFORME
+MAG-0024,Carrefour Hyper Marseille #24,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,814,70.5,15796.67,REASSORT_URGENT_AUTOMATIQUE
+MAG-0024,Carrefour Hyper Marseille #24,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2155,64.7,3243.25,CONFORME
+MAG-0024,Carrefour Hyper Marseille #24,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2591,87.0,15132.44,REASSORT_URGENT_AUTOMATIQUE
+MAG-0024,Carrefour Hyper Marseille #24,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2556,83.1,4516.78,CONFORME
+MAG-0025,Intermarché Bordeaux #25,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,844,64.0,14299.57,REASSORT_URGENT_AUTOMATIQUE
+MAG-0025,Intermarché Bordeaux #25,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2353,66.5,13671.99,REASSORT_URGENT_AUTOMATIQUE
+MAG-0025,Intermarché Bordeaux #25,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2265,66.7,10214.96,CONFORME
+MAG-0025,Intermarché Bordeaux #25,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2389,86.1,16879.75,REASSORT_URGENT_AUTOMATIQUE
+MAG-0026,Carrefour Hyper Lille #26,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,2294,76.0,11629.53,CONFORME
+MAG-0026,Carrefour Hyper Lille #26,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,1030,72.0,9275.2,CONFORME
+MAG-0026,Carrefour Hyper Lille #26,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,655,76.8,3929.72,CONFORME
+MAG-0026,Carrefour Hyper Lille #26,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,539,82.6,15587.89,REASSORT_URGENT_AUTOMATIQUE
+MAG-0027,Auchan Super Rennes #27,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2329,83.1,7271.84,CONFORME
+MAG-0027,Auchan Super Rennes #27,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,472,73.9,4265.74,CONFORME
+MAG-0027,Auchan Super Rennes #27,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,845,71.8,15104.81,REASSORT_URGENT_AUTOMATIQUE
+MAG-0027,Auchan Super Rennes #27,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,488,85.8,9876.45,CONFORME
+MAG-0028,Monoprix Rennes #28,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1784,85.1,9754.57,CONFORME
+MAG-0028,Monoprix Rennes #28,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1735,66.8,17346.94,REASSORT_URGENT_AUTOMATIQUE
+MAG-0028,Monoprix Rennes #28,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,2241,69.9,10032.45,CONFORME
+MAG-0028,Monoprix Rennes #28,Monoprix,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2708,81.3,8010.79,CONFORME
+MAG-0029,Auchan Super Bordeaux #29,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,516,76.4,18236.18,REASSORT_URGENT_AUTOMATIQUE
+MAG-0029,Auchan Super Bordeaux #29,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1858,87.2,8727.52,CONFORME
+MAG-0029,Auchan Super Bordeaux #29,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2588,63.7,10742.61,CONFORME
+MAG-0029,Auchan Super Bordeaux #29,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1572,67.3,18305.87,REASSORT_URGENT_AUTOMATIQUE
+MAG-0030,Intermarché Marseille #30,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1727,74.3,17546.87,REASSORT_URGENT_AUTOMATIQUE
+MAG-0030,Intermarché Marseille #30,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2357,72.4,10578.09,CONFORME
+MAG-0030,Intermarché Marseille #30,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1724,65.3,7016.85,CONFORME
+MAG-0030,Intermarché Marseille #30,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2281,64.2,5343.33,CONFORME
+MAG-0031,Intermarché Rennes #31,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,609,64.2,10380.46,CONFORME
+MAG-0031,Intermarché Rennes #31,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,980,78.0,11973.04,CONFORME
+MAG-0031,Intermarché Rennes #31,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,794,69.2,14039.45,REASSORT_URGENT_AUTOMATIQUE
+MAG-0031,Intermarché Rennes #31,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1636,77.3,9653.82,CONFORME
+MAG-0032,Intermarché Lyon #32,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1401,66.5,12263.96,REASSORT_URGENT_AUTOMATIQUE
+MAG-0032,Intermarché Lyon #32,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,739,83.3,10314.83,CONFORME
+MAG-0032,Intermarché Lyon #32,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,1758,72.5,17357.59,REASSORT_URGENT_AUTOMATIQUE
+MAG-0032,Intermarché Lyon #32,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1278,79.0,12957.47,REASSORT_URGENT_AUTOMATIQUE
+MAG-0033,Intermarché Marseille #33,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1301,73.0,17753.88,REASSORT_URGENT_AUTOMATIQUE
+MAG-0033,Intermarché Marseille #33,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,566,78.3,7947.31,CONFORME
+MAG-0033,Intermarché Marseille #33,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1263,73.3,16204.56,REASSORT_URGENT_AUTOMATIQUE
+MAG-0033,Intermarché Marseille #33,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,857,83.5,3719.25,CONFORME
+MAG-0034,E.Leclerc Paris #34,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,2595,76.1,5845.62,CONFORME
+MAG-0034,E.Leclerc Paris #34,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,2603,65.4,14228.45,REASSORT_URGENT_AUTOMATIQUE
+MAG-0034,E.Leclerc Paris #34,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,1573,81.8,4178.01,CONFORME
+MAG-0034,E.Leclerc Paris #34,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,358,71.7,15767.99,REASSORT_URGENT_AUTOMATIQUE
+MAG-0035,Carrefour Hyper Paris #35,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,640,87.3,7750.9,CONFORME
+MAG-0035,Carrefour Hyper Paris #35,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,942,85.1,9562.89,CONFORME
+MAG-0035,Carrefour Hyper Paris #35,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,1906,66.5,17263.24,REASSORT_URGENT_AUTOMATIQUE
+MAG-0035,Carrefour Hyper Paris #35,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,1185,70.7,18194.97,REASSORT_URGENT_AUTOMATIQUE
+MAG-0036,Intermarché Toulouse #36,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1992,84.0,5049.65,CONFORME
+MAG-0036,Intermarché Toulouse #36,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2333,72.9,15309.49,REASSORT_URGENT_AUTOMATIQUE
+MAG-0036,Intermarché Toulouse #36,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1385,85.7,15835.41,REASSORT_URGENT_AUTOMATIQUE
+MAG-0036,Intermarché Toulouse #36,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1613,82.2,3851.3,CONFORME
+MAG-0037,Monoprix Lyon #37,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,2577,85.5,11413.61,CONFORME
+MAG-0037,Monoprix Lyon #37,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,679,67.5,4634.13,CONFORME
+MAG-0037,Monoprix Lyon #37,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,386,80.3,6291.96,CONFORME
+MAG-0037,Monoprix Lyon #37,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,897,69.0,3897.83,CONFORME
+MAG-0038,E.Leclerc Toulouse #38,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1203,72.3,13681.36,REASSORT_URGENT_AUTOMATIQUE
+MAG-0038,E.Leclerc Toulouse #38,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2104,75.7,6990.22,CONFORME
+MAG-0038,E.Leclerc Toulouse #38,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1243,76.9,16534.68,REASSORT_URGENT_AUTOMATIQUE
+MAG-0038,E.Leclerc Toulouse #38,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,506,72.9,15465.28,REASSORT_URGENT_AUTOMATIQUE
+MAG-0039,Monoprix Strasbourg #39,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,427,66.2,8340.0,CONFORME
+MAG-0039,Monoprix Strasbourg #39,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1784,74.1,6424.31,CONFORME
+MAG-0039,Monoprix Strasbourg #39,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2569,80.0,5571.68,CONFORME
+MAG-0039,Monoprix Strasbourg #39,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1873,84.2,10012.04,CONFORME
+MAG-0040,Carrefour Hyper Marseille #40,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1528,76.6,14302.9,REASSORT_URGENT_AUTOMATIQUE
+MAG-0040,Carrefour Hyper Marseille #40,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2728,80.5,13202.92,REASSORT_URGENT_AUTOMATIQUE
+MAG-0040,Carrefour Hyper Marseille #40,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,380,74.3,13196.17,REASSORT_URGENT_AUTOMATIQUE
+MAG-0040,Carrefour Hyper Marseille #40,Carrefour Hyper,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2379,78.4,10491.52,CONFORME
+MAG-0041,Auchan Super Toulouse #41,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,929,67.8,6956.86,CONFORME
+MAG-0041,Auchan Super Toulouse #41,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,850,76.8,13035.71,REASSORT_URGENT_AUTOMATIQUE
+MAG-0041,Auchan Super Toulouse #41,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1718,70.9,14043.91,REASSORT_URGENT_AUTOMATIQUE
+MAG-0041,Auchan Super Toulouse #41,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,981,81.0,17818.92,REASSORT_URGENT_AUTOMATIQUE
+MAG-0042,Auchan Super Lyon #42,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1926,66.1,2163.82,CONFORME
+MAG-0042,Auchan Super Lyon #42,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2237,64.1,15065.59,REASSORT_URGENT_AUTOMATIQUE
+MAG-0042,Auchan Super Lyon #42,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2572,78.3,18182.65,REASSORT_URGENT_AUTOMATIQUE
+MAG-0042,Auchan Super Lyon #42,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1194,85.8,10965.12,CONFORME
+MAG-0043,Monoprix Paris #43,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,1319,62.1,13876.54,REASSORT_URGENT_AUTOMATIQUE
+MAG-0043,Monoprix Paris #43,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,1088,62.1,14206.82,REASSORT_URGENT_AUTOMATIQUE
+MAG-0043,Monoprix Paris #43,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,489,86.1,1414.13,CONFORME
+MAG-0043,Monoprix Paris #43,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,655,85.0,13076.86,REASSORT_URGENT_AUTOMATIQUE
+MAG-0044,Intermarché Nantes #44,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1528,70.5,17951.95,REASSORT_URGENT_AUTOMATIQUE
+MAG-0044,Intermarché Nantes #44,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,2554,75.5,11193.96,CONFORME
+MAG-0044,Intermarché Nantes #44,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1080,88.1,13984.27,REASSORT_URGENT_AUTOMATIQUE
+MAG-0044,Intermarché Nantes #44,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1492,67.8,7644.05,CONFORME
+MAG-0045,Auchan Super Nantes #45,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1471,63.4,8820.54,CONFORME
+MAG-0045,Auchan Super Nantes #45,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1189,74.8,1934.72,CONFORME
+MAG-0045,Auchan Super Nantes #45,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2280,73.1,18247.25,REASSORT_URGENT_AUTOMATIQUE
+MAG-0045,Auchan Super Nantes #45,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1343,88.2,5831.55,CONFORME
+MAG-0046,Monoprix Lille #46,Monoprix,Lille,59 - Nord,Hauts-de-France,08h-11h,642,66.5,12978.28,REASSORT_URGENT_AUTOMATIQUE
+MAG-0046,Monoprix Lille #46,Monoprix,Lille,59 - Nord,Hauts-de-France,11h-14h,627,81.7,16253.24,REASSORT_URGENT_AUTOMATIQUE
+MAG-0046,Monoprix Lille #46,Monoprix,Lille,59 - Nord,Hauts-de-France,14h-17h,2540,76.1,15343.4,REASSORT_URGENT_AUTOMATIQUE
+MAG-0046,Monoprix Lille #46,Monoprix,Lille,59 - Nord,Hauts-de-France,17h-20h,1907,67.8,13636.72,REASSORT_URGENT_AUTOMATIQUE
+MAG-0047,Auchan Super Bordeaux #47,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2627,74.8,9776.81,CONFORME
+MAG-0047,Auchan Super Bordeaux #47,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,2545,66.1,11718.93,CONFORME
+MAG-0047,Auchan Super Bordeaux #47,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2182,82.2,8011.55,CONFORME
+MAG-0047,Auchan Super Bordeaux #47,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1766,70.2,9019.3,CONFORME
+MAG-0048,Intermarché Strasbourg #48,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2094,75.0,10383.3,CONFORME
+MAG-0048,Intermarché Strasbourg #48,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1731,72.3,17453.09,REASSORT_URGENT_AUTOMATIQUE
+MAG-0048,Intermarché Strasbourg #48,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1733,86.9,2066.95,CONFORME
+MAG-0048,Intermarché Strasbourg #48,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1080,62.9,1731.07,CONFORME
+MAG-0049,Auchan Super Paris #49,Auchan Super,Paris,75 - Paris,Île-de-France,08h-11h,1077,67.9,6683.74,CONFORME
+MAG-0049,Auchan Super Paris #49,Auchan Super,Paris,75 - Paris,Île-de-France,11h-14h,2172,87.3,1403.86,CONFORME
+MAG-0049,Auchan Super Paris #49,Auchan Super,Paris,75 - Paris,Île-de-France,14h-17h,2012,81.8,17416.74,REASSORT_URGENT_AUTOMATIQUE
+MAG-0049,Auchan Super Paris #49,Auchan Super,Paris,75 - Paris,Île-de-France,17h-20h,2739,64.7,6278.63,CONFORME
+MAG-0050,E.Leclerc Lille #50,E.Leclerc,Lille,59 - Nord,Hauts-de-France,08h-11h,1438,75.2,7293.17,CONFORME
+MAG-0050,E.Leclerc Lille #50,E.Leclerc,Lille,59 - Nord,Hauts-de-France,11h-14h,1248,81.8,4459.51,CONFORME
+MAG-0050,E.Leclerc Lille #50,E.Leclerc,Lille,59 - Nord,Hauts-de-France,14h-17h,911,62.5,14346.02,REASSORT_URGENT_AUTOMATIQUE
+MAG-0050,E.Leclerc Lille #50,E.Leclerc,Lille,59 - Nord,Hauts-de-France,17h-20h,553,64.5,8597.51,CONFORME
+MAG-0051,Intermarché Marseille #51,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2773,76.0,15098.44,REASSORT_URGENT_AUTOMATIQUE
+MAG-0051,Intermarché Marseille #51,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2347,84.3,8191.05,CONFORME
+MAG-0051,Intermarché Marseille #51,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1809,63.2,13481.28,REASSORT_URGENT_AUTOMATIQUE
+MAG-0051,Intermarché Marseille #51,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,496,66.6,14480.74,REASSORT_URGENT_AUTOMATIQUE
+MAG-0052,Auchan Super Bordeaux #52,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,902,70.5,16911.7,REASSORT_URGENT_AUTOMATIQUE
+MAG-0052,Auchan Super Bordeaux #52,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1171,70.2,5053.96,CONFORME
+MAG-0052,Auchan Super Bordeaux #52,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2378,64.6,12260.9,REASSORT_URGENT_AUTOMATIQUE
+MAG-0052,Auchan Super Bordeaux #52,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1609,80.9,18382.52,REASSORT_URGENT_AUTOMATIQUE
+MAG-0053,Auchan Super Bordeaux #53,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1640,87.3,9371.38,CONFORME
+MAG-0053,Auchan Super Bordeaux #53,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1754,73.4,10426.07,CONFORME
+MAG-0053,Auchan Super Bordeaux #53,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2660,63.4,6382.06,CONFORME
+MAG-0053,Auchan Super Bordeaux #53,Auchan Super,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,794,77.0,15242.95,REASSORT_URGENT_AUTOMATIQUE
+MAG-0054,Monoprix Marseille #54,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1321,79.3,11138.27,CONFORME
+MAG-0054,Monoprix Marseille #54,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,574,63.6,4992.07,CONFORME
+MAG-0054,Monoprix Marseille #54,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1653,74.2,18337.54,REASSORT_URGENT_AUTOMATIQUE
+MAG-0054,Monoprix Marseille #54,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2337,75.2,10619.03,CONFORME
+MAG-0055,Monoprix Paris #55,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,2259,87.6,4454.71,CONFORME
+MAG-0055,Monoprix Paris #55,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,2405,80.2,10437.46,CONFORME
+MAG-0055,Monoprix Paris #55,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,2617,79.8,4432.5,CONFORME
+MAG-0055,Monoprix Paris #55,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,557,79.9,13205.45,REASSORT_URGENT_AUTOMATIQUE
+MAG-0056,Auchan Super Paris #56,Auchan Super,Paris,75 - Paris,Île-de-France,08h-11h,1856,79.3,1627.65,CONFORME
+MAG-0056,Auchan Super Paris #56,Auchan Super,Paris,75 - Paris,Île-de-France,11h-14h,2606,69.0,12742.67,REASSORT_URGENT_AUTOMATIQUE
+MAG-0056,Auchan Super Paris #56,Auchan Super,Paris,75 - Paris,Île-de-France,14h-17h,359,77.9,5157.65,CONFORME
+MAG-0056,Auchan Super Paris #56,Auchan Super,Paris,75 - Paris,Île-de-France,17h-20h,2722,69.1,11614.99,CONFORME
+MAG-0057,Monoprix Lille #57,Monoprix,Lille,59 - Nord,Hauts-de-France,08h-11h,587,65.8,14479.78,REASSORT_URGENT_AUTOMATIQUE
+MAG-0057,Monoprix Lille #57,Monoprix,Lille,59 - Nord,Hauts-de-France,11h-14h,1724,83.3,14244.97,REASSORT_URGENT_AUTOMATIQUE
+MAG-0057,Monoprix Lille #57,Monoprix,Lille,59 - Nord,Hauts-de-France,14h-17h,2782,66.3,12622.09,REASSORT_URGENT_AUTOMATIQUE
+MAG-0057,Monoprix Lille #57,Monoprix,Lille,59 - Nord,Hauts-de-France,17h-20h,1340,73.3,15131.49,REASSORT_URGENT_AUTOMATIQUE
+MAG-0058,E.Leclerc Marseille #58,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2651,74.1,13658.57,REASSORT_URGENT_AUTOMATIQUE
+MAG-0058,E.Leclerc Marseille #58,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1832,76.4,13373.16,REASSORT_URGENT_AUTOMATIQUE
+MAG-0058,E.Leclerc Marseille #58,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2243,69.4,6748.13,CONFORME
+MAG-0058,E.Leclerc Marseille #58,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,493,62.1,12470.63,REASSORT_URGENT_AUTOMATIQUE
+MAG-0059,Intermarché Lille #59,Intermarché,Lille,59 - Nord,Hauts-de-France,08h-11h,1346,71.2,4679.56,CONFORME
+MAG-0059,Intermarché Lille #59,Intermarché,Lille,59 - Nord,Hauts-de-France,11h-14h,1810,84.5,13136.66,REASSORT_URGENT_AUTOMATIQUE
+MAG-0059,Intermarché Lille #59,Intermarché,Lille,59 - Nord,Hauts-de-France,14h-17h,2514,65.8,6951.36,CONFORME
+MAG-0059,Intermarché Lille #59,Intermarché,Lille,59 - Nord,Hauts-de-France,17h-20h,2798,86.5,12774.03,REASSORT_URGENT_AUTOMATIQUE
+MAG-0060,E.Leclerc Nantes #60,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2223,79.5,11266.96,CONFORME
+MAG-0060,E.Leclerc Nantes #60,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1523,86.7,5896.9,CONFORME
+MAG-0060,E.Leclerc Nantes #60,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,594,66.1,3029.42,CONFORME
+MAG-0060,E.Leclerc Nantes #60,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2628,82.9,12787.16,REASSORT_URGENT_AUTOMATIQUE
+MAG-0061,E.Leclerc Strasbourg #61,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1197,78.7,6459.68,CONFORME
+MAG-0061,E.Leclerc Strasbourg #61,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1386,88.3,9051.64,CONFORME
+MAG-0061,E.Leclerc Strasbourg #61,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,708,70.8,3837.88,CONFORME
+MAG-0061,E.Leclerc Strasbourg #61,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1608,63.4,8349.09,CONFORME
+MAG-0062,Auchan Super Nantes #62,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1851,69.5,1700.24,CONFORME
+MAG-0062,Auchan Super Nantes #62,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,729,86.8,14110.82,REASSORT_URGENT_AUTOMATIQUE
+MAG-0062,Auchan Super Nantes #62,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2306,71.1,9916.59,CONFORME
+MAG-0062,Auchan Super Nantes #62,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,664,65.9,11943.73,CONFORME
+MAG-0063,Intermarché Marseille #63,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2712,81.0,12928.68,REASSORT_URGENT_AUTOMATIQUE
+MAG-0063,Intermarché Marseille #63,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,811,71.8,15567.71,REASSORT_URGENT_AUTOMATIQUE
+MAG-0063,Intermarché Marseille #63,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1598,64.1,1444.44,CONFORME
+MAG-0063,Intermarché Marseille #63,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1058,71.7,10524.34,CONFORME
+MAG-0064,Intermarché Lille #64,Intermarché,Lille,59 - Nord,Hauts-de-France,08h-11h,1763,68.0,16511.98,REASSORT_URGENT_AUTOMATIQUE
+MAG-0064,Intermarché Lille #64,Intermarché,Lille,59 - Nord,Hauts-de-France,11h-14h,1635,83.9,14254.2,REASSORT_URGENT_AUTOMATIQUE
+MAG-0064,Intermarché Lille #64,Intermarché,Lille,59 - Nord,Hauts-de-France,14h-17h,1756,66.5,4726.46,CONFORME
+MAG-0064,Intermarché Lille #64,Intermarché,Lille,59 - Nord,Hauts-de-France,17h-20h,1305,76.8,14310.81,REASSORT_URGENT_AUTOMATIQUE
+MAG-0065,Auchan Super Nantes #65,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2740,72.3,7426.12,CONFORME
+MAG-0065,Auchan Super Nantes #65,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,2251,86.0,11774.83,CONFORME
+MAG-0065,Auchan Super Nantes #65,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1598,67.8,8629.7,CONFORME
+MAG-0065,Auchan Super Nantes #65,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2652,81.5,13042.81,REASSORT_URGENT_AUTOMATIQUE
+MAG-0066,Auchan Super Toulouse #66,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1024,76.2,13460.94,REASSORT_URGENT_AUTOMATIQUE
+MAG-0066,Auchan Super Toulouse #66,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,434,81.2,11518.93,CONFORME
+MAG-0066,Auchan Super Toulouse #66,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,657,63.3,8230.22,CONFORME
+MAG-0066,Auchan Super Toulouse #66,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1840,64.1,11407.92,CONFORME
+MAG-0067,Carrefour Hyper Strasbourg #67,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,950,76.8,8214.09,CONFORME
+MAG-0067,Carrefour Hyper Strasbourg #67,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1251,82.1,7924.6,CONFORME
+MAG-0067,Carrefour Hyper Strasbourg #67,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1139,68.0,11266.25,CONFORME
+MAG-0067,Carrefour Hyper Strasbourg #67,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,902,66.9,1595.71,CONFORME
+MAG-0068,Monoprix Toulouse #68,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1728,68.5,18070.47,REASSORT_URGENT_AUTOMATIQUE
+MAG-0068,Monoprix Toulouse #68,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2496,70.3,1493.61,CONFORME
+MAG-0068,Monoprix Toulouse #68,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2799,69.1,6161.79,CONFORME
+MAG-0068,Monoprix Toulouse #68,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2391,67.5,3999.16,CONFORME
+MAG-0069,Carrefour Hyper Toulouse #69,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1131,82.4,6998.29,CONFORME
+MAG-0069,Carrefour Hyper Toulouse #69,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1023,79.4,16133.89,REASSORT_URGENT_AUTOMATIQUE
+MAG-0069,Carrefour Hyper Toulouse #69,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,726,83.1,8385.48,CONFORME
+MAG-0069,Carrefour Hyper Toulouse #69,Carrefour Hyper,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2440,71.3,9295.15,CONFORME
+MAG-0070,E.Leclerc Toulouse #70,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,2011,81.1,6862.04,CONFORME
+MAG-0070,E.Leclerc Toulouse #70,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2498,63.1,8007.58,CONFORME
+MAG-0070,E.Leclerc Toulouse #70,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,1785,87.6,17084.4,REASSORT_URGENT_AUTOMATIQUE
+MAG-0070,E.Leclerc Toulouse #70,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2637,69.5,17485.14,REASSORT_URGENT_AUTOMATIQUE
+MAG-0071,Monoprix Lyon #71,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,2320,87.6,9944.91,CONFORME
+MAG-0071,Monoprix Lyon #71,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1236,86.5,9291.48,CONFORME
+MAG-0071,Monoprix Lyon #71,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,656,64.5,17804.48,REASSORT_URGENT_AUTOMATIQUE
+MAG-0071,Monoprix Lyon #71,Monoprix,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1229,83.8,17529.99,REASSORT_URGENT_AUTOMATIQUE
+MAG-0072,Intermarché Bordeaux #72,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2266,65.9,11689.65,CONFORME
+MAG-0072,Intermarché Bordeaux #72,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,861,81.7,10479.34,CONFORME
+MAG-0072,Intermarché Bordeaux #72,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1465,79.7,4829.99,CONFORME
+MAG-0072,Intermarché Bordeaux #72,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2696,69.7,8099.05,CONFORME
+MAG-0073,Auchan Super Strasbourg #73,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,623,72.2,13113.41,REASSORT_URGENT_AUTOMATIQUE
+MAG-0073,Auchan Super Strasbourg #73,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1897,65.1,5398.22,CONFORME
+MAG-0073,Auchan Super Strasbourg #73,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1842,78.7,10703.79,CONFORME
+MAG-0073,Auchan Super Strasbourg #73,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,479,80.5,10807.01,CONFORME
+MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1868,77.6,12695.8,REASSORT_URGENT_AUTOMATIQUE
+MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,759,87.6,13488.21,REASSORT_URGENT_AUTOMATIQUE
+MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1171,84.8,8644.97,CONFORME
+MAG-0074,Carrefour Hyper Bordeaux #74,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1745,76.3,4527.07,CONFORME
+MAG-0075,Intermarché Toulouse #75,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1172,70.9,5617.41,CONFORME
+MAG-0075,Intermarché Toulouse #75,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2299,78.9,12596.6,REASSORT_URGENT_AUTOMATIQUE
+MAG-0075,Intermarché Toulouse #75,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2503,62.8,15862.05,REASSORT_URGENT_AUTOMATIQUE
+MAG-0075,Intermarché Toulouse #75,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2257,79.3,3887.04,CONFORME
+MAG-0076,Intermarché Marseille #76,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1080,83.5,5989.04,CONFORME
+MAG-0076,Intermarché Marseille #76,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2633,66.7,1235.7,CONFORME
+MAG-0076,Intermarché Marseille #76,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,829,66.0,16150.93,REASSORT_URGENT_AUTOMATIQUE
+MAG-0076,Intermarché Marseille #76,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2233,77.3,6651.16,CONFORME
+MAG-0077,Carrefour Hyper Lille #77,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,910,81.4,10300.98,CONFORME
+MAG-0077,Carrefour Hyper Lille #77,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,1648,79.7,11365.22,CONFORME
+MAG-0077,Carrefour Hyper Lille #77,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,1147,68.8,6017.83,CONFORME
+MAG-0077,Carrefour Hyper Lille #77,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,977,76.7,6884.38,CONFORME
+MAG-0078,Monoprix Marseille #78,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,885,84.9,3142.15,CONFORME
+MAG-0078,Monoprix Marseille #78,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1450,70.4,14351.54,REASSORT_URGENT_AUTOMATIQUE
+MAG-0078,Monoprix Marseille #78,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1347,72.7,11179.33,CONFORME
+MAG-0078,Monoprix Marseille #78,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2224,74.9,10430.59,CONFORME
+MAG-0079,E.Leclerc Lille #79,E.Leclerc,Lille,59 - Nord,Hauts-de-France,08h-11h,1584,82.7,10963.22,CONFORME
+MAG-0079,E.Leclerc Lille #79,E.Leclerc,Lille,59 - Nord,Hauts-de-France,11h-14h,358,73.7,13552.42,REASSORT_URGENT_AUTOMATIQUE
+MAG-0079,E.Leclerc Lille #79,E.Leclerc,Lille,59 - Nord,Hauts-de-France,14h-17h,464,72.3,6618.27,CONFORME
+MAG-0079,E.Leclerc Lille #79,E.Leclerc,Lille,59 - Nord,Hauts-de-France,17h-20h,2064,86.2,15363.0,REASSORT_URGENT_AUTOMATIQUE
+MAG-0080,Auchan Super Nantes #80,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1055,85.8,12710.6,REASSORT_URGENT_AUTOMATIQUE
+MAG-0080,Auchan Super Nantes #80,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,919,80.4,15674.08,REASSORT_URGENT_AUTOMATIQUE
+MAG-0080,Auchan Super Nantes #80,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,799,81.5,5887.99,CONFORME
+MAG-0080,Auchan Super Nantes #80,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1518,71.9,12571.1,REASSORT_URGENT_AUTOMATIQUE
+MAG-0081,Auchan Super Strasbourg #81,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1257,66.0,8498.83,CONFORME
+MAG-0081,Auchan Super Strasbourg #81,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,487,86.4,2452.69,CONFORME
+MAG-0081,Auchan Super Strasbourg #81,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1700,72.9,5607.22,CONFORME
+MAG-0081,Auchan Super Strasbourg #81,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1206,72.3,12336.9,REASSORT_URGENT_AUTOMATIQUE
+MAG-0082,Auchan Super Lyon #82,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,783,82.4,11265.26,CONFORME
+MAG-0082,Auchan Super Lyon #82,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1625,66.6,15501.49,REASSORT_URGENT_AUTOMATIQUE
+MAG-0082,Auchan Super Lyon #82,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2448,64.7,3824.16,CONFORME
+MAG-0082,Auchan Super Lyon #82,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1200,71.1,8108.45,CONFORME
+MAG-0083,E.Leclerc Lille #83,E.Leclerc,Lille,59 - Nord,Hauts-de-France,08h-11h,966,63.7,16022.1,REASSORT_URGENT_AUTOMATIQUE
+MAG-0083,E.Leclerc Lille #83,E.Leclerc,Lille,59 - Nord,Hauts-de-France,11h-14h,1061,75.7,2060.13,CONFORME
+MAG-0083,E.Leclerc Lille #83,E.Leclerc,Lille,59 - Nord,Hauts-de-France,14h-17h,2726,62.4,1271.41,CONFORME
+MAG-0083,E.Leclerc Lille #83,E.Leclerc,Lille,59 - Nord,Hauts-de-France,17h-20h,2000,73.2,14503.3,REASSORT_URGENT_AUTOMATIQUE
+MAG-0084,E.Leclerc Lyon #84,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,2599,86.8,2691.5,CONFORME
+MAG-0084,E.Leclerc Lyon #84,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,1667,88.3,14796.66,REASSORT_URGENT_AUTOMATIQUE
+MAG-0084,E.Leclerc Lyon #84,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,1772,72.7,16433.62,REASSORT_URGENT_AUTOMATIQUE
+MAG-0084,E.Leclerc Lyon #84,E.Leclerc,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,2636,81.1,9177.63,CONFORME
+MAG-0085,E.Leclerc Nantes #85,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1187,64.0,9280.38,CONFORME
+MAG-0085,E.Leclerc Nantes #85,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,645,69.5,8287.43,CONFORME
+MAG-0085,E.Leclerc Nantes #85,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1827,69.6,18229.66,REASSORT_URGENT_AUTOMATIQUE
+MAG-0085,E.Leclerc Nantes #85,E.Leclerc,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,504,71.3,17174.65,REASSORT_URGENT_AUTOMATIQUE
+MAG-0086,Auchan Super Lyon #86,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,2519,72.1,4287.25,CONFORME
+MAG-0086,Auchan Super Lyon #86,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2113,77.2,2933.75,CONFORME
+MAG-0086,Auchan Super Lyon #86,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,968,75.4,11474.67,CONFORME
+MAG-0086,Auchan Super Lyon #86,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1539,73.5,6480.09,CONFORME
+MAG-0087,Carrefour Hyper Bordeaux #87,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1412,74.9,3914.65,CONFORME
+MAG-0087,Carrefour Hyper Bordeaux #87,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1259,84.4,18467.57,REASSORT_URGENT_AUTOMATIQUE
+MAG-0087,Carrefour Hyper Bordeaux #87,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2701,77.5,9962.5,CONFORME
+MAG-0087,Carrefour Hyper Bordeaux #87,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2317,73.4,12557.8,REASSORT_URGENT_AUTOMATIQUE
+MAG-0088,Monoprix Marseille #88,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2532,75.1,14875.6,REASSORT_URGENT_AUTOMATIQUE
+MAG-0088,Monoprix Marseille #88,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,529,65.9,8761.17,CONFORME
+MAG-0088,Monoprix Marseille #88,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1238,77.6,16627.11,REASSORT_URGENT_AUTOMATIQUE
+MAG-0088,Monoprix Marseille #88,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,488,68.2,5720.3,CONFORME
+MAG-0089,Intermarché Bordeaux #89,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1129,72.8,10929.11,CONFORME
+MAG-0089,Intermarché Bordeaux #89,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,780,66.1,10504.16,CONFORME
+MAG-0089,Intermarché Bordeaux #89,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2521,80.5,3756.16,CONFORME
+MAG-0089,Intermarché Bordeaux #89,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2006,66.9,9994.48,CONFORME
+MAG-0090,Intermarché Toulouse #90,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,1748,80.2,3906.11,CONFORME
+MAG-0090,Intermarché Toulouse #90,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,570,83.6,10780.69,CONFORME
+MAG-0090,Intermarché Toulouse #90,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2522,72.2,6899.06,CONFORME
+MAG-0090,Intermarché Toulouse #90,Intermarché,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2501,71.1,12812.65,REASSORT_URGENT_AUTOMATIQUE
+MAG-0091,Monoprix Bordeaux #91,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1304,68.6,8737.82,CONFORME
+MAG-0091,Monoprix Bordeaux #91,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1788,67.1,14466.7,REASSORT_URGENT_AUTOMATIQUE
+MAG-0091,Monoprix Bordeaux #91,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1392,70.9,8590.71,CONFORME
+MAG-0091,Monoprix Bordeaux #91,Monoprix,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,398,69.4,18361.73,REASSORT_URGENT_AUTOMATIQUE
+MAG-0092,Intermarché Rennes #92,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2023,87.2,10752.66,CONFORME
+MAG-0092,Intermarché Rennes #92,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,2463,74.0,7054.18,CONFORME
+MAG-0092,Intermarché Rennes #92,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1213,74.2,3818.76,CONFORME
+MAG-0092,Intermarché Rennes #92,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2297,66.6,7703.41,CONFORME
+MAG-0093,E.Leclerc Paris #93,E.Leclerc,Paris,75 - Paris,Île-de-France,08h-11h,526,64.3,5062.81,CONFORME
+MAG-0093,E.Leclerc Paris #93,E.Leclerc,Paris,75 - Paris,Île-de-France,11h-14h,1422,79.7,17308.34,REASSORT_URGENT_AUTOMATIQUE
+MAG-0093,E.Leclerc Paris #93,E.Leclerc,Paris,75 - Paris,Île-de-France,14h-17h,2561,78.6,6291.3,CONFORME
+MAG-0093,E.Leclerc Paris #93,E.Leclerc,Paris,75 - Paris,Île-de-France,17h-20h,1708,70.8,7982.37,CONFORME
+MAG-0094,Auchan Super Strasbourg #94,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,476,81.0,10292.81,CONFORME
+MAG-0094,Auchan Super Strasbourg #94,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1070,83.3,9815.76,CONFORME
+MAG-0094,Auchan Super Strasbourg #94,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,2463,71.5,5152.55,CONFORME
+MAG-0094,Auchan Super Strasbourg #94,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1883,68.3,17065.92,REASSORT_URGENT_AUTOMATIQUE
+MAG-0095,Auchan Super Rennes #95,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,621,88.3,18002.66,REASSORT_URGENT_AUTOMATIQUE
+MAG-0095,Auchan Super Rennes #95,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,2534,84.1,2364.24,CONFORME
+MAG-0095,Auchan Super Rennes #95,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1582,73.5,1999.6,CONFORME
+MAG-0095,Auchan Super Rennes #95,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,701,67.3,8268.78,CONFORME
+MAG-0096,Auchan Super Toulouse #96,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,850,72.9,13312.3,REASSORT_URGENT_AUTOMATIQUE
+MAG-0096,Auchan Super Toulouse #96,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2106,76.4,12952.6,REASSORT_URGENT_AUTOMATIQUE
+MAG-0096,Auchan Super Toulouse #96,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,884,71.1,13350.33,REASSORT_URGENT_AUTOMATIQUE
+MAG-0096,Auchan Super Toulouse #96,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,2517,77.1,18025.76,REASSORT_URGENT_AUTOMATIQUE
+MAG-0097,E.Leclerc Toulouse #97,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,561,87.1,16003.19,REASSORT_URGENT_AUTOMATIQUE
+MAG-0097,E.Leclerc Toulouse #97,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,1182,77.9,13896.94,REASSORT_URGENT_AUTOMATIQUE
+MAG-0097,E.Leclerc Toulouse #97,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,726,76.6,11256.42,CONFORME
+MAG-0097,E.Leclerc Toulouse #97,E.Leclerc,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,522,82.3,11127.67,CONFORME
+MAG-0098,Intermarché Paris #98,Intermarché,Paris,75 - Paris,Île-de-France,08h-11h,964,85.6,8569.62,CONFORME
+MAG-0098,Intermarché Paris #98,Intermarché,Paris,75 - Paris,Île-de-France,11h-14h,2363,64.2,1667.23,CONFORME
+MAG-0098,Intermarché Paris #98,Intermarché,Paris,75 - Paris,Île-de-France,14h-17h,1520,62.3,3297.71,CONFORME
+MAG-0098,Intermarché Paris #98,Intermarché,Paris,75 - Paris,Île-de-France,17h-20h,583,74.2,13008.19,REASSORT_URGENT_AUTOMATIQUE
+MAG-0099,Auchan Super Lyon #99,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1601,71.3,6197.64,CONFORME
+MAG-0099,Auchan Super Lyon #99,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2697,66.4,6551.22,CONFORME
+MAG-0099,Auchan Super Lyon #99,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,722,64.4,16818.12,REASSORT_URGENT_AUTOMATIQUE
+MAG-0099,Auchan Super Lyon #99,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,825,79.5,4571.66,CONFORME
+MAG-0100,Intermarché Marseille #100,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1429,79.0,2746.63,CONFORME
+MAG-0100,Intermarché Marseille #100,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1670,81.0,2418.72,CONFORME
+MAG-0100,Intermarché Marseille #100,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1609,63.5,12477.18,REASSORT_URGENT_AUTOMATIQUE
+MAG-0100,Intermarché Marseille #100,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2508,77.8,16384.83,REASSORT_URGENT_AUTOMATIQUE
+MAG-0101,Auchan Super Lille #101,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,2211,75.2,13805.91,REASSORT_URGENT_AUTOMATIQUE
+MAG-0101,Auchan Super Lille #101,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,1835,67.1,12883.31,REASSORT_URGENT_AUTOMATIQUE
+MAG-0101,Auchan Super Lille #101,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,2733,68.5,11099.14,CONFORME
+MAG-0101,Auchan Super Lille #101,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,1382,67.0,3326.95,CONFORME
+MAG-0102,Carrefour Hyper Paris #102,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,1455,71.7,18186.15,REASSORT_URGENT_AUTOMATIQUE
+MAG-0102,Carrefour Hyper Paris #102,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,2734,63.6,15178.3,REASSORT_URGENT_AUTOMATIQUE
+MAG-0102,Carrefour Hyper Paris #102,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,2446,87.5,14422.97,REASSORT_URGENT_AUTOMATIQUE
+MAG-0102,Carrefour Hyper Paris #102,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,940,82.8,4177.09,CONFORME
+MAG-0103,Carrefour Hyper Rennes #103,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2335,65.5,9102.42,CONFORME
+MAG-0103,Carrefour Hyper Rennes #103,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1447,75.4,7835.79,CONFORME
+MAG-0103,Carrefour Hyper Rennes #103,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,1576,86.2,5643.36,CONFORME
+MAG-0103,Carrefour Hyper Rennes #103,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1624,73.7,14467.99,REASSORT_URGENT_AUTOMATIQUE
+MAG-0104,Intermarché Lille #104,Intermarché,Lille,59 - Nord,Hauts-de-France,08h-11h,833,80.6,15790.58,REASSORT_URGENT_AUTOMATIQUE
+MAG-0104,Intermarché Lille #104,Intermarché,Lille,59 - Nord,Hauts-de-France,11h-14h,1788,80.5,15035.88,REASSORT_URGENT_AUTOMATIQUE
+MAG-0104,Intermarché Lille #104,Intermarché,Lille,59 - Nord,Hauts-de-France,14h-17h,683,64.5,3623.14,CONFORME
+MAG-0104,Intermarché Lille #104,Intermarché,Lille,59 - Nord,Hauts-de-France,17h-20h,1348,82.3,5015.92,CONFORME
+MAG-0105,Monoprix Paris #105,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,1237,68.4,13070.49,REASSORT_URGENT_AUTOMATIQUE
+MAG-0105,Monoprix Paris #105,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,512,70.7,11938.41,CONFORME
+MAG-0105,Monoprix Paris #105,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,2773,65.7,1825.9,CONFORME
+MAG-0105,Monoprix Paris #105,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,703,86.5,1923.65,CONFORME
+MAG-0106,Intermarché Nantes #106,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2623,66.2,11034.76,CONFORME
+MAG-0106,Intermarché Nantes #106,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,1024,76.9,3478.83,CONFORME
+MAG-0106,Intermarché Nantes #106,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,632,87.5,3765.03,CONFORME
+MAG-0106,Intermarché Nantes #106,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2319,85.2,16822.93,REASSORT_URGENT_AUTOMATIQUE
+MAG-0107,Carrefour Hyper Paris #107,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,2663,62.7,13146.16,REASSORT_URGENT_AUTOMATIQUE
+MAG-0107,Carrefour Hyper Paris #107,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,2749,85.2,15639.09,REASSORT_URGENT_AUTOMATIQUE
+MAG-0107,Carrefour Hyper Paris #107,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,628,64.7,18413.96,REASSORT_URGENT_AUTOMATIQUE
+MAG-0107,Carrefour Hyper Paris #107,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,829,83.8,6429.37,CONFORME
+MAG-0108,Carrefour Hyper Rennes #108,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,1650,62.8,16016.86,REASSORT_URGENT_AUTOMATIQUE
+MAG-0108,Carrefour Hyper Rennes #108,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1366,87.2,1794.75,CONFORME
+MAG-0108,Carrefour Hyper Rennes #108,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,879,82.2,4206.61,CONFORME
+MAG-0108,Carrefour Hyper Rennes #108,Carrefour Hyper,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2378,68.4,6848.62,CONFORME
+MAG-0109,Carrefour Hyper Strasbourg #109,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1405,66.5,11589.29,CONFORME
+MAG-0109,Carrefour Hyper Strasbourg #109,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,554,62.6,10418.39,CONFORME
+MAG-0109,Carrefour Hyper Strasbourg #109,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,873,78.9,7181.9,CONFORME
+MAG-0109,Carrefour Hyper Strasbourg #109,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2470,65.5,6362.57,CONFORME
+MAG-0110,Auchan Super Lyon #110,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1249,65.3,5602.12,CONFORME
+MAG-0110,Auchan Super Lyon #110,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2532,66.8,13885.05,REASSORT_URGENT_AUTOMATIQUE
+MAG-0110,Auchan Super Lyon #110,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,790,82.6,15659.42,REASSORT_URGENT_AUTOMATIQUE
+MAG-0110,Auchan Super Lyon #110,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1788,84.9,4126.97,CONFORME
+MAG-0111,Monoprix Toulouse #111,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,2376,64.4,17331.3,REASSORT_URGENT_AUTOMATIQUE
+MAG-0111,Monoprix Toulouse #111,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,2287,87.9,8867.61,CONFORME
+MAG-0111,Monoprix Toulouse #111,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,900,63.3,15995.33,REASSORT_URGENT_AUTOMATIQUE
+MAG-0111,Monoprix Toulouse #111,Monoprix,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1796,79.3,16840.02,REASSORT_URGENT_AUTOMATIQUE
+MAG-0112,Intermarché Strasbourg #112,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,436,66.5,6633.49,CONFORME
+MAG-0112,Intermarché Strasbourg #112,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1478,84.4,1397.27,CONFORME
+MAG-0112,Intermarché Strasbourg #112,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,546,79.9,13536.89,REASSORT_URGENT_AUTOMATIQUE
+MAG-0112,Intermarché Strasbourg #112,Intermarché,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1028,83.6,8285.55,CONFORME
+MAG-0113,Intermarché Nantes #113,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1270,82.6,10431.91,CONFORME
+MAG-0113,Intermarché Nantes #113,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,389,78.1,4381.91,CONFORME
+MAG-0113,Intermarché Nantes #113,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,1092,72.6,7358.13,CONFORME
+MAG-0113,Intermarché Nantes #113,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,928,75.7,5218.99,CONFORME
+MAG-0114,Monoprix Paris #114,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,870,67.5,16285.67,REASSORT_URGENT_AUTOMATIQUE
+MAG-0114,Monoprix Paris #114,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,2584,79.5,11199.66,CONFORME
+MAG-0114,Monoprix Paris #114,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,1027,67.7,5905.28,CONFORME
+MAG-0114,Monoprix Paris #114,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,2718,76.1,6942.92,CONFORME
+MAG-0115,Intermarché Rennes #115,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,528,65.5,3499.37,CONFORME
+MAG-0115,Intermarché Rennes #115,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,367,76.7,8871.74,CONFORME
+MAG-0115,Intermarché Rennes #115,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,403,82.0,2495.42,CONFORME
+MAG-0115,Intermarché Rennes #115,Intermarché,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,578,66.7,13208.7,REASSORT_URGENT_AUTOMATIQUE
+MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1621,77.2,15111.25,REASSORT_URGENT_AUTOMATIQUE
+MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,2717,63.0,5131.38,CONFORME
+MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1541,74.8,4340.34,CONFORME
+MAG-0116,Monoprix Strasbourg #116,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1800,69.6,18018.83,REASSORT_URGENT_AUTOMATIQUE
+MAG-0117,Carrefour Hyper Bordeaux #117,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,682,71.1,17607.43,REASSORT_URGENT_AUTOMATIQUE
+MAG-0117,Carrefour Hyper Bordeaux #117,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1449,86.2,7168.2,CONFORME
+MAG-0117,Carrefour Hyper Bordeaux #117,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1414,64.8,10847.03,CONFORME
+MAG-0117,Carrefour Hyper Bordeaux #117,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1048,66.4,2053.8,CONFORME
+MAG-0118,Auchan Super Strasbourg #118,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1016,73.3,8326.62,CONFORME
+MAG-0118,Auchan Super Strasbourg #118,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1233,64.8,5878.8,CONFORME
+MAG-0118,Auchan Super Strasbourg #118,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1408,65.4,14996.35,REASSORT_URGENT_AUTOMATIQUE
+MAG-0118,Auchan Super Strasbourg #118,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,1432,63.0,16497.9,REASSORT_URGENT_AUTOMATIQUE
+MAG-0119,Carrefour Hyper Lille #119,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,621,66.2,14127.59,REASSORT_URGENT_AUTOMATIQUE
+MAG-0119,Carrefour Hyper Lille #119,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,1053,83.4,6884.3,CONFORME
+MAG-0119,Carrefour Hyper Lille #119,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,1298,80.9,2855.62,CONFORME
+MAG-0119,Carrefour Hyper Lille #119,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,2007,82.1,13553.69,REASSORT_URGENT_AUTOMATIQUE
+MAG-0120,Monoprix Strasbourg #120,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,373,76.7,4781.85,CONFORME
+MAG-0120,Monoprix Strasbourg #120,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1967,81.8,14138.1,REASSORT_URGENT_AUTOMATIQUE
+MAG-0120,Monoprix Strasbourg #120,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1899,65.3,14759.16,REASSORT_URGENT_AUTOMATIQUE
+MAG-0120,Monoprix Strasbourg #120,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,624,73.9,9510.86,CONFORME
+MAG-0121,Monoprix Paris #121,Monoprix,Paris,75 - Paris,Île-de-France,08h-11h,1058,71.0,2598.1,CONFORME
+MAG-0121,Monoprix Paris #121,Monoprix,Paris,75 - Paris,Île-de-France,11h-14h,562,62.5,14617.91,REASSORT_URGENT_AUTOMATIQUE
+MAG-0121,Monoprix Paris #121,Monoprix,Paris,75 - Paris,Île-de-France,14h-17h,1478,84.3,13615.1,REASSORT_URGENT_AUTOMATIQUE
+MAG-0121,Monoprix Paris #121,Monoprix,Paris,75 - Paris,Île-de-France,17h-20h,1135,71.4,18010.86,REASSORT_URGENT_AUTOMATIQUE
+MAG-0122,Intermarché Marseille #122,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2386,71.5,4508.48,CONFORME
+MAG-0122,Intermarché Marseille #122,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,827,68.3,17139.32,REASSORT_URGENT_AUTOMATIQUE
+MAG-0122,Intermarché Marseille #122,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1094,77.5,11277.46,CONFORME
+MAG-0122,Intermarché Marseille #122,Intermarché,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,1865,71.8,10831.2,CONFORME
+MAG-0123,Auchan Super Strasbourg #123,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1097,77.4,18456.11,REASSORT_URGENT_AUTOMATIQUE
+MAG-0123,Auchan Super Strasbourg #123,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,2731,86.7,1863.33,CONFORME
+MAG-0123,Auchan Super Strasbourg #123,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,870,63.3,6380.19,CONFORME
+MAG-0123,Auchan Super Strasbourg #123,Auchan Super,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,457,64.9,7914.41,CONFORME
+MAG-0124,Carrefour Hyper Strasbourg #124,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,2346,85.0,3048.6,CONFORME
+MAG-0124,Carrefour Hyper Strasbourg #124,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1679,81.4,13356.66,REASSORT_URGENT_AUTOMATIQUE
+MAG-0124,Carrefour Hyper Strasbourg #124,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1697,82.8,6308.0,CONFORME
+MAG-0124,Carrefour Hyper Strasbourg #124,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2447,72.0,16337.77,REASSORT_URGENT_AUTOMATIQUE
+MAG-0125,Intermarché Bordeaux #125,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,2230,83.2,11629.83,CONFORME
+MAG-0125,Intermarché Bordeaux #125,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,643,68.6,13104.6,REASSORT_URGENT_AUTOMATIQUE
+MAG-0125,Intermarché Bordeaux #125,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2714,68.0,11153.86,CONFORME
+MAG-0125,Intermarché Bordeaux #125,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2264,73.5,10465.94,CONFORME
+MAG-0126,E.Leclerc Strasbourg #126,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1804,87.9,7701.96,CONFORME
+MAG-0126,E.Leclerc Strasbourg #126,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,1216,85.8,1512.95,CONFORME
+MAG-0126,E.Leclerc Strasbourg #126,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,595,63.2,1911.73,CONFORME
+MAG-0126,E.Leclerc Strasbourg #126,E.Leclerc,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,426,87.9,1616.25,CONFORME
+MAG-0127,Auchan Super Lille #127,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,1301,77.9,3970.75,CONFORME
+MAG-0127,Auchan Super Lille #127,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,2234,87.2,2010.58,CONFORME
+MAG-0127,Auchan Super Lille #127,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,2072,76.0,4352.68,CONFORME
+MAG-0127,Auchan Super Lille #127,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,1212,83.9,16382.43,REASSORT_URGENT_AUTOMATIQUE
+MAG-0128,Auchan Super Nantes #128,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1980,88.1,7231.45,CONFORME
+MAG-0128,Auchan Super Nantes #128,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,754,64.8,4444.16,CONFORME
+MAG-0128,Auchan Super Nantes #128,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,690,86.2,9455.7,CONFORME
+MAG-0128,Auchan Super Nantes #128,Auchan Super,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,790,64.7,9072.91,CONFORME
+MAG-0129,Auchan Super Marseille #129,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1986,71.5,4351.06,CONFORME
+MAG-0129,Auchan Super Marseille #129,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,657,73.4,15674.23,REASSORT_URGENT_AUTOMATIQUE
+MAG-0129,Auchan Super Marseille #129,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1899,67.8,13014.69,REASSORT_URGENT_AUTOMATIQUE
+MAG-0129,Auchan Super Marseille #129,Auchan Super,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,2740,79.4,16152.42,REASSORT_URGENT_AUTOMATIQUE
+MAG-0130,Intermarché Lyon #130,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1217,71.2,8749.08,CONFORME
+MAG-0130,Intermarché Lyon #130,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2715,85.4,7770.13,CONFORME
+MAG-0130,Intermarché Lyon #130,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,1328,75.4,9652.92,CONFORME
+MAG-0130,Intermarché Lyon #130,Intermarché,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1449,82.5,15060.32,REASSORT_URGENT_AUTOMATIQUE
+MAG-0131,Monoprix Strasbourg #131,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1281,71.8,3979.94,CONFORME
+MAG-0131,Monoprix Strasbourg #131,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,903,78.7,13219.08,REASSORT_URGENT_AUTOMATIQUE
+MAG-0131,Monoprix Strasbourg #131,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1220,72.2,8595.6,CONFORME
+MAG-0131,Monoprix Strasbourg #131,Monoprix,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2304,75.9,4198.21,CONFORME
+MAG-0132,Auchan Super Rennes #132,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,507,82.6,7088.92,CONFORME
+MAG-0132,Auchan Super Rennes #132,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1932,67.9,9503.58,CONFORME
+MAG-0132,Auchan Super Rennes #132,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,2490,86.2,10043.62,CONFORME
+MAG-0132,Auchan Super Rennes #132,Auchan Super,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,1576,80.7,7522.15,CONFORME
+MAG-0133,Auchan Super Toulouse #133,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,2579,84.9,13240.96,REASSORT_URGENT_AUTOMATIQUE
+MAG-0133,Auchan Super Toulouse #133,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,421,80.4,11930.34,CONFORME
+MAG-0133,Auchan Super Toulouse #133,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2301,63.2,9344.71,CONFORME
+MAG-0133,Auchan Super Toulouse #133,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,1114,83.4,14765.02,REASSORT_URGENT_AUTOMATIQUE
+MAG-0134,Carrefour Hyper Strasbourg #134,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,08h-11h,1045,77.2,11640.43,CONFORME
+MAG-0134,Carrefour Hyper Strasbourg #134,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,11h-14h,2641,85.3,15473.42,REASSORT_URGENT_AUTOMATIQUE
+MAG-0134,Carrefour Hyper Strasbourg #134,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,14h-17h,1716,67.2,17211.14,REASSORT_URGENT_AUTOMATIQUE
+MAG-0134,Carrefour Hyper Strasbourg #134,Carrefour Hyper,Strasbourg,67 - Bas-Rhin,Grand Est,17h-20h,2571,64.3,6883.31,CONFORME
+MAG-0135,Monoprix Marseille #135,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1304,71.8,2949.84,CONFORME
+MAG-0135,Monoprix Marseille #135,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,2448,80.5,10186.03,CONFORME
+MAG-0135,Monoprix Marseille #135,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,1201,83.7,2076.04,CONFORME
+MAG-0135,Monoprix Marseille #135,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,540,84.8,4315.5,CONFORME
+MAG-0136,E.Leclerc Rennes #136,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,08h-11h,2791,81.1,12912.5,REASSORT_URGENT_AUTOMATIQUE
+MAG-0136,E.Leclerc Rennes #136,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,11h-14h,1489,85.4,9906.98,CONFORME
+MAG-0136,E.Leclerc Rennes #136,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,14h-17h,2699,69.5,8909.31,CONFORME
+MAG-0136,E.Leclerc Rennes #136,E.Leclerc,Rennes,35 - Ille-et-Vilaine,Bretagne,17h-20h,2588,63.1,5146.29,CONFORME
+MAG-0137,Intermarché Nantes #137,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1563,75.4,4007.95,CONFORME
+MAG-0137,Intermarché Nantes #137,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,801,74.2,11273.46,CONFORME
+MAG-0137,Intermarché Nantes #137,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2328,78.2,13413.36,REASSORT_URGENT_AUTOMATIQUE
+MAG-0137,Intermarché Nantes #137,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1891,85.7,9630.52,CONFORME
+MAG-0138,Carrefour Hyper Bordeaux #138,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1496,72.8,4225.48,CONFORME
+MAG-0138,Carrefour Hyper Bordeaux #138,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1766,78.6,15743.43,REASSORT_URGENT_AUTOMATIQUE
+MAG-0138,Carrefour Hyper Bordeaux #138,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,1642,84.1,5400.54,CONFORME
+MAG-0138,Carrefour Hyper Bordeaux #138,Carrefour Hyper,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,1663,76.8,13628.38,REASSORT_URGENT_AUTOMATIQUE
+MAG-0139,Carrefour Hyper Lille #139,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,08h-11h,2113,82.4,14213.77,REASSORT_URGENT_AUTOMATIQUE
+MAG-0139,Carrefour Hyper Lille #139,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,11h-14h,936,66.0,12681.13,REASSORT_URGENT_AUTOMATIQUE
+MAG-0139,Carrefour Hyper Lille #139,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,14h-17h,1249,85.1,12926.8,REASSORT_URGENT_AUTOMATIQUE
+MAG-0139,Carrefour Hyper Lille #139,Carrefour Hyper,Lille,59 - Nord,Hauts-de-France,17h-20h,795,79.8,9706.43,CONFORME
+MAG-0140,Auchan Super Toulouse #140,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,08h-11h,2123,73.5,7030.99,CONFORME
+MAG-0140,Auchan Super Toulouse #140,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,11h-14h,704,70.8,6441.5,CONFORME
+MAG-0140,Auchan Super Toulouse #140,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,14h-17h,2191,74.5,7215.16,CONFORME
+MAG-0140,Auchan Super Toulouse #140,Auchan Super,Toulouse,31 - Haute-Garonne,Occitanie,17h-20h,934,69.5,6214.44,CONFORME
+MAG-0141,Auchan Super Lille #141,Auchan Super,Lille,59 - Nord,Hauts-de-France,08h-11h,1158,78.7,4494.25,CONFORME
+MAG-0141,Auchan Super Lille #141,Auchan Super,Lille,59 - Nord,Hauts-de-France,11h-14h,766,76.8,17888.97,REASSORT_URGENT_AUTOMATIQUE
+MAG-0141,Auchan Super Lille #141,Auchan Super,Lille,59 - Nord,Hauts-de-France,14h-17h,1451,83.5,2309.39,CONFORME
+MAG-0141,Auchan Super Lille #141,Auchan Super,Lille,59 - Nord,Hauts-de-France,17h-20h,1839,70.0,2877.87,CONFORME
+MAG-0142,Auchan Super Lyon #142,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,08h-11h,1971,87.0,11933.14,CONFORME
+MAG-0142,Auchan Super Lyon #142,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11h-14h,2167,69.9,1971.83,CONFORME
+MAG-0142,Auchan Super Lyon #142,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14h-17h,2378,82.5,13923.22,REASSORT_URGENT_AUTOMATIQUE
+MAG-0142,Auchan Super Lyon #142,Auchan Super,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,17h-20h,1468,69.0,10796.56,CONFORME
+MAG-0143,Monoprix Nantes #143,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,1229,71.8,16788.59,REASSORT_URGENT_AUTOMATIQUE
+MAG-0143,Monoprix Nantes #143,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,490,62.1,6698.16,CONFORME
+MAG-0143,Monoprix Nantes #143,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,677,67.5,17255.49,REASSORT_URGENT_AUTOMATIQUE
+MAG-0143,Monoprix Nantes #143,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,1700,65.5,15378.14,REASSORT_URGENT_AUTOMATIQUE
+MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,906,81.0,15591.01,REASSORT_URGENT_AUTOMATIQUE
+MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1163,80.8,8203.94,CONFORME
+MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,719,84.8,17894.15,REASSORT_URGENT_AUTOMATIQUE
+MAG-0144,Intermarché Bordeaux #144,Intermarché,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,440,64.7,18132.4,REASSORT_URGENT_AUTOMATIQUE
+MAG-0145,Monoprix Marseille #145,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,1990,68.9,16480.4,REASSORT_URGENT_AUTOMATIQUE
+MAG-0145,Monoprix Marseille #145,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1678,65.5,2077.05,CONFORME
+MAG-0145,Monoprix Marseille #145,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,2092,70.7,16137.12,REASSORT_URGENT_AUTOMATIQUE
+MAG-0145,Monoprix Marseille #145,Monoprix,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,657,67.0,5680.46,CONFORME
+MAG-0146,Intermarché Nantes #146,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,962,73.4,7697.35,CONFORME
+MAG-0146,Intermarché Nantes #146,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,912,68.6,15580.23,REASSORT_URGENT_AUTOMATIQUE
+MAG-0146,Intermarché Nantes #146,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2791,82.7,17456.45,REASSORT_URGENT_AUTOMATIQUE
+MAG-0146,Intermarché Nantes #146,Intermarché,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,2229,73.9,9235.83,CONFORME
+MAG-0147,E.Leclerc Marseille #147,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,08h-11h,2304,81.2,5466.92,CONFORME
+MAG-0147,E.Leclerc Marseille #147,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11h-14h,1429,85.6,7396.56,CONFORME
+MAG-0147,E.Leclerc Marseille #147,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14h-17h,566,78.8,7047.78,CONFORME
+MAG-0147,E.Leclerc Marseille #147,E.Leclerc,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,17h-20h,850,66.5,10847.6,CONFORME
+MAG-0148,Carrefour Hyper Paris #148,Carrefour Hyper,Paris,75 - Paris,Île-de-France,08h-11h,1129,86.0,14112.56,REASSORT_URGENT_AUTOMATIQUE
+MAG-0148,Carrefour Hyper Paris #148,Carrefour Hyper,Paris,75 - Paris,Île-de-France,11h-14h,2388,71.5,17744.73,REASSORT_URGENT_AUTOMATIQUE
+MAG-0148,Carrefour Hyper Paris #148,Carrefour Hyper,Paris,75 - Paris,Île-de-France,14h-17h,2709,64.2,9557.93,CONFORME
+MAG-0148,Carrefour Hyper Paris #148,Carrefour Hyper,Paris,75 - Paris,Île-de-France,17h-20h,822,88.3,13732.97,REASSORT_URGENT_AUTOMATIQUE
+MAG-0149,Monoprix Nantes #149,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,08h-11h,2044,68.8,16625.99,REASSORT_URGENT_AUTOMATIQUE
+MAG-0149,Monoprix Nantes #149,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,11h-14h,2685,62.5,15152.5,REASSORT_URGENT_AUTOMATIQUE
+MAG-0149,Monoprix Nantes #149,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,14h-17h,2438,73.1,10302.43,CONFORME
+MAG-0149,Monoprix Nantes #149,Monoprix,Nantes,44 - Loire-Atlantique,Pays de la Loire,17h-20h,560,85.0,2638.91,CONFORME
+MAG-0150,E.Leclerc Bordeaux #150,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,08h-11h,1320,68.9,17912.33,REASSORT_URGENT_AUTOMATIQUE
+MAG-0150,E.Leclerc Bordeaux #150,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11h-14h,1463,69.6,5901.29,CONFORME
+MAG-0150,E.Leclerc Bordeaux #150,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14h-17h,2282,70.8,5165.15,CONFORME
+MAG-0150,E.Leclerc Bordeaux #150,E.Leclerc,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,17h-20h,2004,88.1,5791.18,CONFORME

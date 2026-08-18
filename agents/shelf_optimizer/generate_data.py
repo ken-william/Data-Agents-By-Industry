@@ -50,8 +50,7 @@ def main():
     # 1. openfoodfacts_catalog
     if os.path.exists(OFF_CSV_PATH):
         df_off = pd.read_csv(OFF_CSV_PATH, low_memory=False)
-        df_off["produit_image_url"] = df_off["code_barre_ean"].apply(lambda ean: f"gs://talktodata-shelf-optimizer-raw-data/product_images/{ean}.jpg")
-        print(f"  ✓ Parsed {len(df_off)} authentic Open Food Facts product records with GCS Object Table image references.")
+        print(f"  ✓ Parsed {len(df_off)} authentic Open Food Facts product records with real photos.")
     else:
         raise FileNotFoundError(f"Missing base CSV: {OFF_CSV_PATH}")
 
