@@ -32,6 +32,12 @@ PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
 DATASET_ID = "agriculture_rurality_ds"
 BUCKET_NAME = "gs://talktodata-ceres-raw-data"
 
+AGRIBALYSE_CSV_PATH = "agents/ceres/data/agribalyse-31-synthese.csv"
+if os.path.exists(AGRIBALYSE_CSV_PATH):
+    df_agri_base = pd.read_csv(AGRIBALYSE_CSV_PATH, low_memory=False)
+    print(f"Processing base Open Data CSV: '{AGRIBALYSE_CSV_PATH}' ({len(df_agri_base)} ADEME ACV products parsed).")
+
+
 COOPERATIVES_DATA = [
     ("COO_4001", "Coopérative Arterris", "31 - Haute-Garonne", "Occitanie", 450000.0, "Grandes cultures"),
     ("COO_4002", "Coopérative Euralis", "64 - Pyrénées-Atlantiques", "Nouvelle-Aquitaine", 380000.0, "Grandes cultures"),

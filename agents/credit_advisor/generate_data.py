@@ -24,6 +24,13 @@ random.seed(42)
 DATASET_ID = os.environ.get("BIGQUERY_DATASET", "fsi_creditadvisor_dataset")
 PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
 
+# Base CSV Data Ingestion
+BASE_DIREN_CSV = "agents/credit_advisor/data/bdf_defaillances_sectorielles_diren.csv"
+if os.path.exists(BASE_DIREN_CSV):
+    df_diren_base = pd.read_csv(BASE_DIREN_CSV, low_memory=False)
+    print(f"Processing base Open Data CSV: '{BASE_DIREN_CSV}' ({len(df_diren_base)} records parsed).")
+
+
 REGIONS = {
     "Occitanie": ["Toulouse", "Montpellier", "Nîmes", "Perpignan", "Béziers", "Tarbes", "Albi", "Carcassonne"],
     "Île-de-France": ["Paris", "Boulogne-Billancourt", "Saint-Denis", "Versailles", "Nanterre"],
