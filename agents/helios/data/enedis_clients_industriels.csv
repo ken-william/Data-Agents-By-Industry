@@ -1,0 +1,1001 @@
+id_client_indus,raison_sociale,secteur_activite,commune,code_departement,nom_region,consommation_annuelle_mwh,puissance_souscrite_kva,empreinte_carbone_mwh_co2,optin_flexibilite_effacement
+INDUS-00001,Industrie Paris #1,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,19365.4,4610.8,3505.14,False
+INDUS-00002,Industrie Saint-Chamas #2,Agroalimentaire,Saint-Chamas,75 - Paris,Île-de-France,19182.2,4567.2,4277.63,True
+INDUS-00003,Industrie Paris #3,Automobile,Paris,75 - Paris,Île-de-France,22248.5,5297.3,6674.55,True
+INDUS-00004,Industrie Bohain-en-Vermandois #4,Data Centers,Bohain-en-Vermandois,75 - Paris,Île-de-France,25479.4,6066.5,12408.47,True
+INDUS-00005,Industrie Compiègne #5,Agroalimentaire,Compiègne,75 - Paris,Île-de-France,17320.6,4124.0,7049.48,False
+INDUS-00006,Industrie Paris #6,Métallurgie,Paris,75 - Paris,Île-de-France,29615.1,7051.2,5330.72,True
+INDUS-00007,Industrie Paris #7,Automobile,Paris,75 - Paris,Île-de-France,41299.2,9833.1,8714.13,True
+INDUS-00008,Industrie Paris #8,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,4357.5,1037.5,784.35,True
+INDUS-00009,Industrie Paris #9,Métallurgie,Paris,75 - Paris,Île-de-France,24741.9,5890.9,12296.72,False
+INDUS-00010,Industrie Paris #10,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,8398.7,1999.7,4140.56,False
+INDUS-00011,Industrie Paris #11,Métallurgie,Paris,75 - Paris,Île-de-France,9441.5,2248.0,2615.3,True
+INDUS-00012,Industrie Paris #12,Data Centers,Paris,75 - Paris,Île-de-France,15913.3,3788.9,8322.66,False
+INDUS-00013,Industrie Saint-Fons #13,Métallurgie,Saint-Fons,75 - Paris,Île-de-France,37897.7,9023.3,19062.54,True
+INDUS-00014,Industrie Lyon #14,Automobile,Lyon,75 - Paris,Île-de-France,23744.3,5653.4,12370.78,False
+INDUS-00015,Industrie Le Vernet #15,Automobile,Le Vernet,75 - Paris,Île-de-France,30492.1,7260.0,8903.69,True
+INDUS-00016,Industrie Paris #16,Métallurgie,Paris,75 - Paris,Île-de-France,23568.2,5611.5,13433.87,True
+INDUS-00017,Industrie Cesson-Sévigné #17,Automobile,Cesson-Sévigné,75 - Paris,Île-de-France,37955.0,9036.9,17876.81,False
+INDUS-00018,Industrie Franqueville-Saint-Pierre #18,Chimie & Pharmacie,Franqueville-Saint-Pierre,75 - Paris,Île-de-France,17011.1,4050.3,9577.25,False
+INDUS-00019,Industrie Paris #19,Data Centers,Paris,75 - Paris,Île-de-France,20364.4,4848.7,10589.49,False
+INDUS-00020,Industrie Paris #20,Agroalimentaire,Paris,75 - Paris,Île-de-France,16458.4,3918.7,3571.47,False
+INDUS-00021,Industrie Villeurbanne #21,Agroalimentaire,Villeurbanne,75 - Paris,Île-de-France,15576.2,3708.6,8987.47,False
+INDUS-00022,Industrie Paris #22,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,34696.6,8261.1,17452.39,True
+INDUS-00023,Industrie Paris #23,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,32489.0,7735.5,14522.58,True
+INDUS-00024,Industrie Paris #24,Data Centers,Paris,75 - Paris,Île-de-France,5313.9,1265.2,993.7,False
+INDUS-00025,Industrie Paris #25,Agroalimentaire,Paris,75 - Paris,Île-de-France,10842.2,2581.5,3447.82,True
+INDUS-00026,Industrie Paris #26,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,27845.7,6629.9,15704.97,True
+INDUS-00027,Industrie Oberhausbergen #27,Data Centers,Oberhausbergen,75 - Paris,Île-de-France,4570.2,1088.1,735.8,False
+INDUS-00028,Industrie Paris #28,Data Centers,Paris,75 - Paris,Île-de-France,20750.5,4940.6,9960.24,False
+INDUS-00029,Industrie Paris #29,Agroalimentaire,Paris,75 - Paris,Île-de-France,1624.3,386.7,545.76,False
+INDUS-00030,Industrie Villebon-sur-Yvette #30,Data Centers,Villebon-sur-Yvette,75 - Paris,Île-de-France,26427.1,6292.2,7901.7,True
+INDUS-00031,Industrie Ancenis-Saint-Géréon #31,Métallurgie,Ancenis-Saint-Géréon,75 - Paris,Île-de-France,33512.3,7979.1,15147.56,True
+INDUS-00032,Industrie Paris #32,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,1558.8,371.1,240.06,False
+INDUS-00033,Industrie Martigues #33,Data Centers,Martigues,75 - Paris,Île-de-France,12363.9,2943.8,2856.06,False
+INDUS-00034,Industrie Paris #34,Métallurgie,Paris,75 - Paris,Île-de-France,12284.2,2924.8,2972.78,False
+INDUS-00035,Industrie Paris #35,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,20973.6,4993.7,3523.56,True
+INDUS-00036,Industrie Paris #36,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,33923.9,8077.1,11025.27,False
+INDUS-00037,Industrie Paris #37,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,18504.1,4405.7,4885.08,True
+INDUS-00038,Industrie Villetaneuse #38,Métallurgie,Villetaneuse,75 - Paris,Île-de-France,4562.5,1086.3,1263.81,True
+INDUS-00039,Industrie Le Chesnay-Rocquencourt #39,Automobile,Le Chesnay-Rocquencourt,75 - Paris,Île-de-France,13995.6,3332.3,6130.07,False
+INDUS-00040,Industrie Toulouse #40,Data Centers,Toulouse,75 - Paris,Île-de-France,21039.9,5009.5,9510.03,True
+INDUS-00041,Industrie Paris #41,Automobile,Paris,75 - Paris,Île-de-France,4376.2,1042.0,1807.37,False
+INDUS-00042,Industrie Paris #42,Agroalimentaire,Paris,75 - Paris,Île-de-France,37897.9,9023.3,11899.94,True
+INDUS-00043,Industrie Toucy #43,Automobile,Toucy,75 - Paris,Île-de-France,38971.8,9279.0,6352.4,False
+INDUS-00044,Industrie Boën-sur-Lignon #44,Agroalimentaire,Boën-sur-Lignon,75 - Paris,Île-de-France,31648.7,7535.4,6582.93,False
+INDUS-00045,Industrie Paris #45,Métallurgie,Paris,75 - Paris,Île-de-France,32732.3,7793.4,13191.12,False
+INDUS-00046,Industrie Anduze #46,Agroalimentaire,Anduze,75 - Paris,Île-de-France,14391.2,3426.5,4072.71,False
+INDUS-00047,Industrie Saint-Jacques-sur-Darnétal #47,Métallurgie,Saint-Jacques-sur-Darnétal,75 - Paris,Île-de-France,8514.3,2027.2,1788.0,True
+INDUS-00048,Industrie Toulon #48,Chimie & Pharmacie,Toulon,75 - Paris,Île-de-France,14398.6,3428.2,5586.66,False
+INDUS-00049,Industrie Paris #49,Data Centers,Paris,75 - Paris,Île-de-France,41160.1,9800.0,10660.47,True
+INDUS-00050,Industrie Castelnaudary #50,Agroalimentaire,Castelnaudary,75 - Paris,Île-de-France,12283.0,2924.5,2763.68,False
+INDUS-00051,Industrie Paris #51,Métallurgie,Paris,75 - Paris,Île-de-France,41207.5,9811.3,7417.35,True
+INDUS-00052,Industrie Carcassonne #52,Agroalimentaire,Carcassonne,75 - Paris,Île-de-France,4635.4,1103.7,2141.55,True
+INDUS-00053,Industrie Paris #53,Agroalimentaire,Paris,75 - Paris,Île-de-France,38572.0,9183.8,21137.46,False
+INDUS-00054,Industrie Paris #54,Automobile,Paris,75 - Paris,Île-de-France,26720.4,6362.0,7107.63,False
+INDUS-00055,Industrie Toulon #55,Agroalimentaire,Toulon,75 - Paris,Île-de-France,4156.7,989.7,1799.85,False
+INDUS-00056,Industrie Paris #56,Data Centers,Paris,75 - Paris,Île-de-France,23912.5,5693.5,9541.09,True
+INDUS-00057,Industrie Rosières #57,Automobile,Rosières,75 - Paris,Île-de-France,24088.2,5735.3,5154.87,False
+INDUS-00058,Industrie Saint-Jeoire #58,Chimie & Pharmacie,Saint-Jeoire,75 - Paris,Île-de-France,3250.0,773.8,880.75,True
+INDUS-00059,Industrie Courbevoie #59,Agroalimentaire,Courbevoie,75 - Paris,Île-de-France,1257.2,299.3,328.13,False
+INDUS-00060,Industrie Paris #60,Agroalimentaire,Paris,75 - Paris,Île-de-France,12380.0,2947.6,7019.46,True
+INDUS-00061,Industrie Montesson #61,Automobile,Montesson,75 - Paris,Île-de-France,36229.9,8626.2,5760.55,False
+INDUS-00062,Industrie Paris #62,Métallurgie,Paris,75 - Paris,Île-de-France,36151.2,8607.4,15761.92,True
+INDUS-00063,Industrie Lormont #63,Chimie & Pharmacie,Lormont,75 - Paris,Île-de-France,30185.1,7186.9,14760.51,False
+INDUS-00064,Industrie Paris #64,Métallurgie,Paris,75 - Paris,Île-de-France,24667.8,5873.3,4341.53,False
+INDUS-00065,Industrie Paris #65,Automobile,Paris,75 - Paris,Île-de-France,4914.2,1170.0,1493.92,True
+INDUS-00066,Industrie Paris #66,Agroalimentaire,Paris,75 - Paris,Île-de-France,44401.8,10571.9,10967.24,True
+INDUS-00067,Industrie Bron #67,Automobile,Bron,75 - Paris,Île-de-France,8825.5,2101.3,2938.89,True
+INDUS-00068,Industrie Courbevoie #68,Métallurgie,Courbevoie,75 - Paris,Île-de-France,2135.4,508.4,1016.45,False
+INDUS-00069,Industrie Paris #69,Agroalimentaire,Paris,75 - Paris,Île-de-France,3710.1,883.4,2062.82,False
+INDUS-00070,Industrie Paris #70,Data Centers,Paris,75 - Paris,Île-de-France,9179.3,2185.5,5268.92,False
+INDUS-00071,Industrie Paris #71,Agroalimentaire,Paris,75 - Paris,Île-de-France,29989.5,7140.4,6717.65,False
+INDUS-00072,Industrie Paris #72,Data Centers,Paris,75 - Paris,Île-de-France,12901.0,3071.7,6927.84,False
+INDUS-00073,Industrie Paris #73,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,42715.1,10170.3,13113.54,False
+INDUS-00074,Industrie Paris #74,Automobile,Paris,75 - Paris,Île-de-France,43631.5,10388.5,14136.61,False
+INDUS-00075,Industrie Lannemezan #75,Chimie & Pharmacie,Lannemezan,75 - Paris,Île-de-France,35301.0,8405.0,7130.8,True
+INDUS-00076,Industrie Le Mans #76,Agroalimentaire,Le Mans,75 - Paris,Île-de-France,22585.3,5377.5,9824.61,True
+INDUS-00077,Industrie Montlhéry #77,Métallurgie,Montlhéry,75 - Paris,Île-de-France,34068.3,8111.5,17340.76,False
+INDUS-00078,Industrie Condom #78,Agroalimentaire,Condom,75 - Paris,Île-de-France,29153.3,6941.3,4868.6,True
+INDUS-00079,Industrie Domérat #79,Métallurgie,Domérat,75 - Paris,Île-de-France,17422.7,4148.3,5279.08,True
+INDUS-00080,Industrie Paris #80,Métallurgie,Paris,75 - Paris,Île-de-France,3188.5,759.2,1508.16,True
+INDUS-00081,Industrie Paris #81,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,20381.8,4852.8,4810.1,False
+INDUS-00082,Industrie Issy-les-Moulineaux #82,Data Centers,Issy-les-Moulineaux,75 - Paris,Île-de-France,2997.7,713.7,671.48,True
+INDUS-00083,Industrie Paris #83,Agroalimentaire,Paris,75 - Paris,Île-de-France,13601.0,3238.3,2733.8,False
+INDUS-00084,Industrie Le Brusquet #84,Agroalimentaire,Le Brusquet,75 - Paris,Île-de-France,6612.2,1574.3,3597.04,True
+INDUS-00085,Industrie Paris #85,Data Centers,Paris,75 - Paris,Île-de-France,44090.6,10497.8,6304.96,True
+INDUS-00086,Industrie Bourg-lès-Valence #86,Métallurgie,Bourg-lès-Valence,75 - Paris,Île-de-France,19552.1,4655.3,6452.19,True
+INDUS-00087,Industrie Collonges-au-Mont-d'Or #87,Métallurgie,Collonges-au-Mont-d'Or,75 - Paris,Île-de-France,12328.7,2935.4,5005.45,True
+INDUS-00088,Industrie Buchelay #88,Chimie & Pharmacie,Buchelay,75 - Paris,Île-de-France,31167.1,7420.7,7137.27,False
+INDUS-00089,Industrie Antibes #89,Automobile,Antibes,75 - Paris,Île-de-France,36093.5,8593.7,13932.09,False
+INDUS-00090,Industrie Mulsanne #90,Métallurgie,Mulsanne,75 - Paris,Île-de-France,37546.5,8939.6,19336.45,False
+INDUS-00091,Industrie Paris #91,Data Centers,Paris,75 - Paris,Île-de-France,39333.2,9365.0,11367.29,True
+INDUS-00092,Industrie Paris #92,Data Centers,Paris,75 - Paris,Île-de-France,12814.9,3051.2,4062.32,False
+INDUS-00093,Industrie Mulhouse #93,Automobile,Mulhouse,75 - Paris,Île-de-France,17752.8,4226.9,6231.23,True
+INDUS-00094,Industrie Orsay #94,Agroalimentaire,Orsay,75 - Paris,Île-de-France,11619.6,2766.6,4322.49,True
+INDUS-00095,Industrie Guidel #95,Automobile,Guidel,75 - Paris,Île-de-France,44261.8,10538.5,7745.81,False
+INDUS-00096,Industrie Marignane #96,Data Centers,Marignane,75 - Paris,Île-de-France,42052.6,10012.5,11143.94,True
+INDUS-00097,Industrie Paris #97,Data Centers,Paris,75 - Paris,Île-de-France,38880.5,9257.3,7659.46,True
+INDUS-00098,Industrie Bordeaux #98,Agroalimentaire,Bordeaux,75 - Paris,Île-de-France,4985.5,1187.0,608.23,True
+INDUS-00099,Industrie Tassin-la-Demi-Lune #99,Métallurgie,Tassin-la-Demi-Lune,75 - Paris,Île-de-France,34473.3,8207.9,10031.73,False
+INDUS-00100,Industrie La Teste-de-Buch #100,Chimie & Pharmacie,La Teste-de-Buch,75 - Paris,Île-de-France,24867.1,5920.7,8728.35,False
+INDUS-00101,Industrie Montpellier #101,Agroalimentaire,Montpellier,75 - Paris,Île-de-France,34540.3,8223.9,13988.82,False
+INDUS-00102,Industrie Saint-Aunès #102,Métallurgie,Saint-Aunès,75 - Paris,Île-de-France,43957.6,10466.1,7516.75,False
+INDUS-00103,Industrie Paris #103,Agroalimentaire,Paris,75 - Paris,Île-de-France,2034.6,484.4,404.89,True
+INDUS-00104,Industrie Paris #104,Automobile,Paris,75 - Paris,Île-de-France,38974.0,9279.5,19448.03,False
+INDUS-00105,Industrie Paris #105,Métallurgie,Paris,75 - Paris,Île-de-France,17452.2,4155.3,4048.91,True
+INDUS-00106,Industrie Paris #106,Métallurgie,Paris,75 - Paris,Île-de-France,37089.7,8830.9,9680.41,True
+INDUS-00107,Industrie Paris #107,Automobile,Paris,75 - Paris,Île-de-France,8245.2,1963.1,1896.4,False
+INDUS-00108,Industrie Saint-Jean-de-Luz #108,Agroalimentaire,Saint-Jean-de-Luz,75 - Paris,Île-de-France,23580.6,5614.4,6013.05,True
+INDUS-00109,Industrie Puteaux #109,Agroalimentaire,Puteaux,75 - Paris,Île-de-France,20225.6,4815.6,3155.19,True
+INDUS-00110,Industrie Écouflant #110,Agroalimentaire,Écouflant,75 - Paris,Île-de-France,12221.8,2910.0,5829.8,True
+INDUS-00111,Industrie Paris #111,Data Centers,Paris,75 - Paris,Île-de-France,36801.9,8762.4,6918.76,True
+INDUS-00112,Industrie Paris #112,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,8599.5,2047.5,1367.32,False
+INDUS-00113,Industrie Paris #113,Agroalimentaire,Paris,75 - Paris,Île-de-France,25621.3,6100.3,4201.89,False
+INDUS-00114,Industrie Boën-sur-Lignon #114,Chimie & Pharmacie,Boën-sur-Lignon,75 - Paris,Île-de-France,9198.8,2190.2,4268.24,True
+INDUS-00115,Industrie Bordeaux #115,Métallurgie,Bordeaux,75 - Paris,Île-de-France,31195.7,7427.5,5864.79,False
+INDUS-00116,Industrie Paris #116,Data Centers,Paris,75 - Paris,Île-de-France,15991.7,3807.5,9003.33,True
+INDUS-00117,Industrie Paris #117,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,4511.5,1074.2,1854.23,False
+INDUS-00118,Industrie Bonneuil-sur-Marne #118,Chimie & Pharmacie,Bonneuil-sur-Marne,75 - Paris,Île-de-France,19985.8,4758.5,4796.59,True
+INDUS-00119,Industrie Brive-la-Gaillarde #119,Métallurgie,Brive-la-Gaillarde,75 - Paris,Île-de-France,20621.0,4909.8,8722.68,False
+INDUS-00120,Industrie Saint-François #120,Automobile,Saint-François,75 - Paris,Île-de-France,29940.6,7128.7,11946.3,False
+INDUS-00121,Industrie Paris #121,Agroalimentaire,Paris,75 - Paris,Île-de-France,20086.8,4782.6,11208.43,True
+INDUS-00122,Industrie Paris #122,Automobile,Paris,75 - Paris,Île-de-France,14880.6,3543.0,7410.54,False
+INDUS-00123,Industrie Lure #123,Agroalimentaire,Lure,75 - Paris,Île-de-France,2582.8,615.0,777.42,True
+INDUS-00124,Industrie Paris #124,Métallurgie,Paris,75 - Paris,Île-de-France,24481.6,5829.0,8617.52,True
+INDUS-00125,Industrie Pissy-Pôville #125,Data Centers,Pissy-Pôville,75 - Paris,Île-de-France,25500.0,6071.4,14229.0,True
+INDUS-00126,Industrie Paris #126,Data Centers,Paris,75 - Paris,Île-de-France,15735.8,3746.6,8780.58,False
+INDUS-00127,Industrie Paris #127,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,16957.2,4037.4,4951.5,True
+INDUS-00128,Industrie Coutances #128,Métallurgie,Coutances,75 - Paris,Île-de-France,35287.9,8401.9,14820.92,True
+INDUS-00129,Industrie Rots #129,Automobile,Rots,75 - Paris,Île-de-France,23968.9,5706.9,4745.84,False
+INDUS-00130,Industrie Paris #130,Métallurgie,Paris,75 - Paris,Île-de-France,25763.1,6134.1,5281.44,False
+INDUS-00131,Industrie Brest #131,Chimie & Pharmacie,Brest,75 - Paris,Île-de-France,13285.5,3163.2,6244.18,False
+INDUS-00132,Industrie Paris #132,Automobile,Paris,75 - Paris,Île-de-France,41256.8,9823.0,14398.62,True
+INDUS-00133,Industrie Arcueil #133,Chimie & Pharmacie,Arcueil,75 - Paris,Île-de-France,44440.0,10581.0,23908.72,True
+INDUS-00134,Industrie Lattes #134,Agroalimentaire,Lattes,75 - Paris,Île-de-France,1488.8,354.5,582.12,False
+INDUS-00135,Industrie Paris #135,Automobile,Paris,75 - Paris,Île-de-France,39863.0,9491.2,19253.83,False
+INDUS-00136,Industrie Avelin #136,Chimie & Pharmacie,Avelin,75 - Paris,Île-de-France,33591.8,7998.0,8196.4,False
+INDUS-00137,Industrie Haubourdin #137,Chimie & Pharmacie,Haubourdin,75 - Paris,Île-de-France,37795.0,8998.8,14248.72,True
+INDUS-00138,Industrie Paris #138,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,22309.3,5311.7,6759.72,True
+INDUS-00139,Industrie Arzens #139,Chimie & Pharmacie,Arzens,75 - Paris,Île-de-France,23729.5,5649.9,7901.92,True
+INDUS-00140,Industrie Courbevoie #140,Métallurgie,Courbevoie,75 - Paris,Île-de-France,29715.4,7075.1,10073.52,False
+INDUS-00141,Industrie Paris #141,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,28865.1,6872.6,4733.88,True
+INDUS-00142,Industrie Paris #142,Data Centers,Paris,75 - Paris,Île-de-France,7292.6,1736.3,1356.42,True
+INDUS-00143,Industrie Évry-Courcouronnes #143,Chimie & Pharmacie,Évry-Courcouronnes,75 - Paris,Île-de-France,25031.3,5959.8,9837.3,True
+INDUS-00144,Industrie Paris #144,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,32861.7,7824.2,9201.28,True
+INDUS-00145,Industrie Sélestat #145,Chimie & Pharmacie,Sélestat,75 - Paris,Île-de-France,41162.5,9800.6,21322.17,True
+INDUS-00146,Industrie L'Haÿ-les-Roses #146,Automobile,L'Haÿ-les-Roses,75 - Paris,Île-de-France,17028.9,4054.5,9399.95,True
+INDUS-00147,Industrie Lannemezan #147,Chimie & Pharmacie,Lannemezan,75 - Paris,Île-de-France,2506.3,596.7,1040.11,False
+INDUS-00148,Industrie Paris #148,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,9238.2,2199.6,2457.36,False
+INDUS-00149,Industrie Paris #149,Automobile,Paris,75 - Paris,Île-de-France,32499.4,7738.0,18329.66,True
+INDUS-00150,Industrie Paris #150,Métallurgie,Paris,75 - Paris,Île-de-France,32696.7,7784.9,14517.33,True
+INDUS-00151,Industrie Azay-le-Brûlé #151,Chimie & Pharmacie,Azay-le-Brûlé,75 - Paris,Île-de-France,8021.1,1909.8,1756.62,True
+INDUS-00152,Industrie Paris #152,Agroalimentaire,Paris,75 - Paris,Île-de-France,37969.7,9040.4,14010.82,False
+INDUS-00153,Industrie Paris #153,Automobile,Paris,75 - Paris,Île-de-France,18811.1,4478.8,7787.8,True
+INDUS-00154,Industrie Villepinte #154,Data Centers,Villepinte,75 - Paris,Île-de-France,26644.1,6343.8,12922.39,False
+INDUS-00155,Industrie Nice #155,Chimie & Pharmacie,Nice,75 - Paris,Île-de-France,7645.7,1820.4,1383.87,True
+INDUS-00156,Industrie Lons #156,Data Centers,Lons,75 - Paris,Île-de-France,13470.3,3207.2,5186.07,False
+INDUS-00157,Industrie Paris #157,Data Centers,Paris,75 - Paris,Île-de-France,6147.1,1463.6,2520.31,False
+INDUS-00158,Industrie Paris #158,Data Centers,Paris,75 - Paris,Île-de-France,21618.3,5147.2,7155.66,True
+INDUS-00159,Industrie Prémery #159,Automobile,Prémery,75 - Paris,Île-de-France,24341.1,5795.5,10710.08,False
+INDUS-00160,Industrie Paris #160,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,17662.5,4205.4,5228.1,False
+INDUS-00161,Industrie Paris #161,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,13709.0,3264.0,4222.37,False
+INDUS-00162,Industrie Paris #162,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,24594.1,5855.7,5386.11,False
+INDUS-00163,Industrie Paris #163,Data Centers,Paris,75 - Paris,Île-de-France,4351.2,1036.0,2501.94,False
+INDUS-00164,Industrie Bazoches-sur-le-Betz #164,Data Centers,Bazoches-sur-le-Betz,75 - Paris,Île-de-France,28309.0,6740.2,6029.82,True
+INDUS-00165,Industrie Puteaux #165,Data Centers,Puteaux,75 - Paris,Île-de-France,21344.5,5082.0,5165.37,True
+INDUS-00166,Industrie Paris #166,Data Centers,Paris,75 - Paris,Île-de-France,40969.6,9754.7,5571.87,True
+INDUS-00167,Industrie Paris #167,Data Centers,Paris,75 - Paris,Île-de-France,34014.4,8098.7,18197.7,False
+INDUS-00168,Industrie Flins-sur-Seine #168,Automobile,Flins-sur-Seine,75 - Paris,Île-de-France,11359.5,2704.6,2033.35,False
+INDUS-00169,Industrie Paris #169,Métallurgie,Paris,75 - Paris,Île-de-France,11540.7,2747.8,3623.78,True
+INDUS-00170,Industrie Paris #170,Agroalimentaire,Paris,75 - Paris,Île-de-France,16252.0,3869.5,3640.45,False
+INDUS-00171,Industrie Paris #171,Métallurgie,Paris,75 - Paris,Île-de-France,17621.4,4195.6,9762.26,True
+INDUS-00172,Industrie Paris #172,Automobile,Paris,75 - Paris,Île-de-France,10285.6,2449.0,4577.09,False
+INDUS-00173,Industrie Paris #173,Automobile,Paris,75 - Paris,Île-de-France,37696.2,8975.3,19036.58,True
+INDUS-00174,Industrie Paris #174,Automobile,Paris,75 - Paris,Île-de-France,15525.0,3696.4,4036.5,False
+INDUS-00175,Industrie Aire-sur-l'Adour #175,Data Centers,Aire-sur-l'Adour,75 - Paris,Île-de-France,28071.0,6683.6,13165.3,False
+INDUS-00176,Industrie Mably #176,Data Centers,Mably,75 - Paris,Île-de-France,38846.9,9249.3,17714.19,True
+INDUS-00177,Industrie Paris #177,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,37210.8,8859.7,18940.3,True
+INDUS-00178,Industrie Paris #178,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,8464.3,2015.3,1794.43,True
+INDUS-00179,Industrie Vénissieux #179,Agroalimentaire,Vénissieux,75 - Paris,Île-de-France,28076.0,6684.8,10977.72,True
+INDUS-00180,Industrie Cholet #180,Agroalimentaire,Cholet,75 - Paris,Île-de-France,36417.5,8670.8,17844.58,True
+INDUS-00181,Industrie Bitche #181,Agroalimentaire,Bitche,75 - Paris,Île-de-France,25693.3,6117.5,6243.47,False
+INDUS-00182,Industrie Saint-Léger-sur-Dheune #182,Chimie & Pharmacie,Saint-Léger-sur-Dheune,75 - Paris,Île-de-France,34958.7,8323.5,5453.56,True
+INDUS-00183,Industrie Mers-les-Bains #183,Automobile,Mers-les-Bains,75 - Paris,Île-de-France,36488.6,8687.8,19703.84,True
+INDUS-00184,Industrie Châteaudun #184,Data Centers,Châteaudun,75 - Paris,Île-de-France,7490.1,1783.4,1145.99,False
+INDUS-00185,Industrie Lachapelle-sous-Aubenas #185,Métallurgie,Lachapelle-sous-Aubenas,75 - Paris,Île-de-France,35424.2,8434.3,4746.84,False
+INDUS-00186,Industrie Paris #186,Automobile,Paris,75 - Paris,Île-de-France,32285.5,7687.0,4229.4,False
+INDUS-00187,Industrie Paris #187,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,15573.8,3708.0,7927.06,False
+INDUS-00188,Industrie Paris #188,Automobile,Paris,75 - Paris,Île-de-France,40349.8,9607.1,14404.88,False
+INDUS-00189,Industrie Paris #189,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,28920.1,6885.7,4019.89,False
+INDUS-00190,Industrie Paris #190,Métallurgie,Paris,75 - Paris,Île-de-France,17653.1,4203.1,6672.87,True
+INDUS-00191,Industrie Carcassonne #191,Automobile,Carcassonne,75 - Paris,Île-de-France,16470.1,3921.5,5155.14,True
+INDUS-00192,Industrie Échirolles #192,Data Centers,Échirolles,75 - Paris,Île-de-France,31010.7,7383.5,13799.76,True
+INDUS-00193,Industrie Paris #193,Agroalimentaire,Paris,75 - Paris,Île-de-France,11369.1,2706.9,1841.79,False
+INDUS-00194,Industrie Issoudun #194,Métallurgie,Issoudun,75 - Paris,Île-de-France,43551.5,10369.4,22341.92,False
+INDUS-00195,Industrie Paris #195,Data Centers,Paris,75 - Paris,Île-de-France,26898.3,6404.4,8741.95,False
+INDUS-00196,Industrie Rubelles #196,Automobile,Rubelles,75 - Paris,Île-de-France,39191.6,9331.3,8151.85,True
+INDUS-00197,Industrie Saint-Jean-de-Luz #197,Agroalimentaire,Saint-Jean-de-Luz,75 - Paris,Île-de-France,31733.6,7555.6,8282.47,False
+INDUS-00198,Industrie Paris #198,Métallurgie,Paris,75 - Paris,Île-de-France,2307.2,549.3,433.75,True
+INDUS-00199,Industrie Bagnols-en-Forêt #199,Métallurgie,Bagnols-en-Forêt,75 - Paris,Île-de-France,6464.6,1539.2,2689.27,False
+INDUS-00200,Industrie Aix-les-Bains #200,Automobile,Aix-les-Bains,75 - Paris,Île-de-France,32337.6,7699.4,9151.54,False
+INDUS-00201,Industrie Saint-André-de-Roquelongue #201,Agroalimentaire,Saint-André-de-Roquelongue,75 - Paris,Île-de-France,35296.6,8404.0,18918.98,False
+INDUS-00202,Industrie Paris #202,Data Centers,Paris,75 - Paris,Île-de-France,43951.8,10464.7,8790.36,False
+INDUS-00203,Industrie Paris #203,Agroalimentaire,Paris,75 - Paris,Île-de-France,15770.3,3754.8,5062.27,True
+INDUS-00204,Industrie Paris #204,Agroalimentaire,Paris,75 - Paris,Île-de-France,14026.5,3339.6,4362.24,False
+INDUS-00205,Industrie Tonnerre #205,Agroalimentaire,Tonnerre,75 - Paris,Île-de-France,15134.8,3603.5,6356.62,False
+INDUS-00206,Industrie Saint-Paul-Trois-Châteaux #206,Data Centers,Saint-Paul-Trois-Châteaux,75 - Paris,Île-de-France,38879.1,9256.9,12557.95,True
+INDUS-00207,Industrie Paris #207,Agroalimentaire,Paris,75 - Paris,Île-de-France,17540.6,4176.3,4718.42,True
+INDUS-00208,Industrie Paris #208,Automobile,Paris,75 - Paris,Île-de-France,3575.5,851.3,1519.59,False
+INDUS-00209,Industrie Saint-Langis-lès-Mortagne #209,Agroalimentaire,Saint-Langis-lès-Mortagne,75 - Paris,Île-de-France,38431.4,9150.3,16871.38,True
+INDUS-00210,Industrie Lagord #210,Chimie & Pharmacie,Lagord,75 - Paris,Île-de-France,29070.1,6921.5,6889.61,True
+INDUS-00211,Industrie Saint-Usage #211,Automobile,Saint-Usage,75 - Paris,Île-de-France,24093.3,5736.5,4505.45,False
+INDUS-00212,Industrie Paris #212,Agroalimentaire,Paris,75 - Paris,Île-de-France,35392.9,8426.9,15041.98,True
+INDUS-00213,Industrie Le Mans #213,Agroalimentaire,Le Mans,75 - Paris,Île-de-France,4040.2,962.0,1911.01,True
+INDUS-00214,Industrie Paris #214,Agroalimentaire,Paris,75 - Paris,Île-de-France,42922.9,10219.7,16654.09,False
+INDUS-00215,Industrie Bordeaux #215,Agroalimentaire,Bordeaux,75 - Paris,Île-de-France,31002.2,7381.5,16493.17,True
+INDUS-00216,Industrie Cholet #216,Chimie & Pharmacie,Cholet,75 - Paris,Île-de-France,33851.4,8059.9,12660.42,False
+INDUS-00217,Industrie Lambres-lez-Douai #217,Chimie & Pharmacie,Lambres-lez-Douai,75 - Paris,Île-de-France,29897.1,7118.4,12467.09,False
+INDUS-00218,Industrie Paris #218,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,3036.7,723.0,1117.51,True
+INDUS-00219,Industrie Ifs #219,Data Centers,Ifs,75 - Paris,Île-de-France,34115.0,8122.6,15965.82,False
+INDUS-00220,Industrie Paris #220,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,42248.5,10059.2,17490.88,True
+INDUS-00221,Industrie Paris #221,Data Centers,Paris,75 - Paris,Île-de-France,37028.5,8816.3,20143.5,True
+INDUS-00222,Industrie Paris #222,Automobile,Paris,75 - Paris,Île-de-France,34800.1,8285.7,10231.23,True
+INDUS-00223,Industrie Paris #223,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,9805.7,2334.7,3981.11,True
+INDUS-00224,Industrie Le Chesnay-Rocquencourt #224,Chimie & Pharmacie,Le Chesnay-Rocquencourt,75 - Paris,Île-de-France,32487.1,7735.0,12604.99,False
+INDUS-00225,Industrie Labastide-d'Anjou #225,Automobile,Labastide-d'Anjou,75 - Paris,Île-de-France,41021.4,9767.0,18090.44,False
+INDUS-00226,Industrie Paris #226,Automobile,Paris,75 - Paris,Île-de-France,2400.2,571.5,1036.89,False
+INDUS-00227,Industrie Paris #227,Agroalimentaire,Paris,75 - Paris,Île-de-France,36483.6,8686.6,7223.75,False
+INDUS-00228,Industrie Paris #228,Métallurgie,Paris,75 - Paris,Île-de-France,18034.0,4293.8,4256.02,False
+INDUS-00229,Industrie Paris #229,Data Centers,Paris,75 - Paris,Île-de-France,24087.6,5735.1,3203.65,True
+INDUS-00230,Industrie Trappes #230,Chimie & Pharmacie,Trappes,75 - Paris,Île-de-France,19663.4,4681.8,3460.76,True
+INDUS-00231,Industrie Paris #231,Data Centers,Paris,75 - Paris,Île-de-France,20011.9,4764.7,4742.82,True
+INDUS-00232,Industrie Paris #232,Automobile,Paris,75 - Paris,Île-de-France,15924.0,3791.4,8551.19,True
+INDUS-00233,Industrie Villenave-d'Ornon #233,Automobile,Villenave-d'Ornon,75 - Paris,Île-de-France,34234.0,8151.0,8558.5,True
+INDUS-00234,Industrie Biarritz #234,Automobile,Biarritz,75 - Paris,Île-de-France,7748.5,1844.9,1417.98,True
+INDUS-00235,Industrie Vichy #235,Métallurgie,Vichy,75 - Paris,Île-de-France,3342.7,795.9,1925.4,False
+INDUS-00236,Industrie Paris #236,Agroalimentaire,Paris,75 - Paris,Île-de-France,11495.9,2737.1,3713.18,False
+INDUS-00237,Industrie Val-de-Reuil #237,Métallurgie,Val-de-Reuil,75 - Paris,Île-de-France,16589.9,3950.0,2953.0,False
+INDUS-00238,Industrie Chambéry #238,Automobile,Chambéry,75 - Paris,Île-de-France,10531.3,2507.5,3285.77,False
+INDUS-00239,Industrie Pia #239,Chimie & Pharmacie,Pia,75 - Paris,Île-de-France,16177.3,3851.7,3963.44,True
+INDUS-00240,Industrie Tarbes #240,Métallurgie,Tarbes,75 - Paris,Île-de-France,1219.9,290.5,436.72,True
+INDUS-00241,Industrie Paris #241,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,16662.4,3967.2,7281.47,False
+INDUS-00242,Industrie Paris #242,Data Centers,Paris,75 - Paris,Île-de-France,37454.8,8917.8,9775.7,False
+INDUS-00243,Industrie Paris #243,Agroalimentaire,Paris,75 - Paris,Île-de-France,30440.7,7247.8,5114.04,True
+INDUS-00244,Industrie Paris #244,Agroalimentaire,Paris,75 - Paris,Île-de-France,38996.1,9284.8,19186.08,False
+INDUS-00245,Industrie Ghisonaccia #245,Data Centers,Ghisonaccia,75 - Paris,Île-de-France,17124.9,4077.4,7843.2,False
+INDUS-00246,Industrie Paris #246,Data Centers,Paris,75 - Paris,Île-de-France,31866.9,7587.4,8253.53,False
+INDUS-00247,Industrie Trappes #247,Agroalimentaire,Trappes,75 - Paris,Île-de-France,16590.0,3950.0,6138.3,True
+INDUS-00248,Industrie La Baule-Escoublac #248,Data Centers,La Baule-Escoublac,75 - Paris,Île-de-France,19050.2,4535.8,10744.31,True
+INDUS-00249,Industrie Saint-Pierre-d'Irube #249,Chimie & Pharmacie,Saint-Pierre-d'Irube,75 - Paris,Île-de-France,14687.7,3497.1,7578.85,True
+INDUS-00250,Industrie Rousset #250,Chimie & Pharmacie,Rousset,75 - Paris,Île-de-France,37729.8,8983.3,16714.3,False
+INDUS-00251,Industrie Toulon #251,Agroalimentaire,Toulon,75 - Paris,Île-de-France,40328.9,9602.1,11534.07,False
+INDUS-00252,Industrie Paris #252,Agroalimentaire,Paris,75 - Paris,Île-de-France,24941.9,5938.5,11922.23,False
+INDUS-00253,Industrie Paris #253,Métallurgie,Paris,75 - Paris,Île-de-France,4990.8,1188.3,1387.44,True
+INDUS-00254,Industrie Reims #254,Métallurgie,Reims,75 - Paris,Île-de-France,43178.3,10280.5,16666.82,True
+INDUS-00255,Industrie Grez-Neuville #255,Métallurgie,Grez-Neuville,75 - Paris,Île-de-France,40899.8,9738.0,17627.81,False
+INDUS-00256,Industrie Paris #256,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,28958.8,6895.0,4662.37,False
+INDUS-00257,Industrie Paris #257,Automobile,Paris,75 - Paris,Île-de-France,2006.8,477.8,822.79,True
+INDUS-00258,Industrie La Teste-de-Buch #258,Data Centers,La Teste-de-Buch,75 - Paris,Île-de-France,3953.2,941.2,2099.15,False
+INDUS-00259,Industrie Paris #259,Automobile,Paris,75 - Paris,Île-de-France,19202.9,4572.1,6874.64,False
+INDUS-00260,Industrie Boulogne-sur-Mer #260,Chimie & Pharmacie,Boulogne-sur-Mer,75 - Paris,Île-de-France,2843.5,677.0,804.71,True
+INDUS-00261,Industrie Paris #261,Agroalimentaire,Paris,75 - Paris,Île-de-France,39172.3,9326.7,13749.48,True
+INDUS-00262,Industrie Éloyes #262,Chimie & Pharmacie,Éloyes,75 - Paris,Île-de-France,36453.4,8679.4,6415.8,True
+INDUS-00263,Industrie Paris #263,Agroalimentaire,Paris,75 - Paris,Île-de-France,5165.0,1229.8,723.1,False
+INDUS-00264,Industrie Puteaux #264,Automobile,Puteaux,75 - Paris,Île-de-France,40830.2,9721.5,16372.91,True
+INDUS-00265,Industrie Paris #265,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,15704.8,3739.2,5826.48,True
+INDUS-00266,Industrie Paris #266,Automobile,Paris,75 - Paris,Île-de-France,34804.6,8286.8,5011.86,True
+INDUS-00267,Industrie Campigneulles-les-Petites #267,Data Centers,Campigneulles-les-Petites,75 - Paris,Île-de-France,10843.8,2581.9,3459.17,True
+INDUS-00268,Industrie L'Isle-Adam #268,Automobile,L'Isle-Adam,75 - Paris,Île-de-France,36599.9,8714.3,14054.36,True
+INDUS-00269,Industrie Paris #269,Automobile,Paris,75 - Paris,Île-de-France,12622.6,3005.4,5427.72,True
+INDUS-00270,Industrie Pornic #270,Automobile,Pornic,75 - Paris,Île-de-France,12706.8,3025.4,1855.19,True
+INDUS-00271,Industrie Paris #271,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,19146.7,4558.7,9707.38,False
+INDUS-00272,Industrie Paris #272,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,12176.9,2899.3,6648.59,True
+INDUS-00273,Industrie Pierrelaye #273,Métallurgie,Pierrelaye,75 - Paris,Île-de-France,27203.7,6477.1,4134.96,True
+INDUS-00274,Industrie Mours #274,Métallurgie,Mours,75 - Paris,Île-de-France,14370.9,3421.6,8335.12,True
+INDUS-00275,Industrie Calais #275,Data Centers,Calais,75 - Paris,Île-de-France,20480.3,4876.3,9707.66,False
+INDUS-00276,Industrie Paris #276,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,16648.9,3964.0,4445.26,True
+INDUS-00277,Industrie Givors #277,Data Centers,Givors,75 - Paris,Île-de-France,30841.1,7343.1,13477.56,True
+INDUS-00278,Industrie Saintes #278,Data Centers,Saintes,75 - Paris,Île-de-France,30549.5,7273.7,13380.68,True
+INDUS-00279,Industrie Paris #279,Data Centers,Paris,75 - Paris,Île-de-France,27799.2,6618.9,3752.89,False
+INDUS-00280,Industrie Paris #280,Agroalimentaire,Paris,75 - Paris,Île-de-France,42982.1,10233.8,22178.76,False
+INDUS-00281,Industrie Bondy #281,Data Centers,Bondy,75 - Paris,Île-de-France,2736.1,651.5,736.01,False
+INDUS-00282,Industrie Artigues-près-Bordeaux #282,Automobile,Artigues-près-Bordeaux,75 - Paris,Île-de-France,8229.6,1959.4,4024.27,True
+INDUS-00283,Industrie Grenoble #283,Automobile,Grenoble,75 - Paris,Île-de-France,40070.2,9540.5,14224.92,False
+INDUS-00284,Industrie Biard #284,Chimie & Pharmacie,Biard,75 - Paris,Île-de-France,27765.3,6610.8,11966.84,True
+INDUS-00285,Industrie La Roche-sur-Foron #285,Automobile,La Roche-sur-Foron,75 - Paris,Île-de-France,17797.2,4237.4,6211.22,True
+INDUS-00286,Industrie Paris #286,Agroalimentaire,Paris,75 - Paris,Île-de-France,24093.6,5736.6,3204.45,False
+INDUS-00287,Industrie Paris #287,Data Centers,Paris,75 - Paris,Île-de-France,5643.7,1343.7,3239.48,False
+INDUS-00288,Industrie Paris #288,Data Centers,Paris,75 - Paris,Île-de-France,2040.3,485.8,312.17,True
+INDUS-00289,Industrie Paris #289,Automobile,Paris,75 - Paris,Île-de-France,22544.2,5367.7,4689.19,True
+INDUS-00290,Industrie Les Pennes-Mirabeau #290,Agroalimentaire,Les Pennes-Mirabeau,75 - Paris,Île-de-France,18944.3,4510.5,4792.91,True
+INDUS-00291,Industrie Paris #291,Agroalimentaire,Paris,75 - Paris,Île-de-France,27324.1,6505.7,7486.8,True
+INDUS-00292,Industrie Blagnac #292,Automobile,Blagnac,75 - Paris,Île-de-France,5979.5,1423.7,2798.41,False
+INDUS-00293,Industrie Leers #293,Chimie & Pharmacie,Leers,75 - Paris,Île-de-France,35027.0,8339.8,16532.74,True
+INDUS-00294,Industrie Seichamps #294,Automobile,Seichamps,75 - Paris,Île-de-France,1502.6,357.8,480.83,False
+INDUS-00295,Industrie Paris #295,Agroalimentaire,Paris,75 - Paris,Île-de-France,12149.8,2892.8,5236.56,False
+INDUS-00296,Industrie Paris #296,Agroalimentaire,Paris,75 - Paris,Île-de-France,34792.6,8284.0,16456.9,True
+INDUS-00297,Industrie Paris #297,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,22035.7,5246.6,3129.07,False
+INDUS-00298,Industrie Paris #298,Automobile,Paris,75 - Paris,Île-de-France,18114.1,4312.9,4908.92,True
+INDUS-00299,Industrie Paris #299,Agroalimentaire,Paris,75 - Paris,Île-de-France,39627.9,9435.2,6538.6,False
+INDUS-00300,Industrie Paris #300,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,34175.2,8137.0,11243.64,True
+INDUS-00301,Industrie Paris #301,Métallurgie,Paris,75 - Paris,Île-de-France,5781.0,1376.4,1757.42,False
+INDUS-00302,Industrie Paris #302,Automobile,Paris,75 - Paris,Île-de-France,27109.2,6454.6,4581.45,True
+INDUS-00303,Industrie Saint-Grégoire #303,Agroalimentaire,Saint-Grégoire,75 - Paris,Île-de-France,19804.7,4715.4,3049.92,True
+INDUS-00304,Industrie Paris #304,Métallurgie,Paris,75 - Paris,Île-de-France,13113.2,3122.2,4865.0,True
+INDUS-00305,Industrie Paris #305,Data Centers,Paris,75 - Paris,Île-de-France,24431.0,5816.9,9601.38,True
+INDUS-00306,Industrie Hersin-Coupigny #306,Métallurgie,Hersin-Coupigny,75 - Paris,Île-de-France,3436.3,818.2,1116.8,False
+INDUS-00307,Industrie Paris #307,Métallurgie,Paris,75 - Paris,Île-de-France,13044.0,3105.7,5100.2,True
+INDUS-00308,Industrie Sommières #308,Métallurgie,Sommières,75 - Paris,Île-de-France,7836.2,1865.8,2609.45,False
+INDUS-00309,Industrie Paris #309,Agroalimentaire,Paris,75 - Paris,Île-de-France,28641.3,6819.4,10511.36,True
+INDUS-00310,Industrie Challuy #310,Chimie & Pharmacie,Challuy,75 - Paris,Île-de-France,31251.5,7440.8,12625.61,True
+INDUS-00311,Industrie Paris #311,Métallurgie,Paris,75 - Paris,Île-de-France,22615.2,5384.6,3573.2,True
+INDUS-00312,Industrie Paris #312,Automobile,Paris,75 - Paris,Île-de-France,5034.5,1198.7,609.17,False
+INDUS-00313,Industrie Saint-Aignan #313,Data Centers,Saint-Aignan,75 - Paris,Île-de-France,10175.1,2422.6,2574.3,False
+INDUS-00314,Industrie Cornebarrieu #314,Métallurgie,Cornebarrieu,75 - Paris,Île-de-France,32215.8,7670.4,5315.61,True
+INDUS-00315,Industrie Lieuran-lès-Béziers #315,Agroalimentaire,Lieuran-lès-Béziers,75 - Paris,Île-de-France,24009.8,5716.6,8691.55,False
+INDUS-00316,Industrie Portes-lès-Valence #316,Automobile,Portes-lès-Valence,75 - Paris,Île-de-France,23321.3,5552.7,11940.51,False
+INDUS-00317,Industrie Estancarbon #317,Chimie & Pharmacie,Estancarbon,75 - Paris,Île-de-France,16384.9,3901.2,8339.91,True
+INDUS-00318,Industrie Mulhouse #318,Data Centers,Mulhouse,75 - Paris,Île-de-France,37205.8,8858.5,11533.8,True
+INDUS-00319,Industrie Arcueil #319,Automobile,Arcueil,75 - Paris,Île-de-France,29494.8,7022.6,4630.68,True
+INDUS-00320,Industrie Montoire-sur-le-Loir #320,Chimie & Pharmacie,Montoire-sur-le-Loir,75 - Paris,Île-de-France,27317.5,6504.2,7867.44,False
+INDUS-00321,Industrie Fonsorbes #321,Chimie & Pharmacie,Fonsorbes,75 - Paris,Île-de-France,12111.1,2883.6,3742.33,False
+INDUS-00322,Industrie Breteau #322,Métallurgie,Breteau,75 - Paris,Île-de-France,38204.8,9096.4,8787.1,True
+INDUS-00323,Industrie Paris #323,Automobile,Paris,75 - Paris,Île-de-France,34732.3,8269.6,5487.7,True
+INDUS-00324,Industrie Sarcelles #324,Automobile,Sarcelles,75 - Paris,Île-de-France,34856.5,8299.2,15197.43,True
+INDUS-00325,Industrie Chassieu #325,Automobile,Chassieu,75 - Paris,Île-de-France,26854.1,6393.8,11010.18,True
+INDUS-00326,Industrie Arras #326,Agroalimentaire,Arras,75 - Paris,Île-de-France,9297.2,2213.6,2454.46,True
+INDUS-00327,Industrie Paris #327,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,17566.9,4182.6,8186.18,True
+INDUS-00328,Industrie Paris #328,Agroalimentaire,Paris,75 - Paris,Île-de-France,15977.7,3804.2,1965.26,False
+INDUS-00329,Industrie Paris #329,Agroalimentaire,Paris,75 - Paris,Île-de-France,13724.2,3267.7,7438.52,False
+INDUS-00330,Industrie Paris #330,Agroalimentaire,Paris,75 - Paris,Île-de-France,29068.9,6921.2,10958.98,True
+INDUS-00331,Industrie Saint-Sernin-du-Bois #331,Chimie & Pharmacie,Saint-Sernin-du-Bois,75 - Paris,Île-de-France,25991.3,6188.4,3898.69,False
+INDUS-00332,Industrie Paris #332,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,38431.3,9150.3,13643.11,False
+INDUS-00333,Industrie Limonest #333,Automobile,Limonest,75 - Paris,Île-de-France,15004.5,3572.5,7517.25,True
+INDUS-00334,Industrie Paris #334,Métallurgie,Paris,75 - Paris,Île-de-France,18673.1,4446.0,5788.66,False
+INDUS-00335,Industrie Paris #335,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,24322.3,5791.0,6858.89,True
+INDUS-00336,Industrie Décines-Charpieu #336,Métallurgie,Décines-Charpieu,75 - Paris,Île-de-France,32194.8,7665.4,9529.66,False
+INDUS-00337,Industrie Maffliers #337,Automobile,Maffliers,75 - Paris,Île-de-France,4422.0,1052.9,1423.88,True
+INDUS-00338,Industrie Commelle-Vernay #338,Agroalimentaire,Commelle-Vernay,75 - Paris,Île-de-France,32799.4,7809.4,9347.83,False
+INDUS-00339,Industrie Paris #339,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,1237.9,294.7,272.34,True
+INDUS-00340,Industrie Dreux #340,Chimie & Pharmacie,Dreux,75 - Paris,Île-de-France,1564.8,372.6,732.33,False
+INDUS-00341,Industrie Paris #341,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,10934.8,2603.5,5237.77,True
+INDUS-00342,Industrie La Londe-les-Maures #342,Chimie & Pharmacie,La Londe-les-Maures,75 - Paris,Île-de-France,19980.5,4757.3,5994.15,False
+INDUS-00343,Industrie Venthon #343,Data Centers,Venthon,75 - Paris,Île-de-France,19312.5,4598.2,8227.12,True
+INDUS-00344,Industrie Paris #344,Métallurgie,Paris,75 - Paris,Île-de-France,14076.5,3351.5,7981.38,True
+INDUS-00345,Industrie Paris #345,Automobile,Paris,75 - Paris,Île-de-France,12566.6,2992.0,6534.63,True
+INDUS-00346,Industrie Paris #346,Data Centers,Paris,75 - Paris,Île-de-France,10729.6,2554.7,2049.35,False
+INDUS-00347,Industrie Bois-d'Arcy #347,Chimie & Pharmacie,Bois-d'Arcy,75 - Paris,Île-de-France,3267.4,778.0,1195.87,True
+INDUS-00348,Industrie Gennevilliers #348,Agroalimentaire,Gennevilliers,75 - Paris,Île-de-France,18296.8,4356.4,4263.15,True
+INDUS-00349,Industrie Paris #349,Data Centers,Paris,75 - Paris,Île-de-France,16738.4,3985.3,4887.61,False
+INDUS-00350,Industrie Paris #350,Agroalimentaire,Paris,75 - Paris,Île-de-France,32431.5,7721.8,8756.51,False
+INDUS-00351,Industrie Paris #351,Automobile,Paris,75 - Paris,Île-de-France,12875.3,3065.5,6077.14,True
+INDUS-00352,Industrie Paris #352,Agroalimentaire,Paris,75 - Paris,Île-de-France,35017.4,8337.5,14112.01,False
+INDUS-00353,Industrie Décines-Charpieu #353,Automobile,Décines-Charpieu,75 - Paris,Île-de-France,31117.4,7408.9,7032.53,False
+INDUS-00354,Industrie Paris #354,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,5004.8,1191.6,1111.07,False
+INDUS-00355,Industrie Paris #355,Agroalimentaire,Paris,75 - Paris,Île-de-France,37353.2,8893.6,13858.04,False
+INDUS-00356,Industrie Saint-Ours #356,Agroalimentaire,Saint-Ours,75 - Paris,Île-de-France,20804.2,4953.4,9611.54,False
+INDUS-00357,Industrie Paris #357,Agroalimentaire,Paris,75 - Paris,Île-de-France,40057.5,9537.5,7330.52,True
+INDUS-00358,Industrie Paris #358,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,20986.7,4996.8,4680.03,True
+INDUS-00359,Industrie Perpignan #359,Agroalimentaire,Perpignan,75 - Paris,Île-de-France,11886.3,2830.1,4374.16,False
+INDUS-00360,Industrie Ayguesvives #360,Chimie & Pharmacie,Ayguesvives,75 - Paris,Île-de-France,36573.6,8708.0,12617.89,True
+INDUS-00361,Industrie Paris #361,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,10072.1,2398.1,5731.02,False
+INDUS-00362,Industrie Saint-Pol-de-Léon #362,Agroalimentaire,Saint-Pol-de-Léon,75 - Paris,Île-de-France,35534.4,8460.6,12579.18,True
+INDUS-00363,Industrie Paris #363,Automobile,Paris,75 - Paris,Île-de-France,21251.8,5060.0,9414.55,True
+INDUS-00364,Industrie Paris #364,Métallurgie,Paris,75 - Paris,Île-de-France,18866.6,4492.0,8565.44,True
+INDUS-00365,Industrie Ruvigny #365,Métallurgie,Ruvigny,75 - Paris,Île-de-France,3155.7,751.4,1451.62,True
+INDUS-00366,Industrie Saint-Germain-lès-Arpajon #366,Agroalimentaire,Saint-Germain-lès-Arpajon,75 - Paris,Île-de-France,14550.9,3464.5,7319.1,True
+INDUS-00367,Industrie Beuzeville #367,Data Centers,Beuzeville,75 - Paris,Île-de-France,13129.2,3126.0,5488.01,False
+INDUS-00368,Industrie Paris #368,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,36007.2,8573.1,16743.35,True
+INDUS-00369,Industrie Paris #369,Agroalimentaire,Paris,75 - Paris,Île-de-France,5936.8,1413.5,2576.57,False
+INDUS-00370,Industrie Leers #370,Data Centers,Leers,75 - Paris,Île-de-France,25942.4,6176.8,7056.33,False
+INDUS-00371,Industrie Balaruc-le-Vieux #371,Métallurgie,Balaruc-le-Vieux,75 - Paris,Île-de-France,29369.7,6992.8,4875.37,True
+INDUS-00372,Industrie Paris #372,Agroalimentaire,Paris,75 - Paris,Île-de-France,11985.0,2853.6,2972.28,True
+INDUS-00373,Industrie Paris #373,Métallurgie,Paris,75 - Paris,Île-de-France,25085.2,5972.7,13420.58,False
+INDUS-00374,Industrie Sainte-Ruffine #374,Agroalimentaire,Sainte-Ruffine,75 - Paris,Île-de-France,25448.5,6059.2,13462.26,False
+INDUS-00375,Industrie Paris #375,Automobile,Paris,75 - Paris,Île-de-France,40372.8,9612.6,12555.94,False
+INDUS-00376,Industrie Chartres #376,Agroalimentaire,Chartres,75 - Paris,Île-de-France,13869.1,3302.2,1997.15,True
+INDUS-00377,Industrie La Teste-de-Buch #377,Data Centers,La Teste-de-Buch,75 - Paris,Île-de-France,7362.1,1752.9,1936.23,False
+INDUS-00378,Industrie Toutry #378,Chimie & Pharmacie,Toutry,75 - Paris,Île-de-France,39602.4,9429.1,14336.07,False
+INDUS-00379,Industrie Saint-Germain-en-Laye #379,Agroalimentaire,Saint-Germain-en-Laye,75 - Paris,Île-de-France,30988.1,7378.1,4679.2,True
+INDUS-00380,Industrie Paris #380,Data Centers,Paris,75 - Paris,Île-de-France,19089.2,4545.0,2882.47,False
+INDUS-00381,Industrie La Teste-de-Buch #381,Métallurgie,La Teste-de-Buch,75 - Paris,Île-de-France,28417.5,6766.1,5939.26,True
+INDUS-00382,Industrie Paris #382,Automobile,Paris,75 - Paris,Île-de-France,26591.4,6331.3,4706.68,False
+INDUS-00383,Industrie Loubeyrat #383,Data Centers,Loubeyrat,75 - Paris,Île-de-France,5496.0,1308.6,1489.42,True
+INDUS-00384,Industrie Paris #384,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,15949.4,3797.5,2663.55,True
+INDUS-00385,Industrie Paris #385,Automobile,Paris,75 - Paris,Île-de-France,27321.7,6505.2,14671.75,False
+INDUS-00386,Industrie Paris #386,Agroalimentaire,Paris,75 - Paris,Île-de-France,35998.3,8571.0,7343.65,False
+INDUS-00387,Industrie Paris #387,Data Centers,Paris,75 - Paris,Île-de-France,40314.0,9598.6,18504.13,True
+INDUS-00388,Industrie Paris #388,Data Centers,Paris,75 - Paris,Île-de-France,22980.1,5471.5,6503.37,True
+INDUS-00389,Industrie Issoudun #389,Agroalimentaire,Issoudun,75 - Paris,Île-de-France,31740.7,7557.3,6887.73,True
+INDUS-00390,Industrie Paris #390,Data Centers,Paris,75 - Paris,Île-de-France,25955.9,6180.0,10356.4,True
+INDUS-00391,Industrie Lattes #391,Agroalimentaire,Lattes,75 - Paris,Île-de-France,20462.2,4872.0,6650.22,False
+INDUS-00392,Industrie Baie-Mahault #392,Chimie & Pharmacie,Baie-Mahault,75 - Paris,Île-de-France,9954.7,2370.2,4549.3,False
+INDUS-00393,Industrie Paris #393,Agroalimentaire,Paris,75 - Paris,Île-de-France,15095.5,3594.2,3260.63,True
+INDUS-00394,Industrie Évry-Courcouronnes #394,Automobile,Évry-Courcouronnes,75 - Paris,Île-de-France,38273.4,9112.7,14008.06,True
+INDUS-00395,Industrie Bussy-Saint-Georges #395,Métallurgie,Bussy-Saint-Georges,75 - Paris,Île-de-France,14890.1,3545.3,6298.51,False
+INDUS-00396,Industrie Paris #396,Agroalimentaire,Paris,75 - Paris,Île-de-France,30281.7,7209.9,7782.4,True
+INDUS-00397,Industrie Paris #397,Automobile,Paris,75 - Paris,Île-de-France,20722.8,4934.0,11273.2,True
+INDUS-00398,Industrie Paris #398,Métallurgie,Paris,75 - Paris,Île-de-France,25078.5,5971.1,10156.79,False
+INDUS-00399,Industrie Bondy #399,Agroalimentaire,Bondy,75 - Paris,Île-de-France,7691.1,1831.2,2753.41,False
+INDUS-00400,Industrie Paris #400,Métallurgie,Paris,75 - Paris,Île-de-France,17180.3,4090.5,3882.75,False
+INDUS-00401,Industrie Gigouzac #401,Métallurgie,Gigouzac,75 - Paris,Île-de-France,44906.3,10692.0,21510.12,False
+INDUS-00402,Industrie Paris #402,Métallurgie,Paris,75 - Paris,Île-de-France,41499.2,9880.8,9752.31,True
+INDUS-00403,Industrie Paris #403,Automobile,Paris,75 - Paris,Île-de-France,16070.0,3826.2,2972.95,False
+INDUS-00404,Industrie Paris #404,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,26206.9,6239.7,6682.76,False
+INDUS-00405,Industrie Boulogne-sur-Mer #405,Chimie & Pharmacie,Boulogne-sur-Mer,75 - Paris,Île-de-France,6686.5,1592.0,3570.59,True
+INDUS-00406,Industrie Paris #406,Métallurgie,Paris,75 - Paris,Île-de-France,31977.5,7613.7,3997.19,False
+INDUS-00407,Industrie Paris #407,Automobile,Paris,75 - Paris,Île-de-France,33269.5,7921.3,12143.37,True
+INDUS-00408,Industrie Chevigny-Saint-Sauveur #408,Automobile,Chevigny-Saint-Sauveur,75 - Paris,Île-de-France,27372.2,6517.2,6322.98,False
+INDUS-00409,Industrie Paris #409,Agroalimentaire,Paris,75 - Paris,Île-de-France,22798.9,5428.3,3989.81,False
+INDUS-00410,Industrie Paris #410,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,10269.5,2445.1,1232.34,True
+INDUS-00411,Industrie Marseille #411,Data Centers,Marseille,75 - Paris,Île-de-France,33135.2,7889.3,13320.35,True
+INDUS-00412,Industrie La Crau #412,Chimie & Pharmacie,La Crau,75 - Paris,Île-de-France,21072.0,5017.1,4193.33,False
+INDUS-00413,Industrie Arcueil #413,Chimie & Pharmacie,Arcueil,75 - Paris,Île-de-France,6106.1,1453.8,1679.18,False
+INDUS-00414,Industrie Paris #414,Automobile,Paris,75 - Paris,Île-de-France,16469.9,3921.4,2388.14,True
+INDUS-00415,Industrie Paris #415,Data Centers,Paris,75 - Paris,Île-de-France,16700.8,3976.4,6396.41,False
+INDUS-00416,Industrie Paris #416,Agroalimentaire,Paris,75 - Paris,Île-de-France,41217.1,9813.6,23576.18,True
+INDUS-00417,Industrie Paris #417,Data Centers,Paris,75 - Paris,Île-de-France,40505.1,9644.1,22439.83,True
+INDUS-00418,Industrie Les Pennes-Mirabeau #418,Automobile,Les Pennes-Mirabeau,75 - Paris,Île-de-France,16138.8,3842.6,7601.37,True
+INDUS-00419,Industrie Saint-Nicolas #419,Automobile,Saint-Nicolas,75 - Paris,Île-de-France,42595.7,10141.8,12352.75,False
+INDUS-00420,Industrie Perpignan #420,Agroalimentaire,Perpignan,75 - Paris,Île-de-France,40725.8,9696.6,15638.71,True
+INDUS-00421,Industrie Antibes #421,Chimie & Pharmacie,Antibes,75 - Paris,Île-de-France,8079.0,1923.6,2843.81,True
+INDUS-00422,Industrie Paris #422,Data Centers,Paris,75 - Paris,Île-de-France,44298.1,10547.2,6644.71,False
+INDUS-00423,Industrie Saint-Brieuc #423,Agroalimentaire,Saint-Brieuc,75 - Paris,Île-de-France,27091.4,6450.3,10430.19,True
+INDUS-00424,Industrie Paris #424,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,31483.1,7496.0,9917.18,True
+INDUS-00425,Industrie Achicourt #425,Agroalimentaire,Achicourt,75 - Paris,Île-de-France,4382.3,1043.4,1498.75,True
+INDUS-00426,Industrie Paris #426,Automobile,Paris,75 - Paris,Île-de-France,14097.1,3356.5,4200.94,True
+INDUS-00427,Industrie Paris #427,Data Centers,Paris,75 - Paris,Île-de-France,44809.8,10669.0,12591.55,True
+INDUS-00428,Industrie Paris #428,Automobile,Paris,75 - Paris,Île-de-France,20587.2,4901.7,10437.71,True
+INDUS-00429,Industrie Lyon #429,Data Centers,Lyon,75 - Paris,Île-de-France,31957.7,7609.0,10578.0,False
+INDUS-00430,Industrie Val-de-Sos #430,Chimie & Pharmacie,Val-de-Sos,75 - Paris,Île-de-France,16645.9,3963.3,3778.62,True
+INDUS-00431,Industrie Paris #431,Agroalimentaire,Paris,75 - Paris,Île-de-France,7984.3,1901.0,1173.69,False
+INDUS-00432,Industrie Chasseneuil-du-Poitou #432,Automobile,Chasseneuil-du-Poitou,75 - Paris,Île-de-France,33570.6,7993.0,4263.47,False
+INDUS-00433,Industrie La Richardais #433,Agroalimentaire,La Richardais,75 - Paris,Île-de-France,27248.1,6487.6,7166.25,False
+INDUS-00434,Industrie Paris #434,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,17537.7,4175.6,7927.04,False
+INDUS-00435,Industrie Rennes #435,Agroalimentaire,Rennes,75 - Paris,Île-de-France,23369.2,5564.1,6683.59,False
+INDUS-00436,Industrie Épron #436,Chimie & Pharmacie,Épron,75 - Paris,Île-de-France,29571.5,7040.8,16441.75,True
+INDUS-00437,Industrie Reynès #437,Métallurgie,Reynès,75 - Paris,Île-de-France,31020.0,7385.7,8933.76,True
+INDUS-00438,Industrie Paris #438,Automobile,Paris,75 - Paris,Île-de-France,34083.9,8115.2,13463.14,True
+INDUS-00439,Industrie Paris #439,Data Centers,Paris,75 - Paris,Île-de-France,5359.2,1276.0,2309.82,True
+INDUS-00440,Industrie Paris #440,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,2942.2,700.5,485.46,True
+INDUS-00441,Industrie Boulay-Moselle #441,Métallurgie,Boulay-Moselle,75 - Paris,Île-de-France,39013.3,9288.9,11157.8,True
+INDUS-00442,Industrie Arnouville #442,Agroalimentaire,Arnouville,75 - Paris,Île-de-France,16468.4,3921.0,9485.8,True
+INDUS-00443,Industrie La Calmette #443,Chimie & Pharmacie,La Calmette,75 - Paris,Île-de-France,39919.0,9504.5,11017.64,True
+INDUS-00444,Industrie Paris #444,Agroalimentaire,Paris,75 - Paris,Île-de-France,22737.4,5413.7,4661.17,False
+INDUS-00445,Industrie Fontaines-sur-Saône #445,Chimie & Pharmacie,Fontaines-sur-Saône,75 - Paris,Île-de-France,19500.5,4643.0,10413.27,False
+INDUS-00446,Industrie Paris #446,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,18348.4,4368.7,2385.29,False
+INDUS-00447,Industrie Albi #447,Agroalimentaire,Albi,75 - Paris,Île-de-France,41963.2,9991.2,8854.24,True
+INDUS-00448,Industrie Paris #448,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,6526.8,1554.0,2689.04,True
+INDUS-00449,Industrie Carcassonne #449,Agroalimentaire,Carcassonne,75 - Paris,Île-de-France,27573.2,6565.0,5211.33,True
+INDUS-00450,Industrie Paris #450,Data Centers,Paris,75 - Paris,Île-de-France,1392.5,331.5,310.53,True
+INDUS-00451,Industrie Saint-Maximin #451,Data Centers,Saint-Maximin,75 - Paris,Île-de-France,2208.2,525.8,1112.93,True
+INDUS-00452,Industrie Nice #452,Data Centers,Nice,75 - Paris,Île-de-France,39972.8,9517.3,5236.44,False
+INDUS-00453,Industrie Montauban #453,Data Centers,Montauban,75 - Paris,Île-de-France,35253.5,8393.7,15335.27,False
+INDUS-00454,Industrie Montereau-Fault-Yonne #454,Data Centers,Montereau-Fault-Yonne,75 - Paris,Île-de-France,9448.9,2249.7,1596.86,False
+INDUS-00455,Industrie Livry-Louvercy #455,Chimie & Pharmacie,Livry-Louvercy,75 - Paris,Île-de-France,44553.8,10608.0,24727.36,True
+INDUS-00456,Industrie Croissy-Beaubourg #456,Agroalimentaire,Croissy-Beaubourg,75 - Paris,Île-de-France,34024.0,8101.0,14324.1,False
+INDUS-00457,Industrie Paris #457,Agroalimentaire,Paris,75 - Paris,Île-de-France,4865.6,1158.5,2291.7,False
+INDUS-00458,Industrie Évian-les-Bains #458,Chimie & Pharmacie,Évian-les-Bains,75 - Paris,Île-de-France,32800.2,7809.6,6363.24,False
+INDUS-00459,Industrie Courbevoie #459,Data Centers,Courbevoie,75 - Paris,Île-de-France,15671.4,3731.3,3917.85,False
+INDUS-00460,Industrie Paris #460,Data Centers,Paris,75 - Paris,Île-de-France,31995.6,7618.0,6015.17,True
+INDUS-00461,Industrie Paris #461,Automobile,Paris,75 - Paris,Île-de-France,35350.7,8416.8,13327.21,False
+INDUS-00462,Industrie Rivières #462,Data Centers,Rivières,75 - Paris,Île-de-France,5419.2,1290.3,709.92,False
+INDUS-00463,Industrie Paris #463,Métallurgie,Paris,75 - Paris,Île-de-France,32382.6,7710.1,9067.13,False
+INDUS-00464,Industrie Paris #464,Automobile,Paris,75 - Paris,Île-de-France,42731.8,10174.2,16964.52,False
+INDUS-00465,Industrie Paris #465,Automobile,Paris,75 - Paris,Île-de-France,14085.7,3353.7,8099.28,False
+INDUS-00466,Industrie Paris #466,Automobile,Paris,75 - Paris,Île-de-France,38901.8,9262.3,14510.37,False
+INDUS-00467,Industrie Tonneins #467,Métallurgie,Tonneins,75 - Paris,Île-de-France,33610.1,8002.4,14385.12,False
+INDUS-00468,Industrie Goussainville #468,Agroalimentaire,Goussainville,75 - Paris,Île-de-France,33690.6,8021.6,5087.28,True
+INDUS-00469,Industrie Chasseneuil-du-Poitou #469,Chimie & Pharmacie,Chasseneuil-du-Poitou,75 - Paris,Île-de-France,28877.9,6875.7,16633.67,True
+INDUS-00470,Industrie Ambert #470,Agroalimentaire,Ambert,75 - Paris,Île-de-France,39362.0,9371.9,10509.65,False
+INDUS-00471,Industrie Paris #471,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,38780.0,9233.3,13960.8,False
+INDUS-00472,Industrie Paris #472,Automobile,Paris,75 - Paris,Île-de-France,9850.4,2345.3,5378.32,False
+INDUS-00473,Industrie Paris #473,Métallurgie,Paris,75 - Paris,Île-de-France,23777.7,5661.4,11888.85,False
+INDUS-00474,Industrie Paris #474,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,36589.2,8711.7,14891.8,False
+INDUS-00475,Industrie Paris #475,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,22760.0,5419.0,11675.88,True
+INDUS-00476,Industrie Chartres #476,Agroalimentaire,Chartres,75 - Paris,Île-de-France,12905.1,3072.6,4697.46,False
+INDUS-00477,Industrie Sens #477,Chimie & Pharmacie,Sens,75 - Paris,Île-de-France,39383.9,9377.1,13587.45,True
+INDUS-00478,Industrie Paris #478,Métallurgie,Paris,75 - Paris,Île-de-France,16751.9,3988.5,3501.15,False
+INDUS-00479,Industrie Paris #479,Métallurgie,Paris,75 - Paris,Île-de-France,29517.0,7027.9,13548.3,False
+INDUS-00480,Industrie Paris #480,Automobile,Paris,75 - Paris,Île-de-France,15688.5,3735.4,6746.06,False
+INDUS-00481,Industrie Cusset #481,Métallurgie,Cusset,75 - Paris,Île-de-France,35702.6,8500.6,15923.36,False
+INDUS-00482,Industrie Paris #482,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,6097.6,1451.8,2804.9,True
+INDUS-00483,Industrie Paris #483,Data Centers,Paris,75 - Paris,Île-de-France,12011.7,2859.9,6738.56,False
+INDUS-00484,Industrie Drusenheim #484,Automobile,Drusenheim,75 - Paris,Île-de-France,25513.9,6074.7,12578.35,True
+INDUS-00485,Industrie Paris #485,Automobile,Paris,75 - Paris,Île-de-France,32237.5,7675.6,7511.34,False
+INDUS-00486,Industrie Paris #486,Automobile,Paris,75 - Paris,Île-de-France,1309.9,311.9,647.09,True
+INDUS-00487,Industrie Le Controis-en-Sologne #487,Agroalimentaire,Le Controis-en-Sologne,75 - Paris,Île-de-France,36157.5,8608.9,4772.79,True
+INDUS-00488,Industrie Puteaux #488,Chimie & Pharmacie,Puteaux,75 - Paris,Île-de-France,8128.9,1935.5,3836.84,True
+INDUS-00489,Industrie Augny #489,Agroalimentaire,Augny,75 - Paris,Île-de-France,9218.9,2195.0,4609.45,True
+INDUS-00490,Industrie Paris #490,Automobile,Paris,75 - Paris,Île-de-France,8198.6,1952.0,2295.61,False
+INDUS-00491,Industrie Paris #491,Métallurgie,Paris,75 - Paris,Île-de-France,10120.1,2409.5,2277.02,False
+INDUS-00492,Industrie Paris #492,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,33593.2,7998.4,18274.7,True
+INDUS-00493,Industrie Paris #493,Métallurgie,Paris,75 - Paris,Île-de-France,22965.1,5467.9,10701.74,False
+INDUS-00494,Industrie Arc-sur-Tille #494,Métallurgie,Arc-sur-Tille,75 - Paris,Île-de-France,8104.0,1929.5,2382.58,True
+INDUS-00495,Industrie Paris #495,Métallurgie,Paris,75 - Paris,Île-de-France,4602.5,1095.8,1831.8,True
+INDUS-00496,Industrie Ax-les-Thermes #496,Agroalimentaire,Ax-les-Thermes,75 - Paris,Île-de-France,36169.6,8611.8,15118.89,True
+INDUS-00497,Industrie Paris #497,Data Centers,Paris,75 - Paris,Île-de-France,19007.2,4525.5,4542.72,True
+INDUS-00498,Industrie Paris #498,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,34798.3,8285.3,14650.08,False
+INDUS-00499,Industrie Cazilhac #499,Chimie & Pharmacie,Cazilhac,75 - Paris,Île-de-France,42229.5,10054.6,23944.13,True
+INDUS-00500,Industrie Sartrouville #500,Data Centers,Sartrouville,75 - Paris,Île-de-France,24716.2,5884.8,3262.54,True
+INDUS-00501,Industrie Paris #501,Data Centers,Paris,75 - Paris,Île-de-France,40691.4,9688.4,19287.72,True
+INDUS-00502,Industrie Caluire-et-Cuire #502,Métallurgie,Caluire-et-Cuire,75 - Paris,Île-de-France,36520.9,8695.5,10298.89,False
+INDUS-00503,Industrie Le Monêtier-les-Bains #503,Métallurgie,Le Monêtier-les-Bains,75 - Paris,Île-de-France,30047.0,7154.0,13130.54,True
+INDUS-00504,Industrie Puteaux #504,Agroalimentaire,Puteaux,75 - Paris,Île-de-France,2383.4,567.5,769.84,False
+INDUS-00505,Industrie Paris #505,Agroalimentaire,Paris,75 - Paris,Île-de-France,40773.6,9708.0,19815.97,True
+INDUS-00506,Industrie Voiron #506,Automobile,Voiron,75 - Paris,Île-de-France,41227.2,9816.0,13769.88,True
+INDUS-00507,Industrie Avignon #507,Métallurgie,Avignon,75 - Paris,Île-de-France,4343.2,1034.1,2015.24,False
+INDUS-00508,Industrie Paris #508,Agroalimentaire,Paris,75 - Paris,Île-de-France,6984.5,1663.0,2800.78,True
+INDUS-00509,Industrie Paris #509,Data Centers,Paris,75 - Paris,Île-de-France,44896.7,10689.7,25905.4,False
+INDUS-00510,Industrie Tarbes #510,Chimie & Pharmacie,Tarbes,75 - Paris,Île-de-France,13577.9,3232.8,3652.46,True
+INDUS-00511,Industrie Paris #511,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,10100.8,2405.0,3262.56,False
+INDUS-00512,Industrie Paris #512,Métallurgie,Paris,75 - Paris,Île-de-France,15349.5,3654.6,5970.96,True
+INDUS-00513,Industrie Paris #513,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,40836.9,9723.1,12455.25,False
+INDUS-00514,Industrie Wissembourg #514,Agroalimentaire,Wissembourg,75 - Paris,Île-de-France,44305.6,10549.0,19583.08,True
+INDUS-00515,Industrie Paris #515,Agroalimentaire,Paris,75 - Paris,Île-de-France,44564.7,10610.6,23218.21,True
+INDUS-00516,Industrie Villepinte #516,Métallurgie,Villepinte,75 - Paris,Île-de-France,4962.7,1181.6,1890.79,True
+INDUS-00517,Industrie Paris #517,Métallurgie,Paris,75 - Paris,Île-de-France,32927.3,7839.8,9812.34,False
+INDUS-00518,Industrie Contes #518,Data Centers,Contes,75 - Paris,Île-de-France,19993.8,4760.4,6757.9,True
+INDUS-00519,Industrie Paris #519,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,40814.6,9717.8,18080.87,True
+INDUS-00520,Industrie Gémenos #520,Métallurgie,Gémenos,75 - Paris,Île-de-France,8784.4,2091.5,4330.71,True
+INDUS-00521,Industrie Paris #521,Automobile,Paris,75 - Paris,Île-de-France,44462.0,10586.2,25476.73,True
+INDUS-00522,Industrie Paris #522,Métallurgie,Paris,75 - Paris,Île-de-France,36038.7,8580.6,13658.67,True
+INDUS-00523,Industrie Bitche #523,Chimie & Pharmacie,Bitche,75 - Paris,Île-de-France,4962.8,1181.6,704.72,True
+INDUS-00524,Industrie Sassenage #524,Automobile,Sassenage,75 - Paris,Île-de-France,12465.9,2968.1,6931.04,False
+INDUS-00525,Industrie Paris #525,Métallurgie,Paris,75 - Paris,Île-de-France,16059.4,3823.7,3677.6,False
+INDUS-00526,Industrie Paris #526,Automobile,Paris,75 - Paris,Île-de-France,3177.5,756.5,972.31,False
+INDUS-00527,Industrie Paris #527,Data Centers,Paris,75 - Paris,Île-de-France,13582.7,3234.0,5582.49,False
+INDUS-00528,Industrie Paris #528,Métallurgie,Paris,75 - Paris,Île-de-France,5380.6,1281.1,2620.35,True
+INDUS-00529,Industrie Vallon-Pont-d'Arc #529,Chimie & Pharmacie,Vallon-Pont-d'Arc,75 - Paris,Île-de-France,28841.8,6867.1,14045.96,False
+INDUS-00530,Industrie Boulogne-Billancourt #530,Automobile,Boulogne-Billancourt,75 - Paris,Île-de-France,35350.3,8416.7,7706.37,True
+INDUS-00531,Industrie Puteaux #531,Data Centers,Puteaux,75 - Paris,Île-de-France,4004.7,953.5,1722.02,True
+INDUS-00532,Industrie Saint-Paul-lès-Dax #532,Métallurgie,Saint-Paul-lès-Dax,75 - Paris,Île-de-France,18218.2,4337.7,9600.99,True
+INDUS-00533,Industrie Carignan-de-Bordeaux #533,Chimie & Pharmacie,Carignan-de-Bordeaux,75 - Paris,Île-de-France,10366.1,2468.1,2892.14,False
+INDUS-00534,Industrie Freyming-Merlebach #534,Data Centers,Freyming-Merlebach,75 - Paris,Île-de-France,4312.6,1026.8,1957.92,True
+INDUS-00535,Industrie Paris #535,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,37289.9,8878.5,6488.44,True
+INDUS-00536,Industrie Paris #536,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,11452.9,2726.9,2508.19,False
+INDUS-00537,Industrie Paris #537,Data Centers,Paris,75 - Paris,Île-de-France,26923.4,6410.3,14969.41,True
+INDUS-00538,Industrie Toulouse #538,Automobile,Toulouse,75 - Paris,Île-de-France,8912.3,2122.0,1319.02,False
+INDUS-00539,Industrie Le Havre #539,Data Centers,Le Havre,75 - Paris,Île-de-France,39518.4,9409.1,15767.84,False
+INDUS-00540,Industrie Arnouville #540,Automobile,Arnouville,75 - Paris,Île-de-France,33941.5,8081.3,9333.91,True
+INDUS-00541,Industrie Paris #541,Métallurgie,Paris,75 - Paris,Île-de-France,33678.2,8018.6,18152.55,False
+INDUS-00542,Industrie Ceyreste #542,Chimie & Pharmacie,Ceyreste,75 - Paris,Île-de-France,3187.6,759.0,1450.36,False
+INDUS-00543,Industrie Biscarrosse #543,Métallurgie,Biscarrosse,75 - Paris,Île-de-France,7983.7,1900.9,3009.85,False
+INDUS-00544,Industrie Paris #544,Automobile,Paris,75 - Paris,Île-de-France,23659.7,5633.3,3194.06,False
+INDUS-00545,Industrie Paris #545,Métallurgie,Paris,75 - Paris,Île-de-France,33512.9,7979.3,11863.57,True
+INDUS-00546,Industrie Saint-Quentin #546,Automobile,Saint-Quentin,75 - Paris,Île-de-France,25196.5,5999.2,9347.9,True
+INDUS-00547,Industrie Voisins-le-Bretonneux #547,Chimie & Pharmacie,Voisins-le-Bretonneux,75 - Paris,Île-de-France,14824.6,3529.7,2090.27,False
+INDUS-00548,Industrie Freyming-Merlebach #548,Métallurgie,Freyming-Merlebach,75 - Paris,Île-de-France,28322.2,6743.4,3766.85,True
+INDUS-00549,Industrie Paris #549,Métallurgie,Paris,75 - Paris,Île-de-France,35197.2,8380.3,18056.16,False
+INDUS-00550,Industrie Dourdan #550,Automobile,Dourdan,75 - Paris,Île-de-France,21184.8,5044.0,9596.71,True
+INDUS-00551,Industrie Paris #551,Métallurgie,Paris,75 - Paris,Île-de-France,24967.3,5944.6,11759.6,True
+INDUS-00552,Industrie Paris #552,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,19047.2,4535.0,5999.87,True
+INDUS-00553,Industrie Chevigny-Saint-Sauveur #553,Agroalimentaire,Chevigny-Saint-Sauveur,75 - Paris,Île-de-France,32360.3,7704.8,12717.6,True
+INDUS-00554,Industrie Andelnans #554,Chimie & Pharmacie,Andelnans,75 - Paris,Île-de-France,32564.4,7753.4,15402.96,False
+INDUS-00555,Industrie Paris #555,Automobile,Paris,75 - Paris,Île-de-France,43695.2,10403.6,8870.13,True
+INDUS-00556,Industrie Ploërmel #556,Data Centers,Ploërmel,75 - Paris,Île-de-France,44921.7,10695.6,24482.33,True
+INDUS-00557,Industrie Vichy #557,Agroalimentaire,Vichy,75 - Paris,Île-de-France,4448.4,1059.1,1036.48,True
+INDUS-00558,Industrie Seichamps #558,Automobile,Seichamps,75 - Paris,Île-de-France,43825.0,10434.5,7012.0,True
+INDUS-00559,Industrie Paris #559,Métallurgie,Paris,75 - Paris,Île-de-France,18389.1,4378.4,5719.01,True
+INDUS-00560,Industrie Paris #560,Data Centers,Paris,75 - Paris,Île-de-France,37905.3,9025.1,8073.83,True
+INDUS-00561,Industrie Amilly #561,Agroalimentaire,Amilly,75 - Paris,Île-de-France,41324.8,9839.2,21943.47,True
+INDUS-00562,Industrie Châteaugiron #562,Chimie & Pharmacie,Châteaugiron,75 - Paris,Île-de-France,40788.0,9711.4,20067.7,True
+INDUS-00563,Industrie Paris #563,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,34051.5,8107.5,4869.36,False
+INDUS-00564,Industrie Paris #564,Data Centers,Paris,75 - Paris,Île-de-France,2966.2,706.2,1714.46,True
+INDUS-00565,Industrie Roissy-en-France #565,Data Centers,Roissy-en-France,75 - Paris,Île-de-France,32657.9,7775.7,4931.34,False
+INDUS-00566,Industrie Paris #566,Automobile,Paris,75 - Paris,Île-de-France,37815.3,9003.6,14142.92,True
+INDUS-00567,Industrie Paris #567,Métallurgie,Paris,75 - Paris,Île-de-France,28972.4,6898.2,6171.12,True
+INDUS-00568,Industrie Paris #568,Automobile,Paris,75 - Paris,Île-de-France,9414.7,2241.6,3474.02,True
+INDUS-00569,Industrie Saint-Jeoire #569,Agroalimentaire,Saint-Jeoire,75 - Paris,Île-de-France,23910.8,5693.0,5332.11,True
+INDUS-00570,Industrie Paris #570,Data Centers,Paris,75 - Paris,Île-de-France,23999.5,5714.2,8543.82,True
+INDUS-00571,Industrie Paris #571,Automobile,Paris,75 - Paris,Île-de-France,3035.1,722.6,1250.46,True
+INDUS-00572,Industrie Rungis #572,Chimie & Pharmacie,Rungis,75 - Paris,Île-de-France,17223.1,4100.7,2738.47,False
+INDUS-00573,Industrie Longeville-lès-Metz #573,Data Centers,Longeville-lès-Metz,75 - Paris,Île-de-France,39715.8,9456.1,9492.08,False
+INDUS-00574,Industrie Guérande #574,Métallurgie,Guérande,75 - Paris,Île-de-France,33251.5,7917.0,5253.74,False
+INDUS-00575,Industrie Beaune #575,Métallurgie,Beaune,75 - Paris,Île-de-France,11271.1,2683.6,4339.37,True
+INDUS-00576,Industrie Castelnaudary #576,Chimie & Pharmacie,Castelnaudary,75 - Paris,Île-de-France,5067.2,1206.5,1849.53,True
+INDUS-00577,Industrie Paris #577,Automobile,Paris,75 - Paris,Île-de-France,15833.3,3769.8,6364.99,False
+INDUS-00578,Industrie Saint-Denis #578,Agroalimentaire,Saint-Denis,75 - Paris,Île-de-France,27330.4,6507.2,9428.99,True
+INDUS-00579,Industrie Antibes #579,Data Centers,Antibes,75 - Paris,Île-de-France,14640.3,3485.8,7905.76,True
+INDUS-00580,Industrie Paris #580,Métallurgie,Paris,75 - Paris,Île-de-France,22382.1,5329.1,5595.52,False
+INDUS-00581,Industrie Saint-Laurent-du-Pont #581,Agroalimentaire,Saint-Laurent-du-Pont,75 - Paris,Île-de-France,27346.1,6511.0,9188.29,False
+INDUS-00582,Industrie Le Mans #582,Chimie & Pharmacie,Le Mans,75 - Paris,Île-de-France,34036.4,8103.9,4526.84,False
+INDUS-00583,Industrie Paris #583,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,15816.6,3765.9,7054.2,True
+INDUS-00584,Industrie Pont-de-l'Isère #584,Métallurgie,Pont-de-l'Isère,75 - Paris,Île-de-France,8535.8,2032.3,3610.64,True
+INDUS-00585,Industrie Paris #585,Agroalimentaire,Paris,75 - Paris,Île-de-France,29787.1,7092.2,5689.34,False
+INDUS-00586,Industrie Le Puy-en-Velay #586,Data Centers,Le Puy-en-Velay,75 - Paris,Île-de-France,34069.9,8111.9,18465.89,False
+INDUS-00587,Industrie Paris #587,Automobile,Paris,75 - Paris,Île-de-France,6662.3,1586.3,3018.02,True
+INDUS-00588,Industrie Paris #588,Automobile,Paris,75 - Paris,Île-de-France,31027.3,7387.5,5895.19,False
+INDUS-00589,Industrie Croissy-Beaubourg #589,Chimie & Pharmacie,Croissy-Beaubourg,75 - Paris,Île-de-France,26116.1,6218.1,11334.39,True
+INDUS-00590,Industrie Lambres-lez-Douai #590,Automobile,Lambres-lez-Douai,75 - Paris,Île-de-France,13859.7,3299.9,4823.18,True
+INDUS-00591,Industrie Maubourguet #591,Automobile,Maubourguet,75 - Paris,Île-de-France,7045.8,1677.6,1648.72,False
+INDUS-00592,Industrie Rots #592,Chimie & Pharmacie,Rots,75 - Paris,Île-de-France,7267.3,1730.3,4047.89,False
+INDUS-00593,Industrie Courbevoie #593,Automobile,Courbevoie,75 - Paris,Île-de-France,38033.3,9055.5,21412.75,True
+INDUS-00594,Industrie Paris #594,Métallurgie,Paris,75 - Paris,Île-de-France,28237.7,6723.3,5845.2,False
+INDUS-00595,Industrie Paris #595,Data Centers,Paris,75 - Paris,Île-de-France,25071.5,5969.4,10003.53,True
+INDUS-00596,Industrie Paris #596,Automobile,Paris,75 - Paris,Île-de-France,24948.0,5940.0,10702.69,False
+INDUS-00597,Industrie Paris #597,Data Centers,Paris,75 - Paris,Île-de-France,43968.0,10468.6,19214.02,True
+INDUS-00598,Industrie Paris #598,Métallurgie,Paris,75 - Paris,Île-de-France,25213.0,6003.1,9278.38,True
+INDUS-00599,Industrie Paris #599,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,27956.7,6656.4,14313.83,False
+INDUS-00600,Industrie Paris #600,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,14558.5,3466.3,4847.98,False
+INDUS-00601,Industrie Condé-sur-l'Escaut #601,Data Centers,Condé-sur-l'Escaut,75 - Paris,Île-de-France,17690.8,4212.1,6351.0,False
+INDUS-00602,Industrie Guérande #602,Agroalimentaire,Guérande,75 - Paris,Île-de-France,21277.6,5066.1,10702.63,False
+INDUS-00603,Industrie Coquelles #603,Agroalimentaire,Coquelles,75 - Paris,Île-de-France,35320.8,8409.7,5686.65,True
+INDUS-00604,Industrie Paris #604,Métallurgie,Paris,75 - Paris,Île-de-France,16626.9,3958.8,7831.27,False
+INDUS-00605,Industrie Paris #605,Métallurgie,Paris,75 - Paris,Île-de-France,26306.7,6263.5,9917.63,False
+INDUS-00606,Industrie Paris #606,Automobile,Paris,75 - Paris,Île-de-France,15716.5,3742.0,8455.48,True
+INDUS-00607,Industrie Paris #607,Agroalimentaire,Paris,75 - Paris,Île-de-France,39224.1,9339.1,7609.48,False
+INDUS-00608,Industrie Paris #608,Agroalimentaire,Paris,75 - Paris,Île-de-France,19677.2,4685.0,6355.74,False
+INDUS-00609,Industrie Vichy #609,Data Centers,Vichy,75 - Paris,Île-de-France,14857.3,3537.5,7993.23,False
+INDUS-00610,Industrie Beauvais #610,Chimie & Pharmacie,Beauvais,75 - Paris,Île-de-France,41968.5,9992.5,18298.27,False
+INDUS-00611,Industrie Paris #611,Automobile,Paris,75 - Paris,Île-de-France,11115.9,2646.6,6413.87,False
+INDUS-00612,Industrie Paris #612,Métallurgie,Paris,75 - Paris,Île-de-France,9675.6,2303.7,5002.29,True
+INDUS-00613,Industrie Cherbourg-en-Cotentin #613,Data Centers,Cherbourg-en-Cotentin,75 - Paris,Île-de-France,17071.8,4064.7,7818.88,True
+INDUS-00614,Industrie Dizy #614,Agroalimentaire,Dizy,75 - Paris,Île-de-France,27166.7,6468.3,13719.18,False
+INDUS-00615,Industrie Paris #615,Automobile,Paris,75 - Paris,Île-de-France,21215.7,5051.4,5494.87,False
+INDUS-00616,Industrie Paris #616,Automobile,Paris,75 - Paris,Île-de-France,11177.9,2661.4,3889.91,False
+INDUS-00617,Industrie Lyon #617,Chimie & Pharmacie,Lyon,75 - Paris,Île-de-France,24413.7,5812.8,5004.81,False
+INDUS-00618,Industrie Oberhoffen-sur-Moder #618,Agroalimentaire,Oberhoffen-sur-Moder,75 - Paris,Île-de-France,10503.9,2500.9,5882.18,True
+INDUS-00619,Industrie Paris #619,Automobile,Paris,75 - Paris,Île-de-France,33177.6,7899.4,15925.25,False
+INDUS-00620,Industrie Poitiers #620,Métallurgie,Poitiers,75 - Paris,Île-de-France,11600.2,2762.0,6519.31,True
+INDUS-00621,Industrie Paris #621,Métallurgie,Paris,75 - Paris,Île-de-France,13500.7,3214.5,7452.39,True
+INDUS-00622,Industrie Champigny-sur-Marne #622,Chimie & Pharmacie,Champigny-sur-Marne,75 - Paris,Île-de-France,42933.5,10222.3,20049.94,False
+INDUS-00623,Industrie Rueil-Malmaison #623,Agroalimentaire,Rueil-Malmaison,75 - Paris,Île-de-France,31224.3,7434.4,13395.22,False
+INDUS-00624,Industrie Saint-Nazaire #624,Métallurgie,Saint-Nazaire,75 - Paris,Île-de-France,32947.2,7844.6,7314.28,False
+INDUS-00625,Industrie Paris #625,Agroalimentaire,Paris,75 - Paris,Île-de-France,1544.7,367.8,852.67,False
+INDUS-00626,Industrie Le Mans #626,Métallurgie,Le Mans,75 - Paris,Île-de-France,28947.2,6892.2,7410.48,False
+INDUS-00627,Industrie Paris #627,Data Centers,Paris,75 - Paris,Île-de-France,14591.7,3474.2,6143.11,False
+INDUS-00628,Industrie Villard-de-Lans #628,Agroalimentaire,Villard-de-Lans,75 - Paris,Île-de-France,26665.6,6349.0,14746.08,True
+INDUS-00629,Industrie Massieux #629,Automobile,Massieux,75 - Paris,Île-de-France,32505.0,7739.3,10271.58,True
+INDUS-00630,Industrie Longeville-lès-Metz #630,Chimie & Pharmacie,Longeville-lès-Metz,75 - Paris,Île-de-France,28414.9,6765.5,14207.45,False
+INDUS-00631,Industrie Paris #631,Agroalimentaire,Paris,75 - Paris,Île-de-France,41832.0,9960.0,20999.66,False
+INDUS-00632,Industrie Paris #632,Métallurgie,Paris,75 - Paris,Île-de-France,14863.2,3538.9,4280.6,False
+INDUS-00633,Industrie Paris #633,Métallurgie,Paris,75 - Paris,Île-de-France,33207.4,7906.5,19227.08,False
+INDUS-00634,Industrie Chasse-sur-Rhône #634,Chimie & Pharmacie,Chasse-sur-Rhône,75 - Paris,Île-de-France,14430.3,3435.8,4473.39,True
+INDUS-00635,Industrie Saint-Lô #635,Data Centers,Saint-Lô,75 - Paris,Île-de-France,44305.0,10548.8,8506.56,False
+INDUS-00636,Industrie Athis-Mons #636,Automobile,Athis-Mons,75 - Paris,Île-de-France,28107.7,6692.3,9950.13,True
+INDUS-00637,Industrie Paris #637,Data Centers,Paris,75 - Paris,Île-de-France,20872.3,4969.6,7388.79,True
+INDUS-00638,Industrie Paris #638,Automobile,Paris,75 - Paris,Île-de-France,44591.6,10617.0,19531.12,False
+INDUS-00639,Industrie Paris #639,Data Centers,Paris,75 - Paris,Île-de-France,6561.5,1562.3,1968.45,True
+INDUS-00640,Industrie Puteaux #640,Métallurgie,Puteaux,75 - Paris,Île-de-France,12756.3,3037.2,4987.71,True
+INDUS-00641,Industrie Paris #641,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,36107.7,8597.1,9640.76,False
+INDUS-00642,Industrie Saint-Ours #642,Automobile,Saint-Ours,75 - Paris,Île-de-France,15709.5,3740.4,3723.15,False
+INDUS-00643,Industrie La Seyne-sur-Mer #643,Métallurgie,La Seyne-sur-Mer,75 - Paris,Île-de-France,25557.8,6085.2,9839.75,False
+INDUS-00644,Industrie Bourg-en-Bresse #644,Automobile,Bourg-en-Bresse,75 - Paris,Île-de-France,40220.1,9576.2,15283.64,True
+INDUS-00645,Industrie Châtillon #645,Data Centers,Châtillon,75 - Paris,Île-de-France,32865.0,7825.0,17385.58,False
+INDUS-00646,Industrie Paris #646,Automobile,Paris,75 - Paris,Île-de-France,40083.2,9543.6,17837.02,True
+INDUS-00647,Industrie Chelles #647,Agroalimentaire,Chelles,75 - Paris,Île-de-France,19940.9,4747.8,6779.91,True
+INDUS-00648,Industrie Paris #648,Agroalimentaire,Paris,75 - Paris,Île-de-France,28821.1,6862.2,10750.27,True
+INDUS-00649,Industrie Arzens #649,Agroalimentaire,Arzens,75 - Paris,Île-de-France,34259.6,8157.0,14080.7,False
+INDUS-00650,Industrie Les Contamines-Montjoie #650,Data Centers,Les Contamines-Montjoie,75 - Paris,Île-de-France,7313.7,1741.4,2237.99,False
+INDUS-00651,Industrie Paris #651,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,29327.6,6982.8,12845.49,False
+INDUS-00652,Industrie Puteaux #652,Data Centers,Puteaux,75 - Paris,Île-de-France,38873.0,9255.5,15626.95,True
+INDUS-00653,Industrie Trappes #653,Automobile,Trappes,75 - Paris,Île-de-France,18664.3,4443.9,5337.99,False
+INDUS-00654,Industrie Tignes #654,Automobile,Tignes,75 - Paris,Île-de-France,3796.0,903.8,671.89,False
+INDUS-00655,Industrie Valserhône #655,Data Centers,Valserhône,75 - Paris,Île-de-France,28836.4,6865.8,9112.3,False
+INDUS-00656,Industrie Lourches #656,Data Centers,Lourches,75 - Paris,Île-de-France,9994.7,2379.7,4067.84,False
+INDUS-00657,Industrie Le Cannet #657,Data Centers,Le Cannet,75 - Paris,Île-de-France,13002.4,3095.8,3718.69,True
+INDUS-00658,Industrie Paris #658,Data Centers,Paris,75 - Paris,Île-de-France,7035.2,1675.0,1976.89,True
+INDUS-00659,Industrie Golbey #659,Automobile,Golbey,75 - Paris,Île-de-France,27618.7,6575.9,15217.9,False
+INDUS-00660,Industrie Saint-Laurent-du-Var #660,Chimie & Pharmacie,Saint-Laurent-du-Var,75 - Paris,Île-de-France,21198.5,5047.3,5066.44,False
+INDUS-00661,Industrie Marquette-lez-Lille #661,Chimie & Pharmacie,Marquette-lez-Lille,75 - Paris,Île-de-France,3342.6,795.9,895.82,True
+INDUS-00662,Industrie Paris #662,Métallurgie,Paris,75 - Paris,Île-de-France,4490.0,1069.0,1706.2,False
+INDUS-00663,Industrie Nice #663,Agroalimentaire,Nice,75 - Paris,Île-de-France,18183.4,4329.4,9764.49,True
+INDUS-00664,Industrie L'Isle-sur-la-Sorgue #664,Automobile,L'Isle-sur-la-Sorgue,75 - Paris,Île-de-France,36081.1,8590.7,19988.93,True
+INDUS-00665,Industrie Paris #665,Métallurgie,Paris,75 - Paris,Île-de-France,17784.0,4234.3,4108.1,False
+INDUS-00666,Industrie Paris #666,Agroalimentaire,Paris,75 - Paris,Île-de-France,24254.6,5774.9,10162.68,True
+INDUS-00667,Industrie Brin-sur-Seille #667,Métallurgie,Brin-sur-Seille,75 - Paris,Île-de-France,23155.3,5513.2,3843.78,False
+INDUS-00668,Industrie Paris #668,Automobile,Paris,75 - Paris,Île-de-France,9820.0,2338.1,4036.02,True
+INDUS-00669,Industrie Le Plessis-Robinson #669,Chimie & Pharmacie,Le Plessis-Robinson,75 - Paris,Île-de-France,12193.8,2903.3,6828.53,True
+INDUS-00670,Industrie Paris #670,Agroalimentaire,Paris,75 - Paris,Île-de-France,11161.5,2657.5,1618.42,False
+INDUS-00671,Industrie Berganty #671,Chimie & Pharmacie,Berganty,75 - Paris,Île-de-France,35760.5,8514.4,11908.25,False
+INDUS-00672,Industrie Paris #672,Agroalimentaire,Paris,75 - Paris,Île-de-France,44891.2,10688.4,25857.33,True
+INDUS-00673,Industrie Villeneuve-d'Ascq #673,Data Centers,Villeneuve-d'Ascq,75 - Paris,Île-de-France,19842.1,4724.3,3035.84,False
+INDUS-00674,Industrie Paris #674,Agroalimentaire,Paris,75 - Paris,Île-de-France,10532.4,2507.7,1737.85,False
+INDUS-00675,Industrie Fismes #675,Métallurgie,Fismes,75 - Paris,Île-de-France,27609.6,6573.7,8641.8,False
+INDUS-00676,Industrie La Salle-en-Beaumont #676,Data Centers,La Salle-en-Beaumont,75 - Paris,Île-de-France,20346.4,4844.4,2726.42,True
+INDUS-00677,Industrie Paris #677,Data Centers,Paris,75 - Paris,Île-de-France,23440.7,5581.1,9141.87,True
+INDUS-00678,Industrie Paris #678,Data Centers,Paris,75 - Paris,Île-de-France,19751.3,4702.7,5411.86,True
+INDUS-00679,Industrie Paris #679,Agroalimentaire,Paris,75 - Paris,Île-de-France,24544.8,5844.0,3853.53,False
+INDUS-00680,Industrie Gémenos #680,Data Centers,Gémenos,75 - Paris,Île-de-France,11886.5,2830.1,3863.11,False
+INDUS-00681,Industrie L'Isle-sur-la-Sorgue #681,Automobile,L'Isle-sur-la-Sorgue,75 - Paris,Île-de-France,42023.5,10005.6,5252.94,True
+INDUS-00682,Industrie Paris #682,Agroalimentaire,Paris,75 - Paris,Île-de-France,35349.3,8416.5,9402.91,False
+INDUS-00683,Industrie Paris #683,Agroalimentaire,Paris,75 - Paris,Île-de-France,28574.4,6803.4,14287.2,False
+INDUS-00684,Industrie Paris #684,Métallurgie,Paris,75 - Paris,Île-de-France,37486.9,8925.5,5473.09,False
+INDUS-00685,Industrie Biscarrosse #685,Métallurgie,Biscarrosse,75 - Paris,Île-de-France,35458.7,8442.5,9396.56,False
+INDUS-00686,Industrie Saint-Loup-Géanges #686,Métallurgie,Saint-Loup-Géanges,75 - Paris,Île-de-France,39387.2,9377.9,8350.09,True
+INDUS-00687,Industrie Paris #687,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,2171.0,516.9,590.51,True
+INDUS-00688,Industrie Saint-Étienne #688,Chimie & Pharmacie,Saint-Étienne,75 - Paris,Île-de-France,36095.0,8594.0,12849.82,True
+INDUS-00689,Industrie Paris #689,Data Centers,Paris,75 - Paris,Île-de-France,36000.5,8571.5,9504.13,False
+INDUS-00690,Industrie Bussy-Saint-Georges #690,Data Centers,Bussy-Saint-Georges,75 - Paris,Île-de-France,2871.9,683.8,1065.47,True
+INDUS-00691,Industrie Le Quesnoy #691,Agroalimentaire,Le Quesnoy,75 - Paris,Île-de-France,23643.3,5629.4,11230.57,False
+INDUS-00692,Industrie Saint-Léonard #692,Automobile,Saint-Léonard,75 - Paris,Île-de-France,24579.8,5852.3,9069.95,False
+INDUS-00693,Industrie Paris #693,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,9533.6,2269.9,1592.11,False
+INDUS-00694,Industrie Saint-Bonnet-de-Mure #694,Métallurgie,Saint-Bonnet-de-Mure,75 - Paris,Île-de-France,13108.9,3121.2,5767.92,False
+INDUS-00695,Industrie Viry-Noureuil #695,Automobile,Viry-Noureuil,75 - Paris,Île-de-France,4543.1,1081.7,1326.59,True
+INDUS-00696,Industrie Paris #696,Agroalimentaire,Paris,75 - Paris,Île-de-France,7892.9,1879.3,3433.41,True
+INDUS-00697,Industrie Paris #697,Agroalimentaire,Paris,75 - Paris,Île-de-France,34525.9,8220.5,6007.51,True
+INDUS-00698,Industrie Saint-Jeoire-Prieuré #698,Data Centers,Saint-Jeoire-Prieuré,75 - Paris,Île-de-France,11662.0,2776.7,2518.99,True
+INDUS-00699,Industrie Sélestat #699,Chimie & Pharmacie,Sélestat,75 - Paris,Île-de-France,34401.6,8190.9,4472.21,True
+INDUS-00700,Industrie Paris #700,Data Centers,Paris,75 - Paris,Île-de-France,2361.1,562.2,535.97,True
+INDUS-00701,Industrie Paris #701,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,43577.2,10375.5,18781.77,True
+INDUS-00702,Industrie Paris #702,Métallurgie,Paris,75 - Paris,Île-de-France,20909.4,4978.4,8844.68,True
+INDUS-00703,Industrie Agde #703,Chimie & Pharmacie,Agde,75 - Paris,Île-de-France,24063.5,5729.4,10876.7,True
+INDUS-00704,Industrie Paris #704,Data Centers,Paris,75 - Paris,Île-de-France,9090.0,2164.3,3581.46,True
+INDUS-00705,Industrie Saint-Mandrier-sur-Mer #705,Data Centers,Saint-Mandrier-sur-Mer,75 - Paris,Île-de-France,27486.2,6544.3,5387.3,True
+INDUS-00706,Industrie Paris #706,Automobile,Paris,75 - Paris,Île-de-France,42047.8,10011.4,10217.62,False
+INDUS-00707,Industrie Dieppe #707,Chimie & Pharmacie,Dieppe,75 - Paris,Île-de-France,21195.8,5046.6,9834.85,False
+INDUS-00708,Industrie Évian-les-Bains #708,Métallurgie,Évian-les-Bains,75 - Paris,Île-de-France,37836.0,9008.6,8815.79,True
+INDUS-00709,Industrie Toulon #709,Chimie & Pharmacie,Toulon,75 - Paris,Île-de-France,5113.1,1217.4,1278.28,True
+INDUS-00710,Industrie Paris #710,Data Centers,Paris,75 - Paris,Île-de-France,31352.9,7465.0,7273.87,False
+INDUS-00711,Industrie Paris #711,Métallurgie,Paris,75 - Paris,Île-de-France,44104.3,10501.0,6747.96,False
+INDUS-00712,Industrie Les Pennes-Mirabeau #712,Automobile,Les Pennes-Mirabeau,75 - Paris,Île-de-France,10556.0,2513.3,4644.64,False
+INDUS-00713,Industrie Bain-de-Bretagne #713,Automobile,Bain-de-Bretagne,75 - Paris,Île-de-France,40621.4,9671.8,18442.12,False
+INDUS-00714,Industrie Paris #714,Data Centers,Paris,75 - Paris,Île-de-France,10686.2,2544.3,4605.75,False
+INDUS-00715,Industrie Paris #715,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,20385.7,4853.7,10906.35,False
+INDUS-00716,Industrie Chartres #716,Data Centers,Chartres,75 - Paris,Île-de-France,36351.2,8655.0,5816.19,False
+INDUS-00717,Industrie Paris #717,Data Centers,Paris,75 - Paris,Île-de-France,27453.1,6536.5,8812.45,False
+INDUS-00718,Industrie Paris #718,Agroalimentaire,Paris,75 - Paris,Île-de-France,9040.3,2152.5,5017.37,False
+INDUS-00719,Industrie Bréhal #719,Agroalimentaire,Bréhal,75 - Paris,Île-de-France,30773.6,7327.0,6308.59,False
+INDUS-00720,Industrie Paris #720,Agroalimentaire,Paris,75 - Paris,Île-de-France,28030.4,6673.9,10147.0,True
+INDUS-00721,Industrie Paris #721,Data Centers,Paris,75 - Paris,Île-de-France,36323.3,8648.4,6901.43,False
+INDUS-00722,Industrie Paris #722,Agroalimentaire,Paris,75 - Paris,Île-de-France,36490.3,8688.2,8575.22,False
+INDUS-00723,Industrie Paris #723,Data Centers,Paris,75 - Paris,Île-de-France,27559.3,6561.7,7385.89,True
+INDUS-00724,Industrie Paris #724,Agroalimentaire,Paris,75 - Paris,Île-de-France,33243.1,7915.0,11402.38,False
+INDUS-00725,Industrie Ormesson-sur-Marne #725,Chimie & Pharmacie,Ormesson-sur-Marne,75 - Paris,Île-de-France,10909.7,2597.5,2683.79,False
+INDUS-00726,Industrie Paris #726,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,40683.9,9686.6,20870.84,True
+INDUS-00727,Industrie Carrières-sous-Poissy #727,Métallurgie,Carrières-sous-Poissy,75 - Paris,Île-de-France,41277.5,9828.0,23734.56,True
+INDUS-00728,Industrie Paris #728,Automobile,Paris,75 - Paris,Île-de-France,17185.3,4091.7,5000.92,True
+INDUS-00729,Industrie Paris #729,Agroalimentaire,Paris,75 - Paris,Île-de-France,26103.4,6215.1,13051.7,True
+INDUS-00730,Industrie Bayonne #730,Chimie & Pharmacie,Bayonne,75 - Paris,Île-de-France,43465.3,10348.9,23036.61,True
+INDUS-00731,Industrie Créon #731,Chimie & Pharmacie,Créon,75 - Paris,Île-de-France,42655.9,10156.2,14247.07,False
+INDUS-00732,Industrie Paris #732,Data Centers,Paris,75 - Paris,Île-de-France,31412.9,7479.3,5245.95,True
+INDUS-00733,Industrie Anhiers #733,Data Centers,Anhiers,75 - Paris,Île-de-France,33020.6,7862.0,15387.6,False
+INDUS-00734,Industrie Paris #734,Data Centers,Paris,75 - Paris,Île-de-France,35406.2,8430.0,17030.38,True
+INDUS-00735,Industrie Quetigny #735,Data Centers,Quetigny,75 - Paris,Île-de-France,19021.2,4528.9,7741.63,False
+INDUS-00736,Industrie Plouzané #736,Agroalimentaire,Plouzané,75 - Paris,Île-de-France,3680.0,876.2,1486.72,False
+INDUS-00737,Industrie Villeneuve-d'Ascq #737,Data Centers,Villeneuve-d'Ascq,75 - Paris,Île-de-France,23445.5,5582.3,3516.82,False
+INDUS-00738,Industrie Béthune #738,Agroalimentaire,Béthune,75 - Paris,Île-de-France,34623.5,8243.7,13607.04,False
+INDUS-00739,Industrie Saint-Marcel-sur-Aude #739,Automobile,Saint-Marcel-sur-Aude,75 - Paris,Île-de-France,17561.0,4181.2,2599.03,True
+INDUS-00740,Industrie Francheville #740,Data Centers,Francheville,75 - Paris,Île-de-France,23052.5,5488.7,12448.35,False
+INDUS-00741,Industrie Paris #741,Data Centers,Paris,75 - Paris,Île-de-France,13708.6,3264.0,5099.6,True
+INDUS-00742,Industrie Niort #742,Métallurgie,Niort,75 - Paris,Île-de-France,43424.8,10339.2,19367.46,True
+INDUS-00743,Industrie Paris #743,Agroalimentaire,Paris,75 - Paris,Île-de-France,24461.0,5824.0,3253.31,True
+INDUS-00744,Industrie Paris #744,Agroalimentaire,Paris,75 - Paris,Île-de-France,44124.5,10505.8,16370.19,True
+INDUS-00745,Industrie Paris #745,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,17978.1,4280.5,7406.98,True
+INDUS-00746,Industrie Carpentras #746,Agroalimentaire,Carpentras,75 - Paris,Île-de-France,44440.9,10581.2,16620.9,False
+INDUS-00747,Industrie Bonson #747,Automobile,Bonson,75 - Paris,Île-de-France,41339.0,9842.6,17610.41,False
+INDUS-00748,Industrie Paris #748,Data Centers,Paris,75 - Paris,Île-de-France,34280.8,8162.1,8330.23,False
+INDUS-00749,Industrie Paris #749,Métallurgie,Paris,75 - Paris,Île-de-France,14245.1,3391.7,5612.57,True
+INDUS-00750,Industrie Paris #750,Métallurgie,Paris,75 - Paris,Île-de-France,14248.8,3392.6,3904.17,True
+INDUS-00751,Industrie Paris #751,Métallurgie,Paris,75 - Paris,Île-de-France,4694.3,1117.7,906.0,False
+INDUS-00752,Industrie Laon #752,Data Centers,Laon,75 - Paris,Île-de-France,11604.0,2762.9,6161.72,True
+INDUS-00753,Industrie Paris #753,Data Centers,Paris,75 - Paris,Île-de-France,6392.4,1522.0,3458.29,True
+INDUS-00754,Industrie Villenave-d'Ornon #754,Chimie & Pharmacie,Villenave-d'Ornon,75 - Paris,Île-de-France,1567.2,373.1,608.07,False
+INDUS-00755,Industrie Paris #755,Automobile,Paris,75 - Paris,Île-de-France,43287.8,10306.6,11254.83,True
+INDUS-00756,Industrie Paris #756,Automobile,Paris,75 - Paris,Île-de-France,37595.1,8951.2,8308.52,False
+INDUS-00757,Industrie Paris #757,Automobile,Paris,75 - Paris,Île-de-France,17786.2,4234.8,5531.51,False
+INDUS-00758,Industrie Paris #758,Métallurgie,Paris,75 - Paris,Île-de-France,3607.6,859.0,2020.26,False
+INDUS-00759,Industrie Paris #759,Automobile,Paris,75 - Paris,Île-de-France,9913.9,2360.5,2815.55,True
+INDUS-00760,Industrie Capvern #760,Métallurgie,Capvern,75 - Paris,Île-de-France,33168.6,7897.3,11973.86,True
+INDUS-00761,Industrie Champagnole #761,Agroalimentaire,Champagnole,75 - Paris,Île-de-France,15693.8,3736.6,4504.12,False
+INDUS-00762,Industrie Paris #762,Métallurgie,Paris,75 - Paris,Île-de-France,16403.7,3905.6,6102.18,True
+INDUS-00763,Industrie Biganos #763,Agroalimentaire,Biganos,75 - Paris,Île-de-France,29514.3,7027.2,8736.23,True
+INDUS-00764,Industrie Paris #764,Métallurgie,Paris,75 - Paris,Île-de-France,42200.8,10047.8,13546.46,True
+INDUS-00765,Industrie Civens #765,Data Centers,Civens,75 - Paris,Île-de-France,7045.8,1677.6,3973.83,True
+INDUS-00766,Industrie Marange-Silvange #766,Chimie & Pharmacie,Marange-Silvange,75 - Paris,Île-de-France,22687.9,5401.9,4764.46,False
+INDUS-00767,Industrie Paris #767,Métallurgie,Paris,75 - Paris,Île-de-France,25075.5,5970.4,4764.35,False
+INDUS-00768,Industrie Boussy-Saint-Antoine #768,Automobile,Boussy-Saint-Antoine,75 - Paris,Île-de-France,30315.0,7217.9,13247.66,True
+INDUS-00769,Industrie Paris #769,Agroalimentaire,Paris,75 - Paris,Île-de-France,1728.1,411.5,475.23,True
+INDUS-00770,Industrie Paris #770,Data Centers,Paris,75 - Paris,Île-de-France,27157.4,6466.0,13823.12,True
+INDUS-00771,Industrie Paris #771,Métallurgie,Paris,75 - Paris,Île-de-France,30195.5,7189.4,12229.18,True
+INDUS-00772,Industrie Thionville #772,Automobile,Thionville,75 - Paris,Île-de-France,2796.3,665.8,1484.84,True
+INDUS-00773,Industrie Paris #773,Métallurgie,Paris,75 - Paris,Île-de-France,38215.1,9098.8,12649.2,True
+INDUS-00774,Industrie Viriat #774,Agroalimentaire,Viriat,75 - Paris,Île-de-France,2876.1,684.8,882.96,True
+INDUS-00775,Industrie Paris #775,Data Centers,Paris,75 - Paris,Île-de-France,4960.9,1181.2,2167.91,False
+INDUS-00776,Industrie Paris #776,Agroalimentaire,Paris,75 - Paris,Île-de-France,13685.0,3258.3,6527.74,False
+INDUS-00777,Industrie Paris #777,Data Centers,Paris,75 - Paris,Île-de-France,43938.1,10461.5,16081.34,True
+INDUS-00778,Industrie Toulon #778,Métallurgie,Toulon,75 - Paris,Île-de-France,11916.1,2837.2,5266.92,False
+INDUS-00779,Industrie La Madeleine-de-Nonancourt #779,Data Centers,La Madeleine-de-Nonancourt,75 - Paris,Île-de-France,41084.4,9782.0,17214.36,True
+INDUS-00780,Industrie Montauban #780,Automobile,Montauban,75 - Paris,Île-de-France,38779.9,9233.3,10858.37,False
+INDUS-00781,Industrie Paris #781,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,22855.3,5441.7,5188.15,True
+INDUS-00782,Industrie Villeneuve-d'Ascq #782,Automobile,Villeneuve-d'Ascq,75 - Paris,Île-de-France,13884.7,3305.9,6206.46,False
+INDUS-00783,Industrie Saint-Brice-sous-Forêt #783,Agroalimentaire,Saint-Brice-sous-Forêt,75 - Paris,Île-de-France,32740.4,7795.3,11786.54,False
+INDUS-00784,Industrie Paris #784,Data Centers,Paris,75 - Paris,Île-de-France,26570.8,6326.4,11584.87,False
+INDUS-00785,Industrie Toulouse #785,Automobile,Toulouse,75 - Paris,Île-de-France,27226.1,6482.4,5717.48,False
+INDUS-00786,Industrie Paris #786,Automobile,Paris,75 - Paris,Île-de-France,31175.0,7422.6,8386.08,True
+INDUS-00787,Industrie Paris #787,Automobile,Paris,75 - Paris,Île-de-France,20825.4,4958.4,5664.51,True
+INDUS-00788,Industrie Trignac #788,Data Centers,Trignac,75 - Paris,Île-de-France,9833.1,2341.2,5221.38,True
+INDUS-00789,Industrie Marquette-lez-Lille #789,Agroalimentaire,Marquette-lez-Lille,75 - Paris,Île-de-France,11498.7,2737.8,4656.97,True
+INDUS-00790,Industrie Redon #790,Chimie & Pharmacie,Redon,75 - Paris,Île-de-France,25370.2,6040.5,7611.06,False
+INDUS-00791,Industrie Paris #791,Automobile,Paris,75 - Paris,Île-de-France,6696.1,1594.3,1057.98,True
+INDUS-00792,Industrie Puteaux #792,Chimie & Pharmacie,Puteaux,75 - Paris,Île-de-France,37236.3,8865.8,10239.98,True
+INDUS-00793,Industrie Paris #793,Métallurgie,Paris,75 - Paris,Île-de-France,34202.6,8143.5,14501.9,False
+INDUS-00794,Industrie Paris #794,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,5482.5,1305.4,1337.73,True
+INDUS-00795,Industrie Gien #795,Automobile,Gien,75 - Paris,Île-de-France,23138.0,5509.0,8306.54,True
+INDUS-00796,Industrie Chocques #796,Automobile,Chocques,75 - Paris,Île-de-France,14104.0,3358.1,3032.36,False
+INDUS-00797,Industrie Paris #797,Automobile,Paris,75 - Paris,Île-de-France,2111.9,502.8,777.18,False
+INDUS-00798,Industrie Saint-Fons #798,Data Centers,Saint-Fons,75 - Paris,Île-de-France,30562.0,7276.7,7182.07,True
+INDUS-00799,Industrie Paris #799,Agroalimentaire,Paris,75 - Paris,Île-de-France,19522.1,4648.1,8531.16,False
+INDUS-00800,Industrie Paris #800,Automobile,Paris,75 - Paris,Île-de-France,10807.1,2573.1,5381.94,False
+INDUS-00801,Industrie Paris #801,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,36614.9,8717.8,18307.45,True
+INDUS-00802,Industrie Chasseneuil-du-Poitou #802,Métallurgie,Chasseneuil-du-Poitou,75 - Paris,Île-de-France,4364.2,1039.1,1392.18,True
+INDUS-00803,Industrie Paris #803,Automobile,Paris,75 - Paris,Île-de-France,18799.5,4476.1,4079.49,True
+INDUS-00804,Industrie Gisors #804,Agroalimentaire,Gisors,75 - Paris,Île-de-France,8903.2,2119.8,4478.31,True
+INDUS-00805,Industrie Saint-Pierre-lès-Nemours #805,Agroalimentaire,Saint-Pierre-lès-Nemours,75 - Paris,Île-de-France,14840.1,3533.4,7909.77,False
+INDUS-00806,Industrie Saint-Ours #806,Agroalimentaire,Saint-Ours,75 - Paris,Île-de-France,10688.3,2544.8,3099.61,False
+INDUS-00807,Industrie Paris #807,Agroalimentaire,Paris,75 - Paris,Île-de-France,32410.2,7716.7,9949.93,False
+INDUS-00808,Industrie Paris #808,Métallurgie,Paris,75 - Paris,Île-de-France,14630.9,3483.5,5969.41,False
+INDUS-00809,Industrie Paris #809,Automobile,Paris,75 - Paris,Île-de-France,37672.9,8969.7,9154.51,False
+INDUS-00810,Industrie Houdemont #810,Automobile,Houdemont,75 - Paris,Île-de-France,17992.1,4283.8,8204.4,False
+INDUS-00811,Industrie Trappes #811,Métallurgie,Trappes,75 - Paris,Île-de-France,18783.4,4472.2,4057.21,False
+INDUS-00812,Industrie Paris #812,Métallurgie,Paris,75 - Paris,Île-de-France,34737.3,8270.8,10073.82,False
+INDUS-00813,Industrie Paris #813,Métallurgie,Paris,75 - Paris,Île-de-France,19348.8,4606.9,5707.9,True
+INDUS-00814,Industrie Nîmes #814,Data Centers,Nîmes,75 - Paris,Île-de-France,10451.9,2488.5,5508.15,False
+INDUS-00815,Industrie Paris #815,Automobile,Paris,75 - Paris,Île-de-France,19391.1,4616.9,3742.48,False
+INDUS-00816,Industrie Croissy-Beaubourg #816,Automobile,Croissy-Beaubourg,75 - Paris,Île-de-France,27003.4,6429.4,7749.98,False
+INDUS-00817,Industrie Caudry #817,Métallurgie,Caudry,75 - Paris,Île-de-France,37851.2,9012.2,17638.66,False
+INDUS-00818,Industrie Paris #818,Agroalimentaire,Paris,75 - Paris,Île-de-France,26142.2,6224.3,4627.17,True
+INDUS-00819,Industrie Noirmoutier-en-l'Île #819,Chimie & Pharmacie,Noirmoutier-en-l'Île,75 - Paris,Île-de-France,38016.0,9051.4,8439.55,True
+INDUS-00820,Industrie L'Isle-Adam #820,Automobile,L'Isle-Adam,75 - Paris,Île-de-France,41152.2,9798.1,20164.58,False
+INDUS-00821,Industrie Mousseaux-lès-Bray #821,Agroalimentaire,Mousseaux-lès-Bray,75 - Paris,Île-de-France,33132.4,7888.7,18819.2,False
+INDUS-00822,Industrie Paris #822,Métallurgie,Paris,75 - Paris,Île-de-France,7620.6,1814.4,2911.07,True
+INDUS-00823,Industrie La Teste-de-Buch #823,Automobile,La Teste-de-Buch,75 - Paris,Île-de-France,13769.4,3278.4,3676.43,False
+INDUS-00824,Industrie Paris #824,Agroalimentaire,Paris,75 - Paris,Île-de-France,15432.7,3674.5,3950.77,True
+INDUS-00825,Industrie Goyencourt #825,Agroalimentaire,Goyencourt,75 - Paris,Île-de-France,17965.0,4277.4,8677.09,True
+INDUS-00826,Industrie Cubnezais #826,Data Centers,Cubnezais,75 - Paris,Île-de-France,7016.6,1670.6,2175.15,False
+INDUS-00827,Industrie Paris #827,Agroalimentaire,Paris,75 - Paris,Île-de-France,5101.0,1214.5,1152.83,True
+INDUS-00828,Industrie Lyon #828,Data Centers,Lyon,75 - Paris,Île-de-France,22279.8,5304.7,12053.37,True
+INDUS-00829,Industrie Lesquin #829,Agroalimentaire,Lesquin,75 - Paris,Île-de-France,3337.0,794.5,1518.34,True
+INDUS-00830,Industrie Paris #830,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,15893.6,3784.2,7565.35,True
+INDUS-00831,Industrie Briançon #831,Automobile,Briançon,75 - Paris,Île-de-France,43507.9,10359.0,6221.63,False
+INDUS-00832,Industrie Domérat #832,Agroalimentaire,Domérat,75 - Paris,Île-de-France,4609.0,1097.4,958.67,True
+INDUS-00833,Industrie Paris #833,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,9713.5,2312.7,3846.55,True
+INDUS-00834,Industrie Saint-Brieuc #834,Automobile,Saint-Brieuc,75 - Paris,Île-de-France,18233.1,4341.2,7949.63,False
+INDUS-00835,Industrie Mours #835,Data Centers,Mours,75 - Paris,Île-de-France,12030.5,2864.4,2129.4,True
+INDUS-00836,Industrie Paris #836,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,12081.8,2876.6,6898.71,False
+INDUS-00837,Industrie Carcassonne #837,Métallurgie,Carcassonne,75 - Paris,Île-de-France,16450.4,3916.8,4507.41,True
+INDUS-00838,Industrie Puteaux #838,Automobile,Puteaux,75 - Paris,Île-de-France,8425.0,2006.0,1710.28,True
+INDUS-00839,Industrie Mont-Saint-Martin #839,Data Centers,Mont-Saint-Martin,75 - Paris,Île-de-France,8060.7,1919.2,2377.91,True
+INDUS-00840,Industrie Paris #840,Agroalimentaire,Paris,75 - Paris,Île-de-France,23507.8,5597.1,6958.31,False
+INDUS-00841,Industrie Peyrabout #841,Chimie & Pharmacie,Peyrabout,75 - Paris,Île-de-France,6789.7,1616.6,3917.66,True
+INDUS-00842,Industrie Gap #842,Automobile,Gap,75 - Paris,Île-de-France,2307.6,549.4,369.22,True
+INDUS-00843,Industrie Paris #843,Data Centers,Paris,75 - Paris,Île-de-France,6907.8,1644.7,904.92,False
+INDUS-00844,Industrie Paris #844,Métallurgie,Paris,75 - Paris,Île-de-France,38687.2,9211.2,15204.07,True
+INDUS-00845,Industrie Paris #845,Automobile,Paris,75 - Paris,Île-de-France,20578.9,4899.7,11400.71,True
+INDUS-00846,Industrie Paris #846,Métallurgie,Paris,75 - Paris,Île-de-France,24762.0,5895.7,8592.41,True
+INDUS-00847,Industrie Paris #847,Métallurgie,Paris,75 - Paris,Île-de-France,23491.7,5593.3,8950.34,True
+INDUS-00848,Industrie Rillieux-la-Pape #848,Data Centers,Rillieux-la-Pape,75 - Paris,Île-de-France,22718.0,5409.0,9427.97,True
+INDUS-00849,Industrie Paris #849,Agroalimentaire,Paris,75 - Paris,Île-de-France,32555.5,7751.3,7064.54,True
+INDUS-00850,Industrie Paris #850,Agroalimentaire,Paris,75 - Paris,Île-de-France,32151.5,7655.1,13664.39,True
+INDUS-00851,Industrie Paris #851,Automobile,Paris,75 - Paris,Île-de-France,8704.6,2072.5,4683.07,True
+INDUS-00852,Industrie Paris #852,Data Centers,Paris,75 - Paris,Île-de-France,23857.1,5680.3,7968.27,True
+INDUS-00853,Industrie Wissembourg #853,Data Centers,Wissembourg,75 - Paris,Île-de-France,40881.9,9733.8,6336.69,True
+INDUS-00854,Industrie Paris #854,Data Centers,Paris,75 - Paris,Île-de-France,16928.9,4030.7,9767.98,True
+INDUS-00855,Industrie Paris #855,Métallurgie,Paris,75 - Paris,Île-de-France,19364.7,4610.6,9682.35,True
+INDUS-00856,Industrie L'Isle-sur-la-Sorgue #856,Data Centers,L'Isle-sur-la-Sorgue,75 - Paris,Île-de-France,1724.5,410.6,260.4,False
+INDUS-00857,Industrie Paris #857,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,27690.4,6593.0,7005.67,False
+INDUS-00858,Industrie Paris #858,Automobile,Paris,75 - Paris,Île-de-France,37155.2,8846.5,9548.89,True
+INDUS-00859,Industrie Paris #859,Métallurgie,Paris,75 - Paris,Île-de-France,23280.4,5543.0,5587.3,False
+INDUS-00860,Industrie Albertville #860,Data Centers,Albertville,75 - Paris,Île-de-France,27743.4,6605.6,9099.84,True
+INDUS-00861,Industrie Paris #861,Métallurgie,Paris,75 - Paris,Île-de-France,15173.6,3612.8,8436.52,False
+INDUS-00862,Industrie Paris #862,Agroalimentaire,Paris,75 - Paris,Île-de-France,26469.5,6302.3,9661.37,True
+INDUS-00863,Industrie Le Boulou #863,Data Centers,Le Boulou,75 - Paris,Île-de-France,7043.5,1677.0,2993.49,False
+INDUS-00864,Industrie Paris #864,Agroalimentaire,Paris,75 - Paris,Île-de-France,29018.3,6909.1,12622.96,True
+INDUS-00865,Industrie Paris #865,Automobile,Paris,75 - Paris,Île-de-France,35075.6,8351.3,7330.8,False
+INDUS-00866,Industrie Paris #866,Automobile,Paris,75 - Paris,Île-de-France,14590.9,3474.0,3049.5,True
+INDUS-00867,Industrie Paris #867,Agroalimentaire,Paris,75 - Paris,Île-de-France,43947.4,10463.7,9272.9,True
+INDUS-00868,Industrie Grenoble #868,Automobile,Grenoble,75 - Paris,Île-de-France,34416.5,8194.4,11804.86,False
+INDUS-00869,Industrie Valenciennes #869,Chimie & Pharmacie,Valenciennes,75 - Paris,Île-de-France,37509.3,8930.8,21455.32,True
+INDUS-00870,Industrie Orchies #870,Data Centers,Orchies,75 - Paris,Île-de-France,40130.8,9555.0,7263.67,False
+INDUS-00871,Industrie Paris #871,Agroalimentaire,Paris,75 - Paris,Île-de-France,33069.3,7873.6,4034.45,False
+INDUS-00872,Industrie Paris #872,Automobile,Paris,75 - Paris,Île-de-France,43630.6,10388.2,21728.04,False
+INDUS-00873,Industrie Paris #873,Métallurgie,Paris,75 - Paris,Île-de-France,32655.3,7775.1,17046.07,True
+INDUS-00874,Industrie Paris #874,Agroalimentaire,Paris,75 - Paris,Île-de-France,14305.5,3406.1,3590.68,False
+INDUS-00875,Industrie Vagnas #875,Automobile,Vagnas,75 - Paris,Île-de-France,20400.4,4857.2,8098.96,True
+INDUS-00876,Industrie Goyencourt #876,Automobile,Goyencourt,75 - Paris,Île-de-France,17288.0,4116.2,5653.18,True
+INDUS-00877,Industrie Paris #877,Agroalimentaire,Paris,75 - Paris,Île-de-France,36187.4,8616.0,7201.29,False
+INDUS-00878,Industrie Paris #878,Métallurgie,Paris,75 - Paris,Île-de-France,33780.1,8042.9,9830.01,True
+INDUS-00879,Industrie Beauvais #879,Automobile,Beauvais,75 - Paris,Île-de-France,39421.8,9386.1,7963.2,True
+INDUS-00880,Industrie Salon-de-Provence #880,Data Centers,Salon-de-Provence,75 - Paris,Île-de-France,7283.5,1734.2,3663.6,False
+INDUS-00881,Industrie Plan-de-Cuques #881,Data Centers,Plan-de-Cuques,75 - Paris,Île-de-France,18891.2,4497.9,3551.55,False
+INDUS-00882,Industrie Villefranche-sur-Saône #882,Agroalimentaire,Villefranche-sur-Saône,75 - Paris,Île-de-France,13673.2,3255.5,5906.82,True
+INDUS-00883,Industrie La Valette-du-Var #883,Métallurgie,La Valette-du-Var,75 - Paris,Île-de-France,4495.1,1070.3,746.19,True
+INDUS-00884,Industrie Saint-Germain-en-Laye #884,Métallurgie,Saint-Germain-en-Laye,75 - Paris,Île-de-France,21299.3,5071.3,5857.31,True
+INDUS-00885,Industrie Paris #885,Agroalimentaire,Paris,75 - Paris,Île-de-France,26201.2,6238.4,13834.23,True
+INDUS-00886,Industrie Paris #886,Agroalimentaire,Paris,75 - Paris,Île-de-France,31386.5,7473.0,5743.73,False
+INDUS-00887,Industrie Paris #887,Agroalimentaire,Paris,75 - Paris,Île-de-France,16977.7,4042.3,6400.59,True
+INDUS-00888,Industrie Ploërmel #888,Métallurgie,Ploërmel,75 - Paris,Île-de-France,17422.6,4148.2,5732.04,False
+INDUS-00889,Industrie Lamentin #889,Data Centers,Lamentin,75 - Paris,Île-de-France,44066.4,10492.0,16877.43,True
+INDUS-00890,Industrie Le Monêtier-les-Bains #890,Data Centers,Le Monêtier-les-Bains,75 - Paris,Île-de-France,15675.6,3732.3,4734.03,True
+INDUS-00891,Industrie Paris #891,Data Centers,Paris,75 - Paris,Île-de-France,39916.1,9503.8,17762.66,False
+INDUS-00892,Industrie Paris #892,Agroalimentaire,Paris,75 - Paris,Île-de-France,33584.6,7996.3,17329.65,True
+INDUS-00893,Industrie Les Pennes-Mirabeau #893,Data Centers,Les Pennes-Mirabeau,75 - Paris,Île-de-France,24365.3,5801.3,4312.66,False
+INDUS-00894,Industrie Murviel-lès-Béziers #894,Chimie & Pharmacie,Murviel-lès-Béziers,75 - Paris,Île-de-France,39524.3,9410.5,19406.43,True
+INDUS-00895,Industrie Paris #895,Automobile,Paris,75 - Paris,Île-de-France,26349.4,6273.7,6719.1,True
+INDUS-00896,Industrie Fléville-devant-Nancy #896,Data Centers,Fléville-devant-Nancy,75 - Paris,Île-de-France,14706.1,3501.5,5573.61,True
+INDUS-00897,Industrie Paris #897,Métallurgie,Paris,75 - Paris,Île-de-France,2578.8,614.0,1021.2,True
+INDUS-00898,Industrie Mondeville #898,Automobile,Mondeville,75 - Paris,Île-de-France,3587.4,854.1,1388.32,True
+INDUS-00899,Industrie Chartres #899,Agroalimentaire,Chartres,75 - Paris,Île-de-France,37095.7,8832.3,18176.89,False
+INDUS-00900,Industrie Saint-Cyr-l'École #900,Agroalimentaire,Saint-Cyr-l'École,75 - Paris,Île-de-France,17526.1,4172.9,3137.17,True
+INDUS-00901,Industrie Paris #901,Métallurgie,Paris,75 - Paris,Île-de-France,4255.5,1013.2,957.49,False
+INDUS-00902,Industrie Paris #902,Automobile,Paris,75 - Paris,Île-de-France,22543.1,5367.4,7845.0,True
+INDUS-00903,Industrie Paris #903,Automobile,Paris,75 - Paris,Île-de-France,24186.3,5758.6,8247.53,False
+INDUS-00904,Industrie Paris #904,Métallurgie,Paris,75 - Paris,Île-de-France,33190.0,7902.4,13707.47,False
+INDUS-00905,Industrie Vieux-Condé #905,Data Centers,Vieux-Condé,75 - Paris,Île-de-France,14512.4,3455.3,5355.08,True
+INDUS-00906,Industrie Azay-le-Brûlé #906,Data Centers,Azay-le-Brûlé,75 - Paris,Île-de-France,32925.7,7839.5,5301.04,False
+INDUS-00907,Industrie Paris #907,Agroalimentaire,Paris,75 - Paris,Île-de-France,15850.4,3773.9,2314.16,True
+INDUS-00908,Industrie Paris #908,Agroalimentaire,Paris,75 - Paris,Île-de-France,15805.3,3763.2,5531.85,False
+INDUS-00909,Industrie Les Villards-sur-Thônes #909,Automobile,Les Villards-sur-Thônes,75 - Paris,Île-de-France,5500.1,1309.5,836.02,True
+INDUS-00910,Industrie Paris #910,Métallurgie,Paris,75 - Paris,Île-de-France,28682.8,6829.2,12563.07,False
+INDUS-00911,Industrie Paris #911,Automobile,Paris,75 - Paris,Île-de-France,37575.4,8946.5,21793.73,False
+INDUS-00912,Industrie Tarbes #912,Chimie & Pharmacie,Tarbes,75 - Paris,Île-de-France,28302.5,6738.7,9283.22,False
+INDUS-00913,Industrie Paris #913,Data Centers,Paris,75 - Paris,Île-de-France,3515.3,837.0,1856.08,False
+INDUS-00914,Industrie Paris #914,Data Centers,Paris,75 - Paris,Île-de-France,41760.1,9942.9,14574.27,False
+INDUS-00915,Industrie Nîmes #915,Métallurgie,Nîmes,75 - Paris,Île-de-France,26157.7,6228.0,14255.95,True
+INDUS-00916,Industrie Courbevoie #916,Data Centers,Courbevoie,75 - Paris,Île-de-France,12799.8,3047.6,3443.15,True
+INDUS-00917,Industrie Paris #917,Data Centers,Paris,75 - Paris,Île-de-France,7300.9,1738.3,2978.77,False
+INDUS-00918,Industrie Paris #918,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,23835.0,5675.0,4933.84,True
+INDUS-00919,Industrie Paris #919,Métallurgie,Paris,75 - Paris,Île-de-France,3293.1,784.1,1870.48,True
+INDUS-00920,Industrie Paris #920,Agroalimentaire,Paris,75 - Paris,Île-de-France,10598.2,2523.4,4864.57,True
+INDUS-00921,Industrie Paris #921,Data Centers,Paris,75 - Paris,Île-de-France,38777.7,9232.8,14076.31,False
+INDUS-00922,Industrie Tarare #922,Métallurgie,Tarare,75 - Paris,Île-de-France,30220.6,7195.4,15382.29,True
+INDUS-00923,Industrie Cappelle-la-Grande #923,Automobile,Cappelle-la-Grande,75 - Paris,Île-de-France,44144.2,10510.5,17966.69,False
+INDUS-00924,Industrie Orange #924,Automobile,Orange,75 - Paris,Île-de-France,13886.2,3306.2,2916.1,True
+INDUS-00925,Industrie Paris #925,Automobile,Paris,75 - Paris,Île-de-France,27627.6,6578.0,9476.27,True
+INDUS-00926,Industrie Solliès-Pont #926,Data Centers,Solliès-Pont,75 - Paris,Île-de-France,25255.5,6013.2,10329.5,True
+INDUS-00927,Industrie Châtillon #927,Agroalimentaire,Châtillon,75 - Paris,Île-de-France,3302.9,786.4,1866.14,True
+INDUS-00928,Industrie Paris #928,Data Centers,Paris,75 - Paris,Île-de-France,5577.7,1328.0,1639.84,False
+INDUS-00929,Industrie Paris #929,Métallurgie,Paris,75 - Paris,Île-de-France,27641.1,6581.2,13820.55,False
+INDUS-00930,Industrie Paris #930,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,38259.4,9109.4,13964.68,True
+INDUS-00931,Industrie Sommerau #931,Métallurgie,Sommerau,75 - Paris,Île-de-France,38295.4,9118.0,16198.95,True
+INDUS-00932,Industrie Irigny #932,Automobile,Irigny,75 - Paris,Île-de-France,21106.0,5025.2,6880.56,False
+INDUS-00933,Industrie Paris #933,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,38863.3,9253.2,17294.17,False
+INDUS-00934,Industrie Toulon #934,Agroalimentaire,Toulon,75 - Paris,Île-de-France,35739.1,8509.3,7112.08,True
+INDUS-00935,Industrie Paris #935,Automobile,Paris,75 - Paris,Île-de-France,5359.2,1276.0,803.88,True
+INDUS-00936,Industrie Paris #936,Métallurgie,Paris,75 - Paris,Île-de-France,12384.8,2948.8,3480.13,True
+INDUS-00937,Industrie Paris #937,Agroalimentaire,Paris,75 - Paris,Île-de-France,23038.3,5485.3,3640.05,True
+INDUS-00938,Industrie Cabourg #938,Data Centers,Cabourg,75 - Paris,Île-de-France,38509.3,9168.9,13247.2,False
+INDUS-00939,Industrie Cugnaux #939,Automobile,Cugnaux,75 - Paris,Île-de-France,9763.1,2324.5,2606.75,True
+INDUS-00940,Industrie Paris #940,Agroalimentaire,Paris,75 - Paris,Île-de-France,12413.1,2955.5,3984.61,True
+INDUS-00941,Industrie Chambéry #941,Data Centers,Chambéry,75 - Paris,Île-de-France,25299.8,6023.8,8854.93,True
+INDUS-00942,Industrie Paris #942,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,26637.1,6342.2,7538.3,False
+INDUS-00943,Industrie Paris #943,Métallurgie,Paris,75 - Paris,Île-de-France,14874.1,3541.5,3435.92,True
+INDUS-00944,Industrie Champagne-au-Mont-d'Or #944,Automobile,Champagne-au-Mont-d'Or,75 - Paris,Île-de-France,18396.0,4380.0,9676.3,False
+INDUS-00945,Industrie Paris #945,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,27445.7,6534.7,8590.5,False
+INDUS-00946,Industrie Paris #946,Automobile,Paris,75 - Paris,Île-de-France,6456.7,1537.3,2724.73,False
+INDUS-00947,Industrie Saint-Louis #947,Métallurgie,Saint-Louis,75 - Paris,Île-de-France,30789.0,7330.7,5665.18,True
+INDUS-00948,Industrie Nanterre #948,Agroalimentaire,Nanterre,75 - Paris,Île-de-France,37032.2,8817.2,14479.59,True
+INDUS-00949,Industrie Paris #949,Automobile,Paris,75 - Paris,Île-de-France,11160.4,2657.2,1807.98,True
+INDUS-00950,Industrie La Bastidonne #950,Agroalimentaire,La Bastidonne,75 - Paris,Île-de-France,44531.7,10602.8,12201.69,False
+INDUS-00951,Industrie Chauny #951,Data Centers,Chauny,75 - Paris,Île-de-France,3447.1,820.7,1147.88,True
+INDUS-00952,Industrie Paris #952,Agroalimentaire,Paris,75 - Paris,Île-de-France,9694.6,2308.2,4818.22,True
+INDUS-00953,Industrie Hennebont #953,Chimie & Pharmacie,Hennebont,75 - Paris,Île-de-France,26600.2,6333.4,3404.83,True
+INDUS-00954,Industrie Paris #954,Agroalimentaire,Paris,75 - Paris,Île-de-France,4040.7,962.1,1539.51,False
+INDUS-00955,Industrie Paris #955,Agroalimentaire,Paris,75 - Paris,Île-de-France,4055.3,965.5,1687.0,False
+INDUS-00956,Industrie Paris #956,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,14763.3,3515.1,3262.69,False
+INDUS-00957,Industrie Val-Cenis #957,Data Centers,Val-Cenis,75 - Paris,Île-de-France,27609.7,6573.7,16013.63,True
+INDUS-00958,Industrie Beauzelle #958,Métallurgie,Beauzelle,75 - Paris,Île-de-France,27382.6,6519.7,6927.8,True
+INDUS-00959,Industrie Paris #959,Automobile,Paris,75 - Paris,Île-de-France,11686.2,2782.4,6182.0,False
+INDUS-00960,Industrie Paris #960,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,38454.2,9155.8,9075.19,True
+INDUS-00961,Industrie Paris #961,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,17450.0,4154.8,10103.55,False
+INDUS-00962,Industrie La Chapelle-sur-Erdre #962,Automobile,La Chapelle-sur-Erdre,75 - Paris,Île-de-France,42457.4,10108.9,13416.54,True
+INDUS-00963,Industrie Saint-Gaudens #963,Data Centers,Saint-Gaudens,75 - Paris,Île-de-France,44303.3,10548.4,20069.39,True
+INDUS-00964,Industrie Antibes #964,Métallurgie,Antibes,75 - Paris,Île-de-France,44035.0,10484.5,9687.7,False
+INDUS-00965,Industrie Monteux #965,Data Centers,Monteux,75 - Paris,Île-de-France,10072.1,2398.1,5781.39,False
+INDUS-00966,Industrie Paris #966,Agroalimentaire,Paris,75 - Paris,Île-de-France,36235.2,8627.4,13443.26,False
+INDUS-00967,Industrie Domfront en Poiraie #967,Agroalimentaire,Domfront en Poiraie,75 - Paris,Île-de-France,35807.7,8525.6,15325.7,True
+INDUS-00968,Industrie Paris #968,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,44312.0,10550.5,18167.92,False
+INDUS-00969,Industrie Paris #969,Automobile,Paris,75 - Paris,Île-de-France,42515.7,10122.8,6122.26,False
+INDUS-00970,Industrie Paris #970,Data Centers,Paris,75 - Paris,Île-de-France,9499.6,2261.8,1852.42,True
+INDUS-00971,Industrie Paris #971,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,7293.1,1736.5,3967.45,True
+INDUS-00972,Industrie Chartres #972,Automobile,Chartres,75 - Paris,Île-de-France,33514.3,7979.6,5094.17,True
+INDUS-00973,Industrie Paris #973,Automobile,Paris,75 - Paris,Île-de-France,29613.2,7050.8,16435.33,True
+INDUS-00974,Industrie Arcueil #974,Métallurgie,Arcueil,75 - Paris,Île-de-France,17376.1,4137.2,5247.58,True
+INDUS-00975,Industrie Paris #975,Automobile,Paris,75 - Paris,Île-de-France,38956.6,9275.4,12660.9,False
+INDUS-00976,Industrie Toulon #976,Automobile,Toulon,75 - Paris,Île-de-France,26637.9,6342.4,13185.76,True
+INDUS-00977,Industrie Cherbourg-en-Cotentin #977,Automobile,Cherbourg-en-Cotentin,75 - Paris,Île-de-France,16664.2,3967.7,8182.12,True
+INDUS-00978,Industrie Dives-sur-Mer #978,Chimie & Pharmacie,Dives-sur-Mer,75 - Paris,Île-de-France,18802.3,4476.7,6750.03,True
+INDUS-00979,Industrie Arcueil #979,Data Centers,Arcueil,75 - Paris,Île-de-France,29040.7,6914.5,4007.62,True
+INDUS-00980,Industrie Paris #980,Automobile,Paris,75 - Paris,Île-de-France,31458.1,7490.0,5756.83,False
+INDUS-00981,Industrie Paris #981,Automobile,Paris,75 - Paris,Île-de-France,34469.5,8207.0,8238.21,True
+INDUS-00982,Industrie Paris #982,Métallurgie,Paris,75 - Paris,Île-de-France,7034.4,1674.9,3805.61,False
+INDUS-00983,Industrie Paris #983,Data Centers,Paris,75 - Paris,Île-de-France,36075.4,8589.4,12806.77,True
+INDUS-00984,Industrie Paris #984,Agroalimentaire,Paris,75 - Paris,Île-de-France,5614.1,1336.7,2195.11,True
+INDUS-00985,Industrie Saint-Martin-Boulogne #985,Automobile,Saint-Martin-Boulogne,75 - Paris,Île-de-France,38385.9,9139.5,15239.2,True
+INDUS-00986,Industrie Paris #986,Agroalimentaire,Paris,75 - Paris,Île-de-France,15088.1,3592.4,5099.78,True
+INDUS-00987,Industrie Paris #987,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,42289.5,10068.9,18861.12,True
+INDUS-00988,Industrie Orsay #988,Chimie & Pharmacie,Orsay,75 - Paris,Île-de-France,20245.1,4820.3,5709.12,False
+INDUS-00989,Industrie Aulnay-sous-Bois #989,Métallurgie,Aulnay-sous-Bois,75 - Paris,Île-de-France,33504.6,7977.3,15613.14,True
+INDUS-00990,Industrie Paris #990,Métallurgie,Paris,75 - Paris,Île-de-France,27408.6,6525.9,14279.88,False
+INDUS-00991,Industrie Paris #991,Métallurgie,Paris,75 - Paris,Île-de-France,6059.0,1442.6,2290.3,False
+INDUS-00992,Industrie Paris #992,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,15074.5,3589.2,3421.91,False
+INDUS-00993,Industrie Paris #993,Métallurgie,Paris,75 - Paris,Île-de-France,41908.0,9978.1,11859.96,True
+INDUS-00994,Industrie Paris #994,Métallurgie,Paris,75 - Paris,Île-de-France,27015.6,6432.3,6267.62,True
+INDUS-00995,Industrie Paris #995,Agroalimentaire,Paris,75 - Paris,Île-de-France,4277.0,1018.3,1317.32,False
+INDUS-00996,Industrie Paris #996,Métallurgie,Paris,75 - Paris,Île-de-France,16000.6,3809.7,7104.27,True
+INDUS-00997,Industrie Thionville #997,Agroalimentaire,Thionville,75 - Paris,Île-de-France,19735.9,4699.0,10637.65,False
+INDUS-00998,Industrie Paris #998,Agroalimentaire,Paris,75 - Paris,Île-de-France,37015.6,8813.2,20099.47,True
+INDUS-00999,Industrie Le Havre #999,Agroalimentaire,Le Havre,75 - Paris,Île-de-France,27124.5,6458.2,11636.41,False
+INDUS-01000,Industrie Paris #1000,Chimie & Pharmacie,Paris,75 - Paris,Île-de-France,11939.6,2842.8,6913.03,False

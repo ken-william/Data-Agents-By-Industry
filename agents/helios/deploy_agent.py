@@ -13,10 +13,11 @@ def deploy_helios_agent():
     project_id = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
     location = os.environ.get("GOOGLE_CLOUD_LOCATION", "global")
     agent_id = "helios-agent"
+    base_dir = os.path.dirname(__file__)
 
     print(f"Deploying Helios Data Agent to Project: '{project_id}', Location: '{location}', Agent ID: '{agent_id}'...")
 
-    payload_path = os.path.join(os.path.dirname(__file__), "helios_payload.json")
+    payload_path = os.path.join(base_dir, "agent_payload.json")
     with open(payload_path, "r", encoding="utf-8") as f:
         raw_payload = f.read()
 

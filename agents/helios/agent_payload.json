@@ -1,61 +1,41 @@
 {
-  "displayName": "Helios - Énergie & Climat",
-  "description": "Ingénieur conseil et analyste d'intelligence énergétique : évalue la consommation d'électricité des usagers, prévient les risques de surcharges des transformateurs de quartier lors des pics de recharge de véhicules électriques, accélère le déploiement des énergies renouvelables et orchestre la prospection solaire auprès des industriels.",
+  "displayName": "Helios - Énergie & Bornes IRVE Enedis",
+  "description": "Copilote décisionnel et d'intelligence du réseau de distribution électrique : unifie les 10 000 bornes de recharge pour véhicules électriques réelles Enedis (IRVE), la télémesure 30min de charge des transformateurs HTA/BT, la production d'énergie renouvelable et la flexibilité d'effacement des grands clients industriels B2B.",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 SÉCURITÉ ET PROTECTION DES INFRASTRUCTURES ÉNERGÉTIQUES :\n- Protection des postes Haute Tension et transformateurs sensibles Enedis.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Traitement des données de charge Linky et cartographie des bornes IRVE.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es Helios, le copilote d'intelligence décisionnelle du réseau électrique Enedis et des infrastructures de recharge IRVE.\n\n=== DONNÉES ET ARCHITECTURE RELATIONNELLE HELIOS ===\n- `enedis_bornes_irve` : Répertoire master des 10 000 bornes de recharge électriques réelles Enedis en France (Opérateur, Aménageur, Adresse, Commune, Département, Puissance kW, Connecteurs Type 2 / Combo CCS).\n- `enedis_consommation_inf36` : Télémesures au pas 30 min du taux de charge et pic de puissance des transformateurs HTA/BT de quartier alimentant les bornes (Risque de saturation / disjonction imminente 48h).\n- `enedis_production_renouvelable` : Parcs de production solaire, éolienne, hydraulique et biomasse raccordés au réseau public de distribution Enedis.\n- `enedis_clients_industriels` : Profils de consommation des usines et data centers HTA/HTB avec opt-in de flexibilité d'effacement.\n\n🔒 RESPECT DU SECRET INDUSTRIEL ET CONFIDENTIALITÉ RESEAU :\n- Protéger les données sensibles de réseau et identifiants PDL d'exploitants.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
-            {
-              "projectId": "${PROJECT_ID}",
-              "datasetId": "power_energy_ds",
-              "tableId": "enedis_consommation_inf36"
-            },
-            {
-              "projectId": "${PROJECT_ID}",
-              "datasetId": "power_energy_ds",
-              "tableId": "enedis_production_renouvelable"
-            },
-            {
-              "projectId": "${PROJECT_ID}",
-              "datasetId": "power_energy_ds",
-              "tableId": "enedis_bornes_irve"
-            },
-            {
-              "projectId": "${PROJECT_ID}",
-              "datasetId": "power_energy_ds",
-              "tableId": "enedis_clients_industriels"
-            }
+            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_bornes_irve"},
+            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_consommation_inf36"},
+            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_production_renouvelable"},
+            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_clients_industriels"}
           ]
         }
       },
       "exampleQueries": [
         {
-          "naturalLanguageQuestion": "Analyse les pics de recharge des véhicules électriques pour prédire quels transformateurs de quartier vont saturer et disjoncter dans les prochaines 48 heures.",
-          "sqlQuery": "SELECT c.region, c.commune, c.nom_transformateur_quartier, c.pic_consommation_kw, c.capacite_max_transformateur_kw, c.taux_charge_transformateur_pct, c.risque_tension_reseau, b.station_recharge_nom, b.pic_recharge_ve_kw FROM `${PROJECT_ID}.power_energy_ds.enedis_consommation_inf36` c JOIN `${PROJECT_ID}.power_energy_ds.enedis_bornes_irve` b ON c.commune = b.commune WHERE c.taux_charge_transformateur_pct > 85.0 OR c.risque_tension_reseau LIKE 'Saturation%' ORDER BY c.taux_charge_transformateur_pct DESC LIMIT 100"
+          "naturalLanguageQuestion": "Quels transformateurs Enedis présentent un risque élevé de saturation (> 88 % de charge) en raison de la forte concentration de bornes IRVE rapides ?",
+          "sqlQuery": "SELECT c.commune, c.code_departement, c.nom_transformateur_quartier, c.pic_consommation_kw, c.capacite_max_transformateur_kw, c.taux_charge_transformateur_pct, c.risque_tension_reseau FROM `${PROJECT_ID}.power_energy_ds.enedis_consommation_inf36` c WHERE c.taux_charge_transformateur_pct > 88.0 ORDER BY c.taux_charge_transformateur_pct DESC LIMIT 25"
         },
         {
-          "naturalLanguageQuestion": "Identifie les 100 clients industriels les plus énergivores de notre base qui n'ont pas encore de panneaux solaires, et propose un plan de financement personnalisé en Solar-as-a-Service.",
-          "sqlQuery": "SELECT nom_entreprise_site, secteur_activite, region, commune, consommation_annuelle_mwh, presence_panneaux_solaires, surface_toiture_disponible_m2, potention_solaire_kwp, economie_co2_potentielle_tonnes, abonnement_mensuel_solar_as_a_service_eur FROM `${PROJECT_ID}.power_energy_ds.enedis_clients_industriels` WHERE presence_panneaux_solaires = FALSE ORDER BY consommation_annuelle_mwh DESC LIMIT 100"
+          "naturalLanguageQuestion": "Quels sont les principaux opérateurs et aménageurs de bornes de recharge ultra-rapides (> 50 kW) par région administrative ?",
+          "sqlQuery": "SELECT nom_region, nom_operateur, COUNT(DISTINCT id_station_itinerance) AS nb_stations, SUM(nbre_pdc) AS total_prises, ROUND(AVG(puissance_nominale_kw), 1) AS puissance_moyenne_kw FROM `${PROJECT_ID}.power_energy_ds.enedis_bornes_irve` WHERE puissance_nominale_kw >= 50.0 GROUP BY nom_region, nom_operateur ORDER BY nb_stations DESC LIMIT 30"
         },
         {
-          "naturalLanguageQuestion": "Génère un tableau de bord exécutif détaillant les économies de carbone réalisées et les goulets d'étranglement de notre réseau de distribution d'électricité.",
-          "sqlQuery": "SELECT p.region, COUNT(DISTINCT p.id_prod) AS nb_sites_production, SUM(p.production_injectee_mwh) AS total_production_renouvelable_mwh, SUM(p.co2_evite_tonnes) AS total_co2_evite_tonnes FROM `${PROJECT_ID}.power_energy_ds.enedis_production_renouvelable` p GROUP BY p.region ORDER BY total_co2_evite_tonnes DESC"
-        },
-        {
-          "naturalLanguageQuestion": "En croisant les données de consommation et les réseaux routiers, quels sont les emplacements prioritaires pour installer nos prochaines bornes de recharge ultra-rapides (IRVE) ?",
-          "sqlQuery": "SELECT b.region, b.commune, b.station_recharge_nom, b.nombre_bornes_disponibles, b.pic_recharge_ve_kw FROM `${PROJECT_ID}.power_energy_ds.enedis_bornes_irve` b ORDER BY b.pic_recharge_ve_kw DESC LIMIT 50"
+          "naturalLanguageQuestion": "Quels sites industriels B2B ont accepté l'opt-in de flexibilité d'effacement pour soulager le réseau lors des pics de consommation ?",
+          "sqlQuery": "SELECT raison_sociale, secteur_activite, commune, code_departement, consommation_annuelle_mwh, puissance_souscrite_kva FROM `${PROJECT_ID}.power_energy_ds.enedis_clients_industriels` WHERE optin_flexibilite_effacement = TRUE ORDER BY consommation_annuelle_mwh DESC LIMIT 50"
         }
       ],
       "glossaryTerms": [
         {
-          "displayName": "Bornes IRVE & Surcharge de Quartier",
-          "description": "Infrastructure de recharge des véhicules électriques et impact sur le réseau de distribution d'électricité."
+          "displayName": "Enedis IRVE & Taux de Charge",
+          "description": "Indicateur d'analyse d'impact des bornes de recharge électriques sur le taux de charge et le risque de surtension des transformateurs HTA/BT."
         },
         {
-          "displayName": "Offre Solar-as-a-Service",
-          "description": "Financement d'installations photovoltaïques industrielles par abonnement mensuel sans apport initial."
+          "displayName": "Flexibilité d'Effacement B2B",
+          "description": "Mécanisme permettant aux industriels de réduire temporairement leur appel de puissance lors des pics réseau."
         }
       ]
     }
