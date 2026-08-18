@@ -1,0 +1,6 @@
+format_id,nom_format_projection,taux_occupation_moyen_seance_pct,prix_moyen_billet_format_eur,surcout_prix_billet_pct,recette_annuelle_par_fauteuil_eur
+FMT-001,Standard 2D,28.5,7.42,0.0,650.0
+FMT-002,IMAX 3D,68.5,14.5,95.4,1980.0
+FMT-003,4DX Immersif,74.2,16.8,126.4,2450.0
+FMT-004,Dolby Cinema,62.0,13.9,87.3,1720.0
+FMT-005,ScreenX 270°,58.0,12.5,68.5,1480.0

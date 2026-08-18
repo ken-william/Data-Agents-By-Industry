@@ -1,0 +1,21 @@
+movie_id,titre_film,genre,nationalite,budget_production_eur,date_sortie_salles,entrees_premiere_semaine,entrees_cumulees_total,semaines_affiche,coefficient_maintien_semaine2,index_buzz_reseaux_sociaux,risque_flop_box_office_pct
+FILM-2025-001,Le Comte de Monte-Cristo,Fiction,Français,43000000.0,2024-06-28,1250000,9300000,22,0.92,96.5,2.1
+FILM-2025-002,L'Amour Ouf,Fiction,Français,32000000.0,2024-10-16,1050000,4800000,16,0.89,91.0,5.0
+FILM-2025-003,Dune: Partie 2,Fiction,Américain,190000000.0,2024-02-28,1380000,4200000,14,0.88,94.0,4.2
+FILM-2025-004,Vaiana 2,Animation,Américain,150000000.0,2024-11-27,1450000,5600000,12,0.94,97.0,1.5
+FILM-2025-005,Gladiator II,Fiction,Américain,240000000.0,2024-11-13,1120000,3900000,10,0.82,88.0,12.0
+FILM-2025-006,Monsieur Aznavour,Fiction,Français,26000000.0,2024-10-23,610000,2100000,11,0.86,85.0,8.5
+FILM-2025-007,Vice-Versa 2,Animation,Américain,175000000.0,2024-06-19,1680000,8400000,18,0.95,98.0,1.0
+FILM-2025-008,Un P'tit Truc En Plus,Fiction,Français,4500000.0,2024-05-01,1100000,10800000,26,0.96,99.0,0.5
+FILM-2025-009,Joker: Folie à Deux,Fiction,Américain,190000000.0,2024-10-02,620000,1150000,5,0.45,41.0,79.0
+FILM-2025-010,Emmanuelle,Fiction,Français,24000000.0,2024-09-25,180000,320000,4,0.42,32.0,82.5
+FILM-2025-011,Megalopolis,Fiction,Américain,120000000.0,2024-09-25,140000,260000,3,0.38,28.0,88.0
+FILM-2025-012,Argylle,Fiction,Américain,200000000.0,2024-01-31,210000,450000,4,0.35,25.0,91.0
+FILM-2025-013,Borderlands,Fiction,Américain,115000000.0,2024-08-07,110000,190000,3,0.31,21.0,94.5
+FILM-2025-014,Madame Web,Fiction,Américain,80000000.0,2024-02-14,165000,310000,4,0.36,29.0,87.0
+FILM-2025-015,La Petite Vadrouille,Fiction,Français,8500000.0,2024-06-05,210000,650000,8,0.78,72.0,18.0
+FILM-2025-016,"Moi, Moche et Méchant 4",Animation,Américain,100000000.0,2024-07-10,1420000,4300000,12,0.91,92.0,3.5
+FILM-2025-017,Kraven le Chasseur,Fiction,Américain,130000000.0,2024-12-18,340000,780000,5,0.52,48.0,68.0
+FILM-2025-018,La Nuit du 12 (Re-sortie),Fiction,Français,4200000.0,2024-03-15,95000,520000,10,0.85,84.0,9.0
+FILM-2025-019,Le Robot Sauvage,Animation,Américain,78000000.0,2024-10-09,580000,2400000,11,0.9,93.0,4.0
+FILM-2025-020,Kaamelott : Deuxième Volet,Fiction,Français,28000000.0,2025-01-15,980000,3800000,14,0.87,95.0,6.0

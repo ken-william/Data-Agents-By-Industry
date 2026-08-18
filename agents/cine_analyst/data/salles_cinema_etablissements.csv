@@ -1,721 +1,721 @@
 id_salle,nom_etablissement,circuit_cinema,commune,code_departement,nom_region,nombre_ecrans,nombre_fauteuils,classification_art_et_essai
-CIN-00001,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,2400,False
-CIN-00002,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,3200,False
-CIN-00003,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1800,False
-CIN-00004,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,20,2400,False
-CIN-00005,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1800,False
-CIN-00006,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,2400,False
-CIN-00007,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,16,1800,True
-CIN-00008,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,12,2400,True
-CIN-00009,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,3200,False
-CIN-00010,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,20,3200,False
-CIN-00011,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,1800,False
-CIN-00012,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,1800,False
-CIN-00013,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1800,False
-CIN-00014,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,20,2400,False
-CIN-00015,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,3200,False
-CIN-00016,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,1800,False
-CIN-00017,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,12,2400,False
-CIN-00018,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,3200,False
-CIN-00019,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,1800,False
-CIN-00020,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,1800,True
-CIN-00021,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,20,2400,False
-CIN-00022,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,16,1800,False
-CIN-00023,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,3200,True
-CIN-00024,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2400,True
+CIN-00001,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,3200,False
+CIN-00002,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,3200,False
+CIN-00003,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,1800,True
+CIN-00004,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,1800,True
+CIN-00005,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1800,False
+CIN-00006,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,16,1800,False
+CIN-00007,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,2400,False
+CIN-00008,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,20,2400,False
+CIN-00009,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,20,1800,False
+CIN-00010,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,1800,True
+CIN-00011,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,16,1800,False
+CIN-00012,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,3200,False
+CIN-00013,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,20,2400,False
+CIN-00014,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2400,False
+CIN-00015,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,2400,True
+CIN-00016,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,16,3200,True
+CIN-00017,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,16,1800,False
+CIN-00018,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,16,3200,True
+CIN-00019,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,3200,False
+CIN-00020,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2400,False
+CIN-00021,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2400,False
+CIN-00022,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,3200,False
+CIN-00023,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,3200,False
+CIN-00024,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,2400,False
 CIN-00025,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1800,True
-CIN-00026,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2400,True
-CIN-00027,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,16,2400,False
-CIN-00028,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,20,3200,False
-CIN-00029,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,20,1800,False
-CIN-00030,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,16,1800,False
-CIN-00031,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,16,1800,False
-CIN-00032,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,20,2400,False
-CIN-00033,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,16,1800,False
-CIN-00034,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,20,3200,False
-CIN-00035,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2400,False
-CIN-00036,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,16,1800,False
-CIN-00037,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3200,False
-CIN-00038,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,3200,False
-CIN-00039,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,3200,False
-CIN-00040,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,16,3200,False
-CIN-00041,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,20,1800,False
-CIN-00042,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,3200,False
-CIN-00043,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,1800,False
-CIN-00044,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,20,1800,False
-CIN-00045,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,16,3200,False
-CIN-00046,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,2400,False
-CIN-00047,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2400,False
-CIN-00048,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,20,3200,False
-CIN-00049,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,20,1800,True
-CIN-00050,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1800,False
-CIN-00051,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,16,2400,False
-CIN-00052,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3200,False
-CIN-00053,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,1800,False
-CIN-00054,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,1800,False
-CIN-00055,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,2400,False
-CIN-00056,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,1800,False
-CIN-00057,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,1800,False
-CIN-00058,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,16,3200,False
-CIN-00059,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,3200,False
-CIN-00060,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,2400,False
-CIN-00061,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,20,1800,True
-CIN-00062,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,20,2400,False
-CIN-00063,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,1800,False
-CIN-00064,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,2400,False
-CIN-00065,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,1800,True
-CIN-00066,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,20,3200,False
-CIN-00067,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,3200,False
-CIN-00068,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,1800,True
-CIN-00069,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,12,2400,False
-CIN-00070,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,12,1800,False
-CIN-00071,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,2400,False
-CIN-00072,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,20,2400,False
-CIN-00073,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,3200,True
-CIN-00074,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,3200,False
-CIN-00075,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,3200,False
-CIN-00076,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,1800,False
-CIN-00077,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,20,3200,False
-CIN-00078,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,16,1800,False
-CIN-00079,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,2400,False
-CIN-00080,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,20,1800,False
-CIN-00081,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,16,3200,False
-CIN-00082,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1800,False
-CIN-00083,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,1800,False
-CIN-00084,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,12,2400,False
-CIN-00085,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2400,True
-CIN-00086,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,3200,False
-CIN-00087,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3200,False
-CIN-00088,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,16,2400,True
-CIN-00089,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,1800,False
-CIN-00090,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,1800,False
-CIN-00091,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,20,2400,False
-CIN-00092,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1800,True
-CIN-00093,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2400,True
-CIN-00094,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,20,1800,True
-CIN-00095,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,20,1800,False
-CIN-00096,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1800,True
-CIN-00097,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,3200,True
-CIN-00098,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,1800,False
-CIN-00099,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,3200,False
-CIN-00100,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,3200,True
-CIN-00101,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,2400,False
-CIN-00102,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2400,True
-CIN-00103,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,2400,False
-CIN-00104,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,20,2400,True
-CIN-00105,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2400,False
-CIN-00106,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,20,2400,True
-CIN-00107,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,3200,True
-CIN-00108,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,12,2400,True
-CIN-00109,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,2400,True
-CIN-00110,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,16,3200,False
-CIN-00111,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,3200,False
-CIN-00112,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,1800,False
-CIN-00113,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,1800,False
-CIN-00114,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,1800,True
-CIN-00115,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,3200,False
-CIN-00116,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,1800,False
-CIN-00117,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1800,False
-CIN-00118,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2400,False
-CIN-00119,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,1800,False
-CIN-00120,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,12,2400,False
-CIN-00121,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,10,1500,False
-CIN-00122,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2100,False
-CIN-00123,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2100,False
-CIN-00124,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,1500,False
-CIN-00125,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,18,2800,False
-CIN-00126,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2800,False
-CIN-00127,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2100,True
-CIN-00128,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,18,2800,False
-CIN-00129,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2800,False
-CIN-00130,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,10,2800,True
-CIN-00131,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,False
-CIN-00132,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2100,True
-CIN-00133,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,2100,False
-CIN-00134,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,14,2800,False
-CIN-00135,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,2800,False
-CIN-00136,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2800,False
-CIN-00137,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,18,1500,False
-CIN-00138,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,10,2100,True
-CIN-00139,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,10,2800,False
-CIN-00140,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,10,2800,True
-CIN-00141,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2800,True
-CIN-00142,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,18,1500,False
-CIN-00143,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,18,2100,False
-CIN-00144,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,10,2800,True
-CIN-00145,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2800,True
-CIN-00146,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,18,2800,False
-CIN-00147,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,1500,False
-CIN-00148,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,18,2800,False
-CIN-00149,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,2800,False
-CIN-00150,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,2800,False
-CIN-00151,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2800,False
-CIN-00152,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,True
-CIN-00153,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,18,1500,False
-CIN-00154,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,18,2100,True
-CIN-00155,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,10,1500,False
-CIN-00156,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2100,False
-CIN-00157,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,2100,False
-CIN-00158,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,1500,False
-CIN-00159,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,10,2800,False
-CIN-00160,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,1500,True
-CIN-00161,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,10,2800,False
-CIN-00162,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,18,2800,False
-CIN-00163,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,18,2800,False
-CIN-00164,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,2100,False
-CIN-00165,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,1500,False
-CIN-00166,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,1500,False
-CIN-00167,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2800,False
-CIN-00168,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,1500,False
-CIN-00169,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,2800,False
-CIN-00170,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,2800,False
-CIN-00171,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,2800,False
-CIN-00172,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,18,2800,False
-CIN-00173,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,18,1500,True
-CIN-00174,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,10,1500,False
-CIN-00175,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,18,2100,False
-CIN-00176,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,14,2800,False
-CIN-00177,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,2800,False
-CIN-00178,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,10,2100,True
-CIN-00179,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,1500,False
-CIN-00180,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2100,True
-CIN-00181,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2800,True
-CIN-00182,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,10,2100,False
-CIN-00183,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2100,False
-CIN-00184,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,18,2800,False
-CIN-00185,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,2100,False
-CIN-00186,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,18,2800,False
-CIN-00187,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,10,1500,False
-CIN-00188,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,10,2100,False
-CIN-00189,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,18,1500,False
-CIN-00190,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2100,False
-CIN-00191,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,18,2800,False
-CIN-00192,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,1500,True
-CIN-00193,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,18,2100,True
-CIN-00194,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,18,2800,False
-CIN-00195,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,10,2800,False
-CIN-00196,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,1500,False
-CIN-00197,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,2100,False
-CIN-00198,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,1500,False
-CIN-00199,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2800,False
-CIN-00200,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,14,2100,False
-CIN-00201,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,2800,True
-CIN-00202,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2100,True
-CIN-00203,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,2800,False
-CIN-00204,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,10,1500,False
-CIN-00205,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2100,False
-CIN-00206,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,10,2800,False
-CIN-00207,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2800,False
-CIN-00208,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2100,False
-CIN-00209,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2800,True
-CIN-00210,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2800,False
-CIN-00211,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,18,1500,False
-CIN-00212,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,2800,False
-CIN-00213,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,14,1500,False
-CIN-00214,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,False
-CIN-00215,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,18,2100,False
-CIN-00216,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,14,2100,False
-CIN-00217,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,18,2100,False
-CIN-00218,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,14,2100,True
-CIN-00219,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,2100,False
-CIN-00220,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,1500,False
-CIN-00221,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,1500,False
-CIN-00222,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2100,False
-CIN-00223,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,18,1500,False
-CIN-00224,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,18,2800,False
-CIN-00225,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,1500,False
-CIN-00226,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,18,1500,False
-CIN-00227,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,2800,False
-CIN-00228,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,1500,False
-CIN-00229,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,10,2100,False
-CIN-00230,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,18,2100,False
-CIN-00231,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2100,False
-CIN-00232,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,10,2100,False
-CIN-00233,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,1500,False
-CIN-00234,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,True
-CIN-00235,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,2100,False
-CIN-00236,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2100,False
-CIN-00237,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,10,2100,False
-CIN-00238,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,2100,False
-CIN-00239,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2100,False
-CIN-00240,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,10,2100,False
-CIN-00241,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,2300,False
-CIN-00242,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,15,2300,False
-CIN-00243,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,1200,False
-CIN-00244,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2300,False
-CIN-00245,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1700,True
-CIN-00246,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1700,False
-CIN-00247,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1200,True
-CIN-00248,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,15,1200,False
-CIN-00249,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,12,1700,False
-CIN-00250,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,1200,False
-CIN-00251,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1200,True
-CIN-00252,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,12,2300,False
-CIN-00253,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,1700,False
-CIN-00254,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2300,False
-CIN-00255,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1200,True
-CIN-00256,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,2300,False
-CIN-00257,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1700,False
-CIN-00258,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,8,1200,False
-CIN-00259,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,1700,False
-CIN-00260,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,2300,False
-CIN-00261,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,15,1700,True
-CIN-00262,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1700,False
-CIN-00263,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,15,1200,False
-CIN-00264,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,1700,False
-CIN-00265,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,1700,True
-CIN-00266,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2300,False
-CIN-00267,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1700,False
-CIN-00268,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,15,1700,False
-CIN-00269,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,1200,False
-CIN-00270,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,2300,False
-CIN-00271,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,15,1700,False
-CIN-00272,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1700,False
-CIN-00273,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2300,False
-CIN-00274,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1200,True
-CIN-00275,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,2300,True
-CIN-00276,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1700,True
-CIN-00277,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1700,False
-CIN-00278,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,1200,False
-CIN-00279,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,1200,True
-CIN-00280,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,1700,False
-CIN-00281,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,1200,False
-CIN-00282,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,1700,False
-CIN-00283,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,1700,False
-CIN-00284,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2300,False
-CIN-00285,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,15,2300,False
-CIN-00286,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2300,False
-CIN-00287,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,15,1700,False
-CIN-00288,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,1200,False
-CIN-00289,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,15,1700,False
-CIN-00290,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2300,False
-CIN-00291,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,1700,False
-CIN-00292,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,1200,False
-CIN-00293,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1700,False
-CIN-00294,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,2300,False
+CIN-00026,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,1800,False
+CIN-00027,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,20,3200,False
+CIN-00028,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,3200,False
+CIN-00029,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1800,False
+CIN-00030,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,3200,True
+CIN-00031,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,1800,False
+CIN-00032,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3200,False
+CIN-00033,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,20,3200,False
+CIN-00034,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2400,False
+CIN-00035,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3200,False
+CIN-00036,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,3200,False
+CIN-00037,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,20,3200,False
+CIN-00038,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,1800,False
+CIN-00039,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,16,1800,False
+CIN-00040,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2400,True
+CIN-00041,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2400,True
+CIN-00042,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,3200,True
+CIN-00043,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,1800,False
+CIN-00044,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,1800,False
+CIN-00045,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,1800,False
+CIN-00046,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,3200,True
+CIN-00047,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,20,3200,False
+CIN-00048,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,1800,False
+CIN-00049,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,1800,False
+CIN-00050,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,1800,False
+CIN-00051,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,3200,True
+CIN-00052,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,2400,False
+CIN-00053,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,12,2400,False
+CIN-00054,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,16,2400,False
+CIN-00055,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,2400,False
+CIN-00056,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,2400,False
+CIN-00057,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,3200,False
+CIN-00058,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,20,3200,True
+CIN-00059,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,3200,False
+CIN-00060,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,3200,True
+CIN-00061,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,20,1800,True
+CIN-00062,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,3200,False
+CIN-00063,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,3200,False
+CIN-00064,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,3200,True
+CIN-00065,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,1800,False
+CIN-00066,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,12,3200,False
+CIN-00067,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,20,3200,True
+CIN-00068,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,20,2400,False
+CIN-00069,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,16,3200,False
+CIN-00070,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,3200,False
+CIN-00071,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,2400,False
+CIN-00072,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,16,1800,False
+CIN-00073,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,12,1800,False
+CIN-00074,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,3200,True
+CIN-00075,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,2400,True
+CIN-00076,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,20,1800,False
+CIN-00077,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,20,2400,False
+CIN-00078,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,2400,False
+CIN-00079,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,1800,False
+CIN-00080,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1800,True
+CIN-00081,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,1800,False
+CIN-00082,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,16,1800,False
+CIN-00083,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,20,2400,False
+CIN-00084,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,3200,False
+CIN-00085,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,2400,False
+CIN-00086,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,20,3200,False
+CIN-00087,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,16,1800,False
+CIN-00088,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,12,2400,False
+CIN-00089,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,3200,False
+CIN-00090,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,3200,False
+CIN-00091,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2400,False
+CIN-00092,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,1800,False
+CIN-00093,Pathé Gaumont Bordeaux,Pathé Gaumont,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,3200,False
+CIN-00094,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,3200,False
+CIN-00095,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2400,True
+CIN-00096,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,12,1800,True
+CIN-00097,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,20,2400,False
+CIN-00098,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3200,False
+CIN-00099,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,1800,False
+CIN-00100,Pathé Gaumont Lille,Pathé Gaumont,Lille,59 - Nord,Hauts-de-France,16,1800,False
+CIN-00101,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3200,False
+CIN-00102,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,3200,False
+CIN-00103,Pathé Gaumont Montpellier,Pathé Gaumont,Montpellier,34 - Hérault,Occitanie,16,3200,False
+CIN-00104,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,20,1800,False
+CIN-00105,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,2400,False
+CIN-00106,Pathé Gaumont Nantes,Pathé Gaumont,Nantes,44 - Loire-Atlantique,Pays de la Loire,20,2400,False
+CIN-00107,Pathé Gaumont Lyon,Pathé Gaumont,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,2400,False
+CIN-00108,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,20,3200,True
+CIN-00109,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,2400,False
+CIN-00110,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,1800,False
+CIN-00111,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,12,1800,False
+CIN-00112,Pathé Gaumont Strasbourg,Pathé Gaumont,Strasbourg,67 - Bas-Rhin,Grand Est,16,1800,False
+CIN-00113,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,16,1800,False
+CIN-00114,Pathé Gaumont Marseille,Pathé Gaumont,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,20,1800,False
+CIN-00115,Pathé Gaumont Nice,Pathé Gaumont,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,2400,True
+CIN-00116,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,20,1800,False
+CIN-00117,Pathé Gaumont Annecy,Pathé Gaumont,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2400,False
+CIN-00118,Pathé Gaumont Toulouse,Pathé Gaumont,Toulouse,31 - Haute-Garonne,Occitanie,16,3200,False
+CIN-00119,Pathé Gaumont Paris,Pathé Gaumont,Paris,75 - Paris,Île-de-France,16,1800,False
+CIN-00120,Pathé Gaumont Rennes,Pathé Gaumont,Rennes,35 - Ille-et-Vilaine,Bretagne,12,2400,False
+CIN-00121,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2800,True
+CIN-00122,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,2100,False
+CIN-00123,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,2800,False
+CIN-00124,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,10,1500,False
+CIN-00125,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,1500,False
+CIN-00126,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,2100,True
+CIN-00127,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,False
+CIN-00128,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,10,2800,False
+CIN-00129,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2100,False
+CIN-00130,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,2800,False
+CIN-00131,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,1500,False
+CIN-00132,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,18,2100,False
+CIN-00133,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,2800,True
+CIN-00134,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,10,2800,False
+CIN-00135,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,18,2100,True
+CIN-00136,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,10,2800,False
+CIN-00137,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2800,False
+CIN-00138,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2800,True
+CIN-00139,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,18,2800,False
+CIN-00140,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,1500,True
+CIN-00141,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,14,2100,False
+CIN-00142,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,2100,False
+CIN-00143,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,1500,False
+CIN-00144,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,10,1500,True
+CIN-00145,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2800,False
+CIN-00146,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,1500,False
+CIN-00147,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,18,2100,False
+CIN-00148,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,10,1500,False
+CIN-00149,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,10,1500,False
+CIN-00150,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,1500,True
+CIN-00151,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,10,2100,True
+CIN-00152,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2800,False
+CIN-00153,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,2800,False
+CIN-00154,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2800,True
+CIN-00155,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,14,2100,False
+CIN-00156,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2100,False
+CIN-00157,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,10,2100,False
+CIN-00158,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,18,2800,False
+CIN-00159,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,10,2100,False
+CIN-00160,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2100,False
+CIN-00161,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2100,False
+CIN-00162,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2800,False
+CIN-00163,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2800,False
+CIN-00164,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,18,2800,False
+CIN-00165,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,1500,False
+CIN-00166,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,14,2800,False
+CIN-00167,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,10,2100,False
+CIN-00168,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,10,2100,False
+CIN-00169,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2100,False
+CIN-00170,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2800,False
+CIN-00171,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,18,1500,False
+CIN-00172,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2100,False
+CIN-00173,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,10,2800,False
+CIN-00174,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,False
+CIN-00175,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2800,False
+CIN-00176,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2800,False
+CIN-00177,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,10,2100,True
+CIN-00178,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2800,True
+CIN-00179,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,False
+CIN-00180,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,18,2800,False
+CIN-00181,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,10,1500,False
+CIN-00182,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,1500,False
+CIN-00183,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,10,1500,False
+CIN-00184,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,18,2100,False
+CIN-00185,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,10,2100,False
+CIN-00186,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,1500,True
+CIN-00187,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2800,False
+CIN-00188,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,2800,False
+CIN-00189,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,18,2800,False
+CIN-00190,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,10,2100,False
+CIN-00191,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,1500,False
+CIN-00192,UGC Ciné Cité Bordeaux,UGC Ciné Cité,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,18,2100,False
+CIN-00193,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,18,1500,False
+CIN-00194,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2100,False
+CIN-00195,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,18,2100,False
+CIN-00196,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2100,False
+CIN-00197,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,2800,True
+CIN-00198,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,10,1500,False
+CIN-00199,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,1500,False
+CIN-00200,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,10,1500,False
+CIN-00201,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,18,2100,False
+CIN-00202,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,14,2800,False
+CIN-00203,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2800,False
+CIN-00204,UGC Ciné Cité Lyon,UGC Ciné Cité,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,18,2100,False
+CIN-00205,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,10,2800,False
+CIN-00206,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,2100,True
+CIN-00207,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,10,2800,True
+CIN-00208,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2800,False
+CIN-00209,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,2800,False
+CIN-00210,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,10,1500,True
+CIN-00211,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,14,1500,False
+CIN-00212,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,1500,True
+CIN-00213,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,10,1500,True
+CIN-00214,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,18,1500,False
+CIN-00215,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,2100,False
+CIN-00216,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,18,2100,False
+CIN-00217,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,18,1500,False
+CIN-00218,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,1500,True
+CIN-00219,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,10,2800,False
+CIN-00220,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2100,False
+CIN-00221,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,10,2100,True
+CIN-00222,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,2800,False
+CIN-00223,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2100,False
+CIN-00224,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,18,2800,False
+CIN-00225,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,14,1500,False
+CIN-00226,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,18,1500,False
+CIN-00227,UGC Ciné Cité Strasbourg,UGC Ciné Cité,Strasbourg,67 - Bas-Rhin,Grand Est,10,2800,False
+CIN-00228,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,2100,False
+CIN-00229,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,18,2800,False
+CIN-00230,UGC Ciné Cité Lille,UGC Ciné Cité,Lille,59 - Nord,Hauts-de-France,14,2800,True
+CIN-00231,UGC Ciné Cité Nice,UGC Ciné Cité,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,18,2100,False
+CIN-00232,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,10,2100,True
+CIN-00233,UGC Ciné Cité Annecy,UGC Ciné Cité,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,10,2800,False
+CIN-00234,UGC Ciné Cité Paris,UGC Ciné Cité,Paris,75 - Paris,Île-de-France,18,2100,False
+CIN-00235,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,14,1500,False
+CIN-00236,UGC Ciné Cité Marseille,UGC Ciné Cité,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,18,2100,False
+CIN-00237,UGC Ciné Cité Rennes,UGC Ciné Cité,Rennes,35 - Ille-et-Vilaine,Bretagne,10,2100,False
+CIN-00238,UGC Ciné Cité Montpellier,UGC Ciné Cité,Montpellier,34 - Hérault,Occitanie,14,2100,True
+CIN-00239,UGC Ciné Cité Nantes,UGC Ciné Cité,Nantes,44 - Loire-Atlantique,Pays de la Loire,18,1500,False
+CIN-00240,UGC Ciné Cité Toulouse,UGC Ciné Cité,Toulouse,31 - Haute-Garonne,Occitanie,14,2800,True
+CIN-00241,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1700,False
+CIN-00242,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,1700,False
+CIN-00243,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,1200,False
+CIN-00244,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,1700,True
+CIN-00245,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,12,1700,False
+CIN-00246,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1200,False
+CIN-00247,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1200,True
+CIN-00248,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,15,1200,False
+CIN-00249,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1700,False
+CIN-00250,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,1200,False
+CIN-00251,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,15,1200,False
+CIN-00252,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1200,False
+CIN-00253,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,12,1700,False
+CIN-00254,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1700,False
+CIN-00255,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,15,1700,False
+CIN-00256,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,15,1700,False
+CIN-00257,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,1700,False
+CIN-00258,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,15,2300,False
+CIN-00259,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,1200,False
+CIN-00260,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,12,2300,False
+CIN-00261,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,1200,False
+CIN-00262,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,15,1700,False
+CIN-00263,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,1200,False
+CIN-00264,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2300,True
+CIN-00265,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,2300,False
+CIN-00266,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1200,False
+CIN-00267,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1700,False
+CIN-00268,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,12,1700,False
+CIN-00269,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,2300,False
+CIN-00270,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,8,1700,False
+CIN-00271,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1700,False
+CIN-00272,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,8,1200,False
+CIN-00273,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,8,2300,True
+CIN-00274,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2300,False
+CIN-00275,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,15,1200,False
+CIN-00276,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,2300,False
+CIN-00277,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1200,False
+CIN-00278,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1700,False
+CIN-00279,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,1200,False
+CIN-00280,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,1200,True
+CIN-00281,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,1200,True
+CIN-00282,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,1700,False
+CIN-00283,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1700,False
+CIN-00284,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,1700,True
+CIN-00285,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,12,1700,False
+CIN-00286,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,1200,False
+CIN-00287,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,15,1200,False
+CIN-00288,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2300,False
+CIN-00289,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,8,1700,False
+CIN-00290,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1200,False
+CIN-00291,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,15,2300,False
+CIN-00292,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,12,1700,True
+CIN-00293,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,1200,False
+CIN-00294,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1700,False
 CIN-00295,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,12,2300,False
-CIN-00296,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,1200,False
-CIN-00297,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,1200,True
-CIN-00298,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,1200,False
-CIN-00299,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,8,2300,True
-CIN-00300,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1200,True
-CIN-00301,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,2300,False
-CIN-00302,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,15,1200,False
-CIN-00303,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,2300,True
-CIN-00304,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1700,True
-CIN-00305,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,1200,False
-CIN-00306,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,2300,False
-CIN-00307,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2300,False
-CIN-00308,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,1200,False
-CIN-00309,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2300,False
-CIN-00310,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,8,1200,False
-CIN-00311,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,1200,False
-CIN-00312,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,12,1200,False
-CIN-00313,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,2300,False
-CIN-00314,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2300,True
-CIN-00315,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,1700,True
-CIN-00316,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,15,1200,False
-CIN-00317,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,8,1700,True
-CIN-00318,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,1200,True
-CIN-00319,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1200,False
-CIN-00320,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,15,2300,False
-CIN-00321,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1200,False
-CIN-00322,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,12,1700,False
-CIN-00323,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2300,False
-CIN-00324,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,12,2300,False
-CIN-00325,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1200,False
-CIN-00326,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,2300,True
-CIN-00327,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,12,1200,False
-CIN-00328,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,1200,False
-CIN-00329,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,8,1700,True
-CIN-00330,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1200,False
-CIN-00331,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1700,True
-CIN-00332,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,12,1200,False
-CIN-00333,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,15,1700,True
-CIN-00334,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1700,False
-CIN-00335,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,2300,False
-CIN-00336,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,1200,False
-CIN-00337,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1700,False
-CIN-00338,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1200,False
-CIN-00339,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,2300,False
-CIN-00340,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1200,True
-CIN-00341,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,15,1200,True
-CIN-00342,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,8,2300,False
-CIN-00343,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1200,False
-CIN-00344,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1700,False
-CIN-00345,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,1700,False
-CIN-00346,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1700,False
-CIN-00347,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1200,False
-CIN-00348,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,2300,False
-CIN-00349,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1200,True
-CIN-00350,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,1700,False
-CIN-00351,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,15,1700,False
-CIN-00352,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,15,1700,True
-CIN-00353,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,15,1700,False
-CIN-00354,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2300,False
-CIN-00355,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1200,True
-CIN-00356,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1700,True
-CIN-00357,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,1700,False
-CIN-00358,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1200,True
-CIN-00359,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1200,False
-CIN-00360,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1200,False
-CIN-00361,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,5,1400,True
-CIN-00362,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,5,1400,True
-CIN-00363,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,950,False
-CIN-00364,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,600,False
-CIN-00365,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,600,False
-CIN-00366,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,5,600,False
-CIN-00367,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,950,False
-CIN-00368,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,11,950,False
-CIN-00369,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,8,1400,False
-CIN-00370,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,8,600,False
-CIN-00371,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,11,1400,False
-CIN-00372,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,600,False
-CIN-00373,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,8,1400,False
-CIN-00374,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11,600,False
-CIN-00375,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,11,1400,True
-CIN-00376,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,8,600,False
-CIN-00377,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,5,600,False
-CIN-00378,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,600,False
-CIN-00379,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,11,600,False
-CIN-00380,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,5,950,False
-CIN-00381,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,950,True
-CIN-00382,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,11,950,False
-CIN-00383,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,11,600,False
-CIN-00384,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,950,False
-CIN-00385,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11,950,True
-CIN-00386,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,950,False
-CIN-00387,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,11,1400,False
-CIN-00388,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,5,600,True
-CIN-00389,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,5,600,False
-CIN-00390,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,5,1400,True
-CIN-00391,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11,600,False
-CIN-00392,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,1400,False
-CIN-00393,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,11,600,True
-CIN-00394,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,8,600,False
-CIN-00395,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11,600,False
-CIN-00396,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,11,600,False
-CIN-00397,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,600,False
-CIN-00398,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,5,600,False
-CIN-00399,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,5,1400,False
-CIN-00400,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,950,False
-CIN-00401,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1400,True
-CIN-00402,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,11,600,False
-CIN-00403,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,8,950,False
-CIN-00404,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,950,False
-CIN-00405,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,5,1400,True
-CIN-00406,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,950,False
-CIN-00407,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,600,False
-CIN-00408,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,11,1400,False
-CIN-00409,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,1400,True
-CIN-00410,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,11,600,False
-CIN-00411,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,950,False
-CIN-00412,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,11,950,False
-CIN-00413,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,11,950,False
-CIN-00414,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,5,1400,False
-CIN-00415,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,8,600,False
-CIN-00416,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,8,950,False
-CIN-00417,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,950,True
-CIN-00418,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,600,False
-CIN-00419,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1400,False
-CIN-00420,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,5,950,False
-CIN-00421,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,600,False
-CIN-00422,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,5,600,False
-CIN-00423,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,1400,True
-CIN-00424,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11,950,False
-CIN-00425,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11,1400,False
-CIN-00426,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,11,1400,False
-CIN-00427,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,5,600,False
-CIN-00428,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,11,1400,False
-CIN-00429,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,11,1400,False
-CIN-00430,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11,1400,True
-CIN-00431,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,950,True
-CIN-00432,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,5,1400,False
-CIN-00433,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,600,False
-CIN-00434,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,8,950,False
-CIN-00435,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,950,False
-CIN-00436,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,8,950,False
-CIN-00437,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,600,False
-CIN-00438,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,950,False
-CIN-00439,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,1400,False
-CIN-00440,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,11,950,False
-CIN-00441,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,950,False
-CIN-00442,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,600,False
-CIN-00443,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,1400,True
-CIN-00444,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,5,1400,False
-CIN-00445,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,600,False
-CIN-00446,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,950,True
-CIN-00447,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,1400,False
-CIN-00448,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,5,1400,True
-CIN-00449,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,600,False
-CIN-00450,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,600,False
-CIN-00451,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,11,600,False
-CIN-00452,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,8,950,True
-CIN-00453,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11,950,False
-CIN-00454,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,600,False
-CIN-00455,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,11,950,False
-CIN-00456,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,8,600,True
-CIN-00457,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,1400,True
-CIN-00458,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,5,600,False
-CIN-00459,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,600,True
-CIN-00460,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,1400,False
-CIN-00461,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,1400,False
-CIN-00462,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,1400,False
-CIN-00463,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,11,1400,False
-CIN-00464,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,1400,True
-CIN-00465,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,950,False
-CIN-00466,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,5,950,False
-CIN-00467,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,11,950,False
-CIN-00468,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1400,False
-CIN-00469,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,5,1400,False
-CIN-00470,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,1400,True
-CIN-00471,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,5,950,False
-CIN-00472,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,950,False
-CIN-00473,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,11,600,False
-CIN-00474,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,950,False
-CIN-00475,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11,950,False
-CIN-00476,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11,1400,False
-CIN-00477,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,11,950,False
-CIN-00478,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,5,1400,False
-CIN-00479,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,950,True
-CIN-00480,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,950,False
+CIN-00296,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,8,1200,False
+CIN-00297,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,1200,False
+CIN-00298,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1700,True
+CIN-00299,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1700,False
+CIN-00300,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1700,False
+CIN-00301,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1700,False
+CIN-00302,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,12,2300,True
+CIN-00303,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,2300,False
+CIN-00304,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,2300,True
+CIN-00305,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,15,2300,True
+CIN-00306,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,2300,True
+CIN-00307,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,1200,False
+CIN-00308,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2300,False
+CIN-00309,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,12,1200,True
+CIN-00310,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,8,1700,False
+CIN-00311,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,15,1200,True
+CIN-00312,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1200,False
+CIN-00313,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,15,1700,False
+CIN-00314,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2300,False
+CIN-00315,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,15,1700,False
+CIN-00316,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,1200,False
+CIN-00317,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,15,1200,False
+CIN-00318,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,1200,True
+CIN-00319,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,1200,False
+CIN-00320,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,2300,False
+CIN-00321,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1700,False
+CIN-00322,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,8,2300,False
+CIN-00323,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,12,1200,False
+CIN-00324,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,12,1200,False
+CIN-00325,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,15,2300,False
+CIN-00326,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,2300,False
+CIN-00327,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,1700,False
+CIN-00328,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2300,False
+CIN-00329,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,15,2300,False
+CIN-00330,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,1700,False
+CIN-00331,CGR Cinémas Nantes,CGR Cinémas,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,2300,False
+CIN-00332,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,2300,False
+CIN-00333,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2300,False
+CIN-00334,CGR Cinémas Bordeaux,CGR Cinémas,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,15,1700,False
+CIN-00335,CGR Cinémas Strasbourg,CGR Cinémas,Strasbourg,67 - Bas-Rhin,Grand Est,8,1200,False
+CIN-00336,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1200,False
+CIN-00337,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,2300,False
+CIN-00338,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,1700,False
+CIN-00339,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1700,False
+CIN-00340,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,1700,False
+CIN-00341,CGR Cinémas Nice,CGR Cinémas,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,15,2300,False
+CIN-00342,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1200,False
+CIN-00343,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2300,False
+CIN-00344,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,8,1200,False
+CIN-00345,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,15,1200,False
+CIN-00346,CGR Cinémas Rennes,CGR Cinémas,Rennes,35 - Ille-et-Vilaine,Bretagne,12,1200,False
+CIN-00347,CGR Cinémas Montpellier,CGR Cinémas,Montpellier,34 - Hérault,Occitanie,8,1700,True
+CIN-00348,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1700,False
+CIN-00349,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,1200,False
+CIN-00350,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,15,1200,False
+CIN-00351,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1200,True
+CIN-00352,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,12,1200,True
+CIN-00353,CGR Cinémas Marseille,CGR Cinémas,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,15,2300,False
+CIN-00354,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,8,1200,False
+CIN-00355,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,12,1700,False
+CIN-00356,CGR Cinémas Paris,CGR Cinémas,Paris,75 - Paris,Île-de-France,12,1700,False
+CIN-00357,CGR Cinémas Lyon,CGR Cinémas,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,1200,False
+CIN-00358,CGR Cinémas Toulouse,CGR Cinémas,Toulouse,31 - Haute-Garonne,Occitanie,15,1700,False
+CIN-00359,CGR Cinémas Annecy,CGR Cinémas,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,1200,False
+CIN-00360,CGR Cinémas Lille,CGR Cinémas,Lille,59 - Nord,Hauts-de-France,12,1200,False
+CIN-00361,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,950,True
+CIN-00362,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,1400,False
+CIN-00363,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,11,950,True
+CIN-00364,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,5,950,False
+CIN-00365,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,8,1400,False
+CIN-00366,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,5,600,True
+CIN-00367,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,5,1400,False
+CIN-00368,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,5,1400,False
+CIN-00369,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,5,1400,False
+CIN-00370,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,600,False
+CIN-00371,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,1400,False
+CIN-00372,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,600,False
+CIN-00373,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1400,False
+CIN-00374,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1400,False
+CIN-00375,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,1400,False
+CIN-00376,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,950,False
+CIN-00377,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,8,600,False
+CIN-00378,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,5,600,False
+CIN-00379,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,11,600,False
+CIN-00380,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,5,1400,True
+CIN-00381,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,11,600,False
+CIN-00382,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,600,False
+CIN-00383,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,5,600,True
+CIN-00384,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,11,600,False
+CIN-00385,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,1400,False
+CIN-00386,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,11,950,False
+CIN-00387,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,5,950,False
+CIN-00388,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,5,950,False
+CIN-00389,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,5,600,False
+CIN-00390,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,5,1400,False
+CIN-00391,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,11,950,False
+CIN-00392,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,950,False
+CIN-00393,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,950,False
+CIN-00394,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,600,False
+CIN-00395,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11,950,False
+CIN-00396,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,1400,False
+CIN-00397,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11,1400,False
+CIN-00398,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1400,False
+CIN-00399,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,1400,True
+CIN-00400,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,600,False
+CIN-00401,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,8,600,True
+CIN-00402,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,8,1400,False
+CIN-00403,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,11,1400,False
+CIN-00404,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,600,True
+CIN-00405,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,11,950,False
+CIN-00406,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,5,600,False
+CIN-00407,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,600,True
+CIN-00408,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,11,600,True
+CIN-00409,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,600,False
+CIN-00410,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,11,600,False
+CIN-00411,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,1400,False
+CIN-00412,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,600,True
+CIN-00413,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,600,False
+CIN-00414,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,1400,True
+CIN-00415,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,950,False
+CIN-00416,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,11,600,False
+CIN-00417,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,8,1400,False
+CIN-00418,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,5,950,False
+CIN-00419,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,5,1400,False
+CIN-00420,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,11,950,False
+CIN-00421,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,5,1400,False
+CIN-00422,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,950,False
+CIN-00423,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,5,1400,False
+CIN-00424,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,1400,False
+CIN-00425,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,600,False
+CIN-00426,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,600,True
+CIN-00427,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,5,600,False
+CIN-00428,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,600,False
+CIN-00429,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,950,False
+CIN-00430,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,11,600,False
+CIN-00431,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,600,False
+CIN-00432,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,11,950,False
+CIN-00433,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,600,False
+CIN-00434,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,1400,True
+CIN-00435,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,1400,False
+CIN-00436,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,8,950,False
+CIN-00437,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,600,True
+CIN-00438,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,8,950,False
+CIN-00439,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,950,False
+CIN-00440,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,11,1400,False
+CIN-00441,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,5,1400,False
+CIN-00442,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1400,False
+CIN-00443,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,1400,False
+CIN-00444,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,8,600,False
+CIN-00445,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11,1400,True
+CIN-00446,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,950,True
+CIN-00447,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,8,1400,False
+CIN-00448,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,11,1400,True
+CIN-00449,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,5,950,False
+CIN-00450,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,11,950,False
+CIN-00451,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,5,950,False
+CIN-00452,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,600,False
+CIN-00453,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,11,1400,False
+CIN-00454,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,8,950,False
+CIN-00455,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,600,False
+CIN-00456,MK2 Montpellier,MK2,Montpellier,34 - Hérault,Occitanie,11,600,False
+CIN-00457,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,11,600,False
+CIN-00458,MK2 Toulouse,MK2,Toulouse,31 - Haute-Garonne,Occitanie,5,1400,True
+CIN-00459,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,8,1400,False
+CIN-00460,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,5,1400,False
+CIN-00461,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,600,False
+CIN-00462,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,8,1400,False
+CIN-00463,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,11,950,True
+CIN-00464,MK2 Lille,MK2,Lille,59 - Nord,Hauts-de-France,5,1400,True
+CIN-00465,MK2 Lyon,MK2,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,8,950,False
+CIN-00466,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,600,False
+CIN-00467,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,5,950,False
+CIN-00468,MK2 Paris,MK2,Paris,75 - Paris,Île-de-France,8,950,False
+CIN-00469,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,11,600,False
+CIN-00470,MK2 Marseille,MK2,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,8,1400,False
+CIN-00471,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,11,1400,False
+CIN-00472,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,5,950,False
+CIN-00473,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,950,False
+CIN-00474,MK2 Rennes,MK2,Rennes,35 - Ille-et-Vilaine,Bretagne,5,1400,False
+CIN-00475,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,5,1400,False
+CIN-00476,MK2 Bordeaux,MK2,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,8,950,True
+CIN-00477,MK2 Nantes,MK2,Nantes,44 - Loire-Atlantique,Pays de la Loire,5,1400,True
+CIN-00478,MK2 Strasbourg,MK2,Strasbourg,67 - Bas-Rhin,Grand Est,11,950,False
+CIN-00479,MK2 Annecy,MK2,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,8,600,False
+CIN-00480,MK2 Nice,MK2,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,8,950,False
 CIN-00481,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,16,3100,False
-CIN-00482,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3100,False
-CIN-00483,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,2600,False
-CIN-00484,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,3100,False
-CIN-00485,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,14,3100,False
-CIN-00486,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2200,False
-CIN-00487,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,3100,False
-CIN-00488,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2600,False
-CIN-00489,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,2600,False
-CIN-00490,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,14,3100,False
-CIN-00491,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2600,True
-CIN-00492,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2200,False
-CIN-00493,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,3100,False
-CIN-00494,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,12,3100,False
-CIN-00495,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,12,2600,False
-CIN-00496,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2200,False
-CIN-00497,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2600,True
-CIN-00498,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,12,2600,False
-CIN-00499,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,2200,False
-CIN-00500,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,3100,True
-CIN-00501,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,14,2600,False
-CIN-00502,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2200,True
-CIN-00503,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2200,False
-CIN-00504,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2200,False
-CIN-00505,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,3100,False
-CIN-00506,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,12,2600,True
-CIN-00507,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2200,False
-CIN-00508,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,3100,False
-CIN-00509,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,2200,False
-CIN-00510,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,2600,False
-CIN-00511,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2200,False
-CIN-00512,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2200,False
-CIN-00513,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2600,False
-CIN-00514,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,16,3100,True
-CIN-00515,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,3100,False
-CIN-00516,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,2200,False
-CIN-00517,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2600,True
-CIN-00518,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,2600,False
-CIN-00519,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,14,2600,True
-CIN-00520,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,14,3100,False
-CIN-00521,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,14,2600,False
-CIN-00522,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
-CIN-00523,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,3100,True
-CIN-00524,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,3100,False
-CIN-00525,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,12,3100,False
-CIN-00526,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
-CIN-00527,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,16,2200,False
-CIN-00528,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2600,False
-CIN-00529,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,2600,False
-CIN-00530,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2600,False
-CIN-00531,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,14,2600,False
-CIN-00532,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2600,False
-CIN-00533,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,2600,False
-CIN-00534,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2200,False
-CIN-00535,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,3100,False
-CIN-00536,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
-CIN-00537,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
-CIN-00538,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2600,False
-CIN-00539,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,2200,False
-CIN-00540,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,3100,True
-CIN-00541,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,3100,False
-CIN-00542,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,14,3100,False
-CIN-00543,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2600,True
-CIN-00544,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2200,False
-CIN-00545,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2600,False
-CIN-00546,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2600,False
-CIN-00547,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,12,2600,False
-CIN-00548,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2200,False
-CIN-00549,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,16,2200,False
-CIN-00550,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,3100,False
-CIN-00551,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,16,2600,True
-CIN-00552,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2600,False
-CIN-00553,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3100,False
-CIN-00554,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,3100,False
-CIN-00555,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,12,2600,True
-CIN-00556,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3100,False
-CIN-00557,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2600,False
-CIN-00558,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3100,False
-CIN-00559,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,2200,False
-CIN-00560,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,14,2600,False
-CIN-00561,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,2200,False
-CIN-00562,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,16,3100,False
-CIN-00563,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,16,2200,False
-CIN-00564,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2200,True
-CIN-00565,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2600,False
-CIN-00566,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,16,3100,True
-CIN-00567,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,12,3100,False
-CIN-00568,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,2600,True
-CIN-00569,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
-CIN-00570,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,2600,True
-CIN-00571,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,14,3100,False
-CIN-00572,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,2600,False
-CIN-00573,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2200,False
-CIN-00574,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3100,False
-CIN-00575,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,3100,True
-CIN-00576,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,2600,False
-CIN-00577,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,3100,True
-CIN-00578,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,2200,False
-CIN-00579,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,12,2600,False
-CIN-00580,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2200,False
-CIN-00581,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2600,True
-CIN-00582,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2200,False
-CIN-00583,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2600,False
-CIN-00584,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,16,3100,False
-CIN-00585,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,14,2200,False
-CIN-00586,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2600,False
-CIN-00587,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2200,False
-CIN-00588,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,14,2200,False
+CIN-00482,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,3100,False
+CIN-00483,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,16,3100,False
+CIN-00484,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,12,2600,False
+CIN-00485,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2600,True
+CIN-00486,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,2600,False
+CIN-00487,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,3100,False
+CIN-00488,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2200,False
+CIN-00489,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,3100,True
+CIN-00490,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,12,2200,False
+CIN-00491,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,3100,False
+CIN-00492,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,3100,False
+CIN-00493,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,16,2600,True
+CIN-00494,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2600,False
+CIN-00495,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,12,2600,True
+CIN-00496,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,12,2600,False
+CIN-00497,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3100,False
+CIN-00498,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,2200,False
+CIN-00499,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,2600,True
+CIN-00500,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,3100,True
+CIN-00501,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,12,2600,False
+CIN-00502,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,14,2200,False
+CIN-00503,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
+CIN-00504,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3100,False
+CIN-00505,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2200,False
+CIN-00506,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,12,2200,False
+CIN-00507,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,2200,False
+CIN-00508,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,3100,False
+CIN-00509,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,14,2200,False
+CIN-00510,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,12,3100,False
+CIN-00511,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,12,3100,False
+CIN-00512,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,2200,False
+CIN-00513,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,14,2600,False
+CIN-00514,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,3100,False
+CIN-00515,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2600,False
+CIN-00516,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,2600,False
+CIN-00517,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,2600,True
+CIN-00518,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,2200,False
+CIN-00519,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,14,2600,False
+CIN-00520,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,12,3100,True
+CIN-00521,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,3100,True
+CIN-00522,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2200,False
+CIN-00523,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,3100,False
+CIN-00524,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2200,True
+CIN-00525,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,2600,False
+CIN-00526,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,2600,True
+CIN-00527,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2600,False
+CIN-00528,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,14,2600,False
+CIN-00529,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,2600,False
+CIN-00530,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,3100,False
+CIN-00531,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,2200,False
+CIN-00532,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,2600,False
+CIN-00533,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2200,True
+CIN-00534,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,2600,True
+CIN-00535,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,16,2600,False
+CIN-00536,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,12,2200,False
+CIN-00537,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,2200,False
+CIN-00538,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,3100,False
+CIN-00539,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,12,2600,True
+CIN-00540,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,14,2200,False
+CIN-00541,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,3100,True
+CIN-00542,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,3100,False
+CIN-00543,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
+CIN-00544,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,14,2600,True
+CIN-00545,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,2200,False
+CIN-00546,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,2200,False
+CIN-00547,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,14,3100,False
+CIN-00548,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,2600,False
+CIN-00549,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2200,False
+CIN-00550,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,2200,False
+CIN-00551,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,14,3100,False
+CIN-00552,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,2600,False
+CIN-00553,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,3100,False
+CIN-00554,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2600,False
+CIN-00555,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,12,3100,False
+CIN-00556,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,16,3100,False
+CIN-00557,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3100,False
+CIN-00558,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,3100,False
+CIN-00559,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,12,2200,False
+CIN-00560,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,12,2200,False
+CIN-00561,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,3100,True
+CIN-00562,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,3100,False
+CIN-00563,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2600,False
+CIN-00564,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,16,2200,True
+CIN-00565,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,12,3100,False
+CIN-00566,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2200,True
+CIN-00567,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,14,2200,False
+CIN-00568,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,3100,False
+CIN-00569,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,14,2600,False
+CIN-00570,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,12,2200,True
+CIN-00571,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,2200,False
+CIN-00572,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,12,2600,True
+CIN-00573,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,16,2200,False
+CIN-00574,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,14,2200,False
+CIN-00575,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2600,False
+CIN-00576,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,2200,False
+CIN-00577,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2200,False
+CIN-00578,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,2600,False
+CIN-00579,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,14,3100,False
+CIN-00580,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,14,2200,False
+CIN-00581,Kinepolis Montpellier,Kinepolis,Montpellier,34 - Hérault,Occitanie,16,2200,True
+CIN-00582,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,16,3100,False
+CIN-00583,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,14,2200,False
+CIN-00584,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,3100,True
+CIN-00585,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,12,2600,False
+CIN-00586,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,12,2200,False
+CIN-00587,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2200,False
+CIN-00588,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2200,False
 CIN-00589,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,12,2600,False
-CIN-00590,Kinepolis Strasbourg,Kinepolis,Strasbourg,67 - Bas-Rhin,Grand Est,12,3100,False
-CIN-00591,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2600,False
-CIN-00592,Kinepolis Lille,Kinepolis,Lille,59 - Nord,Hauts-de-France,14,2600,True
-CIN-00593,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,16,2600,False
-CIN-00594,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,3100,False
-CIN-00595,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,3100,False
-CIN-00596,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2600,False
-CIN-00597,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,16,3100,False
-CIN-00598,Kinepolis Lyon,Kinepolis,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,14,3100,False
-CIN-00599,Kinepolis Bordeaux,Kinepolis,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,16,2200,False
-CIN-00600,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,16,2200,False
-CIN-00601,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,650,True
-CIN-00602,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,4,250,True
-CIN-00603,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,450,True
-CIN-00604,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,2,250,True
-CIN-00605,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,250,True
-CIN-00606,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,450,True
-CIN-00607,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,4,450,True
-CIN-00608,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,450,True
-CIN-00609,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,4,650,True
-CIN-00610,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,4,250,True
-CIN-00611,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,450,True
-CIN-00612,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,650,True
-CIN-00613,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,450,True
-CIN-00614,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,650,True
-CIN-00615,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,2,250,True
-CIN-00616,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,450,True
-CIN-00617,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,2,450,True
-CIN-00618,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,650,True
-CIN-00619,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,650,True
-CIN-00620,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,250,True
-CIN-00621,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,650,True
-CIN-00622,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,2,250,True
-CIN-00623,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,450,True
-CIN-00624,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,2,450,True
-CIN-00625,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,4,250,True
-CIN-00626,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,4,250,True
-CIN-00627,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,450,True
-CIN-00628,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,4,250,True
-CIN-00629,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,450,True
-CIN-00630,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,3,450,True
-CIN-00631,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,650,True
-CIN-00632,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,2,450,True
-CIN-00633,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,4,650,True
-CIN-00634,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,4,650,True
-CIN-00635,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,450,True
-CIN-00636,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,650,True
-CIN-00637,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,450,True
-CIN-00638,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,650,True
-CIN-00639,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,450,True
-CIN-00640,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,3,650,True
-CIN-00641,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,650,True
-CIN-00642,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,2,650,True
-CIN-00643,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,3,650,True
-CIN-00644,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,3,450,True
-CIN-00645,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,3,450,True
-CIN-00646,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,3,250,True
-CIN-00647,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,2,250,True
-CIN-00648,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,4,650,True
-CIN-00649,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,450,True
-CIN-00650,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,4,450,True
-CIN-00651,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,250,True
-CIN-00652,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,650,True
-CIN-00653,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,3,450,True
-CIN-00654,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,4,650,True
-CIN-00655,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,4,450,True
-CIN-00656,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,3,450,True
-CIN-00657,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,3,450,True
-CIN-00658,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,4,250,True
-CIN-00659,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,2,250,True
-CIN-00660,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,4,250,True
-CIN-00661,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,650,True
-CIN-00662,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,4,650,True
-CIN-00663,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,650,True
-CIN-00664,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,650,True
-CIN-00665,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,450,True
-CIN-00666,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,3,250,True
-CIN-00667,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,450,True
-CIN-00668,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,450,True
-CIN-00669,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,3,250,True
-CIN-00670,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,4,450,True
-CIN-00671,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,450,True
-CIN-00672,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,250,True
-CIN-00673,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,650,True
-CIN-00674,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,450,True
-CIN-00675,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,650,True
-CIN-00676,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,4,650,True
-CIN-00677,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,650,True
-CIN-00678,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,250,True
-CIN-00679,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,450,True
-CIN-00680,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,650,True
-CIN-00681,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,250,True
+CIN-00590,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,12,2600,False
+CIN-00591,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,2200,False
+CIN-00592,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,12,2200,False
+CIN-00593,Kinepolis Nantes,Kinepolis,Nantes,44 - Loire-Atlantique,Pays de la Loire,12,2600,False
+CIN-00594,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,16,2600,False
+CIN-00595,Kinepolis Annecy,Kinepolis,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,16,2200,False
+CIN-00596,Kinepolis Rennes,Kinepolis,Rennes,35 - Ille-et-Vilaine,Bretagne,14,3100,False
+CIN-00597,Kinepolis Paris,Kinepolis,Paris,75 - Paris,Île-de-France,16,3100,False
+CIN-00598,Kinepolis Toulouse,Kinepolis,Toulouse,31 - Haute-Garonne,Occitanie,16,2200,False
+CIN-00599,Kinepolis Marseille,Kinepolis,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,12,3100,False
+CIN-00600,Kinepolis Nice,Kinepolis,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,16,2600,False
+CIN-00601,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,3,650,True
+CIN-00602,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,2,250,True
+CIN-00603,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,2,650,True
+CIN-00604,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,450,True
+CIN-00605,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,4,250,True
+CIN-00606,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,2,650,True
+CIN-00607,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,250,True
+CIN-00608,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,3,650,True
+CIN-00609,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,4,650,True
+CIN-00610,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,2,250,True
+CIN-00611,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,250,True
+CIN-00612,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,450,True
+CIN-00613,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,4,450,True
+CIN-00614,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,3,250,True
+CIN-00615,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,3,250,True
+CIN-00616,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,450,True
+CIN-00617,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,450,True
+CIN-00618,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,250,True
+CIN-00619,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,4,650,True
+CIN-00620,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,650,True
+CIN-00621,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,2,450,True
+CIN-00622,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,650,True
+CIN-00623,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,4,250,True
+CIN-00624,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,250,True
+CIN-00625,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,250,True
+CIN-00626,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,450,True
+CIN-00627,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,450,True
+CIN-00628,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,4,450,True
+CIN-00629,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,3,250,True
+CIN-00630,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,650,True
+CIN-00631,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,250,True
+CIN-00632,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,250,True
+CIN-00633,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,4,250,True
+CIN-00634,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,450,True
+CIN-00635,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,650,True
+CIN-00636,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,450,True
+CIN-00637,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,4,250,True
+CIN-00638,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,2,450,True
+CIN-00639,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,650,True
+CIN-00640,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,2,650,True
+CIN-00641,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,650,True
+CIN-00642,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,450,True
+CIN-00643,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,4,650,True
+CIN-00644,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,4,450,True
+CIN-00645,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,2,250,True
+CIN-00646,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,4,450,True
+CIN-00647,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,4,650,True
+CIN-00648,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,4,650,True
+CIN-00649,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,3,250,True
+CIN-00650,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,4,450,True
+CIN-00651,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,3,250,True
+CIN-00652,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,4,650,True
+CIN-00653,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,450,True
+CIN-00654,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,4,650,True
+CIN-00655,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,650,True
+CIN-00656,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,4,250,True
+CIN-00657,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,250,True
+CIN-00658,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,3,250,True
+CIN-00659,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,450,True
+CIN-00660,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,250,True
+CIN-00661,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,2,250,True
+CIN-00662,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,3,250,True
+CIN-00663,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,250,True
+CIN-00664,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,3,450,True
+CIN-00665,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,2,650,True
+CIN-00666,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,250,True
+CIN-00667,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,650,True
+CIN-00668,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,2,250,True
+CIN-00669,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,250,True
+CIN-00670,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,650,True
+CIN-00671,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,450,True
+CIN-00672,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,3,650,True
+CIN-00673,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,450,True
+CIN-00674,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,250,True
+CIN-00675,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,250,True
+CIN-00676,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,450,True
+CIN-00677,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,3,450,True
+CIN-00678,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,250,True
+CIN-00679,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,4,450,True
+CIN-00680,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,650,True
+CIN-00681,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,650,True
 CIN-00682,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,650,True
-CIN-00683,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,3,250,True
-CIN-00684,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,450,True
-CIN-00685,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,450,True
-CIN-00686,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,250,True
-CIN-00687,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,2,450,True
-CIN-00688,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,450,True
-CIN-00689,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,4,250,True
-CIN-00690,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,650,True
-CIN-00691,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,3,650,True
-CIN-00692,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,650,True
-CIN-00693,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,3,450,True
-CIN-00694,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,3,450,True
-CIN-00695,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,2,250,True
-CIN-00696,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,4,450,True
-CIN-00697,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,250,True
-CIN-00698,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,2,650,True
-CIN-00699,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,2,650,True
-CIN-00700,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,2,450,True
-CIN-00701,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,2,250,True
-CIN-00702,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,4,650,True
-CIN-00703,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,4,250,True
-CIN-00704,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,4,650,True
-CIN-00705,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,2,650,True
-CIN-00706,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,450,True
-CIN-00707,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,4,250,True
-CIN-00708,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,650,True
-CIN-00709,Cinéma Indépendant Art & Essai Nantes,Cinéma Indépendant Art & Essai,Nantes,44 - Loire-Atlantique,Pays de la Loire,4,250,True
-CIN-00710,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,4,650,True
-CIN-00711,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,3,650,True
-CIN-00712,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,450,True
-CIN-00713,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,4,450,True
-CIN-00714,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,2,650,True
-CIN-00715,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,650,True
-CIN-00716,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,650,True
-CIN-00717,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,4,250,True
-CIN-00718,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,250,True
-CIN-00719,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,450,True
-CIN-00720,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,650,True
+CIN-00683,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,2,450,True
+CIN-00684,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,650,True
+CIN-00685,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,4,450,True
+CIN-00686,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,450,True
+CIN-00687,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,4,250,True
+CIN-00688,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,450,True
+CIN-00689,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,3,450,True
+CIN-00690,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,2,650,True
+CIN-00691,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,2,650,True
+CIN-00692,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,2,250,True
+CIN-00693,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,650,True
+CIN-00694,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,3,450,True
+CIN-00695,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,3,650,True
+CIN-00696,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,2,450,True
+CIN-00697,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,650,True
+CIN-00698,Cinéma Indépendant Art & Essai Lille,Cinéma Indépendant Art & Essai,Lille,59 - Nord,Hauts-de-France,4,650,True
+CIN-00699,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,2,650,True
+CIN-00700,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,650,True
+CIN-00701,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,3,250,True
+CIN-00702,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,650,True
+CIN-00703,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,2,650,True
+CIN-00704,Cinéma Indépendant Art & Essai Nice,Cinéma Indépendant Art & Essai,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,4,250,True
+CIN-00705,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,4,450,True
+CIN-00706,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,4,650,True
+CIN-00707,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,2,450,True
+CIN-00708,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,3,250,True
+CIN-00709,Cinéma Indépendant Art & Essai Toulouse,Cinéma Indépendant Art & Essai,Toulouse,31 - Haute-Garonne,Occitanie,2,650,True
+CIN-00710,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,2,450,True
+CIN-00711,Cinéma Indépendant Art & Essai Rennes,Cinéma Indépendant Art & Essai,Rennes,35 - Ille-et-Vilaine,Bretagne,3,450,True
+CIN-00712,Cinéma Indépendant Art & Essai Montpellier,Cinéma Indépendant Art & Essai,Montpellier,34 - Hérault,Occitanie,3,650,True
+CIN-00713,Cinéma Indépendant Art & Essai Marseille,Cinéma Indépendant Art & Essai,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,3,450,True
+CIN-00714,Cinéma Indépendant Art & Essai Strasbourg,Cinéma Indépendant Art & Essai,Strasbourg,67 - Bas-Rhin,Grand Est,4,250,True
+CIN-00715,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,250,True
+CIN-00716,Cinéma Indépendant Art & Essai Annecy,Cinéma Indépendant Art & Essai,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,4,650,True
+CIN-00717,Cinéma Indépendant Art & Essai Bordeaux,Cinéma Indépendant Art & Essai,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,2,650,True
+CIN-00718,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,3,250,True
+CIN-00719,Cinéma Indépendant Art & Essai Paris,Cinéma Indépendant Art & Essai,Paris,75 - Paris,Île-de-France,4,250,True
+CIN-00720,Cinéma Indépendant Art & Essai Lyon,Cinéma Indépendant Art & Essai,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,2,650,True

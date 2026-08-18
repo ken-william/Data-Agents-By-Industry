@@ -104,6 +104,83 @@
           "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice.coefficient_maintien_semaine2"
         }
       ]
+    },
+    {
+      "term": "Entrées Première Semaine (S1 Box-Office)",
+      "definition": "Volume total de tickets vendus lors des 7 premiers jours d'exploitation nationale en salles.",
+      "related_terms": ["Demarrage Box-Office", "Exclusivite Salles", "Premiere Semaine"],
+      "overview": "Indicateur clé de succès au lancement d'un film en salles, permettant de prédire le box-office final.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "cinema_distribution", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check S1 Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "cnc_films_nouveautes_titres_boxoffice", "column_name": "entrees_premiere_semaine", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice.entrees_premiere_semaine"}]
+    },
+    {
+      "term": "Budget de Production Cinématographique",
+      "definition": "Coût total de fabrication et de post-production d'une œuvre cinématographique déclarée au CNC en Euros (€).",
+      "related_terms": ["Cout Production", "Financement Film", "Investment Risk"],
+      "overview": "Détermine le palier de rentabilité et le seuil d'entrées requis pour amortir l'investissement initial.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "cinema_finance", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Budget Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "cnc_films_nouveautes_titres_boxoffice", "column_name": "budget_production_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice.budget_production_eur"}]
+    },
+    {
+      "term": "Classification Art et Essai CNC",
+      "definition": "Label officiel attribué par le CNC aux établissements de cinéma promouvant la diversité culturelle et les œuvres d'auteurs.",
+      "related_terms": ["Label Art & Essai", "Cinema Independant", "Subventions CNC"],
+      "overview": "Permet de cartographier l'offre de salles culturelles d'auteur et d'allouer les subventions d'exploitation.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "cinema_salles", "criticality": "medium"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Boolean Value", "rule_type": "TYPE_CONSISTENCY", "dimension": "VALIDITY"}],
+      "related_entries": [{"resource_name": "salles_cinema_etablissements", "column_name": "classification_art_et_essai", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.salles_cinema_etablissements.classification_art_et_essai"}]
+    },
+    {
+      "term": "Prix Moyen du Billet de Cinéma",
+      "definition": "Recette moyenne nette constatée par entrée vendue au niveau national sur l'ensemble des établissements.",
+      "related_terms": ["Tarif Billet", "Recette Moyen Ticket", "Pouvoir d'Achat Cinéma"],
+      "overview": "Permet de mesurer l'évolution tarifaire des places de cinéma et l'impact de l'inflation sur les spectateurs.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "cinema_pricing", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Ticket Price Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "cnc_frequentation_historique", "column_name": "prix_moyen_ticket_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_frequentation_historique.prix_moyen_ticket_eur"}]
+    },
+    {
+      "term": "Part de Marché par Nationalité de Film",
+      "definition": "Ventilation du volume total d'entrées réalisées en salles par origine de production (Films Français, Américains, Européens).",
+      "related_terms": ["Origine Production", "Cinema Francais vs Hollywood", "Part de Marche CNC"],
+      "overview": "Indicateur stratégique d'évaluation du dynamisme de la création française face aux blockbusters mondiaux.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "cinema_market_share", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Film Count Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "cnc_films_exploitation_nationalite", "column_name": "films_francais", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_exploitation_nationalite.films_francais"}]
+    },
+    {
+      "term": "Concentration Box-Office (Top 10 / Top 20)",
+      "definition": "Volume cumulé d'entrées capté par les 10, 20, 30 ou 100 films les plus vus de l'année.",
+      "related_terms": ["Tops Box Office", "Concentration Entrees", "Blockbusters Tier"],
+      "overview": "Permet de mesurer la dépendance du marché des salles envers les grands succès commerciaux.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "cinema_boxoffice", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Top 10 Admissions", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "cnc_performance_box_office_tops", "column_name": "top_10_entrees", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_performance_box_office_tops.top_10_entrees"}]
+    },
+    {
+      "term": "Part des Nouveautés par Genre",
+      "definition": "Nombre de films sortis en première exclusivité ventilés par genre (Fiction, Documentaire, Animation).",
+      "related_terms": ["Offre par Genre", "Fiction vs Animation", "Diversite Programmation"],
+      "overview": "Permet aux exploitants de calibrer l'allocation de leurs écrans selon la répartition de l'offre de nouveautés.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "cinema_programming", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Genre Count Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "cnc_films_nouveautes_genres", "column_name": "films_fiction", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_genres.films_fiction"}]
     }
   ]
 }
