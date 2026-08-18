@@ -1,874 +1,109 @@
 {
   "agent_id": "cine-analyst-agent",
-  "displayName": "CineAnalyst - Divertissement & Cinéma",
-  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/cinema-entertainment-glossary",
-  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/cinema-entertainment-catalog",
-  "business_glossary": {
-    "displayName": "Glossaire Métier Divertissement & Cinéma",
-    "description": "Glossaire de subventions CNC, risque de flop film et sièges immersifs 4DX pour CineAnalyst.",
-    "categories": [
-      {
-        "categoryId": "business-ontologies-kpis",
-        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
-        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
-        "terms": [
-          {
-            "termId": "series-historiques-cnc-box-office",
-            "displayName": "Séries Historiques CNC Box-Office",
-            "definition": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945.",
-            "mapped_bigquery_table": "cnc_frequentation_historique",
-            "mapped_bigquery_column": "nombre_total_entrees_millions",
-            "related_terms": [
-              "Entrées Annuelles CNC Millions",
-              "Recettes Guichet Box-Office",
-              "Séries Temporelles Cinéma",
-              "Historique Fréquentation 1945-2025"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Séries Historiques CNC Box-Office** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `cnc_frequentation_historique` (colonne `nombre_total_entrees_millions`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/cnc_frequentation_historique",
-                "table_name": "cnc_frequentation_historique",
-                "column_name": "nombre_total_entrees_millions",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.cnc_frequentation_historique.nombre_total_entrees_millions"
-              }
-            ]
-          },
-          {
-            "termId": "indicateurs-frequentation-prix-billet",
-            "displayName": "Indicateurs de Fréquentation & Prix Billet",
-            "definition": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles.",
-            "mapped_bigquery_table": "cnc_performance_box_office_tops",
-            "mapped_bigquery_column": "prix_moyen_billet_eur",
-            "related_terms": [
-              "Prix Moyen de la Place €",
-              "Taux de Remplissage Salles",
-              "Recette Moyenne par Entrée",
-              "Chiffre d'Affaires Exploitation"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Indicateurs de Fréquentation & Prix Billet** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `cnc_performance_box_office_tops` (colonne `prix_moyen_billet_eur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/cnc_performance_box_office_tops",
-                "table_name": "cnc_performance_box_office_tops",
-                "column_name": "prix_moyen_billet_eur",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.cnc_performance_box_office_tops.prix_moyen_billet_eur"
-              }
-            ]
-          },
-          {
-            "termId": "repartition-genres-nationalites",
-            "displayName": "Répartition par Genres & Nationalités",
-            "definition": "Performances comparées des films français, américains et art & essai par territoire.",
-            "mapped_bigquery_table": "cnc_films_exploitation_nationalite",
-            "mapped_bigquery_column": "part_marche_entrees_pct",
-            "related_terms": [
-              "Part de Marché Films Français",
-              "Films Américains Blockbusters",
-              "Cinéma d'Art et Essai",
-              "Répartition Genres Comédie Drame Sci-Fi"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Répartition par Genres & Nationalités** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Performances comparées des films français, américains et art & essai par territoire.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `cnc_films_exploitation_nationalite` (colonne `part_marche_entrees_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/cnc_films_exploitation_nationalite",
-                "table_name": "cnc_films_exploitation_nationalite",
-                "column_name": "part_marche_entrees_pct",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.cnc_films_exploitation_nationalite.part_marche_entrees_pct"
-              }
-            ]
-          },
-          {
-            "termId": "parc-etablissements-multiplexes",
-            "displayName": "Parc des Établissements & Multiplexes",
-            "definition": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes.",
-            "mapped_bigquery_table": "salles_cinema_etablissements",
-            "mapped_bigquery_column": "nombre_ecrans",
-            "related_terms": [
-              "Nombre d'Écrans & Fauteuils",
-              "Multiplexes vs Salles Indépendantes",
-              "Classement Art et Essai",
-              "Densité d'Équipement Écrans"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Parc des Établissements & Multiplexes** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Cartographie des cinémas de quartier, réseaux indépendants et multiplexes.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `salles_cinema_etablissements` (colonne `nombre_ecrans`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/salles_cinema_etablissements",
-                "table_name": "salles_cinema_etablissements",
-                "column_name": "nombre_ecrans",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.salles_cinema_etablissements.nombre_ecrans"
-              }
-            ]
-          },
-          {
-            "termId": "nouveautes-semaines-affiche",
-            "displayName": "Performance des Nouveautés & Semaines d'Exploitation",
-            "definition": "Suivi des entrées en 1ère semaine et coefficient de maintien à l'affiche.",
-            "mapped_bigquery_table": "cnc_films_nouveautes_genres",
-            "mapped_bigquery_column": "semaines_maintien_affiche",
-            "related_terms": [
-              "Semaines à l'Affiche",
-              "Entrées Première Semaine",
-              "Coefficient de Maintien Box-Office",
-              "Nombre de Copies Écrans"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Performance des Nouveautés & Semaines d'Exploitation** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Suivi des entrées en 1ère semaine et coefficient de maintien à l'affiche.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `cnc_films_nouveautes_genres` (colonne `semaines_maintien_affiche`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/cnc_films_nouveautes_genres",
-                "table_name": "cnc_films_nouveautes_genres",
-                "column_name": "semaines_maintien_affiche",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.cnc_films_nouveautes_genres.semaines_maintien_affiche"
-              }
-            ]
-          },
-          {
-            "termId": "compte-soutien-tsca-cnc",
-            "displayName": "Compte de Soutien CNC & Subventions Cinéma",
-            "definition": "Ressources générées par la taxe TSCA et réinvesties dans le soutien automatique.",
-            "mapped_bigquery_table": "cnc_frequentation_historique",
-            "mapped_bigquery_column": "taxe_tsca_recette_eur",
-            "related_terms": [
-              "Taxe TSCA sur les Entrées",
-              "Fonds de Soutien Automatique CNC",
-              "Aide Sélective à la Production",
-              "Financement de la Création"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Compte de Soutien CNC & Subventions Cinéma** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Ressources générées par la taxe TSCA et réinvesties dans le soutien automatique.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `cnc_frequentation_historique` (colonne `taxe_tsca_recette_eur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/cnc_frequentation_historique",
-                "table_name": "cnc_frequentation_historique",
-                "column_name": "taxe_tsca_recette_eur",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.cnc_frequentation_historique.taxe_tsca_recette_eur"
-              }
-            ]
-          },
-          {
-            "termId": "frequentation-publics-jeunes",
-            "displayName": "Fréquentation par Tranche d'Âge & Publics",
-            "definition": "Pénétration du cinéma auprès des 15-24 ans et détenteurs de Pass Illimités.",
-            "mapped_bigquery_table": "salles_cinema_etablissements",
-            "mapped_bigquery_column": "taux_frequentation_jeunes_pct",
-            "related_terms": [
-              "Public 15-24 ans",
-              "Cinéphiles Réguliers",
-              "Abonnements Pass Cinéma Unlimited",
-              "Habitudes de Sortie Salles"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Fréquentation par Tranche d'Âge & Publics** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Pénétration du cinéma auprès des 15-24 ans et détenteurs de Pass Illimités.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `salles_cinema_etablissements` (colonne `taux_frequentation_jeunes_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/salles_cinema_etablissements",
-                "table_name": "salles_cinema_etablissements",
-                "column_name": "taux_frequentation_jeunes_pct",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.salles_cinema_etablissements.taux_frequentation_jeunes_pct"
-              }
-            ]
-          },
-          {
-            "termId": "programmation-entrees-regionales",
-            "displayName": "Programmation & Entrées par Région",
-            "definition": "Analyse géographique de la fréquentation des salles en région.",
-            "mapped_bigquery_table": "salles_cinema_etablissements",
-            "mapped_bigquery_column": "region_nom",
-            "related_terms": [
-              "Entrées par Région Administrative",
-              "Succès Régionaux Nouveautés",
-              "Densité de Fauteuils pour 1000 Hab",
-              "Disparités Territoriales Salles"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Programmation & Entrées par Région** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Analyse géographique de la fréquentation des salles en région.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `salles_cinema_etablissements` (colonne `region_nom`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/salles_cinema_etablissements",
-                "table_name": "salles_cinema_etablissements",
-                "column_name": "region_nom",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.salles_cinema_etablissements.region_nom"
-              }
-            ]
-          },
-          {
-            "termId": "equipement-salles-premium-3d-imax",
-            "displayName": "Format de Projection & Salles Premium",
-            "definition": "Déploiement des salles premium IMAX, 4DX, Dolby Cinema et séances 3D.",
-            "mapped_bigquery_table": "salles_cinema_etablissements",
-            "mapped_bigquery_column": "equipement_projection_3d_imax",
-            "related_terms": [
-              "Salles IMAX 4DX Dolby Cinema",
-              "Projection Numérique 4K",
-              "Majoration Billet Séance Premium",
-              "Expérience Spectateur"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Format de Projection & Salles Premium** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Déploiement des salles premium IMAX, 4DX, Dolby Cinema et séances 3D.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `salles_cinema_etablissements` (colonne `equipement_projection_3d_imax`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/salles_cinema_etablissements",
-                "table_name": "salles_cinema_etablissements",
-                "column_name": "equipement_projection_3d_imax",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.salles_cinema_etablissements.equipement_projection_3d_imax"
-              }
-            ]
-          },
-          {
-            "termId": "taux-occupation-fauteuils-seance",
-            "displayName": "Taux d'Occupation Fauteuils par Séance",
-            "definition": "Optimisation des grilles d'horaires et rentabilité par fauteuil de cinéma.",
-            "mapped_bigquery_table": "cnc_performance_box_office_tops",
-            "mapped_bigquery_column": "taux_occupation_fauteuils_pct",
-            "related_terms": [
-              "Taux d'Occupation Séance",
-              "Séances du Soir & Week-End",
-              "Optimisation Grille de Horaires",
-              "Rentabilité par Salle"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Taux d'Occupation Fauteuils par Séance** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Optimisation des grilles d'horaires et rentabilité par fauteuil de cinéma.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `cnc_performance_box_office_tops` (colonne `taux_occupation_fauteuils_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "cinema_boxoffice",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/cinema_boxoffice_ds/tables/cnc_performance_box_office_tops",
-                "table_name": "cnc_performance_box_office_tops",
-                "column_name": "taux_occupation_fauteuils_pct",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.cinema_boxoffice_ds.cnc_performance_box_office_tops.taux_occupation_fauteuils_pct"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "data_governance": {
-    "sla_tier": "Tier-1 Executive 24/7",
-    "criticality_level": "Mission Critical",
-    "data_sensitivity": "Internal Enterprise"
-  }
+  "domain": "Entertainment & Cinema Box Office Analytics",
+  "dataplex_catalog_name": "Glossaire Métier Cinéma & Exploitation de Salles",
+  "glossary_terms": [
+    {
+      "term": "Prédiction de Flops & Buzz Réseaux Sociaux",
+      "definition": "Scoring de risque de sous-performance au box-office en pourcentage (%) croisant le budget de production et l'indice de sentiment sur les réseaux sociaux. Termes associés : Flop Box-Office, Budget Production, Sentiment Social Media, Ajustement Horaires.",
+      "related_terms": ["Risque Flop %", "Index Buzz Social Media", "Budget de Production", "Ajustement Horaires"],
+      "overview": "Documentation détaillée sur le modèle prédictif de risque de flop au box-office. Utilisé par les exploitants et distributeurs pour ajuster le nombre de séances et les horaires de diffusion avant d'accorder des salles premium.",
+      "contacts": ["data-governance@data-agents-by-industry.com", "boxoffice-sme@cnc.fr"],
+      "labels": {
+        "domain": "cinema_boxoffice",
+        "criticality": "high",
+        "compliance": "gdpr_compliant",
+        "update_frequency": "daily"
+      },
+      "aspects": {
+        "business_governance": {
+          "steward": "CNC Analytics Team",
+          "data_owner": "Directeur de la Distribution Cinématographique"
+        },
+        "data_quality_aspect": {
+          "completeness_target": "99.5%",
+          "validity_rules": ["RISQUE_FLOP_BETWEEN_0_AND_100", "BUDGET_POSITIVE"]
+        }
+      },
+      "data_quality_rules": [
+        {
+          "display_name": "Check Risque Flop Valid Range",
+          "rule_type": "RANGE_CHECK",
+          "dimension": "VALIDITY",
+          "parameters": {"min_value": 0.0, "max_value": 100.0}
+        }
+      ],
+      "related_entries": [
+        {
+          "resource_name": "cnc_films_nouveautes_titres_boxoffice",
+          "column_name": "risque_flop_box_office_pct",
+          "project": "${PROJECT_ID}",
+          "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice.risque_flop_box_office_pct"
+        }
+      ]
+    },
+    {
+      "term": "Taux d'Occupation Fauteuils par Format (IMAX / 4DX)",
+      "definition": "Comparatif du taux d'occupation des fauteuils par séance selon le format (IMAX 3D, 4DX Immersif, Dolby Cinema vs Standard) et surcoût tarifaire du billet. Termes associés : Salles Immersives, Formats Premium, Surcoût Billet %, Recette par Fauteuil.",
+      "related_terms": ["Formats Premium IMAX 4DX", "Taux Occupation Fauteuils %", "Surcoût Billet %", "Recette Fauteuil Annuelle"],
+      "overview": "Analyse comparative de la rentabilité et du remplissage des salles équipées de technologies premium (IMAX 3D, 4DX Immersif, Dolby Cinema, ScreenX 270°) par rapport aux salles standard 2D.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {
+        "domain": "cinema_technology",
+        "criticality": "high"
+      },
+      "aspects": {
+        "data_quality_aspect": {
+          "completeness_target": "99.5%"
+        }
+      },
+      "data_quality_rules": [
+        {
+          "display_name": "Check Format Occupancy Range",
+          "rule_type": "RANGE_CHECK",
+          "dimension": "VALIDITY",
+          "parameters": {"min_value": 0.0, "max_value": 100.0}
+        }
+      ],
+      "related_entries": [
+        {
+          "resource_name": "salles_formats_projection_frequentation",
+          "column_name": "taux_occupation_moyen_seance_pct",
+          "project": "${PROJECT_ID}",
+          "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.salles_formats_projection_frequentation.taux_occupation_moyen_seance_pct"
+        }
+      ]
+    },
+    {
+      "term": "Coefficient de Maintien à l'Affiche",
+      "definition": "Ratio de rétention des entrées entre la 2ème et la 1ère semaine d'exploitation (>0.75 = excellent maintien). Termes associés : Maintien Semaine 2, Entrées Première Semaine, Longévité Affiche.",
+      "related_terms": ["Ratio Maintien S2/S1", "Entrées 1ère Semaine", "Entrées Cumulées Total"],
+      "overview": "Mesure de la tenue en salles des nouveautés au fil des semaines. Un coefficient supérieur à 0.75 indique un excellent bouche-à-oreille et justifie la prolongation à l'affiche.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {
+        "domain": "cinema_distribution",
+        "criticality": "high"
+      },
+      "aspects": {
+        "data_quality_aspect": {
+          "completeness_target": "99.5%"
+        }
+      },
+      "data_quality_rules": [
+        {
+          "display_name": "Check Retention Ratio Positive",
+          "rule_type": "NON_NULL",
+          "dimension": "COMPLETENESS"
+        }
+      ],
+      "related_entries": [
+        {
+          "resource_name": "cnc_films_nouveautes_titres_boxoffice",
+          "column_name": "coefficient_maintien_semaine2",
+          "project": "${PROJECT_ID}",
+          "fully_qualified_name": "bigquery:${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice.coefficient_maintien_semaine2"
+        }
+      ]
+    }
+  ]
 }

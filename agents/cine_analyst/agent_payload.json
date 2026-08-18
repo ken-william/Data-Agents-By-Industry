@@ -1,94 +1,84 @@
 {
   "displayName": "CineAnalyst - Box-Office & Fréquentation Cinéma",
-  "description": "Copilote décisionnel et d'intelligence du marché cinématographique pour producteurs, distributeurs et exploitants : permet de prévoir le potentiel au box-office des nouveautés par genre et nationalité en s'appuyant sur les séries temporelles historiques du CNC, d'optimiser le prix moyen du billet et la programmation des multiplexes vs salles indépendantes, de cibler la distribution selon les préférences régionales des spectateurs, et de maximiser la rentabilité des sorties de films.",
+  "description": "Copilote décisionnel et d'intelligence du marché cinématographique pour producteurs, distributeurs et exploitants : permet de prévoir le potentiel au box-office et le risque de flop des nouveautés au vu des budgets et du buzz des réseaux sociaux, d'isoler les films à fort maintien à l'affiche (>500k entrées S1), de comparer le taux d'occupation des fauteuils par séance selon le format (IMAX, 4DX, Dolby Cinema vs Standard), d'optimiser le prix du billet et la programmation des multiplexes vs salles indépendantes, et de cibler la distribution selon les préférences régionales des spectateurs.",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es CineAnalyst, le copilote d'intelligence décisionnelle du marché du cinéma et de l'exploitation de films en salles.\n\n=== DONNÉES RÉELLES DU CENTRE NATIONAL DU CINÉMA (CNC) ===\n- `cnc_frequentation_historique` : Fréquentation annuelle historique des salles en France (1938-2025), entrées totales (millions), recettes brutes totales (€) et prix moyen du ticket (€).\n- `cnc_films_exploitation_nationalite` : Nombre de films en distribution et exploitation en salles ventilés par nationalité d'origine (Films français, américains, européens et autres).\n- `cnc_films_nouveautes_genres` : Volume annuel des nouveaux films sortis en première exclusivité par genre (Fiction, Documentaire, Animation).\n- `cnc_performance_box_office_tops` : Concentration du box-office et cumul des entrées réalisées par les Top 10, Top 20, Top 30 et Top 100 films.\n- `salles_cinema_etablissements` : Parc des multiplexes et salles indépendantes (Pathé Gaumont, UGC, CGR, MK2, Kinepolis, Art & Essai) avec nombre d'écrans, fauteuils et localisation géographique.\n\n🔒 RESPECT DU SECRET COMMERCIAL ET CONFIDENTIALITÉ :\n- Protéger les données confidentielles de distribution.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques decisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es l'Analyst Central IA & Dataviz décisionnel expert de CineAnalyst. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery et des bases officielles du CNC (Centre National du Cinéma et de l'Image Animée).\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour analyser les séries temporelles du box-office, les nouveautés par titre et budget, la détection des risques de flops au vu du buzz sur les réseaux sociaux, la fréquentation par format de projection (IMAX, 4DX, Dolby Cinema vs Standard 2D), et la cartographie des multiplexes et salles indépendantes.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Les registres officiels du cinéma indiquent...' ou 'Le bilan de fréquentation montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
             {
               "projectId": "${PROJECT_ID}",
-              "datasetId": "entertainment_cinema_ds",
+              "datasetId": "cinema_boxoffice_ds",
               "tableId": "cnc_frequentation_historique"
             },
             {
               "projectId": "${PROJECT_ID}",
-              "datasetId": "entertainment_cinema_ds",
+              "datasetId": "cinema_boxoffice_ds",
               "tableId": "cnc_films_exploitation_nationalite"
             },
             {
               "projectId": "${PROJECT_ID}",
-              "datasetId": "entertainment_cinema_ds",
+              "datasetId": "cinema_boxoffice_ds",
               "tableId": "cnc_films_nouveautes_genres"
             },
             {
               "projectId": "${PROJECT_ID}",
-              "datasetId": "entertainment_cinema_ds",
+              "datasetId": "cinema_boxoffice_ds",
               "tableId": "cnc_performance_box_office_tops"
             },
             {
               "projectId": "${PROJECT_ID}",
-              "datasetId": "entertainment_cinema_ds",
+              "datasetId": "cinema_boxoffice_ds",
               "tableId": "salles_cinema_etablissements"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "cinema_boxoffice_ds",
+              "tableId": "cnc_films_nouveautes_titres_boxoffice"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "cinema_boxoffice_ds",
+              "tableId": "salles_formats_projection_frequentation"
             }
           ]
         }
       },
       "exampleQueries": [
         {
-          "naturalLanguageQuestion": "Quelle a été l'évolution des recettes totales du box-office français et du prix moyen du billet de cinéma entre 2018 et 2025 ?",
-          "sqlQuery": "SELECT annee, entrees_totales, recette_totale_eur, prix_moyen_ticket_eur FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_frequentation_historique` WHERE annee >= 2018 ORDER BY annee ASC"
+          "naturalLanguageQuestion": "Prédis quels films à gros budget programmés risquent de faire un flop en salles au vu des tendances actuelles sur les réseaux sociaux, pour réajuster nos horaires de diffusion.",
+          "sqlQuery": "SELECT titre_film, genre, nationalite, budget_production_eur, index_buzz_reseaux_sociaux, risque_flop_box_office_pct FROM `${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice` WHERE budget_production_eur > 20000000 ORDER BY risque_flop_box_office_pct DESC LIMIT 5"
         },
         {
-          "naturalLanguageQuestion": "Quelle est la part des films français par rapport aux films américains et européens dans le volume total des films exploités en salles sur les 5 dernières années ?",
-          "sqlQuery": "SELECT annee, films_francais, films_americains, films_europeens, total_films FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_films_exploitation_nationalite` WHERE annee >= 2020 ORDER BY annee DESC"
+          "naturalLanguageQuestion": "Quels sont les films sortis ce mois-ci ayant réalisé plus de 500 000 entrées en première semaine et affichant le meilleur coefficient de maintien à l'affiche ?",
+          "sqlQuery": "SELECT titre_film, genre, nationalite, entrees_premiere_semaine, entrees_cumulees_total, semaines_affiche, coefficient_maintien_semaine2 FROM `${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice` WHERE entrees_premiere_semaine >= 500000 ORDER BY coefficient_maintien_semaine2 DESC LIMIT 5"
         },
         {
-          "naturalLanguageQuestion": "Quel est le parc de salles et de fauteuils de cinéma par grande enseigne et par région administrative ?",
-          "sqlQuery": "SELECT circuit_cinema, nom_region, COUNT(DISTINCT id_salle) AS nb_cinemas, SUM(nombre_ecrans) AS total_ecrans, SUM(nombre_fauteuils) AS total_fauteuils FROM `${PROJECT_ID}.entertainment_cinema_ds.salles_cinema_etablissements` GROUP BY circuit_cinema, nom_region ORDER BY total_fauteuils DESC LIMIT 30"
+          "naturalLanguageQuestion": "Quelle est l'évolution du prix moyen du billet de cinéma sur 5 ans et quel est le taux d'occupation moyen des fauteuils par séance selon le format (IMAX/4DX vs Standard) ?",
+          "sqlQuery": "SELECT f.nom_format_projection, f.taux_occupation_moyen_seance_pct, f.prix_moyen_billet_format_eur, f.surcout_prix_billet_pct, f.recette_annuelle_par_fauteuil_eur FROM `${PROJECT_ID}.cinema_boxoffice_ds.salles_formats_projection_frequentation` f ORDER BY f.taux_occupation_moyen_seance_pct DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Dans quels complexes cinématographiques devrions-nous installer nos cabines premium ou nos sièges immersifs pour maximiser l'upsell et augmenter le prix du billet de 35 % ?",
+          "sqlQuery": "SELECT circuit_cinema, nom_region, commune, nom_etablissement, nombre_ecrans, nombre_fauteuils FROM `${PROJECT_ID}.cinema_boxoffice_ds.salles_cinema_etablissements` WHERE nombre_ecrans >= 16 ORDER BY nombre_fauteuils DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quelle est la part de marché des films français vs américains sur les 12 derniers mois et quelles régions affichent la plus forte surperformance sur le cinéma d'Art et Essai ?",
+          "sqlQuery": "SELECT nom_region, COUNT(*) as total_etablissements, COUNTIF(classification_art_et_essai = TRUE) as etablissements_art_et_essai, ROUND(COUNTIF(classification_art_et_essai = TRUE) * 100.0 / COUNT(*), 1) as pct_art_et_essai FROM `${PROJECT_ID}.cinema_boxoffice_ds.salles_cinema_etablissements` GROUP BY nom_region ORDER BY pct_art_et_essai DESC"
         }
       ],
       "glossaryTerms": [
         {
-          "displayName": "Séries Historiques CNC Box-Office",
-          "description": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945. [Table: cnc_frequentation_historique, Colonne: nombre_total_entrees_millions]. Termes associés : Entrées Annuelles CNC Millions, Recettes Guichet Box-Office, Séries Temporelles Cinéma, Historique Fréquentation 1945-2025. Propriétaire : data-governance@data-agents-by-industry.com."
+          "displayName": "Prédiction de Flops & Buzz Réseaux Sociaux",
+          "description": "Scoring de risque de sous-performance au box-office en pourcentage (%) croisant le budget de production et l'indice de sentiment sur les réseaux sociaux. Termes associés : Flop Box-Office, Budget Production, Sentiment Social Media, Ajustement Horaires."
         },
         {
-          "displayName": "Indicateurs de Fréquentation & Prix Billet",
-          "description": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles. [Table: cnc_performance_box_office_tops, Colonne: prix_moyen_billet_eur]. Termes associés : Prix Moyen de la Place €, Taux de Remplissage Salles, Recette Moyenne par Entrée, Chiffre d'Affaires Exploitation. Propriétaire : data-governance@data-agents-by-industry.com."
+          "displayName": "Taux d'Occupation Fauteuils par Format (IMAX / 4DX)",
+          "description": "Comparatif du taux d'occupation des fauteuils par séance selon le format (IMAX 3D, 4DX Immersif, Dolby Cinema vs Standard) et surcoût tarifaire du billet. Termes associés : Salles Immersives, Formats Premium, Surcoût Billet %, Recette par Fauteuil."
         },
         {
-          "displayName": "Répartition par Genres & Nationalités",
-          "description": "Performances comparées des films français, américains et art & essai par territoire. [Table: cnc_films_exploitation_nationalite, Colonne: part_marche_entrees_pct]. Termes associés : Part de Marché Films Français, Films Américains Blockbusters, Cinéma d'Art et Essai, Répartition Genres Comédie Drame Sci-Fi. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Parc des Établissements & Multiplexes",
-          "description": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes. [Table: salles_cinema_etablissements, Colonne: nombre_ecrans]. Termes associés : Nombre d'Écrans & Fauteuils, Multiplexes vs Salles Indépendantes, Classement Art et Essai, Densité d'Équipement Écrans. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Performance des Nouveautés & Semaines d'Exploitation",
-          "description": "Suivi des entrées en 1ère semaine et coefficient de maintien à l'affiche. [Table: cnc_films_nouveautes_genres, Colonne: semaines_maintien_affiche]. Termes associés : Semaines à l'Affiche, Entrées Première Semaine, Coefficient de Maintien Box-Office, Nombre de Copies Écrans. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Compte de Soutien CNC & Subventions Cinéma",
-          "description": "Ressources générées par la taxe TSCA et réinvesties dans le soutien automatique. [Table: cnc_frequentation_historique, Colonne: taxe_tsca_recette_eur]. Termes associés : Taxe TSCA sur les Entrées, Fonds de Soutien Automatique CNC, Aide Sélective à la Production, Financement de la Création. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Fréquentation par Tranche d'Âge & Publics",
-          "description": "Pénétration du cinéma auprès des 15-24 ans et détenteurs de Pass Illimités. [Table: salles_cinema_etablissements, Colonne: taux_frequentation_jeunes_pct]. Termes associés : Public 15-24 ans, Cinéphiles Réguliers, Abonnements Pass Cinéma Unlimited, Habitudes de Sortie Salles. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Programmation & Entrées par Région",
-          "description": "Analyse géographique de la fréquentation des salles en région. [Table: salles_cinema_etablissements, Colonne: region_nom]. Termes associés : Entrées par Région Administrative, Succès Régionaux Nouveautés, Densité de Fauteuils pour 1000 Hab, Disparités Territoriales Salles. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Format de Projection & Salles Premium",
-          "description": "Déploiement des salles premium IMAX, 4DX, Dolby Cinema et séances 3D. [Table: salles_cinema_etablissements, Colonne: equipement_projection_3d_imax]. Termes associés : Salles IMAX 4DX Dolby Cinema, Projection Numérique 4K, Majoration Billet Séance Premium, Expérience Spectateur. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Taux d'Occupation Fauteuils par Séance",
-          "description": "Optimisation des grilles d'horaires et rentabilité par fauteuil de cinéma. [Table: cnc_performance_box_office_tops, Colonne: taux_occupation_fauteuils_pct]. Termes associés : Taux d'Occupation Séance, Séances du Soir & Week-End, Optimisation Grille de Horaires, Rentabilité par Salle. Propriétaire : data-governance@data-agents-by-industry.com."
+          "displayName": "Coefficient de Maintien à l'Affiche",
+          "description": "Ratio de rétention des entrées entre la 2ème et la 1ère semaine d'exploitation (>0.75 = excellent maintien). Termes associés : Maintien Semaine 2, Entrées Première Semaine, Longévité Affiche."
         }
       ]
     }

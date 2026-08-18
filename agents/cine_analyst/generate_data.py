@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Relational Data Generation and CNC Cinema OpenData Processing for CineAnalyst (entertainment_cinema_ds).
+Relational Data Generation and CNC Cinema OpenData Processing for CineAnalyst (cinema_boxoffice_ds).
 Reads base Excel dataset 'agents/cine_analyst/data/Fréquentation et films dans les salles de cinéma.xlsx'
-and builds 5 refined relational tables:
+and builds 7 refined relational tables:
 1. cnc_frequentation_historique (Historical annual attendance, box-office revenue & ticket price)
 2. cnc_films_exploitation_nationalite (Films in distribution by nationality: French, US, European)
 3. cnc_films_nouveautes_genres (First-run releases by genre: Fiction, Documentary, Animation)
 4. cnc_performance_box_office_tops (Admissions of Top 10, Top 20, Top 30, Top 100 films)
 5. salles_cinema_etablissements (Cinema theater circuits & multiplexes with strict geography)
+6. cnc_films_nouveautes_titres_boxoffice (Individual Movie Titles, Budgets, 1st Week Admissions, Flop Risk & Social Buzz)
+7. salles_formats_projection_frequentation (IMAX 3D, 4DX Immersif, Dolby Cinema vs Standard Occupancy & Ticket Prices)
 """
 
 import os
@@ -15,11 +17,12 @@ import sys
 import random
 import subprocess
 import pandas as pd
+from datetime import datetime, timedelta
 from google.cloud import bigquery
 from google.oauth2.credentials import Credentials
 
 PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
-DATASET_ID = "entertainment_cinema_ds"
+DATASET_ID = "cinema_boxoffice_ds"
 LOCATION = "US"
 EXCEL_PATH = "agents/cine_analyst/data/Fréquentation et films dans les salles de cinéma.xlsx"
 BUCKET_NAME = "gs://talktodata-cine-analyst-raw-data"
@@ -102,14 +105,21 @@ def main():
     print(f"Initializing CineAnalyst Relational Pipeline for project '{PROJECT_ID}'...")
     client = get_client()
 
-    # Step 1: Read authentic CNC Excel
-    df_freq, df_expl, df_genre, df_perf = parse_cnc_excel()
-    print(f"  ✓ Parsed {len(df_freq)} historical frequency years (1938-2025).")
-    print(f"  ✓ Parsed {len(df_expl)} nationality distribution years.")
-    print(f"  ✓ Parsed {len(df_genre)} genre release years.")
-    print(f"  ✓ Parsed {len(df_perf)} box office top performance years.")
+    # Step 1: Execute ddl_setup.sql
+    ddl_path = os.path.join(os.path.dirname(__file__), "ddl_setup.sql")
+    if os.path.exists(ddl_path):
+        with open(ddl_path, "r", encoding="utf-8") as f:
+            sql_script = f.read().replace("${PROJECT_ID}", PROJECT_ID)
+        for stmt in sql_script.split(";"):
+            stmt = stmt.strip()
+            if stmt:
+                client.query(stmt).result()
+        print("  ✓ Executed ddl_setup.sql to ensure exact cinema_boxoffice_ds schemas!")
 
-    # Step 2: Build salles_cinema_etablissements with strict geography
+    # Step 2: Read authentic CNC Excel
+    df_freq, df_expl, df_genre, df_perf = parse_cnc_excel()
+
+    # Step 3: Build Table 5: salles_cinema_etablissements
     rows_salles = []
     cities = list(CITY_DEPT_REGION.keys())
     salle_idx = 1
@@ -134,8 +144,56 @@ def main():
                 "classification_art_et_essai": is_art_essai
             })
             salle_idx += 1
-
     df_salles = pd.DataFrame(rows_salles)
+
+    # Step 4: Build Table 6: cnc_films_nouveautes_titres_boxoffice
+    movies = [
+        # Major Hits / High Retention
+        ("FILM-2025-001", "Le Comte de Monte-Cristo", "Fiction", "Français", 43000000.0, "2024-06-28", 1250000, 9300000, 22, 0.92, 96.5, 2.1),
+        ("FILM-2025-002", "L'Amour Ouf", "Fiction", "Français", 32000000.0, "2024-10-16", 1050000, 4800000, 16, 0.89, 91.0, 5.0),
+        ("FILM-2025-003", "Dune: Partie 2", "Fiction", "Américain", 190000000.0, "2024-02-28", 1380000, 4200000, 14, 0.88, 94.0, 4.2),
+        ("FILM-2025-004", "Vaiana 2", "Animation", "Américain", 150000000.0, "2024-11-27", 1450000, 5600000, 12, 0.94, 97.0, 1.5),
+        ("FILM-2025-005", "Gladiator II", "Fiction", "Américain", 240000000.0, "2024-11-13", 1120000, 3900000, 10, 0.82, 88.0, 12.0),
+        ("FILM-2025-006", "Monsieur Aznavour", "Fiction", "Français", 26000000.0, "2024-10-23", 610000, 2100000, 11, 0.86, 85.0, 8.5),
+        ("FILM-2025-007", "Vice-Versa 2", "Animation", "Américain", 175000000.0, "2024-06-19", 1680000, 8400000, 18, 0.95, 98.0, 1.0),
+        ("FILM-2025-008", "Un P'tit Truc En Plus", "Fiction", "Français", 4500000.0, "2024-05-01", 1100000, 10800000, 26, 0.96, 99.0, 0.5),
+
+        # High Budget Flops / High Risk
+        ("FILM-2025-009", "Joker: Folie à Deux", "Fiction", "Américain", 190000000.0, "2024-10-02", 620000, 1150000, 5, 0.45, 41.0, 79.0),
+        ("FILM-2025-010", "Emmanuelle", "Fiction", "Français", 24000000.0, "2024-09-25", 180000, 320000, 4, 0.42, 32.0, 82.5),
+        ("FILM-2025-011", "Megalopolis", "Fiction", "Américain", 120000000.0, "2024-09-25", 140000, 260000, 3, 0.38, 28.0, 88.0),
+        ("FILM-2025-012", "Argylle", "Fiction", "Américain", 200000000.0, "2024-01-31", 210000, 450000, 4, 0.35, 25.0, 91.0),
+        ("FILM-2025-013", "Borderlands", "Fiction", "Américain", 115000000.0, "2024-08-07", 110000, 190000, 3, 0.31, 21.0, 94.5),
+        ("FILM-2025-014", "Madame Web", "Fiction", "Américain", 80000000.0, "2024-02-14", 165000, 310000, 4, 0.36, 29.0, 87.0),
+
+        # Additional Releases Across Genres & Origins
+        ("FILM-2025-015", "La Petite Vadrouille", "Fiction", "Français", 8500000.0, "2024-06-05", 210000, 650000, 8, 0.78, 72.0, 18.0),
+        ("FILM-2025-016", "Moi, Moche et Méchant 4", "Animation", "Américain", 100000000.0, "2024-07-10", 1420000, 4300000, 12, 0.91, 92.0, 3.5),
+        ("FILM-2025-017", "Kraven le Chasseur", "Fiction", "Américain", 130000000.0, "2024-12-18", 340000, 780000, 5, 0.52, 48.0, 68.0),
+        ("FILM-2025-018", "La Nuit du 12 (Re-sortie)", "Fiction", "Français", 4200000.0, "2024-03-15", 95000, 520000, 10, 0.85, 84.0, 9.0),
+        ("FILM-2025-019", "Le Robot Sauvage", "Animation", "Américain", 78000000.0, "2024-10-09", 580000, 2400000, 11, 0.90, 93.0, 4.0),
+        ("FILM-2025-020", "Kaamelott : Deuxième Volet", "Fiction", "Français", 28000000.0, "2025-01-15", 980000, 3800000, 14, 0.87, 95.0, 6.0)
+    ]
+
+    df_movies = pd.DataFrame(movies, columns=[
+        "movie_id", "titre_film", "genre", "nationalite", "budget_production_eur",
+        "date_sortie_salles", "entrees_premiere_semaine", "entrees_cumulees_total",
+        "semaines_affiche", "coefficient_maintien_semaine2", "index_buzz_reseaux_sociaux",
+        "risque_flop_box_office_pct"
+    ])
+
+    # Step 5: Build Table 7: salles_formats_projection_frequentation
+    formats = [
+        ("FMT-001", "Standard 2D", 28.5, 7.42, 0.0, 650.0),
+        ("FMT-002", "IMAX 3D", 68.5, 14.50, 95.4, 1980.0),
+        ("FMT-003", "4DX Immersif", 74.2, 16.80, 126.4, 2450.0),
+        ("FMT-004", "Dolby Cinema", 62.0, 13.90, 87.3, 1720.0),
+        ("FMT-005", "ScreenX 270°", 58.0, 12.50, 68.5, 1480.0)
+    ]
+    df_formats = pd.DataFrame(formats, columns=[
+        "format_id", "nom_format_projection", "taux_occupation_moyen_seance_pct",
+        "prix_moyen_billet_format_eur", "surcout_prix_billet_pct", "recette_annuelle_par_fauteuil_eur"
+    ])
 
     # Save CSVs locally and upload to BigQuery & GCS
     tables_dict = {
@@ -143,7 +201,9 @@ def main():
         "cnc_films_exploitation_nationalite": df_expl,
         "cnc_films_nouveautes_genres": df_genre,
         "cnc_performance_box_office_tops": df_perf,
-        "salles_cinema_etablissements": df_salles
+        "salles_cinema_etablissements": df_salles,
+        "cnc_films_nouveautes_titres_boxoffice": df_movies,
+        "salles_formats_projection_frequentation": df_formats
     }
 
     subprocess.run(f"gcloud storage buckets create {BUCKET_NAME} --project={PROJECT_ID} --location=EU 2>/dev/null", shell=True)
@@ -170,7 +230,7 @@ def main():
         job.result()
         print(f"  ✓ Loaded table `{tref}` in BigQuery!")
 
-    print("\nSUCCESS: Refined CineAnalyst data pipeline complete!")
+    print("\nSUCCESS: Refined CineAnalyst 7-table data pipeline complete!")
 
 if __name__ == "__main__":
     main()
