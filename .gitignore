@@ -1,0 +1,20 @@
+# Python virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary logs & artifacts
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# GCS & BQ local temporary export caches
+raw_export/
+generated_data/
