@@ -1,131 +1,145 @@
-# TalkToData: Enterprise Multi-Agent Data Analytics Platform
+# TalkToData — Enterprise Multi-Agent Data Analytics Platform
 
-TalkToData is a production-ready, multi-agent enterprise data analytics platform deployed on Google Cloud Platform (GCP). It integrates Google Cloud Vertex AI Data Analytics Agents (`geminidataanalytics.googleapis.com`), BigQuery relational data warehouses, Google Cloud Storage (GCS) raw data buckets, and authentic Open Data sources across 11 key industries.
+**TalkToData** is an enterprise-grade, multi-agent AI data analytics platform deployed on **Google Cloud Platform (GCP)**. It integrates **GCP Vertex AI Data Agents** (`geminidataanalytics.googleapis.com`), **BigQuery** relational data warehouses, **Cloud Storage (GCS)** object buckets, **Dataplex Knowledge Catalog**, and authentic French & European **Open Data** across 11 key industries.
 
 ---
 
-## High-Level System Architecture
+## 🎯 Executive Value Proposition & Major ROI
+
+Modern enterprises operate in complex, multi-domain environments where decision-makers require instant, data-driven answers across finance, operations, supply chain, healthcare, retail, and sustainability.
+
+**TalkToData** solves this by deploying specialized **AI Data Analytics Agents**—acting as 24/7 executive copilots. Each agent translates complex natural language queries into optimized BigQuery SQL, joins multi-table relational datasets, inspects GCS Cloud Storage media/documents, and enforces strict business governance rules **without exposing technical code to the user**.
+
+### Key ROI Capabilities:
+- **Instant Strategic Insights** : Query multi-billion-row BigQuery warehouses using natural business language in French or English.
+- **Authentic Open Data Integration** : Built on real datasets from France Travail, SNCF, Enedis, ARCEP, Ministère des Sports, Banque de France, ADEME Agribalyse, CNC, FINESS, and ESA Copernicus Sentinel-2.
+- **Multimodal Data Analysis** : Unifies structured tables, GCS Object Tables for satellite imagery (Sentinel-2), and 300 clean, standardized candidate PDF resumes on Cloud Storage.
+- **Dataplex Knowledge Catalog Governance** : 100% metadata coverage—including Overviews, Data Owners/Stewards, Labels, Aspects, Data Quality Rules, and Fully Qualified Names (FQN).
+
+---
+
+## 🏗️ High-Level System Architecture
 
 ```mermaid
 flowchart TD
-    User["Enterprise Decision Maker / User"] --> AnalyticsAPI["Vertex AI Data Analytics API\n(geminidataanalytics.googleapis.com)"]
+    User["Enterprise Executive / Decision Maker"] --> AnalyticsAPI["Vertex AI Data Analytics API\n(geminidataanalytics.googleapis.com)"]
     
     subgraph Agents["11 Industry Data Analytics Agents"]
-        CA["CreditAdvisor (FSI & Banking)"]
-        SO["ShelfOptimizer (Retail & CPG)"]
         SU["Sully (Public Sector & Labor)"]
-        TN["TransitNavigator (Transport & Mobility)"]
-        EI["EarthIntel (Satellite & Skywatch)"]
         PC["PulseChecker (Healthcare & Pharma)"]
-        NA["NetArch (Telco & Media)"]
-        CE["Ceres (Agriculture & Rurality)"]
+        SO["ShelfOptimizer (Retail & CPG)"]
+        EI["EarthIntel (Geospatial & Satellite)"]
+        TN["TransitNavigator (Transport & Mobility)"]
+        AM["ArenaManager (Sports & Stadiums)"]
+        HE["Helios (Energy & EV IRVE)"]
+        NA["NetArch (Telco & ARCEP 5G)"]
+        CA["CreditAdvisor (FSI & Banking Risk)"]
+        CE["Ceres (Agroecology & ADEME)"]
         CI["CineAnalyst (Entertainment & Cinema)"]
-        AM["ArenaManager (Sports Infrastructure)"]
-        HE["Helios (Energy & EV Infrastructure)"]
     end
 
     AnalyticsAPI --> Agents
     
-    subgraph DataStorage["Google Cloud Data Storage Layer"]
+    subgraph DataStorage["Google Cloud Platform Data Layer"]
         BQ["BigQuery Relational Datasets\n(EU / US Location)"]
-        GCS["Dedicated GCS Buckets\n(1 Bucket per Agent)"]
+        GCS["Dedicated GCS Buckets\n(Resumes, Raw CSVs, Satellite Imagery)"]
+        DP["Dataplex Knowledge Catalog\n(Business Glossaries & Ontologies)"]
     end
 
     Agents --> BQ
     Agents --> GCS
-    
-    subgraph OpenData["Authentic Open Data Sources"]
-        BDF["Banque de France Webstat"]
-        SNCF["SNCF Open Data"]
-        ENEDIS["Enedis Open Data"]
-        OFF["Open Food Facts"]
-        ADEME["ADEME Agribalyse 3.1"]
-    end
-
-    OpenData --> BQ
-    OpenData --> GCS
+    Agents --> DP
 ```
 
 ---
 
-## Supported Industry Data Agents
+## 💼 Detailed Breakdown of the 11 Industry Data Agents
 
-| Agent ID | Industry Domain | BigQuery Dataset | Primary Capabilities |
-| :--- | :--- | :--- | :--- |
-| `credit-advisor-agent` | FSI & Banking | `fsi_creditadvisor_dataset` | Predicts corporate default risks, optimizes cash-flow loan upsell, models IFRS 9 staging, RAROC, and macroeconomic shock resilience. |
-| `shelf-optimizer-agent` | Retail & CPG | `retail_cpg_ds` | Analyzes Open Food Facts catalog, product pricing, Nutri-Score distribution, and basket margin optimization. |
-| `sully-agent` | Public Sector & Labor | `public_sector_employment_ds` | Analyzes France Travail BMO recruitment tension, job openings, candidate matching, and regional employment dynamics. |
-| `transit-navigator-agent` | Transport & Mobility | `transport_mobility_ds` | Tracks authentic SNCF station traveler counts, train punctuality, line regularity, lost objects, and ticketing validations. |
-| `earth-intel-agent` | Satellite & Skywatch | `skywatch_aerospace_ds` | Processes Sentinel-2 satellite metadata, optical bands, vegetation indices (NDVI), and industrial asset monitoring. |
-| `pulse-checker-agent` | Healthcare & Pharma | `healthcare_pharma_ds` | Analyzes RPPS physician density, hospital capacity, AMELI Open Bio biology statistics, and medical desert identification. |
-| `net-arch-agent` | Telco & Media | `telco_media_ds` | Monitors ARCEP 4G/5G cell tower coverage, fiber optic deployment, network traffic flows, and user signal complaints. |
-| `ceres-agent` | Agriculture & Rurality | `agriculture_rurality_ds` | Evaluates ADEME Agribalyse 3.1 ACV lifecycle environmental impact, summer weather forecast anomalies, low-carbon labels, and ESG reports. |
-| `cine-analyst-agent` | Entertainment & Cinema | `entertainment_cinema_ds` | Analyzes CNC box office results, theater seat distribution, film subsidies, market share, and box office flops. |
-| `arena-manager-agent` | Sports Infrastructure | `sports_infrastructure_ds` | Tracks Ministry of Sports facility distribution, sports licenses by region, regional imbalances, and public grants. |
-| `helios-agent` | Power & EV Infrastructure | `power_energy_ds` | Monitors authentic Enedis IRVE electric charging stations, industrial power demand, and renewable energy production. |
-
----
-
-## Directory Layout
-
-```text
-talktodata/
-├── agents/
-│   ├── credit_advisor/
-│   ├── shelf_optimizer/
-│   ├── sully/
-│   ├── transit_navigator/
-│   ├── earth_intel/
-│   ├── pulse_checker/
-│   ├── net_arch/
-│   ├── ceres/
-│   ├── cine_analyst/
-│   ├── arena_manager/
-│   └── helios/
-│       ├── ddl_setup.sql          # BigQuery DDL table schema definitions
-│       ├── generate_data.py       # Relational data pipeline & generator
-│       ├── agent_payload.json     # Data Analytics Agent configuration payload
-│       ├── deploy_agent.py        # Python deployment script for GCP Data Analytics API
-│       └── data/                  # Local workspace directory for authentic CSV files
-├── download_authentic_opendata.py # Automated fetcher for official French Open Data APIs
-├── deploy_all.py                  # One-click master deployment script
-├── requirements.txt               # Python package dependencies
-├── .gitignore                     # Git exclusion rules
-├── ARCHITECTURE.md                # Comprehensive data architecture documentation
-└── DEPLOYMENT.md                  # Complete deployment and execution guide
-```
+| Agent ID | Display Name | Industry Domain | Key Business Capabilities & Strategic ROI | BigQuery Dataset |
+| :--- | :--- | :--- | :--- | :--- |
+| `sully-agent` | **Sully** | Public Sector & Labor | Anticipates hiring tensions (BMO 2025), ROME 4.0 taxonomy (12,243 occupations), URSSAF employer audits (4,500 SIRENE establishments), ATS candidate matching, and tracks 300 clean PDF resumes on GCS (`gs://sully-candidate-resumes-data-agents`). | `public_sector_employment_ds` |
+| `pulse-checker-agent` | **PulseChecker** | Healthcare & Pharma | Identifies medical deserts (RPPS), targets private clinic expansion (5-year EBITDA projection), prevents critical drug shortages (antibiotics, insulin), regulates ER capacity (Plans Blancs), and audits AMELI Open BIO expenses. | `public_sector_healthcare_ds` |
+| `shelf-optimizer-agent` | **ShelfOptimizer** | Retail & CPG | Audits planogram compliance, eliminates visual shelf-outs, reduces fresh food waste (14-day expiry prediction), optimizes national vs private label margins, and reformulates Nutri-Score / NOVA ingredients. | `retail_cpg_optimization_ds` |
+| `earthintel-agent` | **EarthIntel** | Satellite & Geospatial | Unifies GCS Object Tables & BigQuery for ESA Sentinel-2 imagery (10m resolution), flood/fire hazard scores, crop NDVI vegetation stress, HT powerline tree encroachment, and CSRD zero-deforestation verification. | `skywatch_aerospace_ds` |
+| `transit-navigator-agent` | **TransitNavigator** | Transport & Mobility | Tracks traveler volume across 3,000+ SNCF stations, train punctuality/SLA, tap-in turnstile validations (`ST_GEOGPOINT`), Navigo/TER passenger commute profiles, and lost & found item resolution. | `transport_mobility_ds` |
+| `arena-manager-agent` | **ArenaManager** | Sports & Stadiums | Maximizes stadium ticket sales & VIP hospitality suites, food/beverage concessions, audits sports facility energy waste (RES Ministry of Sports census), and evaluates ANS public grant impact on youth enrollment. | `sports_infrastructure_ds` |
+| `helios-agent` | **Helios** | Power & EV Energy | Optimizes 10,000 Enedis EV charging stations (IRVE), monitors 30-min transformer load curves, renewable energy injection (solar/wind), and B2B industrial demand response. | `energy_utilities_ds` |
+| `net-arch-agent` | **NetArch** | Telco & Media | Monitors ARCEP 4G/5G mobile coverage across 10,000 cell towers (Orange, SFR, Bouygues, Free), 3.5 GHz spectrum allocation, QoS latency, and automated NOC incident resolution. | `telecom_network_ds` |
+| `credit-advisor-agent` | **CreditAdvisor** | FSI & Banking | Detects corporate insolvency risks before bankruptcy, aligns credit policies with Banque de France BLS surveys, models IFRS 9 ECL staging, and targets B2B upsell for resilient SMEs. | `financial_banking_ds` |
+| `ceres-agent` | **Ceres** | Agriculture & ESG | Predicts weather-driven crop yield drops, models ADEME Agribalyse 3.1 ACV lifecycle environmental footprint, Low-Carbon Label credits, and certified ESG reporting for institutional investors. | `agriculture_rural_ds` |
+| `cine-analyst-agent` | **CineAnalyst** | Entertainment & Cinema | Unifies CNC historical box-office series, theater ticket pricing, regional audience distribution, screen capacity, and movie production profitability. | `cinema_boxoffice_ds` |
 
 ---
 
-## Quickstart
+## ⚡ Quickstart — 1-Click Installation & Deployment
 
-### Prerequisites
-1. Python 3.10+ installed.
-2. Google Cloud SDK (`gcloud`) installed and authenticated.
-3. A GCP project with BigQuery, Cloud Storage, and Vertex AI Data Analytics API enabled.
+Anyone cloning this repository can easily install, initialize datasets, download authentic Open Data, and deploy all 11 Data Agents on GCP.
+
+### 1. Prerequisites
+- **Python 3.10+** installed.
+- **Google Cloud SDK (`gcloud`)** installed and authenticated.
+- A GCP Project with **BigQuery**, **Cloud Storage**, and **Vertex AI Data Analytics API** enabled.
+
+### 2. Installation & Setup Steps
 
 ```bash
-# 1. Clone the repository
-git clone <repository-url>
-cd talktodata
+# Step 1: Clone the repository
+git clone https://github.com/ken-william/Data-Agents-By-Industry.git
+cd Data-Agents-By-Industry
 
-# 2. Set your GCP project environment variable
+# Step 2: Set your GCP Project environment variable
 export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
 
-# 3. Authenticate with Google Cloud
+# Step 3: Authenticate with Google Cloud
 gcloud auth login
 gcloud auth application-default login
 
-# 4. Install dependencies
+# Step 4: Create & activate virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Step 5: Install Python dependencies
 pip install -r requirements.txt
 
-# 5. Execute master deployment script
+# Step 6: One-click download Open Data, build datasets, and deploy all 11 Vertex AI Data Agents
 python deploy_all.py
 ```
 
 ---
 
-## Documentation
+## 📁 Repository Structure
 
-* [ARCHITECTURE.md](file:///usr/local/google/home/theophanes/talktodata/ARCHITECTURE.md): Detailed relational schema design, Open Data provenance, and API specs.
-* [DEPLOYMENT.md](file:///usr/local/google/home/theophanes/talktodata/DEPLOYMENT.md): Step-by-step deployment, credential verification, and testing instructions.
+```text
+talktodata/
+├── agents/                           # 11 Industry Data Analytics Agents
+│   ├── README.md                     # Dedicated agent architecture & extension guide
+│   ├── sully/                        # Sully - France Travail & Emploi Public
+│   │   ├── generate_fresh_pdf_cvs.py # 300 PDF CV generator & GCS uploader
+│   │   ├── ddl_setup.sql             # BigQuery schema definitions
+│   │   ├── generate_data.py          # Data pipeline
+│   │   ├── agent_payload.json        # Vertex AI Data Agent config
+│   │   └── business_catalog_config.json # Dataplex Catalog metadata
+│   ├── pulse_checker/                # PulseChecker - Santé & Hôpitaux
+│   ├── shelf_optimizer/              # ShelfOptimizer - Merchandising Retail
+│   ├── earth_intel/                  # EarthIntel - Imagerie Satellitaire
+│   ├── transit_navigator/            # TransitNavigator - Transports & Mobilité
+│   ├── arena_manager/                # ArenaManager - Sport & Stades
+│   ├── helios/                       # Helios - Énergie & IRVE Enedis
+│   ├── net_arch/                     # NetArch - Télécoms ARCEP
+│   ├── credit_advisor/               # CreditAdvisor - Risque Crédit
+│   ├── ceres/                        # Ceres - Transition Agroécologique
+│   └── cine_analyst/                 # CineAnalyst - Box-Office Cinéma
+├── download_authentic_opendata.py    # Centralized fetcher for official French Open Data
+├── deploy_all.py                     # One-click master setup & deployment script
+├── requirements.txt                  # Python dependencies
+├── ARCHITECTURE.md                   # Detailed technical & relational schema specs
+└── DEPLOYMENT.md                     # Step-by-step deployment guide
+```
+
+---
+
+## 📚 Detailed Sub-Documentation
+
+- [agents/README.md](file:///usr/local/google/home/theophanes/talktodata/agents/README.md) — Detailed agent directory specifications and guide to adding new Data Agents.
+- [ARCHITECTURE.md](file:///usr/local/google/home/theophanes/talktodata/ARCHITECTURE.md) — Relational schema specs, Open Data provenance, and BigQuery table mapping.
+- [DEPLOYMENT.md](file:///usr/local/google/home/theophanes/talktodata/DEPLOYMENT.md) — In-depth credential validation, API troubleshooting, and testing instructions.

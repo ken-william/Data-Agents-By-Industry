@@ -19,17 +19,17 @@ import subprocess
 PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
 
 AGENTS = [
-    ("credit_advisor", "FSI & Financial Risk Advisor", "fsi_creditadvisor_dataset"),
-    ("shelf_optimizer", "Retail CPG & Shelf Optimizer", "retail_cpg_ds"),
-    ("sully", "Public Sector Employment & Labor", "public_sector_employment_ds"),
-    ("transit_navigator", "Transport & Mobility Intelligence", "transport_mobility_ds"),
-    ("earth_intel", "Skywatch Satellite Observation", "skywatch_aerospace_ds"),
-    ("pulse_checker", "Healthcare & Pharma Analytics", "healthcare_pharma_ds"),
-    ("net_arch", "Telco & Media Network Operations", "telco_media_ds"),
-    ("ceres", "Agriculture & Agroecological Transition", "agriculture_rurality_ds"),
-    ("cine_analyst", "Entertainment & Cinema Box Office", "entertainment_cinema_ds"),
-    ("arena_manager", "Sports & Infrastructure Analytics", "sports_infrastructure_ds"),
-    ("helios", "Power, Energy & EV Infrastructure", "power_energy_ds")
+    ("credit_advisor", "CreditAdvisor - Risque Crédit & Finance", "financial_banking_ds"),
+    ("shelf_optimizer", "ShelfOptimizer - Merchandising & Retail", "retail_cpg_optimization_ds"),
+    ("sully", "Sully - France Travail & Emploi Public", "public_sector_employment_ds"),
+    ("transit_navigator", "TransitNavigator - Mobilité & SNCF/RATP", "transport_mobility_ds"),
+    ("earth_intel", "EarthIntel - Imagerie Satellitaire & Géospatiale", "skywatch_aerospace_ds"),
+    ("pulse_checker", "PulseChecker - Santé & Hopitaux", "public_sector_healthcare_ds"),
+    ("net_arch", "NetArch - Architecture Réseau Télécom ARCEP", "telecom_network_ds"),
+    ("ceres", "Ceres - Transition Agroécologique ADEME", "agriculture_rural_ds"),
+    ("cine_analyst", "CineAnalyst - Box-Office Cinéma CNC", "cinema_boxoffice_ds"),
+    ("arena_manager", "ArenaManager - Sport & Stades RES", "sports_infrastructure_ds"),
+    ("helios", "Helios - Énergie & Bornes IRVE Enedis", "energy_utilities_ds")
 ]
 
 def check_environment():
@@ -38,7 +38,7 @@ def check_environment():
         token = subprocess.check_output(["gcloud", "auth", "print-access-token"], text=True).strip()
         if not token:
             raise ValueError("No access token returned.")
-        print("  GCP Authentication verified successfully.")
+        print("  ✓ GCP Authentication verified successfully.")
     except Exception as e:
         print(f"Error: Unable to authenticate with gcloud. Please run 'gcloud auth login' and 'gcloud auth application-default login'.\nDetails: {e}")
         sys.exit(1)
@@ -100,10 +100,10 @@ def main():
     print(f" Total Execution Time: {elapsed} seconds")
     print("================================================================================\n")
 
-    print(f"{'Agent ID':<20} | {'Industry / Title':<42} | {'BigQuery Dataset':<28} | {'Status':<10}")
-    print("-" * 106)
+    print(f"{'Agent ID':<20} | {'Industry / Title':<45} | {'BigQuery Dataset':<30} | {'Status':<10}")
+    print("-" * 112)
     for agent_id, agent_title, dataset_id, status in deployed_summary:
-        print(f"{agent_id:<20} | {agent_title:<42} | {dataset_id:<28} | {status:<10}")
+        print(f"{agent_id:<20} | {agent_title:<45} | {dataset_id:<30} | {status:<10}")
 
     print("\nAll 11 Data Analytics Agents are live and ready for enterprise queries.")
 
