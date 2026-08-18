@@ -1,0 +1,59 @@
+{
+  "agent_id": "helios-agent",
+  "displayName": "Helios - Énergie & Climat",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/power-energy-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/power-energy-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier Énergie & Climat",
+    "description": "Glossaire de charge réseau Enedis, bornes IRVE et effacement électrique pour Helios.",
+    "categories": [
+      {
+        "categoryId": "smart-grid-charge",
+        "displayName": "Catégorie : Gestion de Charge & Réseau Enedis",
+        "description": "Surveillance des pics de consommation et taux de charge des transformateurs",
+        "terms": [
+          {
+            "termId": "charge-transformateur",
+            "displayName": "Taux de Charge Transformateur Enedis",
+            "definition": "Taux d'utilisation et niveau de saturation des transformateurs du réseau électrique.",
+            "mapped_bigquery_column": "taux_charge_transformateur_pct",
+            "mapped_bigquery_table": "enedis_consommation_inf36"
+          },
+          {
+            "termId": "saturation-reseau-kwh",
+            "displayName": "Pic de Surconsommation Réseau (kWh)",
+            "definition": "Pics de puissance maximale appelée sur les postes Haute Tension.",
+            "mapped_bigquery_column": "pic_surconsommation_kwh",
+            "mapped_bigquery_table": "enedis_consommation_inf36"
+          }
+        ]
+      },
+      {
+        "categoryId": "renouvelable-irve",
+        "displayName": "Catégorie : IRVE & Solaire Photovoltaïque",
+        "description": "Disponibilité des bornes de recharge VE et injection d'énergie décarbonée",
+        "terms": [
+          {
+            "termId": "borne-irve-kw",
+            "displayName": "Bornes de Recharge IRVE (kW)",
+            "definition": "Puissance disponible et état opérationnel des bornes de recharge pour véhicules électriques.",
+            "mapped_bigquery_column": "puissance_borne_kw",
+            "mapped_bigquery_table": "enedis_bornes_irve"
+          },
+          {
+            "termId": "solar-as-a-service",
+            "displayName": "Production Solaire & CO2 Évité",
+            "definition": "Volume MWh d'énergie renouvelable photovoltaïque injectée et tonnes de CO2 évitées.",
+            "mapped_bigquery_column": "co2_evite_tonnes",
+            "mapped_bigquery_table": "enedis_production_renouvelable"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}
