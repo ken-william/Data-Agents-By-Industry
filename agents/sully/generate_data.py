@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
 Refined Relational Data Pipeline for Sully - France Travail & URSSAF Recruitment Intelligence Platform.
-Populates BigQuery dataset `public_sector_employment_ds` with 6 fully interconnected tables:
+Populates BigQuery dataset `public_sector_employment_ds` with 7 fully interconnected tables:
 
 1. `bmo_recrutement_2025`: 50,076 authentic France Travail BMO 2025 recruitment forecast records.
-2. `entreprises_urssaf_declarations`: 4,500 company establishments with SIRET, NAF, employee counts, payroll, and OETH disability gaps.
-3. `offres_emploi_recrutement`: 8,500 job vacancies linked by SIRET, BMO occupation code, and department.
-4. `france_travail_demandeurs`: 6,000 job seekers registered at France Travail linked by BMO occupation code, department, and GCS CV URIs.
-5. `candidatures_postulations_suivi`: 12,000 candidate ATS applications linking job seekers, job offers, and companies.
-6. `france_travail_formations_aides`: 5,000 vocational training courses and recruitment subsidies granted.
+2. `rome_arborescence_2024`: 12,255 authentic France Travail ROME 4.0 job titles, appellations, and domain classifications.
+3. `entreprises_urssaf_declarations`: 4,500 company establishments with SIRET, NAF, employee counts, payroll, and OETH disability gaps.
+4. `offres_emploi_recrutement`: 8,500 job vacancies linked by SIRET, BMO occupation code, ROME code, and department.
+5. `france_travail_demandeurs`: 6,000 job seekers registered at France Travail linked by BMO code, ROME code, department, and GCS CV URIs.
+6. `candidatures_postulations_suivi`: 12,000 candidate ATS applications linking job seekers, job offers, and companies.
+7. `france_travail_formations_aides`: 5,000 vocational training courses and recruitment subsidies granted.
 """
 
 import os
@@ -25,6 +26,24 @@ DATASET_ID = "public_sector_employment_ds"
 LOCATION = "US"
 BUCKET_NAME = f"gs://talktodata-sully-raw-data"
 BMO_EXCEL_PATH = "agents/sully/data/bmo_recrutement_2025.xlsx"
+ROME_EXCEL_PATH = "agents/sully/data/rome_arborescence_2024.xlsx"
+
+GRAND_DOMAINES_MAP = {
+    "A": "Agriculture et Pêche, Espaces naturels et Espaces verts",
+    "B": "Arts et Façonnage d'ouvrages d'art",
+    "C": "Banque, Assurance, Immobilier",
+    "D": "Commerce, Vente et Grande distribution",
+    "E": "Communication, Média et Multimédia",
+    "F": "Construction, Bâtiment et Travaux publics",
+    "G": "Hôtellerie-Restauration, Tourisme, Loisirs et Animation",
+    "H": "Industrie",
+    "I": "Installation et Maintenance",
+    "J": "Santé",
+    "K": "Services à la personne et à la collectivité",
+    "L": "Spectacle",
+    "M": "Information et Communication / Informatique",
+    "N": "Transport et Logistique"
+}
 
 REAL_COMPANIES_SAMPLE = [
     ("35600000000014", "AP-HP (Hôpitaux de Paris)", "8610Z - Activités hospitalières", "Établissement Public", 45000, 1850000000.0, 120, "75004", "75", "Paris", "QPV - Quartier Prioritaire"),
@@ -59,11 +78,6 @@ def get_client():
     creds = Credentials(token)
     return bigquery.Client(project=PROJECT_ID, credentials=creds)
 
-def clean_val(val, default_str=""):
-    if pd.isnull(val) or val == "*":
-        return None
-    return val
-
 def main():
     print(f"Initializing Refined Sully Relational Pipeline for project '{PROJECT_ID}'...")
     client = get_client()
@@ -74,7 +88,6 @@ def main():
     if os.path.exists(BMO_EXCEL_PATH):
         print(f"  Parsing authentic France Travail BMO 2025 Open Data Excel dataset...")
         df_bmo_raw = pd.read_excel(BMO_EXCEL_PATH, sheet_name="BMO_2025_open_data")
-        print(f"  ✓ Parsed {len(df_bmo_raw)} raw BMO records.")
 
         bmo_rows = []
         for _, row in df_bmo_raw.iterrows():
@@ -123,13 +136,55 @@ def main():
     else:
         raise FileNotFoundError(f"Missing BMO dataset: {BMO_EXCEL_PATH}")
 
-    # Extract unique metiers and departments for foreign key linkage
+    # Extract unique metiers and departments
     bmo_metiers = df_bmo[["code_metier_bmo", "nom_metier_bmo", "famille_metier_libelle"]].drop_duplicates().to_dict("records")
     bmo_depts = df_bmo[["code_departement", "nom_departement", "nom_region"]].drop_duplicates().to_dict("records")
 
-    # 2. entreprises_urssaf_declarations (~4,500 companies)
+    # 2. rome_arborescence_2024
+    if os.path.exists(ROME_EXCEL_PATH):
+        print(f"  Parsing official France Travail ROME 4.0 Arborescence dataset...")
+        df_rome_raw = pd.read_excel(ROME_EXCEL_PATH, sheet_name="Arbo Principale 24-06-2024")
+
+        rome_rows = []
+        last_gd = "M"
+        last_dp = "M18"
+        last_rome = "M1801"
+
+        for _, row in df_rome_raw.iterrows():
+            c0 = str(row.iloc[0]).strip() if pd.notnull(row.iloc[0]) else ""
+            c1 = str(row.iloc[1]).strip() if pd.notnull(row.iloc[1]) else ""
+            c2 = str(row.iloc[2]).strip() if pd.notnull(row.iloc[2]) else ""
+            c3 = str(row.iloc[3]).strip() if pd.notnull(row.iloc[3]) else ""
+            c4 = str(row.iloc[4]).strip() if pd.notnull(row.iloc[4]) else ""
+
+            if c0 in GRAND_DOMAINES_MAP:
+                last_gd = c0
+            if c1 and len(c1) <= 3:
+                last_dp = f"{last_gd}{c1}"
+            if c2 and len(c2) == 2:
+                last_rome = f"{last_dp}{c2}"
+
+            if c3 and c3 not in GRAND_DOMAINES_MAP.values():
+                gd_lbl = GRAND_DOMAINES_MAP.get(last_gd, "Services et Tertiaire")
+                rome_rows.append({
+                    "code_rome": last_rome,
+                    "intitule_rome_appellation": c3,
+                    "grand_domaine_code": last_gd,
+                    "grand_domaine_libelle": gd_lbl,
+                    "domaine_prof_code": last_dp,
+                    "domaine_prof_libelle": f"Domaine {last_dp}",
+                    "code_ogr": c4
+                })
+
+        df_rome = pd.DataFrame(rome_rows)
+        print(f"  ✓ Parsed {len(df_rome)} authentic ROME 4.0 job title records.")
+    else:
+        raise FileNotFoundError(f"Missing ROME dataset: {ROME_EXCEL_PATH}")
+
+    rome_codes = df_rome["code_rome"].unique().tolist()
+
+    # 3. entreprises_urssaf_declarations (~4,500 companies)
     companies = []
-    # Seed authentic companies
     for item in REAL_COMPANIES_SAMPLE:
         companies.append({
             "siret": item[0],
@@ -145,7 +200,6 @@ def main():
             "zone_type": item[10]
         })
 
-    # Synthetic companies
     sectors = [
         "6201Z - Programmation informatique", "8610Z - Activités hospitalières", "4711D - Supermarchés", 
         "4910Z - Transport ferroviaire", "2120Z - Industrie pharmaceutique", "7022Z - Conseil pour les affaires",
@@ -179,9 +233,8 @@ def main():
         })
 
     df_companies = pd.DataFrame(companies)
-    siret_list = df_companies["siret"].tolist()
 
-    # 3. offres_emploi_recrutement (~8,500 job offers)
+    # 4. offres_emploi_recrutement (~8,500 job offers)
     job_offers = []
     base_date = datetime(2025, 1, 15)
 
@@ -189,6 +242,7 @@ def main():
         offer_id = f"OFFRE-2025-{i:05d}"
         comp = random.choice(companies)
         metier = random.choice(bmo_metiers)
+        code_rome = random.choice(rome_codes)
         c_type = random.choice(CONTRACT_TYPES)
         exp_months = random.choice([0, 12, 24, 36, 60])
 
@@ -204,6 +258,7 @@ def main():
             "siret": comp["siret"],
             "company_name": comp["company_name"],
             "code_metier_bmo": metier["code_metier_bmo"],
+            "code_rome": code_rome,
             "job_title": f"{metier['nom_metier_bmo']} - {c_type}",
             "contract_type": c_type,
             "required_experience_months": exp_months,
@@ -217,7 +272,7 @@ def main():
 
     df_job_offers = pd.DataFrame(job_offers)
 
-    # 4. france_travail_demandeurs (~6,000 job seekers)
+    # 5. france_travail_demandeurs (~6,000 job seekers)
     job_seekers = []
     statuts_recherche = ["Recherche Active", "En Formation", "Emploi Reconversion"]
     categories_insc = ["Catégorie A", "Catégorie B", "Catégorie C", "Catégorie D"]
@@ -229,6 +284,7 @@ def main():
     for i in range(1, 6001):
         dem_id = f"DEM-{i:05d}"
         metier = random.choice(bmo_metiers)
+        code_rome = random.choice(rome_codes)
         dept_info = random.choice(bmo_depts)
         dept_code = dept_info["code_departement"]
         full_name = f"{random.choice(prems)} {random.choice(noms)}"
@@ -244,6 +300,7 @@ def main():
             "categorie_inscription": random.choice(categories_insc),
             "anciennete_chomage_mois": anc_chomage,
             "code_metier_bmo": metier["code_metier_bmo"],
+            "code_rome": code_rome,
             "metier_recherche": metier["nom_metier_bmo"],
             "department_code": dept_code,
             "cv_gcs_uri": cv_uri,
@@ -253,7 +310,7 @@ def main():
 
     df_job_seekers = pd.DataFrame(job_seekers)
 
-    # 5. candidatures_postulations_suivi (~12,000 ATS applications)
+    # 6. candidatures_postulations_suivi (~12,000 ATS applications)
     applications = []
     for i in range(1, 12001):
         app_id = f"APP-{i:06d}"
@@ -278,7 +335,7 @@ def main():
 
     df_applications = pd.DataFrame(applications)
 
-    # 6. france_travail_formations_aides (~5,000 training subsidies)
+    # 7. france_travail_formations_aides (~5,000 training subsidies)
     subsidies = []
     organismes = ["France Travail", "Région", "Opco AKTO", "Opco Atlas", "Agefiph"]
     statuts_aides = ["Accordée", "En cours de versement", "Clôturée"]
@@ -310,6 +367,7 @@ def main():
     # Save CSVs locally and upload to BigQuery & GCS
     tables_dict = {
         "bmo_recrutement_2025": df_bmo,
+        "rome_arborescence_2024": df_rome,
         "entreprises_urssaf_declarations": df_companies,
         "offres_emploi_recrutement": df_job_offers,
         "france_travail_demandeurs": df_job_seekers,
@@ -341,7 +399,7 @@ def main():
         job.result()
         print(f"  ✓ Loaded table `{tref}` in BigQuery!")
 
-    print("\nSUCCESS: All 6 Sully tables complete & populated in BigQuery!")
+    print("\nSUCCESS: All 7 Sully tables complete & populated in BigQuery!")
 
 if __name__ == "__main__":
     main()

@@ -1,14 +1,15 @@
 -- ============================================================================
 -- Schema DDL for Sully - France Travail, RH & Urssaf Intelligence Platform
 -- Dataset: public_sector_employment_ds (Project: data-agents-by-industry)
--- Relational Architecture linking France Travail BMO 2025 Open Data, SIRENE/Urssaf
--- Establishments, Job Offers, Job Seekers, ATS Applications, and Training Subsidies.
+-- Relational Architecture linking France Travail BMO 2025 Open Data, ROME 4.0
+-- Job Taxonomy, SIRENE/Urssaf Establishments, Job Offers, Job Seekers, ATS
+-- Applications, and Training Subsidies.
 -- ============================================================================
 
 CREATE SCHEMA IF NOT EXISTS `public_sector_employment_ds`
 OPTIONS (
   location = 'US',
-  description = 'Dataset Sully : Données réelles France Travail BMO 2025, déclarations URSSAF/SIRENE, offres d\'emploi, suivi candidatures ATS et dispositifs d\'aides à l\'embauche.'
+  description = 'Dataset Sully : Données réelles France Travail BMO 2025, référentiel ROME 4.0 des métiers, déclarations URSSAF/SIRENE, offres d\'emploi, suivi candidatures ATS et dispositifs d\'aides à l\'embauche.'
 );
 
 -- 1. Table: bmo_recrutement_2025 (France Travail Official BMO 2025 Open Data)
@@ -31,7 +32,21 @@ OPTIONS (
   description = "Base officielle Open Data BMO (Besoins en Main d'Œuvre) 2025 de France Travail déclinée par bassin d'emploi et métier."
 );
 
--- 2. Table: entreprises_urssaf_declarations (Company Establishments & Payroll Declarations)
+-- 2. Table: rome_arborescence_2024 (France Travail Official ROME 4.0 Taxonomy)
+CREATE OR REPLACE TABLE `public_sector_employment_ds.rome_arborescence_2024` (
+  code_rome STRING OPTIONS(description="Code ROME 4.0 officiel France Travail (ex: M1801, J1501, A1101)"),
+  intitule_rome_appellation STRING OPTIONS(description="Libellé officiel de l'appellation / métier ROME"),
+  grand_domaine_code STRING OPTIONS(description="Code de la grande famille de domaines ROME (ex: A, M, J, N)"),
+  grand_domaine_libelle STRING OPTIONS(description="Libellé du grand domaine professionnel (ex: Informatique et Télécommunications, Santé)"),
+  domaine_prof_code STRING OPTIONS(description="Code du domaine professionnel ROME (ex: A11, M18, J15)"),
+  domaine_prof_libelle STRING OPTIONS(description="Libellé du domaine professionnel"),
+  code_ogr STRING OPTIONS(description="Identifiant unique OGR France Travail de la fiche métier")
+)
+OPTIONS (
+  description = "Référentiel officiel ROME 4.0 (Répertoire Opérationnel des Métiers et des Emplois) de France Travail avec arborescence principale et 12 255 appellations."
+);
+
+-- 3. Table: entreprises_urssaf_declarations (Company Establishments & Payroll Declarations)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.entreprises_urssaf_declarations` (
   siret STRING OPTIONS(description="Identifiant unique SIRET (14 chiffres) de l'établissement"),
   company_name STRING OPTIONS(description="Raison sociale / Nom de l'entreprise"),
@@ -49,12 +64,13 @@ OPTIONS (
   description = "Répertoire des établissements employeurs SIRENE/URSSAF avec effectifs, masse salariale et obligations OETH handicap."
 );
 
--- 3. Table: offres_emploi_recrutement (Job Vacancies & Recruitment Campaigns)
+-- 4. Table: offres_emploi_recrutement (Job Vacancies & Recruitment Campaigns)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.offres_emploi_recrutement` (
   job_offer_id STRING OPTIONS(description="Identifiant unique de l'offre d'emploi (ex: OFFRE-2025-001)"),
   siret STRING OPTIONS(description="Code SIRET de l'entreprise recruteuse (FK -> entreprises_urssaf_declarations)"),
   company_name STRING OPTIONS(description="Nom de l'entreprise recruteuse"),
   code_metier_bmo STRING OPTIONS(description="Code métier BMO cible (FK -> bmo_recrutement_2025)"),
+  code_rome STRING OPTIONS(description="Code ROME 4.0 rattaché (FK -> rome_arborescence_2024)"),
   job_title STRING OPTIONS(description="Intitulé du poste à pourvoir"),
   contract_type STRING OPTIONS(description="Type de contrat (CDI, CDD, Alternance, Intérim)"),
   required_experience_months INT64 OPTIONS(description="Expérience minimale exigée (en mois)"),
@@ -69,7 +85,7 @@ OPTIONS (
   description = "Offres d'emploi actives et campagnes de recrutement publiées par les entreprises avec conditions contractuelles."
 );
 
--- 4. Table: france_travail_demandeurs (Job Seekers & Talent Profiles)
+-- 5. Table: france_travail_demandeurs (Job Seekers & Talent Profiles)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_demandeurs` (
   demandeur_id STRING OPTIONS(description="Identifiant unique du demandeur d'emploi France Travail (ex: DEM-001)"),
   nom_prenom STRING OPTIONS(description="Nom et prénom du candidat"),
@@ -77,6 +93,7 @@ CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_demandeurs` 
   categorie_inscription STRING OPTIONS(description="Catégorie d'inscription France Travail (Catégorie A, B, C, D, E)"),
   anciennete_chomage_mois INT64 OPTIONS(description="Ancienneté d'inscription au chômage (en mois)"),
   code_metier_bmo STRING OPTIONS(description="Code métier BMO recherché (FK -> bmo_recrutement_2025)"),
+  code_rome STRING OPTIONS(description="Code ROME 4.0 rattaché (FK -> rome_arborescence_2024)"),
   metier_recherche STRING OPTIONS(description="Intitulé du métier recherché"),
   department_code STRING OPTIONS(description="Code département de résidence"),
   cv_gcs_uri STRING OPTIONS(description="Lien de stockage GCS du CV du candidat (gs://sully-candidate-resumes-data-agents/...)"),
@@ -87,7 +104,7 @@ OPTIONS (
   description = "Répertoire des candidats et demandeurs d'emploi inscrits à France Travail avec profils, compétences et CVs."
 );
 
--- 5. Table: candidatures_postulations_suivi (ATS Job Applications & Hiring Funnel)
+-- 6. Table: candidatures_postulations_suivi (ATS Job Applications & Hiring Funnel)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.candidatures_postulations_suivi` (
   application_id STRING OPTIONS(description="Identifiant unique de la candidature ATS (ex: APP-0001)"),
   demandeur_id STRING OPTIONS(description="Identifiant du candidat (FK -> france_travail_demandeurs)"),
@@ -102,7 +119,7 @@ OPTIONS (
   description = "Suivi dynamique des candidatures et parcours dans le tunnel de recrutement ATS (du dépôt à l'embauche)."
 );
 
--- 6. Table: france_travail_formations_aides (Vocational Training & Recruitment Subsidies)
+-- 7. Table: france_travail_formations_aides (Vocational Training & Recruitment Subsidies)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_formations_aides` (
   aide_id STRING OPTIONS(description="Identifiant unique du dossier d'aide ou de formation (ex: AIDE-001)"),
   demandeur_id STRING OPTIONS(description="Identifiant du demandeur bénéficiaire (FK -> france_travail_demandeurs)"),

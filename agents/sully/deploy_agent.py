@@ -45,7 +45,7 @@ def deploy_sully():
 
     if resp.status_code == 200:
         print(f"Data Agent '{AGENT_ID}' already exists. Updating configuration...")
-        update_url = f"{agent_url}?updateMask=displayName,description,dataAnalyticsAgent.publishedContext"
+        update_url = f"{agent_url}?updateMask=displayName,description,dataAnalyticsAgent"
         resp_update = requests.patch(update_url, headers=headers, json=payload)
         if resp_update.status_code in [200, 202]:
             print(f"✅ Successfully updated Sully Data Agent configuration! (ID: {AGENT_ID})")
