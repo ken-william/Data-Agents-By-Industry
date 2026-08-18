@@ -7,11 +7,31 @@
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
-            {"projectId": "${PROJECT_ID}", "datasetId": "retail_cpg_ds", "tableId": "openfoodfacts_catalog"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "retail_cpg_ds", "tableId": "retail_frequentation_magasins"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "retail_cpg_ds", "tableId": "retail_prix_moyens_panier"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "retail_cpg_ds", "tableId": "retail_analyse_lineaire_ruptures"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "retail_cpg_ds", "tableId": "retail_cross_selling_associations"}
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "retail_cpg_ds",
+              "tableId": "openfoodfacts_catalog"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "retail_cpg_ds",
+              "tableId": "retail_frequentation_magasins"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "retail_cpg_ds",
+              "tableId": "retail_prix_moyens_panier"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "retail_cpg_ds",
+              "tableId": "retail_analyse_lineaire_ruptures"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "retail_cpg_ds",
+              "tableId": "retail_cross_selling_associations"
+            }
           ]
         }
       },

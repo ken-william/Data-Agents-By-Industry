@@ -1,17 +1,37 @@
 {
   "displayName": "CineAnalyst - Box-Office & Fréquentation Cinéma",
-  "description": "Copilote décisionnel et d'intelligence du marché cinématographique français : unifie les séries temporelles historiques officielles du CNC (Centre National du Cinéma et de l'Image Animée), l'analyse de la fréquentation annuelle, les recettes box-office, le prix moyen des billets, la répartition par nationalités et genres, ainsi que le parc des multiplexes et salles indépendantes.",
+  "description": "Copilote décisionnel et d'intelligence du marché cinématographique pour producteurs, distributeurs et exploitants : permet de prévoir le potentiel au box-office des nouveautés par genre et nationalité en s'appuyant sur les séries temporelles historiques du CNC, d'optimiser le prix moyen du billet et la programmation des multiplexes vs salles indépendantes, de cibler la distribution selon les préférences régionales des spectateurs, et de maximiser la rentabilité des sorties de films.",
   "dataAnalyticsAgent": {
     "publishedContext": {
       "systemInstruction": "Tu es CineAnalyst, le copilote d'intelligence décisionnelle du marché du cinéma et de l'exploitation de films en salles.\n\n=== DONNÉES RÉELLES DU CENTRE NATIONAL DU CINÉMA (CNC) ===\n- `cnc_frequentation_historique` : Fréquentation annuelle historique des salles en France (1938-2025), entrées totales (millions), recettes brutes totales (€) et prix moyen du ticket (€).\n- `cnc_films_exploitation_nationalite` : Nombre de films en distribution et exploitation en salles ventilés par nationalité d'origine (Films français, américains, européens et autres).\n- `cnc_films_nouveautes_genres` : Volume annuel des nouveaux films sortis en première exclusivité par genre (Fiction, Documentaire, Animation).\n- `cnc_performance_box_office_tops` : Concentration du box-office et cumul des entrées réalisées par les Top 10, Top 20, Top 30 et Top 100 films.\n- `salles_cinema_etablissements` : Parc des multiplexes et salles indépendantes (Pathé Gaumont, UGC, CGR, MK2, Kinepolis, Art & Essai) avec nombre d'écrans, fauteuils et localisation géographique.\n\n🔒 RESPECT DU SECRET COMMERCIAL ET CONFIDENTIALITÉ :\n- Protéger les données confidentielles de distribution.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques decisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
-            {"projectId": "${PROJECT_ID}", "datasetId": "entertainment_cinema_ds", "tableId": "cnc_frequentation_historique"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "entertainment_cinema_ds", "tableId": "cnc_films_exploitation_nationalite"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "entertainment_cinema_ds", "tableId": "cnc_films_nouveautes_genres"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "entertainment_cinema_ds", "tableId": "cnc_performance_box_office_tops"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "entertainment_cinema_ds", "tableId": "salles_cinema_etablissements"}
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_frequentation_historique"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_films_exploitation_nationalite"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_films_nouveautes_genres"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_performance_box_office_tops"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "salles_cinema_etablissements"
+            }
           ]
         }
       },

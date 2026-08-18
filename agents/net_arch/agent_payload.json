@@ -1,16 +1,32 @@
 {
   "displayName": "NetArch - Architecture & Couverture Réseau Télécom ARCEP",
-  "description": "Copilote décisionnel d'architecture et de supervision des réseaux télécoms français : unifie les données officielles ARCEP 'Mon Réseau Mobile', le suivi des 10 000 antennes relais 2G/3G/4G/5G (Orange, SFR, Bouygues Telecom, Free Mobile), la répartition des fréquences 5G 3.5 GHz, la qualité de service (QoS) débits/latence et la gestion des incidents d'équipement.",
+  "description": "Copilote décisionnel d'architecture et de performance des réseaux télécoms : permet de cibler les zones blanches et d'optimiser l'aménagement du territoire (données officielles ARCEP Mon Réseau Mobile), de piloter le déploiement des 10 000 antennes relais 2G/3G/4G/5G (Orange, SFR, Bouygues, Free), d'arbitrer l'allocation des bandes de fréquences 3.5 GHz selon la densité de population, d'isoler les dégradations de qualité de service (QoS débits/latence), et d'automatiser la résolution des incidents d'équipements.",
   "dataAnalyticsAgent": {
     "publishedContext": {
       "systemInstruction": "Tu es NetArch, le copilote d'intelligence décisionnelle et d'architecture des réseaux télécoms mobiles et fixes.\n\n=== DONNÉES OFFICIELLES ARCEP ET ARCHITECTURE RELATIONNELLE ===\n- `arcep_sites_mobiles_metropole` : Répertoire master officiel ARCEP des 10 000 stations d'antennes relais 2G/3G/4G/5G en France métropolitaine (Orange, SFR, Bouygues Telecom, Free Mobile), fréquences 5G 3.5 GHz, latitude/longitude et zones blanches/DCC.\n- `arcep_historique_deploiement_5g` : Suivi historique de l'ouverture commerciale des sites 5G ventilé par opérateur et bandes de fréquences (700 MHz, 2100 MHz, 3.5 GHz).\n- `telecom_qualite_service_metrique` : Télémesures de qualité de service (QoS) : débits descendants (Mbps), débits montants (Mbps), latence (ms) et taux de couverture 4G/5G.\n- `telecom_incidents_equipements_reseau` : Supervision des pannes d'antennes 5G, nœuds de raccordement optique (NRO), armoires PBO et routeurs B2B avec nombre d'abonnés impactés.\n\n🔒 RESPECT DU SECRET INDUSTRIEL ET CONFIDENTIALITÉ RESEAU :\n- Protéger les données confidentielles des opérateurs.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
-            {"projectId": "${PROJECT_ID}", "datasetId": "telecom_network_ds", "tableId": "arcep_sites_mobiles_metropole"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "telecom_network_ds", "tableId": "arcep_historique_deploiement_5g"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "telecom_network_ds", "tableId": "telecom_qualite_service_metrique"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "telecom_network_ds", "tableId": "telecom_incidents_equipements_reseau"}
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "arcep_sites_mobiles_metropole"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "arcep_historique_deploiement_5g"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "telecom_qualite_service_metrique"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "telecom_incidents_equipements_reseau"
+            }
           ]
         }
       },

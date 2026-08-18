@@ -7,13 +7,41 @@
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
-            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "finess_etablissements_sante"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "demographie_medecins_rpps"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "assurance_maladie_open_bio_depenses"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "hopitaux_flux_admissions_urgences"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "hopitaux_blocs_operatoires_chirurgie"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "pharmacie_stock_medicaments_tension"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "healthcare_medical_ds", "tableId": "personnel_medical_garde_planning"}
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_medical_ds",
+              "tableId": "finess_etablissements_sante"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_medical_ds",
+              "tableId": "demographie_medecins_rpps"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_medical_ds",
+              "tableId": "assurance_maladie_open_bio_depenses"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_medical_ds",
+              "tableId": "hopitaux_flux_admissions_urgences"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_medical_ds",
+              "tableId": "hopitaux_blocs_operatoires_chirurgie"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_medical_ds",
+              "tableId": "pharmacie_stock_medicaments_tension"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_medical_ds",
+              "tableId": "personnel_medical_garde_planning"
+            }
           ]
         }
       },

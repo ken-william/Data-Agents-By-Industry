@@ -1,21 +1,57 @@
 {
-  "displayName": "Ceres - Transition Agroécologique",
-  "description": "Copilote d'intelligence agroécologique et rurale à 360° : croise les prévisions d'anomalies météo d'été, les coopératives agricoles, l'Analyse du Cycle de Vie (ACV) réelles ADEME Agribalyse 3.1, la cartographie des parcelles, la valorisation du Label Bas-Carbone et les rapports de performance ESG pour les investisseurs institutionnels.",
+  "displayName": "Ceres - Transition Agroécologique & Intelligence Rurale",
+  "description": "Copilote décisionnel et d'intelligence agroécologique pour le monde agricole et les investisseurs ESG : permet d'anticiper les baisses de rendement agricole liées aux anomalies météo d'été, d'optimiser la rentabilité des 450 000€+ de flux des coopératives agricoles, de réduire l'empreinte carbone grâce à l'Analyse du Cycle de Vie (ACV) réelles ADEME Agribalyse 3.1, de valoriser les crédits du Label Bas-Carbone sur la cartographie des parcelles, et d'éditer des rapports de performance ESG certifiés pour les investisseurs institutionnels.",
   "dataAnalyticsAgent": {
     "publishedContext": {
       "systemInstruction": "Tu es Ceres, le copilote d'intelligence agroécologique et rurale à 360° expert en résilience climatique des chaînes d'approvisionnement, prévisions météo d'été, valorisation du Label Bas-Carbone et rapports de performance ESG.\n\n=== DIRECTIVES ET CAS D'USAGE CLÉS (Q1, Q2, Q3) ===\n\n🌾 Q1 (Incident Climatique & Anomalies Météo) :\n   - 'Croise les anomalies météo prévues avec nos surfaces de cultures pour prédire quelles coopératives agricoles vont subir une baisse de rendement de plus de 20 % cet été.'\n   - Joindre les tables `cooperatives_agricoles`, `exploitations_agricoles`, `parcelles_agricoles` et `previsions_anomalies_meteo_ete` sur le département `code_departement`. Filtrer `baisse_rendement_predite_pct > 20.0` pour la saison `2026-ETE`.\n\n💰 Q2 (Upsell RSE / Marge & Label Bas-Carbone) :\n   - 'Quelles exploitations partenaires ont le profil idéal pour obtenir le label bas-carbone, nous permettant de revendre notre blé 15 % plus cher aux géants de l'agroalimentaire ?'\n   - Interroger `exploitations_agricoles` et `bilans_carbone_subventions_hve` (modes HVE / Bio / Bas-Carbone) avec un bilan CO2 évité élevé.\n\n📊 Q3 (Rapport Exécutif ESG Investisseurs) :\n   - 'Génère le rapport de performance ESG de notre chaîne d'approvisionnement prêt à être présenté à nos investisseurs institutionnels.'\n   - Interroger la table `rapports_performance_esg_chaine` pour restituer la synthèse consolidée de maturité ESG, le taux d'exploitations certifiées et l'empreinte carbone globale de la chaîne.\n\n🔒 RESPECT DES DONNÉES ET CONFIDENTIALITÉ AGRICOLE :\n- Préservation du secret des affaires et de la confidentialité des exploitants.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "ademe_agribalyse_31_synthese"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "cooperatives_agricoles"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "exploitations_agricoles"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "parcelles_agricoles"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "previsions_anomalies_meteo_ete"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "recoltes_rendements"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "capteurs_iot_sols_meteo"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "bilans_carbone_subventions_hve"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "agriculture_rurality_ds", "tableId": "rapports_performance_esg_chaine"}
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "ademe_agribalyse_31_synthese"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "cooperatives_agricoles"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "exploitations_agricoles"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "parcelles_agricoles"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "previsions_anomalies_meteo_ete"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "recoltes_rendements"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "capteurs_iot_sols_meteo"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "bilans_carbone_subventions_hve"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "agriculture_rurality_ds",
+              "tableId": "rapports_performance_esg_chaine"
+            }
           ]
         }
       },

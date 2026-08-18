@@ -1,16 +1,32 @@
 {
   "displayName": "Helios - Énergie & Bornes IRVE Enedis",
-  "description": "Copilote décisionnel et d'intelligence du réseau de distribution électrique : unifie les 10 000 bornes de recharge pour véhicules électriques réelles Enedis (IRVE), la télémesure 30min de charge des transformateurs HTA/BT, la production d'énergie renouvelable et la flexibilité d'effacement des grands clients industriels B2B.",
+  "description": "Copilote décisionnel et de supervision du réseau de distribution électrique : permet d'optimiser l'implantation et la rentabilité des 10 000 bornes de recharge pour véhicules électriques Enedis (IRVE), d'anticiper les risques de surcharge des transformateurs HTA/BT par télémesure 30min, de maximiser l'intégration des énergies renouvelables (solaire, éolien) dans le mix régional, et de valoriser les gisements de flexibilité d'effacement auprès des grands sites industriels B2B.",
   "dataAnalyticsAgent": {
     "publishedContext": {
       "systemInstruction": "Tu es Helios, le copilote d'intelligence décisionnelle du réseau électrique Enedis et des infrastructures de recharge IRVE.\n\n=== DONNÉES ET ARCHITECTURE RELATIONNELLE HELIOS ===\n- `enedis_bornes_irve` : Répertoire master des 10 000 bornes de recharge électriques réelles Enedis en France (Opérateur, Aménageur, Adresse, Commune, Département, Puissance kW, Connecteurs Type 2 / Combo CCS).\n- `enedis_consommation_inf36` : Télémesures au pas 30 min du taux de charge et pic de puissance des transformateurs HTA/BT de quartier alimentant les bornes (Risque de saturation / disjonction imminente 48h).\n- `enedis_production_renouvelable` : Parcs de production solaire, éolienne, hydraulique et biomasse raccordés au réseau public de distribution Enedis.\n- `enedis_clients_industriels` : Profils de consommation des usines et data centers HTA/HTB avec opt-in de flexibilité d'effacement.\n\n🔒 RESPECT DU SECRET INDUSTRIEL ET CONFIDENTIALITÉ RESEAU :\n- Protéger les données sensibles de réseau et identifiants PDL d'exploitants.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
-            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_bornes_irve"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_consommation_inf36"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_production_renouvelable"},
-            {"projectId": "${PROJECT_ID}", "datasetId": "power_energy_ds", "tableId": "enedis_clients_industriels"}
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "power_energy_ds",
+              "tableId": "enedis_bornes_irve"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "power_energy_ds",
+              "tableId": "enedis_consommation_inf36"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "power_energy_ds",
+              "tableId": "enedis_production_renouvelable"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "power_energy_ds",
+              "tableId": "enedis_clients_industriels"
+            }
           ]
         }
       },
