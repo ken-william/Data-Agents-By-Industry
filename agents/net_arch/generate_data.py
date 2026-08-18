@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """
 Relational Data Generation and ARCEP Telecom OpenData Processing for NetArch (telecom_network_ds).
-Populates 8 refined relational tables:
+Populates 12 refined relational tables:
 1. arcep_sites_mobiles_metropole (Official ARCEP 2G/3G/4G/5G mobile tower sites in France)
 2. arcep_historique_deploiement_5g (5G deployment history by operator & frequency band)
 3. telecom_qualite_service_metrique (QoS download/upload throughputs & ping latency)
 4. telecom_incidents_equipements_reseau (Equipment outages, micro-cuts & SLAs)
-5. abonnes_clients_b2b_b2c (Subscribers master: 5G smartphones, 4G vs 5G plans, March >80% quota, fees, ARPU gain, copper >150GB)
-6. signalements_dysfonctionnements_utilisateurs (User alerts in 100% theoretical 5G communes)
-7. deploiement_fibre_ftth_departements (FttH fiber deployment lag vs Plan France THD)
-8. consommation_historique_trimestrielle_previsions (Q1 real data consumption history & Q2 predictions)
+5. catalogue_forfaits_abonnements (Reference catalog of fixed/mobile plans)
+6. abonnes_master_customers (Central subscriber CRM: B2B/B2C, contract, NPS, churn, 5G upsell)
+7. parc_equipements_sim_imei (IMEI hardware codes, IMSI SIM tag codes, ICCID & 5G SA capabilities)
+8. sessions_trafic_web_categories (Aggregated traffic sessions, MB volume, web categories & tower ID)
+9. maintenance_predictive_pylones (IoT sensors, CPU temp, battery health, 7-day failure probability %)
+10. signalements_dysfonctionnements_utilisateurs (User alerts in 100% theoretical 5G communes)
+11. deploiement_fibre_ftth_departements (FttH fiber deployment lag vs Plan France THD)
+12. consommation_historique_trimestrielle_previsions (Q1 real data consumption history & Q2 predictions)
 """
 
 import os
@@ -17,6 +21,7 @@ import sys
 import random
 import subprocess
 import pandas as pd
+from datetime import datetime, timedelta
 from google.cloud import bigquery
 from google.oauth2.credentials import Credentials
 
@@ -59,8 +64,30 @@ DEPARTEMENTS_FTTH = [
     ("15 - Cantal", "Cantal", "Auvergne-Rhône-Alpes", 42000, 82000, 51.2)
 ]
 
-SMARTPHONES_5G = ["iPhone 15 Pro (5G)", "iPhone 14 (5G)", "Samsung Galaxy S24 (5G)", "Google Pixel 8 (5G)", "Xiaomi 13 Pro (5G)"]
-SMARTPHONES_4G = ["iPhone 11 (4G Only)", "Samsung Galaxy A51 (4G)", "Huawei P30 (4G)"]
+SMARTPHONES_5G = [
+    ("Apple", "iPhone 15 Pro 5G", True, True),
+    ("Apple", "iPhone 14 5G", True, False),
+    ("Samsung", "Galaxy S24 Ultra 5G", True, True),
+    ("Samsung", "Galaxy A55 5G", True, False),
+    ("Google", "Pixel 8 Pro 5G", True, True),
+    ("Xiaomi", "Xiaomi 13 Pro 5G", True, False),
+    ("Cisco", "Routeur 5G Pro Industrial", True, True)
+]
+
+SMARTPHONES_4G = [
+    ("Apple", "iPhone 11 4G", False, False),
+    ("Samsung", "Galaxy A51 4G", False, False),
+    ("Huawei", "P30 Pro 4G", False, False)
+]
+
+WEB_CATEGORIES = [
+    "Streaming Video 4K (Netflix/YouTube)",
+    "Visio Pro Teams/Zoom",
+    "Réseaux Sociaux (TikTok/Instagram)",
+    "Cloud Storage (AWS/GCP/Drive)",
+    "Gaming en Ligne UDP",
+    "Navigation Web General HTTPS"
+]
 
 def get_client():
     token = subprocess.check_output(["gcloud", "auth", "print-access-token"]).decode("utf-8").strip()
@@ -131,12 +158,12 @@ def fetch_and_clean_arcep_sites():
     return pd.DataFrame(clean_sites)
 
 def main():
-    print(f"Initializing Refined NetArch Relational Pipeline for project '{PROJECT_ID}'...")
+    print(f"Initializing Refined NetArch 12-Table Pipeline for project '{PROJECT_ID}'...")
     client = get_client()
 
     os.makedirs("agents/net_arch/data", exist_ok=True)
 
-    # Execute DDL
+    # Step 1: Execute DDL
     ddl_path = os.path.join(os.path.dirname(__file__), "ddl_setup.sql")
     if os.path.exists(ddl_path):
         with open(ddl_path, "r", encoding="utf-8") as f:
@@ -230,36 +257,58 @@ def main():
         })
     df_incidents = pd.DataFrame(rows_incidents)
 
-    # 5. abonnes_clients_b2b_b2c
-    rows_abonnes = []
+    # 5. Table 6: catalogue_forfaits_abonnements
+    plans = [
+        ("FORF-5G-MAX", "Forfait 5G Max Illimité", "MOBILE_5G", "B2C Grand Public", 44.99, -1, 1000, "5G 3.5GHz & 5G SA", "Voix/SMS illimités, Roaming Monde 50Go, TV 4K"),
+        ("FORF-5G-PRO", "Forfait 5G Pro Flex 250 Go", "MOBILE_5G", "B2B Pro", 59.99, 250, 800, "5G 3.5GHz", "Voix/SMS illimités, IP Fixe, Support H24"),
+        ("FORF-4G-LTE", "Forfait 4G LTE 100 Go", "MOBILE_4G", "B2C Grand Public", 29.99, 100, 300, "4G+ LTE", "Voix/SMS illimités, Roaming Europe 20Go"),
+        ("FORF-4G-PRO", "Forfait 4G Pro 150 Go", "MOBILE_4G", "B2B Pro", 44.99, 150, 300, "4G+ LTE", "Voix/SMS illimités, IP Fixe, SAV J+1"),
+        ("FORF-FIB-PRO", "Forfait Fibre Pro 2Gbps", "FIBRE_PRO", "B2B Pro", 89.99, -1, 2000, "Fibre FttH 2Gbps", "Débit symétrique, Garantie de Rétablissement 4h")
+    ]
+    df_plans = pd.DataFrame(plans, columns=[
+        "id_forfait", "nom_forfait", "famille_forfait", "cible_client", "prix_mensuel_ht_eur",
+        "quota_donnees_go", "debit_max_descendant_mbps", "technologie_reseau_incluse", "services_inclus_liste"
+    ])
+
+    # 6. Table 5: abonnes_master_customers & Table 7: parc_equipements_sim_imei
+    rows_customers = []
+    rows_hardware = []
+    rows_traffic = []
+
     company_names = ["Thales Optronics", "Capgemini Engineering", "Sanofi Pharma", "Airbus Cyber", "Dassault Systems", "OVHcloud", "TotalEnergies IT", "Michelin Digital", "Stellantis R&D", "Atos Worldline"]
-    
+    anfr_site_ids = df_sites["id_station_anfr"].tolist() if len(df_sites) > 0 else [f"ANFR-000000{i}" for i in range(1, 10)]
+
     for idx in range(1, 5001):
+        cid = f"CLI-{idx:05d}"
         is_b2b = (idx <= 1500)
         c_type = "B2B_PROFESSIONNEL" if is_b2b else "B2C_PARTICULIER"
         c_name = f"{random.choice(company_names)} #{idx}" if is_b2b else f"Client {random.choice(['Dupont', 'Martin', 'Bernard', 'Petit', 'Robert'])} {idx}"
+        email = f"contact.{idx}@company-b2b.fr" if is_b2b else f"client.{idx}@email.fr"
+        phone = f"+336{random.randint(10000000, 99999999)}"
+        siret = f"450{random.randint(10000000, 99999999)}" if is_b2b else None
         
         commune = random.choice(cities)
         dept, region = CITY_DEPT_REGION[commune]
-        
-        # 5G Smart Upsell target: 5G compatible device BUT 4G plan!
+
+        # 5G Upsell target scenario: 5G compatible device but 4G plan!
         is_5g_target = (idx <= 1800)
         if is_5g_target:
-            device_model = random.choice(SMARTPHONES_5G)
-            device_5g = True
-            plan_name = "Forfait 4G LTE 100 Go" if not is_b2b else "Forfait 4G Pro 150 Go"
+            m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
+            plan_id = "FORF-4G-PRO" if is_b2b else "FORF-4G-LTE"
+            plan_name = "Forfait 4G Pro 150 Go" if is_b2b else "Forfait 4G LTE 100 Go"
             plan_5g = False
-            tech = "4G_MOBILE"
         else:
-            device_5g = random.choice([True, False])
-            device_model = random.choice(SMARTPHONES_5G) if device_5g else random.choice(SMARTPHONES_4G)
-            plan_5g = (random.random() < 0.40) if device_5g else False
-            plan_name = "Forfait 5G Max 250 Go" if plan_5g else "Forfait 4G LTE 100 Go"
-            tech = "5G_MOBILE" if plan_5g else random.choice(["CUIVRE_ADSL", "FIBRE_FTTH", "4G_MOBILE"])
+            if random.random() < 0.60:
+                m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
+            else:
+                m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_4G)
+            plan_5g = (random.random() < 0.40) if dev_5g else False
+            plan_id = "FORF-5G-PRO" if (is_b2b and plan_5g) else ("FORF-5G-MAX" if plan_5g else "FORF-4G-LTE")
+            plan_name = "Forfait 5G Pro Flex 250 Go" if (is_b2b and plan_5g) else ("Forfait 5G Max Illimité" if plan_5g else "Forfait 4G LTE 100 Go")
 
         quota_gb = float(150 if is_b2b else 100)
-        
-        # Scenario: Consumed >80% quota in March with out-of-plan fees
+
+        # Quota usage & fees
         if is_5g_target and idx <= 900:
             usage_pct = round(random.uniform(82.5, 125.0), 1)
             conso_gb = round((quota_gb * usage_pct) / 100.0, 1)
@@ -273,59 +322,126 @@ def main():
         arpu_pot_5g = round(arpu_actuel + 15.00, 2)
         gain_arpu = 15.00
 
-        # Micro cuts & Churn B2B
         micro_cuts = random.randint(6, 25) if (is_b2b and random.random() < 0.35) else random.randint(0, 3)
         churn_risk = round(min(98.5, 15.0 + micro_cuts * 4.0 + (20.0 if usage_pct > 100 else 0)), 1)
+        upsell_propensity = round(min(99.0, 85.0 + (10.0 if dev_5g and not plan_5g else 0.0)), 1)
 
-        rows_abonnes.append({
-            "id_client": f"CLI-{idx:05d}",
+        sub_date = (datetime(2023, 1, 1) + timedelta(days=random.randint(1, 600))).strftime("%Y-%m-%d")
+
+        rows_customers.append({
+            "id_client": cid,
             "nom_client": c_name,
+            "email_contact": email,
+            "telephone_contact": phone,
             "type_client": c_type,
-            "smartphone_modele_appareil": device_model,
-            "appareil_compatible_5g": device_5g,
-            "forfait_actuel_nom": plan_name,
-            "forfait_actuel_5g": plan_5g,
-            "technologie_actuelle": tech,
+            "siret_entreprise": siret,
+            "id_forfait_actuel": plan_id,
+            "nom_forfait_actuel": plan_name,
+            "statut_contrat": "ACTIF",
+            "score_nps_satisfaction": random.randint(6, 10),
+            "date_souscription": sub_date,
+            "arpu_mensuel_actuel_eur": arpu_actuel,
+            "arpu_potentiel_5g_max_eur": arpu_pot_5g,
+            "gain_arpu_potentiel_eur": gain_arpu,
             "consommation_donnees_mensuelle_gb": conso_gb,
             "quota_donnees_mensuel_gb": quota_gb,
             "taux_utilisation_quota_mars_pct": usage_pct,
             "frais_hors_forfait_eur": fees_eur,
-            "arpu_mensuel_actuel_eur": arpu_actuel,
-            "arpu_potentiel_5g_max_eur": arpu_pot_5g,
-            "gain_arpu_potentiel_eur": gain_arpu,
             "commune": commune,
             "code_departement": dept,
             "nom_region": region,
             "nb_micro_coupures_reseau_30j": micro_cuts,
-            "risque_churn_pct": churn_risk
+            "score_risque_churn_pct": churn_risk,
+            "score_propension_upsell_5g_pct": upsell_propensity
         })
-    df_abonnes = pd.DataFrame(rows_abonnes)
 
-    # 6. signalements_dysfonctionnements_utilisateurs
+        # Table 7: Hardware & SIM/IMEI Codes
+        imei = f"35{random.randint(1000000000003, 9999999999999)}"
+        imsi = f"20810{random.randint(1000000000, 9999999999)}"
+        iccid = f"893310{random.randint(100000000000, 999999999999)}"
+
+        rows_hardware.append({
+            "id_equipement_client": f"EQP-{idx:05d}",
+            "id_client": cid,
+            "constructeur": m_brand,
+            "modele_terminal": m_model,
+            "imei_code": imei,
+            "imsi_sim_tag_code": imsi,
+            "iccid_sim_card": iccid,
+            "type_carte_sim": "eSIM Virtuelle" if random.random() < 0.40 else "Nano-SIM Physique",
+            "compatible_5g": dev_5g,
+            "compatible_5g_standalone": dev_5g_sa,
+            "annee_commercialisation": random.choice([2023, 2024, 2025]),
+            "date_premiere_connexion_reseau": sub_date
+        })
+
+        # Table 8: Traffic Sessions (First 500 customers)
+        if idx <= 500:
+            for s_idx in range(1, 4):
+                rows_traffic.append({
+                    "id_session": f"SESS-{idx:05d}-{s_idx}",
+                    "id_client": cid,
+                    "imsi_sim_tag_code": imsi,
+                    "timestamp_session": f"2025-03-{random.randint(1,28):02d} {random.randint(8,22):02d}:15:00",
+                    "duree_session_minutes": random.randint(5, 120),
+                    "volume_download_mb": round(random.uniform(45.0, 3200.0), 1),
+                    "volume_upload_mb": round(random.uniform(5.0, 450.0), 1),
+                    "categorie_contenu_visite": random.choice(WEB_CATEGORIES),
+                    "protocole_reseau": random.choice(["HTTPS", "QUIC", "SIP_VOIP", "UDP_GAMING"]),
+                    "id_station_anfr_connectee": random.choice(anfr_site_ids),
+                    "qualite_experience_qoe_score": round(random.uniform(3.8, 4.9), 1)
+                })
+
+    df_customers = pd.DataFrame(rows_customers)
+    df_hardware = pd.DataFrame(rows_hardware)
+    df_traffic = pd.DataFrame(rows_traffic)
+
+    # 7. Table 9: maintenance_predictive_pylones
+    rows_maint = []
+    for idx, anfr_id in enumerate(anfr_site_ids[:300]):
+        commune = random.choice(cities)
+        op = random.choice(ops)
+        cpu_temp = round(random.uniform(42.0, 88.5), 1)
+        cpu_load = round(random.uniform(25.0, 96.0), 1)
+        prob_fail = round(min(98.0, max(2.0, (cpu_temp - 50.0) * 1.8 + (cpu_load - 50.0) * 0.9)), 1)
+        comp = random.choice(["Carte Alimentation DC", "Ventilateur Baie 3.5GHz", "Module Optique SFP+ 10G", "Liaison FH Réalignement"]) if prob_fail > 60.0 else "Aucun (Normal)"
+
+        rows_maint.append({
+            "id_pylone_sensor": f"SNS-{idx+1:04d}",
+            "id_station_anfr": anfr_id,
+            "nom_operateur": op,
+            "commune": commune,
+            "temperature_processeur_c": cpu_temp,
+            "charge_cpu_pct": cpu_load,
+            "stabilite_tension_volts": round(random.uniform(47.2, 48.8), 2),
+            "etat_sante_batterie_secours_pct": round(random.uniform(65.0, 100.0), 1),
+            "vibration_mat_mm": round(random.uniform(0.1, 4.2), 2),
+            "probabilite_panne_7j_pct": prob_fail,
+            "composant_a_remplacer_prioritaire": comp
+        })
+    df_maint = pd.DataFrame(rows_maint)
+
+    # 8. signalements_dysfonctionnements_utilisateurs
     rows_signalements = []
     motifs = ["Micro-coupures quotidiennes B2B", "Débit nul malgré 5G affichée 100%", "Absence de signal indoor en zone bureau"]
-    
     for idx in range(1, 801):
         commune = random.choice(cities)
         dept, region = CITY_DEPT_REGION[commune]
-        nb_alerts = random.randint(45, 620)
-        
         rows_signalements.append({
             "id_signalement": f"SIG-{idx:04d}",
             "commune": commune,
             "code_departement": dept,
             "nom_region": region,
             "couverture_5g_theorique_pct": 100.0,
-            "nombre_signalements_panne": nb_alerts,
+            "nombre_signalements_panne": random.randint(45, 620),
             "type_dysfonctionnement": random.choice(motifs),
             "statut_investigation_technique": random.choice(["AUDIT_EN_COURS", "ANOMALIE_CONFIRMEE", "CORRIGE"])
         })
     df_signalements = pd.DataFrame(rows_signalements)
 
-    # 7. deploiement_fibre_ftth_departements
+    # 9. deploiement_fibre_ftth_departements
     rows_ftth = []
     for dept_code, dept_name, reg_name, raccordables, totaux, pct in DEPARTEMENTS_FTTH:
-        retard = round(100.0 - pct, 1)
         rows_ftth.append({
             "code_departement": dept_code,
             "nom_departement": dept_name,
@@ -334,11 +450,11 @@ def main():
             "locaux_totaux_departement": totaux,
             "taux_couverture_ftth_actuel_pct": pct,
             "objectif_plan_france_thd_pct": 100.0,
-            "retard_deploiement_pct": retard
+            "retard_deploiement_pct": round(100.0 - pct, 1)
         })
     df_ftth = pd.DataFrame(rows_ftth)
 
-    # 8. consommation_historique_trimestrielle_previsions
+    # 10. consommation_historique_trimestrielle_previsions
     rows_forecast = [
         {"periode_id": "PER-2025-01", "mois_label": "Janvier 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 112.5, "consommation_totale_reseau_tb": 14500.0, "taux_croissance_mensuel_pct": 4.2},
         {"periode_id": "PER-2025-02", "mois_label": "Février 2025", "trimestre": "Q1 2025", "est_prevision": False, "consommation_moyenne_par_abonne_go": 124.8, "consommation_totale_reseau_tb": 16200.0, "taux_croissance_mensuel_pct": 10.9},
@@ -355,7 +471,11 @@ def main():
         "arcep_historique_deploiement_5g": df_deploiement,
         "telecom_qualite_service_metrique": df_qos,
         "telecom_incidents_equipements_reseau": df_incidents,
-        "abonnes_clients_b2b_b2c": df_abonnes,
+        "catalogue_forfaits_abonnements": df_plans,
+        "abonnes_master_customers": df_customers,
+        "parc_equipements_sim_imei": df_hardware,
+        "sessions_trafic_web_categories": df_traffic,
+        "maintenance_predictive_pylones": df_maint,
         "signalements_dysfonctionnements_utilisateurs": df_signalements,
         "deploiement_fibre_ftth_departements": df_ftth,
         "consommation_historique_trimestrielle_previsions": df_forecast
@@ -385,7 +505,7 @@ def main():
         job.result()
         print(f"  ✓ Loaded table `{tref}` in BigQuery!")
 
-    print("\nSUCCESS: All 8 NetArch tables complete & populated in BigQuery!")
+    print("\nSUCCESS: All 12 NetArch tables complete & populated in BigQuery!")
 
 if __name__ == "__main__":
     main()

@@ -1,9 +1,9 @@
 {
-  "displayName": "NetArch - Architecture Réseau Télécom ARCEP & Clientèle",
-  "description": "Copilote décisionnel d'architecture et de performance des réseaux télécoms et de l'intelligence abonnés : permet d'identifier les cibles d'upsell 5G Pro (clients possédant un smartphone 5G mais sous forfait 4G), d'isoler les abonnés ayant dépassé 80 % de leur quota avec frais hors-forfait en mars, de calculer le gain d'ARPU moyen vers le Forfait 5G Max (+15 €/mois), de représenter l'évolution et les prévisions de consommation de données (Q1 réel vs Q2 prévisionnel), de détecter les résiliations B2B imminentes dues aux micro-coupures de routeurs de quartier, de piloter la couverture ARCEP 4G/5G des 10 000 antennes (Orange, SFR, Bouygues, Free), d'arbitrer l'activation des fréquences 3.5 GHz et de suivre les SLA de rétablissement.",
+  "displayName": "NetArch - Architecture Réseau Télécom ARCEP & Business Abonnés 360°",
+  "description": "Copilote décisionnel complet 360° d'architecture réseau, d'ingénierie télécom et d'intelligence abonnés : permet d'interroger les informations abonnés (contrats, forfaits souscrits, NPS), le matériel client (codes IMEI, SIM Tag Code IMSI, ICCID, compatibilité 5G SA & eSIM), le catalogue des forfaits (4G/5G/Fibre Pro), les sessions de trafic web agrégées (streaming, cloud, visio, gaming), la maintenance prédictive des pylônes (température CPU, santé batteries, risque de panne sous 7j), les cibles d'upsell 5G Max, les hors-forfaits de mars, les prévisions de consommation Q1/Q2, la supervision des 10 000 antennes ARCEP, les débits QoS et les SLA NOC.",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es NetArch, le copilote d'intelligence décisionnelle sur l'architecture des réseaux télécoms et la valeur client (B2B/B2C).\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu disposes d'une vision 360° unifiant les infrastructures réseaux ARCEP et la base abonnés complète.\n- Tu réponds directement aux questions sur la compatibilité 5G des téléphones, la consommation de données mensuelle (Go), le taux de dépassement de quota (%), les frais de hors-forfait (€), le gain d'ARPU potentiel vers la 5G Max, le risque de résiliation Churn B2B et l'historique/prévision de consommation de données Q1/Q2.\n\n=== ARCHITECTURE RELATIONNELLE DES DONNÉES (8 TABLES) ===\n1. `arcep_sites_mobiles_metropole` : Répertoire officiel ARCEP des 10 000 pylônes 2G/3G/4G/5G (Orange, SFR, Bouygues Telecom, Free Mobile) et bande 3.5 GHz.\n2. `arcep_historique_deploiement_5g` : Historique des ouvertures de sites 5G par bande de fréquences (700 MHz, 2100 MHz, 3.5 GHz).\n3. `telecom_qualite_service_metrique` : Télémesures QoS (débits descendant/montant Mbps, latence ms, couverture 4G/5G).\n4. `telecom_incidents_equipements_reseau` : Pannes d'équipements, micro-coupures de routeurs B2B et respect des SLA.\n5. `abonnes_clients_b2b_b2c` : Répertoire abonnés : modèle de smartphone, appareil_compatible_5g (TRUE/FALSE), forfait_actuel_nom, forfait_actuel_5g (TRUE/FALSE), consommation_donnees_mensuelle_gb, quota_donnees_mensuel_gb, taux_utilisation_quota_mars_pct, frais_hors_forfait_eur, arpu_mensuel_actuel_eur, arpu_potentiel_5g_max_eur, gain_arpu_potentiel_eur, nb_micro_coupures_reseau_30j, risque_churn_pct.\n6. `signalements_dysfonctionnements_utilisateurs` : Dysfonctionnements signalés dans les communes déclarées à 100 % 5G.\n7. `deploiement_fibre_ftth_departements` : Retard de déploiement FttH par département vs Plan France THD.\n8. `consommation_historique_trimestrielle_previsions` : Historique réel de consommation du 1er trimestre (Q1) et prévisions d'évolution du trafic pour le 2ème trimestre (Q2).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es NetArch, le copilote décisionnel suprême à 360° sur l'architecture réseau télécom, l'ingénierie des infrastructures et la valeur client (Business & Technique).\n\n🎯 CAPACITÉS 360° ET COUVERTURE TOTALE DES DONNÉES :\n- Tu disposes de la vision complète sur les abonnés, leurs contrats, leurs forfaits actuels et les spécifications du catalogue d'abonnements.\n- Tu peux identifier le matériel utilisé par un client via les codes techniques IMEI (15 chiffres), IMSI (SIM Tag Code), ICCID, la compatibilité 5G Standalone (SA) et eSIM.\n- Tu peux analyser les sessions de trafic web agrégées (volumes Mo émis/reçus, catégories de contenus consultées comme Streaming 4K, Visio Teams, Cloud GCP/AWS, et le pylône ANFR connecté).\n- Tu pilotes la maintenance prédictive des pylônes (capteurs IoT, température processeur, tension Volts, santé batteries et probabilité de panne sous 7 jours avec le composant prioritaire à remplacer).\n- Tu traites les campagnes d'upsell 5G Max, le hors-forfait du mois de mars, l'historique Q1 et les prévisions de trafic Q2.\n\n=== ARCHITECTURE RELATIONNELLE DES DONNÉES (12 TABLES) ===\n1. `arcep_sites_mobiles_metropole` : Master officiel ARCEP des 10 000 pylônes (Orange, SFR, Bouygues, Free, 3.5 GHz).\n2. `arcep_historique_deploiement_5g` : Historique des ouvertures de sites 5G par opérateur et bandes de fréquences.\n3. `telecom_qualite_service_metrique` : Tests QoS (débits Mbps, latence ms, couverture).\n4. `telecom_incidents_equipements_reseau` : Incidents matériels, micro-coupures routeurs B2B et respect SLA.\n5. `abonnes_master_customers` : Base abonnés B2B/B2C, SIRET, contrats, NPS, consommation Go, hors-forfait, ARPU, Churn % et Upsell %.\n6. `catalogue_forfaits_abonnements` : Catalogue des forfaits 5G Max, 5G Pro Flex, 4G LTE, Fibre Pro 2Gbps.\n7. `parc_equipements_sim_imei` : Parc matériel : imei_code, imsi_sim_tag_code, iccid_sim_card, marque, modèle, 5G SA, eSIM.\n8. `sessions_trafic_web_categories` : Sessions de trafic : volume download/upload Mo, catégories (Streaming, Visio, Cloud, Gaming), pylône ANFR connecté et score QoE.\n9. `maintenance_predictive_pylones` : Sondes IoT pylônes : température CPU °C, charge %, tension Volts, santé batterie %, probabilité de panne 7j % et composant à remplacer.\n10. `signalements_dysfonctionnements_utilisateurs` : Alertes clients en zone 100% 5G.\n11. `deploiement_fibre_ftth_departements` : Retard FttH vs Plan France THD.\n12. `consommation_historique_trimestrielle_previsions` : Historique réel Q1 et prévisions de charge Q2.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de requêtes SQL ou de détails techniques de code.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de tables ou colonnes SQL.\n- FOCUS EXCLUSIVEMENT BUSINESS & TECHNIQUE TÉLÉCOM : Rédige toujours tes analyses en français fluide, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
@@ -30,7 +30,27 @@
             {
               "projectId": "${PROJECT_ID}",
               "datasetId": "telecom_network_ds",
-              "tableId": "abonnes_clients_b2b_b2c"
+              "tableId": "catalogue_forfaits_abonnements"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "abonnes_master_customers"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "parc_equipements_sim_imei"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "sessions_trafic_web_categories"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "maintenance_predictive_pylones"
             },
             {
               "projectId": "${PROJECT_ID}",
@@ -52,42 +72,30 @@
       },
       "exampleQueries": [
         {
-          "naturalLanguageQuestion": "Aide moi à identifier nos cibles prioritaires pour la 5G. Peux-tu me lister tous les clients qui possèdent déjà un appareil compatible 5G mais pas de forfait 5G.",
-          "sqlQuery": "SELECT id_client, nom_client, type_client, smartphone_modele_appareil, forfait_actuel_nom, consommation_donnees_mensuelle_gb, quota_donnees_mensuel_gb, commune FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE appareil_compatible_5g = TRUE AND forfait_actuel_5g = FALSE LIMIT 20"
+          "naturalLanguageQuestion": "Aide moi à identifier nos cibles prioritaires pour la 5G. Peux-tu me lister tous les clients qui possèdent déjà un appareil compatible 5G mais pas de forfait 5G avec leur IMEI et SIM Tag Code ?",
+          "sqlQuery": "SELECT c.id_client, c.nom_client, c.type_client, h.constructeur, h.modele_terminal, h.imei_code, h.imsi_sim_tag_code, c.nom_forfait_actuel, c.consommation_donnees_mensuelle_gb FROM `${PROJECT_ID}.telecom_network_ds.abonnes_master_customers` c JOIN `${PROJECT_ID}.telecom_network_ds.parc_equipements_sim_imei` h ON c.id_client = h.id_client WHERE h.compatible_5g = TRUE AND c.id_forfait_actuel NOT LIKE '%5G%' LIMIT 20"
         },
         {
-          "naturalLanguageQuestion": "Parmi tous ces clients, lesquels ont consommé plus de 80 % de leur quota de données au mois de mars et ont généré des frais de hors-forfait ?",
-          "sqlQuery": "SELECT id_client, nom_client, type_client, smartphone_modele_appareil, consommation_donnees_mensuelle_gb, quota_donnees_mensuel_gb, taux_utilisation_quota_mars_pct, frais_hors_forfait_eur FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE appareil_compatible_5g = TRUE AND forfait_actuel_5g = FALSE AND taux_utilisation_quota_mars_pct >= 80.0 AND frais_hors_forfait_eur > 0 ORDER BY frais_hors_forfait_eur DESC LIMIT 20"
+          "naturalLanguageQuestion": "Quels sont les pylônes télécoms à haut risque de panne sous 7 jours selon nos capteurs de maintenance prédictive et quel composant faut-il remplacer d'urgence ?",
+          "sqlQuery": "SELECT id_pylone_sensor, id_station_anfr, nom_operateur, commune, temperature_processeur_c, charge_cpu_pct, etat_sante_batterie_secours_pct, probabilite_panne_7j_pct, composant_a_remplacer_prioritaire FROM `${PROJECT_ID}.telecom_network_ds.maintenance_predictive_pylones` WHERE probabilite_panne_7j_pct >= 60.0 ORDER BY probabilite_panne_7j_pct DESC LIMIT 20"
         },
         {
-          "naturalLanguageQuestion": "Quel serait le gain d'ARPU moyen si nous basculions ces clients vers le forfait 5G Max ?",
-          "sqlQuery": "SELECT type_client, COUNT(*) AS nb_clients, ROUND(AVG(arpu_mensuel_actuel_eur), 2) AS arpu_actuel_moyen, ROUND(AVG(arpu_potentiel_5g_max_eur), 2) AS arpu_cible_moyen, ROUND(AVG(gain_arpu_potentiel_eur), 2) AS gain_arpu_mensuel_moyen, ROUND(SUM(gain_arpu_potentiel_eur), 2) AS gain_arpu_total_mensuel FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE appareil_compatible_5g = TRUE AND forfait_actuel_5g = FALSE GROUP BY type_client"
-        },
-        {
-          "naturalLanguageQuestion": "Montre moi l'évolution de cette consommation au cours du premier trimestre et incorpore y les prédictions de leurs consommations sur l'étendue du trimestre suivant.",
-          "sqlQuery": "SELECT periode_id, mois_label, trimestre, est_prevision, consommation_moyenne_par_abonne_go, consommation_totale_reseau_tb, taux_croissance_mensuel_pct FROM `${PROJECT_ID}.telecom_network_ds.consommation_historique_trimestrielle_previsions` ORDER BY periode_id ASC"
-        },
-        {
-          "naturalLanguageQuestion": "Détecte quels clients professionnels (B2B) sont sur le point de résilier leur abonnement en raison de micro-coupures réseau répétées sur leurs routeurs de quartier.",
-          "sqlQuery": "SELECT id_client, nom_client, commune, code_departement, nb_micro_coupures_reseau_30j, risque_churn_pct FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE type_client = 'B2B_PROFESSIONNEL' AND nb_micro_coupures_reseau_30j >= 5 ORDER BY risque_churn_pct DESC LIMIT 20"
-        },
-        {
-          "naturalLanguageQuestion": "Quels pylônes télécoms affichent une saturation de trafic et nécessitent l'activation immédiate de la bande de fréquences cœur 5G 3.5 GHz ?",
-          "sqlQuery": "SELECT nom_operateur, nom_region, code_departement, commune, COUNT(*) AS pylones_a_migrer, ROUND(AVG(debit_descendant_mbps), 1) AS debit_moyen_actuel_4g_mbps, ROUND(AVG(latence_ms), 1) AS latence_moyenne_4g_ms FROM `${PROJECT_ID}.telecom_network_ds.arcep_sites_mobiles_metropole` s JOIN `${PROJECT_ID}.telecom_network_ds.telecom_qualite_service_metrique` q ON s.commune = q.commune AND s.nom_operateur = q.nom_operateur WHERE s.site_5g = TRUE AND s.site_5g_3500mhz = FALSE GROUP BY nom_operateur, nom_region, code_departement, commune HAVING debit_moyen_actuel_4g_mbps < 50.0 ORDER BY debit_moyen_actuel_4g_mbps ASC LIMIT 10"
+          "naturalLanguageQuestion": "Quelle est la répartition du volume de trafic de données téléchargé par catégorie de contenu web et par type d'appareil ?",
+          "sqlQuery": "SELECT s.categorie_contenu_visite, h.constructeur, ROUND(SUM(s.volume_download_mb)/1024.0, 1) AS volume_total_gb, ROUND(AVG(s.qualite_experience_qoe_score), 2) AS score_qoe_moyen FROM `${PROJECT_ID}.telecom_network_ds.sessions_trafic_web_categories` s JOIN `${PROJECT_ID}.telecom_network_ds.parc_equipements_sim_imei` h ON s.id_client = h.id_client GROUP BY s.categorie_contenu_visite, h.constructeur ORDER BY volume_total_gb DESC LIMIT 20"
         }
       ],
       "glossaryTerms": [
         {
-          "displayName": "Upsell Smart 5G & Compatibilité Smartphone",
-          "description": "Ciblage des abonnés disposant d'un terminal 5G (iPhone 15, Samsung S24) mais encore sous forfait 4G LTE. Termes associés : Upsell 5G, Appareil Compatible 5G, Migration 5G Max, Gain ARPU Mensuel."
+          "displayName": "Identifiants Matériels IMEI, IMSI SIM Tag Code & ICCID",
+          "description": "Codes d'identification uniques du terminal (IMEI 15 chiffres), de la carte SIM (IMSI SIM Tag Code) et de la puce (ICCID). [Table: parc_equipements_sim_imei]. Termes associés : IMEI Code, IMSI SIM Tag Code, ICCID Puce SIM, eSIM Virtuelle, 5G Standalone SA."
         },
         {
-          "displayName": "Dépassement Quota & Frais Hors-Forfait",
-          "description": "Identification des clients ayant consommé plus de 80% de leur quota de données en Mars et généré des pénalités financières. Termes associés : Dépassement Quota Mars, Frais Hors-Forfait, Taux Utilisation Quota %, Consommation Go."
+          "displayName": "Maintenance Prédictive Pylônes & Capteurs IoT",
+          "description": "Supervision IoT de la santé des antennes relais : température CPU, charge %, tension Volts, état batterie secours et prédiction de panne sous 7 jours. [Table: maintenance_predictive_pylones]. Termes associés : Maintenance Prédictive IoT, Température Processeur °C, Probabilité Panne 7j %, Composant à Remplacer."
         },
         {
-          "displayName": "Prévisions de Consommation Data (Q1 vs Q2)",
-          "description": "Historique réel de consommation du 1er trimestre et modèles de prévision de charge du réseau pour le 2ème trimestre. Termes associés : Consommation Moyenne Go, Prévision Taux Croissance %, Consommation Réseau TB, Prévisions Q2."
+          "displayName": "Sessions de Trafic Web Agrégé & Catégories",
+          "description": "Suivi des volumes Mo téléchargés/émis par domaine de contenu (Streaming 4K, Visio Teams, Cloud GCP/AWS, Gaming) et pylône ANFR connecté. [Table: sessions_trafic_web_categories]. Termes associés : Volume Trafic Mo, Catégories Contenu Visité, Pylône ANFR Connecté, Score QoE."
         }
       ]
     }

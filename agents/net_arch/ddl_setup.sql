@@ -1,155 +1,180 @@
 -- ============================================================================
--- Schema DDL for NetArch - Architecture, Couverture ARCEP & Clientèle Télécom
+-- Schema DDL for NetArch - Master Telecom Architecture (360° Business & Technical)
 -- Dataset: telecom_network_ds (Project: data-agents-by-industry)
--- Relational Architecture linking Official ARCEP "Mon Réseau Mobile" Data,
--- 2G/3G/4G/5G Towers, QoS Telemetry, Equipment Incidents, B2B/B2C Subscribers,
--- User Incident Alerts, FttH Fiber Coverage, and Data Consumption Forecasting.
+-- Relational Architecture linking ARCEP Towers, QoS, NOC Outages, Subscribers,
+-- Plans Catalog, SIM/IMEI Technical Hardware, Traffic Sessions, Predictive Maintenance,
+-- and Q1/Q2 Data Consumption Forecasts.
 -- ============================================================================
 
 CREATE SCHEMA IF NOT EXISTS `telecom_network_ds`
 OPTIONS (
   location = 'US',
-  description = 'Dataset NetArch : Intelligence réseau télécom français, antennes ARCEP, débits, pannes, abonnés B2B/B2C, appareils 5G, hors-forfait, churn et prédictions de consommation.'
+  description = 'Dataset NetArch : Vision 360° réseau télécom français, pylônes ARCEP, catalogue forfaits, matériel SIM/IMEI, trafic web agrégé, abonnés B2B/B2C, maintenance prédictive et upsell 5G Max.'
 );
 
--- 1. Table: arcep_sites_mobiles_metropole (Official ARCEP Mobile Towers & 5G Band Master)
+-- 1. Table: arcep_sites_mobiles_metropole
 CREATE OR REPLACE TABLE `telecom_network_ds.arcep_sites_mobiles_metropole` (
   id_station_anfr STRING OPTIONS(description="Identifiant unique de la station antenne enregistré à l'ANFR"),
   num_site STRING OPTIONS(description="Identifiant technique du site chez l'opérateur"),
   nom_operateur STRING OPTIONS(description="Nom de l'opérateur mobile (Orange, SFR, Bouygues Telecom, Free Mobile)"),
   commune STRING OPTIONS(description="Nom de la commune d'implantation du pylône"),
-  code_insee_commune STRING OPTIONS(description="Code INSEE de la commune à 5 chiffres"),
-  code_departement STRING OPTIONS(description="Département d'implantation (ex: 75 - Paris, 33 - Gironde)"),
+  code_insee_commune STRING OPTIONS(description="Code INSEE de la commune"),
+  code_departement STRING OPTIONS(description="Département d'implantation"),
   nom_region STRING OPTIONS(description="Région administrative"),
-  latitude NUMERIC OPTIONS(description="Coordonnée géographique latitude (WGS84)"),
-  longitude NUMERIC OPTIONS(description="Coordonnée géographique longitude (WGS84)"),
-  site_2g BOOL OPTIONS(description="TRUE si le site émet en technologie 2G / GSM"),
-  site_3g BOOL OPTIONS(description="TRUE si le site émet en technologie 3G / UMTS"),
-  site_4g BOOL OPTIONS(description="TRUE si le site émet en 4G / LTE"),
-  site_5g BOOL OPTIONS(description="TRUE si le site émet en technologie 5G NR"),
-  site_5g_3500mhz BOOL OPTIONS(description="TRUE si l'antenne émet sur la bande cœur 3.5 GHz (Ultra Haut Débit)"),
-  site_zone_blanche_dcc BOOL OPTIONS(description="TRUE si le site fait partie du Dispositif de Couverture Ciblée (DCC) / Zone Blanche")
+  latitude NUMERIC OPTIONS(description="Latitude (WGS84)"),
+  longitude NUMERIC OPTIONS(description="Longitude (WGS84)"),
+  site_2g BOOL OPTIONS(description="Émission 2G"),
+  site_3g BOOL OPTIONS(description="Émission 3G"),
+  site_4g BOOL OPTIONS(description="Émission 4G"),
+  site_5g BOOL OPTIONS(description="Émission 5G NR"),
+  site_5g_3500mhz BOOL OPTIONS(description="Émission 5G bande cœur 3.5 GHz"),
+  site_zone_blanche_dcc BOOL OPTIONS(description="Dispositif Couverture Ciblée / Zone Blanche")
 )
-OPTIONS (
-  description = "Répertoire officiel ARCEP des stations d'antennes relais mobiles 2G/3G/4G/5G en France métropolitaine."
-);
+OPTIONS (description = "Répertoire officiel ARCEP des stations d'antennes relais mobiles 2G/3G/4G/5G en France.");
 
--- 2. Table: arcep_historique_deploiement_5g (5G Deployment & Frequency History)
+-- 2. Table: arcep_historique_deploiement_5g
 CREATE OR REPLACE TABLE `telecom_network_ds.arcep_historique_deploiement_5g` (
-  date_observation DATE OPTIONS(description="Date du relevé trimestriel ou mensuel d'ARCEP"),
-  nom_operateur STRING OPTIONS(description="Nom de l'opérateur mobile (Orange, SFR, Bouygues Telecom, Free Mobile)"),
-  niveau_geographique STRING OPTIONS(description="Niveau d'agrégation géographique : National, Région, Département"),
-  code_geographique STRING OPTIONS(description="Code INSEE ou identifiant de zone"),
-  libelle_zone STRING OPTIONS(description="Libellé clair de la zone (ex: Toute France, Île-de-France, Occitanie)"),
-  nb_sites_5g_700mhz INT64 OPTIONS(description="Nombre de sites 5G activés sur la bande 700 MHz"),
-  nb_sites_5g_2100mhz INT64 OPTIONS(description="Nombre de sites 5G activés sur la bande 2100 MHz"),
-  nb_sites_5g_3500mhz INT64 OPTIONS(description="Nombre de sites 5G activés sur la bande cœur 3.5 GHz"),
-  nb_sites_5g_total INT64 OPTIONS(description="Volume total de sites 5G ouverts commercialement")
+  date_observation DATE OPTIONS(description="Date du relevé ARCEP"),
+  nom_operateur STRING OPTIONS(description="Nom de l'opérateur"),
+  niveau_geographique STRING OPTIONS(description="Niveau d'agrégation"),
+  code_geographique STRING OPTIONS(description="Code INSEE ou de zone"),
+  libelle_zone STRING OPTIONS(description="Libellé de la zone"),
+  nb_sites_5g_700mhz INT64 OPTIONS(description="Sites 5G 700 MHz"),
+  nb_sites_5g_2100mhz INT64 OPTIONS(description="Sites 5G 2100 MHz"),
+  nb_sites_5g_3500mhz INT64 OPTIONS(description="Sites 5G 3.5 GHz"),
+  nb_sites_5g_total INT64 OPTIONS(description="Total sites 5G")
 )
-OPTIONS (
-  description = "Historique ARCEP du déploiement de la 5G en France par opérateur, bandes de fréquences et zones géographiques."
-);
+OPTIONS (description = "Historique ARCEP du déploiement 5G par opérateur et fréquence.");
 
--- 3. Table: telecom_qualite_service_metrique (Quality of Service & Throughput Benchmarks)
+-- 3. Table: telecom_qualite_service_metrique
 CREATE OR REPLACE TABLE `telecom_network_ds.telecom_qualite_service_metrique` (
-  id_mesure STRING OPTIONS(description="Identifiant unique du test de qualité de service QoS"),
-  nom_operateur STRING OPTIONS(description="Nom de l'opérateur testé"),
-  commune STRING OPTIONS(description="Commune de test de débit"),
-  code_departement STRING OPTIONS(description="Département de test"),
-  nom_region STRING OPTIONS(description="Région administrative"),
-  technologie_reseau STRING OPTIONS(description="Technologie active lors du test : 5G 3.5GHz, 5G 700MHz, 4G+ LTE, 4G"),
-  debit_descendant_mbps NUMERIC OPTIONS(description="Débit descendant moyen mesuré en Mbps (Download)"),
-  debit_montant_mbps NUMERIC OPTIONS(description="Débit montant moyen mesuré en Mbps (Upload)"),
-  latence_ms NUMERIC OPTIONS(description="Temps de réponse / Latence réseau mesurée en millisecondes (ms)"),
-  taux_couverture_4g_pct NUMERIC OPTIONS(description="Taux d'accès aux services mobile 4G/5G sans coupure (%)")
+  id_mesure STRING OPTIONS(description="Identifiant mesure QoS"),
+  nom_operateur STRING OPTIONS(description="Opérateur"),
+  commune STRING OPTIONS(description="Commune"),
+  code_departement STRING OPTIONS(description="Département"),
+  nom_region STRING OPTIONS(description="Région"),
+  technologie_reseau STRING OPTIONS(description="Technologie active"),
+  debit_descendant_mbps NUMERIC OPTIONS(description="Débit descendant (Download Mbps)"),
+  debit_montant_mbps NUMERIC OPTIONS(description="Débit montant (Upload Mbps)"),
+  latence_ms NUMERIC OPTIONS(description="Latence (Ping ms)"),
+  taux_couverture_4g_pct NUMERIC OPTIONS(description="Stabilité couverture %")
 )
-OPTIONS (
-  description = "Télémesures de qualité de service (QoS) mobile : débits descendant/montant, latence et stabilité."
-);
+OPTIONS (description = "Télémesures de qualité de service mobile (QoS).");
 
--- 4. Table: telecom_incidents_equipements_reseau (Network Equipment Outages & Incidents)
+-- 4. Table: telecom_incidents_equipements_reseau
 CREATE OR REPLACE TABLE `telecom_network_ds.telecom_incidents_equipements_reseau` (
-  id_incident STRING OPTIONS(description="Identifiant unique du ticket d'incident équipement"),
-  nom_operateur STRING OPTIONS(description="Nom de l'opérateur concerné"),
-  commune STRING OPTIONS(description="Commune touchée par l'incident"),
-  code_departement STRING OPTIONS(description="Département d'implantation"),
-  nom_region STRING OPTIONS(description="Région administrative"),
-  type_equipement STRING OPTIONS(description="Équipement défaillant : Antenne 5G, Antenne 4G, Routeur B2B Quartier, PBO Fibre Optique, NRO Central"),
-  severite_incident STRING OPTIONS(description="Niveau de gravité : Majeur - Micro-Coupures Répétées, Moyen - Dégradation, Mineur"),
-  nombre_abonnes_impactes INT64 OPTIONS(description="Nombre d'abonnés mobiles ou fixes impactés par l'interruption"),
-  statut_resolution STRING OPTIONS(description="Statut : EN_COURS, RESOLU, INTERVENTION_EQUIPE")
+  id_incident STRING OPTIONS(description="Ticket incident"),
+  nom_operateur STRING OPTIONS(description="Opérateur"),
+  commune STRING OPTIONS(description="Commune"),
+  code_departement STRING OPTIONS(description="Département"),
+  nom_region STRING OPTIONS(description="Région"),
+  type_equipement STRING OPTIONS(description="Type d'équipement défaillant"),
+  severite_incident STRING OPTIONS(description="Niveau de gravité"),
+  nombre_abonnes_impactes INT64 OPTIONS(description="Abonnés impactés"),
+  statut_resolution STRING OPTIONS(description="Statut de résolution")
 )
-OPTIONS (
-  description = "Supervision des pannes d'équipement réseau télécom, micro-coupures de routeurs B2B et temps de rétablissement."
-);
+OPTIONS (description = "Supervision des pannes d'équipement et respect des SLA.");
 
--- 5. Table: abonnes_clients_b2b_b2c (Subscribers Master: Churn B2B, Smart 5G Upsell & Data Consumpt)
-CREATE OR REPLACE TABLE `telecom_network_ds.abonnes_clients_b2b_b2c` (
-  id_client STRING OPTIONS(description="Identifiant unique de l'abonné (ex: CLI-90012)"),
+-- 5. Table: abonnes_master_customers
+CREATE OR REPLACE TABLE `telecom_network_ds.abonnes_master_customers` (
+  id_client STRING OPTIONS(description="Identifiant client unique (ex: CLI-90012)"),
   nom_client STRING OPTIONS(description="Raison sociale entreprise B2B ou nom du client B2C"),
-  type_client STRING OPTIONS(description="Type d'abonné : B2B_PROFESSIONNEL ou B2C_PARTICULIER"),
-  smartphone_modele_appareil STRING OPTIONS(description="Modèle de smartphone ou routeur détenu par le client (ex: iPhone 15 Pro 5G, Samsung S24 5G)"),
-  appareil_compatible_5g BOOL OPTIONS(description="TRUE si le smartphone ou routeur du client est compatible 5G"),
-  forfait_actuel_nom STRING OPTIONS(description="Nom de l'abonnement actuel (ex: Forfait 4G LTE 100 Go, Forfait 4G Pro 150 Go, Forfait 5G Max 250 Go)"),
-  forfait_actuel_5g BOOL OPTIONS(description="TRUE si la souscription active inclut l'accès au réseau 5G"),
-  technologie_actuelle STRING OPTIONS(description="Raccordement actuel : CUIVRE_ADSL, FIBRE_FTTH, 4G_MOBILE, 5G_MOBILE"),
-  consommation_donnees_mensuelle_gb NUMERIC OPTIONS(description="Volume de données consommé en Gigaoctets (Go) sur le mois de Mars"),
-  quota_donnees_mensuel_gb NUMERIC OPTIONS(description="Quota mensuel de données inclus dans l'abonnement actuel en Go"),
-  taux_utilisation_quota_mars_pct NUMERIC OPTIONS(description="Taux de consommation du quota sur le mois de Mars (%)"),
-  frais_hors_forfait_eur NUMERIC OPTIONS(description="Frais de dépassement / hors-forfait facturés en Euros (€)"),
-  arpu_mensuel_actuel_eur NUMERIC OPTIONS(description="Revenu moyen mensuel actuel (ARPU) facturé au client (€)"),
-  arpu_potentiel_5g_max_eur NUMERIC OPTIONS(description="ARPU potentiel estimé après migration vers le Forfait 5G Max / Fibre Pro (€)"),
-  gain_arpu_potentiel_eur NUMERIC OPTIONS(description="Gain moyen de chiffre d'affaires ARPU mensuel généré par la migration 5G Max (€)"),
-  commune STRING OPTIONS(description="Commune d'implantation de l'abonné"),
-  code_departement STRING OPTIONS(description="Département de résidence"),
-  nom_region STRING OPTIONS(description="Région administrative"),
-  nb_micro_coupures_reseau_30j INT64 OPTIONS(description="Nombre de micro-coupures subies sur le routeur de quartier sur 30 jours"),
-  risque_churn_pct NUMERIC OPTIONS(description="Score de risque de résiliation / Churn calculé (%)")
+  email_contact STRING OPTIONS(description="Adresse email de contact"),
+  telephone_contact STRING OPTIONS(description="Numéro de téléphone principal"),
+  type_client STRING OPTIONS(description="B2B_PROFESSIONNEL ou B2C_PARTICULIER"),
+  siret_entreprise STRING OPTIONS(description="SIRET pour les clients B2B"),
+  id_forfait_actuel STRING OPTIONS(description="Identifiant du forfait souscrit (ex: FORF-5G-MAX)"),
+  nom_forfait_actuel STRING OPTIONS(description="Nom commercial du forfait souscrit"),
+  statut_contrat STRING OPTIONS(description="ACTIF, SUSPENDU, EN_MIGRATION"),
+  score_nps_satisfaction INT64 OPTIONS(description="Score de satisfaction Net Promoter Score (0 à 10)"),
+  date_souscription DATE OPTIONS(description="Date de première souscription"),
+  arpu_mensuel_actuel_eur NUMERIC OPTIONS(description="Revenu mensuel actuel (ARPU €)"),
+  arpu_potentiel_5g_max_eur NUMERIC OPTIONS(description="ARPU potentiel 5G Max (€)"),
+  gain_arpu_potentiel_eur NUMERIC OPTIONS(description="Gain ARPU potentiel (€)"),
+  consommation_donnees_mensuelle_gb NUMERIC OPTIONS(description="Volume consommé en Mars (Go)"),
+  quota_donnees_mensuel_gb NUMERIC OPTIONS(description="Quota mensuel inclus (Go)"),
+  taux_utilisation_quota_mars_pct NUMERIC OPTIONS(description="Utilisation quota Mars (%)"),
+  frais_hors_forfait_eur NUMERIC OPTIONS(description="Frais de dépassement hors-forfait (€)"),
+  commune STRING OPTIONS(description="Commune de résidence"),
+  code_departement STRING OPTIONS(description="Département"),
+  nom_region STRING OPTIONS(description="Région"),
+  nb_micro_coupures_reseau_30j INT64 OPTIONS(description="Micro-coupures subies sur 30j"),
+  score_risque_churn_pct NUMERIC OPTIONS(description="Risque de résiliation (%)"),
+  score_propension_upsell_5g_pct NUMERIC OPTIONS(description="Score de propension à l'upsell 5G Max (%)")
 )
-OPTIONS (
-  description = "Base abonnés B2B et B2C : modèles de smartphones, compatibilité 5G, forfaits 4G/5G, consommation Go, hors-forfait, ARPU et risque de résiliation."
-);
+OPTIONS (description = "Fichier centralisé des abonnés B2B/B2C : contrat, satisfaction, consommation, hors-forfait, ARPU et prédiction d'upsell.");
 
--- 6. Table: signalements_dysfonctionnements_utilisateurs (User Alerts vs 100% Theoretical Coverage)
-CREATE OR REPLACE TABLE `telecom_network_ds.signalements_dysfonctionnements_utilisateurs` (
-  id_signalement STRING OPTIONS(description="Identifiant du signalement client ou alerte application"),
-  commune STRING OPTIONS(description="Commune concernée par l'alerte utilisateur"),
-  code_departement STRING OPTIONS(description="Département d'implantation"),
-  nom_region STRING OPTIONS(description="Région administrative"),
-  couverture_5g_theorique_pct NUMERIC OPTIONS(description="Taux de couverture 5G théorique déclaré à l'ARCEP (ex: 100 %)"),
-  nombre_signalements_panne INT64 OPTIONS(description="Nombre total de signalements d'utilisateurs pour dysfonctionnement"),
-  type_dysfonctionnement STRING OPTIONS(description="Motif : Micro-coupures quotidiennes, Débit nul malgré 5G, Absence de signal indoor"),
-  statut_investigation_technique STRING OPTIONS(description="Statut : AUDIT_EN_COURS, ANOMALIE_CONFIRMEE, CORRIGE")
+-- 6. Table: catalogue_forfaits_abonnements
+CREATE OR REPLACE TABLE `telecom_network_ds.catalogue_forfaits_abonnements` (
+  id_forfait STRING OPTIONS(description="Identifiant unique du forfait (ex: FORF-5G-MAX)"),
+  nom_forfait STRING OPTIONS(description="Nom commercial du forfait"),
+  famille_forfait STRING OPTIONS(description="Famille : MOBILE_5G, MOBILE_4G, FIBRE_PRO, CUIVRE_ADSL"),
+  cible_client STRING OPTIONS(description="B2B Pro, B2C Grand Public, Enterprise Premium"),
+  prix_mensuel_ht_eur NUMERIC OPTIONS(description="Tarif mensuel Hors Taxes (€)"),
+  quota_donnees_go INT64 OPTIONS(description="Quota de données mensuel en Go (-1 pour illimité)"),
+  debit_max_descendant_mbps INT64 OPTIONS(description="Débit descendant max garanti en Mbps"),
+  technologie_reseau_incluse STRING OPTIONS(description="Technologie incluse (5G 3.5GHz, 5G Standalone, 4G+ LTE, Fibre 2Gbps)"),
+  services_inclus_liste STRING OPTIONS(description="Description des options incluses (Roaming Monde, Cybersec, IP Fixe)")
 )
-OPTIONS (
-  description = "Signalements de pannes et dysfonctionnements réseau remontés dans les communes déclarées à 100 % de couverture 5G."
-);
+OPTIONS (description = "Catalogue de référence des forfaits et abonnements fixes & mobiles.");
 
--- 7. Table: deploiement_fibre_ftth_departements (FttH Fiber Deployment Progress vs National Plan)
-CREATE OR REPLACE TABLE `telecom_network_ds.deploiement_fibre_ftth_departements` (
-  code_departement STRING OPTIONS(description="Code département (ex: 75 - Paris, 23 - Creuse)"),
-  nom_departement STRING OPTIONS(description="Nom du département"),
-  nom_region STRING OPTIONS(description="Région administrative"),
-  locaux_raccordables_ftth INT64 OPTIONS(description="Nombre de logements et locaux professionnels raccordables à la Fibre"),
-  locaux_totaux_departement INT64 OPTIONS(description="Nombre total de locaux du département"),
-  taux_couverture_ftth_actuel_pct NUMERIC OPTIONS(description="Taux de couverture effective FttH (%)"),
-  objectif_plan_france_thd_pct NUMERIC OPTIONS(description="Objectif national du Plan France Très Haut Débit (100 %)"),
-  retard_deploiement_pct NUMERIC OPTIONS(description="Écart / Retard de déploiement en points de pourcentage par rapport à l'objectif")
+-- 7. Table: parc_equipements_sim_imei
+CREATE OR REPLACE TABLE `telecom_network_ds.parc_equipements_sim_imei` (
+  id_equipement_client STRING OPTIONS(description="Identifiant matériel (ex: EQP-78001)"),
+  id_client STRING OPTIONS(description="Identifiant de l'abonné propriétaire"),
+  constructeur STRING OPTIONS(description="Fabricant du terminal (Apple, Samsung, Google, Xiaomi, Huawei, Cisco, Huawei B2B)"),
+  modele_terminal STRING OPTIONS(description="Modèle exact de l'appareil (ex: iPhone 15 Pro 5G, Routeur Cisco 5G Pro)"),
+  imei_code STRING OPTIONS(description="Code IMEI unique du terminal à 15 chiffres"),
+  imsi_sim_tag_code STRING OPTIONS(description="Code IMSI de la carte SIM (SIM Tag Code)"),
+  iccid_sim_card STRING OPTIONS(description="Code ICCID unique de la pucely SIM"),
+  type_carte_sim STRING OPTIONS(description="eSIM Virtuelle, Nano-SIM Physique, SIM M2M"),
+  compatible_5g BOOL OPTIONS(description="TRUE si le matériel supporte la 5G NR"),
+  compatible_5g_standalone BOOL OPTIONS(description="TRUE si le matériel supporte le cœur 5G SA"),
+  annee_commercialisation INT64 OPTIONS(description="Année de sortie du matériel"),
+  date_premiere_connexion_reseau DATE OPTIONS(description="Date d'enregistrement sur le réseau")
 )
-OPTIONS (
-  description = "Suivi départemental du retard de déploiement de la fibre optique FttH par rapport au Plan France Très Haut Débit."
-);
+OPTIONS (description = "Inventaire technique du parc matériel : codes IMEI, IMSI SIM Tag Code, ICCID, compatibilité 5G SA & eSIM.");
 
--- 8. Table: consommation_historique_trimestrielle_previsions (Q1 Data Consumption & Q2 Forecasting)
+-- 8. Table: sessions_trafic_web_categories
+CREATE OR REPLACE TABLE `telecom_network_ds.sessions_trafic_web_categories` (
+  id_session STRING OPTIONS(description="Identifiant unique de la session de trafic"),
+  id_client STRING OPTIONS(description="Identifiant de l'abonné"),
+  imsi_sim_tag_code STRING OPTIONS(description="Code IMSI de la carte SIM"),
+  timestamp_session TIMESTAMP OPTIONS(description="Horodatage du début de session"),
+  duree_session_minutes INT64 OPTIONS(description="Durée de la session en minutes"),
+  volume_download_mb NUMERIC OPTIONS(description="Volume de données téléchargé en Mo"),
+  volume_upload_mb NUMERIC OPTIONS(description="Volume de données émis en Mo"),
+  categorie_contenu_visite STRING OPTIONS(description="Catégorie agrégée : Streaming Video 4K, Visio Pro Teams/Zoom, Réseaux Sociaux, Cloud Storage, Gaming, Web Browsing"),
+  protocole_reseau STRING OPTIONS(description="Protocole : HTTPS, QUIC, SIP_VOIP, UDP_GAMING"),
+  id_station_anfr_connectee STRING OPTIONS(description="Identifiant du pylône relais auquel l'appareil était raccordé"),
+  qualite_experience_qoe_score NUMERIC OPTIONS(description="Score de qualité d'expérience ressentie QoE (0.0 à 5.0)")
+)
+OPTIONS (description = "Historique agrégé des sessions de trafic de données : volumes Mo, catégories de contenus consultés et pylône raccordé.");
+
+-- 9. Table: maintenance_predictive_pylones
+CREATE OR REPLACE TABLE `telecom_network_ds.maintenance_predictive_pylones` (
+  id_pylone_sensor STRING OPTIONS(description="Identifiant de la sonde de télémétrie pylône"),
+  id_station_anfr STRING OPTIONS(description="Identifiant ANFR de l'antenne relais"),
+  nom_operateur STRING OPTIONS(description="Opérateur mobile"),
+  commune STRING OPTIONS(description="Commune d'implantation"),
+  temperature_processeur_c NUMERIC OPTIONS(description="Température du processeur de baie en °C"),
+  charge_cpu_pct NUMERIC OPTIONS(description="Charge CPU moyenne de la baie (%)"),
+  stabilite_tension_volts NUMERIC OPTIONS(description="Tension électrique d'alimentation en Volts"),
+  etat_sante_batterie_secours_pct NUMERIC OPTIONS(description="État de santé des batteries de secours (%)"),
+  vibration_mat_mm NUMERIC OPTIONS(description="Amplitude de vibration du mât en mm"),
+  probabilite_panne_7j_pct NUMERIC OPTIONS(description="Probabilité prédictive d'incident sous 7 jours (%)"),
+  composant_a_remplacer_prioritaire STRING OPTIONS(description="Composant critique à remplacer (ex: Carte Alim DC, Ventilateur Baie, Module Optique SFP, Faisceau Hertzien)")
+)
+OPTIONS (description = "Télémétrie IOT et modèles de maintenance prédictive sur les pylônes télécoms pour prévenir les pannes matérielles.");
+
+-- 10. Table: consommation_historique_trimestrielle_previsions
 CREATE OR REPLACE TABLE `telecom_network_ds.consommation_historique_trimestrielle_previsions` (
   periode_id STRING OPTIONS(description="Identifiant de période (ex: PER-2025-01)"),
-  mois_label STRING OPTIONS(description="Mois d'observation ou de prévision (ex: Janvier 2025, Avril 2025 (Prévision))"),
-  trimestre STRING OPTIONS(description="Trimestre comptable (ex: Q1 2025, Q2 2025)"),
-  est_prevision BOOL OPTIONS(description="FALSE pour les données historiques réelles Q1, TRUE pour les prévisions Q2"),
-  consommation_moyenne_par_abonne_go NUMERIC OPTIONS(description="Consommation moyenne de données mensuelle par abonné (Go)"),
-  consommation_totale_reseau_tb NUMERIC OPTIONS(description="Consommation totale cumulée sur le réseau en Téraoctets (TB)"),
-  taux_croissance_mensuel_pct NUMERIC OPTIONS(description="Taux de croissance mensuel du trafic de données (%)")
+  mois_label STRING OPTIONS(description="Mois d'observation ou de prévision"),
+  trimestre STRING OPTIONS(description="Trimestre comptable"),
+  est_prevision BOOL OPTIONS(description="FALSE pour Q1 réel, TRUE pour Q2 prévision"),
+  consommation_moyenne_par_abonne_go NUMERIC OPTIONS(description="Consommation moyenne Go par abonné"),
+  consommation_totale_reseau_tb NUMERIC OPTIONS(description="Consommation totale réseau en Téraoctets (TB)"),
+  taux_croissance_mensuel_pct NUMERIC OPTIONS(description="Taux de croissance mensuel (%)")
 )
-OPTIONS (
-  description = "Historique réel du 1er trimestre et prévisions de consommation de données pour le 2ème trimestre."
-);
+OPTIONS (description = "Historique réel Q1 et prévisions de consommation de données Q2.");

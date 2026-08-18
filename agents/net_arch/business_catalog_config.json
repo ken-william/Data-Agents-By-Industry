@@ -1,68 +1,90 @@
 {
   "agent_id": "net-arch-agent",
-  "domain": "Telco & Media Network Operations & Subscriber Analytics",
-  "dataplex_catalog_name": "Glossaire Métier Réseau Télécoms & Intelligence Abonnés",
+  "domain": "Telco & Media Network Operations & 360 Subscriber Analytics",
+  "dataplex_catalog_name": "Glossaire Métier Télécom 360° Réseau, Clients & Hardware",
   "glossary_terms": [
     {
-      "term": "Upsell Smart 5G & Compatibilité Smartphone",
-      "definition": "Ciblage des abonnés disposant d'un terminal 5G (iPhone 15, Samsung S24) mais encore sous forfait 4G LTE. Termes associés : Upsell 5G, Appareil Compatible 5G, Migration 5G Max, Gain ARPU Mensuel.",
-      "related_terms": ["Appareil Compatible 5G", "Migration 5G Max", "Forfait 4G vs 5G", "Upsell Smart 5G"],
-      "overview": "Documentation sur le ciblage des abonnés équipés de terminaux 5G sans forfait 5G actif pour générer de l'upsell.",
+      "term": "Identifiants Matériels IMEI, IMSI SIM Tag Code & ICCID",
+      "definition": "Codes d'identification uniques du terminal (IMEI 15 chiffres), de la carte SIM (IMSI SIM Tag Code) et de la puce (ICCID). Termes associés : IMEI Code, IMSI SIM Tag Code, ICCID Puce SIM, eSIM Virtuelle, 5G Standalone SA.",
+      "related_terms": ["IMEI Code Terminal", "IMSI SIM Tag Code", "ICCID Carte SIM", "Compatibilité 5G SA"],
+      "overview": "Inventaire technique et sécurité des équipements clients raccordés au réseau mobile.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_hardware", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check IMEI Code Length", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "parc_equipements_sim_imei", "column_name": "imei_code", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.parc_equipements_sim_imei.imei_code"}]
+    },
+    {
+      "term": "Maintenance Prédictive Pylônes & Capteurs IoT",
+      "definition": "Supervision IoT de la santé des antennes relais : température CPU, charge %, tension Volts, état batterie secours et prédiction de panne sous 7 jours.",
+      "related_terms": ["Température CPU °C", "Charge CPU %", "Probabilité Panne 7j %", "Composant à Remplacer"],
+      "overview": "Modèle d'IA de maintenance prédictive pour prévenir les pannes d'alimentation et de baies 5G avant interruption de service.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_maintenance", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check CPU Temp Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 120.0}}],
+      "related_entries": [{"resource_name": "maintenance_predictive_pylones", "column_name": "probabilite_panne_7j_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.maintenance_predictive_pylones.probabilite_panne_7j_pct"}]
+    },
+    {
+      "term": "Sessions de Trafic Web Agrégé & Catégories",
+      "definition": "Suivi des volumes Mo téléchargés/émis par domaine de contenu (Streaming 4K, Visio Teams, Cloud GCP/AWS, Gaming) et pylône ANFR connecté.",
+      "related_terms": ["Volume Download Mo", "Catégorie Contenu Visité", "Score QoE Expérience"],
+      "overview": "Analyse agrégée des usages de données par application et par site antenne.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_traffic", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Download MB Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "sessions_trafic_web_categories", "column_name": "volume_download_mb", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.sessions_trafic_web_categories.volume_download_mb"}]
+    },
+    {
+      "term": "Catalogue des Forfaits & Abonnements",
+      "definition": "Référentiel des offres commerciales fixes et mobiles : forfaits 5G Max, 5G Pro Flex, 4G LTE et Fibre Pro 2Gbps.",
+      "related_terms": ["Catalogue Forfaits", "Tarif Mensuel HT", "Quota Données Go"],
+      "overview": "Spécifications des forfaits de l'opérateur et options incluses.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_catalog", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Price Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "catalogue_forfaits_abonnements", "column_name": "prix_mensuel_ht_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.catalogue_forfaits_abonnements.prix_mensuel_ht_eur"}]
+    },
+    {
+      "term": "Fichier Centralisé Abonnés Master Customers",
+      "definition": "Base CRM centralisée des abonnés B2B et B2C : contrats, NPS, consommation Go, hors-forfait et scores prédictifs.",
+      "related_terms": ["Fichier Abonnés CRM", "Score NPS", "SIRENE Enterprise"],
+      "overview": "Référentiel 360° des clients fixes et mobiles.",
       "contacts": ["data-governance@data-agents-by-industry.com"],
       "labels": {"domain": "telecom_subscribers", "criticality": "high"},
       "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
-      "data_quality_rules": [{"display_name": "Check Device 5G Flag", "rule_type": "TYPE_CONSISTENCY", "dimension": "VALIDITY"}],
-      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "appareil_compatible_5g", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.appareil_compatible_5g"}]
+      "data_quality_rules": [{"display_name": "Check Client ID", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "abonnes_master_customers", "column_name": "id_client", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_master_customers.id_client"}]
+    },
+    {
+      "term": "Upsell Smart 5G & Compatibilité Smartphone",
+      "definition": "Ciblage des abonnés disposant d'un terminal 5G mais encore sous forfait 4G LTE.",
+      "related_terms": ["Upsell 5G Max", "Smartphone 5G", "Propension Upsell %"],
+      "overview": "Algorithme de ciblage des campagnes d'upsell à fort ROI.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_marketing", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Propensity Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 100.0}}],
+      "related_entries": [{"resource_name": "abonnes_master_customers", "column_name": "score_propension_upsell_5g_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_master_customers.score_propension_upsell_5g_pct"}]
     },
     {
       "term": "Dépassement Quota & Frais Hors-Forfait",
-      "definition": "Identification des clients ayant consommé plus de 80% de leur quota de données en Mars et généré des pénalités financières. Termes associés : Dépassement Quota Mars, Frais Hors-Forfait, Taux Utilisation Quota %, Consommation Go.",
-      "related_terms": ["Taux Utilisation Quota %", "Frais Hors-Forfait €", "Consommation Mars Go"],
-      "overview": "Mesure des surcoûts de facturation pour les clients en dépassement de quota, déclenchant les offres 5G Max illimitées.",
+      "definition": "Identification des clients ayant dépassé 80% de leur quota avec pénalités de hors-forfait en Mars.",
+      "related_terms": ["Hors-Forfait Mars €", "Utilisation Quota %"],
+      "overview": "Détection des abonnés en surconsommation financière.",
       "contacts": ["data-governance@data-agents-by-industry.com"],
       "labels": {"domain": "telecom_billing", "criticality": "high"},
       "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
-      "data_quality_rules": [{"display_name": "Check Fees Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 1000.0}}],
-      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "frais_hors_forfait_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.frais_hors_forfait_eur"}]
-    },
-    {
-      "term": "Prévisions de Consommation Data (Q1 vs Q2)",
-      "definition": "Historique réel de consommation du 1er trimestre et modèles de prévision de charge du réseau pour le 2ème trimestre. Termes associés : Consommation Moyenne Go, Prévision Taux Croissance %, Consommation Réseau TB, Prévisions Q2.",
-      "related_terms": ["Consommation Réseau TB", "Prévisions Q2", "Taux Croissance Mensuel %"],
-      "overview": "Modélisation prédictive de la croissance de trafic de données sur les trimestres à venir.",
-      "contacts": ["data-governance@data-agents-by-industry.com"],
-      "labels": {"domain": "telecom_forecasting", "criticality": "high"},
-      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
-      "data_quality_rules": [{"display_name": "Check Traffic Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
-      "related_entries": [{"resource_name": "consommation_historique_trimestrielle_previsions", "column_name": "consommation_moyenne_par_abonne_go", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.consommation_historique_trimestrielle_previsions.consommation_moyenne_par_abonne_go"}]
-    },
-    {
-      "term": "Gain d'ARPU Potentiel 5G Max",
-      "definition": "Accroissement du chiffre d'affaires moyen par abonné (ARPU) généré par la bascule vers le forfait 5G Max (+15 €/mois).",
-      "related_terms": ["ARPU Mensuel €", "Gain ARPU 5G Max", "Valeur Client B2B"],
-      "overview": "Calcul de la création de valeur financière nette apportée par la campagne de migration 5G.",
-      "contacts": ["data-governance@data-agents-by-industry.com"],
-      "labels": {"domain": "telecom_finance", "criticality": "high"},
-      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
-      "data_quality_rules": [{"display_name": "Check ARPU Gain Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
-      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "gain_arpu_potentiel_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.gain_arpu_potentiel_eur"}]
-    },
-    {
-      "term": "Micro-Coupures Routeurs B2B & Churn Risk",
-      "definition": "Détection préventive du risque de résiliation des clients professionnels subissant des instabilités de routeurs.",
-      "related_terms": ["Micro-coupures B2B", "Risque Churn %", "Routeur Quartier"],
-      "overview": "Indicateur de vulnérabilité B2B pour le déclenchement des actions de rétention et support prioritaire.",
-      "contacts": ["data-governance@data-agents-by-industry.com"],
-      "labels": {"domain": "telecom_churn", "criticality": "high"},
-      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
-      "data_quality_rules": [{"display_name": "Check Churn Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 100.0}}],
-      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "risque_churn_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.risque_churn_pct"}]
+      "data_quality_rules": [{"display_name": "Check Fees Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "abonnes_master_customers", "column_name": "frais_hors_forfait_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_master_customers.frais_hors_forfait_eur"}]
     },
     {
       "term": "Antennes Relais ARCEP 5G 3.5 GHz",
-      "definition": "Pylônes mobiles 5G opérant sur la bande de fréquences cœur 3.5 GHz (Ultra Haut Débit).",
-      "related_terms": ["Bande Coeur 3.5 GHz", "Station ANFR", "Pylône Mobile"],
-      "overview": "Répertoire officiel des antennes relais assurant la couverture 5G haute performance.",
+      "definition": "Pylônes mobiles 5G opérant sur la bande de fréquences cœur 3.5 GHz.",
+      "related_terms": ["Pylône 3.5 GHz", "Station ANFR"],
+      "overview": "Répertoire officiel des antennes 5G haut débit.",
       "contacts": ["data-governance@data-agents-by-industry.com"],
       "labels": {"domain": "telecom_infrastructure", "criticality": "high"},
       "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
@@ -72,8 +94,8 @@
     {
       "term": "Qualité de Service QoS (Mbps & Latence)",
       "definition": "Mesures réelles de débit descendant (Download), montant (Upload) et ping réseau.",
-      "related_terms": ["Débit Descendant Mbps", "Latence ms", "Qualité de Service QoS"],
-      "overview": "Mesure de la performance effective ressentie par les abonnés en mobilité.",
+      "related_terms": ["Débit Descendant Mbps", "Latence ms"],
+      "overview": "Mesures de la performance effective du réseau.",
       "contacts": ["data-governance@data-agents-by-industry.com"],
       "labels": {"domain": "telecom_qos", "criticality": "high"},
       "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
@@ -82,36 +104,14 @@
     },
     {
       "term": "Incidents Équipements & Respect SLA",
-      "definition": "Tickets de panne matérielle sur pylônes, NRO et PBO avec suivi du statut de rétablissement.",
-      "related_terms": ["Pannes NOC", "Respect SLA", "Intervention Équipe"],
-      "overview": "Suivi opérationnel des temps de résolution des dysfonctionnements majeurs.",
+      "definition": "Tickets de panne matérielle sur pylônes, NRO et PBO avec suivi des SLA.",
+      "related_terms": ["Pannes NOC", "SLA Rétablissement"],
+      "overview": "Supervision des pannes et temps de résolution.",
       "contacts": ["data-governance@data-agents-by-industry.com"],
       "labels": {"domain": "telecom_incidents", "criticality": "high"},
       "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
       "data_quality_rules": [{"display_name": "Check Incident Status", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
       "related_entries": [{"resource_name": "telecom_incidents_equipements_reseau", "column_name": "statut_resolution", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.telecom_incidents_equipements_reseau.statut_resolution"}]
-    },
-    {
-      "term": "Signalements Pannes vs Couverture 100%",
-      "definition": "Alertes d'utilisateurs remontées dans les communes déclarées à 100% de couverture 5G théorique.",
-      "related_terms": ["Signalements Utilisateurs", "Couverture Théorique 100%", "Anomalie Réseau"],
-      "overview": "Rapprochement entre la couverture déclarée et le ressenti réel des usagers.",
-      "contacts": ["data-governance@data-agents-by-industry.com"],
-      "labels": {"domain": "telecom_alerts", "criticality": "medium"},
-      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
-      "data_quality_rules": [{"display_name": "Check Signalements Count", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
-      "related_entries": [{"resource_name": "signalements_dysfonctionnements_utilisateurs", "column_name": "nombre_signalements_panne", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.signalements_dysfonctionnements_utilisateurs.nombre_signalements_panne"}]
-    },
-    {
-      "term": "Retard Déploiement Fibre FttH vs Plan THD",
-      "definition": "Écart départemental de raccordement à la fibre optique par rapport à l'objectif 100% du Plan France Très Haut Débit.",
-      "related_terms": ["Fibre FttH", "Plan France THD", "Retard Déploiement %"],
-      "overview": "Pilotage des priorités d'investissement dans le déploiement du réseau fixe très haut débit.",
-      "contacts": ["data-governance@data-agents-by-industry.com"],
-      "labels": {"domain": "telecom_ftth", "criticality": "high"},
-      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
-      "data_quality_rules": [{"display_name": "Check Lag Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 100.0}}],
-      "related_entries": [{"resource_name": "deploiement_fibre_ftth_departements", "column_name": "retard_deploiement_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.deploiement_fibre_ftth_departements.retard_deploiement_pct"}]
     }
   ]
 }
