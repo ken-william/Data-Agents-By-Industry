@@ -3,13 +3,13 @@
 -- Dataset: telecom_network_ds (Project: data-agents-by-industry)
 -- Relational Architecture linking Official ARCEP "Mon Réseau Mobile" Data,
 -- 2G/3G/4G/5G Towers, QoS Telemetry, Equipment Incidents, B2B/B2C Subscribers,
--- User Incident Alerts, and FttH Fiber Coverage Objectives.
+-- User Incident Alerts, FttH Fiber Coverage, and Data Consumption Forecasting.
 -- ============================================================================
 
 CREATE SCHEMA IF NOT EXISTS `telecom_network_ds`
 OPTIONS (
   location = 'US',
-  description = 'Dataset NetArch : Intelligence réseau télécom français, antennes ARCEP, débits, pannes, churn B2B et campagnes upsell 5G Pro.'
+  description = 'Dataset NetArch : Intelligence réseau télécom français, antennes ARCEP, débits, pannes, abonnés B2B/B2C, appareils 5G, hors-forfait, churn et prédictions de consommation.'
 );
 
 -- 1. Table: arcep_sites_mobiles_metropole (Official ARCEP Mobile Towers & 5G Band Master)
@@ -88,15 +88,18 @@ CREATE OR REPLACE TABLE `telecom_network_ds.abonnes_clients_b2b_b2c` (
   id_client STRING OPTIONS(description="Identifiant unique de l'abonné (ex: CLI-90012)"),
   nom_client STRING OPTIONS(description="Raison sociale entreprise B2B ou nom du client B2C"),
   type_client STRING OPTIONS(description="Type d'abonné : B2B_PROFESSIONNEL ou B2C_PARTICULIER"),
-  technologie_actuelle STRING OPTIONS(description="Raccordement actuel : CUIVRE_ADSL, FIBRE_FTTH, 4G_MOBILE, 5G_MOBILE"),
+  smartphone_modele_appareil STRING OPTIONS(description="Modèle de smartphone ou routeur détenu par le client (ex: iPhone 15 Pro 5G, Samsung S24 5G)"),
   appareil_compatible_5g BOOL OPTIONS(description="TRUE si le smartphone ou routeur du client est compatible 5G"),
-  forfait_actuel_5g BOOL OPTIONS(description="TRUE si le souscription active inclut l'accès au réseau 5G"),
+  forfait_actuel_nom STRING OPTIONS(description="Nom de l'abonnement actuel (ex: Forfait 4G LTE 100 Go, Forfait 4G Pro 150 Go, Forfait 5G Max 250 Go)"),
+  forfait_actuel_5g BOOL OPTIONS(description="TRUE si la souscription active inclut l'accès au réseau 5G"),
+  technologie_actuelle STRING OPTIONS(description="Raccordement actuel : CUIVRE_ADSL, FIBRE_FTTH, 4G_MOBILE, 5G_MOBILE"),
   consommation_donnees_mensuelle_gb NUMERIC OPTIONS(description="Volume de données consommé en Gigaoctets (Go) sur le mois de Mars"),
   quota_donnees_mensuel_gb NUMERIC OPTIONS(description="Quota mensuel de données inclus dans l'abonnement actuel en Go"),
   taux_utilisation_quota_mars_pct NUMERIC OPTIONS(description="Taux de consommation du quota sur le mois de Mars (%)"),
   frais_hors_forfait_eur NUMERIC OPTIONS(description="Frais de dépassement / hors-forfait facturés en Euros (€)"),
   arpu_mensuel_actuel_eur NUMERIC OPTIONS(description="Revenu moyen mensuel actuel (ARPU) facturé au client (€)"),
   arpu_potentiel_5g_max_eur NUMERIC OPTIONS(description="ARPU potentiel estimé après migration vers le Forfait 5G Max / Fibre Pro (€)"),
+  gain_arpu_potentiel_eur NUMERIC OPTIONS(description="Gain moyen de chiffre d'affaires ARPU mensuel généré par la migration 5G Max (€)"),
   commune STRING OPTIONS(description="Commune d'implantation de l'abonné"),
   code_departement STRING OPTIONS(description="Département de résidence"),
   nom_region STRING OPTIONS(description="Région administrative"),
@@ -104,7 +107,7 @@ CREATE OR REPLACE TABLE `telecom_network_ds.abonnes_clients_b2b_b2c` (
   risque_churn_pct NUMERIC OPTIONS(description="Score de risque de résiliation / Churn calculé (%)")
 )
 OPTIONS (
-  description = "Base abonnés B2B et B2C : compatibilité 5G, consommation de données, hors-forfait, risque de résiliation et potentiel d'upsell."
+  description = "Base abonnés B2B et B2C : modèles de smartphones, compatibilité 5G, forfaits 4G/5G, consommation Go, hors-forfait, ARPU et risque de résiliation."
 );
 
 -- 6. Table: signalements_dysfonctionnements_utilisateurs (User Alerts vs 100% Theoretical Coverage)
@@ -129,10 +132,24 @@ CREATE OR REPLACE TABLE `telecom_network_ds.deploiement_fibre_ftth_departements`
   nom_region STRING OPTIONS(description="Région administrative"),
   locaux_raccordables_ftth INT64 OPTIONS(description="Nombre de logements et locaux professionnels raccordables à la Fibre"),
   locaux_totaux_departement INT64 OPTIONS(description="Nombre total de locaux du département"),
-  taux_couverture_ftth_actuel_pct NUMERIC OPTIONS(description="Taux de couverture effectif FttH (%)"),
+  taux_couverture_ftth_actuel_pct NUMERIC OPTIONS(description="Taux de couverture effective FttH (%)"),
   objectif_plan_france_thd_pct NUMERIC OPTIONS(description="Objectif national du Plan France Très Haut Débit (100 %)"),
   retard_deploiement_pct NUMERIC OPTIONS(description="Écart / Retard de déploiement en points de pourcentage par rapport à l'objectif")
 )
 OPTIONS (
   description = "Suivi départemental du retard de déploiement de la fibre optique FttH par rapport au Plan France Très Haut Débit."
+);
+
+-- 8. Table: consommation_historique_trimestrielle_previsions (Q1 Data Consumption & Q2 Forecasting)
+CREATE OR REPLACE TABLE `telecom_network_ds.consommation_historique_trimestrielle_previsions` (
+  periode_id STRING OPTIONS(description="Identifiant de période (ex: PER-2025-01)"),
+  mois_label STRING OPTIONS(description="Mois d'observation ou de prévision (ex: Janvier 2025, Avril 2025 (Prévision))"),
+  trimestre STRING OPTIONS(description="Trimestre comptable (ex: Q1 2025, Q2 2025)"),
+  est_prevision BOOL OPTIONS(description="FALSE pour les données historiques réelles Q1, TRUE pour les prévisions Q2"),
+  consommation_moyenne_par_abonne_go NUMERIC OPTIONS(description="Consommation moyenne de données mensuelle par abonné (Go)"),
+  consommation_totale_reseau_tb NUMERIC OPTIONS(description="Consommation totale cumulée sur le réseau en Téraoctets (TB)"),
+  taux_croissance_mensuel_pct NUMERIC OPTIONS(description="Taux de croissance mensuel du trafic de données (%)")
+)
+OPTIONS (
+  description = "Historique réel du 1er trimestre et prévisions de consommation de données pour le 2ème trimestre."
 );

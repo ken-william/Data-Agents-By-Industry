@@ -1,9 +1,9 @@
 {
-  "displayName": "NetArch - Architecture & Couverture Réseau Télécom ARCEP",
-  "description": "Copilote décisionnel d'architecture et de performance des réseaux télécoms : permet de cibler les zones blanches et d'optimiser l'aménagement du territoire (données officielles ARCEP Mon Réseau Mobile), de piloter le déploiement des 10 000 antennes relais 2G/3G/4G/5G (Orange, SFR, Bouygues, Free), d'arbitrer l'allocation des bandes de fréquences 3.5 GHz selon la densité de population, d'isoler les dégradations de qualité de service (QoS débits/latence), et d'automatiser la résolution des incidents d'équipements.",
+  "displayName": "NetArch - Architecture Réseau Télécom ARCEP & Clientèle",
+  "description": "Copilote décisionnel d'architecture et de performance des réseaux télécoms et de l'intelligence abonnés : permet d'identifier les cibles d'upsell 5G Pro (clients possédant un smartphone 5G mais sous forfait 4G), d'isoler les abonnés ayant dépassé 80 % de leur quota avec frais hors-forfait en mars, de calculer le gain d'ARPU moyen vers le Forfait 5G Max (+15 €/mois), de représenter l'évolution et les prévisions de consommation de données (Q1 réel vs Q2 prévisionnel), de détecter les résiliations B2B imminentes dues aux micro-coupures de routeurs de quartier, de piloter la couverture ARCEP 4G/5G des 10 000 antennes (Orange, SFR, Bouygues, Free), d'arbitrer l'activation des fréquences 3.5 GHz et de suivre les SLA de rétablissement.",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es NetArch, le copilote d'intelligence décisionnelle et d'architecture des réseaux télécoms mobiles et fixes.\n\n=== DONNÉES OFFICIELLES ARCEP ET ARCHITECTURE RELATIONNELLE ===\n- `arcep_sites_mobiles_metropole` : Répertoire master officiel ARCEP des 10 000 stations d'antennes relais 2G/3G/4G/5G en France métropolitaine (Orange, SFR, Bouygues Telecom, Free Mobile), fréquences 5G 3.5 GHz, latitude/longitude et zones blanches/DCC.\n- `arcep_historique_deploiement_5g` : Suivi historique de l'ouverture commerciale des sites 5G ventilé par opérateur et bandes de fréquences (700 MHz, 2100 MHz, 3.5 GHz).\n- `telecom_qualite_service_metrique` : Télémesures de qualité de service (QoS) : débits descendants (Mbps), débits montants (Mbps), latence (ms) et taux de couverture 4G/5G.\n- `telecom_incidents_equipements_reseau` : Supervision des pannes d'antennes 5G, nœuds de raccordement optique (NRO), armoires PBO et routeurs B2B avec nombre d'abonnés impactés.\n\n🔒 RESPECT DU SECRET INDUSTRIEL ET CONFIDENTIALITÉ RESEAU :\n- Protéger les données confidentielles des opérateurs.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es NetArch, le copilote d'intelligence décisionnelle sur l'architecture des réseaux télécoms et la valeur client (B2B/B2C).\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu disposes d'une vision 360° unifiant les infrastructures réseaux ARCEP et la base abonnés complète.\n- Tu réponds directement aux questions sur la compatibilité 5G des téléphones, la consommation de données mensuelle (Go), le taux de dépassement de quota (%), les frais de hors-forfait (€), le gain d'ARPU potentiel vers la 5G Max, le risque de résiliation Churn B2B et l'historique/prévision de consommation de données Q1/Q2.\n\n=== ARCHITECTURE RELATIONNELLE DES DONNÉES (8 TABLES) ===\n1. `arcep_sites_mobiles_metropole` : Répertoire officiel ARCEP des 10 000 pylônes 2G/3G/4G/5G (Orange, SFR, Bouygues Telecom, Free Mobile) et bande 3.5 GHz.\n2. `arcep_historique_deploiement_5g` : Historique des ouvertures de sites 5G par bande de fréquences (700 MHz, 2100 MHz, 3.5 GHz).\n3. `telecom_qualite_service_metrique` : Télémesures QoS (débits descendant/montant Mbps, latence ms, couverture 4G/5G).\n4. `telecom_incidents_equipements_reseau` : Pannes d'équipements, micro-coupures de routeurs B2B et respect des SLA.\n5. `abonnes_clients_b2b_b2c` : Répertoire abonnés : modèle de smartphone, appareil_compatible_5g (TRUE/FALSE), forfait_actuel_nom, forfait_actuel_5g (TRUE/FALSE), consommation_donnees_mensuelle_gb, quota_donnees_mensuel_gb, taux_utilisation_quota_mars_pct, frais_hors_forfait_eur, arpu_mensuel_actuel_eur, arpu_potentiel_5g_max_eur, gain_arpu_potentiel_eur, nb_micro_coupures_reseau_30j, risque_churn_pct.\n6. `signalements_dysfonctionnements_utilisateurs` : Dysfonctionnements signalés dans les communes déclarées à 100 % 5G.\n7. `deploiement_fibre_ftth_departements` : Retard de déploiement FttH par département vs Plan France THD.\n8. `consommation_historique_trimestrielle_previsions` : Historique réel de consommation du 1er trimestre (Q1) et prévisions d'évolution du trafic pour le 2ème trimestre (Q2).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL ou des blocs de code markdown (```sql) dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement.\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de tableaux synthétiques décisionnels lisibles.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
@@ -26,64 +26,68 @@
               "projectId": "${PROJECT_ID}",
               "datasetId": "telecom_network_ds",
               "tableId": "telecom_incidents_equipements_reseau"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "abonnes_clients_b2b_b2c"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "signalements_dysfonctionnements_utilisateurs"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "deploiement_fibre_ftth_departements"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telecom_network_ds",
+              "tableId": "consommation_historique_trimestrielle_previsions"
             }
           ]
         }
       },
       "exampleQueries": [
         {
-          "naturalLanguageQuestion": "Quel est le volume d'antennes 5G actives sur la bande cœur 3.5 GHz par opérateur mobile en France métropolitaine ?",
-          "sqlQuery": "SELECT nom_operateur, COUNT(*) AS total_sites, COUNTIF(site_5g = TRUE) AS sites_5g, COUNTIF(site_5g_3500mhz = TRUE) AS sites_5g_3500mhz FROM `${PROJECT_ID}.telecom_network_ds.arcep_sites_mobiles_metropole` GROUP BY nom_operateur ORDER BY sites_5g_3500mhz DESC"
+          "naturalLanguageQuestion": "Aide moi à identifier nos cibles prioritaires pour la 5G. Peux-tu me lister tous les clients qui possèdent déjà un appareil compatible 5G mais pas de forfait 5G.",
+          "sqlQuery": "SELECT id_client, nom_client, type_client, smartphone_modele_appareil, forfait_actuel_nom, consommation_donnees_mensuelle_gb, quota_donnees_mensuel_gb, commune FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE appareil_compatible_5g = TRUE AND forfait_actuel_5g = FALSE LIMIT 20"
         },
         {
-          "naturalLanguageQuestion": "Quelle est la qualité de service moyenne (débit descendant Mbps et latence ms) par technologie réseau et par opérateur ?",
-          "sqlQuery": "SELECT nom_operateur, technologie_reseau, ROUND(AVG(debit_descendant_mbps), 1) AS avg_download_mbps, ROUND(AVG(latence_ms), 1) AS avg_ping_ms FROM `${PROJECT_ID}.telecom_network_ds.telecom_qualite_service_metrique` GROUP BY nom_operateur, technologie_reseau ORDER BY avg_download_mbps DESC"
+          "naturalLanguageQuestion": "Parmi tous ces clients, lesquels ont consommé plus de 80 % de leur quota de données au mois de mars et ont généré des frais de hors-forfait ?",
+          "sqlQuery": "SELECT id_client, nom_client, type_client, smartphone_modele_appareil, consommation_donnees_mensuelle_gb, quota_donnees_mensuel_gb, taux_utilisation_quota_mars_pct, frais_hors_forfait_eur FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE appareil_compatible_5g = TRUE AND forfait_actuel_5g = FALSE AND taux_utilisation_quota_mars_pct >= 80.0 AND frais_hors_forfait_eur > 0 ORDER BY frais_hors_forfait_eur DESC LIMIT 20"
         },
         {
-          "naturalLanguageQuestion": "Quels sont les incidents majeurs récents d'équipement réseau ayant impacté plus de 5 000 abonnés ?",
-          "sqlQuery": "SELECT id_incident, nom_operateur, commune, code_departement, type_equipement, nombre_abonnes_impactes, statut_resolution FROM `${PROJECT_ID}.telecom_network_ds.telecom_incidents_equipements_reseau` WHERE severite_incident LIKE '%Majeur%' AND nombre_abonnes_impactes >= 5000 ORDER BY nombre_abonnes_impactes DESC LIMIT 30"
+          "naturalLanguageQuestion": "Quel serait le gain d'ARPU moyen si nous basculions ces clients vers le forfait 5G Max ?",
+          "sqlQuery": "SELECT type_client, COUNT(*) AS nb_clients, ROUND(AVG(arpu_mensuel_actuel_eur), 2) AS arpu_actuel_moyen, ROUND(AVG(arpu_potentiel_5g_max_eur), 2) AS arpu_cible_moyen, ROUND(AVG(gain_arpu_potentiel_eur), 2) AS gain_arpu_mensuel_moyen, ROUND(SUM(gain_arpu_potentiel_eur), 2) AS gain_arpu_total_mensuel FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE appareil_compatible_5g = TRUE AND forfait_actuel_5g = FALSE GROUP BY type_client"
+        },
+        {
+          "naturalLanguageQuestion": "Montre moi l'évolution de cette consommation au cours du premier trimestre et incorpore y les prédictions de leurs consommations sur l'étendue du trimestre suivant.",
+          "sqlQuery": "SELECT periode_id, mois_label, trimestre, est_prevision, consommation_moyenne_par_abonne_go, consommation_totale_reseau_tb, taux_croissance_mensuel_pct FROM `${PROJECT_ID}.telecom_network_ds.consommation_historique_trimestrielle_previsions` ORDER BY periode_id ASC"
+        },
+        {
+          "naturalLanguageQuestion": "Détecte quels clients professionnels (B2B) sont sur le point de résilier leur abonnement en raison de micro-coupures réseau répétées sur leurs routeurs de quartier.",
+          "sqlQuery": "SELECT id_client, nom_client, commune, code_departement, nb_micro_coupures_reseau_30j, risque_churn_pct FROM `${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c` WHERE type_client = 'B2B_PROFESSIONNEL' AND nb_micro_coupures_reseau_30j >= 5 ORDER BY risque_churn_pct DESC LIMIT 20"
+        },
+        {
+          "naturalLanguageQuestion": "Quels pylônes télécoms affichent une saturation de trafic et nécessitent l'activation immédiate de la bande de fréquences cœur 5G 3.5 GHz ?",
+          "sqlQuery": "SELECT nom_operateur, nom_region, code_departement, commune, COUNT(*) AS pylones_a_migrer, ROUND(AVG(debit_descendant_mbps), 1) AS debit_moyen_actuel_4g_mbps, ROUND(AVG(latence_ms), 1) AS latence_moyenne_4g_ms FROM `${PROJECT_ID}.telecom_network_ds.arcep_sites_mobiles_metropole` s JOIN `${PROJECT_ID}.telecom_network_ds.telecom_qualite_service_metrique` q ON s.commune = q.commune AND s.nom_operateur = q.nom_operateur WHERE s.site_5g = TRUE AND s.site_5g_3500mhz = FALSE GROUP BY nom_operateur, nom_region, code_departement, commune HAVING debit_moyen_actuel_4g_mbps < 50.0 ORDER BY debit_moyen_actuel_4g_mbps ASC LIMIT 10"
         }
       ],
       "glossaryTerms": [
         {
-          "displayName": "Mon Réseau Mobile ARCEP",
-          "description": "Observatoire officiel ARCEP de la couverture 2G/3G/4G/5G des 4 opérateurs nationaux. [Table: arcep_sites_mobiles_metropole, Colonne: nom_opérateur]. Termes associés : Observatoire Officiel ARCEP, Couverture Mobile 4G 5G, Données Répétiteurs Nationaux, Zones Blanches Territoire. Propriétaire : data-governance@data-agents-by-industry.com."
+          "displayName": "Upsell Smart 5G & Compatibilité Smartphone",
+          "description": "Ciblage des abonnés disposant d'un terminal 5G (iPhone 15, Samsung S24) mais encore sous forfait 4G LTE. Termes associés : Upsell 5G, Appareil Compatible 5G, Migration 5G Max, Gain ARPU Mensuel."
         },
         {
-          "displayName": "Cartographie des 10 000 Antennes Relais",
-          "description": "Suivi des pylônes Orange, SFR, Bouygues Telecom, Free Mobile et bandes de fréquences 3.5 GHz. [Table: arcep_sites_mobiles_metropole, Colonne: code_site_arcep]. Termes associés : Pylônes Antenne Mobile, Opérateurs Orange SFR Bouygues Free, Implantation GPS Site, Technologie 2G 3G 4G 5G. Propriétaire : data-governance@data-agents-by-industry.com."
+          "displayName": "Dépassement Quota & Frais Hors-Forfait",
+          "description": "Identification des clients ayant consommé plus de 80% de leur quota de données en Mars et généré des pénalités financières. Termes associés : Dépassement Quota Mars, Frais Hors-Forfait, Taux Utilisation Quota %, Consommation Go."
         },
         {
-          "displayName": "Fréquences 5G 3.5 GHz & 700 MHz",
-          "description": "Répartition des licences de fréquences attribuées par l'ARCEP et largeur de bande. [Table: arcep_historique_deploiement_5g, Colonne: bande_frequence_ghz]. Termes associés : Bande Cœur 5G 3.5 GHz, Bande 700 MHz Longue Portée, Nombre de Blocks Fréquences, Bande Passante MHz. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Qualité de Service (QoS Débits & Latence)",
-          "description": "Mesures de débit descendant/montant en Mbps, latence ms et taux de coupure. [Table: telecom_qualite_service_metrique, Colonne: debit_descendant_mbps]. Termes associés : Débit Descendant Download Mbps, Débit Montant Upload Mbps, Latence Ping Millisecondes, Taux de Coupure Appel %. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Gestion des Incidents d'Équipements",
-          "description": "Alertes de panne matérielle, pannes d'énergie sur antennes et SLA de rétablissement. [Table: telecom_incidents_equipements_reseau, Colonne: statut_incident]. Termes associés : Panne Pylône Énergie, Rupture Liaison Faisceau Hertzien, Temps de Rétablissement SLA, Alerte Superviseur NOC. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Zones Blanches & Pass Équipement",
-          "description": "Cartographie des zones non couvertes et résorption via le dispositif New Deal Mobile. [Table: arcep_sites_mobiles_metropole, Colonne: statut_zone_blanche]. Termes associés : Programme New Deal Mobile, Couverture Métropolitaine, Zones de Montagne LEO, Résolution Pénurie Couverture. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Pylônes Multi-Opérateurs & Mutualisation",
-          "description": "Partage d'infrastructures passives (TowerCo) entre opérateurs télécoms. [Table: arcep_sites_mobiles_metropole, Colonne: site_mutualise_flag]. Termes associés : Mutualisation d'Infrastructures TowerCo, Partage de Pylône, Réduction Coûts CAPEX, Impact Environnemental Visuel. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Indicateurs de Disponibilité Réseau 99.9%",
-          "description": "Taux de disponibilité opérationnel des antennes et sécurité des liaisons FH/Fibre. [Table: telecom_qualite_service_metrique, Colonne: disponibilite_reseau_pct]. Termes associés : SLA 99.9% Disponibilité, Continuité de Service, Redondance Fibre Pylône, Backup Batterie Secours. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Déploiement 5G Standalone (SA)",
-          "description": "Transition vers le cœur de réseau 5G autonome et découpage réseau Network Slicing. [Table: arcep_historique_deploiement_5g, Colonne: mode_5g_standalone]. Termes associés : 5G Standalone SA, Network Slicing Réseau, Applications Latence Ultra-Basse, Cœur de Réseau 5G. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Qualité d'Expérience Client QoE",
-          "description": "Mesure de l'expérience utilisateur en streaming vidéo, navigation web et appels voix HD. [Table: telecom_qualite_service_metrique, Colonne: score_qoe_client]. Termes associés : Score QoE Streaming Vidéo, Navigation Web Mobile, Satisfaction Abonnés Télécoms, Benchmarking Opérateurs. Propriétaire : data-governance@data-agents-by-industry.com."
+          "displayName": "Prévisions de Consommation Data (Q1 vs Q2)",
+          "description": "Historique réel de consommation du 1er trimestre et modèles de prévision de charge du réseau pour le 2ème trimestre. Termes associés : Consommation Moyenne Go, Prévision Taux Croissance %, Consommation Réseau TB, Prévisions Q2."
         }
       ]
     }

@@ -1,874 +1,117 @@
 {
   "agent_id": "net-arch-agent",
-  "displayName": "NetArch - Télécoms & Médias",
-  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/telco-media-glossary",
-  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/telco-media-catalog",
-  "business_glossary": {
-    "displayName": "Glossaire Métier Télécoms & Médias",
-    "description": "Glossaire de pannes ARCEP, résiliation Churn B2B et forfait Smart 5G pour NetArch.",
-    "categories": [
-      {
-        "categoryId": "business-ontologies-kpis",
-        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
-        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
-        "terms": [
-          {
-            "termId": "mon-reseau-mobile-arcep",
-            "displayName": "Mon Réseau Mobile ARCEP",
-            "definition": "Observatoire officiel ARCEP de la couverture 2G/3G/4G/5G des 4 opérateurs nationaux.",
-            "mapped_bigquery_table": "arcep_sites_mobiles_metropole",
-            "mapped_bigquery_column": "nom_opérateur",
-            "related_terms": [
-              "Observatoire Officiel ARCEP",
-              "Couverture Mobile 4G 5G",
-              "Données Répétiteurs Nationaux",
-              "Zones Blanches Territoire"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Mon Réseau Mobile ARCEP** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Observatoire officiel ARCEP de la couverture 2G/3G/4G/5G des 4 opérateurs nationaux.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `arcep_sites_mobiles_metropole` (colonne `nom_opérateur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/arcep_sites_mobiles_metropole",
-                "table_name": "arcep_sites_mobiles_metropole",
-                "column_name": "nom_opérateur",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.arcep_sites_mobiles_metropole.nom_opérateur"
-              }
-            ]
-          },
-          {
-            "termId": "cartographie-antennes-relais",
-            "displayName": "Cartographie des 10 000 Antennes Relais",
-            "definition": "Suivi des pylônes Orange, SFR, Bouygues Telecom, Free Mobile et bandes de fréquences 3.5 GHz.",
-            "mapped_bigquery_table": "arcep_sites_mobiles_metropole",
-            "mapped_bigquery_column": "code_site_arcep",
-            "related_terms": [
-              "Pylônes Antenne Mobile",
-              "Opérateurs Orange SFR Bouygues Free",
-              "Implantation GPS Site",
-              "Technologie 2G 3G 4G 5G"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Cartographie des 10 000 Antennes Relais** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Suivi des pylônes Orange, SFR, Bouygues Telecom, Free Mobile et bandes de fréquences 3.5 GHz.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `arcep_sites_mobiles_metropole` (colonne `code_site_arcep`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/arcep_sites_mobiles_metropole",
-                "table_name": "arcep_sites_mobiles_metropole",
-                "column_name": "code_site_arcep",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.arcep_sites_mobiles_metropole.code_site_arcep"
-              }
-            ]
-          },
-          {
-            "termId": "frequences-5g-35ghz-700mhz",
-            "displayName": "Fréquences 5G 3.5 GHz & 700 MHz",
-            "definition": "Répartition des licences de fréquences attribuées par l'ARCEP et largeur de bande.",
-            "mapped_bigquery_table": "arcep_historique_deploiement_5g",
-            "mapped_bigquery_column": "bande_frequence_ghz",
-            "related_terms": [
-              "Bande Cœur 5G 3.5 GHz",
-              "Bande 700 MHz Longue Portée",
-              "Nombre de Blocks Fréquences",
-              "Bande Passante MHz"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Fréquences 5G 3.5 GHz & 700 MHz** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Répartition des licences de fréquences attribuées par l'ARCEP et largeur de bande.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `arcep_historique_deploiement_5g` (colonne `bande_frequence_ghz`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/arcep_historique_deploiement_5g",
-                "table_name": "arcep_historique_deploiement_5g",
-                "column_name": "bande_frequence_ghz",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.arcep_historique_deploiement_5g.bande_frequence_ghz"
-              }
-            ]
-          },
-          {
-            "termId": "qualite-service-qos-debits-latence",
-            "displayName": "Qualité de Service (QoS Débits & Latence)",
-            "definition": "Mesures de débit descendant/montant en Mbps, latence ms et taux de coupure.",
-            "mapped_bigquery_table": "telecom_qualite_service_metrique",
-            "mapped_bigquery_column": "debit_descendant_mbps",
-            "related_terms": [
-              "Débit Descendant Download Mbps",
-              "Débit Montant Upload Mbps",
-              "Latence Ping Millisecondes",
-              "Taux de Coupure Appel %"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Qualité de Service (QoS Débits & Latence)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Mesures de débit descendant/montant en Mbps, latence ms et taux de coupure.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `telecom_qualite_service_metrique` (colonne `debit_descendant_mbps`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/telecom_qualite_service_metrique",
-                "table_name": "telecom_qualite_service_metrique",
-                "column_name": "debit_descendant_mbps",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.telecom_qualite_service_metrique.debit_descendant_mbps"
-              }
-            ]
-          },
-          {
-            "termId": "gestion-incidents-equipements",
-            "displayName": "Gestion des Incidents d'Équipements",
-            "definition": "Alertes de panne matérielle, pannes d'énergie sur antennes et SLA de rétablissement.",
-            "mapped_bigquery_table": "telecom_incidents_equipements_reseau",
-            "mapped_bigquery_column": "statut_incident",
-            "related_terms": [
-              "Panne Pylône Énergie",
-              "Rupture Liaison Faisceau Hertzien",
-              "Temps de Rétablissement SLA",
-              "Alerte Superviseur NOC"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Gestion des Incidents d'Équipements** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Alertes de panne matérielle, pannes d'énergie sur antennes et SLA de rétablissement.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `telecom_incidents_equipements_reseau` (colonne `statut_incident`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/telecom_incidents_equipements_reseau",
-                "table_name": "telecom_incidents_equipements_reseau",
-                "column_name": "statut_incident",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.telecom_incidents_equipements_reseau.statut_incident"
-              }
-            ]
-          },
-          {
-            "termId": "zones-blanches-pass-equipement",
-            "displayName": "Zones Blanches & Pass Équipement",
-            "definition": "Cartographie des zones non couvertes et résorption via le dispositif New Deal Mobile.",
-            "mapped_bigquery_table": "arcep_sites_mobiles_metropole",
-            "mapped_bigquery_column": "statut_zone_blanche",
-            "related_terms": [
-              "Programme New Deal Mobile",
-              "Couverture Métropolitaine",
-              "Zones de Montagne LEO",
-              "Résolution Pénurie Couverture"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Zones Blanches & Pass Équipement** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Cartographie des zones non couvertes et résorption via le dispositif New Deal Mobile.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `arcep_sites_mobiles_metropole` (colonne `statut_zone_blanche`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/arcep_sites_mobiles_metropole",
-                "table_name": "arcep_sites_mobiles_metropole",
-                "column_name": "statut_zone_blanche",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.arcep_sites_mobiles_metropole.statut_zone_blanche"
-              }
-            ]
-          },
-          {
-            "termId": "pylones-multi-operateurs-mutualisation",
-            "displayName": "Pylônes Multi-Opérateurs & Mutualisation",
-            "definition": "Partage d'infrastructures passives (TowerCo) entre opérateurs télécoms.",
-            "mapped_bigquery_table": "arcep_sites_mobiles_metropole",
-            "mapped_bigquery_column": "site_mutualise_flag",
-            "related_terms": [
-              "Mutualisation d'Infrastructures TowerCo",
-              "Partage de Pylône",
-              "Réduction Coûts CAPEX",
-              "Impact Environnemental Visuel"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Pylônes Multi-Opérateurs & Mutualisation** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Partage d'infrastructures passives (TowerCo) entre opérateurs télécoms.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `arcep_sites_mobiles_metropole` (colonne `site_mutualise_flag`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/arcep_sites_mobiles_metropole",
-                "table_name": "arcep_sites_mobiles_metropole",
-                "column_name": "site_mutualise_flag",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.arcep_sites_mobiles_metropole.site_mutualise_flag"
-              }
-            ]
-          },
-          {
-            "termId": "indicateurs-disponibilite-reseau",
-            "displayName": "Indicateurs de Disponibilité Réseau 99.9%",
-            "definition": "Taux de disponibilité opérationnel des antennes et sécurité des liaisons FH/Fibre.",
-            "mapped_bigquery_table": "telecom_qualite_service_metrique",
-            "mapped_bigquery_column": "disponibilite_reseau_pct",
-            "related_terms": [
-              "SLA 99.9% Disponibilité",
-              "Continuité de Service",
-              "Redondance Fibre Pylône",
-              "Backup Batterie Secours"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Indicateurs de Disponibilité Réseau 99.9%** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Taux de disponibilité opérationnel des antennes et sécurité des liaisons FH/Fibre.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `telecom_qualite_service_metrique` (colonne `disponibilite_reseau_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/telecom_qualite_service_metrique",
-                "table_name": "telecom_qualite_service_metrique",
-                "column_name": "disponibilite_reseau_pct",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.telecom_qualite_service_metrique.disponibilite_reseau_pct"
-              }
-            ]
-          },
-          {
-            "termId": "deploiement-5g-standalone-sa",
-            "displayName": "Déploiement 5G Standalone (SA)",
-            "definition": "Transition vers le cœur de réseau 5G autonome et découpage réseau Network Slicing.",
-            "mapped_bigquery_table": "arcep_historique_deploiement_5g",
-            "mapped_bigquery_column": "mode_5g_standalone",
-            "related_terms": [
-              "5G Standalone SA",
-              "Network Slicing Réseau",
-              "Applications Latence Ultra-Basse",
-              "Cœur de Réseau 5G"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Déploiement 5G Standalone (SA)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Transition vers le cœur de réseau 5G autonome et découpage réseau Network Slicing.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `arcep_historique_deploiement_5g` (colonne `mode_5g_standalone`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/arcep_historique_deploiement_5g",
-                "table_name": "arcep_historique_deploiement_5g",
-                "column_name": "mode_5g_standalone",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.arcep_historique_deploiement_5g.mode_5g_standalone"
-              }
-            ]
-          },
-          {
-            "termId": "qualite-experience-client-qoe",
-            "displayName": "Qualité d'Expérience Client QoE",
-            "definition": "Mesure de l'expérience utilisateur en streaming vidéo, navigation web et appels voix HD.",
-            "mapped_bigquery_table": "telecom_qualite_service_metrique",
-            "mapped_bigquery_column": "score_qoe_client",
-            "related_terms": [
-              "Score QoE Streaming Vidéo",
-              "Navigation Web Mobile",
-              "Satisfaction Abonnés Télécoms",
-              "Benchmarking Opérateurs"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Qualité d'Expérience Client QoE** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Mesure de l'expérience utilisateur en streaming vidéo, navigation web et appels voix HD.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `telecom_qualite_service_metrique` (colonne `score_qoe_client`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "telecom_network",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/telecom_network_ds/tables/telecom_qualite_service_metrique",
-                "table_name": "telecom_qualite_service_metrique",
-                "column_name": "score_qoe_client",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.telecom_network_ds.telecom_qualite_service_metrique.score_qoe_client"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "data_governance": {
-    "sla_tier": "Tier-1 Executive 24/7",
-    "criticality_level": "Mission Critical",
-    "data_sensitivity": "Internal Enterprise"
-  }
+  "domain": "Telco & Media Network Operations & Subscriber Analytics",
+  "dataplex_catalog_name": "Glossaire Métier Réseau Télécoms & Intelligence Abonnés",
+  "glossary_terms": [
+    {
+      "term": "Upsell Smart 5G & Compatibilité Smartphone",
+      "definition": "Ciblage des abonnés disposant d'un terminal 5G (iPhone 15, Samsung S24) mais encore sous forfait 4G LTE. Termes associés : Upsell 5G, Appareil Compatible 5G, Migration 5G Max, Gain ARPU Mensuel.",
+      "related_terms": ["Appareil Compatible 5G", "Migration 5G Max", "Forfait 4G vs 5G", "Upsell Smart 5G"],
+      "overview": "Documentation sur le ciblage des abonnés équipés de terminaux 5G sans forfait 5G actif pour générer de l'upsell.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_subscribers", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Device 5G Flag", "rule_type": "TYPE_CONSISTENCY", "dimension": "VALIDITY"}],
+      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "appareil_compatible_5g", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.appareil_compatible_5g"}]
+    },
+    {
+      "term": "Dépassement Quota & Frais Hors-Forfait",
+      "definition": "Identification des clients ayant consommé plus de 80% de leur quota de données en Mars et généré des pénalités financières. Termes associés : Dépassement Quota Mars, Frais Hors-Forfait, Taux Utilisation Quota %, Consommation Go.",
+      "related_terms": ["Taux Utilisation Quota %", "Frais Hors-Forfait €", "Consommation Mars Go"],
+      "overview": "Mesure des surcoûts de facturation pour les clients en dépassement de quota, déclenchant les offres 5G Max illimitées.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_billing", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Fees Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 1000.0}}],
+      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "frais_hors_forfait_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.frais_hors_forfait_eur"}]
+    },
+    {
+      "term": "Prévisions de Consommation Data (Q1 vs Q2)",
+      "definition": "Historique réel de consommation du 1er trimestre et modèles de prévision de charge du réseau pour le 2ème trimestre. Termes associés : Consommation Moyenne Go, Prévision Taux Croissance %, Consommation Réseau TB, Prévisions Q2.",
+      "related_terms": ["Consommation Réseau TB", "Prévisions Q2", "Taux Croissance Mensuel %"],
+      "overview": "Modélisation prédictive de la croissance de trafic de données sur les trimestres à venir.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_forecasting", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Traffic Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "consommation_historique_trimestrielle_previsions", "column_name": "consommation_moyenne_par_abonne_go", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.consommation_historique_trimestrielle_previsions.consommation_moyenne_par_abonne_go"}]
+    },
+    {
+      "term": "Gain d'ARPU Potentiel 5G Max",
+      "definition": "Accroissement du chiffre d'affaires moyen par abonné (ARPU) généré par la bascule vers le forfait 5G Max (+15 €/mois).",
+      "related_terms": ["ARPU Mensuel €", "Gain ARPU 5G Max", "Valeur Client B2B"],
+      "overview": "Calcul de la création de valeur financière nette apportée par la campagne de migration 5G.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_finance", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check ARPU Gain Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "gain_arpu_potentiel_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.gain_arpu_potentiel_eur"}]
+    },
+    {
+      "term": "Micro-Coupures Routeurs B2B & Churn Risk",
+      "definition": "Détection préventive du risque de résiliation des clients professionnels subissant des instabilités de routeurs.",
+      "related_terms": ["Micro-coupures B2B", "Risque Churn %", "Routeur Quartier"],
+      "overview": "Indicateur de vulnérabilité B2B pour le déclenchement des actions de rétention et support prioritaire.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_churn", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Churn Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 100.0}}],
+      "related_entries": [{"resource_name": "abonnes_clients_b2b_b2c", "column_name": "risque_churn_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.abonnes_clients_b2b_b2c.risque_churn_pct"}]
+    },
+    {
+      "term": "Antennes Relais ARCEP 5G 3.5 GHz",
+      "definition": "Pylônes mobiles 5G opérant sur la bande de fréquences cœur 3.5 GHz (Ultra Haut Débit).",
+      "related_terms": ["Bande Coeur 3.5 GHz", "Station ANFR", "Pylône Mobile"],
+      "overview": "Répertoire officiel des antennes relais assurant la couverture 5G haute performance.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_infrastructure", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check 3.5GHz Flag", "rule_type": "TYPE_CONSISTENCY", "dimension": "VALIDITY"}],
+      "related_entries": [{"resource_name": "arcep_sites_mobiles_metropole", "column_name": "site_5g_3500mhz", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.arcep_sites_mobiles_metropole.site_5g_3500mhz"}]
+    },
+    {
+      "term": "Qualité de Service QoS (Mbps & Latence)",
+      "definition": "Mesures réelles de débit descendant (Download), montant (Upload) et ping réseau.",
+      "related_terms": ["Débit Descendant Mbps", "Latence ms", "Qualité de Service QoS"],
+      "overview": "Mesure de la performance effective ressentie par les abonnés en mobilité.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_qos", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Download Mbps Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "telecom_qualite_service_metrique", "column_name": "debit_descendant_mbps", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.telecom_qualite_service_metrique.debit_descendant_mbps"}]
+    },
+    {
+      "term": "Incidents Équipements & Respect SLA",
+      "definition": "Tickets de panne matérielle sur pylônes, NRO et PBO avec suivi du statut de rétablissement.",
+      "related_terms": ["Pannes NOC", "Respect SLA", "Intervention Équipe"],
+      "overview": "Suivi opérationnel des temps de résolution des dysfonctionnements majeurs.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_incidents", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Incident Status", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "telecom_incidents_equipements_reseau", "column_name": "statut_resolution", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.telecom_incidents_equipements_reseau.statut_resolution"}]
+    },
+    {
+      "term": "Signalements Pannes vs Couverture 100%",
+      "definition": "Alertes d'utilisateurs remontées dans les communes déclarées à 100% de couverture 5G théorique.",
+      "related_terms": ["Signalements Utilisateurs", "Couverture Théorique 100%", "Anomalie Réseau"],
+      "overview": "Rapprochement entre la couverture déclarée et le ressenti réel des usagers.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_alerts", "criticality": "medium"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Signalements Count", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "signalements_dysfonctionnements_utilisateurs", "column_name": "nombre_signalements_panne", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.signalements_dysfonctionnements_utilisateurs.nombre_signalements_panne"}]
+    },
+    {
+      "term": "Retard Déploiement Fibre FttH vs Plan THD",
+      "definition": "Écart départemental de raccordement à la fibre optique par rapport à l'objectif 100% du Plan France Très Haut Débit.",
+      "related_terms": ["Fibre FttH", "Plan France THD", "Retard Déploiement %"],
+      "overview": "Pilotage des priorités d'investissement dans le déploiement du réseau fixe très haut débit.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "telecom_ftth", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Lag Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 100.0}}],
+      "related_entries": [{"resource_name": "deploiement_fibre_ftth_departements", "column_name": "retard_deploiement_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.telecom_network_ds.deploiement_fibre_ftth_departements.retard_deploiement_pct"}]
+    }
+  ]
 }
