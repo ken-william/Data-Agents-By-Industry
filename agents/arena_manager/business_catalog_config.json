@@ -1,0 +1,59 @@
+{
+  "agent_id": "arena-manager-agent",
+  "displayName": "ArenaManager - Sport & Infrastructures",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/sports-infrastructure-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/sports-infrastructure-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier Sport & Infrastructures",
+    "description": "Glossaire du recensement RES, gaspillage énergétique et subventions ANS pour ArenaManager.",
+    "categories": [
+      {
+        "categoryId": "efficacite-energetique",
+        "displayName": "Catégorie : Chasse au Gaspillage Énergétique",
+        "description": "Audit thermique des stades et détection des surconsommations avec faible usage",
+        "terms": [
+          {
+            "termId": "gaspillage-energetique-stades",
+            "displayName": "Indice de Gaspillage Énergétique Stades (kWh/m2)",
+            "definition": "Surconsommation thermique combinée à un sous-usage <30% en semaine.",
+            "mapped_bigquery_column": "gaspillage_kwh_par_m2",
+            "mapped_bigquery_table": "ministere_sports_equipements"
+          },
+          {
+            "termId": "surconsommation-kwh-m2",
+            "displayName": "Consommation Thermique MWh",
+            "definition": "Volume annuel de kilowattheures consommés par l'installation sportive.",
+            "mapped_bigquery_column": "consommation_energetique_annuelle_mwh",
+            "mapped_bigquery_table": "ministere_sports_equipements"
+          }
+        ]
+      },
+      {
+        "categoryId": "sponsoring-aides-ans",
+        "displayName": "Catégorie : Sponsoring Premium & Aides ANS",
+        "description": "Monétisation des espaces publicitaires de stades et subventions pour les jeunes",
+        "terms": [
+          {
+            "termId": "sponsoring-stade-premium",
+            "displayName": "Sponsoring Publicitaire Premium Stades",
+            "definition": "Valorisation des espaces d'affichage pour les clubs à forte croissance (>10%).",
+            "mapped_bigquery_column": "potentiel_sponsoring_premium_stade",
+            "mapped_bigquery_table": "ministere_sports_licencies"
+          },
+          {
+            "termId": "subventions-ans-jeunes",
+            "displayName": "Efficacité Subventions ANS (Jeunes <18 ans)",
+            "definition": "Impact des aides publiques de l'Agence Nationale du Sport sur l'inscription des jeunes.",
+            "mapped_bigquery_column": "impact_hausse_inscriptions_jeunes_pct",
+            "mapped_bigquery_table": "ministere_sports_subventions"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}

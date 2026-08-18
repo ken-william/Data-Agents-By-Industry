@@ -1,0 +1,108 @@
+{
+  "agent_id": "sully-agent",
+  "displayName": "Sully - Aide à l'emploi",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/public-employment-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/public-employment-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier Secteur Public & Emploi",
+    "description": "Glossaire d'enquête BMO France Travail, Vacancy Cost et CVs 1-page ATS pour Sully.",
+    "categories": [
+      {
+        "categoryId": "tension-recrutement",
+        "displayName": "Catégorie : Enquête BMO 2024 & Vacancy Cost",
+        "description": "Besoins en main-d'œuvre des bassins d'emploi et coût d'inoccupation des postes",
+        "terms": [
+          {
+            "termId": "bmo-recrutement-2024",
+            "displayName": "Enquête Besoins en Main-d'Œuvre BMO 2024",
+            "definition": "Intentions d'embauche et taux de difficultés de recrutement par bassin d'emploi.",
+            "mapped_bigquery_column": "nombre_projets_recrutement",
+            "mapped_bigquery_table": "bmo_recrutement_2024"
+          },
+          {
+            "termId": "vacancy-cost",
+            "displayName": "Coût Diurne de Vacance de Poste (Vacancy Cost)",
+            "definition": "Perte financière quotidienne subie par une entreprise due à un poste non-pourvu.",
+            "mapped_bigquery_column": "cout_vacance_quotidien_eur",
+            "mapped_bigquery_table": "bmo_recrutement_2024"
+          }
+        ]
+      },
+      {
+        "categoryId": "matching-cv-ats",
+        "displayName": "Catégorie : Compétences & CVs Maturés ATS",
+        "description": "Indexation des profils de candidats et matching de compétences",
+        "terms": [
+          {
+            "termId": "cv-ats-1page",
+            "displayName": "CV Maturé 1-Page ATS (PDF Cloud Storage)",
+            "definition": "Document CV candidat au format épuré ATS lié par objet URI gs:// au profil BigQuery.",
+            "mapped_bigquery_column": "cv_gcs_uri",
+            "mapped_bigquery_table": "france_travail_demandeurs"
+          },
+          {
+            "termId": "immersion-pmsmp",
+            "displayName": "Périodes d'Immersion PMSMP & Formation POEI",
+            "definition": "Dispositifs d'orientation et financement de la formation professionnelle.",
+            "mapped_bigquery_column": "statut_immersion_pmsmp",
+            "mapped_bigquery_table": "france_travail_formations_aides"
+          }
+        ]
+      },
+      {
+        "categoryId": "entreprises-urssaf-siret-oeth",
+        "displayName": "Catégorie : Declarations URSSAF, SIRET & Obligation OETH",
+        "description": "Masse salariale brute, effectifs ETP et déficit de bénéficiaires de l'Obligation d'Emploi des Travailleurs Handicapés (OETH)",
+        "terms": [
+          {
+            "termId": "siret-entreprise-urssaf",
+            "displayName": "SIRET Entreprise & Déclarations URSSAF",
+            "definition": "Numéro d'identification SIRET 14 chiffres et déclarations de masse salariale.",
+            "mapped_bigquery_column": "siret",
+            "mapped_bigquery_table": "entreprises_urssaf_declarations"
+          },
+          {
+            "termId": "oeth-deficit-handicap",
+            "displayName": "Déficit Beneficiaires Handicap OETH (6%)",
+            "definition": "Nombre de bénéficiaires de l'obligation d'emploi handicap manquants sous statut URSSAF.",
+            "mapped_bigquery_column": "oeth_target_deficit_count",
+            "mapped_bigquery_table": "entreprises_urssaf_declarations"
+          }
+        ]
+      },
+      {
+        "categoryId": "candidatures-statut-suivi",
+        "displayName": "Catégorie : Candidatures, Postulations & Statuts de Recherche",
+        "description": "Suivi individuel des candidatures, avancement des postulations et statut de recherche active",
+        "terms": [
+          {
+            "termId": "candidature-current-status",
+            "displayName": "Statut d'Avancement de Candidature",
+            "definition": "Étape du processus de recrutement (Transmise, Entretien, Offre, Embauché).",
+            "mapped_bigquery_column": "current_status",
+            "mapped_bigquery_table": "candidatures_postulations_suivi"
+          }
+        ]
+      },
+      {
+        "categoryId": "dispositifs-aides-echeances-expiration",
+        "displayName": "Catégorie : Calendrier & Expiration des Aides Financières",
+        "description": "Dates de début, montants accordés et dates d'échéance/expiration des aides France Travail/URSSAF",
+        "terms": [
+          {
+            "termId": "date-expiration-aide-financiere",
+            "displayName": "Date d'Expiration / Échéance de l'Aide",
+            "definition": "Date limite à laquelle le dispositif ou le financement de l'aide prend fin.",
+            "mapped_bigquery_column": "date_expiration_aide",
+            "mapped_bigquery_table": "france_travail_formations_aides"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}

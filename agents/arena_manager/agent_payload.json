@@ -1,0 +1,71 @@
+{
+  "displayName": "ArenaManager - Sport & Infrastructures",
+  "description": "Gestionnaire territorial des équipements sportifs et infrastructures : cartographie les installations sportives (Recensement des Équipements Sportifs RES), chasse le gaspillage énergétique des stades et gymnases (surconsommation MWh & sous-utilisation < 30% en semaine), monétise les espaces publicitaires premium pour les clubs en forte croissance d'adhérents, équilibre la répartition des équipements (piscines, dojos, tennis) et évalue l'impact des subventions publiques (ANS) sur l'inscription des jeunes.",
+  "dataAnalyticsAgent": {
+    "publishedContext": {
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 CONFIDENTIALITÉ DES CONTRATS DE SPONSORING MUNICIPAL :\n- Protection des montants de sponsoring d'équipements sportifs et subventions ANS.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Analyse des audits thermiques de stades et registres du recensement RES.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "datasourceReferences": {
+        "bq": {
+          "tableReferences": [
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "sports_infrastructure_ds",
+              "tableId": "ministere_sports_equipements"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "sports_infrastructure_ds",
+              "tableId": "ministere_sports_licencies"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "sports_infrastructure_ds",
+              "tableId": "ministere_sports_subventions"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "sports_infrastructure_ds",
+              "tableId": "ministere_sports_desequilibre_territoires"
+            }
+          ]
+        }
+      },
+      "exampleQueries": [
+        {
+          "naturalLanguageQuestion": "Détecte quels complexes sportifs municipaux affichent une consommation énergétique anormale et un taux d'utilisation de leurs équipements inférieur à 30 % en semaine.",
+          "sqlQuery": "SELECT id_equipement, nom_equipement, type_equipement, region, commune, etat_vetuste, consommation_energetique_annuelle_mwh, gaspillage_kwh_par_m2, taux_utilisation_semaine_pct FROM `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_equipements` WHERE taux_utilisation_semaine_pct < 30.0 AND gaspillage_kwh_par_m2 > 120.0 ORDER BY gaspillage_kwh_par_m2 DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels clubs ou fédérations sportives locales ont la plus forte croissance d'adhérents pour proposer nos espaces publicitaires de stades à des sponsors à des tarifs premium ?",
+          "sqlQuery": "SELECT id_licence, region, departement, commune, federation_sportive, nombre_licencies_total, part_jeunes_moins_18ans_pct, croissance_licencies_pct, potentiel_sponsoring_premium_stade FROM `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_licencies` WHERE croissance_licencies_pct > 10.0 ORDER BY croissance_licencies_pct DESC LIMIT 50"
+        },
+        {
+          "naturalLanguageQuestion": "Génère la feuille de route d'investissement et d'optimisation énergétique de notre parc d'infrastructures sportives pour le vote du budget municipal.",
+          "sqlQuery": "SELECT region, commune, COUNT(DISTINCT id_equipement) AS nb_equipements, SUM(consommation_energetique_annuelle_mwh) AS consommation_totale_mwh, COUNT(DISTINCT CASE WHEN alerte_gaspillage_energetique = TRUE THEN id_equipement END) AS nb_sites_gaspillage, ROUND(SUM(consommation_energetique_annuelle_mwh) * 0.35 * 180.0, 2) AS economie_budgetaire_projetee_eur FROM `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_equipements` GROUP BY region, commune ORDER BY nb_sites_gaspillage DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Au vu du nombre de licenciés locaux par fédération, quels types d'équipements (piscines, terrains de tennis, dojos) manquent cruellement dans notre métropole ?",
+          "sqlQuery": "SELECT l.commune, l.region, l.federation_sportive, l.nombre_licencies_total, l.croissance_licencies_pct, d.equipement_manquant_prioritaire, d.deficit_equipements_homologues_pct FROM `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_licencies` l JOIN `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_desequilibre_territoires` d ON l.commune = d.commune WHERE d.deficit_equipements_homologues_pct > 40.0 ORDER BY l.nombre_licencies_total DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Comment les subventions allouées aux associations sportives locales influencent-elles directement le taux d'inscription des jeunes de moins de 18 ans d'une année sur l'autre ?",
+          "sqlQuery": "SELECT s.commune, s.nom_association_club, s.montant_subvention_ans_eur, s.projet_renovation, s.impact_hausse_inscriptions_jeunes_pct, s.cout_subvention_par_jeune_inscrit_eur, l.part_jeunes_moins_18ans_pct FROM `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_subventions` s JOIN `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_licencies` l ON s.commune = l.commune ORDER BY s.impact_hausse_inscriptions_jeunes_pct DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels départements affichent le plus fort déséquilibre entre le nombre d'infrastructures sportives homologuées disponibles et leur croissance démographique réelle ?",
+          "sqlQuery": "SELECT departement, region, AVG(croissance_demographique_annuelle_pct) AS croissance_demo_moyenne_pct, AVG(deficit_equipements_homologues_pct) AS deficit_homologation_moyen_pct, equipement_manquant_prioritaire FROM `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_desequilibre_territoires` GROUP BY departement, region, equipement_manquant_prioritaire ORDER BY deficit_homologation_moyen_pct DESC"
+        }
+      ],
+      "glossaryTerms": [
+        {
+          "displayName": "Recensement des Équipements Sportifs (RES)",
+          "description": "Base nationale officielle du Ministère des Sports cartographiant l'ensemble des installations physiques."
+        },
+        {
+          "displayName": "Agence Nationale du Sport (ANS) & Subventions Municipales",
+          "description": "Dispositifs d'aides publiques destinées à financer la rénovation énergétique des stades et le sport pour les jeunes."
+        }
+      ]
+    }
+  }
+}

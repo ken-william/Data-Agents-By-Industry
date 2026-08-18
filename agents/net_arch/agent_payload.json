@@ -1,0 +1,87 @@
+{
+  "displayName": "NetArch - Télécoms & Médias",
+  "description": "Expert réseau télécoms et infrastructures médias : supervision des pannes et alertes ARCEP, géolocalisation des antennes relais (5G/4G, pannes silencieuses), analyse des flux de trafic réseau mobile (IMEI, SIM, latence ms, volumes uplink/downlink), catalogue des forfaits (eco, student, surf, max 5g, family, smart 5g) et détection des dépassements tarifaires/factures hors-forfait (Churn B2B & Upsell Smart 5G).",
+  "dataAnalyticsAgent": {
+    "publishedContext": {
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 DATA PRIVACY & TELECOM ANONYMIZATION GUIDELINES :\n- Anonymisation stricte PII : Ne jamais afficher de noms d'abonnés, emails ou IMEI bruts en clair. Utiliser 'Client B2B #104' ou 'Terminal IMEI XYZ'.\n- Geolocation & Infrastructure Masking : Remplacer les coordonnées GPS brutes par des identifiants génériques ('Antenne 5G # Nice-Centre').\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Analyse des flux de trafic réseau, pannes ARCEP et signaux IoT.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "datasourceReferences": {
+        "bq": {
+          "tableReferences": [
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "arcep_couverture_mobile"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "arcep_deploiement_fibre"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "arcep_signalements_utilisateurs"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "abonnes_consommation_devices"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "antennes_relais_mobile"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "network_traffic_flows"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "forfaits_offres_abonnements"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "telco_media_ds",
+              "tableId": "facturation_depassements_clients"
+            }
+          ]
+        }
+      },
+      "exampleQueries": [
+        {
+          "naturalLanguageQuestion": "Détecte quels clients professionnels (B2B) sont sur le point de résilier leur abonnement en raison de micro-coupures réseau répétées sur leurs routeurs de quartier.",
+          "sqlQuery": "SELECT a.id_abonne_tel, a.nom_prenom_entreprise, a.segment_client, a.commune, s.type_panne, s.nombre_signalements_30j, s.risque_resiliation_b2b_pct FROM `${PROJECT_ID}.telco_media_ds.abonnes_consommation_devices` a JOIN `${PROJECT_ID}.telco_media_ds.arcep_signalements_utilisateurs` s ON a.commune = s.commune WHERE a.segment_client = 'Professionnel B2B' AND s.risque_resiliation_b2b_pct > 60.0 ORDER BY s.risque_resiliation_b2b_pct DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Liste les abonnés sur réseau cuivre vieillissant qui consomment plus de 150 Go de données par mois, et génère une offre d'upsell automatique vers nos abonnements Fibre et 5G Pro.",
+          "sqlQuery": "SELECT id_abonne_tel, nom_prenom_entreprise, commune, forfait_actuel_nom, appareil_modele, consommation_mars_go, frais_hors_forfait_mars_eur, gain_arpu_forfait_5g_max_eur FROM `${PROJECT_ID}.telco_media_ds.abonnes_consommation_devices` WHERE appareil_compatible_5g = TRUE AND possede_forfait_5g = FALSE AND consommation_mars_go > 150.0 ORDER BY gain_arpu_forfait_5g_max_eur DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quelles antennes relais connaissent une panne silencieuse (silent_failure) ou une saturation du trafic réseau par IMEI ?",
+          "sqlQuery": "SELECT a.antenna_id, a.site_id, a.commune, a.technology_generation, a.status, a.silent_failure, COUNT(f.flow_id) AS nb_flux_trafic, SUM(f.volume_mb_downlink)/1024.0 AS total_downlink_gb, AVG(f.latency_ms) AS latence_moyenne_ms FROM `${PROJECT_ID}.telco_media_ds.antennes_relais_mobile` a JOIN `${PROJECT_ID}.telco_media_ds.network_traffic_flows` f ON a.antenna_id = f.antenna_id WHERE a.silent_failure = TRUE OR a.status = 'Degraded Performance' GROUP BY a.antenna_id, a.site_id, a.commune, a.technology_generation, a.status, a.silent_failure ORDER BY latence_moyenne_ms DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les forfaits générant le plus de dépassements hors-forfait et de factures élevées chez nos clients ?",
+          "sqlQuery": "SELECT p.plan_name, p.monthly_price_eur, p.data_quota_gb, COUNT(i.invoice_id) AS total_factures, SUM(i.overage_fees) AS total_depassements_eur, AVG(i.total_data_usage_gb) AS conso_moyenne_gb FROM `${PROJECT_ID}.telco_media_ds.forfaits_offres_abonnements` p JOIN `${PROJECT_ID}.telco_media_ds.facturation_depassements_clients` i ON p.plan_id = i.plan_id GROUP BY p.plan_name, p.monthly_price_eur, p.data_quota_gb ORDER BY total_depassements_eur DESC"
+        }
+      ],
+      "glossaryTerms": [
+        {
+          "displayName": "Antennes Relais & Silent Failure",
+          "description": "Détection des défaillances d'antennes 5G/4G sans alerte système immédiate."
+        },
+        {
+          "displayName": "Trafic Réseau par IMEI & Latence ms",
+          "description": "Analyse des flux de données mobiles, uplink/downlink et latence par type de terminal (IMEI)."
+        },
+        {
+          "displayName": "Facturation & Frais de Dépassement Hors-Forfait",
+          "description": "Calcul du dépassement de quota de données et analyse de facturation des abonnés."
+        }
+      ]
+    }
+  }
+}

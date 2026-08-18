@@ -1,0 +1,59 @@
+{
+  "agent_id": "earthintel-agent",
+  "displayName": "EarthIntel - Imagerie Satellitaire & Géospatial",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/satellite-geospatial-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/satellite-geospatial-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier Imagerie Satellitaire & Géospatial",
+    "description": "Glossaire de tuiles Sentinel-2 MGRS, indice NDVI et risques climatiques pour EarthIntel.",
+    "categories": [
+      {
+        "categoryId": "observation-spatiale-mgrs",
+        "displayName": "Catégorie : Imagerie Sentinel-2 & Tuiles MGRS",
+        "description": "Indexation multispectrale et cartographie des coordonnées de tuiles spatiales",
+        "terms": [
+          {
+            "termId": "tuile-sentinel2-mgrs",
+            "displayName": "Clichés Satellite Sentinel-2 & Tuiles MGRS",
+            "definition": "Images multispectrales ESA Sentinel-2 cartographiées par coordonnées MGRS.",
+            "mapped_bigquery_column": "mgrs_tile",
+            "mapped_bigquery_table": "company_assets"
+          },
+          {
+            "termId": "quicklook-sat",
+            "displayName": "Aperçus PNG Visuels Quicklook Satellite",
+            "definition": "Fichiers images d'observation orbitale enregistrés dans Google Cloud Storage.",
+            "mapped_bigquery_column": "quicklook_image_url",
+            "mapped_bigquery_table": "company_assets"
+          }
+        ]
+      },
+      {
+        "categoryId": "risques-et-infrastructure",
+        "displayName": "Catégorie : Indice NDVI & Logistics Spatiales",
+        "description": "Indicateurs d'obstacles 5G, congestion portuaire et sécheresse de la biomasse",
+        "terms": [
+          {
+            "termId": "indice-ndvi-vegetation",
+            "displayName": "Indice de Végétation NDVI & Rendements",
+            "definition": "Indice de santé de la canopée et de la biomasse végétale mesuré par satellite.",
+            "mapped_bigquery_column": "ndvi_vegetation_index",
+            "mapped_bigquery_table": "company_assets"
+          },
+          {
+            "termId": "congestion-portuaire-conteneurs",
+            "displayName": "Congestion Portuaire Navires Conteneurs",
+            "definition": "Nombre de porte-conteneurs en attente d'accostage détectés par imagerie spatiale.",
+            "mapped_bigquery_column": "port_container_ships_waiting",
+            "mapped_bigquery_table": "company_assets"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}

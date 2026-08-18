@@ -1,0 +1,59 @@
+{
+  "agent_id": "pulse-checker-agent",
+  "displayName": "PulseChecker - Santé & Pharma",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/healthcare-pharma-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/healthcare-pharma-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier Santé & Pharma",
+    "description": "Glossaire des urgences hospitalières, stocks de médicaments et démographie médicale pour PulseChecker.",
+    "categories": [
+      {
+        "categoryId": "pharmacovigilance-stocks",
+        "displayName": "Catégorie : Stocks & Urgences Médicales",
+        "description": "Alertes de ruptures d'urgence sur les antibiotiques et molécules d'urgence hospitalières",
+        "terms": [
+          {
+            "termId": "rupture-stock-urgences",
+            "displayName": "Rupture de Stock d'Urgence",
+            "definition": "Alerte de pénurie de médicaments essentiels (antibiotiques, pédiatrie) < 14 jours.",
+            "mapped_bigquery_column": "statut_risque_rupture",
+            "mapped_bigquery_table": "hopitaux_etablissements_sante"
+          },
+          {
+            "termId": "tension-antibiotiques",
+            "displayName": "Niveau de Stock Antibiotiques (Jours)",
+            "definition": "Autonomie en jours de stock d'antibiotiques critiques.",
+            "mapped_bigquery_column": "niveau_stock_antibiotiques_jours",
+            "mapped_bigquery_table": "hopitaux_etablissements_sante"
+          }
+        ]
+      },
+      {
+        "categoryId": "prescriptions-demographie",
+        "displayName": "Catégorie : Prescriptions AMELI & Démographie RPPS",
+        "description": "Remboursements de biologie et densité de professionnels de santé par territoire",
+        "terms": [
+          {
+            "termId": "open-medic-prescriptions",
+            "displayName": "Prescriptions Open Medic AMELI",
+            "definition": "Volume et montants remboursés par la Sécurité Sociale sur les molécules pharmaceutiques.",
+            "mapped_bigquery_column": "montant_rembourse_secu_eur",
+            "mapped_bigquery_table": "ameli_prescriptions_open_medic"
+          },
+          {
+            "termId": "deserts-medicaux",
+            "displayName": "Déserts Médicaux & Densité RPPS",
+            "definition": "Densité de médecins généralistes et spécialistes pour 100 000 habitants par commune.",
+            "mapped_bigquery_column": "densite_medecins_pour_100k_hab",
+            "mapped_bigquery_table": "demographie_medecins_rpps"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "displayName": "CineAnalyst - Divertissement & Cinéma",
+  "description": "Analyste culturel et économique de l'industrie du cinéma et du divertissement : évalue la fréquentation des salles, l'efficacité des subventions publiques du CNC (avances sur recettes), la part de marché des œuvres par pays d'origine (films français vs blockbusters US), la rationalisation des grilles de programmation et la valorisation des espaces Premium (sièges immersifs 4DX/Dolby Atmos +35% du prix du billet, concessions popcorn).",
+  "dataAnalyticsAgent": {
+    "publishedContext": {
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 CONFIDENTIALITÉ DES RECETTES ET ACCORDS DE DISTRIBUTION :\n- Protection du secret des contrats de billetterie et aides financières CNC.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Analyse des scores de réseaux sociaux, bandes-annonces et programmations cinéma.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "datasourceReferences": {
+        "bq": {
+          "tableReferences": [
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_salles_cinema"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_aides_financieres"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_repartition_parts_marche"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "entertainment_cinema_ds",
+              "tableId": "cnc_films_programmation_flops"
+            }
+          ]
+        }
+      },
+      "exampleQueries": [
+        {
+          "naturalLanguageQuestion": "Prédis quels films à gros budget programmés le mois prochain risquent de faire un flop en salles au vu des tendances actuelles sur les réseaux sociaux, pour réajuster nos horaires de diffusion.",
+          "sqlQuery": "SELECT titre_film, genre_cinematographique, budget_production_eur, score_buzz_reseaux_sociaux_tiktok_x, risque_predit_flop_pct, ajustement_horaire_recommande FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_films_programmation_flops` WHERE risque_predit_flop_pct > 60.0 ORDER BY risque_predit_flop_pct DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Dans quels complexes cinématographiques devrions-nous installer nos cabines premium ou nos sièges immersifs pour maximiser l'upsell et augmenter le prix du billet de 35 % ?",
+          "sqlQuery": "SELECT id_complexe, nom_cinema, region, commune, nombre_fauteuils_total, entrees_annuelles_total, part_sieges_immersifs_4dx_pct, ventes_annexes_popcorn_par_fauteuil_eur, opportunite_upgrade_premium FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_salles_cinema` WHERE opportunite_upgrade_premium LIKE 'Priorité Forte%' ORDER BY ventes_annexes_popcorn_par_fauteuil_eur DESC LIMIT 50"
+        },
+        {
+          "naturalLanguageQuestion": "Génère un rapport d'optimisation de la programmation et des ventes annexes (popcorn, confiseries) pour maximiser le chiffre d'affaires par fauteuil disponible.",
+          "sqlQuery": "SELECT region, COUNT(DISTINCT id_complexe) AS nb_cinemas, SUM(nombre_fauteuils_total) AS fauteuils_totaux, SUM(entrees_annuelles_total) AS total_entrees, SUM(recettes_billeterie_eur) AS recettes_billeterie_totales_eur, ROUND(AVG(ventes_annexes_popcorn_par_fauteuil_eur), 2) AS popcorn_moyen_par_fauteuil_eur FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_salles_cinema` GROUP BY region ORDER BY recettes_billeterie_totales_eur DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Comment évolue la part de marché des films français en salles face aux blockbusters américains sur les 3 dernières années, et sur quels genres devons-nous miser pour l'an prochain ?",
+          "sqlQuery": "SELECT annee_exercice, region, AVG(part_marche_films_francais_pct) AS part_films_francais_pct, AVG(part_marche_films_americains_pct) AS part_films_americains_pct, AVG(part_marche_films_internationaux_pct) AS part_films_internationaux_pct, genre_recommande_investissement FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_repartition_parts_marche` GROUP BY annee_exercice, region, genre_recommande_investissement ORDER BY annee_exercice DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels types de productions cinématographiques ayant bénéficié d'aides publiques génèrent le meilleur retour sur investissement en termes d'entrées réelles en salles ?",
+          "sqlQuery": "SELECT genre_cinematographique, type_aide_subvention, COUNT(id_aide) AS nb_oeuvres_aidees, SUM(montant_subvention_allouee_eur) AS total_aides_eur, SUM(entrees_reelles_salles) AS total_entrees_salles, ROUND(AVG(roi_entrees_par_euro_subventionne), 2) AS roi_moyen_entrees_par_euro FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_aides_financieres` GROUP BY genre_cinematographique, type_aide_subvention ORDER BY roi_moyen_entrees_par_euro DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Observe-t-on un glissement de la fréquentation des salles de cinéma vers le milieu de semaine en raison de la concurrence des sorties de plateformes de streaming le week-end ?",
+          "sqlQuery": "SELECT region, commune, nom_cinema, report_frequentation_mercredi_jeudi_pct, entrees_annuelles_total FROM `${PROJECT_ID}.entertainment_cinema_ds.cnc_salles_cinema` WHERE report_frequentation_mercredi_jeudi_pct > 30.0 ORDER BY report_frequentation_mercredi_jeudi_pct DESC LIMIT 50"
+        }
+      ],
+      "glossaryTerms": [
+        {
+          "displayName": "Subventions & Avances sur Recettes CNC",
+          "description": "Fonds de soutien public attribué par le Centre National du Cinéma pour financer la création et la diversité culturelle."
+        },
+        {
+          "displayName": "Sièges Immersifs 4DX & Cabines Premium",
+          "description": "Équipements de salles haute technologie permettant d'augmenter le prix du billet de 35%."
+        },
+        {
+          "displayName": "Ventes Annexes Popcorn / Confiseries par Fauteuil",
+          "description": "Indicateur de rentabilité hors-billetterie mesurant les dépenses annexes des spectateurs."
+        }
+      ]
+    }
+  }
+}

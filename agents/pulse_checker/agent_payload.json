@@ -1,0 +1,67 @@
+{
+  "displayName": "PulseChecker - Santé & Pharma",
+  "description": "Facilitateur de santé publique et copilote décisionnel pour les acteurs de la santé et du médicament : analyse la distribution des soins, les prescriptions de médicaments, la biologie médicale et la démographie des praticiens pour anticiper les ruptures de stocks hospitaliers d'urgence, résoudre les déserts médicaux et guider les investissements d'implantation clinique.",
+  "dataAnalyticsAgent": {
+    "publishedContext": {
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 CONFIDENTIALITÉ ET ANONYMISATION SANTE (HIPAA / GDPR) :\n- Anonymisation stricte des patients et professionnels de santé : Ne jamais afficher le nom de patients ou numéros RPPS individuels. Utiliser 'Praticien #840' ou 'Établissement #12'.\n- Préservation du secret médical et des stocks d'urgence.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Exploitation des ordonnances numérisées et rapports de pharmacovigilance (Object Tables GCP).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "datasourceReferences": {
+        "bq": {
+          "tableReferences": [
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_pharma_ds",
+              "tableId": "hopitaux_etablissements_sante"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_pharma_ds",
+              "tableId": "ameli_prescriptions_open_medic"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_pharma_ds",
+              "tableId": "ameli_biologie_open_bio"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "healthcare_pharma_ds",
+              "tableId": "demographie_medecins_rpps"
+            }
+          ]
+        }
+      },
+      "exampleQueries": [
+        {
+          "naturalLanguageQuestion": "En analysant l'évolution historique des prescriptions, prédis quels hôpitaux d'Auvergne-Rhône-Alpes vont faire face à une rupture de stock sur les antibiotiques le mois prochain.",
+          "sqlQuery": "SELECT h.nom_etablissement, h.ville, h.departement, h.niveau_stock_antibiotiques_jours, h.statut_risque_rupture, p.nom_substance_active, p.nombre_boites_prescrites, p.variation_mensuelle_demande_pct FROM `${PROJECT_ID}.healthcare_pharma_ds.hopitaux_etablissements_sante` h JOIN `${PROJECT_ID}.healthcare_pharma_ds.ameli_prescriptions_open_medic` p ON h.id_etablissement = p.id_etablissement WHERE h.region = 'Auvergne-Rhône-Alpes' AND p.classe_therapeutique = 'Antibiotiques' AND (h.niveau_stock_antibiotiques_jours < 15 OR h.statut_risque_rupture LIKE 'Critique%') ORDER BY h.niveau_stock_antibiotiques_jours ASC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels territoires affichent la plus forte hausse de demande en actes spécialisés non couverts localement, pour y ouvrir nos prochaines cliniques privées haut de gamme ?",
+          "sqlQuery": "SELECT r.nom_territoire, r.region, r.departement, r.densite_medecins_pour_100k_hab, r.indice_tension_demographique, r.opportunite_investissement_clinique, b.nom_acte_biologie, b.croissance_annuelle_demande_pct, b.niveau_couverture_locale FROM `${PROJECT_ID}.healthcare_pharma_ds.demographie_medecins_rpps` r JOIN `${PROJECT_ID}.healthcare_pharma_ds.ameli_biologie_open_bio` b ON r.departement = b.departement WHERE r.opportunite_investissement_clinique LIKE 'Priorité Forte%' OR b.niveau_couverture_locale LIKE 'Sous-équipé%' ORDER BY b.croissance_annuelle_demande_pct DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Rédige la proposition d'implantation stratégique pour notre conseil d'administration, incluant les projections de ROI sur 5 ans pour ces nouveaux établissements.",
+          "sqlQuery": "SELECT r.nom_territoire, r.population_totale, r.densite_medecins_pour_100k_hab, SUM(b.montant_depenses_open_bio_eur) AS depenses_biologie_annuelles_eur, ROUND(SUM(b.montant_depenses_open_bio_eur) * 0.35, 2) AS ebitda_annuel_projete_eur, ROUND((SUM(b.montant_depenses_open_bio_eur) * 0.35 * 5) - 25000000.0, 2) AS valeur_nette_5ans_eur FROM `${PROJECT_ID}.healthcare_pharma_ds.demographie_medecins_rpps` r JOIN `${PROJECT_ID}.healthcare_pharma_ds.ameli_biologie_open_bio` b ON r.departement = b.departement WHERE r.opportunite_investissement_clinique LIKE 'Priorité Forte%' GROUP BY r.nom_territoire, r.population_totale, r.densite_medecins_pour_100k_hab ORDER BY ebitda_annuel_projete_eur DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Y a-t-il une corrélation mesurable entre la baisse du nombre de médecins généralistes et la hausse des actes de biologie d'urgence dans nos départements ?",
+          "sqlQuery": "SELECT r.departement, r.nom_territoire, r.densite_medecins_pour_100k_hab, b.nom_acte_biologie, b.volume_actes_annuel, b.croissance_annuelle_demande_pct FROM `${PROJECT_ID}.healthcare_pharma_ds.demographie_medecins_rpps` r JOIN `${PROJECT_ID}.healthcare_pharma_ds.ameli_biologie_open_bio` b ON r.departement = b.departement WHERE r.densite_medecins_pour_100k_hab < 150 ORDER BY b.croissance_annuelle_demande_pct DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les 5 médicaments ou classes thérapeutiques dont le volume de prescription a le plus augmenté en Île-de-France par rapport à l'an dernier, pour ajuster nos stocks de distribution ?",
+          "sqlQuery": "SELECT classe_therapeutique, nom_substance_active, SUM(nombre_boites_prescrites) AS total_boites, AVG(variation_mensuelle_demande_pct) AS hausse_moyenne_pct FROM `${PROJECT_ID}.healthcare_pharma_ds.ameli_prescriptions_open_medic` GROUP BY classe_therapeutique, nom_substance_active ORDER BY hausse_moyenne_pct DESC LIMIT 5"
+        }
+      ],
+      "glossaryTerms": [
+        {
+          "displayName": "Bases de Données Santé (Open Medic & Open Bio)",
+          "description": "Données officielles de l'Assurance Maladie retraçant les actes de biologie médicale et les volumes de médicaments prescrits."
+        },
+        {
+          "displayName": "Démographie Médicale RPPS",
+          "description": "Répertoire des professionnels de santé permettant de mesurer la densité de praticiens et de détecter la désertification sanitaire."
+        }
+      ]
+    }
+  }
+}
