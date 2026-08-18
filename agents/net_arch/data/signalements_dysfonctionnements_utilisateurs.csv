@@ -1,0 +1,801 @@
+id_signalement,commune,code_departement,nom_region,couverture_5g_theorique_pct,nombre_signalements_panne,type_dysfonctionnement,statut_investigation_technique
+SIG-0001,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,331,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0002,Montpellier,34 - Hérault,Occitanie,100.0,598,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0003,Paris,75 - Paris,Île-de-France,100.0,607,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0004,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,499,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0005,Toulouse,31 - Haute-Garonne,Occitanie,100.0,567,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0006,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,560,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0007,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,532,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0008,Lille,59 - Nord,Hauts-de-France,100.0,67,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0009,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,319,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0010,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,384,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0011,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,160,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0012,Lille,59 - Nord,Hauts-de-France,100.0,482,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0013,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,360,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0014,Montpellier,34 - Hérault,Occitanie,100.0,578,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0015,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,456,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0016,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,164,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0017,Montpellier,34 - Hérault,Occitanie,100.0,511,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0018,Montpellier,34 - Hérault,Occitanie,100.0,328,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0019,Paris,75 - Paris,Île-de-France,100.0,448,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0020,Lille,59 - Nord,Hauts-de-France,100.0,274,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0021,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,402,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0022,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,515,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0023,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,257,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0024,Paris,75 - Paris,Île-de-France,100.0,554,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0025,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,222,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0026,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,129,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0027,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,199,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0028,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,204,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0029,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,175,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0030,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,248,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0031,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,121,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0032,Lille,59 - Nord,Hauts-de-France,100.0,316,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0033,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,136,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0034,Toulouse,31 - Haute-Garonne,Occitanie,100.0,342,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0035,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,564,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0036,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,73,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0037,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,460,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0038,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,574,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0039,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,218,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0040,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,220,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0041,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,201,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0042,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,164,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0043,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,561,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0044,Toulouse,31 - Haute-Garonne,Occitanie,100.0,597,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0045,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,154,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0046,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,190,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0047,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,463,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0048,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,247,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0049,Montpellier,34 - Hérault,Occitanie,100.0,159,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0050,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,87,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0051,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,348,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0052,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,610,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0053,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,467,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0054,Paris,75 - Paris,Île-de-France,100.0,289,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0055,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,388,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0056,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,513,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0057,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,370,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0058,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,348,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0059,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,485,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0060,Toulouse,31 - Haute-Garonne,Occitanie,100.0,98,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0061,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,192,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0062,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,449,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0063,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,55,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0064,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,219,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0065,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,610,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0066,Montpellier,34 - Hérault,Occitanie,100.0,222,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0067,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,203,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0068,Montpellier,34 - Hérault,Occitanie,100.0,224,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0069,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,533,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0070,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,66,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0071,Lille,59 - Nord,Hauts-de-France,100.0,527,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0072,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,384,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0073,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,299,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0074,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,558,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0075,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,278,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0076,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,216,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0077,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,558,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0078,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,131,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0079,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,371,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0080,Paris,75 - Paris,Île-de-France,100.0,376,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0081,Paris,75 - Paris,Île-de-France,100.0,325,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0082,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,581,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0083,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,271,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0084,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,216,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0085,Lille,59 - Nord,Hauts-de-France,100.0,104,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0086,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,57,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0087,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,417,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0088,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,421,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0089,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,403,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0090,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,278,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0091,Lille,59 - Nord,Hauts-de-France,100.0,390,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0092,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,149,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0093,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,279,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0094,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,90,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0095,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,487,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0096,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,495,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0097,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,142,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0098,Lille,59 - Nord,Hauts-de-France,100.0,563,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0099,Paris,75 - Paris,Île-de-France,100.0,243,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0100,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,196,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0101,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,208,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0102,Paris,75 - Paris,Île-de-France,100.0,85,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0103,Lille,59 - Nord,Hauts-de-France,100.0,129,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0104,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,514,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0105,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,586,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0106,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,281,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0107,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,487,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0108,Toulouse,31 - Haute-Garonne,Occitanie,100.0,127,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0109,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,232,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0110,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,256,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0111,Toulouse,31 - Haute-Garonne,Occitanie,100.0,95,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0112,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,198,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0113,Lille,59 - Nord,Hauts-de-France,100.0,320,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0114,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,354,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0115,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,92,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0116,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,59,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0117,Montpellier,34 - Hérault,Occitanie,100.0,163,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0118,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,282,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0119,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,76,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0120,Toulouse,31 - Haute-Garonne,Occitanie,100.0,505,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0121,Paris,75 - Paris,Île-de-France,100.0,267,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0122,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,282,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0123,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,346,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0124,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,212,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0125,Toulouse,31 - Haute-Garonne,Occitanie,100.0,63,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0126,Paris,75 - Paris,Île-de-France,100.0,133,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0127,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,310,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0128,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,557,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0129,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,569,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0130,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,541,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0131,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,554,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0132,Montpellier,34 - Hérault,Occitanie,100.0,334,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0133,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,105,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0134,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,553,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0135,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,301,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0136,Lille,59 - Nord,Hauts-de-France,100.0,504,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0137,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,604,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0138,Lille,59 - Nord,Hauts-de-France,100.0,583,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0139,Lille,59 - Nord,Hauts-de-France,100.0,130,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0140,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,419,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0141,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,354,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0142,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,602,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0143,Lille,59 - Nord,Hauts-de-France,100.0,530,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0144,Toulouse,31 - Haute-Garonne,Occitanie,100.0,68,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0145,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,556,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0146,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,291,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0147,Montpellier,34 - Hérault,Occitanie,100.0,457,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0148,Toulouse,31 - Haute-Garonne,Occitanie,100.0,90,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0149,Lille,59 - Nord,Hauts-de-France,100.0,93,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0150,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,358,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0151,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,164,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0152,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,206,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0153,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,425,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0154,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,193,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0155,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,286,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0156,Lille,59 - Nord,Hauts-de-France,100.0,430,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0157,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,561,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0158,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,367,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0159,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,311,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0160,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,515,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0161,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,495,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0162,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,468,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0163,Lille,59 - Nord,Hauts-de-France,100.0,328,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0164,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,242,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0165,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,189,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0166,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,471,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0167,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,117,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0168,Montpellier,34 - Hérault,Occitanie,100.0,170,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0169,Toulouse,31 - Haute-Garonne,Occitanie,100.0,168,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0170,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,458,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0171,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,554,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0172,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,477,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0173,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,596,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0174,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,342,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0175,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,125,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0176,Paris,75 - Paris,Île-de-France,100.0,212,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0177,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,156,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0178,Paris,75 - Paris,Île-de-France,100.0,309,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0179,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,155,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0180,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,550,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0181,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,311,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0182,Toulouse,31 - Haute-Garonne,Occitanie,100.0,515,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0183,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,463,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0184,Montpellier,34 - Hérault,Occitanie,100.0,599,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0185,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,267,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0186,Montpellier,34 - Hérault,Occitanie,100.0,46,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0187,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,203,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0188,Toulouse,31 - Haute-Garonne,Occitanie,100.0,541,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0189,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,60,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0190,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,297,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0191,Montpellier,34 - Hérault,Occitanie,100.0,290,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0192,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,443,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0193,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,199,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0194,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,48,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0195,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,443,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0196,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,439,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0197,Montpellier,34 - Hérault,Occitanie,100.0,475,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0198,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,264,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0199,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,272,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0200,Lille,59 - Nord,Hauts-de-France,100.0,124,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0201,Paris,75 - Paris,Île-de-France,100.0,93,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0202,Montpellier,34 - Hérault,Occitanie,100.0,455,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0203,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,489,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0204,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,111,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0205,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,397,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0206,Lille,59 - Nord,Hauts-de-France,100.0,87,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0207,Paris,75 - Paris,Île-de-France,100.0,319,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0208,Lille,59 - Nord,Hauts-de-France,100.0,262,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0209,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,308,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0210,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,504,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0211,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,415,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0212,Paris,75 - Paris,Île-de-France,100.0,467,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0213,Paris,75 - Paris,Île-de-France,100.0,346,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0214,Toulouse,31 - Haute-Garonne,Occitanie,100.0,338,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0215,Toulouse,31 - Haute-Garonne,Occitanie,100.0,549,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0216,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,479,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0217,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,235,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0218,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,264,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0219,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,295,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0220,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,586,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0221,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,399,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0222,Lille,59 - Nord,Hauts-de-France,100.0,298,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0223,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,164,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0224,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,556,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0225,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,462,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0226,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,375,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0227,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,206,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0228,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,144,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0229,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,348,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0230,Toulouse,31 - Haute-Garonne,Occitanie,100.0,350,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0231,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,388,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0232,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,562,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0233,Montpellier,34 - Hérault,Occitanie,100.0,553,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0234,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,336,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0235,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,57,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0236,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,586,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0237,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,434,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0238,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,298,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0239,Montpellier,34 - Hérault,Occitanie,100.0,364,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0240,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,613,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0241,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,390,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0242,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,261,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0243,Montpellier,34 - Hérault,Occitanie,100.0,329,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0244,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,439,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0245,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,555,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0246,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,323,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0247,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,424,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0248,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,196,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0249,Toulouse,31 - Haute-Garonne,Occitanie,100.0,263,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0250,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,218,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0251,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,251,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0252,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,58,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0253,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,257,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0254,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,531,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0255,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,130,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0256,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,128,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0257,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,385,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0258,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,505,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0259,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,355,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0260,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,528,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0261,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,508,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0262,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,176,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0263,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,566,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0264,Lille,59 - Nord,Hauts-de-France,100.0,527,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0265,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,130,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0266,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,275,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0267,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,287,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0268,Toulouse,31 - Haute-Garonne,Occitanie,100.0,559,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0269,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,555,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0270,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,45,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0271,Montpellier,34 - Hérault,Occitanie,100.0,183,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0272,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,242,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0273,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,525,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0274,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,540,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0275,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,256,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0276,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,457,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0277,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,585,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0278,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,397,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0279,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,598,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0280,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,200,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0281,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,235,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0282,Paris,75 - Paris,Île-de-France,100.0,597,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0283,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,176,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0284,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,535,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0285,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,108,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0286,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,69,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0287,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,242,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0288,Lille,59 - Nord,Hauts-de-France,100.0,385,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0289,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,191,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0290,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,153,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0291,Montpellier,34 - Hérault,Occitanie,100.0,143,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0292,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,319,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0293,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,375,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0294,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,371,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0295,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,58,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0296,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,221,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0297,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,435,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0298,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,605,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0299,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,82,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0300,Montpellier,34 - Hérault,Occitanie,100.0,91,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0301,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,492,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0302,Lille,59 - Nord,Hauts-de-France,100.0,252,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0303,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,600,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0304,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,225,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0305,Toulouse,31 - Haute-Garonne,Occitanie,100.0,285,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0306,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,226,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0307,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,229,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0308,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,240,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0309,Paris,75 - Paris,Île-de-France,100.0,426,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0310,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,70,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0311,Lille,59 - Nord,Hauts-de-France,100.0,496,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0312,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,347,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0313,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,611,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0314,Lille,59 - Nord,Hauts-de-France,100.0,616,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0315,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,616,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0316,Montpellier,34 - Hérault,Occitanie,100.0,549,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0317,Paris,75 - Paris,Île-de-France,100.0,310,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0318,Lille,59 - Nord,Hauts-de-France,100.0,256,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0319,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,442,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0320,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,432,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0321,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,295,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0322,Montpellier,34 - Hérault,Occitanie,100.0,369,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0323,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,257,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0324,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,63,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0325,Paris,75 - Paris,Île-de-France,100.0,266,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0326,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,188,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0327,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,602,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0328,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,456,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0329,Lille,59 - Nord,Hauts-de-France,100.0,334,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0330,Montpellier,34 - Hérault,Occitanie,100.0,477,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0331,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,575,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0332,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,361,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0333,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,373,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0334,Toulouse,31 - Haute-Garonne,Occitanie,100.0,204,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0335,Montpellier,34 - Hérault,Occitanie,100.0,61,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0336,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,369,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0337,Paris,75 - Paris,Île-de-France,100.0,216,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0338,Paris,75 - Paris,Île-de-France,100.0,106,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0339,Toulouse,31 - Haute-Garonne,Occitanie,100.0,460,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0340,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,395,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0341,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,358,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0342,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,519,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0343,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,504,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0344,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,143,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0345,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,356,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0346,Lille,59 - Nord,Hauts-de-France,100.0,273,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0347,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,74,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0348,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,417,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0349,Montpellier,34 - Hérault,Occitanie,100.0,537,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0350,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,187,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0351,Montpellier,34 - Hérault,Occitanie,100.0,619,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0352,Toulouse,31 - Haute-Garonne,Occitanie,100.0,552,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0353,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,592,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0354,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,557,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0355,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,100,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0356,Toulouse,31 - Haute-Garonne,Occitanie,100.0,609,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0357,Paris,75 - Paris,Île-de-France,100.0,565,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0358,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,157,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0359,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,465,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0360,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,563,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0361,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,604,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0362,Toulouse,31 - Haute-Garonne,Occitanie,100.0,386,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0363,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,619,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0364,Montpellier,34 - Hérault,Occitanie,100.0,282,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0365,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,509,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0366,Paris,75 - Paris,Île-de-France,100.0,425,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0367,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,383,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0368,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,458,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0369,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,353,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0370,Lille,59 - Nord,Hauts-de-France,100.0,387,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0371,Paris,75 - Paris,Île-de-France,100.0,144,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0372,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,610,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0373,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,520,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0374,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,183,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0375,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,316,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0376,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,530,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0377,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,391,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0378,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,54,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0379,Toulouse,31 - Haute-Garonne,Occitanie,100.0,437,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0380,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,472,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0381,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,121,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0382,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,316,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0383,Paris,75 - Paris,Île-de-France,100.0,373,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0384,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,396,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0385,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,382,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0386,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,456,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0387,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,610,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0388,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,225,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0389,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,605,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0390,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,396,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0391,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,152,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0392,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,259,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0393,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,566,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0394,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,434,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0395,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,535,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0396,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,143,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0397,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,198,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0398,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,360,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0399,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,460,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0400,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,253,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0401,Montpellier,34 - Hérault,Occitanie,100.0,459,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0402,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,491,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0403,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,50,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0404,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,88,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0405,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,124,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0406,Lille,59 - Nord,Hauts-de-France,100.0,559,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0407,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,51,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0408,Paris,75 - Paris,Île-de-France,100.0,370,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0409,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,513,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0410,Lille,59 - Nord,Hauts-de-France,100.0,99,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0411,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,617,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0412,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,457,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0413,Lille,59 - Nord,Hauts-de-France,100.0,578,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0414,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,293,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0415,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,616,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0416,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,52,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0417,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,216,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0418,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,258,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0419,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,264,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0420,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,136,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0421,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,365,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0422,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,97,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0423,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,323,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0424,Toulouse,31 - Haute-Garonne,Occitanie,100.0,123,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0425,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,322,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0426,Lille,59 - Nord,Hauts-de-France,100.0,232,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0427,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,241,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0428,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,110,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0429,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,395,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0430,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,495,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0431,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,249,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0432,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,157,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0433,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,307,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0434,Paris,75 - Paris,Île-de-France,100.0,160,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0435,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,198,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0436,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,85,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0437,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,515,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0438,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,159,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0439,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,450,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0440,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,254,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0441,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,439,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0442,Montpellier,34 - Hérault,Occitanie,100.0,334,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0443,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,392,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0444,Lille,59 - Nord,Hauts-de-France,100.0,233,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0445,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,529,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0446,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,401,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0447,Paris,75 - Paris,Île-de-France,100.0,263,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0448,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,374,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0449,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,321,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0450,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,46,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0451,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,114,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0452,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,121,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0453,Lille,59 - Nord,Hauts-de-France,100.0,211,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0454,Toulouse,31 - Haute-Garonne,Occitanie,100.0,388,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0455,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,103,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0456,Lille,59 - Nord,Hauts-de-France,100.0,82,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0457,Montpellier,34 - Hérault,Occitanie,100.0,421,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0458,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,223,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0459,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,477,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0460,Paris,75 - Paris,Île-de-France,100.0,487,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0461,Lille,59 - Nord,Hauts-de-France,100.0,518,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0462,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,330,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0463,Toulouse,31 - Haute-Garonne,Occitanie,100.0,182,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0464,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,273,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0465,Paris,75 - Paris,Île-de-France,100.0,407,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0466,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,295,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0467,Toulouse,31 - Haute-Garonne,Occitanie,100.0,407,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0468,Toulouse,31 - Haute-Garonne,Occitanie,100.0,491,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0469,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,511,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0470,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,385,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0471,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,130,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0472,Paris,75 - Paris,Île-de-France,100.0,496,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0473,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,530,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0474,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,467,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0475,Toulouse,31 - Haute-Garonne,Occitanie,100.0,262,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0476,Paris,75 - Paris,Île-de-France,100.0,530,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0477,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,419,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0478,Paris,75 - Paris,Île-de-France,100.0,617,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0479,Toulouse,31 - Haute-Garonne,Occitanie,100.0,587,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0480,Montpellier,34 - Hérault,Occitanie,100.0,264,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0481,Lille,59 - Nord,Hauts-de-France,100.0,196,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0482,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,162,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0483,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,206,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0484,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,399,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0485,Lille,59 - Nord,Hauts-de-France,100.0,359,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0486,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,403,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0487,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,409,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0488,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,193,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0489,Montpellier,34 - Hérault,Occitanie,100.0,101,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0490,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,582,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0491,Paris,75 - Paris,Île-de-France,100.0,518,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0492,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,192,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0493,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,125,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0494,Lille,59 - Nord,Hauts-de-France,100.0,406,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0495,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,65,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0496,Lille,59 - Nord,Hauts-de-France,100.0,311,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0497,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,91,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0498,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,159,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0499,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,619,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0500,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,579,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0501,Lille,59 - Nord,Hauts-de-France,100.0,128,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0502,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,446,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0503,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,534,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0504,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,270,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0505,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,450,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0506,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,135,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0507,Paris,75 - Paris,Île-de-France,100.0,52,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0508,Montpellier,34 - Hérault,Occitanie,100.0,296,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0509,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,293,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0510,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,195,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0511,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,202,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0512,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,177,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0513,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,65,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0514,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,267,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0515,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,484,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0516,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,492,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0517,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,357,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0518,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,124,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0519,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,521,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0520,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,424,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0521,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,348,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0522,Toulouse,31 - Haute-Garonne,Occitanie,100.0,224,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0523,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,501,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0524,Montpellier,34 - Hérault,Occitanie,100.0,223,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0525,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,315,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0526,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,566,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0527,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,228,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0528,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,177,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0529,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,427,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0530,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,77,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0531,Toulouse,31 - Haute-Garonne,Occitanie,100.0,281,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0532,Lille,59 - Nord,Hauts-de-France,100.0,417,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0533,Montpellier,34 - Hérault,Occitanie,100.0,477,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0534,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,475,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0535,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,389,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0536,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,610,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0537,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,384,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0538,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,555,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0539,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,101,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0540,Toulouse,31 - Haute-Garonne,Occitanie,100.0,601,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0541,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,94,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0542,Montpellier,34 - Hérault,Occitanie,100.0,315,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0543,Montpellier,34 - Hérault,Occitanie,100.0,165,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0544,Montpellier,34 - Hérault,Occitanie,100.0,392,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0545,Lille,59 - Nord,Hauts-de-France,100.0,402,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0546,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,367,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0547,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,107,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0548,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,584,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0549,Paris,75 - Paris,Île-de-France,100.0,565,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0550,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,438,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0551,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,439,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0552,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,412,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0553,Lille,59 - Nord,Hauts-de-France,100.0,65,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0554,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,542,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0555,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,130,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0556,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,297,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0557,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,558,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0558,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,235,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0559,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,537,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0560,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,370,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0561,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,57,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0562,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,78,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0563,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,341,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0564,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,414,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0565,Paris,75 - Paris,Île-de-France,100.0,496,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0566,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,307,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0567,Paris,75 - Paris,Île-de-France,100.0,357,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0568,Lille,59 - Nord,Hauts-de-France,100.0,436,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0569,Lille,59 - Nord,Hauts-de-France,100.0,207,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0570,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,149,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0571,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,139,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0572,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,494,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0573,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,109,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0574,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,499,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0575,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,492,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0576,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,251,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0577,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,535,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0578,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,418,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0579,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,174,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0580,Paris,75 - Paris,Île-de-France,100.0,266,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0581,Toulouse,31 - Haute-Garonne,Occitanie,100.0,382,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0582,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,87,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0583,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,110,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0584,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,86,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0585,Toulouse,31 - Haute-Garonne,Occitanie,100.0,252,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0586,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,565,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0587,Paris,75 - Paris,Île-de-France,100.0,251,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0588,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,421,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0589,Montpellier,34 - Hérault,Occitanie,100.0,251,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0590,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,229,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0591,Toulouse,31 - Haute-Garonne,Occitanie,100.0,146,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0592,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,331,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0593,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,428,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0594,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,127,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0595,Lille,59 - Nord,Hauts-de-France,100.0,115,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0596,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,334,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0597,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,168,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0598,Paris,75 - Paris,Île-de-France,100.0,145,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0599,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,607,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0600,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,211,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0601,Montpellier,34 - Hérault,Occitanie,100.0,390,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0602,Montpellier,34 - Hérault,Occitanie,100.0,538,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0603,Montpellier,34 - Hérault,Occitanie,100.0,600,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0604,Montpellier,34 - Hérault,Occitanie,100.0,536,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0605,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,120,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0606,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,168,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0607,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,148,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0608,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,599,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0609,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,558,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0610,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,356,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0611,Toulouse,31 - Haute-Garonne,Occitanie,100.0,400,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0612,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,549,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0613,Toulouse,31 - Haute-Garonne,Occitanie,100.0,365,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0614,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,483,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0615,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,379,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0616,Paris,75 - Paris,Île-de-France,100.0,105,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0617,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,334,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0618,Toulouse,31 - Haute-Garonne,Occitanie,100.0,357,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0619,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,219,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0620,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,351,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0621,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,360,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0622,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,303,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0623,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,95,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0624,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,409,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0625,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,428,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0626,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,270,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0627,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,324,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0628,Lille,59 - Nord,Hauts-de-France,100.0,178,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0629,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,322,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0630,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,453,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0631,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,82,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0632,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,389,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0633,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,247,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0634,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,337,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0635,Montpellier,34 - Hérault,Occitanie,100.0,100,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0636,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,274,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0637,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,552,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0638,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,101,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0639,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,292,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0640,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,150,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0641,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,126,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0642,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,467,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0643,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,325,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0644,Paris,75 - Paris,Île-de-France,100.0,394,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0645,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,172,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0646,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,297,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0647,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,353,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0648,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,364,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0649,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,219,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0650,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,434,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0651,Paris,75 - Paris,Île-de-France,100.0,149,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0652,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,84,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0653,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,207,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0654,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,91,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0655,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,159,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0656,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,119,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0657,Toulouse,31 - Haute-Garonne,Occitanie,100.0,222,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0658,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,457,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0659,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,592,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0660,Lille,59 - Nord,Hauts-de-France,100.0,131,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0661,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,150,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0662,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,96,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0663,Montpellier,34 - Hérault,Occitanie,100.0,82,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0664,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,310,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0665,Toulouse,31 - Haute-Garonne,Occitanie,100.0,272,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0666,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,149,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0667,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,560,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0668,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,369,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0669,Lille,59 - Nord,Hauts-de-France,100.0,318,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0670,Toulouse,31 - Haute-Garonne,Occitanie,100.0,505,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0671,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,51,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0672,Lille,59 - Nord,Hauts-de-France,100.0,166,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0673,Toulouse,31 - Haute-Garonne,Occitanie,100.0,46,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0674,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,126,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0675,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,415,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0676,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,321,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0677,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,500,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0678,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,449,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0679,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,111,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0680,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,381,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0681,Toulouse,31 - Haute-Garonne,Occitanie,100.0,127,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0682,Lille,59 - Nord,Hauts-de-France,100.0,444,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0683,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,525,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0684,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,401,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0685,Paris,75 - Paris,Île-de-France,100.0,281,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0686,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,216,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0687,Paris,75 - Paris,Île-de-France,100.0,267,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0688,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,593,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0689,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,197,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0690,Montpellier,34 - Hérault,Occitanie,100.0,382,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0691,Toulouse,31 - Haute-Garonne,Occitanie,100.0,485,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0692,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,466,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0693,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,545,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0694,Toulouse,31 - Haute-Garonne,Occitanie,100.0,301,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0695,Toulouse,31 - Haute-Garonne,Occitanie,100.0,565,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0696,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,75,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0697,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,457,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0698,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,571,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0699,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,71,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0700,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,162,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0701,Montpellier,34 - Hérault,Occitanie,100.0,482,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0702,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,360,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0703,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,450,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0704,Paris,75 - Paris,Île-de-France,100.0,543,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0705,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,506,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0706,Lille,59 - Nord,Hauts-de-France,100.0,80,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0707,Toulouse,31 - Haute-Garonne,Occitanie,100.0,329,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0708,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,321,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0709,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,153,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0710,Paris,75 - Paris,Île-de-France,100.0,94,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0711,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,377,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0712,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,418,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0713,Toulouse,31 - Haute-Garonne,Occitanie,100.0,561,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0714,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,108,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0715,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,433,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0716,Lille,59 - Nord,Hauts-de-France,100.0,513,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0717,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,368,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0718,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,509,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0719,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,525,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0720,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,207,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0721,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,322,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0722,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,87,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0723,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,490,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0724,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,117,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0725,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,114,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0726,Montpellier,34 - Hérault,Occitanie,100.0,46,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0727,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,109,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0728,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,504,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0729,Toulouse,31 - Haute-Garonne,Occitanie,100.0,177,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0730,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,161,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0731,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,391,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0732,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,493,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0733,Toulouse,31 - Haute-Garonne,Occitanie,100.0,499,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0734,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,570,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0735,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,231,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0736,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,212,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0737,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,490,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0738,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,184,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0739,Lille,59 - Nord,Hauts-de-France,100.0,335,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0740,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,610,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0741,Montpellier,34 - Hérault,Occitanie,100.0,204,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0742,Nice,06 - Alpes-Maritimes,Provence-Alpes-Côte d'Azur,100.0,197,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0743,Toulouse,31 - Haute-Garonne,Occitanie,100.0,346,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0744,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,148,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0745,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,263,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0746,Paris,75 - Paris,Île-de-France,100.0,311,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0747,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,372,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0748,Paris,75 - Paris,Île-de-France,100.0,322,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0749,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,154,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0750,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,216,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0751,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,238,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0752,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,390,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0753,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,185,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0754,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,100.0,259,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0755,Lille,59 - Nord,Hauts-de-France,100.0,55,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0756,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,483,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0757,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,383,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0758,Montpellier,34 - Hérault,Occitanie,100.0,530,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0759,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,125,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0760,Montpellier,34 - Hérault,Occitanie,100.0,602,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0761,Lille,59 - Nord,Hauts-de-France,100.0,147,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0762,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,100.0,332,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0763,Toulouse,31 - Haute-Garonne,Occitanie,100.0,512,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0764,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,609,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0765,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,79,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0766,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,222,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0767,Montpellier,34 - Hérault,Occitanie,100.0,371,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0768,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,95,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0769,Toulouse,31 - Haute-Garonne,Occitanie,100.0,588,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0770,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,96,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0771,Lille,59 - Nord,Hauts-de-France,100.0,249,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0772,Lille,59 - Nord,Hauts-de-France,100.0,325,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0773,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,222,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0774,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,281,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0775,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,126,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0776,Toulouse,31 - Haute-Garonne,Occitanie,100.0,273,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0777,Montpellier,34 - Hérault,Occitanie,100.0,280,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0778,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,224,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0779,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,123,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0780,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,489,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0781,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,552,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0782,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,472,Absence de signal indoor en zone bureau,ANOMALIE_CONFIRMEE
+SIG-0783,Lille,59 - Nord,Hauts-de-France,100.0,58,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0784,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,475,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0785,Lille,59 - Nord,Hauts-de-France,100.0,141,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0786,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,452,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0787,Lille,59 - Nord,Hauts-de-France,100.0,216,Débit nul malgré 5G affichée 100%,AUDIT_EN_COURS
+SIG-0788,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,286,Débit nul malgré 5G affichée 100%,ANOMALIE_CONFIRMEE
+SIG-0789,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,186,Absence de signal indoor en zone bureau,CORRIGE
+SIG-0790,Lille,59 - Nord,Hauts-de-France,100.0,146,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0791,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,100.0,443,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0792,Nantes,44 - Loire-Atlantique,Pays de la Loire,100.0,619,Micro-coupures quotidiennes B2B,ANOMALIE_CONFIRMEE
+SIG-0793,Strasbourg,67 - Bas-Rhin,Grand Est,100.0,617,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0794,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,401,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0795,Rennes,35 - Ille-et-Vilaine,Bretagne,100.0,283,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0796,Paris,75 - Paris,Île-de-France,100.0,503,Micro-coupures quotidiennes B2B,CORRIGE
+SIG-0797,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,514,Débit nul malgré 5G affichée 100%,CORRIGE
+SIG-0798,Annecy,74 - Haute-Savoie,Auvergne-Rhône-Alpes,100.0,74,Absence de signal indoor en zone bureau,AUDIT_EN_COURS
+SIG-0799,Paris,75 - Paris,Île-de-France,100.0,372,Micro-coupures quotidiennes B2B,AUDIT_EN_COURS
+SIG-0800,Grenoble,38 - Isère,Auvergne-Rhône-Alpes,100.0,147,Absence de signal indoor en zone bureau,AUDIT_EN_COURS

@@ -1,0 +1,14 @@
+code_departement,nom_departement,nom_region,locaux_raccordables_ftth,locaux_totaux_departement,taux_couverture_ftth_actuel_pct,objectif_plan_france_thd_pct,retard_deploiement_pct
+75 - Paris,Paris,Île-de-France,1250000,1260000,99.2,100.0,0.8
+69 - Rhône,Rhône,Auvergne-Rhône-Alpes,890000,920000,96.7,100.0,3.3
+13 - Bouches-du-Rhône,Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,910000,980000,92.8,100.0,7.2
+31 - Haute-Garonne,Haute-Garonne,Occitanie,650000,710000,91.5,100.0,8.5
+33 - Gironde,Gironde,Nouvelle-Aquitaine,780000,890000,87.6,100.0,12.4
+59 - Nord,Nord,Hauts-de-France,1100000,1250000,88.0,100.0,12.0
+67 - Bas-Rhin,Bas-Rhin,Grand Est,540000,600000,90.0,100.0,10.0
+44 - Loire-Atlantique,Loire-Atlantique,Pays de la Loire,680000,750000,90.6,100.0,9.4
+35 - Ille-et-Vilaine,Ille-et-Vilaine,Bretagne,490000,560000,87.5,100.0,12.5
+23 - Creuse,Creuse,Nouvelle-Aquitaine,38000,68000,55.8,100.0,44.2
+48 - Lozère,Lozère,Occitanie,25000,48000,52.1,100.0,47.9
+09 - Ariège,Ariège,Occitanie,52000,95000,54.7,100.0,45.3
+15 - Cantal,Cantal,Auvergne-Rhône-Alpes,42000,82000,51.2,100.0,48.8
