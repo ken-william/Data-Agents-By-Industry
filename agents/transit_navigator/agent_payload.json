@@ -1,0 +1,73 @@
+{
+  "displayName": "TransitNavigator - Transports & Mobilité",
+  "description": "Expert mobilité, régularité ferroviaire et analyse décisionnelle du réseau de transport : profils des voyageurs et abonnés (GEOGRAPHY domicile/travail), catalogue des forfaits (Navigo, Pass TER, TGV Max), historique des validations et parcours retracés aux arrêts/gares, suivi des retards/SLA des lignes et restitution intelligente des objets trouvés reliés au profil et trajet de l'usager.",
+  "dataAnalyticsAgent": {
+    "publishedContext": {
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 PROTECTION DES DONNÉES DE MOBILITÉ VOYAGEURS :\n- Anonymisation des usagers : Utiliser des identifiants anonymes (ex: 'Voyageur #1049') et ne jamais afficher d'emails bruts en rapport externe.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Analyse des historiques de badgeages gares et déclarations d'objets trouvés.\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "datasourceReferences": {
+        "bq": {
+          "tableReferences": [
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "transport_mobility_ds",
+              "tableId": "usagers_profils"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "transport_mobility_ds",
+              "tableId": "abonnements_titres_transport"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "transport_mobility_ds",
+              "tableId": "validations_trajets_voyageurs"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "transport_mobility_ds",
+              "tableId": "sncf_objets_trouves"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "transport_mobility_ds",
+              "tableId": "sncf_regularite_lignes"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "transport_mobility_ds",
+              "tableId": "frequentation_gares_sncf"
+            }
+          ]
+        }
+      },
+      "exampleQueries": [
+        {
+          "naturalLanguageQuestion": "Retrace le parcours complet et l'identité de l'usager qui a déclaré la perte d'un sac ou appareil électronique en gare.",
+          "sqlQuery": "SELECT o.incident_id, o.declaration_date, o.item_category, o.item_description, o.found_status, u.first_name, u.last_name, u.email, u.home_city, v.station_name, v.transport_mode, v.line_code, v.timestamp AS heure_validation FROM `${PROJECT_ID}.transport_mobility_ds.sncf_objets_trouves` o JOIN `${PROJECT_ID}.transport_mobility_ds.usagers_profils` u ON o.passenger_id = u.passenger_id LEFT JOIN `${PROJECT_ID}.transport_mobility_ds.validations_trajets_voyageurs` v ON o.matched_journey_validation_id = v.validation_id WHERE o.found_status != 'Restitué au propriétaire' ORDER BY o.declaration_date DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les forfaits d'abonnements les plus souscrits par nos usagers effectuant des trajets quotidiens Domicile-Travail ?",
+          "sqlQuery": "SELECT a.plan_name, a.monthly_price_eur, a.valid_zones, COUNT(u.passenger_id) AS nombre_abonnés, COUNT(v.validation_id) AS total_validations FROM `${PROJECT_ID}.transport_mobility_ds.abonnements_titres_transport` a JOIN `${PROJECT_ID}.transport_mobility_ds.usagers_profils` u ON a.subscription_plan_id = u.subscription_plan_id LEFT JOIN `${PROJECT_ID}.transport_mobility_ds.validations_trajets_voyageurs` v ON u.passenger_id = v.passenger_id GROUP BY a.plan_name, a.monthly_price_eur, a.valid_zones ORDER BY nombre_abonnés DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Affiche les axes ferroviaires subissant les pires retards moyens et le taux d'annulation de trains par région.",
+          "sqlQuery": "SELECT nom_axe_ferroviaire, type_transport, region, taux_regularite_ponctualite_pct, nombre_trains_annules, retard_moyen_minutes, perte_financiere_retards_eur FROM `${PROJECT_ID}.transport_mobility_ds.sncf_regularite_lignes` WHERE retard_moyen_minutes > 15.0 ORDER BY retard_moyen_minutes DESC"
+        }
+      ],
+      "glossaryTerms": [
+        {
+          "displayName": "Profils Voyageurs & GEOGRAPHY Domicile-Travail",
+          "description": "Indexation des coordonnées spatiales POINT et des caractéristiques d'abonnés."
+        },
+        {
+          "displayName": "Validations & Retraçage des Parcours",
+          "description": "Historique des badgeages aux arrêts et gares pour suivre la ligne et le mode de transport."
+        },
+        {
+          "displayName": "Objets Trouvés & Traçabilité Usager",
+          "description": "Lien entre la déclaration de perte et le parcours validé du voyageur en gare."
+        }
+      ]
+    }
+  }
+}
