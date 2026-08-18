@@ -8,34 +8,139 @@
     "description": "Glossaire du recensement RES, gaspillage énergétique et subventions ANS pour ArenaManager.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "billetterie-stades-&-loges-vip",
+            "termId": "billetterie-stades-loges-vip",
             "displayName": "Billetterie Stades & Loges VIP",
-            "definition": "Suivi des ventes de places grand public, hospitalités VIP et taux d'occupation des enceintes."
+            "definition": "Suivi des ventes de places grand public, hospitalités VIP et taux d'occupation des enceintes.",
+            "mapped_bigquery_table": "stades_evenements_billetterie",
+            "mapped_bigquery_column": "recette_billetterie_brute_eur",
+            "related_terms": [
+              "Recettes Brutes Billetterie",
+              "Places VIP Loges Prestige",
+              "Taux de Remplissage Enceinte",
+              "Jauge Maximale Stade"
+            ]
           },
           {
-            "termId": "concessions,-buvettes-&-merchandising",
+            "termId": "concessions-buvettes-merchandising",
             "displayName": "Concessions, Buvettes & Merchandising",
-            "definition": "Chiffre d'affaires de la restauration, ventes de boissons et produits dérivés par spectateur (€)."
+            "definition": "Chiffre d'affaires de la restauration, ventes de boissons et produits dérivés par spectateur (€).",
+            "mapped_bigquery_table": "stades_concessions_buvettes",
+            "mapped_bigquery_column": "recette_nourriture_boisson_eur",
+            "related_terms": [
+              "Chiffre d'Affaires Food & Beverage",
+              "Boutique Officielle Maillots",
+              "Dépense Panier Moyen Spectateur",
+              "Stand Restauration Parvis"
+            ]
           },
           {
-            "termId": "audit-énergétique-res-mwh/an",
+            "termId": "audit-energetique-res-mwh",
             "displayName": "Audit Énergétique RES (MWh/an)",
-            "definition": "Recensement des Équipements Sportifs du Ministère des Sports et détection du gaspillage kWh/m²."
+            "definition": "Recensement des Équipements Sportifs du Ministère des Sports et détection du gaspillage kWh/m².",
+            "mapped_bigquery_table": "ministere_sports_equipements",
+            "mapped_bigquery_column": "consommation_energetique_annuelle_mwh",
+            "related_terms": [
+              "Recensement Équipements Sportifs RES",
+              "Gaspillage kWh/m²/an",
+              "Taux Occupation Semaine <30%",
+              "État Vétusté Complexe"
+            ]
           },
           {
-            "termId": "subventions-ans-&-impact-jeunes",
+            "termId": "subventions-ans-impact-jeunes",
             "displayName": "Subventions ANS & Impact Jeunes",
-            "definition": "Aides financières de l'Agence Nationale du Sport et coût public par jeune inscrit."
+            "definition": "Aides financières de l'Agence Nationale du Sport et coût public par jeune inscrit.",
+            "mapped_bigquery_table": "ministere_sports_subventions",
+            "mapped_bigquery_column": "montant_subvention_ans_eur",
+            "related_terms": [
+              "Agence Nationale du Sport ANS",
+              "Financement Rénovation Thermique",
+              "Impact Inscriptions Jeunes %",
+              "Coût Public par Jeune €"
+            ]
           },
           {
             "termId": "potentiel-sponsoring-premium-stades",
             "displayName": "Potentiel Sponsoring Premium Stades",
-            "definition": "Croissance des licenciés fédéraux et valorisation des espaces publicitaires d'enceintes."
+            "definition": "Croissance des licenciés fédéraux et valorisation des espaces publicitaires d'enceintes.",
+            "mapped_bigquery_table": "ministere_sports_licencies",
+            "mapped_bigquery_column": "potentiel_sponsoring_premium_stade",
+            "related_terms": [
+              "Croissance Licenciés Fédéraux",
+              "Valorisation Panneaux Publicitaires",
+              "Fédérations Football Rugby",
+              "Attractivité Sponsor Club"
+            ]
+          },
+          {
+            "termId": "diagnostic-desequilibre-territoires",
+            "displayName": "Diagnostic Territorial Déséquilibre Équipements",
+            "definition": "Déficit d'équipements homologués par rapport à la croissance démographique locale.",
+            "mapped_bigquery_table": "ministere_sports_desequilibre_territoires",
+            "mapped_bigquery_column": "deficit_equipements_homologues_pct",
+            "related_terms": [
+              "Déficit Homologation %",
+              "Piscine / Terrain Synthétique Manquant",
+              "Croissance Démographique Locale",
+              "Priorité Investissement Municipal"
+            ]
+          },
+          {
+            "termId": "categorie-evenements-programmation",
+            "displayName": "Catégorie d'Événements & Programmation Arena",
+            "definition": "Typologie des événements programmés (Championnats, Concerts, Tournois) et taux d'occupation.",
+            "mapped_bigquery_table": "stades_evenements_billetterie",
+            "mapped_bigquery_column": "categorie_evenement",
+            "related_terms": [
+              "Match Championnat Ligue 1 Top 14",
+              "Concert Spectacle Tournée",
+              "Rencontre Internationale",
+              "Calendrier Programmation Stade"
+            ]
+          },
+          {
+            "termId": "typologie-stands-restauration-loges",
+            "displayName": "Typologie des Stands de Restauration & Bar Loges",
+            "definition": "Analyse de rentabilité par type de point de vente (Buvettes, Bar VIP, Boutiques).",
+            "mapped_bigquery_table": "stades_concessions_buvettes",
+            "mapped_bigquery_column": "type_stand",
+            "related_terms": [
+              "Buvette Tribune Nord Sud",
+              "Bar VIP Loges Prestige",
+              "Stand Snacking Parvis",
+              "Chiffre d'Affaires au Spectateur"
+            ]
+          },
+          {
+            "termId": "surface-capacite-accueil-enceintes",
+            "displayName": "Surface & Capacité d'Accueil des Enceintes",
+            "definition": "Dimensions praticables m² et jauges maximales des tribunes spectateurs.",
+            "mapped_bigquery_table": "ministere_sports_equipements",
+            "mapped_bigquery_column": "surface_m2",
+            "related_terms": [
+              "Surface Praticable m²",
+              "Capacité Tribunes Spectateurs",
+              "Piscine Olympique / Dojo / Tennis",
+              "Stade Omnisports"
+            ]
+          },
+          {
+            "termId": "alerte-surconsommation-energetique",
+            "displayName": "Alerte Surconsommation Énergétique Bâtiment",
+            "definition": "Indicateur d'anomalie thermique MWh et programmes de rénovation LED / Isolation.",
+            "mapped_bigquery_table": "ministere_sports_equipements",
+            "mapped_bigquery_column": "alerte_gaspillage_energetique",
+            "related_terms": [
+              "Détection Surconsommation MWh",
+              "Rénovation Éclairage LED",
+              "Isolation Thermique Gymnase",
+              "Budget Énergétique Municipal"
+            ]
           }
         ]
       }

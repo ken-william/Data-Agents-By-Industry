@@ -8,29 +8,139 @@
     "description": "Glossaire de charge réseau Enedis, bornes IRVE et effacement électrique pour Helios.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "bornes-de-recharge-irve-enedis",
+            "termId": "bornes-recharge-irve-enedis",
             "displayName": "Bornes de Recharge IRVE Enedis",
-            "definition": "Cartographie des 10 000 points de charge pour véhicules électriques, puissance kW et connecteurs."
+            "definition": "Cartographie des 10 000 points de charge pour véhicules électriques, puissance kW et connecteurs.",
+            "mapped_bigquery_table": "enedis_bornes_irve",
+            "mapped_bigquery_column": "nb_points_recharge",
+            "related_terms": [
+              "Infrastructure Recharge Véhicules Électriques",
+              "Puissance kW Connecteurs",
+              "Implantation Géographique IRVE",
+              "Taux d'Utilisation Bornes"
+            ]
           },
           {
-            "termId": "télémesure-30min-transformateurs-hta/bt",
+            "termId": "telemesure-30min-transformateurs-hta-bt",
             "displayName": "Télémesure 30min Transformateurs HTA/BT",
-            "definition": "Courbes de charge, détection des risques de surtension et saturation réseau."
+            "definition": "Courbes de charge, détection des risques de surtension et saturation réseau.",
+            "mapped_bigquery_table": "enedis_consommation_inf36",
+            "mapped_bigquery_column": "puissance_souscrite_kva",
+            "related_terms": [
+              "Courbes de Charge 30min",
+              "Puissance Souscrite kVA",
+              "Risque Surtension Transformateur",
+              "Equilibrage Phasique BT"
+            ]
           },
           {
-            "termId": "production-d'énergie-renouvelable-enr",
+            "termId": "production-energie-renouvelable-enr",
             "displayName": "Production d'Énergie Renouvelable (EnR)",
-            "definition": "Injection solaire photovoltaïque et éolienne par territoire."
+            "definition": "Injection solaire photovoltaïque et éolienne par territoire.",
+            "mapped_bigquery_table": "enedis_production_renouvelable",
+            "mapped_bigquery_column": "puissance_raccordee_kw",
+            "related_terms": [
+              "Injection Solaire Photovoltaïque",
+              "Parcs Éoliens Régionaux",
+              "Capacité Raccordement EnR",
+              "Mix Énergétique Territoire"
+            ]
           },
           {
-            "termId": "flexibilité-d'effacement-industriel-b2b",
+            "termId": "flexibilite-effacement-industriel-b2b",
             "displayName": "Flexibilité d'Effacement Industriel B2B",
-            "definition": "Gisements de réduction de consommation des usines lors des pics de tension hivernaux."
+            "definition": "Gisements de réduction de consommation des usines lors des pics de tension hivernaux.",
+            "mapped_bigquery_table": "enedis_clients_industriels",
+            "mapped_bigquery_column": "gisement_effacement_kw",
+            "related_terms": [
+              "Effacement Consommation Usines",
+              "Pics de Tension Hivernaux",
+              "Primes de Flexibilité B2B",
+              "Régulation Réseau Enedis"
+            ]
+          },
+          {
+            "termId": "reseau-distribution-hta-bt",
+            "displayName": "Réseau de Distribution HTA & BT",
+            "definition": "Maillage régional des lignes moyenne tension HTA et basse tension BT.",
+            "mapped_bigquery_table": "enedis_consommation_inf36",
+            "mapped_bigquery_column": "code_insee_commune",
+            "related_terms": [
+              "Lignes Moyenne Tension HTA",
+              "Basse Tension BT",
+              "Poste de Transformation",
+              "Maille Régionale Distribution"
+            ]
+          },
+          {
+            "termId": "consommation-residentielle-tertiaire-linky",
+            "displayName": "Consommation Résidentielle & Tertiaire <36kVA",
+            "definition": "Télé-relève des compteurs communicants Linky et consommation MWh par commune.",
+            "mapped_bigquery_table": "enedis_consommation_inf36",
+            "mapped_bigquery_column": "consommation_annuelle_mwh",
+            "related_terms": [
+              "Compteurs Communicants Linky",
+              "Consommation MWh par Commune",
+              "Usages Chauffage Électrique",
+              "Efficacité Énergétique Bâtiments"
+            ]
+          },
+          {
+            "termId": "puissance-charge-connecteurs-rapides",
+            "displayName": "Puissance de Charge & Connecteurs Rapides",
+            "definition": "Répartition des puissances de charge AC/DC (22kW à 150kW) et standards de prise.",
+            "mapped_bigquery_table": "enedis_bornes_irve",
+            "mapped_bigquery_column": "puissance_nominale_kw",
+            "related_terms": [
+              "Charge Rapide DC 150kW",
+              "Bornes AC 22kW",
+              "Disponibilité Connecteurs Combo CCS",
+              "Plan de Déploiement IRVE"
+            ]
+          },
+          {
+            "termId": "indicateurs-periodes-pointe-heures-creuses",
+            "displayName": "Indicateurs de Périodes de Pointe & Heures Creuses",
+            "definition": "Profils de consommation en heures creuses et lissage des pointes de demande.",
+            "mapped_bigquery_table": "enedis_consommation_inf36",
+            "mapped_bigquery_column": "profil_consommation",
+            "related_terms": [
+              "Heures de Pointe Hiver",
+              "Heures Creuses Nuit",
+              "Lissage de la Courbe de Charge",
+              "Optimisation Tarifaire"
+            ]
+          },
+          {
+            "termId": "infrastructures-acces-reseau-industriel",
+            "displayName": "Infrastructures d'Accès Réseau Industriel",
+            "definition": "Stabilité des raccordements haute puissance pour les usines et clients B2B.",
+            "mapped_bigquery_table": "enedis_clients_industriels",
+            "mapped_bigquery_column": "secteur_activite_code_naf",
+            "related_terms": [
+              "Raccordement Gros Clients HTB",
+              "Tarif Jaune Vert Enedis",
+              "Stabilité Réseau Usines",
+              "Plan de Secours Industriel"
+            ]
+          },
+          {
+            "termId": "bilan-emissions-co2-evite-enr",
+            "displayName": "Bilan Émissions CO2 Avoided Mix EnR",
+            "definition": "Réduction de l'empreinte carbone et tonnes CO2 évitées grâce à l'injection EnR.",
+            "mapped_bigquery_table": "enedis_production_renouvelable",
+            "mapped_bigquery_column": "co2_evite_tonnes",
+            "related_terms": [
+              "Tonnes CO2 Évitées",
+              "Décarbonation Réseau Électrique",
+              "Certificats d'Origine Verte",
+              "Objectif Réductions Émissions"
+            ]
           }
         ]
       }

@@ -52,23 +52,43 @@
       "glossaryTerms": [
         {
           "displayName": "Ruptures Visuelles en Rayon (Shelf-Out)",
-          "description": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires."
+          "description": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires. Termes liés & Ontologies : Planogramme Conforme, Rupture en Linéaire, Taux de Rupture Enseigne, Perte Chiffre d'Affaires Rayon."
         },
         {
           "displayName": "Démarque & Péremption Rayon Frais",
-          "description": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et casse."
+          "description": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et démarque casse. Termes liés & Ontologies : Prédiction Péremption 14j, Démarque Inconnue, Gâchis Alimentaire Frais, Casse Produits Ultra-Frais."
         },
         {
           "displayName": "Bundles Cross-Selling & Marge Brute",
-          "description": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD."
+          "description": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD. Termes liés & Ontologies : Panier Moyen Associé, Marques Nationales vs MDD, Taux d'Appétence Bundle, Optimisation de la Marge Commerciale."
         },
         {
           "displayName": "Profil Nutritionnel & Additifs (Nutri-Score & NOVA)",
-          "description": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4."
+          "description": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4, additifs sensibles. Termes liés & Ontologies : Nutri-Score A à E, Classification Ultra-Transformés NOVA, Additifs Sensibles E-numbers, Reformulation Recette MDD."
         },
         {
           "displayName": "Fréquentation Magasins & Conversion Panier",
-          "description": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface."
+          "description": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface de vente. Termes liés & Ontologies : Flux Horaires Clients, Chiffre d'Affaires au m², Taux de Transformation Caisse, Fréquentation Magasin Enseigne."
+        },
+        {
+          "displayName": "Audits de Conformité Linéaire (Planogrammes)",
+          "description": "Taux de respect du planogramme, nombre de facings et emplacement en hauteur d'yeux. Termes liés & Ontologies : Facing Produits, Hauteur d'Yeux Linéaire, Disposition Marques Nationales, Part de Voix Rayon."
+        },
+        {
+          "displayName": "Péremption & Démarque Rayon Frais 14 Jours",
+          "description": "Volume d'unités proches de la Date Limite de Consommation DLC et stickers anti-gaspillage. Termes liés & Ontologies : Date Limite de Consommation DLC, Sticker Anti-Gaspillage, Rotations des Stocks Frais, Démarque Commerciale."
+        },
+        {
+          "displayName": "Associations d'Achats & Cross-Merchandising",
+          "description": "Confiance et lift des règles d'association de produits implantés en cross-merchandising. Termes liés & Ontologies : Règles d'Association Panier, Cross-Selling Linéaire, Produits Complémentaires, Marge Brute Bundle."
+        },
+        {
+          "displayName": "Catalogue Produits Open Food Facts",
+          "description": "Identifiants GTIN/EAN13, composition en ingrédients et empreinte carbone de la gamme. Termes liés & Ontologies : Code-Barres GTIN EAN13, Liste d'Ingrédients, Ingrédients Allergènes, Empreinte Carbone Produit."
+        },
+        {
+          "displayName": "Rendement au Mètre Linéaire Développé (MLD)",
+          "description": "Chiffre d'affaires et marge brute générés par mètre linéaire développé de rayon. Termes liés & Ontologies : MLD Mètre Linéaire Développé, Chiffre d'Affaires au Mètre, Marge au Mètre Linéaire, Rentabilité Emplacement."
         }
       ]
     }

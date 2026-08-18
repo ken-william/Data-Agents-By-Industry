@@ -61,23 +61,43 @@
       "glossaryTerms": [
         {
           "displayName": "Billetterie Stades & Loges VIP",
-          "description": "Suivi des ventes de places grand public, hospitalités VIP et taux d'occupation des enceintes."
+          "description": "Suivi des ventes de places grand public, hospitalités VIP et taux d'occupation des enceintes. Termes liés & Ontologies : Recettes Brutes Billetterie, Places VIP Loges Prestige, Taux de Remplissage Enceinte, Jauge Maximale Stade."
         },
         {
           "displayName": "Concessions, Buvettes & Merchandising",
-          "description": "Chiffre d'affaires de la restauration, ventes de boissons et produits dérivés par spectateur (€)."
+          "description": "Chiffre d'affaires de la restauration, ventes de boissons et produits dérivés par spectateur (€). Termes liés & Ontologies : Chiffre d'Affaires Food & Beverage, Boutique Officielle Maillots, Dépense Panier Moyen Spectateur, Stand Restauration Parvis."
         },
         {
           "displayName": "Audit Énergétique RES (MWh/an)",
-          "description": "Recensement des Équipements Sportifs du Ministère des Sports et détection du gaspillage kWh/m²."
+          "description": "Recensement des Équipements Sportifs du Ministère des Sports et détection du gaspillage kWh/m². Termes liés & Ontologies : Recensement Équipements Sportifs RES, Gaspillage kWh/m²/an, Taux Occupation Semaine <30%, État Vétusté Complexe."
         },
         {
           "displayName": "Subventions ANS & Impact Jeunes",
-          "description": "Aides financières de l'Agence Nationale du Sport et coût public par jeune inscrit."
+          "description": "Aides financières de l'Agence Nationale du Sport et coût public par jeune inscrit. Termes liés & Ontologies : Agence Nationale du Sport ANS, Financement Rénovation Thermique, Impact Inscriptions Jeunes %, Coût Public par Jeune €."
         },
         {
           "displayName": "Potentiel Sponsoring Premium Stades",
-          "description": "Croissance des licenciés fédéraux et valorisation des espaces publicitaires d'enceintes."
+          "description": "Croissance des licenciés fédéraux et valorisation des espaces publicitaires d'enceintes. Termes liés & Ontologies : Croissance Licenciés Fédéraux, Valorisation Panneaux Publicitaires, Fédérations Football Rugby, Attractivité Sponsor Club."
+        },
+        {
+          "displayName": "Diagnostic Territorial Déséquilibre Équipements",
+          "description": "Déficit d'équipements homologués par rapport à la croissance démographique locale. Termes liés & Ontologies : Déficit Homologation %, Piscine / Terrain Synthétique Manquant, Croissance Démographique Locale, Priorité Investissement Municipal."
+        },
+        {
+          "displayName": "Catégorie d'Événements & Programmation Arena",
+          "description": "Typologie des événements programmés (Championnats, Concerts, Tournois) et taux d'occupation. Termes liés & Ontologies : Match Championnat Ligue 1 Top 14, Concert Spectacle Tournée, Rencontre Internationale, Calendrier Programmation Stade."
+        },
+        {
+          "displayName": "Typologie des Stands de Restauration & Bar Loges",
+          "description": "Analyse de rentabilité par type de point de vente (Buvettes, Bar VIP, Boutiques). Termes liés & Ontologies : Buvette Tribune Nord Sud, Bar VIP Loges Prestige, Stand Snacking Parvis, Chiffre d'Affaires au Spectateur."
+        },
+        {
+          "displayName": "Surface & Capacité d'Accueil des Enceintes",
+          "description": "Dimensions praticables m² et jauges maximales des tribunes spectateurs. Termes liés & Ontologies : Surface Praticable m², Capacité Tribunes Spectateurs, Piscine Olympique / Dojo / Tennis, Stade Omnisports."
+        },
+        {
+          "displayName": "Alerte Surconsommation Énergétique Bâtiment",
+          "description": "Indicateur d'anomalie thermique MWh et programmes de rénovation LED / Isolation. Termes liés & Ontologies : Détection Surconsommation MWh, Rénovation Éclairage LED, Isolation Thermique Gymnase, Budget Énergétique Municipal."
         }
       ]
     }

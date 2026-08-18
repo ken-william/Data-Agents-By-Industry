@@ -47,19 +47,43 @@
       "glossaryTerms": [
         {
           "displayName": "Mon Réseau Mobile ARCEP",
-          "description": "Observatoire officiel de la couverture 2G/3G/4G/5G des 4 opérateurs nationaux."
+          "description": "Observatoire officiel ARCEP de la couverture 2G/3G/4G/5G des 4 opérateurs nationaux. Termes liés & Ontologies : Observatoire Officiel ARCEP, Couverture Mobile 4G 5G, Données Répétiteurs Nationaux, Zones Blanches Territoire."
         },
         {
           "displayName": "Cartographie des 10 000 Antennes Relais",
-          "description": "Suivi des pylônes Orange, SFR, Bouygues Telecom, Free Mobile et bandes de fréquences 3.5 GHz."
+          "description": "Suivi des pylônes Orange, SFR, Bouygues Telecom, Free Mobile et bandes de fréquences 3.5 GHz. Termes liés & Ontologies : Pylônes Antenne Mobile, Opérateurs Orange SFR Bouygues Free, Implantation GPS Site, Technologie 2G 3G 4G 5G."
+        },
+        {
+          "displayName": "Fréquences 5G 3.5 GHz & 700 MHz",
+          "description": "Répartition des licences de fréquences attribuées par l'ARCEP et largeur de bande. Termes liés & Ontologies : Bande Cœur 5G 3.5 GHz, Bande 700 MHz Longue Portée, Nombre de Blocks Fréquences, Bande Passante MHz."
         },
         {
           "displayName": "Qualité de Service (QoS Débits & Latence)",
-          "description": "Mesures de débit descendant/montant en Mbps, latence ms et taux de coupure."
+          "description": "Mesures de débit descendant/montant en Mbps, latence ms et taux de coupure. Termes liés & Ontologies : Débit Descendant Download Mbps, Débit Montant Upload Mbps, Latence Ping Millisecondes, Taux de Coupure Appel %."
         },
         {
           "displayName": "Gestion des Incidents d'Équipements",
-          "description": "Alertes de panne matérielle, pannes d'énergie sur antennes et SLA de rétablissement."
+          "description": "Alertes de panne matérielle, pannes d'énergie sur antennes et SLA de rétablissement. Termes liés & Ontologies : Panne Pylône Énergie, Rupture Liaison Faisceau Hertzien, Temps de Rétablissement SLA, Alerte Superviseur NOC."
+        },
+        {
+          "displayName": "Zones Blanches & Pass Équipement",
+          "description": "Cartographie des zones non couvertes et résorption via le dispositif New Deal Mobile. Termes liés & Ontologies : Programme New Deal Mobile, Couverture Métropolitaine, Zones de Montagne LEO, Résolution Pénurie Couverture."
+        },
+        {
+          "displayName": "Pylônes Multi-Opérateurs & Mutualisation",
+          "description": "Partage d'infrastructures passives (TowerCo) entre opérateurs télécoms. Termes liés & Ontologies : Mutualisation d'Infrastructures TowerCo, Partage de Pylône, Réduction Coûts CAPEX, Impact Environnemental Visuel."
+        },
+        {
+          "displayName": "Indicateurs de Disponibilité Réseau 99.9%",
+          "description": "Taux de disponibilité opérationnel des antennes et sécurité des liaisons FH/Fibre. Termes liés & Ontologies : SLA 99.9% Disponibilité, Continuité de Service, Redondance Fibre Pylône, Backup Batterie Secours."
+        },
+        {
+          "displayName": "Déploiement 5G Standalone (SA)",
+          "description": "Transition vers le cœur de réseau 5G autonome et découpage réseau Network Slicing. Termes liés & Ontologies : 5G Standalone SA, Network Slicing Réseau, Applications Latence Ultra-Basse, Cœur de Réseau 5G."
+        },
+        {
+          "displayName": "Qualité d'Expérience Client QoE",
+          "description": "Mesure de l'expérience utilisateur en streaming vidéo, navigation web et appels voix HD. Termes liés & Ontologies : Score QoE Streaming Vidéo, Navigation Web Mobile, Satisfaction Abonnés Télécoms, Benchmarking Opérateurs."
         }
       ]
     }

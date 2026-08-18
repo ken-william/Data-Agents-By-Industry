@@ -8,34 +8,139 @@
     "description": "Glossaire Nutri-Score, additifs alimentaires E250 et démarque 14 jours pour ShelfOptimizer.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "ruptures-visuelles-en-rayon-shelf-out",
+            "termId": "ruptures-visuelles-shelf-out",
             "displayName": "Ruptures Visuelles en Rayon (Shelf-Out)",
-            "definition": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires."
+            "definition": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires.",
+            "mapped_bigquery_table": "retail_analyse_lineaire_ruptures",
+            "mapped_bigquery_column": "nombre_trous_visuels_rayon",
+            "related_terms": [
+              "Planogramme Conforme",
+              "Rupture en Linéaire",
+              "Taux de Rupture Enseigne",
+              "Perte Chiffre d'Affaires Rayon"
+            ]
           },
           {
-            "termId": "démarque-&-péremption-rayon-frais",
+            "termId": "demarque-peremption-rayon-frais",
             "displayName": "Démarque & Péremption Rayon Frais",
-            "definition": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et casse."
+            "definition": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et démarque casse.",
+            "mapped_bigquery_table": "retail_prix_moyens_panier",
+            "mapped_bigquery_column": "perte_financiere_casse_eur",
+            "related_terms": [
+              "Prédiction Péremption 14j",
+              "Démarque Inconnue",
+              "Gâchis Alimentaire Frais",
+              "Casse Produits Ultra-Frais"
+            ]
           },
           {
-            "termId": "bundles-cross-selling-&-marge-brute",
+            "termId": "bundles-cross-selling-marge-brute",
             "displayName": "Bundles Cross-Selling & Marge Brute",
-            "definition": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD."
+            "definition": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD.",
+            "mapped_bigquery_table": "retail_cross_selling_associations",
+            "mapped_bigquery_column": "marge_brute_combinee_eur",
+            "related_terms": [
+              "Panier Moyen Associé",
+              "Marques Nationales vs MDD",
+              "Taux d'Appétence Bundle",
+              "Optimisation de la Marge Commerciale"
+            ]
           },
           {
-            "termId": "profil-nutritionnel-&-additifs-nutri-score-&-nova",
+            "termId": "nutriscore-nova-additifs",
             "displayName": "Profil Nutritionnel & Additifs (Nutri-Score & NOVA)",
-            "definition": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4."
+            "definition": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4, additifs sensibles.",
+            "mapped_bigquery_table": "openfoodfacts_catalog",
+            "mapped_bigquery_column": "nutriscore_grade",
+            "related_terms": [
+              "Nutri-Score A à E",
+              "Classification Ultra-Transformés NOVA",
+              "Additifs Sensibles E-numbers",
+              "Reformulation Recette MDD"
+            ]
           },
           {
-            "termId": "fréquentation-magasins-&-conversion-panier",
+            "termId": "frequentation-magasins-conversion",
             "displayName": "Fréquentation Magasins & Conversion Panier",
-            "definition": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface."
+            "definition": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface de vente.",
+            "mapped_bigquery_table": "retail_frequentation_magasins",
+            "mapped_bigquery_column": "frequentation_horaire_clients",
+            "related_terms": [
+              "Flux Horaires Clients",
+              "Chiffre d'Affaires au m²",
+              "Taux de Transformation Caisse",
+              "Fréquentation Magasin Enseigne"
+            ]
+          },
+          {
+            "termId": "audits-planogrammes-facing",
+            "displayName": "Audits de Conformité Linéaire (Planogrammes)",
+            "definition": "Taux de respect du planogramme, nombre de facings et emplacement en hauteur d'yeux.",
+            "mapped_bigquery_table": "retail_analyse_lineaire_ruptures",
+            "mapped_bigquery_column": "conformite_planogramme_pct",
+            "related_terms": [
+              "Facing Produits",
+              "Hauteur d'Yeux Linéaire",
+              "Disposition Marques Nationales",
+              "Part de Voix Rayon"
+            ]
+          },
+          {
+            "termId": "date-limite-consommation-dlc",
+            "displayName": "Péremption & Démarque Rayon Frais 14 Jours",
+            "definition": "Volume d'unités proches de la Date Limite de Consommation DLC et stickers anti-gaspillage.",
+            "mapped_bigquery_table": "retail_prix_moyens_panier",
+            "mapped_bigquery_column": "nb_unites_proche_peremption",
+            "related_terms": [
+              "Date Limite de Consommation DLC",
+              "Sticker Anti-Gaspillage",
+              "Rotations des Stocks Frais",
+              "Démarque Commerciale"
+            ]
+          },
+          {
+            "termId": "regles-association-merchandising",
+            "displayName": "Associations d'Achats & Cross-Merchandising",
+            "definition": "Confiance et lift des règles d'association de produits implantés en cross-merchandising.",
+            "mapped_bigquery_table": "retail_cross_selling_associations",
+            "mapped_bigquery_column": "indice_confiance_pct",
+            "related_terms": [
+              "Règles d'Association Panier",
+              "Cross-Selling Linéaire",
+              "Produits Complémentaires",
+              "Marge Brute Bundle"
+            ]
+          },
+          {
+            "termId": "catalogue-openfoodfacts-gtin",
+            "displayName": "Catalogue Produits Open Food Facts",
+            "definition": "Identifiants GTIN/EAN13, composition en ingrédients et empreinte carbone de la gamme.",
+            "mapped_bigquery_table": "openfoodfacts_catalog",
+            "mapped_bigquery_column": "code_barres_gtin",
+            "related_terms": [
+              "Code-Barres GTIN EAN13",
+              "Liste d'Ingrédients",
+              "Ingrédients Allergènes",
+              "Empreinte Carbone Produit"
+            ]
+          },
+          {
+            "termId": "rendement-mètre-linéaire-développé",
+            "displayName": "Rendement au Mètre Linéaire Développé (MLD)",
+            "definition": "Chiffre d'affaires et marge brute générés par mètre linéaire développé de rayon.",
+            "mapped_bigquery_table": "retail_analyse_lineaire_ruptures",
+            "mapped_bigquery_column": "chiffre_affaires_par_m2_eur",
+            "related_terms": [
+              "MLD Mètre Linéaire Développé",
+              "Chiffre d'Affaires au Mètre",
+              "Marge au Mètre Linéaire",
+              "Rentabilité Emplacement"
+            ]
           }
         ]
       }

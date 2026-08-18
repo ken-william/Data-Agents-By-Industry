@@ -62,23 +62,43 @@
       "glossaryTerms": [
         {
           "displayName": "Déserts Médicaux & Démographie RPPS",
-          "description": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités de cliniques privées."
+          "description": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités d'implantation de cliniques privées (projection EBITDA 5 ans). Termes liés & Ontologies : Densité Médicale RPPS, Zonage ARS Pénurie Soins, Projection EBITDA Clinique, Implantation Clinique Privée."
         },
         {
           "displayName": "Ruptures de Stock & Tension Médicamenteuse",
-          "description": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement."
+          "description": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement hospitalier. Termes liés & Ontologies : Autonomie Stock Jours, Stock Sécurité Antibiotiques, Molécules Critiques Hospitalières, Appel d'Offres Pharmacie."
         },
         {
           "displayName": "Saturation des Urgences & Plans Blancs",
-          "description": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire."
+          "description": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire. Termes liés & Ontologies : Taux Saturation Urgences, Temps d'Attente Brancards, Déclenchement Plan Blanc, Régulation SAMU 15."
         },
         {
           "displayName": "Programmation des Blocs Opératoires",
-          "description": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes."
+          "description": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes des praticiens. Termes liés & Ontologies : Vacations Chirurgicales, Garde Médicale Planning, Temps de Vacation Inoccupé, Optimisation Salles d'Opération."
         },
         {
-          "displayName": "Open BIO & Dépenses de Biologie Médicale",
-          "description": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts."
+          "displayName": "Open BIO & Dépenses Biologie AMELI",
+          "description": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts de santé. Termes liés & Ontologies : Biologie Médicale Ambulatoire, Dépenses Assurance Maladie, Codification NABM, Analyse Coût des Examens."
+        },
+        {
+          "displayName": "Établissements de Santé FINESS",
+          "description": "Répertoire national FINESS des hôpitaux publics CHU, CH, et cliniques privées lucratives. Termes liés & Ontologies : Fichier FINESS, Cliniques Privées Lucratives, Hôpitaux Publics CHU, Cartographie Établissements."
+        },
+        {
+          "displayName": "Planning & Gardes du Personnel Médical",
+          "description": "Suivi des heures de garde, astreintes et absentéisme des équipes soignantes. Termes liés & Ontologies : Astreintes Médicales, Taux d'Absentéisme Praticiens, Remplacement Intérim Médical, Repos Sécurité Obligatoire."
+        },
+        {
+          "displayName": "Prises en Charge Urgences Pédiatriques",
+          "description": "Flux d'admissions quotidiennes et régulation des urgences pédiatriques. Termes liés & Ontologies : Urgences Pédiatriques, Passages Urgences 24h, Orientation Service Hospitalisation, Taux d'Admission Directe."
+        },
+        {
+          "displayName": "Pharmacie à Usage Intérieur (PUI)",
+          "description": "Gestion de la délivrance nominative des médicaments et périssables hospitaliers. Termes liés & Ontologies : Pharmacie Hospitalière PUI, Délivrance Nominative, Gestion des Périssables, Approvisionnement Centrale d'Achat."
+        },
+        {
+          "displayName": "Indice de Pression Sanitaire Territoriale",
+          "description": "Mesure globale de la capacité en lits de réanimation et pression sanitaire régionale. Termes liés & Ontologies : Pression Sanitaire Régionale, Capacité Lits Ranimation, Taux d'Évacuation Sanitaire, Bilan d'Activité CHU."
         }
       ]
     }

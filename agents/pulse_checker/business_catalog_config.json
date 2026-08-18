@@ -8,34 +8,139 @@
     "description": "Glossaire des urgences hospitalières, stocks de médicaments et démographie médicale pour PulseChecker.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "déserts-médicaux-&-démographie-rpps",
+            "termId": "deserts-medicaux-rpps",
             "displayName": "Déserts Médicaux & Démographie RPPS",
-            "definition": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités de cliniques privées."
+            "definition": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités d'implantation de cliniques privées (projection EBITDA 5 ans).",
+            "mapped_bigquery_table": "demographie_medecins_rpps",
+            "mapped_bigquery_column": "densite_medecins_pour_100k_hab",
+            "related_terms": [
+              "Densité Médicale RPPS",
+              "Zonage ARS Pénurie Soins",
+              "Projection EBITDA Clinique",
+              "Implantation Clinique Privée"
+            ]
           },
           {
-            "termId": "ruptures-de-stock-&-tension-médicamenteuse",
+            "termId": "ruptures-stock-medicaments",
             "displayName": "Ruptures de Stock & Tension Médicamenteuse",
-            "definition": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement."
+            "definition": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement hospitalier.",
+            "mapped_bigquery_table": "pharmacie_stock_medicaments_tension",
+            "mapped_bigquery_column": "statut_risque_rupture",
+            "related_terms": [
+              "Autonomie Stock Jours",
+              "Stock Sécurité Antibiotiques",
+              "Molécules Critiques Hospitalières",
+              "Appel d'Offres Pharmacie"
+            ]
           },
           {
-            "termId": "saturation-des-urgences-&-plans-blancs",
+            "termId": "saturation-urgences-plan-blanc",
             "displayName": "Saturation des Urgences & Plans Blancs",
-            "definition": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire."
+            "definition": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire.",
+            "mapped_bigquery_table": "hopitaux_flux_admissions_urgences",
+            "mapped_bigquery_column": "taux_occupation_lits_pct",
+            "related_terms": [
+              "Taux Saturation Urgences",
+              "Temps d'Attente Brancards",
+              "Déclenchement Plan Blanc",
+              "Régulation SAMU 15"
+            ]
           },
           {
-            "termId": "programmation-des-blocs-opératoires",
+            "termId": "programmation-blocs-operatoires",
             "displayName": "Programmation des Blocs Opératoires",
-            "definition": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes."
+            "definition": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes des praticiens.",
+            "mapped_bigquery_table": "hopitaux_blocs_operatoires_chirurgie",
+            "mapped_bigquery_column": "taux_occupation_salle_pct",
+            "related_terms": [
+              "Vacations Chirurgicales",
+              "Garde Médicale Planning",
+              "Temps de Vacation Inoccupé",
+              "Optimisation Salles d'Opération"
+            ]
           },
           {
-            "termId": "open-bio-&-dépenses-de-biologie-médicale",
-            "displayName": "Open BIO & Dépenses de Biologie Médicale",
-            "definition": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts."
+            "termId": "open-bio-assurance-maladie",
+            "displayName": "Open BIO & Dépenses Biologie AMELI",
+            "definition": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts de santé.",
+            "mapped_bigquery_table": "assurance_maladie_open_bio_depenses",
+            "mapped_bigquery_column": "montant_rembourse_secu_eur",
+            "related_terms": [
+              "Biologie Médicale Ambulatoire",
+              "Dépenses Assurance Maladie",
+              "Codification NABM",
+              "Analyse Coût des Examens"
+            ]
+          },
+          {
+            "termId": "etablissements-sante-finess",
+            "displayName": "Établissements de Santé FINESS",
+            "definition": "Répertoire national FINESS des hôpitaux publics CHU, CH, et cliniques privées lucratives.",
+            "mapped_bigquery_table": "finess_etablissements_sante",
+            "mapped_bigquery_column": "statut_juridique",
+            "related_terms": [
+              "Fichier FINESS",
+              "Cliniques Privées Lucratives",
+              "Hôpitaux Publics CHU",
+              "Cartographie Établissements"
+            ]
+          },
+          {
+            "termId": "planning-gardes-personnel-medical",
+            "displayName": "Planning & Gardes du Personnel Médical",
+            "definition": "Suivi des heures de garde, astreintes et absentéisme des équipes soignantes.",
+            "mapped_bigquery_table": "personnel_medical_garde_planning",
+            "mapped_bigquery_column": "heures_garde_effectuees",
+            "related_terms": [
+              "Astreintes Médicales",
+              "Taux d'Absentéisme Praticiens",
+              "Remplacement Intérim Médical",
+              "Repos Sécurité Obligatoire"
+            ]
+          },
+          {
+            "termId": "passages-urgences-pediatriques",
+            "displayName": "Prises en Charge Urgences Pédiatriques",
+            "definition": "Flux d'admissions quotidiennes et régulation des urgences pédiatriques.",
+            "mapped_bigquery_table": "hopitaux_flux_admissions_urgences",
+            "mapped_bigquery_column": "nombre_admissions_jour",
+            "related_terms": [
+              "Urgences Pédiatriques",
+              "Passages Urgences 24h",
+              "Orientation Service Hospitalisation",
+              "Taux d'Admission Directe"
+            ]
+          },
+          {
+            "termId": "pharmacie-usage-interieur-pui",
+            "displayName": "Pharmacie à Usage Intérieur (PUI)",
+            "definition": "Gestion de la délivrance nominative des médicaments et périssables hospitaliers.",
+            "mapped_bigquery_table": "pharmacie_stock_medicaments_tension",
+            "mapped_bigquery_column": "nom_molecule_medicament",
+            "related_terms": [
+              "Pharmacie Hospitalière PUI",
+              "Délivrance Nominative",
+              "Gestion des Périssables",
+              "Approvisionnement Centrale d'Achat"
+            ]
+          },
+          {
+            "termId": "pression-sanitaire-territoriale",
+            "displayName": "Indice de Pression Sanitaire Territoriale",
+            "definition": "Mesure globale de la capacité en lits de réanimation et pression sanitaire régionale.",
+            "mapped_bigquery_table": "finess_etablissements_sante",
+            "mapped_bigquery_column": "capacite_lits_hospitalisation",
+            "related_terms": [
+              "Pression Sanitaire Régionale",
+              "Capacité Lits Ranimation",
+              "Taux d'Évacuation Sanitaire",
+              "Bilan d'Activité CHU"
+            ]
           }
         ]
       }

@@ -8,29 +8,139 @@
     "description": "Glossaire prudentiel, risque de crédit et analyse financière B2B pour CreditAdvisor.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "risque-de-défaillances-&-faillites-pme",
+            "termId": "risque-defaillances-faillites-pme",
             "displayName": "Risque de Défaillances & Faillites PME",
-            "definition": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers."
+            "definition": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers.",
+            "mapped_bigquery_table": "bdf_defaillances_sectorielles_diren",
+            "mapped_bigquery_column": "nombre_liquidation_judiciaire",
+            "related_terms": [
+              "Liquidation Judiciaire PME",
+              "Redressement Judiciaire",
+              "Signaux Faibles Involvabilité",
+              "Taux de Défaillance Sectoriel"
+            ]
           },
           {
-            "termId": "enquêtes-octroi-de-crédit-bls-banque-de-france",
+            "termId": "enquetes-octroi-credit-bls",
             "displayName": "Enquêtes Octroi de Crédit BLS Banque de France",
-            "definition": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI."
+            "definition": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI.",
+            "mapped_bigquery_table": "bdf_enquete_octroi_bls",
+            "mapped_bigquery_column": "orientation_criteres_octroi",
+            "related_terms": [
+              "Bank Lending Survey BLS",
+              "Resserrement Critères Prêts",
+              "Demande de Crédit Entreprises",
+              "Conditions de Taux Marge"
+            ]
           },
           {
-            "termId": "modélisation-ifrs-9-&-ecl",
+            "termId": "modelisation-ifrs9-ecl",
             "displayName": "Modélisation IFRS 9 & ECL",
-            "definition": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3."
+            "definition": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3.",
+            "mapped_bigquery_table": "bilans_financiers",
+            "mapped_bigquery_column": "ecl_staging_ifrs9",
+            "related_terms": [
+              "Expected Credit Loss ECL",
+              "Staging 1 2 3 IFRS 9",
+              "Dégradation Risque Crédit",
+              "Provisionnement Comptable Banque"
+            ]
           },
           {
-            "termId": "upsell-commercial-b2b-pme-résilientes",
+            "termId": "upsell-commercial-b2b-pme",
             "displayName": "Upsell Commercial B2B PME Résilientes",
-            "definition": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing."
+            "definition": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing.",
+            "mapped_bigquery_table": "produits_bancaires",
+            "mapped_bigquery_column": "nom_produit_credit",
+            "related_terms": [
+              "Financement de Croissance PME",
+              "Crédit-Bail Leasing Équipement",
+              "Ligne de Trésorerie Confirmée",
+              "Marge Nette d'Intérêt"
+            ]
+          },
+          {
+            "termId": "cotation-fiben-banque-de-france",
+            "displayName": "Cotation Fiben & Score Financier Banque de France",
+            "definition": "Évaluation de la capacité de l'entreprise à honorer ses engagements financiers à 3 ans.",
+            "mapped_bigquery_table": "entreprises",
+            "mapped_bigquery_column": "cotation_fiben_bdf",
+            "related_terms": [
+              "Score FIBEN Banque de France",
+              "Capacité de Remboursement",
+              "Indice de Solidité Financière",
+              "Autonomie Financière Ratio"
+            ]
+          },
+          {
+            "termId": "encours-credit-marge-exposition",
+            "displayName": "Encours de Crédit & Marge d'Exposition",
+            "definition": "Volume total des financements accordés et mesure de l'exposition en cas de défaut (EAD).",
+            "mapped_bigquery_table": "encours_credit",
+            "mapped_bigquery_column": "montant_encours_eur",
+            "related_terms": [
+              "Exposure at Default EAD",
+              "Probability of Default PD",
+              "Loss Given Default LGD",
+              "Gestion des Risques de Contrepartie"
+            ]
+          },
+          {
+            "termId": "taux-marche-euribor-banque-de-france",
+            "displayName": "Taux de Marché & Euribor Banque de France",
+            "definition": "Évolution des taux Euribor 3M/12M et coût de refinancement bancaire.",
+            "mapped_bigquery_table": "bdf_taux_marche",
+            "mapped_bigquery_column": "taux_euribor_3m_pct",
+            "related_terms": [
+              "Euribor 3 Mois 12 Mois",
+              "Taux Directeurs BCE",
+              "Marge de Crédit Corporate",
+              "Refinancement Bancaire"
+            ]
+          },
+          {
+            "termId": "ratios-solvabilite-fonds-propres",
+            "displayName": "Ratios de Solvabilité & Fonds Propres RWA",
+            "definition": "Ratio Core Tier 1 et couverture des actifs pondérés par les risques (RWA Bâle III).",
+            "mapped_bigquery_table": "bilans_financiers",
+            "mapped_bigquery_column": "ratio_fonds_propres_tier1",
+            "related_terms": [
+              "Ratio Fond Propres Tier 1",
+              "Bâle III RWA Risk Weighted",
+              "Coussin de Sécurité Fonds Propres",
+              "Effet de Levier Bancaire"
+            ]
+          },
+          {
+            "termId": "garanties-bpifrance-suretes",
+            "displayName": "Garanties Bpifrance & Sûretés Réelles",
+            "definition": "Part de garantie apportée par Bpifrance et sûretés réelles hypothécaires.",
+            "mapped_bigquery_table": "encours_credit",
+            "mapped_bigquery_column": "garantie_bpifrance_pct",
+            "related_terms": [
+              "Garantie Bpifrance 50-70%",
+              "Hypothèque Sûreté Réelle",
+              "Caution Personnelle Dirigeant",
+              "Couverture Risque Perte"
+            ]
+          },
+          {
+            "termId": "indice-prix-immobilier-commercial-rpp",
+            "displayName": "Indice des Prix de l'Immobilier Commercial RPP",
+            "definition": "Variation des valeurs d'actifs immobiliers professionnels pris en garantie du prêt.",
+            "mapped_bigquery_table": "bdf_indices_immobiliers_rpp",
+            "mapped_bigquery_column": "indice_prix_immo_commercial",
+            "related_terms": [
+              "Immobilier Commercial RPP",
+              "Valeur des Actifs en Garantie",
+              "LTV Loan to Value Ratio",
+              "Risque Dépréciation Actifs"
+            ]
           }
         ]
       }

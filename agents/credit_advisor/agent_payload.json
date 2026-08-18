@@ -72,19 +72,43 @@
       "glossaryTerms": [
         {
           "displayName": "Risque de Défaillances & Faillites PME",
-          "description": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers."
+          "description": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers. Termes liés & Ontologies : Liquidation Judiciaire PME, Redressement Judiciaire, Signaux Faibles Involvabilité, Taux de Défaillance Sectoriel."
         },
         {
           "displayName": "Enquêtes Octroi de Crédit BLS Banque de France",
-          "description": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI."
+          "description": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI. Termes liés & Ontologies : Bank Lending Survey BLS, Resserrement Critères Prêts, Demande de Crédit Entreprises, Conditions de Taux Marge."
         },
         {
           "displayName": "Modélisation IFRS 9 & ECL",
-          "description": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3."
+          "description": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3. Termes liés & Ontologies : Expected Credit Loss ECL, Staging 1 2 3 IFRS 9, Dégradation Risque Crédit, Provisionnement Comptable Banque."
         },
         {
           "displayName": "Upsell Commercial B2B PME Résilientes",
-          "description": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing."
+          "description": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing. Termes liés & Ontologies : Financement de Croissance PME, Crédit-Bail Leasing Équipement, Ligne de Trésorerie Confirmée, Marge Nette d'Intérêt."
+        },
+        {
+          "displayName": "Cotation Fiben & Score Financier Banque de France",
+          "description": "Évaluation de la capacité de l'entreprise à honorer ses engagements financiers à 3 ans. Termes liés & Ontologies : Score FIBEN Banque de France, Capacité de Remboursement, Indice de Solidité Financière, Autonomie Financière Ratio."
+        },
+        {
+          "displayName": "Encours de Crédit & Marge d'Exposition",
+          "description": "Volume total des financements accordés et mesure de l'exposition en cas de défaut (EAD). Termes liés & Ontologies : Exposure at Default EAD, Probability of Default PD, Loss Given Default LGD, Gestion des Risques de Contrepartie."
+        },
+        {
+          "displayName": "Taux de Marché & Euribor Banque de France",
+          "description": "Évolution des taux Euribor 3M/12M et coût de refinancement bancaire. Termes liés & Ontologies : Euribor 3 Mois 12 Mois, Taux Directeurs BCE, Marge de Crédit Corporate, Refinancement Bancaire."
+        },
+        {
+          "displayName": "Ratios de Solvabilité & Fonds Propres RWA",
+          "description": "Ratio Core Tier 1 et couverture des actifs pondérés par les risques (RWA Bâle III). Termes liés & Ontologies : Ratio Fond Propres Tier 1, Bâle III RWA Risk Weighted, Coussin de Sécurité Fonds Propres, Effet de Levier Bancaire."
+        },
+        {
+          "displayName": "Garanties Bpifrance & Sûretés Réelles",
+          "description": "Part de garantie apportée par Bpifrance et sûretés réelles hypothécaires. Termes liés & Ontologies : Garantie Bpifrance 50-70%, Hypothèque Sûreté Réelle, Caution Personnelle Dirigeant, Couverture Risque Perte."
+        },
+        {
+          "displayName": "Indice des Prix de l'Immobilier Commercial RPP",
+          "description": "Variation des valeurs d'actifs immobiliers professionnels pris en garantie du prêt. Termes liés & Ontologies : Immobilier Commercial RPP, Valeur des Actifs en Garantie, LTV Loan to Value Ratio, Risque Dépréciation Actifs."
         }
       ]
     }

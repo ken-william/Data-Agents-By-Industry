@@ -8,34 +8,139 @@
     "description": "Glossaire de régularité ferroviaire, ponctualité TER/TGV et Yield Management pour TransitNavigator.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "fréquentation-des-gares-sncf",
+            "termId": "frequentation-gares-sncf",
             "displayName": "Fréquentation des Gares SNCF",
-            "definition": "Volumes annuels de voyageurs enregistrés dans les 3 000+ gares de France."
+            "definition": "Volumes annuels de voyageurs enregistrés dans les 3 000+ gares de France.",
+            "mapped_bigquery_table": "frequentation_gares_sncf",
+            "mapped_bigquery_column": "total_voyageurs_2024",
+            "related_terms": [
+              "Voyageurs Annuels Gares",
+              "Code UIC Gare",
+              "Direction Régionale DRG",
+              "Comptage Flux Gares"
+            ]
           },
           {
-            "termId": "régularité-&-retards-ferroviaires-sla",
+            "termId": "regularite-retards-ferroviaires-sla",
             "displayName": "Régularité & Retards Ferroviaires (SLA)",
-            "definition": "Indicateurs de ponctualité à l'arrivée <5min, minutes de retard et annulations de trains TGV/TER."
+            "definition": "Indicateurs de ponctualité à l'arrivée <5min, minutes de retard et annulations de trains TGV/TER.",
+            "mapped_bigquery_table": "sncf_regularite_lignes",
+            "mapped_bigquery_column": "retard_moyen_minutes",
+            "related_terms": [
+              "Ponctualité à l'Arrivée <5min",
+              "Taux d'Annulation Trains",
+              "Retard Moyen Minutes",
+              "Pénalités Financières Retard"
+            ]
           },
           {
-            "termId": "validations-&-badgeages-portillons",
+            "termId": "validations-badgeages-portillons",
             "displayName": "Validations & Badgeages Portillons",
-            "definition": "Historique horodaté des entrées aux arrêts et gares par mode RER, Métro, TGV, TER, Tramway."
+            "definition": "Historique horodaté des entrées aux arrêts et gares par mode RER, Métro, TGV, TER, Tramway.",
+            "mapped_bigquery_table": "validations_trajets_voyageurs",
+            "mapped_bigquery_column": "timestamp",
+            "related_terms": [
+              "Badgeage Validateur",
+              "Horodatage Entrée Station",
+              "Mode RER / Métro / TGV / TER",
+              "Statut Validation Autorisé"
+            ]
           },
           {
-            "termId": "coordonnées-geography-domicile-travail",
+            "termId": "coordonnees-geography-domicile-travail",
             "displayName": "Coordonnées GEOGRAPHY Domicile-Travail",
-            "definition": "Localisation spatiale ST_GEOGPOINT des abonnés Navigo/Pass pour l'analyse des flux domicile-travail."
+            "definition": "Localisation spatiale ST_GEOGPOINT des abonnés Navigo/Pass pour l'analyse des flux domicile-travail.",
+            "mapped_bigquery_table": "usagers_profils",
+            "mapped_bigquery_column": "home_location_geo",
+            "related_terms": [
+              "Point Spatial ST_GEOGPOINT",
+              "Flux Domicile-Travail",
+              "Ville de Résidence",
+              "Abonné Navigo Profil"
+            ]
           },
           {
-            "termId": "objets-trouvés-en-gare-&-traçabilité",
+            "termId": "objets-trouves-gare-tracabilite",
             "displayName": "Objets Trouvés en Gare & Traçabilité",
-            "definition": "Registre des déclarations de perte et restitution rapproché des badgeages usagers."
+            "definition": "Registre des déclarations de perte et restitution rapproché des badgeages usagers.",
+            "mapped_bigquery_table": "sncf_objets_trouves",
+            "mapped_bigquery_column": "found_status",
+            "related_terms": [
+              "Déclaration d'Objet Perdu",
+              "Rapprochement Trajet Badgeage",
+              "Catégorie Appareils Bagages",
+              "Restitution Propriétaire"
+            ]
+          },
+          {
+            "termId": "forfaits-abonnements-transport",
+            "displayName": "Forfaits Abonnements Transport (Navigo / TER / TGV)",
+            "definition": "Catalogue des titres de transport Navigo, Pass TER Ilico, et TGV Max.",
+            "mapped_bigquery_table": "abonnements_titres_transport",
+            "mapped_bigquery_column": "monthly_price_eur",
+            "related_terms": [
+              "Pass Navigo Mois / Annuel",
+              "Pass TER Ilico",
+              "TGV Max Abonnement",
+              "Prise en Charge Employeur 50%"
+            ]
+          },
+          {
+            "termId": "liaisons-axes-ferroviaires",
+            "displayName": "Liaisons & Axes Ferroviaires TGV / TER",
+            "definition": "Itinéraires ferroviaires reliant les gares de départ et d'arrivée en France.",
+            "mapped_bigquery_table": "sncf_regularite_lignes",
+            "mapped_bigquery_column": "nom_axe_ferroviaire",
+            "related_terms": [
+              "Ligne Grande Vitesse LGV",
+              "Ligne TER Régionale",
+              "Gare Départ / Arrivée",
+              "Fréquence Circulations Prévues"
+            ]
+          },
+          {
+            "termId": "causes-incidents-retards-ferroviaires",
+            "displayName": "Causes d'Incidents & Retards Ferroviaires",
+            "definition": "Ventilation des retards selon l'infrastructure, le matériel roulant, et la gestion du trafic.",
+            "mapped_bigquery_table": "sncf_regularite_lignes",
+            "mapped_bigquery_column": "cause_retard_infrastructure_pct",
+            "related_terms": [
+              "Incident Infrastructure Réseau",
+              "Panne Matériel Roulant",
+              "Gestion Trafic Aiguillage",
+              "Affluence Voyageurs"
+            ]
+          },
+          {
+            "termId": "capacite-accueil-materiel-roulant",
+            "displayName": "Capacité d'Accueil & Matériel Roulant",
+            "definition": "Typologie du matériel roulant et capacité d'emport de voyageurs par rame.",
+            "mapped_bigquery_table": "validations_trajets_voyageurs",
+            "mapped_bigquery_column": "transport_mode",
+            "related_terms": [
+              "RER A / Métro Ligne 1",
+              "Rame TGV InOui",
+              "Tramway Urbain",
+              "Capacité Rames Matériel"
+            ]
+          },
+          {
+            "termId": "statut-restitution-reserves-gares",
+            "displayName": "Statut de Restitution & Réserves Gares",
+            "definition": "Suivi du délai de garde en réserve gare et taux de restitution aux propriétaires.",
+            "mapped_bigquery_table": "sncf_objets_trouves",
+            "mapped_bigquery_column": "restitution_date",
+            "related_terms": [
+              "En Réserve Gare",
+              "Transmis Association",
+              "Délai Restitution Jours",
+              "Registre Objets Trouvés"
+            ]
           }
         ]
       }

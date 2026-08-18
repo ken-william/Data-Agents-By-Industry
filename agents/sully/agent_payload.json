@@ -62,23 +62,43 @@
       "glossaryTerms": [
         {
           "displayName": "Enquête BMO 2025 (Besoins en Main-d'Œuvre)",
-          "description": "Prédictions officielles France Travail des besoins en recrutement par bassin d'emploi et secteur."
+          "description": "Prédictions officielles France Travail des besoins en recrutement par bassin d'emploi et secteur. Termes liés & Ontologies : Projets de Recrutement BMO, Taux de Difficulté Recrutement, Saisonnalité de l'Emploi, Bassin d'Emploi Territorial."
         },
         {
           "displayName": "Arborescence ROME 4.0",
-          "description": "Taxonomie officielle des 12 243 métiers et appellations de l'emploi en France."
+          "description": "Taxonomie officielle des 12 243 métiers et appellations de l'emploi en France. Termes liés & Ontologies : Code ROME 5 Caractères, Appellations Métiers, Code OGR Qualifications, Grand Domaine Professionnel."
         },
         {
           "displayName": "Déclarations URSSAF & SIRENE",
-          "description": "Répertoire des 4 500 établissements employeurs, masse salariale, effectifs, et obligation OETH handicap 6%."
+          "description": "Répertoire des 4 500 établissements employeurs, masse salariale, effectifs, et obligation OETH handicap 6%. Termes liés & Ontologies : Numéro SIRET Établissement, Code NAF Activité, Effectifs Salariés URSSAF, Obligation OETH Handicap 6%."
         },
         {
           "displayName": "CVs PDF & Rapprochement Candidats (GCS)",
-          "description": "300 CVs PDF 1-page modèles Kengni stockés sur GCS et liés aux profils candidats."
+          "description": "300 CVs PDF 1-page modèles Kengni stockés sur GCS et liés aux profils candidats. Termes liés & Ontologies : Modèle CV Kengni 1-Page, Stockage Cloud Storage GCS, URI Fichier PDF, Contenu Texte CV."
         },
         {
-          "displayName": "Suivi des Candidatures ATS & Aides Formation",
-          "description": "Tunnel de recrutement, score de matching %, dispositifs et subventions de formation à l'embauche."
+          "displayName": "Suivi des Candidatures ATS & Matching %",
+          "description": "Tunnel de recrutement, score de matching %, dispositifs et subventions de formation à l'embauche. Termes liés & Ontologies : Tunnel de Recrutement ATS, Score Matching Compétences, Entretien RH Planifié, Accès à l'Emploi Démarrage."
+        },
+        {
+          "displayName": "Catalogue des Formations & Subventions",
+          "description": "Aides individuelles à la formation AIF et actions de formation préalable à l'embauche AFPR. Termes liés & Ontologies : Aide Individuelle à la Formation AIF, Action de Formation Préalable AFPR, Subvention Embauche, Dispositif CPF."
+        },
+        {
+          "displayName": "Statut & Catégorie Demandeur d'Emploi",
+          "description": "Catégorisation A, B, C des demandeurs d'emploi et suivi de l'ancienneté de chômage. Termes liés & Ontologies : Catégorie A Inscription, Ancienneté Chômage Mois, Recherche Active d'Emploi, Profil Demandeur Domicile."
+        },
+        {
+          "displayName": "Dispositif Obligation Emploi Travailleurs Handicapés (OETH)",
+          "description": "Taux d'emploi direct des travailleurs handicapés et calcul de la contribution AGEFIPH. Termes liés & Ontologies : Quota OETH 6%, Pénalité AGEFIPH FIPHFP, Travailleurs Handicapés RQTH, Subvention Aménagement Poste."
+        },
+        {
+          "displayName": "Offres d'Emploi Recrutement Public & Privé",
+          "description": "Postes à pourvoir, typologies de contrats (CDI, CDD) et profils recherchés. Termes liés & Ontologies : Offres CDI / CDD, Postes Fonction Publique, Profil Poste Requis, Rémunération Salaire Proposé."
+        },
+        {
+          "displayName": "Bassin d'Emploi & Mobilité Départementale",
+          "description": "Découpage territorial des bassins d'emploi et taux de chômage départemental. Termes liés & Ontologies : Département de Résidence, Zone d'Emploi INSEE, Mobilité Géographique Candidat, Chômage Régional."
         }
       ]
     }

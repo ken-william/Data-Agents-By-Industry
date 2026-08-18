@@ -8,34 +8,139 @@
     "description": "Glossaire d'enquête BMO France Travail, Vacancy Cost et CVs 1-page ATS pour Sully.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "enquête-bmo-2025-besoins-en-main-d'œuvre",
+            "termId": "enquete-bmo-2025-recrutement",
             "displayName": "Enquête BMO 2025 (Besoins en Main-d'Œuvre)",
-            "definition": "Prédictions officielles France Travail des besoins en recrutement par bassin d'emploi et secteur."
+            "definition": "Prédictions officielles France Travail des besoins en recrutement par bassin d'emploi et secteur.",
+            "mapped_bigquery_table": "bmo_recrutement_2025",
+            "mapped_bigquery_column": "nombre_projets_recrutement",
+            "related_terms": [
+              "Projets de Recrutement BMO",
+              "Taux de Difficulté Recrutement",
+              "Saisonnalité de l'Emploi",
+              "Bassin d'Emploi Territorial"
+            ]
           },
           {
-            "termId": "arborescence-rome-4.0",
+            "termId": "arborescence-rome-40",
             "displayName": "Arborescence ROME 4.0",
-            "definition": "Taxonomie officielle des 12 243 métiers et appellations de l'emploi en France."
+            "definition": "Taxonomie officielle des 12 243 métiers et appellations de l'emploi en France.",
+            "mapped_bigquery_table": "rome_arborescence_2024",
+            "mapped_bigquery_column": "code_rome",
+            "related_terms": [
+              "Code ROME 5 Caractères",
+              "Appellations Métiers",
+              "Code OGR Qualifications",
+              "Grand Domaine Professionnel"
+            ]
           },
           {
-            "termId": "déclarations-urssaf-&-sirene",
+            "termId": "declarations-urssaf-sirene",
             "displayName": "Déclarations URSSAF & SIRENE",
-            "definition": "Répertoire des 4 500 établissements employeurs, masse salariale, effectifs, et obligation OETH handicap 6%."
+            "definition": "Répertoire des 4 500 établissements employeurs, masse salariale, effectifs, et obligation OETH handicap 6%.",
+            "mapped_bigquery_table": "entreprises_urssaf_declarations",
+            "mapped_bigquery_column": "masse_salariale_annuelle_eur",
+            "related_terms": [
+              "Numéro SIRET Établissement",
+              "Code NAF Activité",
+              "Effectifs Salariés URSSAF",
+              "Obligation OETH Handicap 6%"
+            ]
           },
           {
-            "termId": "cvs-pdf-&-rapprochement-candidats-gcs",
+            "termId": "cvs-pdf-gcs-candidats",
             "displayName": "CVs PDF & Rapprochement Candidats (GCS)",
-            "definition": "300 CVs PDF 1-page modèles Kengni stockés sur GCS et liés aux profils candidats."
+            "definition": "300 CVs PDF 1-page modèles Kengni stockés sur GCS et liés aux profils candidats.",
+            "mapped_bigquery_table": "france_travail_demandeurs",
+            "mapped_bigquery_column": "cv_gcs_uri",
+            "related_terms": [
+              "Modèle CV Kengni 1-Page",
+              "Stockage Cloud Storage GCS",
+              "URI Fichier PDF",
+              "Contenu Texte CV"
+            ]
           },
           {
-            "termId": "suivi-des-candidatures-ats-&-aides-formation",
-            "displayName": "Suivi des Candidatures ATS & Aides Formation",
-            "definition": "Tunnel de recrutement, score de matching %, dispositifs et subventions de formation à l'embauche."
+            "termId": "suivi-candidatures-ats-matching",
+            "displayName": "Suivi des Candidatures ATS & Matching %",
+            "definition": "Tunnel de recrutement, score de matching %, dispositifs et subventions de formation à l'embauche.",
+            "mapped_bigquery_table": "candidatures_postulations_suivi",
+            "mapped_bigquery_column": "ats_matching_score_pct",
+            "related_terms": [
+              "Tunnel de Recrutement ATS",
+              "Score Matching Compétences",
+              "Entretien RH Planifié",
+              "Accès à l'Emploi Démarrage"
+            ]
+          },
+          {
+            "termId": "catalogue-formations-aides",
+            "displayName": "Catalogue des Formations & Subventions",
+            "definition": "Aides individuelles à la formation AIF et actions de formation préalable à l'embauche AFPR.",
+            "mapped_bigquery_table": "france_travail_formations_aides",
+            "mapped_bigquery_column": "montant_aide_financiere_eur",
+            "related_terms": [
+              "Aide Individuelle à la Formation AIF",
+              "Action de Formation Préalable AFPR",
+              "Subvention Embauche",
+              "Dispositif CPF"
+            ]
+          },
+          {
+            "termId": "statut-categorie-demandeur-emploi",
+            "displayName": "Statut & Catégorie Demandeur d'Emploi",
+            "definition": "Catégorisation A, B, C des demandeurs d'emploi et suivi de l'ancienneté de chômage.",
+            "mapped_bigquery_table": "france_travail_demandeurs",
+            "mapped_bigquery_column": "categorie_inscription",
+            "related_terms": [
+              "Catégorie A Inscription",
+              "Ancienneté Chômage Mois",
+              "Recherche Active d'Emploi",
+              "Profil Demandeur Domicile"
+            ]
+          },
+          {
+            "termId": "obligation-emploi-handicap-oeth",
+            "displayName": "Dispositif Obligation Emploi Travailleurs Handicapés (OETH)",
+            "definition": "Taux d'emploi direct des travailleurs handicapés et calcul de la contribution AGEFIPH.",
+            "mapped_bigquery_table": "entreprises_urssaf_declarations",
+            "mapped_bigquery_column": "taux_emploi_handicap_pct",
+            "related_terms": [
+              "Quota OETH 6%",
+              "Pénalité AGEFIPH FIPHFP",
+              "Travailleurs Handicapés RQTH",
+              "Subvention Aménagement Poste"
+            ]
+          },
+          {
+            "termId": "offres-emploi-secteurs-recrutement",
+            "displayName": "Offres d'Emploi Recrutement Public & Privé",
+            "definition": "Postes à pourvoir, typologies de contrats (CDI, CDD) et profils recherchés.",
+            "mapped_bigquery_table": "offres_emploi_recrutement",
+            "mapped_bigquery_column": "type_contrat_travail",
+            "related_terms": [
+              "Offres CDI / CDD",
+              "Postes Fonction Publique",
+              "Profil Poste Requis",
+              "Rémunération Salaire Proposé"
+            ]
+          },
+          {
+            "termId": "bassin-emploi-mobilite-departement",
+            "displayName": "Bassin d'Emploi & Mobilité Départementale",
+            "definition": "Découpage territorial des bassins d'emploi et taux de chômage départemental.",
+            "mapped_bigquery_table": "france_travail_demandeurs",
+            "mapped_bigquery_column": "department_code",
+            "related_terms": [
+              "Département de Résidence",
+              "Zone d'Emploi INSEE",
+              "Mobilité Géographique Candidat",
+              "Chômage Régional"
+            ]
           }
         ]
       }
