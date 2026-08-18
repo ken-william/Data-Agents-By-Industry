@@ -1,0 +1,1501 @@
+id_releve_panier,commune,code_departement,nom_region,rayon_categorie,prix_moyen_panier_eur,marge_brute_pct,part_produits_bio_pct,part_marques_distributeur_pct
+PAN-00001,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,78.48,26.9,14.6,29.7
+PAN-00002,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,85.49,22.3,34.4,36.1
+PAN-00003,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,71.36,41.7,34.1,29.0
+PAN-00004,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,44.16,28.3,13.4,29.6
+PAN-00005,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,49.9,43.5,36.9,28.8
+PAN-00006,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,85.71,27.7,30.7,47.1
+PAN-00007,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,61.95,42.8,27.8,42.2
+PAN-00008,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,57.18,40.7,34.5,47.2
+PAN-00009,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,63.66,23.3,37.1,36.2
+PAN-00010,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,37.93,44.3,28.6,36.9
+PAN-00011,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,66.11,44.1,27.5,34.1
+PAN-00012,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,43.03,32.3,29.6,43.4
+PAN-00013,Lille,59 - Nord,Hauts-de-France,Boulangerie,50.41,37.4,26.3,44.9
+PAN-00014,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,91.33,42.5,19.3,35.5
+PAN-00015,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,70.01,47.1,17.1,50.2
+PAN-00016,Paris,75 - Paris,Île-de-France,Boissons,47.31,43.9,14.4,34.9
+PAN-00017,Paris,75 - Paris,Île-de-France,Surgelés,37.09,45.7,19.9,35.0
+PAN-00018,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,93.93,42.8,23.1,39.3
+PAN-00019,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,65.04,27.9,28.1,44.5
+PAN-00020,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,68.42,31.4,15.4,54.6
+PAN-00021,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,78.3,38.9,26.6,25.2
+PAN-00022,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,54.81,27.8,32.0,31.8
+PAN-00023,Lille,59 - Nord,Hauts-de-France,Boulangerie,61.61,28.5,37.2,34.2
+PAN-00024,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,49.1,39.9,16.7,41.9
+PAN-00025,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,52.09,28.0,14.0,32.1
+PAN-00026,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,70.38,47.6,20.7,38.4
+PAN-00027,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,35.26,45.6,24.6,41.1
+PAN-00028,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,83.57,39.9,36.3,39.1
+PAN-00029,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,76.25,39.7,29.1,49.9
+PAN-00030,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,36.98,44.0,24.9,28.3
+PAN-00031,Lille,59 - Nord,Hauts-de-France,Surgelés,93.64,29.8,25.9,37.3
+PAN-00032,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,88.49,41.4,28.6,31.6
+PAN-00033,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,63.29,28.1,30.5,35.5
+PAN-00034,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,51.22,28.2,27.6,28.4
+PAN-00035,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,78.05,40.2,32.3,31.8
+PAN-00036,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,65.77,35.6,35.4,40.9
+PAN-00037,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,46.94,47.6,21.9,48.3
+PAN-00038,Paris,75 - Paris,Île-de-France,Produits Frais,53.0,32.2,27.8,53.0
+PAN-00039,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,87.63,22.9,19.2,40.8
+PAN-00040,Lille,59 - Nord,Hauts-de-France,Produits Frais,80.2,44.8,13.3,46.2
+PAN-00041,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,57.05,24.1,29.5,30.2
+PAN-00042,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,47.3,38.3,35.8,35.0
+PAN-00043,Paris,75 - Paris,Île-de-France,Surgelés,36.53,42.0,30.9,43.9
+PAN-00044,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,37.05,29.6,17.0,49.8
+PAN-00045,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,78.06,31.1,37.8,48.5
+PAN-00046,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,33.39,48.4,23.1,41.8
+PAN-00047,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,60.06,37.8,16.9,52.4
+PAN-00048,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,92.2,39.8,26.6,32.4
+PAN-00049,Lille,59 - Nord,Hauts-de-France,Épicerie,55.17,42.0,12.1,51.5
+PAN-00050,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,56.02,48.3,27.7,26.6
+PAN-00051,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,88.44,22.5,20.5,51.4
+PAN-00052,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,65.14,47.5,30.9,41.3
+PAN-00053,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,53.13,31.7,33.9,32.2
+PAN-00054,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,47.34,47.9,19.4,39.1
+PAN-00055,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,39.37,30.3,13.9,43.4
+PAN-00056,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,35.19,24.2,33.6,26.9
+PAN-00057,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,76.23,36.1,26.0,48.5
+PAN-00058,Lille,59 - Nord,Hauts-de-France,Épicerie,34.1,33.5,25.3,54.0
+PAN-00059,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,39.91,33.9,17.8,48.2
+PAN-00060,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,56.09,23.2,26.6,38.7
+PAN-00061,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,76.38,45.7,20.5,28.2
+PAN-00062,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,39.53,47.8,37.8,53.7
+PAN-00063,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,64.28,38.1,17.6,29.8
+PAN-00064,Lille,59 - Nord,Hauts-de-France,Surgelés,59.77,31.5,24.0,50.6
+PAN-00065,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,75.06,25.1,15.6,45.4
+PAN-00066,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,70.32,44.4,18.1,34.3
+PAN-00067,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,47.69,43.8,21.4,32.0
+PAN-00068,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,73.26,43.3,37.4,41.0
+PAN-00069,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,30.25,44.2,23.1,29.0
+PAN-00070,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,41.09,32.5,30.0,39.5
+PAN-00071,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,30.12,38.4,23.7,46.9
+PAN-00072,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,67.47,35.1,32.8,49.0
+PAN-00073,Paris,75 - Paris,Île-de-France,Boissons,69.3,43.6,27.6,35.8
+PAN-00074,Lille,59 - Nord,Hauts-de-France,Boissons,88.53,39.2,14.8,37.2
+PAN-00075,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,65.11,38.1,15.7,51.9
+PAN-00076,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,88.73,27.7,16.2,50.7
+PAN-00077,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,80.48,47.5,13.1,46.4
+PAN-00078,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,57.07,30.3,20.7,50.4
+PAN-00079,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,36.64,23.2,33.5,46.3
+PAN-00080,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,74.59,33.2,13.2,37.8
+PAN-00081,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,49.76,30.7,12.3,42.0
+PAN-00082,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,58.57,27.7,26.5,51.9
+PAN-00083,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,37.6,34.7,35.8,31.7
+PAN-00084,Lille,59 - Nord,Hauts-de-France,Surgelés,56.7,32.5,33.6,50.0
+PAN-00085,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,57.75,43.8,16.1,43.0
+PAN-00086,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,93.02,30.2,26.7,51.2
+PAN-00087,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,50.7,43.7,33.1,40.0
+PAN-00088,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,76.71,34.1,31.4,48.8
+PAN-00089,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,75.37,32.8,18.1,37.3
+PAN-00090,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,87.8,44.3,35.3,30.2
+PAN-00091,Lille,59 - Nord,Hauts-de-France,Boulangerie,30.01,35.7,24.9,42.2
+PAN-00092,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,66.88,33.5,28.8,46.1
+PAN-00093,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,45.05,36.7,16.9,48.4
+PAN-00094,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,37.53,46.9,19.7,46.0
+PAN-00095,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,59.27,40.9,32.0,44.9
+PAN-00096,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,78.07,48.0,21.9,52.1
+PAN-00097,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,39.18,42.6,36.0,31.0
+PAN-00098,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,57.65,43.6,29.0,31.2
+PAN-00099,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,48.01,26.4,25.8,30.0
+PAN-00100,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,74.43,28.2,25.3,43.1
+PAN-00101,Paris,75 - Paris,Île-de-France,Surgelés,68.29,35.5,17.0,37.0
+PAN-00102,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,54.02,44.9,21.2,26.1
+PAN-00103,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,62.88,31.6,18.6,54.7
+PAN-00104,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,36.42,34.7,16.8,35.3
+PAN-00105,Paris,75 - Paris,Île-de-France,Boissons,91.64,33.6,29.4,42.3
+PAN-00106,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,40.19,43.5,22.9,33.0
+PAN-00107,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,36.71,41.0,13.8,38.5
+PAN-00108,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,32.45,37.7,18.8,27.6
+PAN-00109,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,69.05,37.8,33.1,27.4
+PAN-00110,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,66.8,43.0,25.2,48.0
+PAN-00111,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,54.86,33.9,14.0,34.9
+PAN-00112,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,67.21,45.3,13.6,37.4
+PAN-00113,Lille,59 - Nord,Hauts-de-France,Boissons,63.02,45.1,31.8,51.5
+PAN-00114,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,93.22,28.2,31.2,54.2
+PAN-00115,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,58.71,22.2,20.0,38.6
+PAN-00116,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,61.78,34.9,19.2,37.4
+PAN-00117,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,76.57,36.2,34.5,43.4
+PAN-00118,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,36.01,38.8,23.0,29.3
+PAN-00119,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,52.54,45.2,24.4,47.6
+PAN-00120,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,86.95,45.9,35.2,34.7
+PAN-00121,Paris,75 - Paris,Île-de-France,Boulangerie,81.27,32.2,31.8,49.0
+PAN-00122,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,48.52,26.0,34.3,52.8
+PAN-00123,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,28.6,34.2,32.3,54.1
+PAN-00124,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,44.38,36.9,33.8,33.6
+PAN-00125,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,54.59,31.1,17.6,38.8
+PAN-00126,Paris,75 - Paris,Île-de-France,Produits Frais,94.96,36.6,14.9,39.8
+PAN-00127,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,40.22,23.3,23.5,44.2
+PAN-00128,Paris,75 - Paris,Île-de-France,Épicerie,39.17,39.4,29.1,25.3
+PAN-00129,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,32.51,27.6,26.3,44.6
+PAN-00130,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,66.14,32.7,32.8,32.8
+PAN-00131,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,39.71,39.9,13.1,53.8
+PAN-00132,Paris,75 - Paris,Île-de-France,Boulangerie,72.15,31.7,14.4,37.7
+PAN-00133,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,89.39,37.0,33.4,37.7
+PAN-00134,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,28.72,40.0,19.8,47.3
+PAN-00135,Lille,59 - Nord,Hauts-de-France,Boulangerie,73.72,46.9,37.1,31.1
+PAN-00136,Paris,75 - Paris,Île-de-France,Épicerie,31.24,41.8,13.8,28.7
+PAN-00137,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,91.19,25.9,29.5,50.0
+PAN-00138,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,78.26,39.5,32.4,32.0
+PAN-00139,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,44.04,46.3,35.7,37.1
+PAN-00140,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,86.82,24.3,16.5,27.9
+PAN-00141,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,53.88,35.7,14.4,46.4
+PAN-00142,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,87.59,38.6,36.7,29.4
+PAN-00143,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,74.06,41.9,32.5,48.7
+PAN-00144,Paris,75 - Paris,Île-de-France,Produits Frais,89.0,28.9,22.7,51.1
+PAN-00145,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,73.35,38.8,35.2,52.3
+PAN-00146,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,91.93,37.3,17.3,51.8
+PAN-00147,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,75.94,24.2,32.0,31.7
+PAN-00148,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,82.07,28.7,36.6,41.6
+PAN-00149,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,42.93,24.7,22.7,30.5
+PAN-00150,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,67.1,43.5,26.4,28.1
+PAN-00151,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,54.2,40.6,13.7,37.5
+PAN-00152,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,47.18,33.3,16.4,43.5
+PAN-00153,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,54.19,42.1,30.0,41.7
+PAN-00154,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,65.27,42.9,32.9,45.9
+PAN-00155,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,59.42,43.9,33.4,53.9
+PAN-00156,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,63.13,46.6,20.7,33.1
+PAN-00157,Paris,75 - Paris,Île-de-France,Boulangerie,93.05,23.6,18.4,27.2
+PAN-00158,Paris,75 - Paris,Île-de-France,Produits Laitiers,51.71,27.7,21.0,29.4
+PAN-00159,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,54.63,45.1,35.4,45.5
+PAN-00160,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,94.14,28.7,16.1,43.3
+PAN-00161,Paris,75 - Paris,Île-de-France,Épicerie,92.65,37.6,31.1,35.6
+PAN-00162,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,51.23,31.4,18.2,52.5
+PAN-00163,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,29.55,28.7,18.8,29.0
+PAN-00164,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,40.99,27.9,25.0,29.6
+PAN-00165,Paris,75 - Paris,Île-de-France,Boissons,32.14,42.9,34.8,29.9
+PAN-00166,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,73.91,22.8,16.4,37.5
+PAN-00167,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,34.35,38.5,13.2,49.2
+PAN-00168,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,29.98,35.1,20.6,47.1
+PAN-00169,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,90.03,44.3,29.4,37.2
+PAN-00170,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,51.43,40.6,31.9,39.2
+PAN-00171,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,89.01,43.8,14.3,27.7
+PAN-00172,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,88.65,38.4,14.6,51.2
+PAN-00173,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,64.93,36.0,27.9,48.4
+PAN-00174,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,86.43,26.1,31.3,30.8
+PAN-00175,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,53.0,33.6,14.4,25.8
+PAN-00176,Lille,59 - Nord,Hauts-de-France,Épicerie,69.13,29.6,19.4,31.5
+PAN-00177,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,48.36,48.3,24.3,54.2
+PAN-00178,Paris,75 - Paris,Île-de-France,Boissons,70.72,33.9,25.2,34.3
+PAN-00179,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,71.68,25.8,19.3,43.9
+PAN-00180,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,69.75,42.0,34.1,26.1
+PAN-00181,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,63.43,40.5,16.2,54.2
+PAN-00182,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,50.92,23.6,28.3,30.7
+PAN-00183,Lille,59 - Nord,Hauts-de-France,Épicerie,63.36,46.6,21.1,42.1
+PAN-00184,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,83.56,46.7,12.8,40.2
+PAN-00185,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,87.7,34.3,28.2,54.6
+PAN-00186,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,70.16,44.1,17.0,50.2
+PAN-00187,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,74.38,34.4,27.5,36.3
+PAN-00188,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,59.09,35.6,26.3,52.8
+PAN-00189,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,62.55,46.7,37.2,50.5
+PAN-00190,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,83.37,33.8,13.9,25.3
+PAN-00191,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,85.42,39.3,37.6,53.0
+PAN-00192,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,51.8,30.1,23.8,34.1
+PAN-00193,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,63.9,46.2,33.5,45.2
+PAN-00194,Lille,59 - Nord,Hauts-de-France,Boulangerie,41.97,46.1,35.1,45.0
+PAN-00195,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,84.69,32.5,24.8,32.7
+PAN-00196,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,94.91,41.8,27.2,29.8
+PAN-00197,Lille,59 - Nord,Hauts-de-France,Produits Frais,83.43,34.9,31.0,30.3
+PAN-00198,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,46.9,38.9,18.1,44.8
+PAN-00199,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,50.19,44.3,23.5,37.5
+PAN-00200,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,43.93,27.9,13.1,50.2
+PAN-00201,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,72.89,28.2,31.1,52.8
+PAN-00202,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,93.04,35.5,20.7,50.4
+PAN-00203,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,58.32,31.3,30.3,31.5
+PAN-00204,Paris,75 - Paris,Île-de-France,Boulangerie,34.7,42.9,36.0,36.0
+PAN-00205,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,88.57,33.9,25.1,33.5
+PAN-00206,Paris,75 - Paris,Île-de-France,Surgelés,76.94,38.0,12.7,44.4
+PAN-00207,Paris,75 - Paris,Île-de-France,Produits Frais,77.24,22.0,23.3,44.8
+PAN-00208,Paris,75 - Paris,Île-de-France,Épicerie,46.86,46.5,22.6,31.3
+PAN-00209,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,32.78,25.8,29.3,34.7
+PAN-00210,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,92.35,38.7,18.4,46.5
+PAN-00211,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,56.67,42.3,25.1,52.4
+PAN-00212,Paris,75 - Paris,Île-de-France,Produits Laitiers,89.38,26.5,32.7,54.7
+PAN-00213,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,61.87,41.8,25.4,25.9
+PAN-00214,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,66.76,40.9,27.5,43.3
+PAN-00215,Lille,59 - Nord,Hauts-de-France,Surgelés,38.7,27.7,37.9,37.2
+PAN-00216,Lille,59 - Nord,Hauts-de-France,Surgelés,92.71,46.4,22.3,26.3
+PAN-00217,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,88.6,28.5,27.4,51.1
+PAN-00218,Paris,75 - Paris,Île-de-France,Épicerie,55.9,46.7,15.5,39.8
+PAN-00219,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,55.17,32.7,29.4,53.7
+PAN-00220,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,39.92,23.0,22.0,31.6
+PAN-00221,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,52.56,27.9,20.0,48.7
+PAN-00222,Paris,75 - Paris,Île-de-France,Produits Laitiers,63.2,27.7,37.2,41.8
+PAN-00223,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,32.32,30.0,26.7,49.2
+PAN-00224,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,81.48,24.5,24.9,43.9
+PAN-00225,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,34.32,41.8,30.1,42.9
+PAN-00226,Paris,75 - Paris,Île-de-France,Boulangerie,69.44,46.6,31.2,50.5
+PAN-00227,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,46.79,41.3,24.6,42.1
+PAN-00228,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,56.92,25.5,16.6,26.8
+PAN-00229,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,84.98,32.2,37.7,47.4
+PAN-00230,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,84.24,30.6,19.0,43.1
+PAN-00231,Lille,59 - Nord,Hauts-de-France,Surgelés,86.7,45.1,22.5,47.0
+PAN-00232,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,38.38,41.1,33.7,48.6
+PAN-00233,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,56.57,29.8,32.4,36.0
+PAN-00234,Paris,75 - Paris,Île-de-France,Épicerie,73.11,28.4,20.2,28.5
+PAN-00235,Lille,59 - Nord,Hauts-de-France,Produits Frais,38.9,46.8,37.9,26.5
+PAN-00236,Paris,75 - Paris,Île-de-France,Surgelés,53.12,27.3,26.7,44.5
+PAN-00237,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,33.48,47.2,20.1,28.1
+PAN-00238,Paris,75 - Paris,Île-de-France,Surgelés,70.63,44.9,16.6,31.7
+PAN-00239,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,43.51,40.8,20.6,48.2
+PAN-00240,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,60.88,22.6,24.4,33.5
+PAN-00241,Paris,75 - Paris,Île-de-France,Boulangerie,60.65,46.0,17.9,36.7
+PAN-00242,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,59.72,43.2,16.4,46.4
+PAN-00243,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,62.56,22.7,14.8,32.1
+PAN-00244,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,36.14,36.3,31.9,32.6
+PAN-00245,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,28.71,42.6,25.3,47.0
+PAN-00246,Paris,75 - Paris,Île-de-France,Boissons,93.47,38.4,12.6,47.9
+PAN-00247,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,43.57,33.4,34.7,29.4
+PAN-00248,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,63.91,23.0,35.1,46.7
+PAN-00249,Lille,59 - Nord,Hauts-de-France,Surgelés,85.66,35.6,32.0,29.5
+PAN-00250,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,72.18,48.4,21.4,40.2
+PAN-00251,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,67.29,43.0,13.9,32.5
+PAN-00252,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,91.11,34.7,21.7,33.8
+PAN-00253,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,84.69,43.0,31.6,50.5
+PAN-00254,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,50.23,45.9,16.0,34.6
+PAN-00255,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,80.34,26.2,25.8,36.6
+PAN-00256,Lille,59 - Nord,Hauts-de-France,Épicerie,74.48,42.0,27.0,37.8
+PAN-00257,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,29.52,30.5,17.5,47.6
+PAN-00258,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,48.27,34.3,23.5,41.6
+PAN-00259,Lille,59 - Nord,Hauts-de-France,Boissons,85.55,32.7,37.0,50.1
+PAN-00260,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,56.8,42.3,30.2,34.8
+PAN-00261,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,30.04,31.9,24.5,43.2
+PAN-00262,Lille,59 - Nord,Hauts-de-France,Surgelés,47.12,48.1,13.4,41.0
+PAN-00263,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,93.92,27.2,21.7,50.7
+PAN-00264,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,70.93,26.1,16.4,25.6
+PAN-00265,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,62.4,48.2,16.1,30.8
+PAN-00266,Paris,75 - Paris,Île-de-France,Épicerie,88.09,36.3,29.1,43.5
+PAN-00267,Lille,59 - Nord,Hauts-de-France,Produits Frais,76.61,37.9,28.8,51.6
+PAN-00268,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,60.57,45.9,30.9,50.0
+PAN-00269,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,30.03,44.7,30.7,25.4
+PAN-00270,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,29.63,47.9,25.9,48.2
+PAN-00271,Lille,59 - Nord,Hauts-de-France,Épicerie,57.24,41.0,24.2,29.3
+PAN-00272,Lille,59 - Nord,Hauts-de-France,Boissons,55.24,25.4,22.5,27.0
+PAN-00273,Paris,75 - Paris,Île-de-France,Surgelés,78.59,23.7,25.7,51.9
+PAN-00274,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,77.44,24.0,25.1,28.3
+PAN-00275,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,62.24,39.4,18.2,44.2
+PAN-00276,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,90.8,34.6,24.7,29.5
+PAN-00277,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,89.89,31.3,32.3,36.4
+PAN-00278,Lille,59 - Nord,Hauts-de-France,Épicerie,48.74,25.2,19.8,25.6
+PAN-00279,Lille,59 - Nord,Hauts-de-France,Épicerie,29.85,26.7,30.1,28.6
+PAN-00280,Lille,59 - Nord,Hauts-de-France,Boulangerie,32.72,30.2,25.4,53.8
+PAN-00281,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,50.52,24.1,35.6,31.2
+PAN-00282,Paris,75 - Paris,Île-de-France,Boissons,75.37,41.7,35.0,25.8
+PAN-00283,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,90.51,43.9,37.3,43.5
+PAN-00284,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,77.99,39.2,26.7,33.4
+PAN-00285,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,87.52,45.5,28.7,49.1
+PAN-00286,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,56.32,42.1,29.2,50.5
+PAN-00287,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,36.35,32.2,24.4,49.5
+PAN-00288,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,79.65,40.8,18.6,43.2
+PAN-00289,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,33.47,33.1,24.3,33.2
+PAN-00290,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,60.74,33.8,25.1,52.3
+PAN-00291,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,73.24,37.7,34.9,37.3
+PAN-00292,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,54.31,41.5,25.6,37.3
+PAN-00293,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,80.75,48.4,26.8,47.1
+PAN-00294,Lille,59 - Nord,Hauts-de-France,Boissons,90.44,41.1,27.3,31.9
+PAN-00295,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,89.73,26.7,17.4,34.6
+PAN-00296,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,53.88,36.9,15.3,25.4
+PAN-00297,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,48.11,36.2,28.1,41.7
+PAN-00298,Paris,75 - Paris,Île-de-France,Surgelés,80.56,41.3,30.4,40.8
+PAN-00299,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,42.09,28.6,17.6,28.9
+PAN-00300,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,57.5,22.5,18.8,53.0
+PAN-00301,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,66.28,44.2,27.4,32.2
+PAN-00302,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,49.45,30.8,19.9,54.5
+PAN-00303,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,57.68,24.8,28.4,29.6
+PAN-00304,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,78.02,45.7,26.1,30.2
+PAN-00305,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,55.86,46.5,27.3,55.0
+PAN-00306,Paris,75 - Paris,Île-de-France,Boulangerie,79.91,42.7,21.7,33.7
+PAN-00307,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,38.71,27.5,22.5,40.8
+PAN-00308,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,48.76,39.8,20.9,32.5
+PAN-00309,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,81.16,36.5,24.9,33.2
+PAN-00310,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,72.95,47.9,21.0,27.1
+PAN-00311,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,93.87,30.3,36.0,43.3
+PAN-00312,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,76.83,27.2,17.2,26.2
+PAN-00313,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,66.92,45.9,23.1,43.5
+PAN-00314,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,62.11,38.3,19.8,48.4
+PAN-00315,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,47.51,41.8,33.3,36.7
+PAN-00316,Lille,59 - Nord,Hauts-de-France,Boissons,92.45,39.2,16.2,54.4
+PAN-00317,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,86.26,46.8,31.8,49.5
+PAN-00318,Lille,59 - Nord,Hauts-de-France,Épicerie,83.9,34.5,13.7,35.0
+PAN-00319,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,47.48,23.3,18.3,39.5
+PAN-00320,Lille,59 - Nord,Hauts-de-France,Boulangerie,34.18,30.5,33.9,52.9
+PAN-00321,Lille,59 - Nord,Hauts-de-France,Boulangerie,75.48,23.5,34.8,38.0
+PAN-00322,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,39.88,35.1,18.7,38.8
+PAN-00323,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,63.5,40.2,15.0,29.4
+PAN-00324,Lille,59 - Nord,Hauts-de-France,Épicerie,59.42,43.3,15.1,51.9
+PAN-00325,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,77.12,35.7,32.3,48.4
+PAN-00326,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,40.51,39.4,32.4,38.7
+PAN-00327,Paris,75 - Paris,Île-de-France,Épicerie,62.07,35.2,20.5,30.9
+PAN-00328,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,83.76,23.2,15.2,42.8
+PAN-00329,Lille,59 - Nord,Hauts-de-France,Boulangerie,60.72,28.7,12.8,44.7
+PAN-00330,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,42.22,40.6,20.1,47.0
+PAN-00331,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,51.3,36.0,34.6,34.7
+PAN-00332,Paris,75 - Paris,Île-de-France,Épicerie,35.43,40.8,23.9,54.3
+PAN-00333,Lille,59 - Nord,Hauts-de-France,Produits Frais,84.96,29.0,18.8,54.2
+PAN-00334,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,52.35,25.2,18.8,46.8
+PAN-00335,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,36.01,42.9,24.4,42.9
+PAN-00336,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,89.5,48.1,36.5,30.3
+PAN-00337,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,58.8,45.7,18.6,44.5
+PAN-00338,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,53.7,38.0,23.2,31.8
+PAN-00339,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,68.91,39.2,22.9,46.7
+PAN-00340,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,79.29,31.8,35.5,47.8
+PAN-00341,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,90.54,38.9,27.7,46.1
+PAN-00342,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,37.18,22.5,18.1,48.1
+PAN-00343,Paris,75 - Paris,Île-de-France,Produits Laitiers,66.19,37.2,34.6,41.9
+PAN-00344,Paris,75 - Paris,Île-de-France,Boulangerie,36.6,23.5,27.1,33.7
+PAN-00345,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,75.49,29.3,17.5,35.0
+PAN-00346,Paris,75 - Paris,Île-de-France,Produits Laitiers,67.32,46.4,16.9,50.2
+PAN-00347,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,77.76,28.3,37.9,51.6
+PAN-00348,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,34.53,46.7,20.4,30.1
+PAN-00349,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,59.39,34.9,15.1,26.9
+PAN-00350,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,65.39,32.6,16.2,46.8
+PAN-00351,Lille,59 - Nord,Hauts-de-France,Boulangerie,47.72,24.7,30.7,25.6
+PAN-00352,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,89.91,28.8,29.4,45.7
+PAN-00353,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,31.08,39.3,30.1,42.2
+PAN-00354,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,35.53,36.4,19.5,43.5
+PAN-00355,Paris,75 - Paris,Île-de-France,Produits Laitiers,89.63,41.8,22.3,53.8
+PAN-00356,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,64.71,30.5,21.1,25.3
+PAN-00357,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,29.89,46.2,23.9,36.7
+PAN-00358,Paris,75 - Paris,Île-de-France,Produits Laitiers,62.25,26.2,33.0,33.4
+PAN-00359,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,83.63,39.6,15.8,28.8
+PAN-00360,Paris,75 - Paris,Île-de-France,Produits Laitiers,84.04,27.0,31.8,51.3
+PAN-00361,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,91.91,41.1,27.8,51.0
+PAN-00362,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,53.54,44.1,16.5,29.8
+PAN-00363,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,60.79,28.0,33.7,28.2
+PAN-00364,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,30.16,24.3,36.7,40.8
+PAN-00365,Paris,75 - Paris,Île-de-France,Épicerie,35.8,41.9,29.8,35.8
+PAN-00366,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,56.81,28.5,30.9,53.7
+PAN-00367,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,58.22,35.7,34.9,39.2
+PAN-00368,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,75.6,35.3,13.2,49.2
+PAN-00369,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,33.85,25.6,12.7,34.5
+PAN-00370,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,83.84,41.2,33.2,26.1
+PAN-00371,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,94.93,23.6,14.6,29.9
+PAN-00372,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,54.71,48.2,35.7,44.4
+PAN-00373,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,78.72,23.5,16.0,50.7
+PAN-00374,Lille,59 - Nord,Hauts-de-France,Surgelés,51.96,23.3,15.3,28.7
+PAN-00375,Lille,59 - Nord,Hauts-de-France,Boulangerie,79.47,38.4,19.6,43.0
+PAN-00376,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,64.18,29.3,27.3,45.7
+PAN-00377,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,47.77,36.9,18.8,45.2
+PAN-00378,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,61.93,25.8,20.7,49.9
+PAN-00379,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,37.13,26.0,19.1,43.8
+PAN-00380,Lille,59 - Nord,Hauts-de-France,Épicerie,38.8,37.1,34.0,51.9
+PAN-00381,Paris,75 - Paris,Île-de-France,Produits Frais,55.05,22.1,36.6,29.0
+PAN-00382,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,52.65,46.2,27.6,37.9
+PAN-00383,Paris,75 - Paris,Île-de-France,Épicerie,48.86,32.5,32.9,53.8
+PAN-00384,Paris,75 - Paris,Île-de-France,Produits Laitiers,72.93,30.2,32.9,51.4
+PAN-00385,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,58.62,34.0,31.0,39.6
+PAN-00386,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,61.61,32.1,32.6,27.2
+PAN-00387,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,72.12,26.2,30.2,32.7
+PAN-00388,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,71.37,42.3,37.6,34.5
+PAN-00389,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,49.12,41.4,29.4,28.0
+PAN-00390,Paris,75 - Paris,Île-de-France,Surgelés,88.33,46.5,28.1,51.6
+PAN-00391,Lille,59 - Nord,Hauts-de-France,Produits Frais,32.92,37.6,22.5,42.2
+PAN-00392,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,72.98,30.2,33.4,29.9
+PAN-00393,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,38.1,22.1,17.3,30.5
+PAN-00394,Paris,75 - Paris,Île-de-France,Boissons,45.99,28.5,17.2,43.2
+PAN-00395,Lille,59 - Nord,Hauts-de-France,Boissons,74.67,45.5,26.5,28.7
+PAN-00396,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,41.77,46.7,34.2,44.2
+PAN-00397,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,81.82,31.8,35.2,47.5
+PAN-00398,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,75.24,37.6,15.9,49.9
+PAN-00399,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,78.28,40.6,28.0,39.4
+PAN-00400,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,66.71,29.0,28.4,49.9
+PAN-00401,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,69.22,37.1,29.1,47.6
+PAN-00402,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,86.42,30.2,31.8,35.7
+PAN-00403,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,45.54,22.1,22.4,31.4
+PAN-00404,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,49.87,38.4,14.8,39.8
+PAN-00405,Paris,75 - Paris,Île-de-France,Boulangerie,59.26,26.8,15.8,50.5
+PAN-00406,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,87.8,36.8,17.8,42.6
+PAN-00407,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,58.36,47.9,28.5,54.2
+PAN-00408,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,88.4,36.9,29.7,33.5
+PAN-00409,Lille,59 - Nord,Hauts-de-France,Épicerie,40.18,23.8,22.2,25.6
+PAN-00410,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,39.1,43.8,30.5,47.9
+PAN-00411,Lille,59 - Nord,Hauts-de-France,Surgelés,37.96,34.9,32.9,54.3
+PAN-00412,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,58.78,45.3,22.6,46.0
+PAN-00413,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,91.51,43.2,35.3,31.2
+PAN-00414,Paris,75 - Paris,Île-de-France,Épicerie,50.58,23.6,28.4,51.4
+PAN-00415,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,68.58,34.1,33.8,44.2
+PAN-00416,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,55.31,36.4,25.7,43.7
+PAN-00417,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,55.2,40.9,33.7,43.4
+PAN-00418,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,84.97,30.4,14.2,37.2
+PAN-00419,Paris,75 - Paris,Île-de-France,Boulangerie,29.84,39.0,30.2,44.4
+PAN-00420,Lille,59 - Nord,Hauts-de-France,Produits Frais,65.16,34.1,35.1,51.9
+PAN-00421,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,37.12,46.3,21.7,53.7
+PAN-00422,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,79.9,27.7,19.6,31.5
+PAN-00423,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,76.95,38.4,36.9,44.7
+PAN-00424,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,58.24,26.3,21.2,54.7
+PAN-00425,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,52.37,40.6,26.6,28.3
+PAN-00426,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,82.68,23.8,20.0,40.5
+PAN-00427,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,38.36,22.3,24.9,38.5
+PAN-00428,Lille,59 - Nord,Hauts-de-France,Produits Frais,68.55,37.5,25.0,46.4
+PAN-00429,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,43.2,40.2,31.3,44.1
+PAN-00430,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,45.01,37.2,27.0,39.6
+PAN-00431,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,94.39,44.9,21.9,29.1
+PAN-00432,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,69.82,42.0,26.0,52.8
+PAN-00433,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,79.9,30.0,32.4,44.8
+PAN-00434,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,83.15,27.1,25.6,40.7
+PAN-00435,Lille,59 - Nord,Hauts-de-France,Boulangerie,86.61,47.3,28.7,25.2
+PAN-00436,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,93.8,24.4,30.2,31.4
+PAN-00437,Paris,75 - Paris,Île-de-France,Boulangerie,40.86,26.4,27.8,50.4
+PAN-00438,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,76.4,32.1,22.5,51.1
+PAN-00439,Lille,59 - Nord,Hauts-de-France,Surgelés,80.65,44.0,34.7,25.4
+PAN-00440,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,56.29,30.1,35.9,32.8
+PAN-00441,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,37.92,36.8,24.9,28.3
+PAN-00442,Paris,75 - Paris,Île-de-France,Surgelés,64.05,46.6,31.0,32.0
+PAN-00443,Paris,75 - Paris,Île-de-France,Produits Laitiers,75.28,38.6,27.5,47.4
+PAN-00444,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,90.56,45.7,26.4,51.6
+PAN-00445,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,75.35,34.4,21.0,26.0
+PAN-00446,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,82.56,27.9,25.8,46.6
+PAN-00447,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,51.75,23.3,15.9,51.9
+PAN-00448,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,58.77,26.5,17.8,35.4
+PAN-00449,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,94.06,45.0,33.9,49.0
+PAN-00450,Paris,75 - Paris,Île-de-France,Épicerie,94.74,40.1,19.0,31.5
+PAN-00451,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,78.44,24.7,27.9,51.0
+PAN-00452,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,75.95,32.4,30.4,44.7
+PAN-00453,Paris,75 - Paris,Île-de-France,Boissons,32.83,41.2,14.6,37.8
+PAN-00454,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,54.49,39.7,13.4,50.4
+PAN-00455,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,35.9,44.3,37.0,41.0
+PAN-00456,Paris,75 - Paris,Île-de-France,Produits Frais,37.65,48.5,26.9,31.9
+PAN-00457,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,66.32,39.5,12.3,49.4
+PAN-00458,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,55.65,42.9,14.9,40.6
+PAN-00459,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,89.26,43.2,18.1,39.8
+PAN-00460,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,75.26,34.2,32.5,34.1
+PAN-00461,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,78.49,36.3,15.7,51.4
+PAN-00462,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,72.83,45.6,36.5,35.5
+PAN-00463,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,33.43,35.3,13.3,46.5
+PAN-00464,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,58.85,28.9,29.0,51.6
+PAN-00465,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,47.77,37.7,12.8,49.0
+PAN-00466,Paris,75 - Paris,Île-de-France,Produits Frais,40.57,27.1,18.7,26.9
+PAN-00467,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,55.67,28.7,36.2,27.6
+PAN-00468,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,31.61,44.6,37.6,39.8
+PAN-00469,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,51.32,33.7,26.9,35.9
+PAN-00470,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,47.71,24.2,37.2,27.1
+PAN-00471,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,67.99,31.9,23.0,30.6
+PAN-00472,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,90.63,32.9,26.5,53.8
+PAN-00473,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,90.49,23.7,19.0,40.4
+PAN-00474,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,85.14,36.0,20.6,45.0
+PAN-00475,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,35.28,46.9,23.2,54.0
+PAN-00476,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,73.66,44.2,12.3,38.7
+PAN-00477,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,37.66,43.8,33.6,43.2
+PAN-00478,Paris,75 - Paris,Île-de-France,Surgelés,50.35,39.7,15.2,37.0
+PAN-00479,Lille,59 - Nord,Hauts-de-France,Produits Frais,75.2,34.1,17.3,29.0
+PAN-00480,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,56.32,33.8,35.0,54.9
+PAN-00481,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,33.55,28.7,34.3,35.9
+PAN-00482,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,82.99,43.8,12.6,28.6
+PAN-00483,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,45.25,40.7,34.7,32.7
+PAN-00484,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,42.98,29.4,14.2,34.6
+PAN-00485,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,79.64,46.7,37.2,26.4
+PAN-00486,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,82.93,43.7,29.1,44.8
+PAN-00487,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,37.34,44.0,34.9,29.5
+PAN-00488,Paris,75 - Paris,Île-de-France,Produits Laitiers,58.77,22.2,18.5,53.0
+PAN-00489,Lille,59 - Nord,Hauts-de-France,Épicerie,59.52,22.0,37.0,50.7
+PAN-00490,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,35.71,44.6,35.6,32.5
+PAN-00491,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,40.57,38.3,25.6,48.1
+PAN-00492,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,35.72,37.4,24.0,50.4
+PAN-00493,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,74.11,25.7,35.4,39.8
+PAN-00494,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,44.61,46.4,32.8,30.6
+PAN-00495,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,76.85,33.9,23.9,49.3
+PAN-00496,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,51.39,48.2,27.5,46.0
+PAN-00497,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,52.83,47.8,37.9,50.3
+PAN-00498,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,59.75,40.7,29.4,51.7
+PAN-00499,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,60.38,45.4,23.5,50.9
+PAN-00500,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,54.74,26.5,34.4,50.3
+PAN-00501,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,81.11,43.2,24.3,53.1
+PAN-00502,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,66.25,47.1,23.7,54.5
+PAN-00503,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,49.67,30.8,18.0,41.9
+PAN-00504,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,45.65,29.8,34.7,48.2
+PAN-00505,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,65.25,42.5,28.4,35.6
+PAN-00506,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,68.72,44.9,12.2,41.6
+PAN-00507,Lille,59 - Nord,Hauts-de-France,Boulangerie,85.19,23.1,25.4,47.9
+PAN-00508,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,59.91,36.9,33.8,39.0
+PAN-00509,Lille,59 - Nord,Hauts-de-France,Épicerie,93.16,47.5,28.1,46.6
+PAN-00510,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,86.9,43.5,19.8,48.7
+PAN-00511,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,47.57,39.5,28.0,52.6
+PAN-00512,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,89.3,25.2,32.1,50.2
+PAN-00513,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,55.0,29.8,22.8,40.9
+PAN-00514,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,78.32,42.7,20.8,47.7
+PAN-00515,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,82.85,46.4,15.7,29.4
+PAN-00516,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,32.08,38.3,24.3,42.6
+PAN-00517,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,64.36,47.4,27.0,46.6
+PAN-00518,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,72.18,25.0,15.9,36.7
+PAN-00519,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,59.69,41.8,36.7,53.0
+PAN-00520,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,81.56,25.2,15.4,47.1
+PAN-00521,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,57.67,26.4,18.1,53.5
+PAN-00522,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,83.14,41.1,35.5,45.4
+PAN-00523,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,66.08,23.5,21.6,28.1
+PAN-00524,Lille,59 - Nord,Hauts-de-France,Boulangerie,71.11,37.9,34.7,38.8
+PAN-00525,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,68.04,38.5,35.3,42.7
+PAN-00526,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,45.1,33.2,36.4,52.7
+PAN-00527,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,34.19,31.1,36.2,29.5
+PAN-00528,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,54.72,24.9,29.2,25.6
+PAN-00529,Paris,75 - Paris,Île-de-France,Surgelés,76.44,28.3,22.6,28.9
+PAN-00530,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,67.94,30.7,14.4,30.3
+PAN-00531,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,29.2,24.5,17.0,30.2
+PAN-00532,Paris,75 - Paris,Île-de-France,Épicerie,46.33,23.5,29.0,51.4
+PAN-00533,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,51.61,26.3,19.8,29.5
+PAN-00534,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,82.58,37.0,23.1,45.6
+PAN-00535,Lille,59 - Nord,Hauts-de-France,Surgelés,43.8,47.1,30.3,28.0
+PAN-00536,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,36.41,31.0,17.3,50.3
+PAN-00537,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,40.57,29.8,30.3,51.0
+PAN-00538,Lille,59 - Nord,Hauts-de-France,Boissons,93.62,31.3,34.2,47.2
+PAN-00539,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,87.4,41.1,34.8,31.4
+PAN-00540,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,47.06,44.7,16.8,29.3
+PAN-00541,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,89.77,38.4,31.5,27.2
+PAN-00542,Lille,59 - Nord,Hauts-de-France,Épicerie,93.95,39.6,27.8,35.1
+PAN-00543,Paris,75 - Paris,Île-de-France,Surgelés,71.33,47.4,13.4,43.7
+PAN-00544,Paris,75 - Paris,Île-de-France,Boulangerie,40.12,40.6,31.0,54.7
+PAN-00545,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,76.6,39.8,35.2,36.7
+PAN-00546,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,69.1,23.7,21.8,47.6
+PAN-00547,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,41.02,26.3,26.5,54.8
+PAN-00548,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,84.44,39.1,36.3,34.0
+PAN-00549,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,55.66,46.2,37.5,26.6
+PAN-00550,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,34.61,47.1,27.0,30.7
+PAN-00551,Lille,59 - Nord,Hauts-de-France,Boulangerie,64.72,34.0,16.8,26.7
+PAN-00552,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,86.68,35.5,17.3,29.8
+PAN-00553,Lille,59 - Nord,Hauts-de-France,Produits Frais,61.48,22.1,33.6,29.4
+PAN-00554,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,34.18,28.7,29.9,43.1
+PAN-00555,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,32.62,22.9,12.7,27.1
+PAN-00556,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,81.34,23.8,22.9,41.0
+PAN-00557,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,53.15,23.5,35.8,44.9
+PAN-00558,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,83.16,40.1,14.3,25.3
+PAN-00559,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,86.7,29.0,27.9,28.4
+PAN-00560,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,73.14,38.0,18.6,32.9
+PAN-00561,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,92.65,42.9,22.8,50.2
+PAN-00562,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,46.18,45.5,19.1,52.4
+PAN-00563,Paris,75 - Paris,Île-de-France,Épicerie,89.23,35.7,27.3,27.8
+PAN-00564,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,82.6,48.4,33.3,29.3
+PAN-00565,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,29.12,35.1,23.7,37.9
+PAN-00566,Paris,75 - Paris,Île-de-France,Produits Frais,34.48,35.3,15.8,36.4
+PAN-00567,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,59.94,37.1,26.9,45.4
+PAN-00568,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,51.4,41.4,30.2,49.8
+PAN-00569,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,92.96,45.0,19.4,48.9
+PAN-00570,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,55.18,32.0,37.9,38.8
+PAN-00571,Lille,59 - Nord,Hauts-de-France,Produits Frais,59.99,27.3,18.7,32.5
+PAN-00572,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,43.87,35.5,32.4,33.1
+PAN-00573,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,31.5,22.8,37.5,36.0
+PAN-00574,Paris,75 - Paris,Île-de-France,Boulangerie,41.39,28.1,26.8,27.1
+PAN-00575,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,54.14,45.9,26.0,33.8
+PAN-00576,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,38.41,47.4,12.9,44.3
+PAN-00577,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,79.81,24.2,31.7,34.1
+PAN-00578,Paris,75 - Paris,Île-de-France,Épicerie,80.14,42.7,33.8,53.4
+PAN-00579,Lille,59 - Nord,Hauts-de-France,Boulangerie,28.64,46.5,33.9,38.0
+PAN-00580,Paris,75 - Paris,Île-de-France,Produits Frais,73.36,39.4,22.9,51.0
+PAN-00581,Paris,75 - Paris,Île-de-France,Surgelés,39.4,27.7,36.7,45.0
+PAN-00582,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,68.73,42.1,32.3,25.6
+PAN-00583,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,58.43,36.5,18.3,40.5
+PAN-00584,Lille,59 - Nord,Hauts-de-France,Produits Frais,73.0,32.1,14.2,36.2
+PAN-00585,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,60.01,33.6,32.3,43.1
+PAN-00586,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,45.29,32.8,19.6,47.4
+PAN-00587,Lille,59 - Nord,Hauts-de-France,Produits Frais,55.73,30.8,12.5,52.3
+PAN-00588,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,53.22,25.2,25.4,29.8
+PAN-00589,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,41.94,24.6,20.9,47.4
+PAN-00590,Lille,59 - Nord,Hauts-de-France,Épicerie,76.29,24.1,18.8,51.2
+PAN-00591,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,91.43,22.6,26.7,32.4
+PAN-00592,Paris,75 - Paris,Île-de-France,Produits Laitiers,41.04,33.6,34.1,38.3
+PAN-00593,Paris,75 - Paris,Île-de-France,Boissons,28.63,34.6,35.8,38.9
+PAN-00594,Paris,75 - Paris,Île-de-France,Surgelés,86.49,22.4,23.8,47.8
+PAN-00595,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,82.94,39.5,16.7,50.7
+PAN-00596,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,87.97,36.2,37.9,45.8
+PAN-00597,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,87.31,27.2,37.0,26.8
+PAN-00598,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,88.71,30.1,15.6,40.5
+PAN-00599,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,87.89,28.6,29.8,53.5
+PAN-00600,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,72.7,48.2,26.8,40.7
+PAN-00601,Lille,59 - Nord,Hauts-de-France,Boulangerie,93.29,25.1,26.6,33.1
+PAN-00602,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,62.1,47.6,13.2,47.8
+PAN-00603,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,77.17,26.0,25.5,39.7
+PAN-00604,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,72.9,26.6,12.3,44.0
+PAN-00605,Lille,59 - Nord,Hauts-de-France,Produits Frais,43.02,22.7,24.9,37.2
+PAN-00606,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,69.97,25.8,17.7,27.9
+PAN-00607,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,52.6,22.4,25.2,45.5
+PAN-00608,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,89.04,48.0,13.5,46.5
+PAN-00609,Paris,75 - Paris,Île-de-France,Surgelés,31.69,46.3,31.3,54.2
+PAN-00610,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,80.99,39.7,37.2,30.1
+PAN-00611,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,84.02,35.4,27.8,29.0
+PAN-00612,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,71.27,46.0,30.2,30.9
+PAN-00613,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,58.17,23.8,17.6,43.4
+PAN-00614,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,36.21,37.9,29.9,37.5
+PAN-00615,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,37.63,27.4,37.9,54.4
+PAN-00616,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,52.92,37.5,33.7,46.9
+PAN-00617,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,85.01,36.7,26.3,28.1
+PAN-00618,Lille,59 - Nord,Hauts-de-France,Épicerie,93.78,33.1,32.1,51.9
+PAN-00619,Lille,59 - Nord,Hauts-de-France,Épicerie,70.57,30.8,34.8,41.5
+PAN-00620,Lille,59 - Nord,Hauts-de-France,Boissons,73.39,44.4,31.8,49.1
+PAN-00621,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,36.98,36.2,28.2,37.4
+PAN-00622,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,35.24,37.1,14.7,41.5
+PAN-00623,Lille,59 - Nord,Hauts-de-France,Boulangerie,68.3,30.6,35.2,31.8
+PAN-00624,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,71.55,24.4,20.0,40.6
+PAN-00625,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,34.62,24.8,17.7,26.6
+PAN-00626,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,69.75,47.3,29.8,54.4
+PAN-00627,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,68.36,30.0,30.6,30.4
+PAN-00628,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,65.99,28.4,37.9,51.2
+PAN-00629,Lille,59 - Nord,Hauts-de-France,Boissons,60.9,41.9,24.1,26.9
+PAN-00630,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,81.82,24.8,15.6,34.3
+PAN-00631,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,41.03,41.8,24.1,47.7
+PAN-00632,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,67.74,40.3,34.3,40.1
+PAN-00633,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,43.71,41.3,36.5,48.7
+PAN-00634,Paris,75 - Paris,Île-de-France,Produits Laitiers,62.05,42.0,30.1,45.6
+PAN-00635,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,82.2,36.4,36.2,43.7
+PAN-00636,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,91.99,41.3,15.5,45.9
+PAN-00637,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,40.45,33.6,25.6,44.9
+PAN-00638,Lille,59 - Nord,Hauts-de-France,Surgelés,53.65,45.5,37.8,45.3
+PAN-00639,Paris,75 - Paris,Île-de-France,Boissons,75.08,44.5,35.8,36.6
+PAN-00640,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,73.97,22.8,34.6,48.1
+PAN-00641,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,82.61,23.6,15.2,34.1
+PAN-00642,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,33.16,22.2,31.4,50.2
+PAN-00643,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,73.58,39.7,26.4,39.8
+PAN-00644,Paris,75 - Paris,Île-de-France,Épicerie,42.69,44.8,18.9,30.9
+PAN-00645,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,84.55,39.2,32.6,33.3
+PAN-00646,Lille,59 - Nord,Hauts-de-France,Produits Frais,51.92,48.0,15.7,25.5
+PAN-00647,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,49.84,43.7,35.0,39.2
+PAN-00648,Lille,59 - Nord,Hauts-de-France,Surgelés,29.3,38.0,27.8,30.9
+PAN-00649,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,59.51,26.7,35.3,41.8
+PAN-00650,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,54.25,43.2,35.6,39.5
+PAN-00651,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,73.55,36.9,28.4,38.2
+PAN-00652,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,54.61,28.7,22.9,44.3
+PAN-00653,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,84.96,31.6,33.8,35.9
+PAN-00654,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,44.26,30.1,33.0,32.7
+PAN-00655,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,79.16,39.8,27.1,37.0
+PAN-00656,Paris,75 - Paris,Île-de-France,Épicerie,30.0,31.5,28.3,41.6
+PAN-00657,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,87.68,34.7,12.2,39.4
+PAN-00658,Paris,75 - Paris,Île-de-France,Surgelés,58.69,25.1,19.4,40.5
+PAN-00659,Paris,75 - Paris,Île-de-France,Produits Laitiers,58.91,45.5,35.1,42.6
+PAN-00660,Paris,75 - Paris,Île-de-France,Surgelés,51.44,45.9,34.1,37.4
+PAN-00661,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,41.34,36.9,24.4,38.2
+PAN-00662,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,69.24,36.6,36.6,51.4
+PAN-00663,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,60.95,46.0,24.3,39.5
+PAN-00664,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,65.03,28.7,26.5,53.9
+PAN-00665,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,73.29,29.7,31.1,25.8
+PAN-00666,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,88.34,35.1,24.7,44.0
+PAN-00667,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,79.73,40.7,29.8,54.4
+PAN-00668,Lille,59 - Nord,Hauts-de-France,Produits Frais,57.28,30.8,35.9,39.3
+PAN-00669,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,69.37,33.2,19.3,41.8
+PAN-00670,Lille,59 - Nord,Hauts-de-France,Produits Frais,93.63,30.2,16.6,43.3
+PAN-00671,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,38.28,32.6,25.0,49.8
+PAN-00672,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,65.2,26.9,33.0,33.3
+PAN-00673,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,33.55,33.6,33.2,32.4
+PAN-00674,Lille,59 - Nord,Hauts-de-France,Boulangerie,60.81,45.3,28.8,38.6
+PAN-00675,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,79.03,34.0,24.2,41.5
+PAN-00676,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,34.96,30.4,37.6,48.9
+PAN-00677,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,37.25,30.8,21.6,32.4
+PAN-00678,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,30.52,28.4,15.6,26.3
+PAN-00679,Paris,75 - Paris,Île-de-France,Épicerie,72.69,34.6,22.4,35.0
+PAN-00680,Lille,59 - Nord,Hauts-de-France,Boulangerie,70.38,43.3,29.4,31.4
+PAN-00681,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,69.82,24.7,23.4,47.1
+PAN-00682,Lille,59 - Nord,Hauts-de-France,Épicerie,74.38,41.5,19.7,36.2
+PAN-00683,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,36.2,31.0,31.9,40.4
+PAN-00684,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,76.54,25.0,29.4,40.3
+PAN-00685,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,47.03,38.7,21.9,44.7
+PAN-00686,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,58.03,33.9,19.5,33.3
+PAN-00687,Paris,75 - Paris,Île-de-France,Produits Frais,66.9,33.7,22.1,48.1
+PAN-00688,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,28.98,27.6,31.0,35.4
+PAN-00689,Lille,59 - Nord,Hauts-de-France,Boissons,53.05,40.3,36.8,39.1
+PAN-00690,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,89.43,38.8,25.1,49.9
+PAN-00691,Paris,75 - Paris,Île-de-France,Surgelés,45.6,47.6,36.0,39.2
+PAN-00692,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,46.6,44.0,18.6,41.5
+PAN-00693,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,53.58,29.4,33.1,52.2
+PAN-00694,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,69.81,28.1,30.9,39.6
+PAN-00695,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,86.11,34.5,13.2,25.2
+PAN-00696,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,34.23,34.2,26.3,53.5
+PAN-00697,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,64.62,37.2,32.8,52.0
+PAN-00698,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,44.82,26.3,36.1,36.3
+PAN-00699,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,37.5,30.9,19.5,47.5
+PAN-00700,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,48.04,46.6,36.4,39.5
+PAN-00701,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,79.43,30.5,27.6,28.6
+PAN-00702,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,83.49,37.8,36.5,52.9
+PAN-00703,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,69.97,43.6,23.7,48.8
+PAN-00704,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,90.2,27.0,31.2,38.0
+PAN-00705,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,46.74,46.6,28.6,47.5
+PAN-00706,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,33.53,36.6,12.7,34.6
+PAN-00707,Paris,75 - Paris,Île-de-France,Produits Frais,29.56,25.9,14.0,29.7
+PAN-00708,Lille,59 - Nord,Hauts-de-France,Surgelés,77.72,42.5,30.3,36.5
+PAN-00709,Paris,75 - Paris,Île-de-France,Produits Frais,73.2,38.1,18.2,46.4
+PAN-00710,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,43.99,43.0,15.3,46.4
+PAN-00711,Lille,59 - Nord,Hauts-de-France,Surgelés,69.4,25.9,24.4,41.5
+PAN-00712,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,63.23,44.3,24.3,45.3
+PAN-00713,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,80.56,42.5,35.5,26.1
+PAN-00714,Paris,75 - Paris,Île-de-France,Produits Frais,66.19,46.0,25.2,26.8
+PAN-00715,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,49.07,33.8,28.9,53.9
+PAN-00716,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,80.15,40.7,32.3,39.7
+PAN-00717,Lille,59 - Nord,Hauts-de-France,Épicerie,67.85,22.5,36.8,26.0
+PAN-00718,Lille,59 - Nord,Hauts-de-France,Produits Frais,29.88,47.9,30.4,38.8
+PAN-00719,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,52.42,46.7,18.1,37.8
+PAN-00720,Lille,59 - Nord,Hauts-de-France,Épicerie,63.82,44.9,31.4,43.3
+PAN-00721,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,48.48,23.5,31.4,26.8
+PAN-00722,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,67.58,24.9,22.8,50.3
+PAN-00723,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,84.13,36.1,16.3,39.0
+PAN-00724,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,32.0,39.1,22.3,26.2
+PAN-00725,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,80.75,40.3,22.8,48.5
+PAN-00726,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,56.71,27.4,12.3,49.7
+PAN-00727,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,43.49,32.8,33.4,33.5
+PAN-00728,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,90.31,36.2,20.3,46.5
+PAN-00729,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,43.41,37.2,27.2,46.7
+PAN-00730,Paris,75 - Paris,Île-de-France,Produits Frais,71.87,26.8,13.6,46.7
+PAN-00731,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,35.33,43.9,28.5,29.4
+PAN-00732,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,33.11,42.6,36.9,47.5
+PAN-00733,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,56.85,34.6,31.8,37.4
+PAN-00734,Paris,75 - Paris,Île-de-France,Produits Frais,93.39,42.0,26.9,49.6
+PAN-00735,Lille,59 - Nord,Hauts-de-France,Boulangerie,57.91,24.5,29.8,41.6
+PAN-00736,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,56.05,48.2,15.1,34.4
+PAN-00737,Lille,59 - Nord,Hauts-de-France,Produits Frais,45.35,35.3,35.0,26.4
+PAN-00738,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,46.71,43.6,25.7,44.4
+PAN-00739,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,63.02,30.3,28.6,45.9
+PAN-00740,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,85.79,32.0,18.1,35.1
+PAN-00741,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,53.05,32.0,25.7,42.6
+PAN-00742,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,38.84,27.2,31.8,33.4
+PAN-00743,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,70.86,35.4,34.2,38.1
+PAN-00744,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,31.56,35.3,18.1,46.1
+PAN-00745,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,67.88,33.2,22.0,30.0
+PAN-00746,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,31.8,34.5,34.6,28.7
+PAN-00747,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,83.57,41.4,17.9,47.3
+PAN-00748,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,48.59,28.6,12.7,46.2
+PAN-00749,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,48.08,45.5,30.8,29.8
+PAN-00750,Paris,75 - Paris,Île-de-France,Boulangerie,78.6,32.2,31.2,32.6
+PAN-00751,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,36.68,40.1,35.9,40.6
+PAN-00752,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,48.2,29.5,18.1,40.9
+PAN-00753,Paris,75 - Paris,Île-de-France,Produits Frais,48.88,25.5,21.5,35.7
+PAN-00754,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,33.81,30.5,23.9,41.2
+PAN-00755,Lille,59 - Nord,Hauts-de-France,Surgelés,55.69,42.8,37.3,51.6
+PAN-00756,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,79.08,31.3,32.5,52.9
+PAN-00757,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,93.42,39.9,34.1,29.2
+PAN-00758,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,40.07,46.0,28.2,34.3
+PAN-00759,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,69.98,22.3,15.1,51.8
+PAN-00760,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,36.14,24.2,30.9,28.1
+PAN-00761,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,53.93,37.8,28.8,49.9
+PAN-00762,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,57.62,32.7,31.8,27.1
+PAN-00763,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,87.53,27.3,26.2,31.9
+PAN-00764,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,79.45,25.3,23.7,34.8
+PAN-00765,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,42.69,44.3,31.7,27.2
+PAN-00766,Paris,75 - Paris,Île-de-France,Boissons,79.06,48.4,13.7,27.4
+PAN-00767,Lille,59 - Nord,Hauts-de-France,Surgelés,34.81,27.6,29.6,42.1
+PAN-00768,Paris,75 - Paris,Île-de-France,Boissons,65.94,24.4,16.8,42.3
+PAN-00769,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,87.29,23.2,21.6,40.6
+PAN-00770,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,63.14,28.2,18.0,40.2
+PAN-00771,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,92.74,33.7,13.2,30.1
+PAN-00772,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,37.25,43.7,27.5,36.2
+PAN-00773,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,93.58,39.2,24.9,25.8
+PAN-00774,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,72.99,26.4,30.5,45.4
+PAN-00775,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,29.32,33.2,18.4,47.6
+PAN-00776,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,53.54,27.3,21.4,26.3
+PAN-00777,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,33.85,24.6,24.0,26.9
+PAN-00778,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,93.5,32.3,36.3,34.6
+PAN-00779,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,54.37,47.0,27.3,36.7
+PAN-00780,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,80.71,22.2,18.2,37.4
+PAN-00781,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,31.77,39.3,21.2,44.4
+PAN-00782,Paris,75 - Paris,Île-de-France,Surgelés,64.92,42.1,30.1,34.5
+PAN-00783,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,64.5,41.7,23.4,39.9
+PAN-00784,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,44.17,47.7,16.8,36.5
+PAN-00785,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,76.5,26.3,16.9,38.2
+PAN-00786,Paris,75 - Paris,Île-de-France,Produits Laitiers,28.67,46.1,27.2,50.3
+PAN-00787,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,89.87,41.7,15.1,28.7
+PAN-00788,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,81.55,37.1,37.6,52.8
+PAN-00789,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,33.5,27.2,32.3,36.9
+PAN-00790,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,44.77,40.1,13.1,38.4
+PAN-00791,Lille,59 - Nord,Hauts-de-France,Boulangerie,58.69,24.0,32.2,35.4
+PAN-00792,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,78.57,39.1,19.8,31.6
+PAN-00793,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,81.32,46.4,36.8,45.0
+PAN-00794,Paris,75 - Paris,Île-de-France,Épicerie,50.35,41.0,22.6,49.4
+PAN-00795,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,69.02,46.6,28.1,37.6
+PAN-00796,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,53.96,34.4,16.4,48.6
+PAN-00797,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,60.1,36.0,19.8,28.8
+PAN-00798,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,87.15,25.9,22.4,38.3
+PAN-00799,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,74.67,46.6,30.3,43.4
+PAN-00800,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,60.88,39.0,23.9,43.6
+PAN-00801,Lille,59 - Nord,Hauts-de-France,Produits Frais,73.6,42.4,20.8,25.7
+PAN-00802,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,93.35,38.9,23.1,32.4
+PAN-00803,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,85.58,38.0,16.4,44.1
+PAN-00804,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,90.65,32.6,26.7,39.3
+PAN-00805,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,61.62,30.1,23.6,28.9
+PAN-00806,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,36.03,38.4,16.6,54.2
+PAN-00807,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,94.13,32.2,33.0,37.9
+PAN-00808,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,94.61,30.0,24.6,43.0
+PAN-00809,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,38.33,31.0,29.6,36.4
+PAN-00810,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,58.43,46.8,17.1,34.1
+PAN-00811,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,74.79,47.0,32.0,31.1
+PAN-00812,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,34.65,48.1,29.9,43.0
+PAN-00813,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,39.72,27.5,13.7,50.5
+PAN-00814,Paris,75 - Paris,Île-de-France,Produits Laitiers,85.46,25.3,33.4,31.4
+PAN-00815,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,41.93,35.8,17.1,31.8
+PAN-00816,Paris,75 - Paris,Île-de-France,Produits Laitiers,60.39,41.3,28.4,40.7
+PAN-00817,Lille,59 - Nord,Hauts-de-France,Surgelés,41.33,37.3,28.0,49.5
+PAN-00818,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,40.56,39.3,17.0,52.3
+PAN-00819,Paris,75 - Paris,Île-de-France,Épicerie,82.7,25.2,23.5,33.5
+PAN-00820,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,37.63,36.9,31.7,39.5
+PAN-00821,Paris,75 - Paris,Île-de-France,Produits Frais,50.82,26.7,18.6,47.0
+PAN-00822,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,62.09,35.5,33.4,45.3
+PAN-00823,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,52.56,34.0,29.3,36.2
+PAN-00824,Paris,75 - Paris,Île-de-France,Boissons,51.13,36.6,34.9,25.4
+PAN-00825,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,34.73,47.1,13.8,44.3
+PAN-00826,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,46.82,29.7,21.3,35.6
+PAN-00827,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,37.37,22.2,16.5,43.0
+PAN-00828,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,65.48,43.4,35.0,30.9
+PAN-00829,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,76.76,44.4,29.7,37.7
+PAN-00830,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,37.76,42.1,30.4,43.2
+PAN-00831,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,55.3,35.7,20.7,37.8
+PAN-00832,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,89.88,40.4,15.7,45.9
+PAN-00833,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,72.59,33.9,28.4,39.1
+PAN-00834,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,65.73,46.4,29.2,36.4
+PAN-00835,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,72.68,36.6,32.3,35.4
+PAN-00836,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,92.04,34.5,21.4,38.8
+PAN-00837,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,34.75,31.4,29.5,47.7
+PAN-00838,Lille,59 - Nord,Hauts-de-France,Boulangerie,70.66,39.3,26.0,30.5
+PAN-00839,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,37.41,25.9,15.7,55.0
+PAN-00840,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,84.92,24.4,36.6,25.2
+PAN-00841,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,66.72,31.2,16.6,53.0
+PAN-00842,Lille,59 - Nord,Hauts-de-France,Produits Frais,87.28,46.7,26.2,28.7
+PAN-00843,Lille,59 - Nord,Hauts-de-France,Boissons,77.95,46.1,28.7,41.6
+PAN-00844,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,57.03,42.1,36.1,48.9
+PAN-00845,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,32.18,28.5,29.2,39.5
+PAN-00846,Paris,75 - Paris,Île-de-France,Produits Frais,70.96,29.3,16.5,50.4
+PAN-00847,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,32.46,38.9,15.3,39.9
+PAN-00848,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,37.89,46.0,30.3,34.9
+PAN-00849,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,74.0,47.1,17.9,35.9
+PAN-00850,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,52.08,43.9,21.9,27.7
+PAN-00851,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,58.29,22.6,17.2,30.2
+PAN-00852,Paris,75 - Paris,Île-de-France,Surgelés,70.43,34.2,20.7,54.3
+PAN-00853,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,50.98,33.7,17.6,26.8
+PAN-00854,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,57.47,32.3,32.8,43.1
+PAN-00855,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,56.6,44.6,22.0,51.3
+PAN-00856,Lille,59 - Nord,Hauts-de-France,Produits Frais,66.55,43.6,23.3,33.8
+PAN-00857,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,37.59,32.3,24.6,44.7
+PAN-00858,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,59.16,45.8,22.1,33.7
+PAN-00859,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,40.39,40.6,30.7,30.6
+PAN-00860,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,81.04,43.1,35.4,46.7
+PAN-00861,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,36.83,48.2,36.2,47.5
+PAN-00862,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,93.68,34.7,37.7,52.0
+PAN-00863,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,47.9,23.9,32.1,44.7
+PAN-00864,Paris,75 - Paris,Île-de-France,Produits Laitiers,87.98,36.8,31.7,40.4
+PAN-00865,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,83.93,41.6,32.0,46.7
+PAN-00866,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,29.57,47.7,25.0,37.3
+PAN-00867,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,71.07,40.0,19.5,39.0
+PAN-00868,Lille,59 - Nord,Hauts-de-France,Épicerie,48.31,28.1,21.2,53.4
+PAN-00869,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,29.94,35.3,20.1,50.8
+PAN-00870,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,54.09,34.1,24.6,50.5
+PAN-00871,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,81.78,43.7,17.2,41.8
+PAN-00872,Paris,75 - Paris,Île-de-France,Produits Laitiers,81.51,47.7,14.5,36.0
+PAN-00873,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,30.58,31.6,17.6,37.4
+PAN-00874,Paris,75 - Paris,Île-de-France,Boissons,66.14,35.0,27.0,25.7
+PAN-00875,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,64.4,42.1,21.6,36.3
+PAN-00876,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,43.29,34.6,17.5,32.6
+PAN-00877,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,87.62,45.9,37.4,29.5
+PAN-00878,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,50.97,31.5,17.8,37.6
+PAN-00879,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,82.75,34.9,25.5,42.4
+PAN-00880,Paris,75 - Paris,Île-de-France,Produits Laitiers,90.25,42.3,35.6,50.6
+PAN-00881,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,93.33,30.8,23.9,29.9
+PAN-00882,Lille,59 - Nord,Hauts-de-France,Produits Frais,48.9,36.6,23.1,37.3
+PAN-00883,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,42.42,44.6,36.2,33.9
+PAN-00884,Paris,75 - Paris,Île-de-France,Boissons,75.09,29.8,27.2,45.4
+PAN-00885,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,29.93,45.2,22.5,42.3
+PAN-00886,Paris,75 - Paris,Île-de-France,Surgelés,93.33,32.6,16.4,25.2
+PAN-00887,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,71.98,36.6,21.6,46.3
+PAN-00888,Paris,75 - Paris,Île-de-France,Épicerie,61.89,29.7,18.3,30.9
+PAN-00889,Paris,75 - Paris,Île-de-France,Produits Frais,89.72,40.5,36.2,53.0
+PAN-00890,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,37.24,27.2,25.8,38.5
+PAN-00891,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,91.39,37.9,35.0,53.6
+PAN-00892,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,38.36,35.3,33.7,25.2
+PAN-00893,Paris,75 - Paris,Île-de-France,Produits Frais,91.56,25.3,33.2,33.5
+PAN-00894,Paris,75 - Paris,Île-de-France,Produits Laitiers,70.71,35.9,29.3,26.4
+PAN-00895,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,42.68,25.3,27.6,47.6
+PAN-00896,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,28.99,27.0,22.1,28.9
+PAN-00897,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,76.47,36.6,15.9,42.8
+PAN-00898,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,34.54,25.8,31.4,51.0
+PAN-00899,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,54.89,41.6,34.3,53.4
+PAN-00900,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,81.66,47.1,36.3,38.6
+PAN-00901,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,40.48,23.7,35.2,39.0
+PAN-00902,Paris,75 - Paris,Île-de-France,Boissons,76.5,25.8,32.1,53.9
+PAN-00903,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,89.67,24.0,31.8,44.0
+PAN-00904,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,69.6,38.6,30.2,44.0
+PAN-00905,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,51.89,47.0,37.1,29.3
+PAN-00906,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,34.26,37.8,24.2,53.4
+PAN-00907,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,85.14,34.6,35.9,42.9
+PAN-00908,Paris,75 - Paris,Île-de-France,Surgelés,35.4,45.1,12.1,50.2
+PAN-00909,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,72.22,41.5,28.2,47.9
+PAN-00910,Lille,59 - Nord,Hauts-de-France,Produits Frais,85.13,38.0,23.7,48.3
+PAN-00911,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,89.75,47.1,37.4,45.9
+PAN-00912,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,54.11,38.9,30.9,45.4
+PAN-00913,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,42.18,31.1,21.6,38.0
+PAN-00914,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,47.9,37.2,24.7,39.1
+PAN-00915,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,60.8,31.8,34.6,30.5
+PAN-00916,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,72.21,26.4,14.2,39.2
+PAN-00917,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,55.63,48.2,22.9,40.3
+PAN-00918,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,59.5,39.3,28.2,53.9
+PAN-00919,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,52.3,44.1,34.2,36.3
+PAN-00920,Lille,59 - Nord,Hauts-de-France,Épicerie,59.58,33.2,13.2,41.6
+PAN-00921,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,86.68,25.3,24.8,48.2
+PAN-00922,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,38.41,39.9,37.2,50.4
+PAN-00923,Lille,59 - Nord,Hauts-de-France,Boulangerie,92.28,33.9,13.2,51.5
+PAN-00924,Lille,59 - Nord,Hauts-de-France,Épicerie,50.72,24.6,19.8,38.0
+PAN-00925,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,44.16,25.7,22.2,37.5
+PAN-00926,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,46.54,43.4,32.9,25.6
+PAN-00927,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,93.91,46.3,25.8,29.8
+PAN-00928,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,78.91,36.4,30.8,31.3
+PAN-00929,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,59.36,37.6,31.0,52.9
+PAN-00930,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,87.67,47.6,14.9,36.9
+PAN-00931,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,89.14,42.1,31.1,48.5
+PAN-00932,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,69.35,46.9,15.3,46.4
+PAN-00933,Paris,75 - Paris,Île-de-France,Produits Frais,79.73,23.3,15.7,37.8
+PAN-00934,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,50.18,29.3,28.6,54.9
+PAN-00935,Paris,75 - Paris,Île-de-France,Produits Laitiers,76.12,22.6,28.6,26.8
+PAN-00936,Paris,75 - Paris,Île-de-France,Surgelés,72.35,34.4,14.7,52.4
+PAN-00937,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,49.96,31.7,23.8,51.9
+PAN-00938,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,62.32,28.3,36.6,26.9
+PAN-00939,Lille,59 - Nord,Hauts-de-France,Produits Frais,59.27,30.6,25.2,37.7
+PAN-00940,Paris,75 - Paris,Île-de-France,Boissons,57.2,27.7,18.8,54.7
+PAN-00941,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,82.93,29.6,17.5,25.4
+PAN-00942,Paris,75 - Paris,Île-de-France,Boissons,85.74,29.4,25.6,53.5
+PAN-00943,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,91.62,45.3,30.1,50.7
+PAN-00944,Paris,75 - Paris,Île-de-France,Boissons,36.66,32.2,27.0,39.6
+PAN-00945,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,69.38,43.3,37.2,25.3
+PAN-00946,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,37.06,46.2,21.2,53.9
+PAN-00947,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,83.04,23.6,37.5,25.1
+PAN-00948,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,74.84,24.7,33.4,51.6
+PAN-00949,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,38.24,29.3,15.6,35.7
+PAN-00950,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,41.84,36.8,17.2,37.8
+PAN-00951,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,68.98,46.6,16.8,31.8
+PAN-00952,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,70.15,31.8,23.6,54.0
+PAN-00953,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,67.83,38.1,30.2,29.4
+PAN-00954,Lille,59 - Nord,Hauts-de-France,Boulangerie,56.84,30.8,15.6,37.4
+PAN-00955,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,67.89,22.2,36.3,51.6
+PAN-00956,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,84.74,31.5,31.0,37.7
+PAN-00957,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,50.37,24.3,32.4,38.2
+PAN-00958,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,53.66,42.2,26.7,38.8
+PAN-00959,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,65.51,38.7,24.5,49.8
+PAN-00960,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,61.97,39.8,37.4,49.4
+PAN-00961,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,70.61,24.1,29.7,38.2
+PAN-00962,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,30.54,26.1,12.2,28.1
+PAN-00963,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,54.07,22.7,28.1,54.3
+PAN-00964,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,69.62,38.0,12.2,28.9
+PAN-00965,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,43.79,47.4,19.2,53.6
+PAN-00966,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,69.85,28.8,34.1,52.5
+PAN-00967,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,65.94,38.5,30.6,47.8
+PAN-00968,Lille,59 - Nord,Hauts-de-France,Surgelés,59.59,23.7,34.6,27.9
+PAN-00969,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,47.99,45.0,22.9,35.6
+PAN-00970,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,77.79,26.8,23.2,47.6
+PAN-00971,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,88.69,31.5,14.8,46.0
+PAN-00972,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,87.88,35.3,35.1,55.0
+PAN-00973,Lille,59 - Nord,Hauts-de-France,Produits Frais,70.54,27.1,12.6,36.2
+PAN-00974,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,94.29,32.4,16.0,46.2
+PAN-00975,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,42.33,33.0,17.1,26.7
+PAN-00976,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,71.12,39.7,31.8,48.1
+PAN-00977,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,76.24,26.2,18.2,36.8
+PAN-00978,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,58.15,36.0,29.9,43.3
+PAN-00979,Lille,59 - Nord,Hauts-de-France,Produits Frais,82.13,28.9,12.5,26.7
+PAN-00980,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,35.61,46.7,34.5,33.5
+PAN-00981,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,75.05,22.9,33.7,50.9
+PAN-00982,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,34.35,46.5,19.8,51.8
+PAN-00983,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,44.37,29.1,37.9,27.8
+PAN-00984,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,42.86,32.8,29.2,38.9
+PAN-00985,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,60.75,26.6,22.8,42.4
+PAN-00986,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,82.52,29.9,26.3,30.2
+PAN-00987,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,62.84,46.9,27.2,44.0
+PAN-00988,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,60.15,24.6,34.4,48.6
+PAN-00989,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,76.08,23.7,19.0,29.8
+PAN-00990,Lille,59 - Nord,Hauts-de-France,Surgelés,62.04,37.9,26.8,42.2
+PAN-00991,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,73.86,34.7,19.9,33.7
+PAN-00992,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,48.6,28.1,24.4,49.1
+PAN-00993,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,52.23,34.1,30.5,28.6
+PAN-00994,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,43.89,23.7,18.5,52.9
+PAN-00995,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,36.54,27.3,19.7,53.0
+PAN-00996,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,45.68,37.7,20.5,29.4
+PAN-00997,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,56.19,42.9,12.2,52.4
+PAN-00998,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,81.84,29.8,17.1,53.0
+PAN-00999,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,94.34,22.7,16.6,34.8
+PAN-01000,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,94.27,29.9,36.8,31.4
+PAN-01001,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,66.15,30.4,16.2,31.6
+PAN-01002,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,91.09,31.9,12.2,31.0
+PAN-01003,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,35.49,23.0,16.7,46.9
+PAN-01004,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,84.59,26.1,19.5,50.7
+PAN-01005,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,36.67,41.9,31.0,30.2
+PAN-01006,Lille,59 - Nord,Hauts-de-France,Épicerie,52.41,35.6,21.9,29.5
+PAN-01007,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,76.25,42.2,20.4,47.2
+PAN-01008,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,77.9,33.9,35.1,27.4
+PAN-01009,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,76.13,39.6,34.2,44.7
+PAN-01010,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,82.9,42.7,12.5,29.6
+PAN-01011,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,44.49,43.1,26.0,43.6
+PAN-01012,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,55.53,26.1,18.6,38.6
+PAN-01013,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,78.46,35.5,24.7,37.0
+PAN-01014,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,81.01,31.5,12.5,44.3
+PAN-01015,Paris,75 - Paris,Île-de-France,Surgelés,93.25,27.2,35.6,40.1
+PAN-01016,Paris,75 - Paris,Île-de-France,Surgelés,79.42,45.0,21.1,51.3
+PAN-01017,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,63.43,28.4,33.8,45.6
+PAN-01018,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,56.47,34.5,26.7,37.2
+PAN-01019,Paris,75 - Paris,Île-de-France,Boulangerie,74.0,33.6,36.8,26.3
+PAN-01020,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,44.59,27.2,32.7,30.1
+PAN-01021,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,79.78,26.7,36.2,36.9
+PAN-01022,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,66.37,36.0,15.6,33.0
+PAN-01023,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,31.02,44.9,35.3,38.0
+PAN-01024,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,88.27,26.3,37.4,37.9
+PAN-01025,Paris,75 - Paris,Île-de-France,Épicerie,67.92,28.9,12.1,43.4
+PAN-01026,Paris,75 - Paris,Île-de-France,Épicerie,65.53,28.8,21.9,36.3
+PAN-01027,Paris,75 - Paris,Île-de-France,Surgelés,34.88,26.1,17.8,52.2
+PAN-01028,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,77.6,26.7,29.7,25.7
+PAN-01029,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,69.38,24.2,15.2,52.7
+PAN-01030,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,57.21,46.8,37.3,28.2
+PAN-01031,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,74.0,25.9,24.6,42.1
+PAN-01032,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,73.4,34.9,33.7,37.2
+PAN-01033,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,90.97,41.1,27.5,36.3
+PAN-01034,Paris,75 - Paris,Île-de-France,Boissons,63.04,40.9,35.1,47.8
+PAN-01035,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,65.65,31.2,15.5,35.3
+PAN-01036,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,82.8,46.3,23.6,54.6
+PAN-01037,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,82.86,33.5,15.5,34.6
+PAN-01038,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,41.33,29.8,28.2,38.3
+PAN-01039,Paris,75 - Paris,Île-de-France,Épicerie,43.82,43.1,23.2,50.6
+PAN-01040,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,82.59,35.0,24.0,35.6
+PAN-01041,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,28.81,37.7,35.7,40.3
+PAN-01042,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,57.62,36.4,27.8,40.7
+PAN-01043,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,37.72,30.1,30.3,44.0
+PAN-01044,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,43.22,44.6,23.5,46.5
+PAN-01045,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,68.36,43.8,12.1,38.0
+PAN-01046,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,55.08,23.0,13.0,35.4
+PAN-01047,Paris,75 - Paris,Île-de-France,Boissons,57.43,25.6,15.1,50.5
+PAN-01048,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,79.38,24.0,30.6,31.7
+PAN-01049,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,69.8,41.3,32.8,46.9
+PAN-01050,Paris,75 - Paris,Île-de-France,Produits Frais,29.84,38.5,32.8,39.4
+PAN-01051,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,59.82,28.1,23.7,43.0
+PAN-01052,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,61.62,22.1,31.4,33.4
+PAN-01053,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,89.0,40.3,18.0,35.5
+PAN-01054,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,63.08,25.4,20.7,43.3
+PAN-01055,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,59.06,40.5,16.2,36.0
+PAN-01056,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,34.01,46.0,14.6,42.5
+PAN-01057,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,56.42,42.8,32.5,49.9
+PAN-01058,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,60.36,41.7,36.1,44.2
+PAN-01059,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,62.06,34.2,15.2,28.5
+PAN-01060,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,44.37,27.6,15.4,32.0
+PAN-01061,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,68.06,46.7,22.8,27.2
+PAN-01062,Lille,59 - Nord,Hauts-de-France,Boulangerie,77.62,48.1,20.1,31.2
+PAN-01063,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,78.7,46.7,26.2,34.5
+PAN-01064,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,63.14,22.4,19.1,43.5
+PAN-01065,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,36.39,37.6,29.9,28.8
+PAN-01066,Lille,59 - Nord,Hauts-de-France,Surgelés,52.96,44.7,21.5,49.4
+PAN-01067,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,51.22,44.2,27.5,34.8
+PAN-01068,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,53.38,34.7,33.4,34.0
+PAN-01069,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,85.01,47.6,36.8,25.3
+PAN-01070,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,64.1,39.2,28.6,37.3
+PAN-01071,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,80.17,39.6,20.9,32.5
+PAN-01072,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,82.69,48.2,27.5,31.6
+PAN-01073,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,53.64,38.0,36.9,43.7
+PAN-01074,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,74.27,42.6,18.3,27.6
+PAN-01075,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,65.2,27.8,28.4,49.3
+PAN-01076,Lille,59 - Nord,Hauts-de-France,Épicerie,58.31,42.8,26.5,26.1
+PAN-01077,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,90.45,24.3,30.7,44.6
+PAN-01078,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,74.26,36.9,17.1,35.9
+PAN-01079,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,86.93,42.7,24.1,26.8
+PAN-01080,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,35.28,48.3,27.0,27.9
+PAN-01081,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,38.42,43.0,17.3,46.0
+PAN-01082,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,85.5,23.6,19.7,41.5
+PAN-01083,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,49.97,39.3,19.9,46.2
+PAN-01084,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,82.16,23.2,14.4,25.2
+PAN-01085,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,33.12,48.5,12.3,39.3
+PAN-01086,Paris,75 - Paris,Île-de-France,Boissons,91.11,39.3,20.6,39.7
+PAN-01087,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,93.09,31.3,15.3,40.3
+PAN-01088,Lille,59 - Nord,Hauts-de-France,Surgelés,66.46,48.4,33.5,38.5
+PAN-01089,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,49.94,39.5,18.6,25.7
+PAN-01090,Lille,59 - Nord,Hauts-de-France,Produits Frais,30.61,24.0,23.3,54.4
+PAN-01091,Lille,59 - Nord,Hauts-de-France,Surgelés,66.7,47.3,36.7,46.4
+PAN-01092,Paris,75 - Paris,Île-de-France,Boissons,58.11,43.3,32.2,53.3
+PAN-01093,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,74.43,42.3,34.6,47.4
+PAN-01094,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,31.2,24.4,21.3,49.0
+PAN-01095,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,80.11,26.7,28.6,54.8
+PAN-01096,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,87.55,27.5,25.0,39.0
+PAN-01097,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,69.76,42.6,20.7,47.9
+PAN-01098,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,46.62,41.5,13.1,49.6
+PAN-01099,Paris,75 - Paris,Île-de-France,Produits Laitiers,73.36,26.6,25.1,49.2
+PAN-01100,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,79.81,33.4,23.8,25.6
+PAN-01101,Paris,75 - Paris,Île-de-France,Produits Laitiers,93.5,45.3,17.2,34.2
+PAN-01102,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,48.87,40.5,18.9,44.5
+PAN-01103,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,69.93,47.5,27.7,25.4
+PAN-01104,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,75.01,22.1,16.9,52.5
+PAN-01105,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,57.14,39.2,31.6,33.0
+PAN-01106,Paris,75 - Paris,Île-de-France,Boissons,75.12,34.3,20.8,52.4
+PAN-01107,Lille,59 - Nord,Hauts-de-France,Produits Frais,66.18,33.7,16.9,34.9
+PAN-01108,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,63.98,23.8,31.5,36.3
+PAN-01109,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,85.05,22.9,28.7,30.3
+PAN-01110,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,55.71,24.6,19.1,41.3
+PAN-01111,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,76.82,36.6,12.1,31.9
+PAN-01112,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,50.05,34.3,17.1,48.6
+PAN-01113,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,63.31,26.4,22.6,41.1
+PAN-01114,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,46.94,43.9,15.6,32.1
+PAN-01115,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,57.02,38.2,15.5,39.8
+PAN-01116,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,87.58,43.2,19.3,25.9
+PAN-01117,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,35.31,40.0,29.4,48.0
+PAN-01118,Lille,59 - Nord,Hauts-de-France,Produits Frais,91.65,46.2,32.7,35.0
+PAN-01119,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,92.36,41.7,30.4,28.2
+PAN-01120,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,29.46,25.2,28.9,40.2
+PAN-01121,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,73.54,39.2,16.1,52.9
+PAN-01122,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,67.77,25.2,15.3,32.0
+PAN-01123,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,90.07,25.9,37.7,47.3
+PAN-01124,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,93.1,22.8,17.1,34.6
+PAN-01125,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,76.84,41.2,20.4,37.8
+PAN-01126,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,82.59,41.0,12.9,44.4
+PAN-01127,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,38.78,28.0,20.5,28.5
+PAN-01128,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,32.62,41.9,18.8,54.6
+PAN-01129,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,54.8,38.1,19.0,41.9
+PAN-01130,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,36.71,47.5,28.3,26.4
+PAN-01131,Paris,75 - Paris,Île-de-France,Surgelés,38.54,31.9,31.5,47.4
+PAN-01132,Lille,59 - Nord,Hauts-de-France,Boissons,44.01,29.7,17.8,45.1
+PAN-01133,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,40.4,22.7,13.6,44.9
+PAN-01134,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,40.07,26.5,35.9,51.9
+PAN-01135,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,76.35,35.6,23.7,46.1
+PAN-01136,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,74.92,24.8,29.4,48.9
+PAN-01137,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,94.9,35.0,32.7,33.4
+PAN-01138,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,65.35,32.2,21.5,30.7
+PAN-01139,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,84.62,41.0,35.2,44.4
+PAN-01140,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,50.04,47.0,19.8,29.1
+PAN-01141,Lille,59 - Nord,Hauts-de-France,Surgelés,79.24,33.7,15.9,36.6
+PAN-01142,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,82.33,32.3,26.4,34.6
+PAN-01143,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,86.78,35.1,37.0,50.6
+PAN-01144,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,88.1,35.1,12.2,48.7
+PAN-01145,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,48.8,31.9,34.1,27.1
+PAN-01146,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,36.34,38.7,36.0,53.6
+PAN-01147,Lille,59 - Nord,Hauts-de-France,Épicerie,55.78,22.1,33.2,36.3
+PAN-01148,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,66.02,30.9,34.9,44.9
+PAN-01149,Lille,59 - Nord,Hauts-de-France,Surgelés,53.9,37.6,29.1,30.3
+PAN-01150,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,89.38,31.9,36.4,29.4
+PAN-01151,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,80.86,43.7,32.9,52.7
+PAN-01152,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,37.63,31.5,16.1,31.5
+PAN-01153,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,72.74,38.2,24.7,51.3
+PAN-01154,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,78.09,30.3,37.7,30.0
+PAN-01155,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,93.26,39.0,28.9,35.0
+PAN-01156,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,32.44,27.5,26.3,54.7
+PAN-01157,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,55.45,24.8,20.5,29.6
+PAN-01158,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,61.04,48.1,19.6,38.3
+PAN-01159,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,88.81,40.9,17.3,47.2
+PAN-01160,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,35.59,32.1,32.8,40.7
+PAN-01161,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,66.23,32.2,36.0,50.6
+PAN-01162,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,63.15,32.2,27.5,33.2
+PAN-01163,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,48.95,45.7,27.5,49.5
+PAN-01164,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,90.16,27.4,29.0,38.2
+PAN-01165,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,79.98,44.8,27.5,41.8
+PAN-01166,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,62.46,47.2,15.1,25.2
+PAN-01167,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,42.5,40.7,26.5,41.5
+PAN-01168,Lille,59 - Nord,Hauts-de-France,Boissons,77.69,24.4,38.0,32.4
+PAN-01169,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,91.6,34.3,13.7,47.8
+PAN-01170,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,67.13,39.0,28.1,49.0
+PAN-01171,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,94.8,31.2,15.1,40.9
+PAN-01172,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,77.39,39.8,25.7,27.5
+PAN-01173,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,34.59,29.8,13.2,49.8
+PAN-01174,Paris,75 - Paris,Île-de-France,Surgelés,38.9,48.2,27.0,26.4
+PAN-01175,Paris,75 - Paris,Île-de-France,Produits Laitiers,70.3,30.1,35.7,34.9
+PAN-01176,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,48.01,22.1,32.5,54.5
+PAN-01177,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,78.9,29.9,12.7,35.5
+PAN-01178,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,52.06,28.4,13.1,38.6
+PAN-01179,Lille,59 - Nord,Hauts-de-France,Produits Frais,30.25,23.3,35.5,52.7
+PAN-01180,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,56.18,24.4,28.0,43.4
+PAN-01181,Lille,59 - Nord,Hauts-de-France,Boulangerie,36.03,26.2,22.4,53.6
+PAN-01182,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,30.83,40.8,22.6,50.0
+PAN-01183,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,70.09,34.0,23.0,47.2
+PAN-01184,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,84.18,34.8,26.4,32.0
+PAN-01185,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,43.87,28.8,16.6,41.8
+PAN-01186,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,86.37,28.8,37.6,26.6
+PAN-01187,Lille,59 - Nord,Hauts-de-France,Surgelés,40.83,39.5,15.0,34.5
+PAN-01188,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,65.18,34.2,26.9,29.2
+PAN-01189,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,83.06,45.6,17.6,48.1
+PAN-01190,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,41.34,27.2,25.8,43.4
+PAN-01191,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,63.33,23.8,29.2,43.8
+PAN-01192,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,52.28,31.9,15.1,35.5
+PAN-01193,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,71.93,32.0,37.2,50.4
+PAN-01194,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,56.31,42.5,35.4,45.2
+PAN-01195,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,46.35,24.9,25.3,40.6
+PAN-01196,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,92.16,22.6,33.4,40.8
+PAN-01197,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,72.79,40.2,17.8,32.2
+PAN-01198,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,39.42,29.9,15.2,52.8
+PAN-01199,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,80.1,26.3,25.4,47.7
+PAN-01200,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,44.8,45.4,13.0,37.7
+PAN-01201,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,80.54,27.7,29.9,34.4
+PAN-01202,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,34.95,37.7,16.3,50.9
+PAN-01203,Paris,75 - Paris,Île-de-France,Surgelés,82.06,28.2,32.9,52.0
+PAN-01204,Lille,59 - Nord,Hauts-de-France,Boulangerie,89.37,45.6,37.9,41.8
+PAN-01205,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,93.75,45.7,22.4,25.4
+PAN-01206,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,62.38,23.3,30.3,28.8
+PAN-01207,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,44.4,29.5,37.8,51.2
+PAN-01208,Lille,59 - Nord,Hauts-de-France,Boulangerie,29.76,35.4,16.0,42.9
+PAN-01209,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,54.34,23.1,37.8,50.3
+PAN-01210,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,90.03,45.7,16.8,50.3
+PAN-01211,Lille,59 - Nord,Hauts-de-France,Produits Frais,85.13,35.2,28.5,35.2
+PAN-01212,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,74.77,34.3,24.3,36.1
+PAN-01213,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,37.07,32.0,30.5,52.2
+PAN-01214,Paris,75 - Paris,Île-de-France,Surgelés,87.3,43.0,26.9,37.6
+PAN-01215,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,59.51,28.1,31.2,54.8
+PAN-01216,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,62.59,29.6,23.7,49.6
+PAN-01217,Lille,59 - Nord,Hauts-de-France,Épicerie,71.09,34.9,21.8,31.6
+PAN-01218,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,76.72,30.5,18.0,26.9
+PAN-01219,Lille,59 - Nord,Hauts-de-France,Épicerie,31.38,30.3,14.8,49.3
+PAN-01220,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,54.59,45.0,19.6,28.0
+PAN-01221,Paris,75 - Paris,Île-de-France,Surgelés,46.9,39.9,30.0,52.8
+PAN-01222,Paris,75 - Paris,Île-de-France,Produits Frais,60.95,36.7,14.1,49.3
+PAN-01223,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,64.13,43.9,34.1,48.6
+PAN-01224,Lille,59 - Nord,Hauts-de-France,Boissons,80.87,46.7,23.4,31.8
+PAN-01225,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,33.08,35.4,33.0,54.7
+PAN-01226,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,89.25,46.3,35.4,46.9
+PAN-01227,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,43.18,46.2,31.2,40.4
+PAN-01228,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,40.02,40.0,23.6,53.5
+PAN-01229,Paris,75 - Paris,Île-de-France,Boissons,34.84,27.5,32.1,30.1
+PAN-01230,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,87.75,40.8,25.6,33.4
+PAN-01231,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,81.02,48.2,31.7,37.9
+PAN-01232,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,51.52,26.2,32.8,54.3
+PAN-01233,Paris,75 - Paris,Île-de-France,Boissons,39.12,33.3,28.7,45.7
+PAN-01234,Paris,75 - Paris,Île-de-France,Boissons,79.37,32.4,18.8,50.3
+PAN-01235,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,53.1,34.3,36.8,30.0
+PAN-01236,Lille,59 - Nord,Hauts-de-France,Produits Frais,74.84,22.9,24.7,50.6
+PAN-01237,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,89.53,42.0,28.2,48.5
+PAN-01238,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,52.59,46.8,18.9,39.7
+PAN-01239,Paris,75 - Paris,Île-de-France,Boissons,58.34,33.1,33.6,45.2
+PAN-01240,Paris,75 - Paris,Île-de-France,Surgelés,65.24,44.1,20.4,27.7
+PAN-01241,Lille,59 - Nord,Hauts-de-France,Surgelés,46.81,26.1,34.6,32.5
+PAN-01242,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,89.66,32.7,36.1,32.6
+PAN-01243,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,53.77,43.5,33.9,38.6
+PAN-01244,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,54.56,36.1,26.4,53.9
+PAN-01245,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,40.35,25.4,36.7,36.7
+PAN-01246,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,62.02,46.9,36.6,50.9
+PAN-01247,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,42.32,25.7,37.0,36.9
+PAN-01248,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,77.18,44.4,19.0,51.9
+PAN-01249,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,52.74,27.6,20.9,44.6
+PAN-01250,Paris,75 - Paris,Île-de-France,Boissons,30.95,44.8,29.1,27.3
+PAN-01251,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,55.38,38.0,33.8,45.8
+PAN-01252,Lille,59 - Nord,Hauts-de-France,Boulangerie,69.85,45.8,22.6,54.5
+PAN-01253,Paris,75 - Paris,Île-de-France,Produits Laitiers,51.33,27.0,14.6,38.9
+PAN-01254,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,65.09,32.5,16.2,30.9
+PAN-01255,Lille,59 - Nord,Hauts-de-France,Produits Frais,54.04,33.9,18.5,53.4
+PAN-01256,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,66.46,32.0,12.2,41.8
+PAN-01257,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,59.58,38.9,17.8,50.7
+PAN-01258,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,80.51,24.4,26.7,30.8
+PAN-01259,Paris,75 - Paris,Île-de-France,Produits Frais,81.64,41.4,19.9,25.1
+PAN-01260,Paris,75 - Paris,Île-de-France,Produits Laitiers,77.34,33.5,29.8,48.7
+PAN-01261,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,33.98,23.4,34.3,25.3
+PAN-01262,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,58.48,34.8,19.2,47.6
+PAN-01263,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,54.36,26.9,32.3,30.4
+PAN-01264,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,53.09,23.7,27.5,31.2
+PAN-01265,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,52.52,42.5,37.0,49.7
+PAN-01266,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,80.83,39.8,16.4,54.8
+PAN-01267,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,89.39,33.9,14.7,48.5
+PAN-01268,Lille,59 - Nord,Hauts-de-France,Boissons,58.7,37.4,22.3,48.0
+PAN-01269,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,60.28,28.2,35.1,43.8
+PAN-01270,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,76.93,27.2,22.3,31.3
+PAN-01271,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,85.95,45.4,34.7,43.8
+PAN-01272,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,88.34,25.2,36.3,38.0
+PAN-01273,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,65.26,31.9,37.3,31.6
+PAN-01274,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,87.8,47.7,20.4,48.2
+PAN-01275,Paris,75 - Paris,Île-de-France,Boulangerie,68.94,26.7,36.9,42.7
+PAN-01276,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,29.4,44.2,12.2,52.7
+PAN-01277,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,45.74,36.5,22.7,43.8
+PAN-01278,Paris,75 - Paris,Île-de-France,Produits Laitiers,78.96,38.4,23.5,52.4
+PAN-01279,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,40.72,38.3,20.8,34.8
+PAN-01280,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Surgelés,84.93,37.9,24.8,53.2
+PAN-01281,Lille,59 - Nord,Hauts-de-France,Boulangerie,29.62,44.6,27.9,28.2
+PAN-01282,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,48.45,36.3,27.1,50.9
+PAN-01283,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,94.69,33.6,18.4,50.1
+PAN-01284,Lille,59 - Nord,Hauts-de-France,Boulangerie,82.18,31.3,21.3,32.7
+PAN-01285,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,56.38,38.8,17.9,37.8
+PAN-01286,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,42.93,27.2,31.9,36.5
+PAN-01287,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,93.21,32.3,16.4,40.3
+PAN-01288,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,93.43,45.3,15.8,42.2
+PAN-01289,Lille,59 - Nord,Hauts-de-France,Produits Frais,54.64,24.9,28.2,27.8
+PAN-01290,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,46.77,41.7,37.3,44.7
+PAN-01291,Paris,75 - Paris,Île-de-France,Produits Laitiers,30.19,35.5,19.3,25.8
+PAN-01292,Paris,75 - Paris,Île-de-France,Boissons,47.28,24.1,25.0,26.9
+PAN-01293,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,45.63,26.2,20.6,26.5
+PAN-01294,Lille,59 - Nord,Hauts-de-France,Boulangerie,52.9,25.0,19.1,51.7
+PAN-01295,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,93.33,32.2,19.3,33.0
+PAN-01296,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,66.97,41.1,24.1,25.3
+PAN-01297,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,78.53,44.3,26.1,40.0
+PAN-01298,Lille,59 - Nord,Hauts-de-France,Surgelés,91.58,37.2,29.6,46.5
+PAN-01299,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,33.34,28.2,31.0,45.7
+PAN-01300,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,64.47,31.4,14.4,47.3
+PAN-01301,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,55.34,39.7,14.9,54.7
+PAN-01302,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,66.03,32.6,36.1,33.6
+PAN-01303,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,58.0,46.0,31.3,33.9
+PAN-01304,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,36.0,26.0,37.5,37.8
+PAN-01305,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,70.11,39.5,14.5,47.4
+PAN-01306,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,61.98,30.6,15.0,32.3
+PAN-01307,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,73.26,29.4,27.8,31.0
+PAN-01308,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,70.22,25.5,22.1,36.3
+PAN-01309,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,47.03,28.2,17.6,25.9
+PAN-01310,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,87.43,29.5,12.6,54.9
+PAN-01311,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,87.5,24.8,31.9,29.3
+PAN-01312,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,74.25,39.5,25.9,31.4
+PAN-01313,Paris,75 - Paris,Île-de-France,Boissons,41.65,25.3,20.8,40.6
+PAN-01314,Paris,75 - Paris,Île-de-France,Produits Frais,87.8,26.6,17.4,53.7
+PAN-01315,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boulangerie,80.51,38.7,25.0,31.0
+PAN-01316,Paris,75 - Paris,Île-de-France,Boissons,43.26,34.9,30.1,43.5
+PAN-01317,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,91.38,39.6,33.3,32.7
+PAN-01318,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,87.69,27.5,30.5,53.5
+PAN-01319,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,68.29,29.8,34.8,50.3
+PAN-01320,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,45.77,37.4,27.6,36.0
+PAN-01321,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,80.27,29.6,14.2,33.7
+PAN-01322,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,65.34,44.0,37.5,39.9
+PAN-01323,Paris,75 - Paris,Île-de-France,Boulangerie,59.45,31.2,14.7,44.3
+PAN-01324,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,88.21,31.6,27.9,27.8
+PAN-01325,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,37.77,43.8,26.2,49.4
+PAN-01326,Paris,75 - Paris,Île-de-France,Produits Frais,46.15,33.4,23.0,40.9
+PAN-01327,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,57.5,36.0,33.5,48.0
+PAN-01328,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,37.25,27.4,33.0,28.4
+PAN-01329,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,70.54,22.8,34.8,30.0
+PAN-01330,Toulouse,31 - Haute-Garonne,Occitanie,Produits Frais,37.26,31.4,17.0,51.8
+PAN-01331,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,46.44,43.9,36.2,43.6
+PAN-01332,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,32.74,38.1,20.5,46.6
+PAN-01333,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,77.11,47.9,19.8,25.2
+PAN-01334,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,77.74,37.3,26.0,36.9
+PAN-01335,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,64.24,27.9,26.1,35.8
+PAN-01336,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,57.82,45.9,30.4,44.3
+PAN-01337,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,32.51,23.8,14.9,28.9
+PAN-01338,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,81.35,22.2,37.8,27.4
+PAN-01339,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,88.34,22.6,31.7,47.1
+PAN-01340,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,38.46,45.4,29.6,28.9
+PAN-01341,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,69.13,46.0,34.0,54.4
+PAN-01342,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,34.48,42.9,26.0,40.6
+PAN-01343,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,57.23,32.8,27.9,41.4
+PAN-01344,Lille,59 - Nord,Hauts-de-France,Épicerie,39.94,35.0,36.2,38.9
+PAN-01345,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,60.19,37.2,29.9,51.7
+PAN-01346,Lille,59 - Nord,Hauts-de-France,Épicerie,80.55,45.3,14.5,49.8
+PAN-01347,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,68.15,34.7,25.4,51.3
+PAN-01348,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,85.25,38.6,31.5,39.1
+PAN-01349,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,68.05,25.7,12.9,47.0
+PAN-01350,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,61.16,33.7,22.4,41.5
+PAN-01351,Paris,75 - Paris,Île-de-France,Épicerie,68.39,44.3,13.4,27.0
+PAN-01352,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,63.31,27.7,22.1,33.3
+PAN-01353,Paris,75 - Paris,Île-de-France,Produits Frais,51.7,33.5,12.8,43.2
+PAN-01354,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,68.07,27.5,34.9,49.2
+PAN-01355,Lille,59 - Nord,Hauts-de-France,Produits Frais,34.74,31.7,26.7,42.6
+PAN-01356,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,74.5,29.5,25.4,40.0
+PAN-01357,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,46.05,34.1,23.1,34.1
+PAN-01358,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,76.98,32.4,17.3,29.3
+PAN-01359,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,93.09,27.4,23.2,38.1
+PAN-01360,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,76.06,22.8,37.8,52.2
+PAN-01361,Lille,59 - Nord,Hauts-de-France,Boulangerie,71.28,37.9,18.6,30.6
+PAN-01362,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,74.89,24.6,31.9,37.6
+PAN-01363,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,76.01,36.0,35.5,43.0
+PAN-01364,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,45.68,40.0,23.3,53.3
+PAN-01365,Rennes,35 - Ille-et-Vilaine,Bretagne,Surgelés,53.83,45.8,37.8,45.3
+PAN-01366,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,55.6,33.5,23.9,51.0
+PAN-01367,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,73.22,46.1,23.6,43.2
+PAN-01368,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,75.55,34.1,19.6,47.8
+PAN-01369,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,44.76,36.3,12.1,41.1
+PAN-01370,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,55.69,29.6,30.9,43.7
+PAN-01371,Paris,75 - Paris,Île-de-France,Boissons,60.0,36.4,29.0,41.5
+PAN-01372,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,90.98,22.2,33.9,27.4
+PAN-01373,Strasbourg,67 - Bas-Rhin,Grand Est,Surgelés,29.64,40.9,13.2,25.9
+PAN-01374,Paris,75 - Paris,Île-de-France,Boulangerie,80.48,23.1,25.4,50.9
+PAN-01375,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,41.35,33.7,12.2,45.6
+PAN-01376,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,54.01,39.4,33.1,25.5
+PAN-01377,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Laitiers,94.84,24.7,13.0,47.7
+PAN-01378,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,50.28,23.6,34.2,52.8
+PAN-01379,Paris,75 - Paris,Île-de-France,Surgelés,82.05,23.2,13.1,46.6
+PAN-01380,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,64.55,47.8,13.0,43.9
+PAN-01381,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,92.76,48.2,37.4,32.1
+PAN-01382,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,71.3,29.4,14.2,52.8
+PAN-01383,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,44.56,25.8,14.3,34.2
+PAN-01384,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,70.71,45.2,13.8,28.9
+PAN-01385,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,32.8,44.0,35.8,49.7
+PAN-01386,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,36.5,22.5,34.6,38.0
+PAN-01387,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,73.18,31.2,16.4,45.5
+PAN-01388,Paris,75 - Paris,Île-de-France,Épicerie,63.07,25.7,13.6,36.8
+PAN-01389,Lille,59 - Nord,Hauts-de-France,Surgelés,82.65,23.6,29.5,33.7
+PAN-01390,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boissons,72.46,24.3,25.5,35.4
+PAN-01391,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,52.33,22.1,27.5,28.3
+PAN-01392,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,47.09,23.3,20.1,51.0
+PAN-01393,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,53.35,33.8,31.3,28.2
+PAN-01394,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,53.13,25.9,13.6,35.6
+PAN-01395,Paris,75 - Paris,Île-de-France,Produits Laitiers,59.51,44.8,35.8,35.9
+PAN-01396,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,57.45,25.4,28.5,42.4
+PAN-01397,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Laitiers,85.8,28.9,31.5,49.8
+PAN-01398,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,49.14,41.7,14.7,33.4
+PAN-01399,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boissons,70.96,43.7,27.4,54.3
+PAN-01400,Lille,59 - Nord,Hauts-de-France,Boissons,61.14,26.4,14.2,32.6
+PAN-01401,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Boulangerie,71.61,38.9,25.3,37.5
+PAN-01402,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,60.21,41.6,26.7,49.3
+PAN-01403,Paris,75 - Paris,Île-de-France,Produits Laitiers,30.22,37.1,31.0,47.8
+PAN-01404,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,64.93,39.4,23.4,36.4
+PAN-01405,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,60.81,46.9,33.3,46.5
+PAN-01406,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,68.3,25.9,23.5,48.4
+PAN-01407,Paris,75 - Paris,Île-de-France,Surgelés,88.09,33.3,13.5,42.9
+PAN-01408,Paris,75 - Paris,Île-de-France,Produits Laitiers,82.93,31.8,24.3,30.3
+PAN-01409,Paris,75 - Paris,Île-de-France,Surgelés,84.13,29.6,27.1,50.2
+PAN-01410,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,54.57,41.5,23.9,32.5
+PAN-01411,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,45.21,29.7,28.8,48.3
+PAN-01412,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,54.81,24.6,20.2,41.1
+PAN-01413,Paris,75 - Paris,Île-de-France,Boissons,48.13,38.8,19.0,45.9
+PAN-01414,Paris,75 - Paris,Île-de-France,Produits Laitiers,89.17,24.0,20.2,27.8
+PAN-01415,Nantes,44 - Loire-Atlantique,Pays de la Loire,Surgelés,90.3,31.4,30.3,51.1
+PAN-01416,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,59.77,38.0,30.5,29.8
+PAN-01417,Paris,75 - Paris,Île-de-France,Produits Frais,51.19,22.5,23.3,45.8
+PAN-01418,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,42.31,35.5,33.1,41.4
+PAN-01419,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,81.32,29.6,23.5,44.9
+PAN-01420,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,60.65,23.9,20.7,40.3
+PAN-01421,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,48.29,40.9,25.9,51.3
+PAN-01422,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,53.32,31.8,32.6,36.3
+PAN-01423,Paris,75 - Paris,Île-de-France,Boulangerie,45.1,27.7,23.5,30.9
+PAN-01424,Toulouse,31 - Haute-Garonne,Occitanie,Boulangerie,85.63,46.3,35.5,45.2
+PAN-01425,Paris,75 - Paris,Île-de-France,Produits Laitiers,84.61,30.3,26.0,38.9
+PAN-01426,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,56.71,40.1,16.5,28.1
+PAN-01427,Toulouse,31 - Haute-Garonne,Occitanie,Boissons,35.81,27.7,34.2,44.9
+PAN-01428,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,81.61,31.5,16.7,39.0
+PAN-01429,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,89.91,37.5,25.5,53.1
+PAN-01430,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,67.8,26.6,19.9,34.0
+PAN-01431,Lille,59 - Nord,Hauts-de-France,Épicerie,50.6,29.8,29.1,32.6
+PAN-01432,Lille,59 - Nord,Hauts-de-France,Produits Frais,88.48,33.2,37.9,37.5
+PAN-01433,Lille,59 - Nord,Hauts-de-France,Surgelés,92.02,37.8,25.5,50.4
+PAN-01434,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Frais,39.01,23.1,18.9,35.9
+PAN-01435,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boulangerie,67.04,27.6,16.8,44.5
+PAN-01436,Lille,59 - Nord,Hauts-de-France,Boissons,63.57,42.3,30.5,45.7
+PAN-01437,Paris,75 - Paris,Île-de-France,Surgelés,69.74,36.9,24.1,43.4
+PAN-01438,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,60.39,41.2,26.3,48.3
+PAN-01439,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Boissons,61.74,38.9,33.6,32.1
+PAN-01440,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,71.96,23.3,24.0,32.6
+PAN-01441,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,39.43,38.2,24.0,31.4
+PAN-01442,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,48.4,25.0,14.2,25.5
+PAN-01443,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,79.12,47.3,29.9,50.1
+PAN-01444,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Surgelés,81.45,40.1,25.2,46.0
+PAN-01445,Paris,75 - Paris,Île-de-France,Boissons,57.05,31.1,33.5,34.9
+PAN-01446,Lille,59 - Nord,Hauts-de-France,Produits Frais,82.78,44.0,16.4,47.3
+PAN-01447,Nantes,44 - Loire-Atlantique,Pays de la Loire,Boulangerie,82.75,33.8,22.9,50.9
+PAN-01448,Paris,75 - Paris,Île-de-France,Produits Laitiers,72.94,40.6,26.4,38.1
+PAN-01449,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Produits Laitiers,28.65,34.3,24.9,45.8
+PAN-01450,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Boissons,91.95,36.8,30.2,33.4
+PAN-01451,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,29.08,42.8,30.3,50.1
+PAN-01452,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Laitiers,68.21,29.8,24.5,45.3
+PAN-01453,Toulouse,31 - Haute-Garonne,Occitanie,Produits Laitiers,52.48,47.1,33.3,29.5
+PAN-01454,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,39.13,42.6,33.8,36.9
+PAN-01455,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,81.56,35.6,14.2,32.1
+PAN-01456,Strasbourg,67 - Bas-Rhin,Grand Est,Épicerie,72.56,24.7,36.2,47.6
+PAN-01457,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,44.44,38.5,15.2,50.5
+PAN-01458,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,52.93,47.9,22.6,27.6
+PAN-01459,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,33.82,32.7,23.1,50.3
+PAN-01460,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,89.56,47.5,29.5,48.7
+PAN-01461,Lille,59 - Nord,Hauts-de-France,Boissons,71.43,36.9,33.7,48.3
+PAN-01462,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Produits Frais,93.74,42.4,38.0,54.9
+PAN-01463,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Laitiers,46.01,33.0,33.9,33.6
+PAN-01464,Lille,59 - Nord,Hauts-de-France,Boulangerie,64.29,24.7,30.5,40.2
+PAN-01465,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,87.03,32.6,25.4,43.4
+PAN-01466,Strasbourg,67 - Bas-Rhin,Grand Est,Produits Frais,72.26,47.7,21.3,54.6
+PAN-01467,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Produits Frais,63.93,27.3,13.5,32.4
+PAN-01468,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,38.33,38.2,35.6,50.6
+PAN-01469,Rennes,35 - Ille-et-Vilaine,Bretagne,Épicerie,68.39,26.5,34.7,51.0
+PAN-01470,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,35.17,41.4,15.9,29.0
+PAN-01471,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,77.74,45.3,22.6,29.4
+PAN-01472,Lille,59 - Nord,Hauts-de-France,Produits Frais,61.49,37.1,16.8,43.5
+PAN-01473,Paris,75 - Paris,Île-de-France,Boulangerie,56.42,48.3,25.3,31.1
+PAN-01474,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Surgelés,35.18,26.2,22.2,35.5
+PAN-01475,Lille,59 - Nord,Hauts-de-France,Boulangerie,61.7,45.6,31.1,30.2
+PAN-01476,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,93.94,28.0,37.9,29.0
+PAN-01477,Nantes,44 - Loire-Atlantique,Pays de la Loire,Épicerie,37.15,36.5,30.0,47.5
+PAN-01478,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,43.05,47.0,14.8,35.2
+PAN-01479,Paris,75 - Paris,Île-de-France,Boulangerie,37.07,39.2,30.7,39.6
+PAN-01480,Marseille,13 - Bouches-du-Rhône,Provence-Alpes-Côte d'Azur,Épicerie,69.82,24.0,36.2,28.1
+PAN-01481,Lille,59 - Nord,Hauts-de-France,Boissons,32.69,34.1,30.2,44.2
+PAN-01482,Bordeaux,33 - Gironde,Nouvelle-Aquitaine,Épicerie,55.64,25.8,16.5,27.5
+PAN-01483,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,55.37,29.2,24.3,39.1
+PAN-01484,Strasbourg,67 - Bas-Rhin,Grand Est,Boulangerie,55.99,28.4,22.9,53.5
+PAN-01485,Strasbourg,67 - Bas-Rhin,Grand Est,Boissons,69.7,23.7,19.8,27.6
+PAN-01486,Lille,59 - Nord,Hauts-de-France,Produits Frais,60.63,22.8,16.8,40.2
+PAN-01487,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Laitiers,73.48,41.8,14.6,37.1
+PAN-01488,Rennes,35 - Ille-et-Vilaine,Bretagne,Boissons,72.34,47.6,33.6,51.4
+PAN-01489,Paris,75 - Paris,Île-de-France,Épicerie,91.2,34.1,30.9,54.4
+PAN-01490,Rennes,35 - Ille-et-Vilaine,Bretagne,Boulangerie,60.12,43.9,33.2,41.5
+PAN-01491,Rennes,35 - Ille-et-Vilaine,Bretagne,Produits Frais,89.52,33.3,37.1,41.3
+PAN-01492,Nantes,44 - Loire-Atlantique,Pays de la Loire,Produits Frais,83.49,31.0,15.2,37.9
+PAN-01493,Toulouse,31 - Haute-Garonne,Occitanie,Surgelés,74.09,24.2,15.0,50.8
+PAN-01494,Toulouse,31 - Haute-Garonne,Occitanie,Épicerie,41.2,47.1,34.5,46.9
+PAN-01495,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,79.31,25.2,34.9,33.2
+PAN-01496,Lille,59 - Nord,Hauts-de-France,Produits Laitiers,59.22,37.1,20.0,32.7
+PAN-01497,Lille,59 - Nord,Hauts-de-France,Boulangerie,45.32,47.8,16.6,49.8
+PAN-01498,Lille,59 - Nord,Hauts-de-France,Épicerie,62.5,39.6,36.2,53.0
+PAN-01499,Paris,75 - Paris,Île-de-France,Produits Laitiers,61.61,24.1,12.3,37.9
+PAN-01500,Lyon,69 - Rhône,Auvergne-Rhône-Alpes,Épicerie,91.28,45.3,27.6,52.7
