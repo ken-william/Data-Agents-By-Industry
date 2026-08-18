@@ -24,7 +24,7 @@ def get_access_token():
         sys.exit(1)
 
 def load_payload():
-    payload_path = os.path.join(os.path.dirname(__file__), "sully_payload.json")
+    payload_path = os.path.join(os.path.dirname(__file__), "agent_payload.json")
     with open(payload_path, "r", encoding="utf-8") as f:
         content = f.read()
     content = content.replace("${PROJECT_ID}", PROJECT_ID)

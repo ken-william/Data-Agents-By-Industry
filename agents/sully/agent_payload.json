@@ -1,12 +1,17 @@
 {
   "displayName": "Sully - Aide à l'emploi",
-  "description": "Expert emploi, marché du travail et politiques publiques d'insertion : référentiel des entreprises et déclarations URSSAF (SIRET, NAF, masse salariale, obligation OETH handicap), offres d'emploi avec critères et descriptions détaillées, profils et statuts de recherche des demandeurs d'emploi (Catégories A/B/C, CVs 1-page ATS gs://), suivi des candidatures et postulations, et calendrier des aides/dispositifs avec dates d'échéance/expiration.",
+  "description": "Copilote stratégique France Travail, recrutement et politiques RH d'insertion : analyse les besoins en main-d'œuvre (BMO 2025) par bassin d'emploi et métier, le référentiel des 4 500 établissements employeurs URSSAF/SIRENE (effectifs, masse salariale, obligations OETH handicap), le matching ATS candidats-offres d'emploi, les parcours de postulation et le calendrier des aides/dispositifs de formation à l'embauche.",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 CONFIDENTIALITÉ DES DEMANDEURS ET DÉCLARATIONS URSSAF :\n- Anonymisation des candidats : Utiliser 'Candidat #4029' ou identifiants anonymes en rapport public.\n- Confidentialité des données de masse salariale entreprise.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Analyse multimodale des fichiers CV PDF 1-page maturés ATS hébergés sur Google Cloud Storage (Object Tables GCS).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 CONFIDENTIALITÉ DES DEMANDEURS ET DÉCLARATIONS URSSAF :\n- Anonymisation des candidats : Utiliser 'Candidat #4029' ou identifiants anonymes en rapport public.\n- Confidentialité des données de masse salariale entreprise.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Analyse multimodale des fichiers CV PDF 1-page maturés ATS hébergés sur Google Cloud Storage (Object Tables GCS).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paraphrases.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "public_sector_employment_ds",
+              "tableId": "bmo_recrutement_2025"
+            },
             {
               "projectId": "${PROJECT_ID}",
               "datasetId": "public_sector_employment_ds",
@@ -31,19 +36,14 @@
               "projectId": "${PROJECT_ID}",
               "datasetId": "public_sector_employment_ds",
               "tableId": "france_travail_formations_aides"
-            },
-            {
-              "projectId": "${PROJECT_ID}",
-              "datasetId": "public_sector_employment_ds",
-              "tableId": "bmo_recrutement_2024"
             }
           ]
         }
       },
       "exampleQueries": [
         {
-          "naturalLanguageQuestion": "Quelles sont les aides en cours attribuées aux demandeurs d'emploi qui arrivent à échéance (date d'expiration) dans les 60 prochains jours ?",
-          "sqlQuery": "SELECT a.aide_id, a.demandeur_id, d.nom_prenom, a.nom_aide_dispositif, a.montant_aide_accordee_eur, a.date_debut_aide, a.date_expiration_aide, a.statut_aide, a.organisme_financeur FROM `${PROJECT_ID}.public_sector_employment_ds.france_travail_formations_aides` a JOIN `${PROJECT_ID}.public_sector_employment_ds.france_travail_demandeurs` d ON a.demandeur_id = d.demandeur_id WHERE a.statut_aide = 'En cours (Active)' AND a.date_expiration_aide <= DATE_ADD(CURRENT_DATE(), INTERVAL 60 DAY) ORDER BY a.date_expiration_aide ASC"
+          "naturalLanguageQuestion": "Quels sont les bassins d'emploi et métiers qui affichent le plus fort volume de projets de recrutement et de difficultés de recrutement selon le BMO 2025 de France Travail ?",
+          "sqlQuery": "SELECT nom_bassin_emploi, nom_metier_bmo, famille_metier_libelle, projets_recrutement_nombre, recrutements_difficiles_nombre, part_recrutements_difficiles_pct FROM `${PROJECT_ID}.public_sector_employment_ds.bmo_recrutement_2025` WHERE projets_recrutement_nombre > 50 ORDER BY recrutements_difficiles_nombre DESC LIMIT 10"
         },
         {
           "naturalLanguageQuestion": "Où en sont les candidatures de nos demandeurs d'emploi en recherche active et quels sont leurs statuts auprès des entreprises recruteuses (SIRET) ?",
@@ -56,16 +56,16 @@
       ],
       "glossaryTerms": [
         {
+          "displayName": "Besoins en Main d'Œuvre BMO 2025",
+          "description": "Projets de recrutement et taux de tension par bassin d'emploi et famille professionnelle."
+        },
+        {
           "displayName": "Déclarations URSSAF & SIRET Entreprises",
           "description": "Indexation de la masse salariale brute, effectifs ETP et obligation d'emploi handicap OETH."
         },
         {
-          "displayName": "Candidatures & Statut de Recherche Demandeurs",
-          "description": "Suivi personnalisé de l'avancement des postulations et du statut d'activité des candidats."
-        },
-        {
-          "displayName": "Dispositifs & Dates d'Échéances des Aides",
-          "description": "Calendrier de validité et dates d'expiration des aides à l'embauche et à la formation."
+          "displayName": "Candidatures & Statut ATS",
+          "description": "Suivi personnalisé du matching algorithmique et du tunnel de recrutement des candidats."
         }
       ]
     }
