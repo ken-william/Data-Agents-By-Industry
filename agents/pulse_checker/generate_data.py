@@ -2,13 +2,13 @@
 """
 Relational Data Generation and Official FINESS, RPPS & Open BIO Processing for PulseChecker (healthcare_medical_ds).
 Fetches authentic FINESS French Hospitals and Ameli Open Bio dataset from data.gouv.fr / ameli.fr API
-and builds 7 refined relational tables:
+and builds 7 refined relational tables with 100% realistic hospital filtering:
 1. finess_etablissements_sante (Official FINESS French Hospitals, CHUs & Clinics)
 2. demographie_medecins_rpps (Medical demographics, medical deserts & clinic investment opportunities)
 3. assurance_maladie_open_bio_depenses (Official Ameli Open Bio medical biology expenses)
 4. hopitaux_flux_admissions_urgences (Emergency Room admissions, wait times & Plan Blanc)
 5. hopitaux_blocs_operatoires_chirurgie (Surgical operating rooms & ICU capacity)
-6. pharmacie_stock_medicaments_tension (Hospital pharmacy critical drug shortages)
+6. pharmacie_stock_medicaments_tension (Hospital pharmacy critical drug shortages - PUI)
 7. personnel_medical_garde_planning (Medical staff on-call duty & absenteeism)
 """
 
@@ -189,6 +189,16 @@ def main():
     df_hospitals = fetch_and_clean_finess_hospitals()
     print(f"  ✓ Processed {len(df_hospitals)} clean FINESS hospital records.")
 
+    # Filter strictly hospital establishments for clinical operations (Urgences, Blocs, Pharmacie PUI, Planning Gardes)
+    df_pure_hospitals = df_hospitals[
+        df_hospitals['categorie_etablissement'].str.contains('Hospitalier|Hôpital|Clinique|CHU|CHR', case=False, na=False) |
+        df_hospitals['nom_etablissement'].str.contains('CH |CHU|Hôpital|Clinique', case=False, na=False)
+    ]
+    if len(df_pure_hospitals) == 0:
+        df_pure_hospitals = df_hospitals
+    hosp_records = df_pure_hospitals.to_dict("records")
+    print(f"  ✓ Filtered {len(df_pure_hospitals)} genuine hospital establishments for operational assignments.")
+
     # 2. demographie_medecins_rpps
     rows_rpps = []
     for dept_code, dept_name, reg_name, pop, gen, spec, dens, tension, opp, ebitda in DEPARTEMENTS_RPPS:
@@ -212,8 +222,6 @@ def main():
 
     # 4. hopitaux_flux_admissions_urgences
     rows_urgences = []
-    hosp_records = df_hospitals.to_dict("records")
-
     for idx in range(1, 4001):
         h = random.choice(hosp_records)
         admissions = random.randint(12, 85)
