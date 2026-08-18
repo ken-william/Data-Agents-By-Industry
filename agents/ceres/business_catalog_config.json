@@ -8,29 +8,139 @@
     "description": "Glossaire d'empreinte carbone ADEME, stress hydrique ETP et conversion bio AB pour Ceres.",
     "categories": [
       {
-        "categoryId": "core-ontologies",
-        "displayName": "Ontologies & Termes Métier Clés",
-        "description": "Glossaire officiel et ontologie métier de l'agent",
+        "categoryId": "business-ontologies-kpis",
+        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
+        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
         "terms": [
           {
-            "termId": "analyse-du-cycle-de-vie-acv-ademe-agribalyse-3.1",
+            "termId": "acv-ademe-agribalyse",
             "displayName": "Analyse du Cycle de Vie (ACV) ADEME Agribalyse 3.1",
-            "definition": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles."
+            "definition": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles.",
+            "mapped_bigquery_table": "ademe_agribalyse_31_synthese",
+            "mapped_bigquery_column": "score_unique_ef_impact",
+            "related_terms": [
+              "Base ADEME Agribalyse 3.1",
+              "Score Unique EF Environmental Footprint",
+              "Empreinte CO2e kg/kg produit",
+              "Eutrophisation & Acidification"
+            ]
           },
           {
-            "termId": "label-bas-carbone-&-crédits-carbone",
+            "termId": "label-bas-carbone-credits",
             "displayName": "Label Bas-Carbone & Crédits Carbone",
-            "definition": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles."
+            "definition": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles.",
+            "mapped_bigquery_table": "bilans_carbone_subventions_hve",
+            "mapped_bigquery_column": "credits_carbone_generes_tco2e",
+            "related_terms": [
+              "Certification Label Bas-Carbone",
+              "Tonnes CO2e Séquestrées",
+              "Valorisation Crédits Carbone €",
+              "Non-Labourage & Couverts Végétaux"
+            ]
           },
           {
-            "termId": "flux-coopératifs-&-rendements-récoltes",
+            "termId": "flux-cooperatifs-rendements",
             "displayName": "Flux Coopératifs & Rendements Récoltes",
-            "definition": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives."
+            "definition": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives.",
+            "mapped_bigquery_table": "cooperatives_agricoles",
+            "mapped_bigquery_column": "chiffre_affaires_annuel_eur",
+            "related_terms": [
+              "Chiffre d'Affaires Coopérative",
+              "Volume Récolte Tonnes",
+              "Rendement Quintaux par Hectare",
+              "Collecte Céréalière Viticole"
+            ]
           },
           {
-            "termId": "rapports-de-performance-esg-investisseurs",
+            "termId": "rapports-performance-esg-investisseurs",
             "displayName": "Rapports de Performance ESG Investisseurs",
-            "definition": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact."
+            "definition": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact.",
+            "mapped_bigquery_table": "rapports_performance_esg_chaine",
+            "mapped_bigquery_column": "score_esg_global_pct",
+            "related_terms": [
+              "Score ESG Global %",
+              "Reporting Durabilité CSRD",
+              "Taxonomie Européenne Verte",
+              "Performance Extra-Financière"
+            ]
+          },
+          {
+            "termId": "previsions-anomalies-meteo-ete",
+            "displayName": "Prévisions d'Anomalies Météo d'Été",
+            "definition": "Détection précoce des écarts de température et déficits de précipitation estivaux.",
+            "mapped_bigquery_table": "previsions_anomalies_meteo_ete",
+            "mapped_bigquery_column": "anomalie_temperature_celsius",
+            "related_terms": [
+              "Anomalies Température °C",
+              "Déficit Pluviométrique mm",
+              "Indice Sécheresse des Sols",
+              "Alerte Stress Hydrique Cultures"
+            ]
+          },
+          {
+            "termId": "registre-parcellaire-graphique-rpg",
+            "displayName": "Cartographie des Parcelles & Registre Parcellaire (RPG)",
+            "definition": "Délimitation géographique et historique d'assolement des parcelles exploitées.",
+            "mapped_bigquery_table": "parcelles_agricoles",
+            "mapped_bigquery_column": "surface_hectares",
+            "related_terms": [
+              "Registre Parcellaire Graphique RPG",
+              "Surface Agricole Utile SAU",
+              "Cultures Principales & Assolement",
+              "Géolocalisation Parcelles"
+            ]
+          },
+          {
+            "termId": "tele-detection-iot-sol",
+            "displayName": "Télédétection IoT Humidité des Sols",
+            "definition": "Mesure en temps réel de l'humidité et tension matricielle des sols par sondes IoT.",
+            "mapped_bigquery_table": "capteurs_iot_sols_meteo",
+            "mapped_bigquery_column": "humidite_sol_pct",
+            "related_terms": [
+              "Sondes IoT Humidité Sol",
+              "Capteurs Tension-Métriques",
+              "Pilotage Irrigation de Précision",
+              "Économie d'Eau m³"
+            ]
+          },
+          {
+            "termId": "haute-valeur-environnementale-hve",
+            "displayName": "Certification Haute Valeur Environnementale (HVE)",
+            "definition": "Niveau 3 de certification environnementale des exploitations agricoles.",
+            "mapped_bigquery_table": "bilans_carbone_subventions_hve",
+            "mapped_bigquery_column": "niveau_certification_hve",
+            "related_terms": [
+              "Certification HVE Niveau 3",
+              "Biodiversité & Stratégie Phytosanitaire",
+              "Gestion de la Fertilisation",
+              "Primes Qualité Filières"
+            ]
+          },
+          {
+            "termId": "bilan-gaz-effet-serre-ges",
+            "displayName": "Bilan Gaz à Effet de Serre (GES) Exploitations",
+            "definition": "Comptabilité carbone brute des émissions de N2O, CH4 et CO2 de l'exploitation.",
+            "mapped_bigquery_table": "bilans_carbone_subventions_hve",
+            "mapped_bigquery_column": "emissions_ges_totales_tco2e",
+            "related_terms": [
+              "Émissions N2O Élevage/Engrais",
+              "Méthanisation Effluents",
+              "Bilan Carbone Exploitation",
+              "Plan de Décarbonation Agricole"
+            ]
+          },
+          {
+            "termId": "circuits-courts-vente-directe",
+            "displayName": "Valorisation Filières & Circuits Courts",
+            "definition": "Part des volumes agricoles distribués en vente directe et valorisation locale.",
+            "mapped_bigquery_table": "exploitations_agricoles",
+            "mapped_bigquery_column": "part_vente_directe_pct",
+            "related_terms": [
+              "Circuits Courts Vente Directe",
+              "Valeur Ajoutée Exploitation",
+              "Agriculture Biologique AB",
+              "Traçabilité du Champ à l'Assiette"
+            ]
           }
         ]
       }

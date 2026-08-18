@@ -23,6 +23,78 @@
               "Puissance kW Connecteurs",
               "Implantation Géographique IRVE",
               "Taux d'Utilisation Bornes"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Bornes de Recharge IRVE Enedis** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Cartographie des 10 000 points de charge pour véhicules électriques, puissance kW et connecteurs.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_bornes_irve` (colonne `nb_points_recharge`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_bornes_irve",
+                "table_name": "enedis_bornes_irve",
+                "column_name": "nb_points_recharge",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_bornes_irve.nb_points_recharge"
+              }
             ]
           },
           {
@@ -36,6 +108,78 @@
               "Puissance Souscrite kVA",
               "Risque Surtension Transformateur",
               "Equilibrage Phasique BT"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Télémesure 30min Transformateurs HTA/BT** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Courbes de charge, détection des risques de surtension et saturation réseau.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_consommation_inf36` (colonne `puissance_souscrite_kva`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_consommation_inf36",
+                "table_name": "enedis_consommation_inf36",
+                "column_name": "puissance_souscrite_kva",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_consommation_inf36.puissance_souscrite_kva"
+              }
             ]
           },
           {
@@ -49,6 +193,78 @@
               "Parcs Éoliens Régionaux",
               "Capacité Raccordement EnR",
               "Mix Énergétique Territoire"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Production d'Énergie Renouvelable (EnR)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Injection solaire photovoltaïque et éolienne par territoire.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_production_renouvelable` (colonne `puissance_raccordee_kw`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_production_renouvelable",
+                "table_name": "enedis_production_renouvelable",
+                "column_name": "puissance_raccordee_kw",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_production_renouvelable.puissance_raccordee_kw"
+              }
             ]
           },
           {
@@ -62,6 +278,78 @@
               "Pics de Tension Hivernaux",
               "Primes de Flexibilité B2B",
               "Régulation Réseau Enedis"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Flexibilité d'Effacement Industriel B2B** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Gisements de réduction de consommation des usines lors des pics de tension hivernaux.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_clients_industriels` (colonne `gisement_effacement_kw`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_clients_industriels",
+                "table_name": "enedis_clients_industriels",
+                "column_name": "gisement_effacement_kw",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_clients_industriels.gisement_effacement_kw"
+              }
             ]
           },
           {
@@ -75,6 +363,78 @@
               "Basse Tension BT",
               "Poste de Transformation",
               "Maille Régionale Distribution"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Réseau de Distribution HTA & BT** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Maillage régional des lignes moyenne tension HTA et basse tension BT.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_consommation_inf36` (colonne `code_insee_commune`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_consommation_inf36",
+                "table_name": "enedis_consommation_inf36",
+                "column_name": "code_insee_commune",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_consommation_inf36.code_insee_commune"
+              }
             ]
           },
           {
@@ -88,6 +448,78 @@
               "Consommation MWh par Commune",
               "Usages Chauffage Électrique",
               "Efficacité Énergétique Bâtiments"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Consommation Résidentielle & Tertiaire <36kVA** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Télé-relève des compteurs communicants Linky et consommation MWh par commune.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_consommation_inf36` (colonne `consommation_annuelle_mwh`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_consommation_inf36",
+                "table_name": "enedis_consommation_inf36",
+                "column_name": "consommation_annuelle_mwh",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_consommation_inf36.consommation_annuelle_mwh"
+              }
             ]
           },
           {
@@ -101,6 +533,78 @@
               "Bornes AC 22kW",
               "Disponibilité Connecteurs Combo CCS",
               "Plan de Déploiement IRVE"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Puissance de Charge & Connecteurs Rapides** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Répartition des puissances de charge AC/DC (22kW à 150kW) et standards de prise.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_bornes_irve` (colonne `puissance_nominale_kw`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_bornes_irve",
+                "table_name": "enedis_bornes_irve",
+                "column_name": "puissance_nominale_kw",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_bornes_irve.puissance_nominale_kw"
+              }
             ]
           },
           {
@@ -114,6 +618,78 @@
               "Heures Creuses Nuit",
               "Lissage de la Courbe de Charge",
               "Optimisation Tarifaire"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Indicateurs de Périodes de Pointe & Heures Creuses** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Profils de consommation en heures creuses et lissage des pointes de demande.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_consommation_inf36` (colonne `profil_consommation`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_consommation_inf36",
+                "table_name": "enedis_consommation_inf36",
+                "column_name": "profil_consommation",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_consommation_inf36.profil_consommation"
+              }
             ]
           },
           {
@@ -127,6 +703,78 @@
               "Tarif Jaune Vert Enedis",
               "Stabilité Réseau Usines",
               "Plan de Secours Industriel"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Infrastructures d'Accès Réseau Industriel** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Stabilité des raccordements haute puissance pour les usines et clients B2B.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_clients_industriels` (colonne `secteur_activite_code_naf`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_clients_industriels",
+                "table_name": "enedis_clients_industriels",
+                "column_name": "secteur_activite_code_naf",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_clients_industriels.secteur_activite_code_naf"
+              }
             ]
           },
           {
@@ -140,6 +788,78 @@
               "Décarbonation Réseau Électrique",
               "Certificats d'Origine Verte",
               "Objectif Réductions Émissions"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Bilan Émissions CO2 Avoided Mix EnR** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Réduction de l'empreinte carbone et tonnes CO2 évitées grâce à l'injection EnR.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `enedis_production_renouvelable` (colonne `co2_evite_tonnes`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "energy_utilities",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/energy_utilities_ds/tables/enedis_production_renouvelable",
+                "table_name": "enedis_production_renouvelable",
+                "column_name": "co2_evite_tonnes",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.energy_utilities_ds.enedis_production_renouvelable.co2_evite_tonnes"
+              }
             ]
           }
         ]

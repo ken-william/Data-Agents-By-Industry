@@ -23,6 +23,78 @@
               "Taux de Difficulté Recrutement",
               "Saisonnalité de l'Emploi",
               "Bassin d'Emploi Territorial"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Enquête BMO 2025 (Besoins en Main-d'Œuvre)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Prédictions officielles France Travail des besoins en recrutement par bassin d'emploi et secteur.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bmo_recrutement_2025` (colonne `nombre_projets_recrutement`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/bmo_recrutement_2025",
+                "table_name": "bmo_recrutement_2025",
+                "column_name": "nombre_projets_recrutement",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.bmo_recrutement_2025.nombre_projets_recrutement"
+              }
             ]
           },
           {
@@ -36,6 +108,78 @@
               "Appellations Métiers",
               "Code OGR Qualifications",
               "Grand Domaine Professionnel"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Arborescence ROME 4.0** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Taxonomie officielle des 12 243 métiers et appellations de l'emploi en France.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `rome_arborescence_2024` (colonne `code_rome`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/rome_arborescence_2024",
+                "table_name": "rome_arborescence_2024",
+                "column_name": "code_rome",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.rome_arborescence_2024.code_rome"
+              }
             ]
           },
           {
@@ -49,6 +193,78 @@
               "Code NAF Activité",
               "Effectifs Salariés URSSAF",
               "Obligation OETH Handicap 6%"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Déclarations URSSAF & SIRENE** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Répertoire des 4 500 établissements employeurs, masse salariale, effectifs, et obligation OETH handicap 6%.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `entreprises_urssaf_declarations` (colonne `masse_salariale_annuelle_eur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/entreprises_urssaf_declarations",
+                "table_name": "entreprises_urssaf_declarations",
+                "column_name": "masse_salariale_annuelle_eur",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.entreprises_urssaf_declarations.masse_salariale_annuelle_eur"
+              }
             ]
           },
           {
@@ -62,6 +278,78 @@
               "Stockage Cloud Storage GCS",
               "URI Fichier PDF",
               "Contenu Texte CV"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **CVs PDF & Rapprochement Candidats (GCS)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : 300 CVs PDF 1-page modèles Kengni stockés sur GCS et liés aux profils candidats.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `france_travail_demandeurs` (colonne `cv_gcs_uri`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/france_travail_demandeurs",
+                "table_name": "france_travail_demandeurs",
+                "column_name": "cv_gcs_uri",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.france_travail_demandeurs.cv_gcs_uri"
+              }
             ]
           },
           {
@@ -75,6 +363,78 @@
               "Score Matching Compétences",
               "Entretien RH Planifié",
               "Accès à l'Emploi Démarrage"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Suivi des Candidatures ATS & Matching %** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Tunnel de recrutement, score de matching %, dispositifs et subventions de formation à l'embauche.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `candidatures_postulations_suivi` (colonne `ats_matching_score_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/candidatures_postulations_suivi",
+                "table_name": "candidatures_postulations_suivi",
+                "column_name": "ats_matching_score_pct",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.candidatures_postulations_suivi.ats_matching_score_pct"
+              }
             ]
           },
           {
@@ -88,6 +448,78 @@
               "Action de Formation Préalable AFPR",
               "Subvention Embauche",
               "Dispositif CPF"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Catalogue des Formations & Subventions** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Aides individuelles à la formation AIF et actions de formation préalable à l'embauche AFPR.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `france_travail_formations_aides` (colonne `montant_aide_financiere_eur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/france_travail_formations_aides",
+                "table_name": "france_travail_formations_aides",
+                "column_name": "montant_aide_financiere_eur",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.france_travail_formations_aides.montant_aide_financiere_eur"
+              }
             ]
           },
           {
@@ -101,6 +533,78 @@
               "Ancienneté Chômage Mois",
               "Recherche Active d'Emploi",
               "Profil Demandeur Domicile"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Statut & Catégorie Demandeur d'Emploi** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Catégorisation A, B, C des demandeurs d'emploi et suivi de l'ancienneté de chômage.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `france_travail_demandeurs` (colonne `categorie_inscription`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/france_travail_demandeurs",
+                "table_name": "france_travail_demandeurs",
+                "column_name": "categorie_inscription",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.france_travail_demandeurs.categorie_inscription"
+              }
             ]
           },
           {
@@ -114,6 +618,78 @@
               "Pénalité AGEFIPH FIPHFP",
               "Travailleurs Handicapés RQTH",
               "Subvention Aménagement Poste"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Dispositif Obligation Emploi Travailleurs Handicapés (OETH)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Taux d'emploi direct des travailleurs handicapés et calcul de la contribution AGEFIPH.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `entreprises_urssaf_declarations` (colonne `taux_emploi_handicap_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/entreprises_urssaf_declarations",
+                "table_name": "entreprises_urssaf_declarations",
+                "column_name": "taux_emploi_handicap_pct",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.entreprises_urssaf_declarations.taux_emploi_handicap_pct"
+              }
             ]
           },
           {
@@ -127,6 +703,78 @@
               "Postes Fonction Publique",
               "Profil Poste Requis",
               "Rémunération Salaire Proposé"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Offres d'Emploi Recrutement Public & Privé** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Postes à pourvoir, typologies de contrats (CDI, CDD) et profils recherchés.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `offres_emploi_recrutement` (colonne `type_contrat_travail`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/offres_emploi_recrutement",
+                "table_name": "offres_emploi_recrutement",
+                "column_name": "type_contrat_travail",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.offres_emploi_recrutement.type_contrat_travail"
+              }
             ]
           },
           {
@@ -140,6 +788,78 @@
               "Zone d'Emploi INSEE",
               "Mobilité Géographique Candidat",
               "Chômage Régional"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Bassin d'Emploi & Mobilité Départementale** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Découpage territorial des bassins d'emploi et taux de chômage départemental.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `france_travail_demandeurs` (colonne `department_code`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_employment",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_employment_ds/tables/france_travail_demandeurs",
+                "table_name": "france_travail_demandeurs",
+                "column_name": "department_code",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_employment_ds.france_travail_demandeurs.department_code"
+              }
             ]
           }
         ]

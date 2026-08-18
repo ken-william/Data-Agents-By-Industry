@@ -52,43 +52,43 @@
       "glossaryTerms": [
         {
           "displayName": "Ruptures Visuelles en Rayon (Shelf-Out)",
-          "description": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires. Termes liés & Ontologies : Planogramme Conforme, Rupture en Linéaire, Taux de Rupture Enseigne, Perte Chiffre d'Affaires Rayon."
+          "description": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires. [Table: retail_analyse_lineaire_ruptures, Colonne: nombre_trous_visuels_rayon]. Termes associés : Planogramme Conforme, Rupture en Linéaire, Taux de Rupture Enseigne, Perte Chiffre d'Affaires Rayon. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Démarque & Péremption Rayon Frais",
-          "description": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et démarque casse. Termes liés & Ontologies : Prédiction Péremption 14j, Démarque Inconnue, Gâchis Alimentaire Frais, Casse Produits Ultra-Frais."
+          "description": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et démarque casse. [Table: retail_prix_moyens_panier, Colonne: perte_financiere_casse_eur]. Termes associés : Prédiction Péremption 14j, Démarque Inconnue, Gâchis Alimentaire Frais, Casse Produits Ultra-Frais. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Bundles Cross-Selling & Marge Brute",
-          "description": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD. Termes liés & Ontologies : Panier Moyen Associé, Marques Nationales vs MDD, Taux d'Appétence Bundle, Optimisation de la Marge Commerciale."
+          "description": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD. [Table: retail_cross_selling_associations, Colonne: marge_brute_combinee_eur]. Termes associés : Panier Moyen Associé, Marques Nationales vs MDD, Taux d'Appétence Bundle, Optimisation de la Marge Commerciale. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Profil Nutritionnel & Additifs (Nutri-Score & NOVA)",
-          "description": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4, additifs sensibles. Termes liés & Ontologies : Nutri-Score A à E, Classification Ultra-Transformés NOVA, Additifs Sensibles E-numbers, Reformulation Recette MDD."
+          "description": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4, additifs sensibles. [Table: openfoodfacts_catalog, Colonne: nutriscore_grade]. Termes associés : Nutri-Score A à E, Classification Ultra-Transformés NOVA, Additifs Sensibles E-numbers, Reformulation Recette MDD. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Fréquentation Magasins & Conversion Panier",
-          "description": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface de vente. Termes liés & Ontologies : Flux Horaires Clients, Chiffre d'Affaires au m², Taux de Transformation Caisse, Fréquentation Magasin Enseigne."
+          "description": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface de vente. [Table: retail_frequentation_magasins, Colonne: frequentation_horaire_clients]. Termes associés : Flux Horaires Clients, Chiffre d'Affaires au m², Taux de Transformation Caisse, Fréquentation Magasin Enseigne. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Audits de Conformité Linéaire (Planogrammes)",
-          "description": "Taux de respect du planogramme, nombre de facings et emplacement en hauteur d'yeux. Termes liés & Ontologies : Facing Produits, Hauteur d'Yeux Linéaire, Disposition Marques Nationales, Part de Voix Rayon."
+          "description": "Taux de respect du planogramme, nombre de facings et emplacement en hauteur d'yeux. [Table: retail_analyse_lineaire_ruptures, Colonne: conformite_planogramme_pct]. Termes associés : Facing Produits, Hauteur d'Yeux Linéaire, Disposition Marques Nationales, Part de Voix Rayon. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Péremption & Démarque Rayon Frais 14 Jours",
-          "description": "Volume d'unités proches de la Date Limite de Consommation DLC et stickers anti-gaspillage. Termes liés & Ontologies : Date Limite de Consommation DLC, Sticker Anti-Gaspillage, Rotations des Stocks Frais, Démarque Commerciale."
+          "description": "Volume d'unités proches de la Date Limite de Consommation DLC et stickers anti-gaspillage. [Table: retail_prix_moyens_panier, Colonne: nb_unites_proche_peremption]. Termes associés : Date Limite de Consommation DLC, Sticker Anti-Gaspillage, Rotations des Stocks Frais, Démarque Commerciale. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Associations d'Achats & Cross-Merchandising",
-          "description": "Confiance et lift des règles d'association de produits implantés en cross-merchandising. Termes liés & Ontologies : Règles d'Association Panier, Cross-Selling Linéaire, Produits Complémentaires, Marge Brute Bundle."
+          "description": "Confiance et lift des règles d'association de produits implantés en cross-merchandising. [Table: retail_cross_selling_associations, Colonne: indice_confiance_pct]. Termes associés : Règles d'Association Panier, Cross-Selling Linéaire, Produits Complémentaires, Marge Brute Bundle. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Catalogue Produits Open Food Facts",
-          "description": "Identifiants GTIN/EAN13, composition en ingrédients et empreinte carbone de la gamme. Termes liés & Ontologies : Code-Barres GTIN EAN13, Liste d'Ingrédients, Ingrédients Allergènes, Empreinte Carbone Produit."
+          "description": "Identifiants GTIN/EAN13, composition en ingrédients et empreinte carbone de la gamme. [Table: openfoodfacts_catalog, Colonne: code_barres_gtin]. Termes associés : Code-Barres GTIN EAN13, Liste d'Ingrédients, Ingrédients Allergènes, Empreinte Carbone Produit. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Rendement au Mètre Linéaire Développé (MLD)",
-          "description": "Chiffre d'affaires et marge brute générés par mètre linéaire développé de rayon. Termes liés & Ontologies : MLD Mètre Linéaire Développé, Chiffre d'Affaires au Mètre, Marge au Mètre Linéaire, Rentabilité Emplacement."
+          "description": "Chiffre d'affaires et marge brute générés par mètre linéaire développé de rayon. [Table: retail_analyse_lineaire_ruptures, Colonne: chiffre_affaires_par_m2_eur]. Termes associés : MLD Mètre Linéaire Développé, Chiffre d'Affaires au Mètre, Marge au Mètre Linéaire, Rentabilité Emplacement. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

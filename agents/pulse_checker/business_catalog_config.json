@@ -23,6 +23,78 @@
               "Zonage ARS Pénurie Soins",
               "Projection EBITDA Clinique",
               "Implantation Clinique Privée"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Déserts Médicaux & Démographie RPPS** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités d'implantation de cliniques privées (projection EBITDA 5 ans).\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `demographie_medecins_rpps` (colonne `densite_medecins_pour_100k_hab`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/demographie_medecins_rpps",
+                "table_name": "demographie_medecins_rpps",
+                "column_name": "densite_medecins_pour_100k_hab",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.demographie_medecins_rpps.densite_medecins_pour_100k_hab"
+              }
             ]
           },
           {
@@ -36,6 +108,78 @@
               "Stock Sécurité Antibiotiques",
               "Molécules Critiques Hospitalières",
               "Appel d'Offres Pharmacie"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Ruptures de Stock & Tension Médicamenteuse** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement hospitalier.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `pharmacie_stock_medicaments_tension` (colonne `statut_risque_rupture`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/pharmacie_stock_medicaments_tension",
+                "table_name": "pharmacie_stock_medicaments_tension",
+                "column_name": "statut_risque_rupture",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.pharmacie_stock_medicaments_tension.statut_risque_rupture"
+              }
             ]
           },
           {
@@ -49,6 +193,78 @@
               "Temps d'Attente Brancards",
               "Déclenchement Plan Blanc",
               "Régulation SAMU 15"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Saturation des Urgences & Plans Blancs** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `hopitaux_flux_admissions_urgences` (colonne `taux_occupation_lits_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/hopitaux_flux_admissions_urgences",
+                "table_name": "hopitaux_flux_admissions_urgences",
+                "column_name": "taux_occupation_lits_pct",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.hopitaux_flux_admissions_urgences.taux_occupation_lits_pct"
+              }
             ]
           },
           {
@@ -62,6 +278,78 @@
               "Garde Médicale Planning",
               "Temps de Vacation Inoccupé",
               "Optimisation Salles d'Opération"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Programmation des Blocs Opératoires** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes des praticiens.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `hopitaux_blocs_operatoires_chirurgie` (colonne `taux_occupation_salle_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/hopitaux_blocs_operatoires_chirurgie",
+                "table_name": "hopitaux_blocs_operatoires_chirurgie",
+                "column_name": "taux_occupation_salle_pct",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.hopitaux_blocs_operatoires_chirurgie.taux_occupation_salle_pct"
+              }
             ]
           },
           {
@@ -75,6 +363,78 @@
               "Dépenses Assurance Maladie",
               "Codification NABM",
               "Analyse Coût des Examens"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Open BIO & Dépenses Biologie AMELI** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts de santé.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `assurance_maladie_open_bio_depenses` (colonne `montant_rembourse_secu_eur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/assurance_maladie_open_bio_depenses",
+                "table_name": "assurance_maladie_open_bio_depenses",
+                "column_name": "montant_rembourse_secu_eur",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.assurance_maladie_open_bio_depenses.montant_rembourse_secu_eur"
+              }
             ]
           },
           {
@@ -88,6 +448,78 @@
               "Cliniques Privées Lucratives",
               "Hôpitaux Publics CHU",
               "Cartographie Établissements"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Établissements de Santé FINESS** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Répertoire national FINESS des hôpitaux publics CHU, CH, et cliniques privées lucratives.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `finess_etablissements_sante` (colonne `statut_juridique`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/finess_etablissements_sante",
+                "table_name": "finess_etablissements_sante",
+                "column_name": "statut_juridique",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.finess_etablissements_sante.statut_juridique"
+              }
             ]
           },
           {
@@ -101,6 +533,78 @@
               "Taux d'Absentéisme Praticiens",
               "Remplacement Intérim Médical",
               "Repos Sécurité Obligatoire"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Planning & Gardes du Personnel Médical** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Suivi des heures de garde, astreintes et absentéisme des équipes soignantes.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `personnel_medical_garde_planning` (colonne `heures_garde_effectuees`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/personnel_medical_garde_planning",
+                "table_name": "personnel_medical_garde_planning",
+                "column_name": "heures_garde_effectuees",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.personnel_medical_garde_planning.heures_garde_effectuees"
+              }
             ]
           },
           {
@@ -114,6 +618,78 @@
               "Passages Urgences 24h",
               "Orientation Service Hospitalisation",
               "Taux d'Admission Directe"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Prises en Charge Urgences Pédiatriques** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Flux d'admissions quotidiennes et régulation des urgences pédiatriques.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `hopitaux_flux_admissions_urgences` (colonne `nombre_admissions_jour`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/hopitaux_flux_admissions_urgences",
+                "table_name": "hopitaux_flux_admissions_urgences",
+                "column_name": "nombre_admissions_jour",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.hopitaux_flux_admissions_urgences.nombre_admissions_jour"
+              }
             ]
           },
           {
@@ -127,6 +703,78 @@
               "Délivrance Nominative",
               "Gestion des Périssables",
               "Approvisionnement Centrale d'Achat"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Pharmacie à Usage Intérieur (PUI)** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Gestion de la délivrance nominative des médicaments et périssables hospitaliers.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `pharmacie_stock_medicaments_tension` (colonne `nom_molecule_medicament`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/pharmacie_stock_medicaments_tension",
+                "table_name": "pharmacie_stock_medicaments_tension",
+                "column_name": "nom_molecule_medicament",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.pharmacie_stock_medicaments_tension.nom_molecule_medicament"
+              }
             ]
           },
           {
@@ -140,6 +788,78 @@
               "Capacité Lits Ranimation",
               "Taux d'Évacuation Sanitaire",
               "Bilan d'Activité CHU"
+            ],
+            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Indice de Pression Sanitaire Territoriale** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Mesure globale de la capacité en lits de réanimation et pression sanitaire régionale.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `finess_etablissements_sante` (colonne `capacite_lits_hospitalisation`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
+            "contacts": [
+              {
+                "name": "Équipe Gouvernance & Data Engineering",
+                "email": "data-governance@data-agents-by-industry.com",
+                "role": "Data Owner / Steward"
+              },
+              {
+                "name": "Expert Métier & Analyste Domaine",
+                "email": "domain-expert@data-agents-by-industry.com",
+                "role": "Subject Matter Expert"
+              }
+            ],
+            "labels": {
+              "domain": "public_sector_healthcare",
+              "criticality": "tier-1-executive",
+              "data_sensitivity": "internal-restricted",
+              "compliance_status": "csrd-gdpr-compliant",
+              "update_frequency": "daily-automated"
+            },
+            "aspects": {
+              "business_governance": {
+                "sla_tier": "Tier-1 Executive 24/7",
+                "data_steward_group": "Data Stewards Enterprise",
+                "retention_period_years": 10
+              },
+              "data_quality_aspect": {
+                "target_completeness_pct": 99.5,
+                "validation_status": "PASSED_STRICT_CHECKS",
+                "last_audit_date": "2026-08-18"
+              },
+              "business_value_aspect": {
+                "decision_impact": "High Strategic ROI",
+                "automation_level": "Automated Agent Integration"
+              }
+            },
+            "data_quality_rules": [
+              {
+                "rule_type": "NON_NULL",
+                "dimension": "Completeness",
+                "action": "ALERT_AND_LOG",
+                "parameters": {
+                  "min_completeness_pct": 99.5
+                }
+              },
+              {
+                "rule_type": "RANGE_CHECK",
+                "dimension": "Validity",
+                "action": "ENFORCE_BOUNDS",
+                "parameters": {
+                  "min_value": 0,
+                  "max_value": 1000000000
+                }
+              },
+              {
+                "rule_type": "TYPE_CONSISTENCY",
+                "dimension": "Consistency",
+                "action": "VALIDATE_SCHEMA",
+                "parameters": {
+                  "target_type": "NUMERIC_OR_STRING"
+                }
+              }
+            ],
+            "related_entries": [
+              {
+                "resource_name": "projects/data-agents-by-industry/datasets/public_sector_healthcare_ds/tables/finess_etablissements_sante",
+                "table_name": "finess_etablissements_sante",
+                "column_name": "capacite_lits_hospitalisation",
+                "project_id": "data-agents-by-industry",
+                "fully_qualified_name": "bigquery:data-agents-by-industry.public_sector_healthcare_ds.finess_etablissements_sante.capacite_lits_hospitalisation"
+              }
             ]
           }
         ]

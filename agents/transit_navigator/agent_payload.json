@@ -61,43 +61,43 @@
       "glossaryTerms": [
         {
           "displayName": "Fréquentation des Gares SNCF",
-          "description": "Volumes annuels de voyageurs enregistrés dans les 3 000+ gares de France. Termes liés & Ontologies : Voyageurs Annuels Gares, Code UIC Gare, Direction Régionale DRG, Comptage Flux Gares."
+          "description": "Volumes annuels de voyageurs enregistrés dans les 3 000+ gares de France. [Table: frequentation_gares_sncf, Colonne: total_voyageurs_2024]. Termes associés : Voyageurs Annuels Gares, Code UIC Gare, Direction Régionale DRG, Comptage Flux Gares. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Régularité & Retards Ferroviaires (SLA)",
-          "description": "Indicateurs de ponctualité à l'arrivée <5min, minutes de retard et annulations de trains TGV/TER. Termes liés & Ontologies : Ponctualité à l'Arrivée <5min, Taux d'Annulation Trains, Retard Moyen Minutes, Pénalités Financières Retard."
+          "description": "Indicateurs de ponctualité à l'arrivée <5min, minutes de retard et annulations de trains TGV/TER. [Table: sncf_regularite_lignes, Colonne: retard_moyen_minutes]. Termes associés : Ponctualité à l'Arrivée <5min, Taux d'Annulation Trains, Retard Moyen Minutes, Pénalités Financières Retard. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Validations & Badgeages Portillons",
-          "description": "Historique horodaté des entrées aux arrêts et gares par mode RER, Métro, TGV, TER, Tramway. Termes liés & Ontologies : Badgeage Validateur, Horodatage Entrée Station, Mode RER / Métro / TGV / TER, Statut Validation Autorisé."
+          "description": "Historique horodaté des entrées aux arrêts et gares par mode RER, Métro, TGV, TER, Tramway. [Table: validations_trajets_voyageurs, Colonne: timestamp]. Termes associés : Badgeage Validateur, Horodatage Entrée Station, Mode RER / Métro / TGV / TER, Statut Validation Autorisé. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Coordonnées GEOGRAPHY Domicile-Travail",
-          "description": "Localisation spatiale ST_GEOGPOINT des abonnés Navigo/Pass pour l'analyse des flux domicile-travail. Termes liés & Ontologies : Point Spatial ST_GEOGPOINT, Flux Domicile-Travail, Ville de Résidence, Abonné Navigo Profil."
+          "description": "Localisation spatiale ST_GEOGPOINT des abonnés Navigo/Pass pour l'analyse des flux domicile-travail. [Table: usagers_profils, Colonne: home_location_geo]. Termes associés : Point Spatial ST_GEOGPOINT, Flux Domicile-Travail, Ville de Résidence, Abonné Navigo Profil. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Objets Trouvés en Gare & Traçabilité",
-          "description": "Registre des déclarations de perte et restitution rapproché des badgeages usagers. Termes liés & Ontologies : Déclaration d'Objet Perdu, Rapprochement Trajet Badgeage, Catégorie Appareils Bagages, Restitution Propriétaire."
+          "description": "Registre des déclarations de perte et restitution rapproché des badgeages usagers. [Table: sncf_objets_trouves, Colonne: found_status]. Termes associés : Déclaration d'Objet Perdu, Rapprochement Trajet Badgeage, Catégorie Appareils Bagages, Restitution Propriétaire. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Forfaits Abonnements Transport (Navigo / TER / TGV)",
-          "description": "Catalogue des titres de transport Navigo, Pass TER Ilico, et TGV Max. Termes liés & Ontologies : Pass Navigo Mois / Annuel, Pass TER Ilico, TGV Max Abonnement, Prise en Charge Employeur 50%."
+          "description": "Catalogue des titres de transport Navigo, Pass TER Ilico, et TGV Max. [Table: abonnements_titres_transport, Colonne: monthly_price_eur]. Termes associés : Pass Navigo Mois / Annuel, Pass TER Ilico, TGV Max Abonnement, Prise en Charge Employeur 50%. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Liaisons & Axes Ferroviaires TGV / TER",
-          "description": "Itinéraires ferroviaires reliant les gares de départ et d'arrivée en France. Termes liés & Ontologies : Ligne Grande Vitesse LGV, Ligne TER Régionale, Gare Départ / Arrivée, Fréquence Circulations Prévues."
+          "description": "Itinéraires ferroviaires reliant les gares de départ et d'arrivée en France. [Table: sncf_regularite_lignes, Colonne: nom_axe_ferroviaire]. Termes associés : Ligne Grande Vitesse LGV, Ligne TER Régionale, Gare Départ / Arrivée, Fréquence Circulations Prévues. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Causes d'Incidents & Retards Ferroviaires",
-          "description": "Ventilation des retards selon l'infrastructure, le matériel roulant, et la gestion du trafic. Termes liés & Ontologies : Incident Infrastructure Réseau, Panne Matériel Roulant, Gestion Trafic Aiguillage, Affluence Voyageurs."
+          "description": "Ventilation des retards selon l'infrastructure, le matériel roulant, et la gestion du trafic. [Table: sncf_regularite_lignes, Colonne: cause_retard_infrastructure_pct]. Termes associés : Incident Infrastructure Réseau, Panne Matériel Roulant, Gestion Trafic Aiguillage, Affluence Voyageurs. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Capacité d'Accueil & Matériel Roulant",
-          "description": "Typologie du matériel roulant et capacité d'emport de voyageurs par rame. Termes liés & Ontologies : RER A / Métro Ligne 1, Rame TGV InOui, Tramway Urbain, Capacité Rames Matériel."
+          "description": "Typologie du matériel roulant et capacité d'emport de voyageurs par rame. [Table: validations_trajets_voyageurs, Colonne: transport_mode]. Termes associés : RER A / Métro Ligne 1, Rame TGV InOui, Tramway Urbain, Capacité Rames Matériel. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Statut de Restitution & Réserves Gares",
-          "description": "Suivi du délai de garde en réserve gare et taux de restitution aux propriétaires. Termes liés & Ontologies : En Réserve Gare, Transmis Association, Délai Restitution Jours, Registre Objets Trouvés."
+          "description": "Suivi du délai de garde en réserve gare et taux de restitution aux propriétaires. [Table: sncf_objets_trouves, Colonne: restitution_date]. Termes associés : En Réserve Gare, Transmis Association, Délai Restitution Jours, Registre Objets Trouvés. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

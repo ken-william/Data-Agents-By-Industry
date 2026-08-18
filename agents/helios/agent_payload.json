@@ -47,43 +47,43 @@
       "glossaryTerms": [
         {
           "displayName": "Bornes de Recharge IRVE Enedis",
-          "description": "Cartographie des 10 000 points de charge pour véhicules électriques, puissance kW et connecteurs. Termes liés & Ontologies : Infrastructure Recharge Véhicules Électriques, Puissance kW Connecteurs, Implantation Géographique IRVE, Taux d'Utilisation Bornes."
+          "description": "Cartographie des 10 000 points de charge pour véhicules électriques, puissance kW et connecteurs. [Table: enedis_bornes_irve, Colonne: nb_points_recharge]. Termes associés : Infrastructure Recharge Véhicules Électriques, Puissance kW Connecteurs, Implantation Géographique IRVE, Taux d'Utilisation Bornes. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Télémesure 30min Transformateurs HTA/BT",
-          "description": "Courbes de charge, détection des risques de surtension et saturation réseau. Termes liés & Ontologies : Courbes de Charge 30min, Puissance Souscrite kVA, Risque Surtension Transformateur, Equilibrage Phasique BT."
+          "description": "Courbes de charge, détection des risques de surtension et saturation réseau. [Table: enedis_consommation_inf36, Colonne: puissance_souscrite_kva]. Termes associés : Courbes de Charge 30min, Puissance Souscrite kVA, Risque Surtension Transformateur, Equilibrage Phasique BT. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Production d'Énergie Renouvelable (EnR)",
-          "description": "Injection solaire photovoltaïque et éolienne par territoire. Termes liés & Ontologies : Injection Solaire Photovoltaïque, Parcs Éoliens Régionaux, Capacité Raccordement EnR, Mix Énergétique Territoire."
+          "description": "Injection solaire photovoltaïque et éolienne par territoire. [Table: enedis_production_renouvelable, Colonne: puissance_raccordee_kw]. Termes associés : Injection Solaire Photovoltaïque, Parcs Éoliens Régionaux, Capacité Raccordement EnR, Mix Énergétique Territoire. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Flexibilité d'Effacement Industriel B2B",
-          "description": "Gisements de réduction de consommation des usines lors des pics de tension hivernaux. Termes liés & Ontologies : Effacement Consommation Usines, Pics de Tension Hivernaux, Primes de Flexibilité B2B, Régulation Réseau Enedis."
+          "description": "Gisements de réduction de consommation des usines lors des pics de tension hivernaux. [Table: enedis_clients_industriels, Colonne: gisement_effacement_kw]. Termes associés : Effacement Consommation Usines, Pics de Tension Hivernaux, Primes de Flexibilité B2B, Régulation Réseau Enedis. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Réseau de Distribution HTA & BT",
-          "description": "Maillage régional des lignes moyenne tension HTA et basse tension BT. Termes liés & Ontologies : Lignes Moyenne Tension HTA, Basse Tension BT, Poste de Transformation, Maille Régionale Distribution."
+          "description": "Maillage régional des lignes moyenne tension HTA et basse tension BT. [Table: enedis_consommation_inf36, Colonne: code_insee_commune]. Termes associés : Lignes Moyenne Tension HTA, Basse Tension BT, Poste de Transformation, Maille Régionale Distribution. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Consommation Résidentielle & Tertiaire <36kVA",
-          "description": "Télé-relève des compteurs communicants Linky et consommation MWh par commune. Termes liés & Ontologies : Compteurs Communicants Linky, Consommation MWh par Commune, Usages Chauffage Électrique, Efficacité Énergétique Bâtiments."
+          "description": "Télé-relève des compteurs communicants Linky et consommation MWh par commune. [Table: enedis_consommation_inf36, Colonne: consommation_annuelle_mwh]. Termes associés : Compteurs Communicants Linky, Consommation MWh par Commune, Usages Chauffage Électrique, Efficacité Énergétique Bâtiments. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Puissance de Charge & Connecteurs Rapides",
-          "description": "Répartition des puissances de charge AC/DC (22kW à 150kW) et standards de prise. Termes liés & Ontologies : Charge Rapide DC 150kW, Bornes AC 22kW, Disponibilité Connecteurs Combo CCS, Plan de Déploiement IRVE."
+          "description": "Répartition des puissances de charge AC/DC (22kW à 150kW) et standards de prise. [Table: enedis_bornes_irve, Colonne: puissance_nominale_kw]. Termes associés : Charge Rapide DC 150kW, Bornes AC 22kW, Disponibilité Connecteurs Combo CCS, Plan de Déploiement IRVE. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Indicateurs de Périodes de Pointe & Heures Creuses",
-          "description": "Profils de consommation en heures creuses et lissage des pointes de demande. Termes liés & Ontologies : Heures de Pointe Hiver, Heures Creuses Nuit, Lissage de la Courbe de Charge, Optimisation Tarifaire."
+          "description": "Profils de consommation en heures creuses et lissage des pointes de demande. [Table: enedis_consommation_inf36, Colonne: profil_consommation]. Termes associés : Heures de Pointe Hiver, Heures Creuses Nuit, Lissage de la Courbe de Charge, Optimisation Tarifaire. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Infrastructures d'Accès Réseau Industriel",
-          "description": "Stabilité des raccordements haute puissance pour les usines et clients B2B. Termes liés & Ontologies : Raccordement Gros Clients HTB, Tarif Jaune Vert Enedis, Stabilité Réseau Usines, Plan de Secours Industriel."
+          "description": "Stabilité des raccordements haute puissance pour les usines et clients B2B. [Table: enedis_clients_industriels, Colonne: secteur_activite_code_naf]. Termes associés : Raccordement Gros Clients HTB, Tarif Jaune Vert Enedis, Stabilité Réseau Usines, Plan de Secours Industriel. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Bilan Émissions CO2 Avoided Mix EnR",
-          "description": "Réduction de l'empreinte carbone et tonnes CO2 évitées grâce à l'injection EnR. Termes liés & Ontologies : Tonnes CO2 Évitées, Décarbonation Réseau Électrique, Certificats d'Origine Verte, Objectif Réductions Émissions."
+          "description": "Réduction de l'empreinte carbone et tonnes CO2 évitées grâce à l'injection EnR. [Table: enedis_production_renouvelable, Colonne: co2_evite_tonnes]. Termes associés : Tonnes CO2 Évitées, Décarbonation Réseau Électrique, Certificats d'Origine Verte, Objectif Réductions Émissions. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

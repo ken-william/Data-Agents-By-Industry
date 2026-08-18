@@ -72,19 +72,43 @@
       "glossaryTerms": [
         {
           "displayName": "Analyse du Cycle de Vie (ACV) ADEME Agribalyse 3.1",
-          "description": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles."
+          "description": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles. Termes liés & Ontologies : Base ADEME Agribalyse 3.1, Score Unique EF Environmental Footprint, Empreinte CO2e kg/kg produit, Eutrophisation & Acidification."
         },
         {
           "displayName": "Label Bas-Carbone & Crédits Carbone",
-          "description": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles."
+          "description": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles. Termes liés & Ontologies : Certification Label Bas-Carbone, Tonnes CO2e Séquestrées, Valorisation Crédits Carbone €, Non-Labourage & Couverts Végétaux."
         },
         {
           "displayName": "Flux Coopératifs & Rendements Récoltes",
-          "description": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives."
+          "description": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives. Termes liés & Ontologies : Chiffre d'Affaires Coopérative, Volume Récolte Tonnes, Rendement Quintaux par Hectare, Collecte Céréalière Viticole."
         },
         {
           "displayName": "Rapports de Performance ESG Investisseurs",
-          "description": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact."
+          "description": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact. Termes liés & Ontologies : Score ESG Global %, Reporting Durabilité CSRD, Taxonomie Européenne Verte, Performance Extra-Financière."
+        },
+        {
+          "displayName": "Prévisions d'Anomalies Météo d'Été",
+          "description": "Détection précoce des écarts de température et déficits de précipitation estivaux. Termes liés & Ontologies : Anomalies Température °C, Déficit Pluviométrique mm, Indice Sécheresse des Sols, Alerte Stress Hydrique Cultures."
+        },
+        {
+          "displayName": "Cartographie des Parcelles & Registre Parcellaire (RPG)",
+          "description": "Délimitation géographique et historique d'assolement des parcelles exploitées. Termes liés & Ontologies : Registre Parcellaire Graphique RPG, Surface Agricole Utile SAU, Cultures Principales & Assolement, Géolocalisation Parcelles."
+        },
+        {
+          "displayName": "Télédétection IoT Humidité des Sols",
+          "description": "Mesure en temps réel de l'humidité et tension matricielle des sols par sondes IoT. Termes liés & Ontologies : Sondes IoT Humidité Sol, Capteurs Tension-Métriques, Pilotage Irrigation de Précision, Économie d'Eau m³."
+        },
+        {
+          "displayName": "Certification Haute Valeur Environnementale (HVE)",
+          "description": "Niveau 3 de certification environnementale des exploitations agricoles. Termes liés & Ontologies : Certification HVE Niveau 3, Biodiversité & Stratégie Phytosanitaire, Gestion de la Fertilisation, Primes Qualité Filières."
+        },
+        {
+          "displayName": "Bilan Gaz à Effet de Serre (GES) Exploitations",
+          "description": "Comptabilité carbone brute des émissions de N2O, CH4 et CO2 de l'exploitation. Termes liés & Ontologies : Émissions N2O Élevage/Engrais, Méthanisation Effluents, Bilan Carbone Exploitation, Plan de Décarbonation Agricole."
+        },
+        {
+          "displayName": "Valorisation Filières & Circuits Courts",
+          "description": "Part des volumes agricoles distribués en vente directe et valorisation locale. Termes liés & Ontologies : Circuits Courts Vente Directe, Valeur Ajoutée Exploitation, Agriculture Biologique AB, Traçabilité du Champ à l'Assiette."
         }
       ]
     }

@@ -62,43 +62,43 @@
       "glossaryTerms": [
         {
           "displayName": "Déserts Médicaux & Démographie RPPS",
-          "description": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités d'implantation de cliniques privées (projection EBITDA 5 ans). Termes liés & Ontologies : Densité Médicale RPPS, Zonage ARS Pénurie Soins, Projection EBITDA Clinique, Implantation Clinique Privée."
+          "description": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités d'implantation de cliniques privées (projection EBITDA 5 ans). [Table: demographie_medecins_rpps, Colonne: densite_medecins_pour_100k_hab]. Termes associés : Densité Médicale RPPS, Zonage ARS Pénurie Soins, Projection EBITDA Clinique, Implantation Clinique Privée. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Ruptures de Stock & Tension Médicamenteuse",
-          "description": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement hospitalier. Termes liés & Ontologies : Autonomie Stock Jours, Stock Sécurité Antibiotiques, Molécules Critiques Hospitalières, Appel d'Offres Pharmacie."
+          "description": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement hospitalier. [Table: pharmacie_stock_medicaments_tension, Colonne: statut_risque_rupture]. Termes associés : Autonomie Stock Jours, Stock Sécurité Antibiotiques, Molécules Critiques Hospitalières, Appel d'Offres Pharmacie. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Saturation des Urgences & Plans Blancs",
-          "description": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire. Termes liés & Ontologies : Taux Saturation Urgences, Temps d'Attente Brancards, Déclenchement Plan Blanc, Régulation SAMU 15."
+          "description": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire. [Table: hopitaux_flux_admissions_urgences, Colonne: taux_occupation_lits_pct]. Termes associés : Taux Saturation Urgences, Temps d'Attente Brancards, Déclenchement Plan Blanc, Régulation SAMU 15. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Programmation des Blocs Opératoires",
-          "description": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes des praticiens. Termes liés & Ontologies : Vacations Chirurgicales, Garde Médicale Planning, Temps de Vacation Inoccupé, Optimisation Salles d'Opération."
+          "description": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes des praticiens. [Table: hopitaux_blocs_operatoires_chirurgie, Colonne: taux_occupation_salle_pct]. Termes associés : Vacations Chirurgicales, Garde Médicale Planning, Temps de Vacation Inoccupé, Optimisation Salles d'Opération. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Open BIO & Dépenses Biologie AMELI",
-          "description": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts de santé. Termes liés & Ontologies : Biologie Médicale Ambulatoire, Dépenses Assurance Maladie, Codification NABM, Analyse Coût des Examens."
+          "description": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts de santé. [Table: assurance_maladie_open_bio_depenses, Colonne: montant_rembourse_secu_eur]. Termes associés : Biologie Médicale Ambulatoire, Dépenses Assurance Maladie, Codification NABM, Analyse Coût des Examens. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Établissements de Santé FINESS",
-          "description": "Répertoire national FINESS des hôpitaux publics CHU, CH, et cliniques privées lucratives. Termes liés & Ontologies : Fichier FINESS, Cliniques Privées Lucratives, Hôpitaux Publics CHU, Cartographie Établissements."
+          "description": "Répertoire national FINESS des hôpitaux publics CHU, CH, et cliniques privées lucratives. [Table: finess_etablissements_sante, Colonne: statut_juridique]. Termes associés : Fichier FINESS, Cliniques Privées Lucratives, Hôpitaux Publics CHU, Cartographie Établissements. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Planning & Gardes du Personnel Médical",
-          "description": "Suivi des heures de garde, astreintes et absentéisme des équipes soignantes. Termes liés & Ontologies : Astreintes Médicales, Taux d'Absentéisme Praticiens, Remplacement Intérim Médical, Repos Sécurité Obligatoire."
+          "description": "Suivi des heures de garde, astreintes et absentéisme des équipes soignantes. [Table: personnel_medical_garde_planning, Colonne: heures_garde_effectuees]. Termes associés : Astreintes Médicales, Taux d'Absentéisme Praticiens, Remplacement Intérim Médical, Repos Sécurité Obligatoire. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Prises en Charge Urgences Pédiatriques",
-          "description": "Flux d'admissions quotidiennes et régulation des urgences pédiatriques. Termes liés & Ontologies : Urgences Pédiatriques, Passages Urgences 24h, Orientation Service Hospitalisation, Taux d'Admission Directe."
+          "description": "Flux d'admissions quotidiennes et régulation des urgences pédiatriques. [Table: hopitaux_flux_admissions_urgences, Colonne: nombre_admissions_jour]. Termes associés : Urgences Pédiatriques, Passages Urgences 24h, Orientation Service Hospitalisation, Taux d'Admission Directe. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Pharmacie à Usage Intérieur (PUI)",
-          "description": "Gestion de la délivrance nominative des médicaments et périssables hospitaliers. Termes liés & Ontologies : Pharmacie Hospitalière PUI, Délivrance Nominative, Gestion des Périssables, Approvisionnement Centrale d'Achat."
+          "description": "Gestion de la délivrance nominative des médicaments et périssables hospitaliers. [Table: pharmacie_stock_medicaments_tension, Colonne: nom_molecule_medicament]. Termes associés : Pharmacie Hospitalière PUI, Délivrance Nominative, Gestion des Périssables, Approvisionnement Centrale d'Achat. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Indice de Pression Sanitaire Territoriale",
-          "description": "Mesure globale de la capacité en lits de réanimation et pression sanitaire régionale. Termes liés & Ontologies : Pression Sanitaire Régionale, Capacité Lits Ranimation, Taux d'Évacuation Sanitaire, Bilan d'Activité CHU."
+          "description": "Mesure globale de la capacité en lits de réanimation et pression sanitaire régionale. [Table: finess_etablissements_sante, Colonne: capacite_lits_hospitalisation]. Termes associés : Pression Sanitaire Régionale, Capacité Lits Ranimation, Taux d'Évacuation Sanitaire, Bilan d'Activité CHU. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

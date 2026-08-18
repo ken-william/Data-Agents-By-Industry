@@ -52,19 +52,43 @@
       "glossaryTerms": [
         {
           "displayName": "Séries Historiques CNC Box-Office",
-          "description": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945."
+          "description": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945. Termes liés & Ontologies : Entrées Annuelles CNC Millions, Recettes Guichet Box-Office, Séries Temporelles Cinéma, Historique Fréquentation 1945-2025."
         },
         {
           "displayName": "Indicateurs de Fréquentation & Prix Billet",
-          "description": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles."
+          "description": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles. Termes liés & Ontologies : Prix Moyen de la Place €, Taux de Remplissage Salles, Recette Moyenne par Entrée, Chiffre d'Affaires Exploitation."
         },
         {
           "displayName": "Répartition par Genres & Nationalités",
-          "description": "Performances comparées des films français, américains et art & essai par territoire."
+          "description": "Performances comparées des films français, américains et art & essai par territoire. Termes liés & Ontologies : Part de Marché Films Français, Films Américains Blockbusters, Cinéma d'Art et Essai, Répartition Genres Comédie Drame Sci-Fi."
         },
         {
           "displayName": "Parc des Établissements & Multiplexes",
-          "description": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes."
+          "description": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes. Termes liés & Ontologies : Nombre d'Écrans & Fauteuils, Multiplexes vs Salles Indépendantes, Classement Art et Essai, Densité d'Équipement Écrans."
+        },
+        {
+          "displayName": "Performance des Nouveautés & Semaines d'Exploitation",
+          "description": "Suivi des entrées en 1ère semaine et coefficient de maintien à l'affiche. Termes liés & Ontologies : Semaines à l'Affiche, Entrées Première Semaine, Coefficient de Maintien Box-Office, Nombre de Copies Écrans."
+        },
+        {
+          "displayName": "Compte de Soutien CNC & Subventions Cinéma",
+          "description": "Ressources générées par la taxe TSCA et réinvesties dans le soutien automatique. Termes liés & Ontologies : Taxe TSCA sur les Entrées, Fonds de Soutien Automatique CNC, Aide Sélective à la Production, Financement de la Création."
+        },
+        {
+          "displayName": "Fréquentation par Tranche d'Âge & Publics",
+          "description": "Pénétration du cinéma auprès des 15-24 ans et détenteurs de Pass Illimités. Termes liés & Ontologies : Public 15-24 ans, Cinéphiles Réguliers, Abonnements Pass Cinéma Unlimited, Habitudes de Sortie Salles."
+        },
+        {
+          "displayName": "Programmation & Entrées par Région",
+          "description": "Analyse géographique de la fréquentation des salles en région. Termes liés & Ontologies : Entrées par Région Administrative, Succès Régionaux Nouveautés, Densité de Fauteuils pour 1000 Hab, Disparités Territoriales Salles."
+        },
+        {
+          "displayName": "Format de Projection & Salles Premium",
+          "description": "Déploiement des salles premium IMAX, 4DX, Dolby Cinema et séances 3D. Termes liés & Ontologies : Salles IMAX 4DX Dolby Cinema, Projection Numérique 4K, Majoration Billet Séance Premium, Expérience Spectateur."
+        },
+        {
+          "displayName": "Taux d'Occupation Fauteuils par Séance",
+          "description": "Optimisation des grilles d'horaires et rentabilité par fauteuil de cinéma. Termes liés & Ontologies : Taux d'Occupation Séance, Séances du Soir & Week-End, Optimisation Grille de Horaires, Rentabilité par Salle."
         }
       ]
     }
