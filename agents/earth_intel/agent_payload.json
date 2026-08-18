@@ -1,9 +1,9 @@
 {
-  "displayName": "EarthIntel - Imagerie Satellitaire & Géospatial",
-  "description": "Analyste de résilience globale et d'intelligence géospatiale : observe les sites industriels et logistiques en temps réel grâce à la constellation satellitaire Sentinel-2, évalue les risques d'inondation/incendie (FSI), les vecteurs d'épidémies (Santé), les indices NDVI de récolte (Agriculture), les goulots portuaires (Transports), la surcroissance d'arbres sous lignes HT (Énergie), la conformité CSRD Zéro Déforestation (Retail), l'étalement urbain (Secteur Public), les obstacles 5G (Télécoms), la couverture de neige (Divertissement) et les îlots de chaleur autour des stades (Sport).",
+  "displayName": "EarthIntel - Imagerie Satellitaire & Intelligence Géospatiale",
+  "description": "Copilote géospatial universel et d'intelligence planétaire (Sentinel-2 / Copernicus) : unifie l'imagerie satellitaire stockée en buckets Cloud Storage (GCS Object Tables) et les données relationnelles BigQuery pour surveiller les risques d'inondation et d'incendie (Assurance/FSI), le stress hydrique et l'indice NDVI des récoltes (Agriculture), la surcroissance végétale sous les lignes HT (Énergie), la conformité Zéro Déforestation CSRD (Retail/CPG), l'étalement urbain et les îlots de chaleur (Secteur Public & Sport).",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de l'entreprise. Ton rôle principal est de fournir une analyse de données fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery.\n\n🔒 SÉCURITÉ DE L'IMAGERIE SPATIALE ET SITES SENSIBLES :\n- Confidentialité des coordonnées précises d'actifs industriels et militaires.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information issue des tables structurées, semi-structurées et non-structurées (fichiers PDF, images produits/satellites, documents stockés dans Cloud Storage Object Tables).\n- Traitement multimodal direct des fichiers images PNG Quicklook Sentinel-2 dans Google Cloud Storage (Object Tables GCS).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos journaux de données indiquent...' ou 'Le bilan des activités montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de Earth Intel. Ton rôle principal est de fournir une analyse de données géospatiales et satellitaires fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery et des objets Cloud Storage.\n\n🔒 SÉCURITÉ DE L'IMAGERIE SPATIALE ET SITES SENSIBLES :\n- Confidentialité des coordonnées précises d'actifs industriels et militaires.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information géospatiale issue des tables structurées et des objets imagerie GCS (clichés satellites Sentinel-2, indices NDVI/NDWI, alertes inondations/incendies, audits d'exposition d'actifs et certificats de déforestation CSRD).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos registres géospatiaux indiquent...' ou 'Le bilan d'observation satellitaire montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
@@ -20,32 +20,29 @@
             {
               "projectId": "${PROJECT_ID}",
               "datasetId": "skywatch_aerospace_ds",
-              "tableId": "sentinel2_object_table"
+              "tableId": "satellites_constellations_metadonnees"
             },
             {
-              "projectId": "bigquery-public-data",
-              "datasetId": "cloud_storage_geo_index",
-              "tableId": "sentinel_2_index"
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "skywatch_aerospace_ds",
+              "tableId": "inondations_incendies_alertes"
+            },
+            {
+              "projectId": "${PROJECT_ID}",
+              "datasetId": "skywatch_aerospace_ds",
+              "tableId": "deforestation_csrd_verification"
             }
           ]
         }
       },
       "exampleQueries": [
         {
-          "naturalLanguageQuestion": "FSI / Assurance : Évalue le risque d'inondation et d'incendie autour des coordonnées GPS de notre portefeuille d'actifs immobiliers assurés et montre le cliché satellite de preuve.",
+          "naturalLanguageQuestion": "Banque & Assurance : Évalue le risque d'inondation et d'incendie autour des coordonnées GPS de notre portefeuille d'actifs immobiliers et montre le cliché satellite de preuve.",
           "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.flood_risk_score, c.fire_risk_score, s.acquisition_date, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector = 'Banque & Assurance' ORDER BY c.flood_risk_score DESC LIMIT 5"
-        },
-        {
-          "naturalLanguageQuestion": "Santé & Pharma : Surveille les zones d'eaux stagnantes autour de nos complexes pharmaceutiques pour anticiper la prolifération des moustiques vecteurs d'épidémies.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.stagnant_water_km2, c.mosquito_outbreak_risk, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector = 'Santé & Pharma' ORDER BY c.stagnant_water_km2 DESC LIMIT 5"
         },
         {
           "naturalLanguageQuestion": "Agriculture : Analyse l'indice de végétation (NDVI) de nos domaines céréaliers et viticoles pour anticiper les baisses de rendement.",
           "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.ndvi_vegetation_index, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Agriculture%' ORDER BY c.ndvi_vegetation_index ASC LIMIT 5"
-        },
-        {
-          "naturalLanguageQuestion": "Transports : Observe le nombre de porte-conteneurs en attente et la congestion dans nos terminaux portuaires pour dévier les flux logistiques.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.port_container_ships_waiting, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Transports%' ORDER BY c.port_container_ships_waiting DESC LIMIT 5"
         },
         {
           "naturalLanguageQuestion": "Énergie : Détecte la surcroissance d'arbres à proximité de nos lignes haute tension pour planifier l'élagage prédictif.",
@@ -53,29 +50,17 @@
         },
         {
           "naturalLanguageQuestion": "Retail & CPG : Prouve scientifiquement que notre approvisionnement en soja/cacao provient de zones certifiées Zéro Déforestation CSRD.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.csrd_compliance_status, c.deforestation_rate_pct_5y, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Retail%' LIMIT 5"
-        },
-        {
-          "naturalLanguageQuestion": "Secteur Public : Cartographie les îlots de chaleur urbains et l'étalement urbain de nos métropoles pour guider l'aménagement.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.urban_heat_island_celsius, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Public%' ORDER BY c.urban_heat_island_celsius DESC LIMIT 5"
-        },
-        {
-          "naturalLanguageQuestion": "Télécoms : Analyse la densité de canopée forestière formant obstacle physique aux ondes 5G pour planifier l'emplacement de nos antennes.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.canopy_density_5g_obstacle_pct, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Télécoms%' ORDER BY c.canopy_density_5g_obstacle_pct DESC LIMIT 5"
-        },
-        {
-          "naturalLanguageQuestion": "Divertissement : Trouve les sites de tournage de montagne affichant le plus haut taux d'enneigement historique garanti pour nos décors de cinéma.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.snow_cover_historical_pct, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Divertissement%' ORDER BY c.snow_cover_historical_pct DESC LIMIT 5"
-        },
-        {
-          "naturalLanguageQuestion": "Sport & Infrastructures : Évalue l'indice de chaleur et la couverture végétale d'ombrage autour du Stade de France pour concevoir nos îlots de fraîcheur.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.urban_heat_island_celsius, c.stadium_green_cooling_canopy_pct, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Sport%' ORDER BY c.urban_heat_island_celsius DESC LIMIT 5"
+          "sqlQuery": "SELECT c.company_name, c.asset_name, v.commodity_type, v.sourcing_country, v.verified_deforestation_free, v.canopy_loss_hectares, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.deforestation_csrd_verification` v ON c.asset_id = v.asset_id JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE v.verified_deforestation_free = TRUE LIMIT 5"
         }
       ],
       "glossaryTerms": [
         {
-          "displayName": "Imagerie ESA Sentinel-2 & Object Table BigQuery",
+          "displayName": "Imagerie ESA Sentinel-2 & Object Tables GCS",
           "description": "Accès direct aux clichés satellites réels de 10m de résolution spatiale pour certifier visuellement la réalité terrain."
+        },
+        {
+          "displayName": "Conformité CSRD & Zéro Déforestation",
+          "description": "Verification spatio-temporelle de l'absence de déforestation sur les bassins d'approvisionnement."
         }
       ]
     }

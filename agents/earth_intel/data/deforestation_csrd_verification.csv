@@ -1,0 +1,7 @@
+verification_id,asset_id,commodity_type,sourcing_country,verified_deforestation_free,canopy_loss_hectares,audit_date
+CSRD-2026-001,AST-SANTE-01,Huile de Palme,Indonésie,True,0.12,2026-08-01
+CSRD-2026-002,AST-SANTE-02,Cacao,Côte d'Ivoire,True,0.4,2026-08-01
+CSRD-2026-003,AST-AGRI-01,Huile de Palme,Indonésie,True,0.08,2026-08-01
+CSRD-2026-004,AST-AGRI-02,Cacao,Côte d'Ivoire,True,0.18,2026-08-01
+CSRD-2026-005,AST-RETAIL-01,Bois / Pâte à papier,Finlande,True,0.1,2026-08-01
+CSRD-2026-006,AST-RETAIL-02,Soja,Brésil,True,0.2,2026-08-01

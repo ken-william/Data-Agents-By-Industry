@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Deployment script for EarthIntel BigQuery Data Agent using geminidataanalytics.googleapis.com API.
+Deployment and Update script for Earth Intel BigQuery Data Agent (earthintel-agent)
+using geminidataanalytics.googleapis.com API.
 """
 
 import os
@@ -16,44 +17,33 @@ def deploy_earthintel_agent():
 
     print(f"Deploying EarthIntel Data Agent to Project: '{project_id}', Location: '{location}', Agent ID: '{agent_id}'...")
 
-    # Load payload configuration
-    payload_path = os.path.join(os.path.dirname(__file__), "earthintel_payload.json")
+    payload_path = os.path.join(os.path.dirname(__file__), "agent_payload.json")
     with open(payload_path, "r", encoding="utf-8") as f:
         raw_payload = f.read()
 
-    # Substitute project ID placeholder
     hydrated_payload = json.loads(raw_payload.replace("${PROJECT_ID}", project_id))
-
-    # Obtain token via gcloud CLI
     token = subprocess.check_output(["gcloud", "auth", "print-access-token"]).decode("utf-8").strip()
 
-    # API Endpoint
-    endpoint = f"https://geminidataanalytics.googleapis.com/v1alpha/projects/{project_id}/locations/{location}/dataAgents?dataAgentId={agent_id}"
+    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
 
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json"
-    }
+    # Check if agent exists
+    get_url = f"https://geminidataanalytics.googleapis.com/v1alpha/projects/{project_id}/locations/{location}/dataAgents/{agent_id}"
+    get_resp = requests.get(get_url, headers=headers)
 
-    response = requests.post(endpoint, headers=headers, json=hydrated_payload)
+    if get_resp.status_code == 200:
+        print(f"Data Agent '{agent_id}' already exists. Updating configuration via PATCH...")
+        patch_url = f"{get_url}?updateMask=displayName,description,dataAnalyticsAgent"
+        response = requests.patch(patch_url, headers=headers, json=hydrated_payload)
+    else:
+        print(f"Creating new Data Agent '{agent_id}' via POST...")
+        post_url = f"https://geminidataanalytics.googleapis.com/v1alpha/projects/{project_id}/locations/{location}/dataAgents?dataAgentId={agent_id}"
+        response = requests.post(post_url, headers=headers, json=hydrated_payload)
 
     if response.status_code in [200, 201]:
-        print(f"✅ Successfully created EarthIntel Data Agent! (ID: {agent_id})")
-        print("Response payload:")
-        print(json.dumps(response.json(), indent=2, ensure_ascii=False))
-    elif response.status_code == 409:
-        print(f"Data Agent '{agent_id}' already exists. Updating configuration...")
-        patch_endpoint = f"https://geminidataanalytics.googleapis.com/v1alpha/projects/{project_id}/locations/{location}/dataAgents/{agent_id}?updateMask=displayName,description,dataAnalyticsAgent"
-        patch_response = requests.patch(patch_endpoint, headers=headers, json=hydrated_payload)
-        if patch_response.status_code in [200, 201]:
-            print(f"✅ Successfully updated EarthIntel Data Agent configuration! (ID: {agent_id})")
-            print(json.dumps(patch_response.json(), indent=2, ensure_ascii=False))
-        else:
-            print("Update Status Code:", patch_response.status_code)
-            print(patch_response.text)
-    else:
-        print(f"API Error ({response.status_code}):")
+        print(f"✅ Successfully updated EarthIntel Data Agent configuration! (ID: {agent_id})")
         print(response.text)
+    else:
+        print(f"API Error ({response.status_code}):", response.text)
 
 if __name__ == "__main__":
     deploy_earthintel_agent()

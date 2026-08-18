@@ -1,0 +1,5 @@
+satellite_id,operator,spatial_resolution_m,revisit_time_days,spectral_bands_count,orbit_type
+SENTINEL-2A,ESA / Copernicus,10.0,5,13,Orbite Héliosynchrone LEO
+SENTINEL-2B,ESA / Copernicus,10.0,5,13,Orbite Héliosynchrone LEO
+LANDSAT-9,NASA / USGS,15.0,8,11,Orbite Héliosynchrone LEO
+COPERNICUS-DEM,ESA / DLR,30.0,30,1,Modèle Numérique de Terrain
