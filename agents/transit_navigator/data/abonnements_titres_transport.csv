@@ -1,0 +1,6 @@
+subscription_plan_id,plan_name,category,monthly_price_eur,valid_zones,is_employer_subsidized
+SUB-NAV-MONTH,Pass Navigo Mois,Urbain Île-de-France,86.4,Zones 1 à 5,True
+SUB-NAV-YEAR,Pass Navigo Annuel,Urbain Île-de-France,950.4,Toutes Zones IDF,True
+SUB-TER-ILICO,Pass TER Ilico Mensuel,Régional TER,65.0,Réseau Régional TER,True
+SUB-TGV-MAX,Abonnement TGV Max,Grande Vitesse TGV,79.0,Réseau National TGV,False
+SUB-NAV-LIB,Pass Navigo Liberté+,Urbain Île-de-France,0.0,Paris & Petite Couronne,True
