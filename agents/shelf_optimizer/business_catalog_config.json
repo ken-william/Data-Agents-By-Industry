@@ -1,0 +1,59 @@
+{
+  "agent_id": "shelf-optimizer-agent",
+  "displayName": "ShelfOptimizer - Retail & CPG",
+  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/retail-cpg-glossary",
+  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/retail-cpg-catalog",
+  "business_glossary": {
+    "displayName": "Glossaire Métier Retail & CPG",
+    "description": "Glossaire Nutri-Score, additifs alimentaires E250 et démarque 14 jours pour ShelfOptimizer.",
+    "categories": [
+      {
+        "categoryId": "qualite-nutritionnelle",
+        "displayName": "Catégorie : Nutri-Score & Composition Alimentaire",
+        "description": "Formulation des produits, classement Nutri-Score et additifs nitrités E250",
+        "terms": [
+          {
+            "termId": "nutri-score-ab",
+            "displayName": "Indice Nutritionnel Nutri-Score (A à E)",
+            "definition": "Classement officiel de qualité nutritionnelle des produits alimentaires de A à E.",
+            "mapped_bigquery_column": "nutri_score",
+            "mapped_bigquery_table": "openfoodfacts_catalog"
+          },
+          {
+            "termId": "additifs-e250",
+            "displayName": "Additifs Controversés & Nitrites E250",
+            "definition": "Présence d'additifs ou conservateurs nitrités nécessitant des alternatives Bio.",
+            "mapped_bigquery_column": "additifs_problematiques",
+            "mapped_bigquery_table": "openfoodfacts_catalog"
+          }
+        ]
+      },
+      {
+        "categoryId": "operations-demarque",
+        "displayName": "Catégorie : Pertes & Démarque Magasins",
+        "description": "Gestion de la démarque connue et optimisation du chiffre d'affaires au m2",
+        "terms": [
+          {
+            "termId": "demarque-14-jours",
+            "displayName": "Pertes Démarque Frais (14 jours)",
+            "definition": "Valeur en euros des produits alimentaires jetés ou périmés à 14 jours de DLC.",
+            "mapped_bigquery_column": "demarque_pertes_produits_frais_14j_eur",
+            "mapped_bigquery_table": "retail_frequentation_magasins"
+          },
+          {
+            "termId": "bundle-mdd-carrefour",
+            "displayName": "Offres Combinées MDD & Bio",
+            "definition": "Positionnement tarifaire des marques de distributeurs face aux marques nationales.",
+            "mapped_bigquery_column": "rayon_categorie",
+            "mapped_bigquery_table": "openfoodfacts_catalog"
+          }
+        ]
+      }
+    ]
+  },
+  "data_governance": {
+    "sla_tier": "Tier-1 Executive 24/7",
+    "criticality_level": "Mission Critical",
+    "data_sensitivity": "Internal Enterprise"
+  }
+}
