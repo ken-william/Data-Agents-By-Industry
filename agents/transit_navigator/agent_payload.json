@@ -61,19 +61,23 @@
       "glossaryTerms": [
         {
           "displayName": "Fréquentation des Gares SNCF",
-          "description": "Volumes de voyageurs annuels enregistrés dans les 3 000+ gares de France."
+          "description": "Volumes annuels de voyageurs enregistrés dans les 3 000+ gares de France."
         },
         {
-          "displayName": "Régularité & Retards Ferroviaires",
-          "description": "Indicateurs de ponctualité, minutes de retard et annulations de trains par axe TGV/TER."
+          "displayName": "Régularité & Retards Ferroviaires (SLA)",
+          "description": "Indicateurs de ponctualité à l'arrivée <5min, minutes de retard et annulations de trains TGV/TER."
         },
         {
-          "displayName": "Usagers & Coordonnées GEOGRAPHY Domicile-Travail",
-          "description": "Profils des abonnés et coordonnées spatiales ST_GEOGPOINT pour l'analyse des flux domicile-travail."
+          "displayName": "Validations & Badgeages Portillons",
+          "description": "Historique horodaté des entrées aux arrêts et gares par mode RER, Métro, TGV, TER, Tramway."
         },
         {
-          "displayName": "Validations & Objets Trouvés",
-          "description": "Rapprochement des badgeages aux portillons et traçabilité des déclarations d'objets perdus."
+          "displayName": "Coordonnées GEOGRAPHY Domicile-Travail",
+          "description": "Localisation spatiale ST_GEOGPOINT des abonnés Navigo/Pass pour l'analyse des flux domicile-travail."
+        },
+        {
+          "displayName": "Objets Trouvés en Gare & Traçabilité",
+          "description": "Registre des déclarations de perte et restitution rapproché des badgeages usagers."
         }
       ]
     }

@@ -8,44 +8,34 @@
     "description": "Glossaire des urgences hospitalières, stocks de médicaments et démographie médicale pour PulseChecker.",
     "categories": [
       {
-        "categoryId": "pharmacovigilance-stocks",
-        "displayName": "Catégorie : Stocks & Urgences Médicales",
-        "description": "Alertes de ruptures d'urgence sur les antibiotiques et molécules d'urgence hospitalières",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "rupture-stock-urgences",
-            "displayName": "Rupture de Stock d'Urgence",
-            "definition": "Alerte de pénurie de médicaments essentiels (antibiotiques, pédiatrie) < 14 jours.",
-            "mapped_bigquery_column": "statut_risque_rupture",
-            "mapped_bigquery_table": "hopitaux_etablissements_sante"
+            "termId": "déserts-médicaux-&-démographie-rpps",
+            "displayName": "Déserts Médicaux & Démographie RPPS",
+            "definition": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités de cliniques privées."
           },
           {
-            "termId": "tension-antibiotiques",
-            "displayName": "Niveau de Stock Antibiotiques (Jours)",
-            "definition": "Autonomie en jours de stock d'antibiotiques critiques.",
-            "mapped_bigquery_column": "niveau_stock_antibiotiques_jours",
-            "mapped_bigquery_table": "hopitaux_etablissements_sante"
-          }
-        ]
-      },
-      {
-        "categoryId": "prescriptions-demographie",
-        "displayName": "Catégorie : Prescriptions AMELI & Démographie RPPS",
-        "description": "Remboursements de biologie et densité de professionnels de santé par territoire",
-        "terms": [
-          {
-            "termId": "open-medic-prescriptions",
-            "displayName": "Prescriptions Open Medic AMELI",
-            "definition": "Volume et montants remboursés par la Sécurité Sociale sur les molécules pharmaceutiques.",
-            "mapped_bigquery_column": "montant_rembourse_secu_eur",
-            "mapped_bigquery_table": "ameli_prescriptions_open_medic"
+            "termId": "ruptures-de-stock-&-tension-médicamenteuse",
+            "displayName": "Ruptures de Stock & Tension Médicamenteuse",
+            "definition": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement."
           },
           {
-            "termId": "deserts-medicaux",
-            "displayName": "Déserts Médicaux & Densité RPPS",
-            "definition": "Densité de médecins généralistes et spécialistes pour 100 000 habitants par commune.",
-            "mapped_bigquery_column": "densite_medecins_pour_100k_hab",
-            "mapped_bigquery_table": "demographie_medecins_rpps"
+            "termId": "saturation-des-urgences-&-plans-blancs",
+            "displayName": "Saturation des Urgences & Plans Blancs",
+            "definition": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire."
+          },
+          {
+            "termId": "programmation-des-blocs-opératoires",
+            "displayName": "Programmation des Blocs Opératoires",
+            "definition": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes."
+          },
+          {
+            "termId": "open-bio-&-dépenses-de-biologie-médicale",
+            "displayName": "Open BIO & Dépenses de Biologie Médicale",
+            "definition": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts."
           }
         ]
       }

@@ -46,12 +46,20 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "ARCEP Mon Réseau Mobile",
-          "description": "Base de données statistique et cartographique officielle de l'Autorité de Régulation des Communications Électroniques, des Postes et de la Distribution de la Presse."
+          "displayName": "Mon Réseau Mobile ARCEP",
+          "description": "Observatoire officiel de la couverture 2G/3G/4G/5G des 4 opérateurs nationaux."
         },
         {
-          "displayName": "Bande Cœur 5G 3.5 GHz",
-          "description": "Bande de fréquences dédiée apportant l'Ultra Haut Débit mobile et les temps de réponse millisecondes."
+          "displayName": "Cartographie des 10 000 Antennes Relais",
+          "description": "Suivi des pylônes Orange, SFR, Bouygues Telecom, Free Mobile et bandes de fréquences 3.5 GHz."
+        },
+        {
+          "displayName": "Qualité de Service (QoS Débits & Latence)",
+          "description": "Mesures de débit descendant/montant en Mbps, latence ms et taux de coupure."
+        },
+        {
+          "displayName": "Gestion des Incidents d'Équipements",
+          "description": "Alertes de panne matérielle, pannes d'énergie sur antennes et SLA de rétablissement."
         }
       ]
     }

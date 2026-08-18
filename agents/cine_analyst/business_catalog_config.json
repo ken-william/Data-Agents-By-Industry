@@ -8,44 +8,29 @@
     "description": "Glossaire de subventions CNC, risque de flop film et sièges immersifs 4DX pour CineAnalyst.",
     "categories": [
       {
-        "categoryId": "salles-premium-4dx",
-        "displayName": "Catégorie : Salles Immersives 4DX & Popcorn",
-        "description": "Valorisation de l'expérience en salles et des ventes annexes au fauteuil",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "sieges-4dx-immersifs",
-            "displayName": "Sièges Immersifs 4DX & Cabines Premium (+35%)",
-            "definition": "Pourcentage de fauteuils 4DX/Dolby permettant d'augmenter le billet de +35%.",
-            "mapped_bigquery_column": "part_sieges_immersifs_4dx_pct",
-            "mapped_bigquery_table": "cnc_salles_cinema"
+            "termId": "séries-historiques-cnc-box-office",
+            "displayName": "Séries Historiques CNC Box-Office",
+            "definition": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945."
           },
           {
-            "termId": "ventes-popcorn-fauteuil",
-            "displayName": "Ventes Annexes Concessions Popcorn / Fauteuil",
-            "definition": "Dépense moyenne en confiserie et popcorn par siège disponible.",
-            "mapped_bigquery_column": "ventes_annexes_popcorn_par_fauteuil_eur",
-            "mapped_bigquery_table": "cnc_salles_cinema"
-          }
-        ]
-      },
-      {
-        "categoryId": "subventions-programmation",
-        "displayName": "Catégorie : Aides CNC & Flops Films",
-        "description": "Prédiction des échecs de blockbusters et ROI des aides publiques du CNC",
-        "terms": [
-          {
-            "termId": "risque-flop-film",
-            "displayName": "Risque Prédit de Flop Film Blockbuster (>60%)",
-            "definition": "Indicateur de prédiction de flop en salles basé sur un score TikTok/X faible.",
-            "mapped_bigquery_column": "risque_predit_flop_pct",
-            "mapped_bigquery_table": "cnc_films_programmation_flops"
+            "termId": "indicateurs-de-fréquentation-&-prix-billet",
+            "displayName": "Indicateurs de Fréquentation & Prix Billet",
+            "definition": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles."
           },
           {
-            "termId": "subventions-cnc-roi",
-            "displayName": "ROI Subventions & Avances sur Recettes CNC",
-            "definition": "Nombre d'entrées en salles générées par euro de subvention publique alloué.",
-            "mapped_bigquery_column": "roi_entrees_par_euro_subventionne",
-            "mapped_bigquery_table": "cnc_aides_financieres"
+            "termId": "répartition-par-genres-&-nationalités",
+            "displayName": "Répartition par Genres & Nationalités",
+            "definition": "Performances comparées des films français, américains et art & essai par territoire."
+          },
+          {
+            "termId": "parc-des-établissements-&-multiplexes",
+            "displayName": "Parc des Établissements & Multiplexes",
+            "definition": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes."
           }
         ]
       }

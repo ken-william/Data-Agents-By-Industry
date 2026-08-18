@@ -61,12 +61,24 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "RPPS & Déserts Médicaux",
-          "description": "Répertoire des professionnels de santé permettant d'identifier la densité médicale par territoire et de guider l'implantation d'établissements de santé."
+          "displayName": "Déserts Médicaux & Démographie RPPS",
+          "description": "Répertoire Partagé des Professionnels de Santé, densité pour 100k hab, opportunités de cliniques privées."
         },
         {
-          "displayName": "Plan Blanc Hospitalier",
-          "description": "Dispositif d'urgence mobilisant l'ensemble des capacités d'accueil hospitalières en cas de saturation extrême."
+          "displayName": "Ruptures de Stock & Tension Médicamenteuse",
+          "description": "Suivi de stock critique d'antibiotiques, insuline, anesthésiants, sécurité d'approvisionnement."
+        },
+        {
+          "displayName": "Saturation des Urgences & Plans Blancs",
+          "description": "Taux d'occupation des lits, temps d'attente aux urgences, déclenchement des plans d'urgence sanitaire."
+        },
+        {
+          "displayName": "Programmation des Blocs Opératoires",
+          "description": "Taux d'occupation des salles de chirurgie, optimisation des vacations médicales et gardes."
+        },
+        {
+          "displayName": "Open BIO & Dépenses de Biologie Médicale",
+          "description": "Actes de biologie médicale remboursés par l'Assurance Maladie AMELI, maîtrise des coûts."
         }
       ]
     }

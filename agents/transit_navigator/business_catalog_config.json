@@ -8,93 +8,34 @@
     "description": "Glossaire de régularité ferroviaire, ponctualité TER/TGV et Yield Management pour TransitNavigator.",
     "categories": [
       {
-        "categoryId": "qualite-de-service-sla",
-        "displayName": "Catégorie : Ponctualité & SLA Ferroviaire",
-        "description": "Mesure des pénalités de retard et du taux de régularité des lignes SNCF",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "regularite-ferroviaire",
-            "displayName": "Taux de Régularité & Ponctualité Ferroviaire",
-            "definition": "Pourcentage de trains arrivés à l'heure (SLA ponctualité SNCF).",
-            "mapped_bigquery_column": "taux_regularite_ponctualite_pct",
-            "mapped_bigquery_table": "sncf_regularite_lignes"
+            "termId": "fréquentation-des-gares-sncf",
+            "displayName": "Fréquentation des Gares SNCF",
+            "definition": "Volumes annuels de voyageurs enregistrés dans les 3 000+ gares de France."
           },
           {
-            "termId": "retard-moyen-minutes",
-            "displayName": "Retard Moyen par Ligne (Minutes)",
-            "definition": "Temps moyen de retard accumulé par les voyageurs sur un axe ferroviaire.",
-            "mapped_bigquery_column": "retard_moyen_minutes",
-            "mapped_bigquery_table": "sncf_regularite_lignes"
-          }
-        ]
-      },
-      {
-        "categoryId": "yield-frequentation",
-        "displayName": "Catégorie : Yield Management & Trafic Gares",
-        "description": "Optimisation des recettes voyageurs et fréquentation des gares TGV",
-        "terms": [
-          {
-            "termId": "yield-management-1er",
-            "displayName": "Yield Management 1ère Classe",
-            "definition": "Taux de remplissage et optimisation tarifaire des voitures 1ère classe TGV.",
-            "mapped_bigquery_column": "taux_remplissage_1ere_classe_pct",
-            "mapped_bigquery_table": "frequentation_gares_sncf"
+            "termId": "régularité-&-retards-ferroviaires-sla",
+            "displayName": "Régularité & Retards Ferroviaires (SLA)",
+            "definition": "Indicateurs de ponctualité à l'arrivée <5min, minutes de retard et annulations de trains TGV/TER."
           },
           {
-            "termId": "frequentation-gares-tgv",
-            "displayName": "Fréquentation Annuelle des Gares",
-            "definition": "Volume annuel de voyageurs enregistrés dans les gares régionales et TGV.",
-            "mapped_bigquery_column": "nombre_voyageurs_annuel",
-            "mapped_bigquery_table": "frequentation_gares_sncf"
-          }
-        ]
-      },
-      {
-        "categoryId": "profils-voyageurs-et-localisations",
-        "displayName": "Catégorie : Profils Usagers & GEOGRAPHY Domicile-Travail",
-        "description": "Profils des abonnés, coordonnées spatiales Domicile/Travail et fréquences de mobilité",
-        "terms": [
-          {
-            "termId": "passenger-geography-home",
-            "displayName": "Localisation Domicile Voyageur (GEOGRAPHY)",
-            "definition": "Coordonnées spatiale POINT(lat, lon) du domicile de l'usager.",
-            "mapped_bigquery_column": "home_location",
-            "mapped_bigquery_table": "usagers_profils"
+            "termId": "validations-&-badgeages-portillons",
+            "displayName": "Validations & Badgeages Portillons",
+            "definition": "Historique horodaté des entrées aux arrêts et gares par mode RER, Métro, TGV, TER, Tramway."
           },
           {
-            "termId": "passenger-subscription-plan",
-            "displayName": "Abonnement Souscrit Usager",
-            "definition": "Rattachement du profil usager au catalogue de titres de transport.",
-            "mapped_bigquery_column": "subscription_plan_id",
-            "mapped_bigquery_table": "usagers_profils"
-          }
-        ]
-      },
-      {
-        "categoryId": "validations-parcours-station-mode",
-        "displayName": "Catégorie : Validations & Retraçage des Parcours",
-        "description": "Historique des badgeages aux bornes/arrêts, lignes empruntées et modes de transport",
-        "terms": [
+            "termId": "coordonnées-geography-domicile-travail",
+            "displayName": "Coordonnées GEOGRAPHY Domicile-Travail",
+            "definition": "Localisation spatiale ST_GEOGPOINT des abonnés Navigo/Pass pour l'analyse des flux domicile-travail."
+          },
           {
-            "termId": "validation-station-mode",
-            "displayName": "Station / Gare de Validation Voyageur",
-            "definition": "Lieu exact et heure de validation du titre de transport.",
-            "mapped_bigquery_column": "station_name",
-            "mapped_bigquery_table": "validations_trajets_voyageurs"
-          }
-        ]
-      },
-      {
-        "categoryId": "objets-trouves-tracabilite-usager",
-        "displayName": "Catégorie : Objets Trouvés & Traçabilité Usager",
-        "description": "Rapprochement des objets trouvés avec l'identité et le parcours du voyageur",
-        "terms": [
-          {
-            "termId": "incident-matched-validation",
-            "displayName": "Validation de Trajet Associée à l'Objet Perdu",
-            "definition": "Clé de correspondance pour retracer la gare et le train où l'objet a été égaré.",
-            "mapped_bigquery_column": "matched_journey_validation_id",
-            "mapped_bigquery_table": "sncf_objets_trouves"
+            "termId": "objets-trouvés-en-gare-&-traçabilité",
+            "displayName": "Objets Trouvés en Gare & Traçabilité",
+            "definition": "Registre des déclarations de perte et restitution rapproché des badgeages usagers."
           }
         ]
       }

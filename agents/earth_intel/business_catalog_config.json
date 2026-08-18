@@ -8,44 +8,34 @@
     "description": "Glossaire de tuiles Sentinel-2 MGRS, indice NDVI et risques climatiques pour EarthIntel.",
     "categories": [
       {
-        "categoryId": "observation-spatiale-mgrs",
-        "displayName": "Catégorie : Imagerie Sentinel-2 & Tuiles MGRS",
-        "description": "Indexation multispectrale et cartographie des coordonnées de tuiles spatiales",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "tuile-sentinel2-mgrs",
-            "displayName": "Clichés Satellite Sentinel-2 & Tuiles MGRS",
-            "definition": "Images multispectrales ESA Sentinel-2 cartographiées par coordonnées MGRS.",
-            "mapped_bigquery_column": "mgrs_tile",
-            "mapped_bigquery_table": "company_assets"
+            "termId": "imagerie-esa-sentinel-2-&-gcs-object-tables",
+            "displayName": "Imagerie ESA Sentinel-2 & GCS Object Tables",
+            "definition": "Accès direct aux scènes satellitaires de 10m de résolution et fichiers Quicklook PNG."
           },
           {
-            "termId": "quicklook-sat",
-            "displayName": "Aperçus PNG Visuels Quicklook Satellite",
-            "definition": "Fichiers images d'observation orbitale enregistrés dans Google Cloud Storage.",
-            "mapped_bigquery_column": "quicklook_image_url",
-            "mapped_bigquery_table": "company_assets"
-          }
-        ]
-      },
-      {
-        "categoryId": "risques-et-infrastructure",
-        "displayName": "Catégorie : Indice NDVI & Logistics Spatiales",
-        "description": "Indicateurs d'obstacles 5G, congestion portuaire et sécheresse de la biomasse",
-        "terms": [
-          {
-            "termId": "indice-ndvi-vegetation",
-            "displayName": "Indice de Végétation NDVI & Rendements",
-            "definition": "Indice de santé de la canopée et de la biomasse végétale mesuré par satellite.",
-            "mapped_bigquery_column": "ndvi_vegetation_index",
-            "mapped_bigquery_table": "company_assets"
+            "termId": "risques-inondation,-incendie-&-fsi",
+            "displayName": "Risques Inondation, Incendie & FSI",
+            "definition": "Scores d'exposition des actifs immobiliers assurés aux aléas climatiques majeurs."
           },
           {
-            "termId": "congestion-portuaire-conteneurs",
-            "displayName": "Congestion Portuaire Navires Conteneurs",
-            "definition": "Nombre de porte-conteneurs en attente d'accostage détectés par imagerie spatiale.",
-            "mapped_bigquery_column": "port_container_ships_waiting",
-            "mapped_bigquery_table": "company_assets"
+            "termId": "indice-végétation-ndvi-&-stress-hydrique",
+            "displayName": "Indice Végétation NDVI & Stress Hydrique",
+            "definition": "Mesure spatiale de la santé des cultures céréalières/viticoles et prévision de rendement."
+          },
+          {
+            "termId": "surveillance-canopée-lignes-ht-énergie",
+            "displayName": "Surveillance Canopée Lignes HT (Énergie)",
+            "definition": "Distance de frondaison d'arbres sous lignes électriques haute tension pour élagage prédictif."
+          },
+          {
+            "termId": "conformité-csrd-&-zéro-déforestation",
+            "displayName": "Conformité CSRD & Zéro Déforestation",
+            "definition": "Attestations scientifiques de non-déforestation sur les bassins de sourcing soja/cacao/palme."
           }
         ]
       }

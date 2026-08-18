@@ -51,12 +51,24 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Rupture Visuelle / Shelf Out",
-          "description": "Rupture de stock constatée directement au linéaire de vente, entraînant une perte de chiffre d'affaires immédiate."
+          "displayName": "Ruptures Visuelles en Rayon (Shelf-Out)",
+          "description": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires."
         },
         {
-          "displayName": "Cross-Selling MDD & Bundling",
-          "description": "Associations promotionnelles d'affinité entre marques nationales et marques de distributeurs à forte marge."
+          "displayName": "Démarque & Péremption Rayon Frais",
+          "description": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et casse."
+        },
+        {
+          "displayName": "Bundles Cross-Selling & Marge Brute",
+          "description": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD."
+        },
+        {
+          "displayName": "Profil Nutritionnel & Additifs (Nutri-Score & NOVA)",
+          "description": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4."
+        },
+        {
+          "displayName": "Fréquentation Magasins & Conversion Panier",
+          "description": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface."
         }
       ]
     }

@@ -8,44 +8,29 @@
     "description": "Glossaire d'empreinte carbone ADEME, stress hydrique ETP et conversion bio AB pour Ceres.",
     "categories": [
       {
-        "categoryId": "empreinte-ecologique",
-        "displayName": "Catégorie : Bilan Carbone ADEME & Impact Sols",
-        "description": "Indicateurs d'impact environnemental des produits issus d'Agribalyse ADEME",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "agribalyse-co2",
-            "displayName": "Empreinte Carbone Agribalyse ADEME",
-            "definition": "Émissions de CO2 kg/kg de produit agricole selon la base officielle ADEME.",
-            "mapped_bigquery_column": "co2_kg_par_kg_produit",
-            "mapped_bigquery_table": "ademe_impact_agribalyse"
+            "termId": "analyse-du-cycle-de-vie-acv-ademe-agribalyse-3.1",
+            "displayName": "Analyse du Cycle de Vie (ACV) ADEME Agribalyse 3.1",
+            "definition": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles."
           },
           {
-            "termId": "acidification-sols",
-            "displayName": "Indice d'Acidification des Sols",
-            "definition": "Impact d'acidification des sols et eutrophisation de l'eau.",
-            "mapped_bigquery_column": "impact_acidification_sols",
-            "mapped_bigquery_table": "ademe_impact_agribalyse"
-          }
-        ]
-      },
-      {
-        "categoryId": "resilience-climatique",
-        "displayName": "Catégorie : Stress Hydrique & Conversion Agroécologique",
-        "description": "Mesure des risques sécheresse et certification de conversion bio AB",
-        "terms": [
-          {
-            "termId": "stress-hydrique-etp",
-            "displayName": "Indice de Stress Hydrique Evapotranspiration",
-            "definition": "Mesure du déficit hydrique des cultures face à la sécheresse et hausse des températures.",
-            "mapped_bigquery_column": "indice_stress_hydrique_evapotranspiration",
-            "mapped_bigquery_table": "meteo_climat_impact_agri"
+            "termId": "label-bas-carbone-&-crédits-carbone",
+            "displayName": "Label Bas-Carbone & Crédits Carbone",
+            "definition": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles."
           },
           {
-            "termId": "conversion-bio-ab",
-            "displayName": "Conversion Agroécologique Bio AB",
-            "definition": "Pourcentage de surface agricole SAU convertie en Agriculture Biologique (AB).",
-            "mapped_bigquery_column": "surface_bio_ab_ha",
-            "mapped_bigquery_table": "exploitations_agricoles"
+            "termId": "flux-coopératifs-&-rendements-récoltes",
+            "displayName": "Flux Coopératifs & Rendements Récoltes",
+            "definition": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives."
+          },
+          {
+            "termId": "rapports-de-performance-esg-investisseurs",
+            "displayName": "Rapports de Performance ESG Investisseurs",
+            "definition": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact."
           }
         ]
       }

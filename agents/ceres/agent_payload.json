@@ -71,16 +71,20 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Anomalies Météo d'Été & Prédiction de Rendement",
-          "description": "Croisement des écarts de températures et de pluviométrie saisonniers avec les surfaces agricoles par coopérative pour prédire les baisses de rendement > 20%."
+          "displayName": "Analyse du Cycle de Vie (ACV) ADEME Agribalyse 3.1",
+          "description": "Évaluation officielle de l'impact environnemental et de l'empreinte CO2e des produits agricoles."
         },
         {
-          "displayName": "Label Bas-Carbone & Prime 15%",
-          "description": "Valorisation premium du blé et des céréales issues d'exploitations certifiées à forte séquestration CO2."
+          "displayName": "Label Bas-Carbone & Crédits Carbone",
+          "description": "Valorisation des pratiques de séquestration de carbone dans les sols agricoles."
         },
         {
-          "displayName": "Rapport ESG Chaine d'Approvisionnement",
-          "description": "Synthèse consolidée d'empreinte carbone globale, de réduction d'IFT pesticides et de score ESG destinée aux investisseurs institutionnels."
+          "displayName": "Flux Coopératifs & Rendements Récoltes",
+          "description": "Suivi des volumes et de la santé financière des 450 000€+ de flux des coopératives."
+        },
+        {
+          "displayName": "Rapports de Performance ESG Investisseurs",
+          "description": "Indicateurs certifiés de durabilité environnementale pour les fonds à impact."
         }
       ]
     }

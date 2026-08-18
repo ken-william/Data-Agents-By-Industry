@@ -8,107 +8,29 @@
     "description": "Glossaire de pannes ARCEP, résiliation Churn B2B et forfait Smart 5G pour NetArch.",
     "categories": [
       {
-        "categoryId": "pannes-reseaux-arcep",
-        "displayName": "Catégorie : Incidents Réseau & Pannes ARCEP",
-        "description": "Suivi des micro-coupures de routeurs B2B et signalements d'abonnés",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "signalements-arcep",
-            "displayName": "Signalements Pannes J'alerte l'ARCEP",
-            "definition": "Niveau d'incidents et pannes signalés par les abonnés fixes et mobiles.",
-            "mapped_bigquery_column": "statut_incident_reseau",
-            "mapped_bigquery_table": "arcep_signalements_utilisateurs"
+            "termId": "mon-réseau-mobile-arcep",
+            "displayName": "Mon Réseau Mobile ARCEP",
+            "definition": "Observatoire officiel de la couverture 2G/3G/4G/5G des 4 opérateurs nationaux."
           },
           {
-            "termId": "micro-coupures-routeur",
-            "displayName": "Micro-Coupures Routeurs B2B",
-            "definition": "Fréquence des déconnexions intempestives impactant les clients professionnels.",
-            "mapped_bigquery_column": "frequence_micro_coupures_mensuelles",
-            "mapped_bigquery_table": "arcep_signalements_utilisateurs"
-          }
-        ]
-      },
-      {
-        "categoryId": "retention-upsell-5g",
-        "displayName": "Catégorie : Churn B2B & Campagnes 5G",
-        "description": "Modèles prédictifs d'attrition et surcroît d'ARPU sur la 5G Pro",
-        "terms": [
-          {
-            "termId": "churn-b2b-resiliation",
-            "displayName": "Risque de Résiliation Client B2B (Churn)",
-            "definition": "Probabilité qu'un client professionnel résilie suite à des micro-coupures de routeur.",
-            "mapped_bigquery_column": "risque_resiliation_b2b_pct",
-            "mapped_bigquery_table": "abonnes_consommation_devices"
+            "termId": "cartographie-des-10-000-antennes-relais",
+            "displayName": "Cartographie des 10 000 Antennes Relais",
+            "definition": "Suivi des pylônes Orange, SFR, Bouygues Telecom, Free Mobile et bandes de fréquences 3.5 GHz."
           },
           {
-            "termId": "campagne-smart-5g",
-            "displayName": "Upsell Forfait Smart 5G & ARPU",
-            "definition": "Gain d'ARPU mensuel généré par la migration d'abonnés cuivre vers la 5G Pro.",
-            "mapped_bigquery_column": "gain_arpu_forfait_5g_max_eur",
-            "mapped_bigquery_table": "abonnes_consommation_devices"
-          }
-        ]
-      },
-      {
-        "categoryId": "antennes-et-infrastructures-reseau",
-        "displayName": "Catégorie : Antennes Relais & Défaillances Silencieuses",
-        "description": "Supervision des antennes mobiles 5G/4G, géolocalisation GEOGRAPHY et détection des silent_failure",
-        "terms": [
-          {
-            "termId": "antenna-silent-failure",
-            "displayName": "Antenne en Panne Silencieuse (Silent Failure)",
-            "definition": "Antenne relais subissant un dysfonctionnement non-remonté par la supervision standard.",
-            "mapped_bigquery_column": "silent_failure",
-            "mapped_bigquery_table": "antennes_relais_mobile"
+            "termId": "qualité-de-service-qos-débits-&-latence",
+            "displayName": "Qualité de Service (QoS Débits & Latence)",
+            "definition": "Mesures de débit descendant/montant en Mbps, latence ms et taux de coupure."
           },
           {
-            "termId": "antennes-coordonnees-geography",
-            "displayName": "Localisation Précise Antenne (GEOGRAPHY)",
-            "definition": "Coordonnées géographiques POINT(lat, lon) de l'antenne relais.",
-            "mapped_bigquery_column": "exact_location",
-            "mapped_bigquery_table": "antennes_relais_mobile"
-          }
-        ]
-      },
-      {
-        "categoryId": "traffic-flows-imei-forecasting",
-        "displayName": "Catégorie : Traffic Flows par IMEI & Latence ms",
-        "description": "Analyse des flux de trafic réseau mobile, consommation uplink/downlink et prédictions par terminal (IMEI)",
-        "terms": [
-          {
-            "termId": "network-traffic-imei",
-            "displayName": "Flux de Trafic Réseau par IMEI / SIM",
-            "definition": "Identification des flux de données mobiles par code IMEI et carte SIM.",
-            "mapped_bigquery_column": "imei",
-            "mapped_bigquery_table": "network_traffic_flows"
-          },
-          {
-            "termId": "latence-reseau-ms",
-            "displayName": "Latence Réseau Subie (Milliseconds)",
-            "definition": "Temps de réponse et délai du signal réseau mesuré en ms.",
-            "mapped_bigquery_column": "latency_ms",
-            "mapped_bigquery_table": "network_traffic_flows"
-          }
-        ]
-      },
-      {
-        "categoryId": "forfaits-et-facturation-depassements",
-        "displayName": "Catégorie : Catalogue Forfaits & Factures Dépassements",
-        "description": "Catalogue d'abonnements (eco, student, surf, max 5g, family, smart 5g) et détection des frais hors-forfait",
-        "terms": [
-          {
-            "termId": "catalogue-forfaits-plan-name",
-            "displayName": "Catalogue d'Abonnements Forfaits Télécoms",
-            "definition": "Gammes de forfaits (eco, student, surf, max 5g, family pro, smart 5g enterprise).",
-            "mapped_bigquery_column": "plan_name",
-            "mapped_bigquery_table": "forfaits_offres_abonnements"
-          },
-          {
-            "termId": "facturation-overage-fees",
-            "displayName": "Frais de Dépassement Hors-Forfait (Overage Fees)",
-            "definition": "Facturation des gigas de données consommés au-delà du quota souscrit.",
-            "mapped_bigquery_column": "overage_fees",
-            "mapped_bigquery_table": "facturation_depassements_clients"
+            "termId": "gestion-des-incidents-d'équipements",
+            "displayName": "Gestion des Incidents d'Équipements",
+            "definition": "Alertes de panne matérielle, pannes d'énergie sur antennes et SLA de rétablissement."
           }
         ]
       }

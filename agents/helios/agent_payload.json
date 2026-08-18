@@ -46,12 +46,20 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Enedis IRVE & Taux de Charge",
-          "description": "Indicateur d'analyse d'impact des bornes de recharge électriques sur le taux de charge et le risque de surtension des transformateurs HTA/BT."
+          "displayName": "Bornes de Recharge IRVE Enedis",
+          "description": "Cartographie des 10 000 points de charge pour véhicules électriques, puissance kW et connecteurs."
         },
         {
-          "displayName": "Flexibilité d'Effacement B2B",
-          "description": "Mécanisme permettant aux industriels de réduire temporairement leur appel de puissance lors des pics réseau."
+          "displayName": "Télémesure 30min Transformateurs HTA/BT",
+          "description": "Courbes de charge, détection des risques de surtension et saturation réseau."
+        },
+        {
+          "displayName": "Production d'Énergie Renouvelable (EnR)",
+          "description": "Injection solaire photovoltaïque et éolienne par territoire."
+        },
+        {
+          "displayName": "Flexibilité d'Effacement Industriel B2B",
+          "description": "Gisements de réduction de consommation des usines lors des pics de tension hivernaux."
         }
       ]
     }

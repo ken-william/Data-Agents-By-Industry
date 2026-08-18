@@ -8,58 +8,29 @@
     "description": "Glossaire prudentiel, risque de crédit et analyse financière B2B pour CreditAdvisor.",
     "categories": [
       {
-        "categoryId": "risques-prudentiel",
-        "displayName": "Catégorie : Risques de Crédit & Prudentiel",
-        "description": "Indicateurs prudentiels, prédiction de faillite et provisionnement des pertes d'emprunts IFRS 9",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "ratio-dscr",
-            "displayName": "Ratio DSCR (Debt Service Coverage Ratio)",
-            "definition": "Couverture du service de la dette via l'EBE. Mappé sur ratio_dscr dans encours_credit.",
-            "mapped_bigquery_column": "ratio_dscr",
-            "mapped_bigquery_table": "encours_credit"
+            "termId": "risque-de-défaillances-&-faillites-pme",
+            "displayName": "Risque de Défaillances & Faillites PME",
+            "definition": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers."
           },
           {
-            "termId": "probabilite-defaillance",
-            "displayName": "Probabilité de Défaillance à 6 Mois",
-            "definition": "Risque de faillite ou défaut de paiement à 6 mois. Mappé sur probabilite_defaillance_6m.",
-            "mapped_bigquery_column": "probabilite_defaillance_6m",
-            "mapped_bigquery_table": "encours_credit"
+            "termId": "enquêtes-octroi-de-crédit-bls-banque-de-france",
+            "displayName": "Enquêtes Octroi de Crédit BLS Banque de France",
+            "definition": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI."
           },
           {
-            "termId": "ecl-ifrs9-provision",
-            "displayName": "Montant ECL IFRS 9 (Expected Credit Loss)",
-            "definition": "Provisionnement prudentiel des pertes de crédit attendues sous la norme IFRS 9.",
-            "mapped_bigquery_column": "montant_ecl_ifrs9_eur",
-            "mapped_bigquery_table": "encours_credit"
+            "termId": "modélisation-ifrs-9-&-ecl",
+            "displayName": "Modélisation IFRS 9 & ECL",
+            "definition": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3."
           },
           {
-            "termId": "ratio-ltv",
-            "displayName": "Ratio LTV (Loan-to-Value)",
-            "definition": "Ratio entre le montant du prêt et la valeur du bien immobilier gagé.",
-            "mapped_bigquery_column": "ratio_ltv_pct",
-            "mapped_bigquery_table": "encours_credit"
-          }
-        ]
-      },
-      {
-        "categoryId": "analyse-financiere",
-        "displayName": "Catégorie : Analyse Financière & Solvabilité B2B",
-        "description": "Indicateurs bilanciels, rentabilité d'entreprise et cotation Banque de France",
-        "terms": [
-          {
-            "termId": "excedent-brut-exploitation",
-            "displayName": "Excédent Brut d'Exploitation (EBE)",
-            "definition": "Flux de trésorerie généré par l'activité opérationnelle de l'entreprise.",
-            "mapped_bigquery_column": "ebe_eur",
-            "mapped_bigquery_table": "bilans_financiers"
-          },
-          {
-            "termId": "solvabilite-b2b",
-            "displayName": "Ratio de Solvabilité & Fonds Propres",
-            "definition": "Part des fonds propres dans le bilan de l'entreprise.",
-            "mapped_bigquery_column": "ratio_solvabilite_pct",
-            "mapped_bigquery_table": "bilans_financiers"
+            "termId": "upsell-commercial-b2b-pme-résilientes",
+            "displayName": "Upsell Commercial B2B PME Résilientes",
+            "definition": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing."
           }
         ]
       }

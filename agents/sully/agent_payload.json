@@ -61,16 +61,24 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Taxonomie ROME 4.0 France Travail",
-          "description": "Classification officielle en 14 grands domaines et 12 243 appellations métiers ROME."
+          "displayName": "Enquête BMO 2025 (Besoins en Main-d'Œuvre)",
+          "description": "Prédictions officielles France Travail des besoins en recrutement par bassin d'emploi et secteur."
         },
         {
-          "displayName": "Besoins en Main d'Œuvre BMO 2025",
-          "description": "Projets de recrutement et taux de tension par bassin d'emploi et famille professionnelle."
+          "displayName": "Arborescence ROME 4.0",
+          "description": "Taxonomie officielle des 12 243 métiers et appellations de l'emploi en France."
         },
         {
-          "displayName": "Déclarations URSSAF & SIRET Entreprises",
-          "description": "Indexation de la masse salariale brute, effectifs ETP et obligation d'emploi handicap OETH."
+          "displayName": "Déclarations URSSAF & SIRENE",
+          "description": "Répertoire des 4 500 établissements employeurs, masse salariale, effectifs, et obligation OETH handicap 6%."
+        },
+        {
+          "displayName": "CVs PDF & Rapprochement Candidats (GCS)",
+          "description": "300 CVs PDF 1-page modèles Kengni stockés sur GCS et liés aux profils candidats."
+        },
+        {
+          "displayName": "Suivi des Candidatures ATS & Aides Formation",
+          "description": "Tunnel de recrutement, score de matching %, dispositifs et subventions de formation à l'embauche."
         }
       ]
     }

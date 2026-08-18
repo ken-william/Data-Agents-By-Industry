@@ -8,44 +8,34 @@
     "description": "Glossaire Nutri-Score, additifs alimentaires E250 et démarque 14 jours pour ShelfOptimizer.",
     "categories": [
       {
-        "categoryId": "qualite-nutritionnelle",
-        "displayName": "Catégorie : Nutri-Score & Composition Alimentaire",
-        "description": "Formulation des produits, classement Nutri-Score et additifs nitrités E250",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "nutri-score-ab",
-            "displayName": "Indice Nutritionnel Nutri-Score (A à E)",
-            "definition": "Classement officiel de qualité nutritionnelle des produits alimentaires de A à E.",
-            "mapped_bigquery_column": "nutri_score",
-            "mapped_bigquery_table": "openfoodfacts_catalog"
+            "termId": "ruptures-visuelles-en-rayon-shelf-out",
+            "displayName": "Ruptures Visuelles en Rayon (Shelf-Out)",
+            "definition": "Conformité des planogrammes, détection des trous en linéaire et perte de chiffre d'affaires."
           },
           {
-            "termId": "additifs-e250",
-            "displayName": "Additifs Controversés & Nitrites E250",
-            "definition": "Présence d'additifs ou conservateurs nitrités nécessitant des alternatives Bio.",
-            "mapped_bigquery_column": "additifs_problematiques",
-            "mapped_bigquery_table": "openfoodfacts_catalog"
-          }
-        ]
-      },
-      {
-        "categoryId": "operations-demarque",
-        "displayName": "Catégorie : Pertes & Démarque Magasins",
-        "description": "Gestion de la démarque connue et optimisation du chiffre d'affaires au m2",
-        "terms": [
-          {
-            "termId": "demarque-14-jours",
-            "displayName": "Pertes Démarque Frais (14 jours)",
-            "definition": "Valeur en euros des produits alimentaires jetés ou périmés à 14 jours de DLC.",
-            "mapped_bigquery_column": "demarque_pertes_produits_frais_14j_eur",
-            "mapped_bigquery_table": "retail_frequentation_magasins"
+            "termId": "démarque-&-péremption-rayon-frais",
+            "displayName": "Démarque & Péremption Rayon Frais",
+            "definition": "Prédiction à 14 jours de la péremption, démarque inconnue, gâchis alimentaire et casse."
           },
           {
-            "termId": "bundle-mdd-carrefour",
-            "displayName": "Offres Combinées MDD & Bio",
-            "definition": "Positionnement tarifaire des marques de distributeurs face aux marques nationales.",
-            "mapped_bigquery_column": "rayon_categorie",
-            "mapped_bigquery_table": "openfoodfacts_catalog"
+            "termId": "bundles-cross-selling-&-marge-brute",
+            "displayName": "Bundles Cross-Selling & Marge Brute",
+            "definition": "Associations d'achats panier-moyen entre Marques Nationales et Marques de Distributeurs MDD."
+          },
+          {
+            "termId": "profil-nutritionnel-&-additifs-nutri-score-&-nova",
+            "displayName": "Profil Nutritionnel & Additifs (Nutri-Score & NOVA)",
+            "definition": "Classification nutritionnelle Open Food Facts A à E, groupes ultra-transformés NOVA 1-4."
+          },
+          {
+            "termId": "fréquentation-magasins-&-conversion-panier",
+            "displayName": "Fréquentation Magasins & Conversion Panier",
+            "definition": "Flux clients par heure, panier moyen en Euros €, taux de conversion par m² de surface."
           }
         ]
       }

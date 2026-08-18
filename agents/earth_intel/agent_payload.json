@@ -55,12 +55,24 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Imagerie ESA Sentinel-2 & Object Tables GCS",
-          "description": "Accès direct aux clichés satellites réels de 10m de résolution spatiale pour certifier visuellement la réalité terrain."
+          "displayName": "Imagerie ESA Sentinel-2 & GCS Object Tables",
+          "description": "Accès direct aux scènes satellitaires de 10m de résolution et fichiers Quicklook PNG."
+        },
+        {
+          "displayName": "Risques Inondation, Incendie & FSI",
+          "description": "Scores d'exposition des actifs immobiliers assurés aux aléas climatiques majeurs."
+        },
+        {
+          "displayName": "Indice Végétation NDVI & Stress Hydrique",
+          "description": "Mesure spatiale de la santé des cultures céréalières/viticoles et prévision de rendement."
+        },
+        {
+          "displayName": "Surveillance Canopée Lignes HT (Énergie)",
+          "description": "Distance de frondaison d'arbres sous lignes électriques haute tension pour élagage prédictif."
         },
         {
           "displayName": "Conformité CSRD & Zéro Déforestation",
-          "description": "Verification spatio-temporelle de l'absence de déforestation sur les bassins d'approvisionnement."
+          "description": "Attestations scientifiques de non-déforestation sur les bassins de sourcing soja/cacao/palme."
         }
       ]
     }

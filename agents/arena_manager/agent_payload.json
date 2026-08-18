@@ -60,20 +60,24 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Billetterie & Loges VIP Stades",
+          "displayName": "Billetterie Stades & Loges VIP",
           "description": "Suivi des ventes de places grand public, hospitalités VIP et taux d'occupation des enceintes."
         },
         {
           "displayName": "Concessions, Buvettes & Merchandising",
-          "description": "Chiffre d'affaires de la restauration, ventes de boissons et produits dérivés par spectateur."
+          "description": "Chiffre d'affaires de la restauration, ventes de boissons et produits dérivés par spectateur (€)."
         },
         {
-          "displayName": "Recensement des Équipements Sportifs (RES)",
-          "description": "Base nationale officielle du Ministère des Sports cartographiant l'ensemble des installations physiques."
+          "displayName": "Audit Énergétique RES (MWh/an)",
+          "description": "Recensement des Équipements Sportifs du Ministère des Sports et détection du gaspillage kWh/m²."
         },
         {
-          "displayName": "Agence Nationale du Sport (ANS) & Subventions Municipales",
-          "description": "Dispositifs d'aides publiques destinées à financer la rénovation énergétique des stades et le sport pour les jeunes."
+          "displayName": "Subventions ANS & Impact Jeunes",
+          "description": "Aides financières de l'Agence Nationale du Sport et coût public par jeune inscrit."
+        },
+        {
+          "displayName": "Potentiel Sponsoring Premium Stades",
+          "description": "Croissance des licenciés fédéraux et valorisation des espaces publicitaires d'enceintes."
         }
       ]
     }

@@ -71,12 +71,20 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Défaillance de Crédit (probabilite_defaillance_6m)",
-          "description": "Risque algorithmique de faillite d'entreprise mesuré sur un horizon de 6 mois basé sur le ratio DSCR et le fonds de roulement."
+          "displayName": "Risque de Défaillances & Faillites PME",
+          "description": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers."
         },
         {
-          "displayName": "Provisionnement IFRS 9 ECL",
-          "description": "Montant des pertes de crédit attendues (Expected Credit Loss) calculé par Stage Prudentiel IFRS 9."
+          "displayName": "Enquêtes Octroi de Crédit BLS Banque de France",
+          "description": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI."
+        },
+        {
+          "displayName": "Modélisation IFRS 9 & ECL",
+          "description": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3."
+        },
+        {
+          "displayName": "Upsell Commercial B2B PME Résilientes",
+          "description": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing."
         }
       ]
     }

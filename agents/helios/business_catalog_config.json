@@ -8,44 +8,29 @@
     "description": "Glossaire de charge réseau Enedis, bornes IRVE et effacement électrique pour Helios.",
     "categories": [
       {
-        "categoryId": "smart-grid-charge",
-        "displayName": "Catégorie : Gestion de Charge & Réseau Enedis",
-        "description": "Surveillance des pics de consommation et taux de charge des transformateurs",
+        "categoryId": "core-ontologies",
+        "displayName": "Ontologies & Termes Métier Clés",
+        "description": "Glossaire officiel et ontologie métier de l'agent",
         "terms": [
           {
-            "termId": "charge-transformateur",
-            "displayName": "Taux de Charge Transformateur Enedis",
-            "definition": "Taux d'utilisation et niveau de saturation des transformateurs du réseau électrique.",
-            "mapped_bigquery_column": "taux_charge_transformateur_pct",
-            "mapped_bigquery_table": "enedis_consommation_inf36"
+            "termId": "bornes-de-recharge-irve-enedis",
+            "displayName": "Bornes de Recharge IRVE Enedis",
+            "definition": "Cartographie des 10 000 points de charge pour véhicules électriques, puissance kW et connecteurs."
           },
           {
-            "termId": "saturation-reseau-kwh",
-            "displayName": "Pic de Surconsommation Réseau (kWh)",
-            "definition": "Pics de puissance maximale appelée sur les postes Haute Tension.",
-            "mapped_bigquery_column": "pic_surconsommation_kwh",
-            "mapped_bigquery_table": "enedis_consommation_inf36"
-          }
-        ]
-      },
-      {
-        "categoryId": "renouvelable-irve",
-        "displayName": "Catégorie : IRVE & Solaire Photovoltaïque",
-        "description": "Disponibilité des bornes de recharge VE et injection d'énergie décarbonée",
-        "terms": [
-          {
-            "termId": "borne-irve-kw",
-            "displayName": "Bornes de Recharge IRVE (kW)",
-            "definition": "Puissance disponible et état opérationnel des bornes de recharge pour véhicules électriques.",
-            "mapped_bigquery_column": "puissance_borne_kw",
-            "mapped_bigquery_table": "enedis_bornes_irve"
+            "termId": "télémesure-30min-transformateurs-hta/bt",
+            "displayName": "Télémesure 30min Transformateurs HTA/BT",
+            "definition": "Courbes de charge, détection des risques de surtension et saturation réseau."
           },
           {
-            "termId": "solar-as-a-service",
-            "displayName": "Production Solaire & CO2 Évité",
-            "definition": "Volume MWh d'énergie renouvelable photovoltaïque injectée et tonnes de CO2 évitées.",
-            "mapped_bigquery_column": "co2_evite_tonnes",
-            "mapped_bigquery_table": "enedis_production_renouvelable"
+            "termId": "production-d'énergie-renouvelable-enr",
+            "displayName": "Production d'Énergie Renouvelable (EnR)",
+            "definition": "Injection solaire photovoltaïque et éolienne par territoire."
+          },
+          {
+            "termId": "flexibilité-d'effacement-industriel-b2b",
+            "displayName": "Flexibilité d'Effacement Industriel B2B",
+            "definition": "Gisements de réduction de consommation des usines lors des pics de tension hivernaux."
           }
         ]
       }

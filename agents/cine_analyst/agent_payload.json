@@ -51,12 +51,20 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "CNC - Centre National du Cinéma",
-          "description": "Établissement public assurant la régulation, le suivi statistique officiel et le soutien à la filière cinématographique en France."
+          "displayName": "Séries Historiques CNC Box-Office",
+          "description": "Données officielles du Centre National du Cinéma sur les entrées et recettes depuis 1945."
         },
         {
-          "displayName": "Prix Moyen du Billet",
-          "description": "Recette moyenne nette par entrée constatée dans les salles de cinéma françaises hors taxe spéciale additionnelle (TSA)."
+          "displayName": "Indicateurs de Fréquentation & Prix Billet",
+          "description": "Chiffre d'affaires box-office, prix moyen des places et taux de remplissage des salles."
+        },
+        {
+          "displayName": "Répartition par Genres & Nationalités",
+          "description": "Performances comparées des films français, américains et art & essai par territoire."
+        },
+        {
+          "displayName": "Parc des Établissements & Multiplexes",
+          "description": "Cartographie des cinémas de quartier, réseaux indépendants et multiplexes."
         }
       ]
     }
