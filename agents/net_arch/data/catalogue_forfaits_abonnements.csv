@@ -1,0 +1,6 @@
+id_forfait,nom_forfait,famille_forfait,cible_client,prix_mensuel_ht_eur,quota_donnees_go,debit_max_descendant_mbps,technologie_reseau_incluse,services_inclus_liste
+FORF-5G-MAX,Forfait 5G Max Illimité,MOBILE_5G,B2C Grand Public,44.99,-1,1000,5G 3.5GHz & 5G SA,"Voix/SMS illimités, Roaming Monde 50Go, TV 4K"
+FORF-5G-PRO,Forfait 5G Pro Flex 250 Go,MOBILE_5G,B2B Pro,59.99,250,800,5G 3.5GHz,"Voix/SMS illimités, IP Fixe, Support H24"
+FORF-4G-LTE,Forfait 4G LTE 100 Go,MOBILE_4G,B2C Grand Public,29.99,100,300,4G+ LTE,"Voix/SMS illimités, Roaming Europe 20Go"
+FORF-4G-PRO,Forfait 4G Pro 150 Go,MOBILE_4G,B2B Pro,44.99,150,300,4G+ LTE,"Voix/SMS illimités, IP Fixe, SAV J+1"
+FORF-FIB-PRO,Forfait Fibre Pro 2Gbps,FIBRE_PRO,B2B Pro,89.99,-1,2000,Fibre FttH 2Gbps,"Débit symétrique, Garantie de Rétablissement 4h"

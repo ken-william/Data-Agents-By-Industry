@@ -6,10 +6,10 @@ Populates 12 refined relational tables:
 2. arcep_historique_deploiement_5g (5G deployment history by operator & frequency band)
 3. telecom_qualite_service_metrique (QoS download/upload throughputs & ping latency)
 4. telecom_incidents_equipements_reseau (Equipment outages, micro-cuts & SLAs)
-5. catalogue_forfaits_abonnements (Reference catalog of fixed/mobile plans)
+5. catalogue_forfaits_abonnements (Reference catalog of plans: eco, student, surf, max, family, pro)
 6. abonnes_master_customers (Central subscriber CRM: B2B/B2C, contract, NPS, churn, 5G upsell)
 7. parc_equipements_sim_imei (IMEI hardware codes, IMSI SIM tag codes, ICCID & 5G SA capabilities)
-8. sessions_trafic_web_categories (Aggregated traffic sessions, MB volume, web categories & tower ID)
+8. network_traffic_flows (Partitioned GEOGRAPHY traffic flows table with IMEI, antenna, app & MB volumes)
 9. maintenance_predictive_pylones (IoT sensors, CPU temp, battery health, 7-day failure probability %)
 10. signalements_dysfonctionnements_utilisateurs (User alerts in 100% theoretical 5G communes)
 11. deploiement_fibre_ftth_departements (FttH fiber deployment lag vs Plan France THD)
@@ -33,19 +33,19 @@ LOCAL_CSV_PATH = "agents/net_arch/data/arcep_sites_mobiles_metropole.csv"
 BUCKET_NAME = "gs://talktodata-net-arch-raw-data"
 
 CITY_DEPT_REGION = {
-    "Paris": ("75 - Paris", "Île-de-France"),
-    "Lyon": ("69 - Rhône", "Auvergne-Rhône-Alpes"),
-    "Annecy": ("74 - Haute-Savoie", "Auvergne-Rhône-Alpes"),
-    "Grenoble": ("38 - Isère", "Auvergne-Rhône-Alpes"),
-    "Marseille": ("13 - Bouches-du-Rhône", "Provence-Alpes-Côte d'Azur"),
-    "Nice": ("06 - Alpes-Maritimes", "Provence-Alpes-Côte d'Azur"),
-    "Toulouse": ("31 - Haute-Garonne", "Occitanie"),
-    "Montpellier": ("34 - Hérault", "Occitanie"),
-    "Bordeaux": ("33 - Gironde", "Nouvelle-Aquitaine"),
-    "Lille": ("59 - Nord", "Hauts-de-France"),
-    "Strasbourg": ("67 - Bas-Rhin", "Grand Est"),
-    "Nantes": ("44 - Loire-Atlantique", "Pays de la Loire"),
-    "Rennes": ("35 - Ille-et-Vilaine", "Bretagne")
+    "Paris": ("75 - Paris", "Île-de-France", 48.8566, 2.3522, "75001"),
+    "Lyon": ("69 - Rhône", "Auvergne-Rhône-Alpes", 45.7640, 4.8357, "69001"),
+    "Annecy": ("74 - Haute-Savoie", "Auvergne-Rhône-Alpes", 45.8992, 6.1294, "74000"),
+    "Grenoble": ("38 - Isère", "Auvergne-Rhône-Alpes", 45.1885, 5.7245, "38000"),
+    "Marseille": ("13 - Bouches-du-Rhône", "Provence-Alpes-Côte d'Azur", 43.2965, 5.3698, "13001"),
+    "Nice": ("06 - Alpes-Maritimes", "Provence-Alpes-Côte d'Azur", 43.7102, 7.2620, "06000"),
+    "Toulouse": ("31 - Haute-Garonne", "Occitanie", 43.6047, 1.4442, "31000"),
+    "Montpellier": ("34 - Hérault", "Occitanie", 43.6108, 3.8767, "34000"),
+    "Bordeaux": ("33 - Gironde", "Nouvelle-Aquitaine", 44.8378, -0.5792, "33000"),
+    "Lille": ("59 - Nord", "Hauts-de-France", 50.6292, 3.0573, "59000"),
+    "Strasbourg": ("67 - Bas-Rhin", "Grand Est", 48.5734, 7.7521, "67000"),
+    "Nantes": ("44 - Loire-Atlantique", "Pays de la Loire", 47.2184, -1.5536, "44000"),
+    "Rennes": ("35 - Ille-et-Vilaine", "Bretagne", 48.1173, -1.6778, "35000")
 }
 
 DEPARTEMENTS_FTTH = [
@@ -80,13 +80,15 @@ SMARTPHONES_4G = [
     ("Huawei", "P30 Pro 4G", False, False)
 ]
 
-WEB_CATEGORIES = [
-    "Streaming Video 4K (Netflix/YouTube)",
-    "Visio Pro Teams/Zoom",
-    "Réseaux Sociaux (TikTok/Instagram)",
-    "Cloud Storage (AWS/GCP/Drive)",
-    "Gaming en Ligne UDP",
-    "Navigation Web General HTTPS"
+APPS_LIST = [
+    ("Netflix", "Streaming 4K Video"),
+    ("YouTube 4K", "Streaming 4K Video"),
+    ("Microsoft Teams", "Visio Pro"),
+    ("Google Meet", "Visio Pro"),
+    ("TikTok", "Réseaux Sociaux"),
+    ("Instagram", "Réseaux Sociaux"),
+    ("Google Cloud Drive", "Cloud Storage"),
+    ("Fortnite Mobile", "Gaming en Ligne")
 ]
 
 def get_client():
@@ -125,7 +127,7 @@ def fetch_and_clean_arcep_sites():
         reg_name = str(row.get("nom_reg")) if pd.notnull(row.get("nom_reg")) else "Île-de-France"
         
         if commune in CITY_DEPT_REGION:
-            dept_name, reg_name = CITY_DEPT_REGION[commune]
+            dept_name, reg_name, lat_c, lon_c, pcode = CITY_DEPT_REGION[commune]
 
         lat = parse_float(row.get("latitude"), 48.8566)
         lon = parse_float(row.get("longitude"), 2.3522)
@@ -209,7 +211,7 @@ def main():
 
     for idx in range(1, 3501):
         commune = random.choice(cities)
-        dept, region = CITY_DEPT_REGION[commune]
+        dept, region, lat_c, lon_c, pcode = CITY_DEPT_REGION[commune]
         op = random.choice(ops)
         t_name, dl_base, ul_base, lat_base = random.choice(techs)
 
@@ -238,7 +240,7 @@ def main():
 
     for idx in range(1, 1201):
         commune = random.choice(cities)
-        dept, region = CITY_DEPT_REGION[commune]
+        dept, region, lat_c, lon_c, pcode = CITY_DEPT_REGION[commune]
         op = random.choice(ops)
         eq = random.choice(eq_types)
         sev = random.choice(severities)
@@ -257,20 +259,21 @@ def main():
         })
     df_incidents = pd.DataFrame(rows_incidents)
 
-    # 5. Table 6: catalogue_forfaits_abonnements
+    # 5. Table 5: catalogue_forfaits_abonnements (Matching user's exact plan schema)
     plans = [
-        ("FORF-5G-MAX", "Forfait 5G Max Illimité", "MOBILE_5G", "B2C Grand Public", 44.99, -1, 1000, "5G 3.5GHz & 5G SA", "Voix/SMS illimités, Roaming Monde 50Go, TV 4K"),
-        ("FORF-5G-PRO", "Forfait 5G Pro Flex 250 Go", "MOBILE_5G", "B2B Pro", 59.99, 250, 800, "5G 3.5GHz", "Voix/SMS illimités, IP Fixe, Support H24"),
-        ("FORF-4G-LTE", "Forfait 4G LTE 100 Go", "MOBILE_4G", "B2C Grand Public", 29.99, 100, 300, "4G+ LTE", "Voix/SMS illimités, Roaming Europe 20Go"),
-        ("FORF-4G-PRO", "Forfait 4G Pro 150 Go", "MOBILE_4G", "B2B Pro", 44.99, 150, 300, "4G+ LTE", "Voix/SMS illimités, IP Fixe, SAV J+1"),
-        ("FORF-FIB-PRO", "Forfait Fibre Pro 2Gbps", "FIBRE_PRO", "B2B Pro", 89.99, -1, 2000, "Fibre FttH 2Gbps", "Débit symétrique, Garantie de Rétablissement 4h")
+        ("bcd0ce84-2380-4b0f-b6b1-8804cfd4c3e2", "eco", 9.99, 20, 50, 2.0, False),
+        ("0202ab7d-f966-4ea5-a694-88c52f4a0403", "student", 12.99, 80, 100, 1.5, False),
+        ("d2546cfe-cafb-4f3b-936c-d3eba3ca61b5", "surf", 15.99, 130, 150, 1.0, False),
+        ("d8e5fbf0-1264-43be-b31d-d017a7441f42", "max", 19.99, 200, 500, 1.0, True),
+        ("e6bc3465-258f-4342-9477-4369d089a6d9", "family", 29.99, 300, 1000, 1.0, True),
+        ("f7a9128d-1144-48cd-b12e-9901ad8991aa", "pro", 59.99, 500, 2000, 1.0, True)
     ]
     df_plans = pd.DataFrame(plans, columns=[
-        "id_forfait", "nom_forfait", "famille_forfait", "cible_client", "prix_mensuel_ht_eur",
-        "quota_donnees_go", "debit_max_descendant_mbps", "technologie_reseau_incluse", "services_inclus_liste"
+        "plan_id", "plan_name", "monthly_price_eur", "data_quota_gb",
+        "qos_guaranteed_throughput_mbps", "overage_rate_per_gb", "is_5g_enabled"
     ])
 
-    # 6. Table 5: abonnes_master_customers & Table 7: parc_equipements_sim_imei
+    # 6. Table 6: abonnes_master_customers & Table 7: parc_equipements_sim_imei & Table 8: network_traffic_flows
     rows_customers = []
     rows_hardware = []
     rows_traffic = []
@@ -288,14 +291,14 @@ def main():
         siret = f"450{random.randint(10000000, 99999999)}" if is_b2b else None
         
         commune = random.choice(cities)
-        dept, region = CITY_DEPT_REGION[commune]
+        dept, region, lat_c, lon_c, pcode = CITY_DEPT_REGION[commune]
 
         # 5G Upsell target scenario: 5G compatible device but 4G plan!
         is_5g_target = (idx <= 1800)
         if is_5g_target:
             m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_5G)
-            plan_id = "FORF-4G-PRO" if is_b2b else "FORF-4G-LTE"
-            plan_name = "Forfait 4G Pro 150 Go" if is_b2b else "Forfait 4G LTE 100 Go"
+            plan_id = "d2546cfe-cafb-4f3b-936c-d3eba3ca61b5"
+            plan_name = "surf"
             plan_5g = False
         else:
             if random.random() < 0.60:
@@ -303,10 +306,10 @@ def main():
             else:
                 m_brand, m_model, dev_5g, dev_5g_sa = random.choice(SMARTPHONES_4G)
             plan_5g = (random.random() < 0.40) if dev_5g else False
-            plan_id = "FORF-5G-PRO" if (is_b2b and plan_5g) else ("FORF-5G-MAX" if plan_5g else "FORF-4G-LTE")
-            plan_name = "Forfait 5G Pro Flex 250 Go" if (is_b2b and plan_5g) else ("Forfait 5G Max Illimité" if plan_5g else "Forfait 4G LTE 100 Go")
+            plan_id = "d8e5fbf0-1264-43be-b31d-d017a7441f42" if plan_5g else "d2546cfe-cafb-4f3b-936c-d3eba3ca61b5"
+            plan_name = "max" if plan_5g else "surf"
 
-        quota_gb = float(150 if is_b2b else 100)
+        quota_gb = float(200 if plan_name == "max" else 130)
 
         # Quota usage & fees
         if is_5g_target and idx <= 900:
@@ -318,7 +321,7 @@ def main():
             usage_pct = round((conso_gb / quota_gb) * 100.0, 1)
             fees_eur = 0.00
 
-        arpu_actuel = round(29.99 if not is_b2b else 59.99, 2)
+        arpu_actuel = round(15.99 if plan_name == "surf" else 19.99, 2)
         arpu_pot_5g = round(arpu_actuel + 15.00, 2)
         gain_arpu = 15.00
 
@@ -335,8 +338,8 @@ def main():
             "telephone_contact": phone,
             "type_client": c_type,
             "siret_entreprise": siret,
-            "id_forfait_actuel": plan_id,
-            "nom_forfait_actuel": plan_name,
+            "plan_id": plan_id,
+            "plan_name": plan_name,
             "statut_contrat": "ACTIF",
             "score_nps_satisfaction": random.randint(6, 10),
             "date_souscription": sub_date,
@@ -365,7 +368,7 @@ def main():
             "id_client": cid,
             "constructeur": m_brand,
             "modele_terminal": m_model,
-            "imei_code": imei,
+            "imei": imei,
             "imsi_sim_tag_code": imsi,
             "iccid_sim_card": iccid,
             "type_carte_sim": "eSIM Virtuelle" if random.random() < 0.40 else "Nano-SIM Physique",
@@ -375,21 +378,27 @@ def main():
             "date_premiere_connexion_reseau": sub_date
         })
 
-        # Table 8: Traffic Sessions (First 500 customers)
-        if idx <= 500:
-            for s_idx in range(1, 4):
+        # Table 8: network_traffic_flows (Exact user schema with GEOGRAPHY points)
+        if idx <= 1500:
+            for s_idx in range(1, 3):
+                app_name, t_type = random.choice(APPS_LIST)
+                u_lat = lat_c + random.uniform(-0.02, 0.02)
+                u_lon = lon_c + random.uniform(-0.02, 0.02)
+                wkt_point = f"POINT({u_lon:.4f} {u_lat:.4f})"
+                ts_str = f"2025-03-{random.randint(1,28):02d} {random.randint(8,22):02d}:{random.randint(0,59):02d}:00"
+
                 rows_traffic.append({
-                    "id_session": f"SESS-{idx:05d}-{s_idx}",
-                    "id_client": cid,
-                    "imsi_sim_tag_code": imsi,
-                    "timestamp_session": f"2025-03-{random.randint(1,28):02d} {random.randint(8,22):02d}:15:00",
-                    "duree_session_minutes": random.randint(5, 120),
-                    "volume_download_mb": round(random.uniform(45.0, 3200.0), 1),
-                    "volume_upload_mb": round(random.uniform(5.0, 450.0), 1),
-                    "categorie_contenu_visite": random.choice(WEB_CATEGORIES),
-                    "protocole_reseau": random.choice(["HTTPS", "QUIC", "SIP_VOIP", "UDP_GAMING"]),
-                    "id_station_anfr_connectee": random.choice(anfr_site_ids),
-                    "qualite_experience_qoe_score": round(random.uniform(3.8, 4.9), 1)
+                    "flow_id": f"FLOW-{idx:05d}-{s_idx}",
+                    "imei": imei,
+                    "antenna_id": random.choice(anfr_site_ids),
+                    "timestamp": ts_str,
+                    "application_name": app_name,
+                    "traffic_type": t_type,
+                    "volume_mb_uplink": round(random.uniform(2.0, 150.0), 2),
+                    "volume_mb_downlink": round(random.uniform(25.0, 1850.0), 2),
+                    "user_location": wkt_point,
+                    "latency_ms": random.randint(12, 65),
+                    "postal_code": pcode
                 })
 
     df_customers = pd.DataFrame(rows_customers)
@@ -400,6 +409,7 @@ def main():
     rows_maint = []
     for idx, anfr_id in enumerate(anfr_site_ids[:300]):
         commune = random.choice(cities)
+        dept, region, lat_c, lon_c, pcode = CITY_DEPT_REGION[commune]
         op = random.choice(ops)
         cpu_temp = round(random.uniform(42.0, 88.5), 1)
         cpu_load = round(random.uniform(25.0, 96.0), 1)
@@ -426,7 +436,7 @@ def main():
     motifs = ["Micro-coupures quotidiennes B2B", "Débit nul malgré 5G affichée 100%", "Absence de signal indoor en zone bureau"]
     for idx in range(1, 801):
         commune = random.choice(cities)
-        dept, region = CITY_DEPT_REGION[commune]
+        dept, region, lat_c, lon_c, pcode = CITY_DEPT_REGION[commune]
         rows_signalements.append({
             "id_signalement": f"SIG-{idx:04d}",
             "commune": commune,
@@ -474,7 +484,7 @@ def main():
         "catalogue_forfaits_abonnements": df_plans,
         "abonnes_master_customers": df_customers,
         "parc_equipements_sim_imei": df_hardware,
-        "sessions_trafic_web_categories": df_traffic,
+        "network_traffic_flows": df_traffic,
         "maintenance_predictive_pylones": df_maint,
         "signalements_dysfonctionnements_utilisateurs": df_signalements,
         "deploiement_fibre_ftth_departements": df_ftth,
