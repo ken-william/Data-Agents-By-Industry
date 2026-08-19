@@ -2,8 +2,8 @@
 """
 Refined Relational Data Pipeline & OpenData Processing for Transit Navigator (transport_mobility_ds).
 Parses authentic SNCF Open Data CSVs (Frequentation Gares, Regularite TGV / TER) and populates
-8 relational tables in BigQuery with TER Predictive Maintenance, Yield Management 1st Class Pricing,
-and multi-day passenger turnstile validations.
+9 relational tables in BigQuery including 6-month TER Predictive Maintenance time-series
+(3 months history + 3 months forecast) and Yield Management 1st Class Pricing.
 """
 
 import os
@@ -210,9 +210,59 @@ def main():
             "action_maintenance_recommandee": tm[11]
         })
     df_ter_maint = pd.DataFrame(ter_maint_rows)
-    print(f"  ✓ Built {len(df_ter_maint)} TER predictive maintenance failure prediction records.")
 
-    # Step 5: Build Table 4: sncf_yield_management_billetterie (Dynamic Pricing & 1st vs 2nd Class)
+    # Step 5: Build Table 4: ter_maintenance_historique_previsions_6mois (3 Months History + 3 Months Forecast)
+    months_series = [
+        ("2026-05-01", "HISTORIQUE (3 Mois Passés)"),
+        ("2026-06-01", "HISTORIQUE (3 Mois Passés)"),
+        ("2026-07-01", "HISTORIQUE (3 Mois Passés)"),
+        ("2026-08-01", "PRÉVISION (3 Mois Futurs)"),
+        ("2026-09-01", "PRÉVISION (3 Mois Futurs)"),
+        ("2026-10-01", "PRÉVISION (3 Mois Futurs)")
+    ]
+
+    time_series_rows = []
+    for tm in ter_maintenance:
+        seg_id, seg_name, reg, lcode = tm[0], tm[1], tm[2], tm[3]
+        base_charge = tm[4]
+        
+        for m_idx, (m_date, p_type) in enumerate(months_series):
+            # Progression of traffic overload, track wear, signal outages and failure risk
+            charge = round(base_charge - (5 - m_idx) * 1.5, 1)
+            micro_coupures = int(tm[6] - (5 - m_idx) * 3)
+            usure = round(tm[7] - (5 - m_idx) * 0.4, 1)
+            prob = round(min(0.99, max(0.25, tm[8] - (5 - m_idx) * 0.08)), 2)
+
+            if prob > 0.85:
+                risk = "CRITIQUE (Action urgente)"
+                act = "Renouvellement aiguillages & Limitation 80km/h"
+            elif prob > 0.70:
+                risk = "ÉLEVÉ"
+                act = "Inspection caténaires & Audit signalisation"
+            else:
+                risk = "MODÉRÉ"
+                act = "Maintenance préventive standard"
+
+            time_series_rows.append({
+                "segment_id": seg_id,
+                "nom_segment_ferroviaire": seg_name,
+                "region": reg,
+                "line_code": lcode,
+                "mois_date": m_date,
+                "periode_type": p_type,
+                "charge_trafic_mensuelle_pct": charge,
+                "frequence_micro_coupures_signalisation": max(2, micro_coupures),
+                "usure_rail_mm": max(4.0, usure),
+                "probabilite_panne_materielle": prob,
+                "risque_ralentissement_majeur": risk,
+                "cause_principale_risque": tm[10],
+                "action_maintenance_recommandee": act
+            })
+
+    df_6mois = pd.DataFrame(time_series_rows)
+    print(f"  ✓ Built {len(df_6mois)} TER 6-month time-series maintenance history & forecast records.")
+
+    # Step 6: Build Table 5: sncf_yield_management_billetterie (Dynamic Pricing & 1st vs 2nd Class)
     yield_pricing = [
         ("YIELD-TGV-6902", "TGV 6902", "AXE-PARIS-LYON", "Paris Lyon - Grenoble", "1ère Classe", 115.0, 92.0, 32.4, 98.2, 58.40, 12.4, "Réduction dynamique 1ère classe -20% sur rames creuses pour viser +12.4% de panier moyen"),
         ("YIELD-TGV-6902-2", "TGV 6902", "AXE-PARIS-LYON", "Paris Lyon - Grenoble", "2nde Classe", 68.0, 68.0, 32.4, 98.2, 58.40, 12.4, "Maintien tarif plein 2nde classe saturée"),
@@ -238,9 +288,8 @@ def main():
             "recommandation_pricing_yield": yp[11]
         })
     df_yield = pd.DataFrame(yield_rows)
-    print(f"  ✓ Built {len(df_yield)} yield management & 1st class pricing records.")
 
-    # Step 6: Build Table 5: abonnements_titres_transport
+    # Step 7: Build Table 6: abonnements_titres_transport
     plans_data = [
         {"subscription_plan_id": "SUB-NAV-MONTH", "plan_name": "Pass Navigo Mois", "category": "Urbain Île-de-France", "monthly_price_eur": 86.40, "valid_zones": "Zones 1 à 5", "is_employer_subsidized": True},
         {"subscription_plan_id": "SUB-NAV-YEAR", "plan_name": "Pass Navigo Annuel", "category": "Urbain Île-de-France", "monthly_price_eur": 950.40, "valid_zones": "Toutes Zones IDF", "is_employer_subsidized": True},
@@ -250,7 +299,7 @@ def main():
     ]
     df_plans = pd.DataFrame(plans_data)
 
-    # Step 7: Build Table 6: usagers_profils (with ST_GEOGPOINT)
+    # Step 8: Build Table 7: usagers_profils (with ST_GEOGPOINT)
     usagers = []
     plan_ids = [p["subscription_plan_id"] for p in plans_data]
 
@@ -283,25 +332,24 @@ def main():
             "work_location_geo": f"POINT({work_lon:.4f} {work_lat:.4f})"
         })
     df_usagers = pd.DataFrame(usagers)
-    print(f"  ✓ Generated {len(df_usagers)} passenger profiles with GEOGRAPHY points.")
 
-    # Step 8: Build Table 7: validations_trajets_voyageurs (Multi-day turnstile tap-ins)
+    # Step 9: Build Table 8: validations_trajets_voyageurs (Multi-month turnstile tap-ins)
     validations = []
     modes = [("TGV InOui", "Ligne Grande Vitesse East"), ("TER", "Ligne Régionale TER"), ("RER A", "Axe RER A Charles de Gaulle - Étoile"), ("Métro 1", "Ligne 1 La Défense - Château de Vincennes")]
 
     usager_records = df_usagers.to_dict("records")
 
-    for i in range(1, 8001):
+    for i in range(1, 10001):
         vid = f"VAL-{i:06d}"
         u = random.choice(usager_records)
         gname, code_uic, cp, dept, reg, lat, lon = random.choice(CITY_METRICS)
         mode, line = random.choice(modes)
 
-        # Multi-day spread over August 2026 peak hours (7h30-9h00 and 17h30-19h00)
-        day_offset = random.randint(0, 14)
+        # Multi-month spread from May 2026 to October 2026
+        day_offset = random.randint(0, 180)
         hour = random.choice([7, 8, 17, 18])
         minute = random.randint(0, 59)
-        dt = datetime(2026, 8, 1) + timedelta(days=day_offset, hours=hour, minutes=minute)
+        dt = datetime(2026, 5, 1) + timedelta(days=day_offset, hours=hour, minutes=minute)
 
         validations.append({
             "validation_id": vid,
@@ -316,9 +364,8 @@ def main():
             "validation_status": random.choices(["VALIDE", "CORRESPONDANCE", "REFUSE_SOLDE", "HORS_ZONE"], weights=[0.85, 0.10, 0.03, 0.02])[0]
         })
     df_validations = pd.DataFrame(validations)
-    print(f"  ✓ Generated {len(df_validations)} passenger validation records over multi-day time-series.")
 
-    # Step 9: Build Table 8: sncf_objets_trouves
+    # Step 10: Build Table 9: sncf_objets_trouves
     objets = []
     categories = [
         ("Appareils Électroniques", "Ordinateur portable PC 15 pouces dans housse noire"),
@@ -349,13 +396,13 @@ def main():
             "restitution_date": "2026-08-16" if status == "Restitué au propriétaire" else None
         })
     df_objets = pd.DataFrame(objets)
-    print(f"  ✓ Generated {len(df_objets)} lost & found item records.")
 
-    # Step 10: Upload CSVs & Load BigQuery
+    # Step 11: Upload CSVs & Load BigQuery
     tables_map = {
         "frequentation_gares_sncf": df_gares,
         "sncf_regularite_lignes": df_reg_final,
         "ter_maintenance_predictive_reseau": df_ter_maint,
+        "ter_maintenance_historique_previsions_6mois": df_6mois,
         "sncf_yield_management_billetterie": df_yield,
         "abonnements_titres_transport": df_plans,
         "usagers_profils": df_usagers,
@@ -388,7 +435,7 @@ def main():
         job.result()
         print(f"  ✓ Loaded table `{tref}` in BigQuery!")
 
-    print("\nSUCCESS: All 8 Transit Navigator tables complete & populated in BigQuery!")
+    print("\nSUCCESS: All 9 Transit Navigator tables complete & populated in BigQuery!")
 
 if __name__ == "__main__":
     main()

@@ -2,7 +2,7 @@
 -- Schema DDL for Transit Navigator - Transports Publics, RATP & SNCF Intelligence Platform
 -- Dataset: transport_mobility_ds (Project: data-agents-by-industry)
 -- Relational Architecture linking Authentic SNCF Open Data Gares Attendance, TGV/TER
--- Line Punctuality & Cancellations, TER Predictive Maintenance & Hardware Failures,
+-- Line Punctuality & Cancellations, TER Predictive Maintenance 6-Month Time-Series,
 -- Yield Management 1st/2nd Class Pricing, Fare Plans, Passenger Profiles with GEOGRAPHY,
 -- Station Turnstile Validations, and Lost & Found Declarations.
 -- ============================================================================
@@ -10,7 +10,7 @@
 CREATE SCHEMA IF NOT EXISTS `transport_mobility_ds`
 OPTIONS (
   location = 'US',
-  description = 'Dataset Transit Navigator : Données réelles SNCF Open Data de fréquentation des gares, ponctualité/retards TGV/TER, maintenance prédictive réseau TER, tarification dynamique Yield 1ère/2nde classe, abonnements Navigo/Pass, profil usagers et objets trouvés.'
+  description = 'Dataset Transit Navigator : Données réelles SNCF Open Data de fréquentation des gares, ponctualité/retards TGV/TER, maintenance prédictive 6 mois TER (3m historique + 3m prévisions), tarification dynamique Yield 1ère/2nde classe, abonnements Navigo/Pass, profil usagers et objets trouvés.'
 );
 
 -- 1. Table: frequentation_gares_sncf (Authentic SNCF Station Annual Attendance)
@@ -51,7 +51,7 @@ OPTIONS (
   description = "Suivi de la ponctualité, des retards moyens et des causes d'annulation sur les axes ferroviaires SNCF TGV et TER."
 );
 
--- 3. Table: ter_maintenance_predictive_reseau (TER Network Predictive Maintenance & Failure Risks)
+-- 3. Table: ter_maintenance_predictive_reseau (TER Network Predictive Maintenance 7-Day & Current Risk)
 CREATE OR REPLACE TABLE `transport_mobility_ds.ter_maintenance_predictive_reseau` (
   segment_id STRING OPTIONS(description="Identifiant unique du tronçon ferroviaire (ex: SEG-TER-AURA-01)"),
   nom_segment_ferroviaire STRING OPTIONS(description="Intitulé du segment TER (ex: Segment TER Lyon Part-Dieu - Grenoble Section Moirans)"),
@@ -70,7 +70,27 @@ OPTIONS (
   description = "Module de maintenance prédictive pour anticiper les pannes matérielles et ralentissements majeurs sur le réseau TER."
 );
 
--- 4. Table: sncf_yield_management_billetterie (Dynamic Pricing & 1st vs 2nd Class Upsell Optimization)
+-- 4. Table: ter_maintenance_historique_previsions_6mois (3 Months History + 3 Months Prediction Time-Series)
+CREATE OR REPLACE TABLE `transport_mobility_ds.ter_maintenance_historique_previsions_6mois` (
+  segment_id STRING OPTIONS(description="Identifiant unique du tronçon ferroviaire TER (ex: SEG-TER-AURA-01)"),
+  nom_segment_ferroviaire STRING OPTIONS(description="Nom du segment ferroviaire TER (ex: Segment TER Lyon Part-Dieu - Grenoble)"),
+  region STRING OPTIONS(description="Région administrative (Auvergne-Rhône-Alpes, Île-de-France, PACA, etc.)"),
+  line_code STRING OPTIONS(description="Code de la ligne TER ou RER (ex: TER Ligne 1, RER C)"),
+  mois_date DATE OPTIONS(description="Mois de référence de la mesure ou prévision (du 2026-05-01 au 2026-10-01)"),
+  periode_type STRING OPTIONS(description="Type de période (HISTORIQUE 3 Mois Passés, PRÉVISION 3 Mois Futurs)"),
+  charge_trafic_mensuelle_pct NUMERIC OPTIONS(description="Taux de charge du trafic ferroviaire mensuel (%)"),
+  frequence_micro_coupures_signalisation INT64 OPTIONS(description="Nombre de micro-coupures de signalisation observées ou prédites dans le mois"),
+  usure_rail_mm NUMERIC OPTIONS(description="Niveau d'usure mécanique cumulé des rails (mm)"),
+  probabilite_panne_materielle NUMERIC OPTIONS(description="Probabilité observée ou prédite de panne matérielle (0.00 à 1.00)"),
+  risque_ralentissement_majeur STRING OPTIONS(description="Niveau de risque de ralentissement (CRITIQUE, ÉLEVÉ, MODÉRÉ, FAIBLE)"),
+  cause_principale_risque STRING OPTIONS(description="Cause principale du risque (Usure rails, Signalisation obsolète, Surcroissance trafic)"),
+  action_maintenance_recommandee STRING OPTIONS(description="Consigne d'intervention préventive préconisée pour le mois")
+)
+OPTIONS (
+  description = "Série temporelle complète sur 6 mois : 3 mois d'historique (Mai - Juillet 2026) et 3 mois de prévisions (Août - Octobre 2026) du risque de pannes TER."
+);
+
+-- 5. Table: sncf_yield_management_billetterie (Dynamic Pricing & 1st vs 2nd Class Upsell Optimization)
 CREATE OR REPLACE TABLE `transport_mobility_ds.sncf_yield_management_billetterie` (
   ticket_offer_id STRING OPTIONS(description="Identifiant unique de l'offre tarifaire (ex: YIELD-TGV-6902)"),
   train_number STRING OPTIONS(description="Numéro du train (ex: TGV 6902, TER 84210)"),
@@ -89,7 +109,7 @@ OPTIONS (
   description = "Système de tarification dynamique, Yield Management et sous-exploitation de la 1ère classe pour booster le panier moyen."
 );
 
--- 5. Table: abonnements_titres_transport (Transport Fare Subscription Plans)
+-- 6. Table: abonnements_titres_transport (Transport Fare Subscription Plans)
 CREATE OR REPLACE TABLE `transport_mobility_ds.abonnements_titres_transport` (
   subscription_plan_id STRING OPTIONS(description="Identifiant unique du forfait (ex: SUB-NAV-MONTH, SUB-TER-ILICO)"),
   plan_name STRING OPTIONS(description="Nom commercial du forfait (Navigo Mois, Navigo Annuel, Pass TER Ilico, TGV Max, Pass Liberté+)"),
@@ -102,7 +122,7 @@ OPTIONS (
   description = "Catalogue des forfaits d'abonnements et titres de transport public (RATP, Île-de-France Mobilités, TER, SNCF)."
 );
 
--- 6. Table: usagers_profils (Passenger Profiles with Domicile-Work Commute Coordinates)
+-- 7. Table: usagers_profils (Passenger Profiles with Domicile-Work Commute Coordinates)
 CREATE OR REPLACE TABLE `transport_mobility_ds.usagers_profils` (
   passenger_id STRING OPTIONS(description="Identifiant anonymisé de l'usager (ex: USG-00001)"),
   first_name STRING OPTIONS(description="Prénom de l'usager"),
@@ -122,7 +142,7 @@ OPTIONS (
   description = "Répertoire des usagers et abonnés du réseau de transport avec coordonnées spatiales et caractéristiques."
 );
 
--- 7. Table: validations_trajets_voyageurs (Passenger Turnstile Validations & Station Tap-Ins)
+-- 8. Table: validations_trajets_voyageurs (Passenger Turnstile Validations & Station Tap-Ins)
 CREATE OR REPLACE TABLE `transport_mobility_ds.validations_trajets_voyageurs` (
   validation_id STRING OPTIONS(description="Identifiant unique du badgeage au portillon / validateur (ex: VAL-000001)"),
   passenger_id STRING OPTIONS(description="Identifiant de l'usager (FK -> usagers_profils)"),
@@ -139,7 +159,7 @@ OPTIONS (
   description = "Historique des validations et badgeages aux portillons d'entrée des gares et stations du réseau."
 );
 
--- 8. Table: sncf_objets_trouves (Station Lost & Found Declarations & Passenger Matching)
+-- 9. Table: sncf_objets_trouves (Station Lost & Found Declarations & Passenger Matching)
 CREATE OR REPLACE TABLE `transport_mobility_ds.sncf_objets_trouves` (
   incident_id STRING OPTIONS(description="Identifiant unique de la déclaration d'objet trouvé (ex: OBJ-00001)"),
   passenger_id STRING OPTIONS(description="Identifiant de l'usager propriétaire ou déclarant (FK -> usagers_profils)"),
