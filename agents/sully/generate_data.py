@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
 Refined Relational Data Pipeline for Sully - France Travail & URSSAF Recruitment Intelligence Platform.
-Populates BigQuery dataset `public_sector_employment_ds` with 7 fully interconnected tables:
+Populates BigQuery dataset `public_sector_employment_ds` with 8 fully interconnected tables:
 
 1. `bmo_recrutement_2025`: 50,076 authentic France Travail BMO 2025 recruitment forecast records.
 2. `rome_arborescence_2024`: 12,243 authentic France Travail ROME 4.0 job titles, appellations, and domain classifications.
 3. `entreprises_urssaf_declarations`: Company establishments with SIRET, NAF, employee counts, payroll, and OETH disability gaps.
 4. `offres_emploi_recrutement`: Job vacancies with vacancy duration > 6 months, daily vacancy costs, rejection rates & motifs.
-5. `france_travail_demandeurs`: Talent profiles including explicit record for Anna FT-99720068.
-6. `candidatures_postulations_suivi`: ATS applications linking candidates, job offers, companies, matching scores & refusal motifs.
-7. `france_travail_formations_aides`: Vocational training courses (POEI, AFPR, PMSMP immersion 15j) and recruitment subsidies.
+5. `france_travail_demandeurs`: Pure candidate profiles (demographics, job target, constraints, skills).
+6. `france_travail_cv_object_table`: Native BigQuery Object Table linking demandeur_id to GCS Object metadata (uri, generation, content_type, size, md5_hash, updated, metadata).
+7. `candidatures_postulations_suivi`: ATS applications linking candidates, job offers, companies, matching scores & refusal motifs.
+8. `france_travail_formations_aides`: Vocational training courses (POEI, AFPR, PMSMP immersion 15j) and recruitment subsidies.
 """
 
 import os
@@ -86,7 +87,7 @@ def get_client():
 
 def parse_local_pdf_cv(pdf_path):
     if not os.path.exists(pdf_path):
-        return None
+        return None, None
 
     try:
         txt = subprocess.check_output(["pdftotext", pdf_path, "-"]).decode("utf-8", errors="ignore")
@@ -110,7 +111,7 @@ def parse_local_pdf_cv(pdf_path):
 
     gcs_uri = f"{RESUMES_BUCKET}/resumes/{os.path.basename(pdf_path)}"
 
-    return {
+    cand_profile = {
         "demandeur_id": dem_id,
         "nom_prenom": name,
         "statut_recherche": "Recherche Active",
@@ -121,16 +122,38 @@ def parse_local_pdf_cv(pdf_path):
         "region_name": "Île-de-France" if dept in ["75", "92", "93", "94", "78", "91", "95"] else "Hauts-de-France",
         "freins_emploi_detail": "Aucun frein majeur identifié, disponible immédiatement.",
         "competences_actuelles": "Maîtrise bureautique, Analyse de données, Gestion de projet",
-        "cv_gcs_uri": gcs_uri,
-        "cv_preview_image_url": f"https://storage.googleapis.com/sully-candidate-resumes-data-agents/resumes/{os.path.basename(pdf_path).replace('.pdf', '_preview.png')}",
         "niveau_etudes": degree
     }
+
+    obj_meta = {
+        "demandeur_id": dem_id,
+        "uri": gcs_uri,
+        "generation": 1786964931421000 + random.randint(100, 999),
+        "content_type": "application/pdf",
+        "size": os.path.getsize(pdf_path) if os.path.exists(pdf_path) else 3584,
+        "md5_hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "updated": "2026-08-19 14:00:00 UTC",
+        "metadata": [{"name": "candidate_name", "value": name}, {"name": "document_type", "value": "Curriculum Vitae"}]
+    }
+
+    return cand_profile, obj_meta
 
 def main():
     print(f"Initializing Refined Sully Relational Pipeline for project '{PROJECT_ID}'...")
     client = get_client()
 
     os.makedirs("agents/sully/data", exist_ok=True)
+
+    # Execute DDL
+    ddl_path = os.path.join(os.path.dirname(__file__), "ddl_setup.sql")
+    if os.path.exists(ddl_path):
+        with open(ddl_path, "r", encoding="utf-8") as f:
+            sql_script = f.read().replace("${PROJECT_ID}", PROJECT_ID)
+        for stmt in sql_script.split(";"):
+            stmt = stmt.strip()
+            if stmt:
+                client.query(stmt).result()
+        print("  ✓ Executed ddl_setup.sql to ensure exact public_sector_employment_ds schemas!")
 
     # 1. bmo_recrutement_2025
     if os.path.exists(BMO_EXCEL_PATH):
@@ -184,7 +207,6 @@ def main():
     else:
         raise FileNotFoundError(f"Missing BMO dataset: {BMO_EXCEL_PATH}")
 
-    # Extract unique metiers and departments
     bmo_metiers = df_bmo[["code_metier_bmo", "nom_metier_bmo", "famille_metier_libelle"]].drop_duplicates().to_dict("records")
     bmo_depts = df_bmo[["code_departement", "nom_departement", "nom_region"]].drop_duplicates().to_dict("records")
 
@@ -293,7 +315,6 @@ def main():
     job_offers = []
     base_date = datetime(2025, 1, 15)
 
-    # Scenario 1 Specific Offers for Hôpital national de paris (> 6 months vacancy, high daily cost)
     sante_vacancies_hnp = [
         ("OFFRE-HNP-001", "35600000000014", "Hôpital national de paris", "Santé & Établissements Hospitaliers", "J1501", "J1501", "Infirmier de Soins Généraux et Bloc Opératoire", "CDI", 24, 42000.0, 0, "75", "Île-de-France", True, 215, 380.00, 81700.00, 68.5, "Contraintes d'horaires de nuit & Salaire fixe non attractif"),
         ("OFFRE-HNP-002", "35600000000014", "Hôpital national de paris", "Santé & Établissements Hospitaliers", "J1102", "J1102", "Médecin Urgentiste & Réanimateur", "CDI", 48, 85000.0, 0, "75", "Île-de-France", True, 240, 650.00, 156000.00, 74.0, "Charge de travail extrême & Pénurie nationale de praticiens"),
@@ -326,7 +347,6 @@ def main():
             "closing_date": "2025-09-30"
         })
 
-    # Scenario 2 Specific Offers for TF1 Group (High rejection rate & specific rejection motifs)
     tf1_offers = [
         ("OFFRE-TF1-001", "32630000000042", "TF1 Group", "Média, Télévision & Multimédia", "E1101", "E1101", "Chef de Projet Média & Déploiement Numérique", "CDI", 36, 58000.0, 1, "92", "Île-de-France", True, 140, 290.00, 40600.00, 84.5, "Niveau de salaire proposé inférieur de 18% aux attentes du marché"),
         ("OFFRE-TF1-002", "32630000000042", "TF1 Group", "Média, Télévision & Multimédia", "E1102", "E1102", "Journaliste Reporter d'Images / JRI", "CDD", 24, 42000.0, 0, "92", "Île-de-France", True, 125, 240.00, 30000.00, 79.0, "Exigence de déplacements constants sans prise en charge complète"),
@@ -358,7 +378,6 @@ def main():
             "closing_date": "2025-08-31"
         })
 
-    # Battery Gigafactories Offers in Hauts-de-France
     battery_offers = [
         ("OFFRE-BAT-001", "88910000000012", "ACC - Automotive Cells Company", "Fabrication de Batteries & Gigafactory", "H1206", "H1206", "Technicien de Maintenance Ligne de Production Batterie", "CDI", 24, 38000.0, 0, "59", "Hauts-de-France", True, 150, 310.00, 46500.00, 83.0, "Pénurie de techniciens qualifiés en électricité et automatismes"),
         ("OFFRE-BAT-002", "89920000000023", "Envision AESC Douai", "Fabrication de Batteries & Gigafactory", "H1401", "H1401", "Opérateur de Conduite d'Équipement d'Usinage", "CDI", 12, 32000.0, 0, "59", "Hauts-de-France", True, 135, 250.00, 33750.00, 88.0, "Manque de compétences en chimie et conduite de lignes automatisées"),
@@ -390,7 +409,6 @@ def main():
             "closing_date": "2025-08-30"
         })
 
-    # Fill remaining general offers up to 8,500
     for i in range(14, 8501):
         offer_id = f"OFFRE-2025-{i:05d}"
         comp = random.choice(companies)
@@ -435,10 +453,10 @@ def main():
 
     df_job_offers = pd.DataFrame(job_offers)
 
-    # 5. france_travail_demandeurs (including explicit record for Anna FT-99720068)
+    # 5. france_travail_demandeurs & 6. france_travail_cv_object_table
     candidates = []
+    cv_object_rows = []
 
-    # Scenario 3 Explicit Profile: Anna Kowalski FT-99720068
     anna_profile = {
         "demandeur_id": "FT-99720068",
         "nom_prenom": "Anna Kowalski",
@@ -452,27 +470,22 @@ def main():
         "region_name": "Île-de-France",
         "freins_emploi_detail": "Garde de 2 enfants en bas âge (contrainte horaire stricte 8h30-17h30), Mobilité en Transports en Commun uniquement (pas de véhicule personnel), Prétentions salariales minimales de 38 000 € bruts/an.",
         "competences_actuelles": "Gestion des stocks et réapprovisionnement, Maîtrise avancée Excel & ERP SAP, Planification de flux de camionnage, Anglais professionnel.",
-        "cv_gcs_uri": f"{RESUMES_BUCKET}/resumes/cv_FT-99720068.pdf",
-        "cv_preview_image_url": f"https://storage.googleapis.com/sully-candidate-resumes-data-agents/resumes/cv_FT-99720068_preview.png",
         "niveau_etudes": "Bac+3"
     }
+    anna_object = {
+        "demandeur_id": "FT-99720068",
+        "uri": f"{RESUMES_BUCKET}/resumes/cv_FT-99720068.pdf",
+        "generation": 1786964931421688,
+        "content_type": "application/pdf",
+        "size": 3584,
+        "md5_hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "updated": "2026-08-19 15:10:00 UTC",
+        "metadata": [{"name": "candidate_name", "value": "Anna Kowalski"}, {"name": "document_type", "value": "Curriculum Vitae"}]
+    }
+
     candidates.append(anna_profile)
+    cv_object_rows.append(anna_object)
 
-    # Parse local PDF CVs
-    local_pdfs = sorted(glob.glob(os.path.join(RESUMES_DIR, "cv_*.pdf")))
-    print(f"  Parsing {len(local_pdfs)} authentic local candidate PDF CV files from '{RESUMES_DIR}'...")
-
-    for pdf_path in local_pdfs:
-        cand = parse_local_pdf_cv(pdf_path)
-        if cand and cand["demandeur_id"] != "FT-99720068":
-            cand["code_metier_bmo"] = random.choice(bmo_metiers)["code_metier_bmo"]
-            cand["code_rome"] = random.choice(rome_codes)
-            candidates.append(cand)
-
-    df_job_seekers = pd.DataFrame(candidates)
-    
-    # Generate ~500 additional candidate profiles across Île-de-France and Hauts-de-France
-    extra_seekers = []
     first_names = ["Thomas", "Lucas", "Sophie", "Camille", "Élodie", "Alexandre", "Nicolas", "Julie", "Marie", "Jean", "Maxime", "Léa", "Antoine", "Chloé", "Pierre"]
     last_names = ["Bernard", "Martin", "Moreau", "Petit", "Dubois", "Richard", "Durand", "Laurent", "Lefebvre", "Michel", "Garcia", "David", "Bertrand", "Roux", "Fournier"]
     metiers_target = [
@@ -488,7 +501,7 @@ def main():
         dept = random.choice(["75", "92", "93", "94", "59", "62", "69", "13", "31", "33"])
         reg = "Île-de-France" if dept in ["75", "92", "93", "94"] else ("Hauts-de-France" if dept in ["59", "62"] else "Région")
 
-        extra_seekers.append({
+        candidates.append({
             "demandeur_id": dem_id,
             "nom_prenom": f"{fn} {ln}",
             "statut_recherche": random.choice(["Recherche Active", "En Formation", "Emploi Reconversion"]),
@@ -501,20 +514,29 @@ def main():
             "region_name": reg,
             "freins_emploi_detail": "Disponible immédiatement, mobilité régionale.",
             "competences_actuelles": "Savoir-faire métier, travail en équipe, autonomie",
-            "cv_gcs_uri": f"{RESUMES_BUCKET}/resumes/cv_{dem_id}.pdf",
-            "cv_preview_image_url": f"https://storage.googleapis.com/sully-candidate-resumes-data-agents/resumes/cv_{dem_id}_preview.png",
             "niveau_etudes": random.choice(["Bac", "Bac+2", "Bac+3", "Bac+5"])
         })
 
-    df_job_seekers = pd.concat([df_job_seekers, pd.DataFrame(extra_seekers)], ignore_index=True)
-    print(f"  ✓ Processed {len(df_job_seekers)} candidate profiles (including Anna FT-99720068)!")
+        cv_object_rows.append({
+            "demandeur_id": dem_id,
+            "uri": f"{RESUMES_BUCKET}/resumes/cv_{dem_id}.pdf",
+            "generation": 1786964931421000 + i,
+            "content_type": "application/pdf",
+            "size": random.randint(2800, 4500),
+            "md5_hash": "d41d8cd98f00b204e9800998ecf8427e",
+            "updated": "2026-08-19 14:00:00 UTC",
+            "metadata": [{"name": "candidate_name", "value": f"{fn} {ln}"}, {"name": "document_type", "value": "Curriculum Vitae"}]
+        })
 
-    # 6. candidatures_postulations_suivi (~3,500 ATS applications)
+    df_job_seekers = pd.DataFrame(candidates)
+    df_cv_objects = pd.DataFrame(cv_object_rows)
+    print(f"  ✓ Processed {len(df_job_seekers)} candidates & {len(df_cv_objects)} GCS Object Table references!")
+
+    # 7. candidatures_postulations_suivi (~3,500 ATS applications)
     applications = []
     cand_records = df_job_seekers.to_dict("records")
     offer_records = df_job_offers.to_dict("records")
 
-    # High matching applications for TF1 and Healthcare
     for i in range(1, 3501):
         app_id = f"APP-{i:05d}"
         seeker = random.choice(cand_records)
@@ -542,12 +564,11 @@ def main():
 
     df_applications = pd.DataFrame(applications)
 
-    # 7. france_travail_formations_aides (vocational training & subsidies)
+    # 8. france_travail_formations_aides
     subsidies = []
     organismes = ["France Travail", "Région", "Opco AKTO", "Opco Atlas", "Agefiph"]
     statuts_aides = ["Accordée", "En cours de versement", "Clôturée"]
 
-    # Specific subsidies for Anna (POEI, PMSMP Immersion 15j, CPF)
     anna_subsidies = [
         ("AIDE-ANNA-001", "FT-99720068", "33790000000055", "POEI (Préparation Opérationnelle à l'Emploi Individuelle - Supply Chain)", 4500.00, "2025-03-01", "2025-05-31", "Accordée", "France Travail"),
         ("AIDE-ANNA-002", "FT-99720068", "33790000000055", "PMSMP (Immersion en Entreprise 15j - Logistique Verte)", 0.00, "2025-06-01", "2025-06-15", "Clôturée", "France Travail"),
@@ -597,6 +618,7 @@ def main():
         "entreprises_urssaf_declarations": df_companies,
         "offres_emploi_recrutement": df_job_offers,
         "france_travail_demandeurs": df_job_seekers,
+        "france_travail_cv_object_table": df_cv_objects,
         "candidatures_postulations_suivi": df_applications,
         "france_travail_formations_aides": df_subsidies
     }
@@ -626,7 +648,7 @@ def main():
         job.result()
         print(f"  ✓ Loaded table `{tref}` in BigQuery!")
 
-    print("\nSUCCESS: All 7 Sully tables complete & populated in BigQuery!")
+    print("\nSUCCESS: All 8 Sully tables complete & populated in BigQuery!")
 
 if __name__ == "__main__":
     main()

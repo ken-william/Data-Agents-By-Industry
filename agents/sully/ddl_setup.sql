@@ -2,14 +2,14 @@
 -- Schema DDL for Sully - France Travail, RH & Urssaf Intelligence Platform
 -- Dataset: public_sector_employment_ds (Project: data-agents-by-industry)
 -- Relational Architecture linking France Travail BMO 2025 Open Data, ROME 4.0
--- Job Taxonomy, SIRENE/Urssaf Establishments, Job Offers with Vacancy Costs & Rejections,
--- Job Seekers (including Anna FT-99720068), ATS Applications, and Training Subsidies.
+-- Job Taxonomy, SIRENE/Urssaf Establishments, Job Offers, Job Seekers, Dedicated
+-- BigQuery CV Object Reference Table, ATS Applications, and Training Subsidies.
 -- ============================================================================
 
 CREATE SCHEMA IF NOT EXISTS `public_sector_employment_ds`
 OPTIONS (
   location = 'US',
-  description = 'Dataset Sully : Données réelles France Travail BMO 2025, référentiel ROME 4.0 des métiers, déclarations URSSAF/SIRENE, offres d\'emploi avec coûts de vacance et motifs de rejet, profil usager Anna FT-99720068, suivi candidatures ATS et dispositifs d\'aides à l\'embauche.'
+  description = 'Dataset Sully : Données réelles France Travail BMO 2025, référentiel ROME 4.0 des métiers, déclarations URSSAF/SIRENE, offres d\'emploi avec coûts de vacance et motifs de rejet, table des candidats, Object Table dédiée des CVs GCS, suivi candidatures ATS et dispositifs d\'aides à l\'embauche.'
 );
 
 -- 1. Table: bmo_recrutement_2025 (France Travail Official BMO 2025 Open Data)
@@ -94,7 +94,7 @@ OPTIONS (
   description = "Offres d'emploi actives, durées de vacance > 6 mois, coûts financiers de vacance quotidiens et motifs de rejet des candidats."
 );
 
--- 5. Table: france_travail_demandeurs (Job Seekers & Talent Profiles including Anna FT-99720068)
+-- 5. Table: france_travail_demandeurs (Job Seekers & Talent Profiles)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_demandeurs` (
   demandeur_id STRING OPTIONS(description="Identifiant unique du demandeur d'emploi France Travail (ex: FT-99720068)"),
   nom_prenom STRING OPTIONS(description="Nom et prénom du candidat"),
@@ -108,15 +108,28 @@ CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_demandeurs` 
   region_name STRING OPTIONS(description="Région de résidence"),
   freins_emploi_detail STRING OPTIONS(description="Freins à l'emploi identifiés (Garde d'enfants, Mobilité sans véhicule, Exigence de rémunération)"),
   competences_actuelles STRING OPTIONS(description="Synthèse des compétences acquises et savoir-faire opérationnels"),
-  cv_gcs_uri STRING OPTIONS(description="Lien de stockage GCS du CV du candidat (gs://sully-candidate-resumes-data-agents/...)"),
-  cv_preview_image_url STRING OPTIONS(description="Lien de l'aperçu image PNG du CV pour affichage visuel dans l'interface"),
   niveau_etudes STRING OPTIONS(description="Niveau de diplôme (Bac, Bac+2, Bac+3, Bac+5)")
 )
 OPTIONS (
-  description = "Répertoire des candidats et demandeurs d'emploi inscrits à France Travail avec freins à l'emploi et compétences clés."
+  description = "Répertoire propre des candidats et demandeurs d'emploi inscrits à France Travail."
 );
 
--- 6. Table: candidatures_postulations_suivi (ATS Job Applications & Hiring Funnel)
+-- 6. Table: france_travail_cv_object_table (Dedicated Native BigQuery Object Reference Table for Candidate Resumes)
+CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_cv_object_table` (
+  demandeur_id STRING OPTIONS(description="Identifiant du candidat (FK -> france_travail_demandeurs)"),
+  uri STRING OPTIONS(description="URI Cloud Storage du CV du candidat (gs://sully-candidate-resumes-data-agents/resumes/cv_*.pdf)"),
+  generation INT64 OPTIONS(description="Numéro de génération de l'objet GCS"),
+  content_type STRING OPTIONS(description="Type MIME de l'objet (application/pdf)"),
+  size INT64 OPTIONS(description="Taille du fichier CV en octets"),
+  md5_hash STRING OPTIONS(description="Hash MD5 de vérification d'intégrité de l'objet GCS"),
+  updated TIMESTAMP OPTIONS(description="Horodatage de dernière modification du CV sur GCS"),
+  metadata ARRAY<STRUCT<name STRING, value STRING>> OPTIONS(description="Métadonnées clés-valeurs associées à l'objet GCS (ex: candidate_name, document_type)")
+)
+OPTIONS (
+  description = "Table d'Objets d'ingestion native BigQuery (Object Table Schema) établissant le lien entre le demandeur d'emploi et son fichier CV hébergé sur GCS."
+);
+
+-- 7. Table: candidatures_postulations_suivi (ATS Job Applications & Hiring Funnel)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.candidatures_postulations_suivi` (
   application_id STRING OPTIONS(description="Identifiant unique de la candidature ATS (ex: APP-0001)"),
   demandeur_id STRING OPTIONS(description="Identifiant du candidat (FK -> france_travail_demandeurs)"),
@@ -133,7 +146,7 @@ OPTIONS (
   description = "Suivi dynamique des candidatures et parcours dans le tunnel de recrutement ATS avec motifs de refus."
 );
 
--- 7. Table: france_travail_formations_aides (Vocational Training & Subsidies POEI/AFPR/PMSMP)
+-- 8. Table: france_travail_formations_aides (Vocational Training & Subsidies POEI/AFPR/PMSMP)
 CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_formations_aides` (
   aide_id STRING OPTIONS(description="Identifiant unique du dossier d'aide ou de formation (ex: AIDE-001)"),
   demandeur_id STRING OPTIONS(description="Identifiant du demandeur bénéficiaire (FK -> france_travail_demandeurs)"),
