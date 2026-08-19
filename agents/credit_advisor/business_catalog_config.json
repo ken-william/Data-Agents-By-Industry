@@ -1,874 +1,117 @@
 {
   "agent_id": "credit-advisor-agent",
-  "displayName": "CreditAdvisor - Risque Crédit & Finance",
-  "dataplex_glossary_reference": "projects/data-agents-by-industry/locations/us/glossaries/fsi-banking-glossary",
-  "dataplex_entry_group_reference": "projects/data-agents-by-industry/locations/us/entryGroups/fsi-banking-catalog",
-  "business_glossary": {
-    "displayName": "Glossaire Métier FSI Banque & Assurance",
-    "description": "Glossaire prudentiel, risque de crédit et analyse financière B2B pour CreditAdvisor.",
-    "categories": [
-      {
-        "categoryId": "business-ontologies-kpis",
-        "displayName": "Catégorie : Ontologies Métier, KPIs & Concepts Clés",
-        "description": "Indexation complète des termes métier, métriques décisionnelles et relations ontologiques",
-        "terms": [
-          {
-            "termId": "risque-defaillances-faillites-pme",
-            "displayName": "Risque de Défaillances & Faillites PME",
-            "definition": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers.",
-            "mapped_bigquery_table": "bdf_defaillances_sectorielles_diren",
-            "mapped_bigquery_column": "nombre_liquidation_judiciaire",
-            "related_terms": [
-              "Liquidation Judiciaire PME",
-              "Redressement Judiciaire",
-              "Signaux Faibles Involvabilité",
-              "Taux de Défaillance Sectoriel"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Risque de Défaillances & Faillites PME** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bdf_defaillances_sectorielles_diren` (colonne `nombre_liquidation_judiciaire`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/bdf_defaillances_sectorielles_diren",
-                "table_name": "bdf_defaillances_sectorielles_diren",
-                "column_name": "nombre_liquidation_judiciaire",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.bdf_defaillances_sectorielles_diren.nombre_liquidation_judiciaire"
-              }
-            ]
-          },
-          {
-            "termId": "enquetes-octroi-credit-bls",
-            "displayName": "Enquêtes Octroi de Crédit BLS Banque de France",
-            "definition": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI.",
-            "mapped_bigquery_table": "bdf_enquete_octroi_bls",
-            "mapped_bigquery_column": "orientation_criteres_octroi",
-            "related_terms": [
-              "Bank Lending Survey BLS",
-              "Resserrement Critères Prêts",
-              "Demande de Crédit Entreprises",
-              "Conditions de Taux Marge"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Enquêtes Octroi de Crédit BLS Banque de France** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Orientations des critères d'octroi de prêts bancaires aux PME et ETI.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bdf_enquete_octroi_bls` (colonne `orientation_criteres_octroi`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/bdf_enquete_octroi_bls",
-                "table_name": "bdf_enquete_octroi_bls",
-                "column_name": "orientation_criteres_octroi",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.bdf_enquete_octroi_bls.orientation_criteres_octroi"
-              }
-            ]
-          },
-          {
-            "termId": "modelisation-ifrs9-ecl",
-            "displayName": "Modélisation IFRS 9 & ECL",
-            "definition": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3.",
-            "mapped_bigquery_table": "bilans_financiers",
-            "mapped_bigquery_column": "ecl_staging_ifrs9",
-            "related_terms": [
-              "Expected Credit Loss ECL",
-              "Staging 1 2 3 IFRS 9",
-              "Dégradation Risque Crédit",
-              "Provisionnement Comptable Banque"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Modélisation IFRS 9 & ECL** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bilans_financiers` (colonne `ecl_staging_ifrs9`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/bilans_financiers",
-                "table_name": "bilans_financiers",
-                "column_name": "ecl_staging_ifrs9",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.bilans_financiers.ecl_staging_ifrs9"
-              }
-            ]
-          },
-          {
-            "termId": "upsell-commercial-b2b-pme",
-            "displayName": "Upsell Commercial B2B PME Résilientes",
-            "definition": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing.",
-            "mapped_bigquery_table": "produits_bancaires",
-            "mapped_bigquery_column": "nom_produit_credit",
-            "related_terms": [
-              "Financement de Croissance PME",
-              "Crédit-Bail Leasing Équipement",
-              "Ligne de Trésorerie Confirmée",
-              "Marge Nette d'Intérêt"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Upsell Commercial B2B PME Résilientes** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `produits_bancaires` (colonne `nom_produit_credit`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/produits_bancaires",
-                "table_name": "produits_bancaires",
-                "column_name": "nom_produit_credit",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.produits_bancaires.nom_produit_credit"
-              }
-            ]
-          },
-          {
-            "termId": "cotation-fiben-banque-de-france",
-            "displayName": "Cotation Fiben & Score Financier Banque de France",
-            "definition": "Évaluation de la capacité de l'entreprise à honorer ses engagements financiers à 3 ans.",
-            "mapped_bigquery_table": "entreprises",
-            "mapped_bigquery_column": "cotation_fiben_bdf",
-            "related_terms": [
-              "Score FIBEN Banque de France",
-              "Capacité de Remboursement",
-              "Indice de Solidité Financière",
-              "Autonomie Financière Ratio"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Cotation Fiben & Score Financier Banque de France** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Évaluation de la capacité de l'entreprise à honorer ses engagements financiers à 3 ans.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `entreprises` (colonne `cotation_fiben_bdf`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/entreprises",
-                "table_name": "entreprises",
-                "column_name": "cotation_fiben_bdf",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.entreprises.cotation_fiben_bdf"
-              }
-            ]
-          },
-          {
-            "termId": "encours-credit-marge-exposition",
-            "displayName": "Encours de Crédit & Marge d'Exposition",
-            "definition": "Volume total des financements accordés et mesure de l'exposition en cas de défaut (EAD).",
-            "mapped_bigquery_table": "encours_credit",
-            "mapped_bigquery_column": "montant_encours_eur",
-            "related_terms": [
-              "Exposure at Default EAD",
-              "Probability of Default PD",
-              "Loss Given Default LGD",
-              "Gestion des Risques de Contrepartie"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Encours de Crédit & Marge d'Exposition** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Volume total des financements accordés et mesure de l'exposition en cas de défaut (EAD).\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `encours_credit` (colonne `montant_encours_eur`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/encours_credit",
-                "table_name": "encours_credit",
-                "column_name": "montant_encours_eur",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.encours_credit.montant_encours_eur"
-              }
-            ]
-          },
-          {
-            "termId": "taux-marche-euribor-banque-de-france",
-            "displayName": "Taux de Marché & Euribor Banque de France",
-            "definition": "Évolution des taux Euribor 3M/12M et coût de refinancement bancaire.",
-            "mapped_bigquery_table": "bdf_taux_marche",
-            "mapped_bigquery_column": "taux_euribor_3m_pct",
-            "related_terms": [
-              "Euribor 3 Mois 12 Mois",
-              "Taux Directeurs BCE",
-              "Marge de Crédit Corporate",
-              "Refinancement Bancaire"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Taux de Marché & Euribor Banque de France** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Évolution des taux Euribor 3M/12M et coût de refinancement bancaire.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bdf_taux_marche` (colonne `taux_euribor_3m_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/bdf_taux_marche",
-                "table_name": "bdf_taux_marche",
-                "column_name": "taux_euribor_3m_pct",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.bdf_taux_marche.taux_euribor_3m_pct"
-              }
-            ]
-          },
-          {
-            "termId": "ratios-solvabilite-fonds-propres",
-            "displayName": "Ratios de Solvabilité & Fonds Propres RWA",
-            "definition": "Ratio Core Tier 1 et couverture des actifs pondérés par les risques (RWA Bâle III).",
-            "mapped_bigquery_table": "bilans_financiers",
-            "mapped_bigquery_column": "ratio_fonds_propres_tier1",
-            "related_terms": [
-              "Ratio Fond Propres Tier 1",
-              "Bâle III RWA Risk Weighted",
-              "Coussin de Sécurité Fonds Propres",
-              "Effet de Levier Bancaire"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Ratios de Solvabilité & Fonds Propres RWA** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Ratio Core Tier 1 et couverture des actifs pondérés par les risques (RWA Bâle III).\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bilans_financiers` (colonne `ratio_fonds_propres_tier1`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/bilans_financiers",
-                "table_name": "bilans_financiers",
-                "column_name": "ratio_fonds_propres_tier1",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.bilans_financiers.ratio_fonds_propres_tier1"
-              }
-            ]
-          },
-          {
-            "termId": "garanties-bpifrance-suretes",
-            "displayName": "Garanties Bpifrance & Sûretés Réelles",
-            "definition": "Part de garantie apportée par Bpifrance et sûretés réelles hypothécaires.",
-            "mapped_bigquery_table": "encours_credit",
-            "mapped_bigquery_column": "garantie_bpifrance_pct",
-            "related_terms": [
-              "Garantie Bpifrance 50-70%",
-              "Hypothèque Sûreté Réelle",
-              "Caution Personnelle Dirigeant",
-              "Couverture Risque Perte"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Garanties Bpifrance & Sûretés Réelles** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Part de garantie apportée par Bpifrance et sûretés réelles hypothécaires.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `encours_credit` (colonne `garantie_bpifrance_pct`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/encours_credit",
-                "table_name": "encours_credit",
-                "column_name": "garantie_bpifrance_pct",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.encours_credit.garantie_bpifrance_pct"
-              }
-            ]
-          },
-          {
-            "termId": "indice-prix-immobilier-commercial-rpp",
-            "displayName": "Indice des Prix de l'Immobilier Commercial RPP",
-            "definition": "Variation des valeurs d'actifs immobiliers professionnels pris en garantie du prêt.",
-            "mapped_bigquery_table": "bdf_indices_immobiliers_rpp",
-            "mapped_bigquery_column": "indice_prix_immo_commercial",
-            "related_terms": [
-              "Immobilier Commercial RPP",
-              "Valeur des Actifs en Garantie",
-              "LTV Loan to Value Ratio",
-              "Risque Dépréciation Actifs"
-            ],
-            "overview": "### Aperçu Métier & Validation Décisionnelle\nLe terme **Indice des Prix de l'Immobilier Commercial RPP** constitue un indicateur stratégique central du domaine.\n\n**Définition & Périmètre** : Variation des valeurs d'actifs immobiliers professionnels pris en garantie du prêt.\n\n**Méthodologie de Calcul & Usage** : Ce terme est directement cartographié sur la table BigQuery `bdf_indices_immobiliers_rpp` (colonne `indice_prix_immo_commercial`). Il alimente les tableaux de bord exécutifs et guide la prise de décision automatisée de l'agent.\n\n**Gouvernance & SLA** : Mis à jour quotidiennement sous contrôle strict de qualité des données (seuil de complétude 99.5%).",
-            "contacts": [
-              {
-                "name": "Équipe Gouvernance & Data Engineering",
-                "email": "data-governance@data-agents-by-industry.com",
-                "role": "Data Owner / Steward"
-              },
-              {
-                "name": "Expert Métier & Analyste Domaine",
-                "email": "domain-expert@data-agents-by-industry.com",
-                "role": "Subject Matter Expert"
-              }
-            ],
-            "labels": {
-              "domain": "financial_banking",
-              "criticality": "tier-1-executive",
-              "data_sensitivity": "internal-restricted",
-              "compliance_status": "csrd-gdpr-compliant",
-              "update_frequency": "daily-automated"
-            },
-            "aspects": {
-              "business_governance": {
-                "sla_tier": "Tier-1 Executive 24/7",
-                "data_steward_group": "Data Stewards Enterprise",
-                "retention_period_years": 10
-              },
-              "data_quality_aspect": {
-                "target_completeness_pct": 99.5,
-                "validation_status": "PASSED_STRICT_CHECKS",
-                "last_audit_date": "2026-08-18"
-              },
-              "business_value_aspect": {
-                "decision_impact": "High Strategic ROI",
-                "automation_level": "Automated Agent Integration"
-              }
-            },
-            "data_quality_rules": [
-              {
-                "rule_type": "NON_NULL",
-                "dimension": "Completeness",
-                "action": "ALERT_AND_LOG",
-                "parameters": {
-                  "min_completeness_pct": 99.5
-                }
-              },
-              {
-                "rule_type": "RANGE_CHECK",
-                "dimension": "Validity",
-                "action": "ENFORCE_BOUNDS",
-                "parameters": {
-                  "min_value": 0,
-                  "max_value": 1000000000
-                }
-              },
-              {
-                "rule_type": "TYPE_CONSISTENCY",
-                "dimension": "Consistency",
-                "action": "VALIDATE_SCHEMA",
-                "parameters": {
-                  "target_type": "NUMERIC_OR_STRING"
-                }
-              }
-            ],
-            "related_entries": [
-              {
-                "resource_name": "projects/data-agents-by-industry/datasets/financial_banking_ds/tables/bdf_indices_immobiliers_rpp",
-                "table_name": "bdf_indices_immobiliers_rpp",
-                "column_name": "indice_prix_immo_commercial",
-                "project_id": "data-agents-by-industry",
-                "fully_qualified_name": "bigquery:data-agents-by-industry.financial_banking_ds.bdf_indices_immobiliers_rpp.indice_prix_immo_commercial"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "data_governance": {
-    "sla_tier": "Tier-1 Executive 24/7",
-    "criticality_level": "Mission Critical",
-    "data_sensitivity": "Internal Enterprise"
-  }
+  "domain": "Financial Services & Banking Credit Risk Intelligence",
+  "dataplex_catalog_name": "Glossaire Métier FSI Banque & Assurance",
+  "glossary_terms": [
+    {
+      "term": "Risque de Défaillances & Faillites PME",
+      "definition": "Détection préventive des signaux faibles de liquidation judiciaire et scorings financiers. Termes associés : Liquidation Judiciaire PME, Redressement Judiciaire, Signaux Faibles Involvabilité, Taux de Défaillance Sectoriel.",
+      "related_terms": ["Liquidation Judiciaire PME", "Redressement Judiciaire", "Signaux Faibles Involvabilité", "Taux de Défaillance Sectoriel"],
+      "overview": "Indicateur stratégique des taux de défaillance par secteur d'activité et par région.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Default Rate Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0.0, "max_value": 100.0}}],
+      "related_entries": [{"resource_name": "bdf_defaillances_sectorielles_diren", "column_name": "taux_defaillance_annuel_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.bdf_defaillances_sectorielles_diren.taux_defaillance_annuel_pct"}]
+    },
+    {
+      "term": "Enquêtes Octroi de Crédit BLS Banque de France",
+      "definition": "Orientations des critères d'octroi de prêts bancaires aux PME et ETI. Termes associés : Bank Lending Survey BLS, Resserrement Critères Prêts, Demande de Crédit Entreprises, Conditions de Taux Marge.",
+      "related_terms": ["Bank Lending Survey BLS", "Resserrement Critères Prêts", "Demande de Crédit Entreprises", "Conditions de Taux Marge"],
+      "overview": "Indice trimestriel d'orientation des politiques d'octroi de crédit commercial Banque de France.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check BLS Index", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "bdf_enquete_octroi_bls", "column_name": "indice_criteres_octroi_pme", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.bdf_enquete_octroi_bls.indice_criteres_octroi_pme"}]
+    },
+    {
+      "term": "Modélisation IFRS 9 & ECL (Expected Credit Loss)",
+      "definition": "Calcul des pertes de crédit attendues Expected Credit Loss en Staging 1, 2 et 3.",
+      "related_terms": ["Expected Credit Loss ECL", "Staging 1 2 3 IFRS 9", "Dégradation Risque Crédit", "Provisionnement Comptable Banque"],
+      "overview": "Pertes de crédit attendues et classification comptable prudentielle des encours.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check ECL Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "encours_credit", "column_name": "montant_ecl_ifrs9_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit.montant_ecl_ifrs9_eur"}]
+    },
+    {
+      "term": "Upsell Commercial B2B PME Résilientes",
+      "definition": "Ciblage des entreprises saines pour l'octroi de financements de croissance et leasing.",
+      "related_terms": ["Financement de Croissance PME", "Crédit-Bail Leasing Équipement", "Ligne de Trésorerie Confirmée", "Marge Nette d'Intérêt"],
+      "overview": "Ciblage commercial des PME résilientes disposant d'un score de santé financier supérieur à 75/100.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Financial Health Score", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": 0, "max_value": 100}}],
+      "related_entries": [{"resource_name": "bilans_financiers", "column_name": "score_sante_financiere", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.bilans_financiers.score_sante_financiere"}]
+    },
+    {
+      "term": "Encours de Crédit & Marge d'Exposition (EAD)",
+      "definition": "Volume total des financements accordés et mesure de l'exposition en cas de défaut (EAD).",
+      "related_terms": ["Exposure at Default EAD", "Probability of Default PD", "Loss Given Default LGD", "Gestion des Risques de Contrepartie"],
+      "overview": "Montant restant dû sur les lignes de crédit accordées.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Exposure Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "encours_credit", "column_name": "montant_encours_eur", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit.montant_encours_eur"}]
+    },
+    {
+      "term": "Ratio RAROC & Rentabilité Ajustée du Risque",
+      "definition": "Risk-Adjusted Return on Capital (RAROC) mesurant la rentabilité nette du prêt ajustée du risque de crédit.",
+      "related_terms": ["RAROC %", "Marge Commerciale bps", "Marge Nette d'Intérêt MNI"],
+      "overview": "Métrique de rentabilité financière sous contrainte de fonds propres.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check RAROC Range", "rule_type": "RANGE_CHECK", "dimension": "VALIDITY", "parameters": {"min_value": -50.0, "max_value": 100.0}}],
+      "related_entries": [{"resource_name": "encours_credit", "column_name": "raroc_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit.raroc_pct"}]
+    },
+    {
+      "term": "Ratio Loan-to-Value (LTV) & Collatéral",
+      "definition": "Ratio entre l'encours du prêt et la valeur des garanties hypothécaires sous-jacentes (LTV).",
+      "related_terms": ["LTV %", "Déficit Collatéral", "Valeur Garantie Eur"],
+      "overview": "Couverture des crédits par des garanties réelles immobilières ou financières.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check LTV Positive", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "encours_credit", "column_name": "ratio_ltv_pct", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit.ratio_ltv_pct"}]
+    },
+    {
+      "term": "Taux de Marché & Euribor Banque de France",
+      "definition": "Évolution des taux Euribor 3M/12M et taux directeurs BCE.",
+      "related_terms": ["Euribor 3M", "Euribor 12M", "Taux Directeurs BCE", "Inflation IPC %"],
+      "overview": "Indicateurs macroéconomiques Banque de France pour l'indexation des taux et le refinancement.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Euribor Non Null", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "bdf_taux_marche", "column_name": "euribor_3m", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.bdf_taux_marche.euribor_3m"}]
+    },
+    {
+      "term": "Indice des Prix de l'Immobilier Commercial RPP",
+      "definition": "Variation des valeurs d'actifs immobiliers professionnels pris en garantie du prêt.",
+      "related_terms": ["Immobilier Commercial RPP", "Valeur des Actifs en Garantie", "LTV Loan to Value Ratio"],
+      "overview": "Indice trimestriel RPP d'évaluation des garanties d'immobilier professionnel.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Commercial Immo Index", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "bdf_indices_immobiliers_rpp", "column_name": "indice_prix_immo_commercial", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.bdf_indices_immobiliers_rpp.indice_prix_immo_commercial"}]
+    },
+    {
+      "term": "Filière & Ancrage Supply Chain Grandes Entreprises",
+      "definition": "Évaluation du risque de dépendance d'une PME/ETI envers un grand donneur d'ordre (Airbus, Safran, Renault, Thales).",
+      "related_terms": ["Donneur Ordre Principal", "Risque de Dépendance Client", "Supply Chain Aerospace Automotive"],
+      "overview": "Analyse de la sensibilité aux chocs d'activité subis par les donneurs d'ordres clés.",
+      "contacts": ["data-governance@data-agents-by-industry.com"],
+      "labels": {"domain": "financial_banking", "criticality": "high"},
+      "aspects": {"data_quality_aspect": {"completeness_target": "99.5%"}},
+      "data_quality_rules": [{"display_name": "Check Anchor Client", "rule_type": "NON_NULL", "dimension": "COMPLETENESS"}],
+      "related_entries": [{"resource_name": "entreprises", "column_name": "donneur_ordre_principal", "project": "${PROJECT_ID}", "fully_qualified_name": "bigquery:${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises.donneur_ordre_principal"}]
+    }
+  ]
 }
