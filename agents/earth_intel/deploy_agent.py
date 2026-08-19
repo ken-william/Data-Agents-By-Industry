@@ -13,7 +13,7 @@ import subprocess
 def deploy_earthintel_agent():
     project_id = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
     location = os.environ.get("GOOGLE_CLOUD_LOCATION", "global")
-    agent_id = "earthintel-agent"
+    agent_id = "earth-intel-agent"
 
     print(f"Deploying EarthIntel Data Agent to Project: '{project_id}', Location: '{location}', Agent ID: '{agent_id}'...")
 

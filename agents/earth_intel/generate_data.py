@@ -124,7 +124,7 @@ def main():
     for idx, tile in enumerate(mgrs_tiles * 3):
         dt = datetime(2026, 8, 15) - timedelta(days=idx * 4)
         scene_id = f"S2B_MSIL2A_{dt.strftime('%Y%m%dT%H%M%S')}_{tile}"
-        quicklook_uri = f"{BUCKET_NAME}/{IMAGES_DIR}/s2_{tile}_quicklook.png"
+        quicklook_uri = f"https://storage.googleapis.com/talktodata-earth-intel-raw-data/{IMAGES_DIR}/s2_{tile}_quicklook.png"
 
         scenes.append({
             "scene_id": scene_id,

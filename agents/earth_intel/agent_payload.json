@@ -3,7 +3,7 @@
   "description": "Copilote géospatial universel et d'intelligence planétaire (Sentinel-2 / Copernicus) : permet d'évaluer le risque d'inondation et d'incendie sur les portefeuilles immobiliers assurés (Assurance/FSI), d'anticiper le stress hydrique et les baisses de rendement agricole via l'indice NDVI (Agriculture), d'élaguer préventivement la surcroissance végétale sous les lignes haute tension (Énergie), de certifier visuellement le sourcing Zéro Déforestation CSRD (Retail/CPG), et de cartographier les îlots de chaleur urbains et la densité végétale rafraîchissante (Secteur Public & Sport).",
   "dataAnalyticsAgent": {
     "publishedContext": {
-      "systemInstruction": "Tu es l'Analyste Central IA & Dataviz décisionnel expert de Earth Intel. Ton rôle principal est de fournir une analyse de données géospatiales et satellitaires fluide, professionnelle et à très forte valeur ajoutée à partir de la plateforme BigQuery et des objets Cloud Storage.\n\n🔒 SÉCURITÉ DE L'IMAGERIE SPATIALE ET SITES SENSIBLES :\n- Confidentialité des coordonnées précises d'actifs industriels et militaires.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information géospatiale issue des tables structurées et des objets imagerie GCS (clichés satellites Sentinel-2, indices NDVI/NDWI, alertes inondations/incendies, audits d'exposition d'actifs et certificats de déforestation CSRD).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation (ex: dis 'Nos registres géospatiaux indiquent...' ou 'Le bilan d'observation satellitaire montre...' au lieu de citer les noms de tables SQL).\n- FOCUS EXCLUSIVEMENT BUSINESS : Toutes tes réponses doivent être rédigées en langage naturel clair, accompagnées de synthèses de tableaux de données décisionnels lisibles.\n\n💡 LIGNE DE CONDUITE BEHAVIORALE :\n- Sois toujours professionnel, concis et directement guidé par les données (Data-Driven).\n- Évite le texte excessif : va droit au but avec des résultats immédiatement exploitables sans nécessiter la lecture de longs paragraphes.\n- Réponds à la question de ton collègue avant de formuler des suggestions proactives orientées métier.\n- En cas de question hors-sujet, réponds poliment et redirige la conversation vers ton domaine d'expertise métier.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
+      "systemInstruction": "Tu es EarthIntel, l'Analyste Central IA & Dataviz décisionnel expert en intelligence géospatiale et imagerie spatiale. Ton rôle principal est de fournir une analyse géospatiale et satellitaire fluide, professionnelle et visuelle à partir de BigQuery et Cloud Storage.\n\n🖼️ AFFICHAGE DIRECT ET INTEGRATION DES IMAGES SATELLITES :\n- Lorsqu'un cliché satellite ou une image d'observation (champ quicklook_image_url) est sélectionné, tu DOIS IMPÉRATIVEMENT inclure l'image directement dans la réponse sous forme de balise Markdown intégrée `![Cliché Satellite Sentinel-2](https://storage.googleapis.com/talktodata-earth-intel-raw-data/satellite_imagery/...)` et fournir le lien HTTP cliquable direct.\n- Ne renvoie JAMAIS de liens bruts 'gs://...' sans afficher visuellement l'image en Markdown pour permettre au décideur de vérifier visuellement la scène satellitaire.\n\n🔒 SÉCURITÉ DE L'IMAGERIE SPATIALE ET SITES SENSIBLES :\n- Confidentialité des coordonnées précises d'actifs industriels et militaires.\n\n🎯 CAPACITÉS & RESPONSABILITÉS CLÉS :\n- Tu es l'expert incontesté pour extraire et analyser l'information géospatiale issue des tables structurées et des objets imagerie GCS (clichés satellites Sentinel-2, indices NDVI/NDWI, alertes inondations/incendies, audits d'exposition d'actifs et certificats de déforestation CSRD).\n\n🚫 CONTRÔLE STRICT DES SORTIES & RÈGLES DE CODE :\n- BANNISSEMENT ABSOLU DU CODE : Il est STRICTEMENT INTERDIT d'afficher, de citer ou d'inclure du code SQL, des blocs de code markdown (```sql) ou des artefacts de requêtes dans tes réponses finales.\n- ZERO EXTRAIT TECHNIQUE : Ne génère jamais de scripts SQL ou de détails techniques de requêtes sous aucun prétexte.\n- INTERDICTION DE CITER LES NOMS DE TABLES/COLONNES SQL : Ne mentionne jamais les noms techniques de colonnes ou de tables BigQuery directement dans la conversation.\n- FOCUS EXCLUSIVEMENT BUSINESS & VISUEL : Toutes tes réponses doivent être rédigées en français fluide, accompagnées de tableaux de données décisionnels lisibles et des images satellites affichées visuellement.\n- RÈGLE LINGUISTIQUE : Tu DOIS répondre dans la même langue que le dernier message de l'utilisateur.",
       "datasourceReferences": {
         "bq": {
           "tableReferences": [
@@ -37,8 +37,8 @@
       },
       "exampleQueries": [
         {
-          "naturalLanguageQuestion": "Banque & Assurance : Évalue le risque d'inondation et d'incendie autour des coordonnées GPS de notre portefeuille d'actifs immobiliers et montre le cliché satellite de preuve.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.flood_risk_score, c.fire_risk_score, s.acquisition_date, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector = 'Banque & Assurance' ORDER BY c.flood_risk_score DESC LIMIT 5"
+          "naturalLanguageQuestion": "Banque & Assurance : Évalue le risque d'inondation et d'incendie sur notre portefeuille d'actifs immobiliers assurés en PACA et affiche le cliché satellite Sentinel-2 de confirmation.",
+          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.region, c.flood_risk_score, c.fire_risk_score, s.acquisition_date, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.region = 'PACA' AND c.industry_sector = 'Banque & Assurance' ORDER BY s.acquisition_date DESC LIMIT 5"
         },
         {
           "naturalLanguageQuestion": "Agriculture : Analyse l'indice de végétation (NDVI) de nos domaines céréaliers et viticoles pour anticiper les baisses de rendement.",
@@ -47,52 +47,12 @@
         {
           "naturalLanguageQuestion": "Énergie : Détecte la surcroissance d'arbres à proximité de nos lignes haute tension pour planifier l'élagage prédictif.",
           "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.powerline_tree_encroachment_m, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.industry_sector LIKE '%Énergie%' ORDER BY c.powerline_tree_encroachment_m ASC LIMIT 5"
-        },
-        {
-          "naturalLanguageQuestion": "Retail & CPG : Prouve scientifiquement que notre approvisionnement en soja/cacao provient de zones certifiées Zéro Déforestation CSRD.",
-          "sqlQuery": "SELECT c.company_name, c.asset_name, v.commodity_type, v.sourcing_country, v.verified_deforestation_free, v.canopy_loss_hectares, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.deforestation_csrd_verification` v ON c.asset_id = v.asset_id JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE v.verified_deforestation_free = TRUE LIMIT 5"
         }
       ],
       "glossaryTerms": [
         {
           "displayName": "Imagerie ESA Sentinel-2 & GCS Object Tables",
-          "description": "Accès direct aux scènes satellitaires de 10m de résolution et fichiers Quicklook PNG. [Table: sentinel_2_index, Colonne: quicklook_image_url]. Termes associés : Clichés Satellites ESA Sentinel-2, Cloud Storage Object Tables, Résolution Spatiale 10m, Images Quicklook PNG. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Risques Inondation, Incendie & FSI",
-          "description": "Scores d'exposition des actifs immobiliers assurés aux aléas climatiques majeurs. [Table: company_assets, Colonne: flood_risk_score]. Termes associés : Score Exposition Inondation, Score Risque Incendie Forêt, Évaluation Portefeuille Immobilier, Sinistralité Climatique FSI. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Indice Végétation NDVI & Stress Hydrique",
-          "description": "Mesure spatiale de la santé des cultures céréalières/viticoles et prévision de rendement. [Table: company_assets, Colonne: ndvi_vegetation_index]. Termes associés : Indice NDVI Végétation, Stress Hydrique Sécheresse, Prévision Rendement Céréales, Santé des Vignobles. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Surveillance Canopée Lignes HT (Énergie)",
-          "description": "Distance de frondaison d'arbres sous lignes électriques haute tension pour élagage prédictif. [Table: company_assets, Colonne: powerline_tree_encroachment_m]. Termes associés : Distance Arbres Lignes HT, Surcroissance Végétale Mètres, Élagage Prédictif Réseau, Sécurité Réseau Électrique. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Conformité CSRD & Zéro Déforestation",
-          "description": "Attestations scientifiques de non-déforestation sur les bassins de sourcing soja/cacao/palme. [Table: deforestation_csrd_verification, Colonne: verified_deforestation_free]. Termes associés : Certificat CSRD Zéro Déforestation, Perte Couvert Forestier Hectares, Sourcing Soja Cacao Palme, Audit Spatiale RDUE. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Îlots de Chaleur Urbains & Canopée Rafraîchissante",
-          "description": "Anomalies thermiques de température au sol °C et taux d'ombrage végétal rafraîchissant. [Table: company_assets, Colonne: urban_heat_island_celsius]. Termes associés : Anomalie Température °C, Îlot de Chaleur Urbain ICU, Ombrage Végétal Grand Stade, Rafraîchissement Métropolitain. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Risque Sanitaire Eaux Stagnantes & Moustiques",
-          "description": "Surveillance des étendues d'eau stagnante et risque épidémiologique moustiques vecteurs. [Table: company_assets, Colonne: stagnant_water_km2]. Termes associés : Surface Eaux Stagnantes km², Risque Moustiques Vecteurs, Surveillance Complexes Pharma, Prévention Épidémiologique. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Congestion Portuaire Navires en Attente",
-          "description": "Décomptes spatiaux par satellite des porte-conteneurs au mouillage dans les terminaux. [Table: company_assets, Colonne: port_container_ships_waiting]. Termes associés : Porte-Conteneurs en Attente, Congestion Hub Portuaire, Déviation Flux Logistiques, Analyse Spatiale Terminaux. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Densité Canopée & Obstacles Réseau 5G",
-          "description": "Pourcentage de masse forestière bloquant la propagation des ondes 5G millimétriques. [Table: company_assets, Colonne: canopy_density_5g_obstacle_pct]. Termes associés : Obstacle Canopée Ondes 5G, Densité Forestière %, Planification Antennes Télécoms, Propagation Signal Mobile. Propriétaire : data-governance@data-agents-by-industry.com."
-        },
-        {
-          "displayName": "Taux Enneigement Historique Sites Montagne",
-          "description": "Mesure satellitaire de la couverture de neige garantie pour les décors de cinéma et tournées. [Table: company_assets, Colonne: snow_cover_historical_pct]. Termes associés : Enneigement Historique Guaranteed %, Site Tournage Cinéma, Massif Alpine Vanoise, Décor Naturel Montagne. Propriétaire : data-governance@data-agents-by-industry.com."
+          "description": "Accès direct aux scènes satellitaires de 10m de résolution et fichiers Quicklook PNG affichables. [Table: sentinel_2_index, Colonne: quicklook_image_url]. Termes associés : Clichés Satellites ESA Sentinel-2, Cloud Storage Object Tables, Images Quicklook PNG. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

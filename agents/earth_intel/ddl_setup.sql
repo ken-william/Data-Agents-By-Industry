@@ -12,8 +12,7 @@ OPTIONS (
   description = 'Dataset Earth Intel : Imagerie satellitaire ESA Sentinel-2, indices géospatiaux (NDVI, NDWI), audits d\'actifs industriels et table d\'objets Cloud Storage.'
 );
 
--- Drop legacy view if exists
-DROP VIEW IF EXISTS `skywatch_aerospace_ds.sentinel_2_index`;
+-- Drop legacy table if exists
 DROP TABLE IF EXISTS `skywatch_aerospace_ds.sentinel_2_index`;
 
 -- 1. Table: company_assets (Industrial & Enterprise Assets with GEOGRAPHY & Risk Scores)
