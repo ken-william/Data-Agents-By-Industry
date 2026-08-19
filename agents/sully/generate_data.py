@@ -122,7 +122,6 @@ def parse_local_pdf_cv(pdf_path):
         "freins_emploi_detail": "Aucun frein majeur identifié, disponible immédiatement.",
         "competences_actuelles": "Maîtrise bureautique, Analyse de données, Gestion de projet",
         "cv_gcs_uri": gcs_uri,
-        "cv_text_content": txt[:1200].replace("\n", " ").strip(),
         "niveau_etudes": degree
     }
 
@@ -453,7 +452,6 @@ def main():
         "freins_emploi_detail": "Garde de 2 enfants en bas âge (contrainte horaire stricte 8h30-17h30), Mobilité en Transports en Commun uniquement (pas de véhicule personnel), Prétentions salariales minimales de 38 000 € bruts/an.",
         "competences_actuelles": "Gestion des stocks et réapprovisionnement, Maîtrise avancée Excel & ERP SAP, Planification de flux de camionnage, Anglais professionnel.",
         "cv_gcs_uri": f"{RESUMES_BUCKET}/resumes/cv_FT-99720068.pdf",
-        "cv_text_content": "Anna Kowalski (ID: FT-99720068). Titulaire d'un Bac+3 en Logistique et Transports. 5 ans d'expérience comme Assistante Logistique Senior. Souhaite évoluer vers un poste de Responsable Supply Chain avec de meilleurs avantages. Freins: Horaires stricts garde d'enfants (8h30-17h30), mobilité transports en commun.",
         "niveau_etudes": "Bac+3"
     }
     candidates.append(anna_profile)
@@ -502,7 +500,6 @@ def main():
             "freins_emploi_detail": "Disponible immédiatement, mobilité régionale.",
             "competences_actuelles": "Savoir-faire métier, travail en équipe, autonomie",
             "cv_gcs_uri": f"{RESUMES_BUCKET}/resumes/cv_{dem_id}.pdf",
-            "cv_text_content": f"CV de {fn} {ln}. Compétences et expérience en {random.choice(metiers_target)}.",
             "niveau_etudes": random.choice(["Bac", "Bac+2", "Bac+3", "Bac+5"])
         })
 
