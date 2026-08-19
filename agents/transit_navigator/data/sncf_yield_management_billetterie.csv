@@ -1,0 +1,6 @@
+ticket_offer_id,train_number,ligne_axe_id,nom_axe_ferroviaire,classe_billet,tarif_nominal_eur,tarif_dynamique_propose_eur,taux_occupation_1ere_classe_pct,taux_occupation_2nde_classe_pct,panier_moyen_actuel_eur,hausse_panier_moyen_projete_pct,recommandation_pricing_yield
+YIELD-TGV-6902,TGV 6902,AXE-PARIS-LYON,Paris Lyon - Grenoble,1ère Classe,115.0,92.0,32.4,98.2,58.4,12.4,Réduction dynamique 1ère classe -20% sur rames creuses pour viser +12.4% de panier moyen
+YIELD-TGV-6902-2,TGV 6902,AXE-PARIS-LYON,Paris Lyon - Grenoble,2nde Classe,68.0,68.0,32.4,98.2,58.4,12.4,Maintien tarif plein 2nde classe saturée
+YIELD-TGV-8410,TGV 8410,AXE-PARIS-RENNES,Paris Montparnasse - Rennes,1ère Classe,108.0,85.0,28.5,96.5,54.1,14.2,Upsell automatique 1ère classe pour abonnés Navigo/TGV Max (+14.2% panier moyen)
+YIELD-TER-84210,TER 84210,AXE-TER-001,Lyon Part-Dieu - Grenoble,1ère Classe,34.0,26.5,22.0,94.0,24.8,11.8,Tarif promotionnel 1ère classe aux heures creuses (+11.8% panier moyen)
+YIELD-TGV-6104,TGV 6104,AXE-MARSEILLE-LILLE,Marseille Saint-Charles - Lille Flandres,1ère Classe,145.0,115.0,38.0,99.1,72.5,13.5,Tarification yield dynamique multi-tronçons 1ère classe (+13.5% panier moyen)
