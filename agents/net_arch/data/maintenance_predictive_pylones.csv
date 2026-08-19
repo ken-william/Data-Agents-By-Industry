@@ -1,301 +1,301 @@
 id_pylone_sensor,id_station_anfr,nom_operateur,commune,temperature_processeur_c,charge_cpu_pct,stabilite_tension_volts,etat_sante_batterie_secours_pct,vibration_mat_mm,probabilite_panne_7j_pct,composant_a_remplacer_prioritaire
-SNS-0001,0802290015,Orange,Bordeaux,85.9,82.1,48.78,89.2,2.91,93.5,Carte Alimentation DC
-SNS-0002,0642290151,Bouygues Telecom,Marseille,43.0,85.7,47.93,87.6,2.17,19.5,Aucun (Normal)
-SNS-0003,0332290026,Orange,Lille,78.1,49.5,48.45,96.2,0.2,50.1,Aucun (Normal)
-SNS-0004,0472290005,SFR,Paris,64.3,62.8,48.12,73.7,2.35,37.3,Aucun (Normal)
-SNS-0005,0512290147,Orange,Marseille,66.3,26.9,47.46,94.1,0.52,8.5,Aucun (Normal)
-SNS-0006,0632290004,Orange,Paris,47.3,73.1,47.73,73.7,4.15,15.9,Aucun (Normal)
-SNS-0007,0212290007,Bouygues Telecom,Nantes,48.0,27.8,48.5,65.9,1.15,2.0,Aucun (Normal)
-SNS-0008,0592290571,SFR,Grenoble,50.9,79.7,48.28,87.4,0.6,28.4,Aucun (Normal)
-SNS-0009,0592290031,Bouygues Telecom,Bordeaux,61.3,35.2,47.93,84.1,1.64,7.0,Aucun (Normal)
-SNS-0010,0622290020,Bouygues Telecom,Annecy,65.6,69.7,48.02,87.2,1.01,45.8,Aucun (Normal)
-SNS-0011,0232290001,Orange,Lyon,59.3,29.0,48.24,72.4,3.06,2.0,Aucun (Normal)
-SNS-0012,0732290021,Bouygues Telecom,Paris,73.6,75.7,48.21,79.5,2.67,65.6,Ventilateur Baie 3.5GHz
-SNS-0013,0382290010,Bouygues Telecom,Lille,76.7,48.4,47.91,91.3,2.99,46.6,Aucun (Normal)
-SNS-0014,0262290005,Orange,Marseille,70.4,69.9,47.9,67.7,3.53,54.6,Aucun (Normal)
-SNS-0015,0062290019,Orange,Nantes,66.0,94.1,48.46,67.9,3.71,68.5,Carte Alimentation DC
-SNS-0016,0302290005,SFR,Nantes,70.2,91.4,47.54,72.1,2.69,73.6,Ventilateur Baie 3.5GHz
-SNS-0017,0302290007,Orange,Rennes,71.4,82.7,47.89,86.7,2.65,68.0,Ventilateur Baie 3.5GHz
-SNS-0018,0542290015,Orange,Lyon,88.2,80.9,47.9,69.4,3.82,96.6,Ventilateur Baie 3.5GHz
-SNS-0019,0572290279,SFR,Lyon,80.8,63.8,48.33,80.7,3.88,67.9,Module Optique SFP+ 10G
-SNS-0020,0442290012,Orange,Rennes,79.8,32.1,47.96,81.7,3.69,37.5,Aucun (Normal)
-SNS-0021,0722290009,Bouygues Telecom,Lille,47.5,94.8,48.74,67.5,2.02,35.8,Aucun (Normal)
-SNS-0022,0412290011,Bouygues Telecom,Marseille,44.9,57.4,48.73,98.1,0.33,2.0,Aucun (Normal)
-SNS-0023,0452290010,Free Mobile,Nice,59.7,36.2,47.64,68.9,1.69,5.0,Aucun (Normal)
-SNS-0024,0862290140,SFR,Rennes,72.6,86.7,47.91,74.4,0.31,73.7,Ventilateur Baie 3.5GHz
-SNS-0025,0272290011,Orange,Grenoble,58.0,69.6,48.62,76.0,2.04,32.0,Aucun (Normal)
-SNS-0026,0672290021,Orange,Marseille,48.3,90.1,47.51,79.9,0.87,33.0,Aucun (Normal)
-SNS-0027,0312290351,SFR,Bordeaux,49.3,59.3,48.44,78.1,2.62,7.1,Aucun (Normal)
-SNS-0028,0822290004,Free Mobile,Nantes,75.1,49.8,48.7,85.0,2.75,45.0,Aucun (Normal)
-SNS-0029,0652290005,SFR,Nice,72.2,87.0,47.94,76.2,1.91,73.3,Liaison FH Réalignement
-SNS-0030,0942290055,Bouygues Telecom,Strasbourg,81.0,47.0,47.94,77.7,3.85,53.1,Aucun (Normal)
-SNS-0031,02A2290114,Free Mobile,Rennes,61.3,50.4,48.21,67.0,3.67,20.7,Aucun (Normal)
-SNS-0032,0912290007,SFR,Marseille,84.7,78.0,47.21,78.5,3.86,87.7,Ventilateur Baie 3.5GHz
-SNS-0033,0902290027,Orange,Rennes,48.4,64.0,48.39,81.3,1.18,9.7,Aucun (Normal)
-SNS-0034,0142290016,Bouygues Telecom,Lyon,50.5,86.5,47.41,74.8,0.86,33.8,Aucun (Normal)
-SNS-0035,0802290006,SFR,Rennes,68.1,62.2,48.65,67.3,4.15,43.6,Aucun (Normal)
-SNS-0036,0642290014,Bouygues Telecom,Lyon,62.6,92.5,48.31,77.3,1.11,60.9,Carte Alimentation DC
-SNS-0037,0332290023,Orange,Toulouse,54.5,54.8,48.01,69.0,1.85,12.4,Aucun (Normal)
-SNS-0038,0472290008,Orange,Montpellier,61.4,37.9,48.15,86.2,1.18,9.6,Aucun (Normal)
-SNS-0039,0512290003,SFR,Nice,84.5,45.8,47.65,66.6,1.76,58.3,Aucun (Normal)
-SNS-0040,0032290008,SFR,Marseille,71.1,54.0,48.65,93.4,3.63,41.6,Aucun (Normal)
-SNS-0041,0592290006,Free Mobile,Rennes,60.7,86.5,48.48,83.0,1.82,52.1,Aucun (Normal)
-SNS-0042,0592290030,SFR,Nantes,77.2,91.3,48.19,82.8,4.19,86.1,Module Optique SFP+ 10G
-SNS-0043,0622290007,Bouygues Telecom,Annecy,81.1,92.9,47.46,78.0,0.88,94.6,Carte Alimentation DC
-SNS-0044,0872290171,SFR,Nice,61.8,75.5,47.25,74.1,0.88,44.2,Aucun (Normal)
-SNS-0045,0732290022,SFR,Bordeaux,84.5,56.8,48.67,75.7,2.34,68.2,Liaison FH Réalignement
-SNS-0046,0692290372,SFR,Nice,43.2,31.6,48.48,77.3,3.96,2.0,Aucun (Normal)
-SNS-0047,0422290009,SFR,Nantes,47.7,77.5,48.46,72.8,3.06,20.6,Aucun (Normal)
-SNS-0048,0132290834,SFR,Lille,42.3,51.9,47.85,98.6,3.54,2.0,Aucun (Normal)
-SNS-0049,0062290453,Bouygues Telecom,Paris,47.3,47.1,48.44,80.3,3.29,2.0,Aucun (Normal)
-SNS-0050,0842290007,Free Mobile,Strasbourg,77.7,31.5,48.02,71.2,2.78,33.2,Aucun (Normal)
-SNS-0051,0832290099,SFR,Marseille,85.9,88.6,48.57,75.9,3.76,98.0,Module Optique SFP+ 10G
-SNS-0052,0112290206,Bouygues Telecom,Lille,67.5,70.0,48.37,91.8,2.32,49.5,Aucun (Normal)
-SNS-0053,0542290016,Bouygues Telecom,Marseille,75.1,54.8,47.36,77.7,0.25,49.5,Aucun (Normal)
-SNS-0054,0572290020,Orange,Toulouse,70.8,35.4,47.81,74.7,0.7,24.3,Aucun (Normal)
-SNS-0055,0442290301,Bouygues Telecom,Annecy,70.6,40.8,48.71,73.2,0.34,28.8,Aucun (Normal)
-SNS-0056,0452290006,Free Mobile,Annecy,84.9,73.4,47.32,75.6,3.16,83.9,Ventilateur Baie 3.5GHz
-SNS-0057,0292290180,SFR,Nantes,52.5,48.9,48.57,97.6,0.65,3.5,Aucun (Normal)
-SNS-0058,0222290007,Orange,Bordeaux,60.8,56.0,48.63,88.1,0.25,24.8,Aucun (Normal)
-SNS-0059,0672290005,Free Mobile,Lyon,50.4,32.9,47.79,73.3,3.85,2.0,Aucun (Normal)
-SNS-0060,0312290014,Free Mobile,Grenoble,78.0,35.8,48.14,97.2,3.61,37.6,Aucun (Normal)
-SNS-0061,0822290003,SFR,Lyon,56.7,30.8,47.27,90.4,3.48,2.0,Aucun (Normal)
-SNS-0062,0652290006,Free Mobile,Annecy,83.6,82.0,47.29,78.1,0.19,89.3,Liaison FH Réalignement
-SNS-0063,0752290181,Bouygues Telecom,Nice,43.5,84.2,48.29,86.6,2.98,19.1,Aucun (Normal)
-SNS-0064,02A2290015,SFR,Toulouse,81.6,92.1,48.64,96.1,1.21,94.8,Ventilateur Baie 3.5GHz
-SNS-0065,0912290013,Orange,Lille,75.5,64.5,48.2,86.1,3.6,59.0,Aucun (Normal)
-SNS-0066,0772290290,Orange,Rennes,46.4,86.6,47.42,90.6,0.25,26.5,Aucun (Normal)
-SNS-0067,0252290010,Orange,Annecy,60.3,55.8,48.41,68.0,2.56,23.8,Aucun (Normal)
-SNS-0068,0402290221,Orange,Lille,48.3,61.8,47.34,84.5,0.19,7.6,Aucun (Normal)
-SNS-0069,0332290028,SFR,Grenoble,42.9,35.6,47.53,82.0,1.6,2.0,Aucun (Normal)
-SNS-0070,0472290004,Free Mobile,Lille,60.4,29.9,47.98,83.9,1.44,2.0,Aucun (Normal)
-SNS-0071,0032290169,Free Mobile,Lille,64.8,59.3,47.8,98.5,2.61,35.0,Aucun (Normal)
-SNS-0072,0592290482,Orange,Montpellier,82.9,47.9,48.18,83.0,3.16,57.3,Aucun (Normal)
-SNS-0073,0592290039,SFR,Grenoble,54.7,51.2,48.79,88.7,2.71,9.5,Aucun (Normal)
-SNS-0074,0622290023,SFR,Paris,44.8,67.4,47.72,80.7,1.63,6.3,Aucun (Normal)
-SNS-0075,0872290007,SFR,Grenoble,48.8,81.1,48.46,75.0,3.31,25.8,Aucun (Normal)
-SNS-0076,0742290014,SFR,Marseille,86.9,45.5,48.18,87.1,2.19,62.4,Module Optique SFP+ 10G
-SNS-0077,0012290129,Orange,Strasbourg,49.0,85.3,48.39,89.8,3.24,30.0,Aucun (Normal)
-SNS-0078,0422290012,SFR,Nice,51.6,37.8,47.37,99.9,2.6,2.0,Aucun (Normal)
-SNS-0079,0262290122,Orange,Grenoble,65.8,48.9,47.87,89.9,3.98,27.4,Aucun (Normal)
-SNS-0080,0132290586,Bouygues Telecom,Bordeaux,51.7,48.5,48.4,69.5,3.58,2.0,Aucun (Normal)
-SNS-0081,0062290030,Orange,Lyon,78.0,36.1,47.98,90.2,0.35,37.9,Aucun (Normal)
-SNS-0082,0832290015,Free Mobile,Lille,84.6,89.3,48.0,76.2,2.1,97.6,Liaison FH Réalignement
-SNS-0083,0112290008,Orange,Annecy,61.5,70.1,48.56,87.7,1.68,38.8,Aucun (Normal)
-SNS-0084,0302290008,Bouygues Telecom,Lille,43.9,41.8,47.89,71.1,3.38,2.0,Aucun (Normal)
-SNS-0085,0542290014,Orange,Montpellier,57.2,72.7,48.39,93.1,1.98,33.4,Aucun (Normal)
-SNS-0086,0572290003,Bouygues Telecom,Nice,84.7,32.3,48.65,96.1,0.45,46.5,Aucun (Normal)
-SNS-0087,0442290011,SFR,Montpellier,67.7,58.7,48.63,73.3,1.78,39.7,Aucun (Normal)
-SNS-0088,0722290011,Bouygues Telecom,Nice,88.2,66.4,47.67,70.9,0.15,83.5,Liaison FH Réalignement
-SNS-0089,0862290122,Free Mobile,Lille,43.6,37.6,47.9,79.6,4.08,2.0,Aucun (Normal)
-SNS-0090,0292290224,SFR,Grenoble,60.9,48.4,48.58,78.2,1.7,18.2,Aucun (Normal)
-SNS-0091,0222290002,Bouygues Telecom,Paris,78.1,25.0,48.63,82.4,2.69,28.1,Aucun (Normal)
-SNS-0092,0762290018,SFR,Lille,63.2,40.1,47.25,97.4,0.39,14.9,Aucun (Normal)
-SNS-0093,0672290019,Orange,Nantes,72.5,42.2,48.66,83.5,4.17,33.5,Aucun (Normal)
-SNS-0094,0312290009,SFR,Montpellier,71.6,88.7,48.76,86.3,0.94,73.7,Liaison FH Réalignement
-SNS-0095,0812290123,Free Mobile,Lyon,46.3,39.3,48.08,71.1,0.63,2.0,Aucun (Normal)
-SNS-0096,0652290085,SFR,Lyon,84.8,92.3,47.56,70.7,3.25,98.0,Ventilateur Baie 3.5GHz
-SNS-0097,0942290009,Free Mobile,Strasbourg,87.5,34.5,48.42,83.5,2.51,53.5,Aucun (Normal)
-SNS-0098,0752290285,Free Mobile,Bordeaux,57.4,47.0,48.09,75.5,2.31,10.6,Aucun (Normal)
-SNS-0099,0752290316,Bouygues Telecom,Paris,71.9,45.3,47.22,81.5,1.68,35.2,Aucun (Normal)
-SNS-0100,0952290016,SFR,Marseille,66.6,30.5,48.15,76.9,1.46,12.3,Aucun (Normal)
-SNS-0101,0912290257,Free Mobile,Strasbourg,80.4,30.0,48.14,91.6,1.68,36.7,Aucun (Normal)
-SNS-0102,0772290460,Orange,Toulouse,70.2,47.7,48.12,74.8,2.88,34.3,Aucun (Normal)
-SNS-0103,0782290031,Orange,Lyon,81.8,26.4,48.74,99.0,2.0,36.0,Aucun (Normal)
-SNS-0104,0252290130,SFR,Bordeaux,74.1,67.1,47.39,78.5,2.46,58.8,Aucun (Normal)
-SNS-0105,0022290003,Free Mobile,Bordeaux,53.1,69.6,48.14,92.3,1.9,23.2,Aucun (Normal)
-SNS-0106,0642290004,Free Mobile,Lyon,64.3,46.3,48.64,88.3,1.62,22.4,Aucun (Normal)
-SNS-0107,0332290319,SFR,Montpellier,85.3,80.4,48.78,94.7,1.33,90.9,Carte Alimentation DC
-SNS-0108,0242290124,Bouygues Telecom,Grenoble,48.0,93.5,48.4,93.8,0.45,35.5,Aucun (Normal)
-SNS-0109,0512290138,Orange,Grenoble,73.4,94.0,48.47,87.6,4.09,81.7,Module Optique SFP+ 10G
-SNS-0110,0032290002,Free Mobile,Annecy,55.5,58.5,48.34,78.4,1.54,17.6,Aucun (Normal)
-SNS-0111,0592290033,Orange,Marseille,79.0,77.6,48.3,95.7,1.4,77.0,Ventilateur Baie 3.5GHz
-SNS-0112,0592290032,SFR,Bordeaux,88.1,46.1,47.6,97.2,3.86,65.1,Module Optique SFP+ 10G
-SNS-0113,0622290018,Orange,Paris,61.4,75.1,48.41,80.2,0.48,43.1,Aucun (Normal)
-SNS-0114,0872290004,SFR,Lyon,86.0,90.7,47.51,87.1,1.48,98.0,Carte Alimentation DC
-SNS-0115,0742290006,Free Mobile,Bordeaux,44.9,93.1,47.49,90.3,4.11,29.6,Aucun (Normal)
-SNS-0116,0012290130,Orange,Paris,61.2,65.7,48.74,94.4,3.7,34.3,Aucun (Normal)
-SNS-0117,0422290011,Free Mobile,Lille,71.8,32.2,48.03,96.7,4.11,23.2,Aucun (Normal)
-SNS-0118,0262290154,SFR,Annecy,61.4,95.8,47.82,85.5,0.43,61.7,Ventilateur Baie 3.5GHz
-SNS-0119,0132290639,Orange,Toulouse,63.1,90.9,47.23,65.1,2.78,60.4,Module Optique SFP+ 10G
-SNS-0120,0062290311,SFR,Bordeaux,56.0,55.4,47.31,67.5,3.79,15.7,Aucun (Normal)
-SNS-0121,0842290159,Free Mobile,Lyon,78.4,37.1,47.64,82.2,2.85,39.5,Aucun (Normal)
-SNS-0122,0832290017,SFR,Lille,69.0,45.1,48.17,76.8,0.33,29.8,Aucun (Normal)
-SNS-0123,0112290007,Free Mobile,Lille,54.5,72.4,47.87,80.1,2.88,28.3,Aucun (Normal)
-SNS-0124,0342290337,Orange,Lille,47.1,88.0,48.22,67.6,0.78,29.0,Aucun (Normal)
-SNS-0125,0542290017,Orange,Nantes,46.0,25.9,47.6,92.0,0.51,2.0,Aucun (Normal)
-SNS-0126,0572290251,Bouygues Telecom,Nice,66.1,51.0,48.02,70.7,3.59,29.9,Aucun (Normal)
-SNS-0127,0442290016,Orange,Montpellier,57.7,55.6,48.76,71.2,3.36,18.9,Aucun (Normal)
-SNS-0128,0722290014,SFR,Marseille,49.8,92.8,47.73,75.5,3.22,38.2,Aucun (Normal)
-SNS-0129,0412290010,SFR,Marseille,42.7,83.8,47.86,90.3,2.76,17.3,Aucun (Normal)
-SNS-0130,0862290010,SFR,Rennes,52.0,51.8,47.98,67.6,2.35,5.2,Aucun (Normal)
-SNS-0131,0292290015,SFR,Marseille,73.2,29.7,47.41,95.7,3.09,23.5,Aucun (Normal)
-SNS-0132,0222290011,Free Mobile,Annecy,60.2,91.2,48.28,87.2,0.71,55.4,Aucun (Normal)
-SNS-0133,0672290003,Bouygues Telecom,Rennes,82.1,54.9,48.35,69.7,0.32,62.2,Ventilateur Baie 3.5GHz
-SNS-0134,0312290111,SFR,Grenoble,81.7,59.4,47.94,75.1,0.4,65.5,Module Optique SFP+ 10G
-SNS-0135,0812290001,Free Mobile,Marseille,77.0,79.0,47.32,97.3,0.64,74.7,Module Optique SFP+ 10G
-SNS-0136,0322290054,Bouygues Telecom,Lyon,57.0,57.0,47.22,91.9,0.43,18.9,Aucun (Normal)
-SNS-0137,0942290002,Free Mobile,Annecy,51.5,83.0,48.0,78.3,2.93,32.4,Aucun (Normal)
-SNS-0138,0752290341,SFR,Paris,81.8,25.1,48.46,84.4,3.7,34.8,Aucun (Normal)
-SNS-0139,02B2290135,Bouygues Telecom,Marseille,69.3,31.8,47.57,75.6,3.0,18.4,Aucun (Normal)
-SNS-0140,0952290015,Free Mobile,Toulouse,63.7,83.5,48.41,66.7,3.97,54.8,Aucun (Normal)
-SNS-0141,0912290051,Free Mobile,Rennes,55.0,81.9,48.13,89.1,1.36,37.7,Aucun (Normal)
-SNS-0142,0772290020,Free Mobile,Lille,69.4,70.4,47.26,93.0,1.13,53.3,Aucun (Normal)
-SNS-0143,0782290019,Bouygues Telecom,Lille,74.0,77.4,48.49,65.8,2.76,67.9,Carte Alimentation DC
-SNS-0144,0252290008,SFR,Strasbourg,59.1,79.3,47.8,89.5,3.87,42.8,Aucun (Normal)
-SNS-0145,0142290003,Bouygues Telecom,Montpellier,88.1,28.3,48.18,97.5,0.51,49.0,Aucun (Normal)
-SNS-0146,0602290169,Free Mobile,Nantes,46.4,40.1,47.75,91.8,1.96,2.0,Aucun (Normal)
-SNS-0147,0642290013,Free Mobile,Nice,58.6,89.2,47.86,84.0,0.94,50.8,Aucun (Normal)
-SNS-0148,0242290003,Bouygues Telecom,Nantes,42.7,82.6,48.69,79.4,0.32,16.2,Aucun (Normal)
-SNS-0149,0512290221,Free Mobile,Lyon,62.6,36.5,47.91,95.8,3.76,10.5,Aucun (Normal)
-SNS-0150,0632290010,SFR,Paris,55.9,25.2,48.15,88.1,2.34,2.0,Aucun (Normal)
-SNS-0151,0592290565,Free Mobile,Strasbourg,65.5,48.8,47.35,81.3,0.55,26.8,Aucun (Normal)
-SNS-0152,0592290003,Bouygues Telecom,Lyon,54.7,28.4,47.41,83.7,4.13,2.0,Aucun (Normal)
-SNS-0153,0622290014,SFR,Annecy,63.1,86.7,47.46,85.9,3.55,56.6,Aucun (Normal)
-SNS-0154,0872290101,Bouygues Telecom,Montpellier,55.5,77.2,47.91,86.7,3.78,34.4,Aucun (Normal)
-SNS-0155,0742290326,Orange,Rennes,51.6,30.5,47.23,65.0,1.49,2.0,Aucun (Normal)
-SNS-0156,0692290022,Free Mobile,Annecy,70.1,75.0,48.43,82.5,4.15,58.7,Aucun (Normal)
-SNS-0157,0382290226,Orange,Nantes,80.8,57.9,48.69,67.4,0.67,62.5,Ventilateur Baie 3.5GHz
-SNS-0158,0422290013,Bouygues Telecom,Bordeaux,76.3,66.0,47.21,80.4,3.3,61.7,Carte Alimentation DC
-SNS-0159,0262290007,SFR,Rennes,52.6,50.2,48.06,87.0,2.97,4.9,Aucun (Normal)
-SNS-0160,0132290040,Free Mobile,Strasbourg,60.1,48.7,48.63,80.6,0.85,17.0,Aucun (Normal)
-SNS-0161,0062290023,Bouygues Telecom,Lille,54.1,57.3,47.49,78.0,1.14,13.9,Aucun (Normal)
-SNS-0162,0042290001,Orange,Lille,50.7,34.5,47.67,95.9,3.37,2.0,Aucun (Normal)
-SNS-0163,0112290009,SFR,Montpellier,56.1,28.9,48.59,90.2,0.74,2.0,Aucun (Normal)
-SNS-0164,0342290266,SFR,Paris,54.7,82.8,47.96,98.6,2.33,38.0,Aucun (Normal)
-SNS-0165,0542290006,Free Mobile,Bordeaux,75.7,90.1,47.41,99.5,1.84,82.3,Carte Alimentation DC
-SNS-0166,0572290021,SFR,Annecy,53.7,45.5,47.29,98.2,1.66,2.6,Aucun (Normal)
-SNS-0167,0442290020,Bouygues Telecom,Montpellier,77.2,49.5,48.65,68.2,3.7,48.5,Aucun (Normal)
-SNS-0168,0372290140,Free Mobile,Montpellier,65.8,93.7,48.2,96.3,1.82,67.8,Carte Alimentation DC
-SNS-0169,0282290158,Bouygues Telecom,Strasbourg,81.6,37.0,47.88,96.6,3.7,45.2,Aucun (Normal)
-SNS-0170,0792290132,Bouygues Telecom,Paris,68.6,58.9,48.61,89.6,4.08,41.5,Aucun (Normal)
-SNS-0171,0292290033,Free Mobile,Marseille,50.0,27.2,47.63,79.9,2.82,2.0,Aucun (Normal)
-SNS-0172,0672290015,Bouygues Telecom,Marseille,51.3,38.7,47.65,80.5,1.31,2.0,Aucun (Normal)
-SNS-0173,0312290025,Free Mobile,Strasbourg,87.0,84.2,48.37,80.6,1.94,97.4,Carte Alimentation DC
-SNS-0174,0822290048,Bouygues Telecom,Lille,69.4,48.2,48.73,94.1,4.03,33.3,Aucun (Normal)
-SNS-0175,0322290005,Bouygues Telecom,Nantes,60.8,88.9,47.29,68.1,0.85,54.5,Aucun (Normal)
-SNS-0176,0932290016,Free Mobile,Annecy,72.5,95.6,47.54,66.6,2.57,81.5,Ventilateur Baie 3.5GHz
-SNS-0177,0752290284,SFR,Bordeaux,44.8,53.6,48.23,97.3,1.79,2.0,Aucun (Normal)
-SNS-0178,0752290459,Orange,Nantes,47.1,44.4,47.78,94.5,1.13,2.0,Aucun (Normal)
-SNS-0179,02B2290017,Bouygues Telecom,Marseille,76.8,87.4,48.76,97.8,1.28,81.9,Liaison FH Réalignement
-SNS-0180,0912290126,SFR,Paris,80.3,32.3,48.58,76.9,2.34,38.6,Aucun (Normal)
-SNS-0181,0772290019,SFR,Nantes,77.5,68.9,48.37,75.8,1.07,66.5,Module Optique SFP+ 10G
-SNS-0182,0142290018,SFR,Paris,58.3,60.4,47.49,79.5,2.77,24.3,Aucun (Normal)
-SNS-0183,0022290014,Orange,Lille,77.4,94.5,47.35,89.5,3.49,89.4,Ventilateur Baie 3.5GHz
-SNS-0184,0642290007,Orange,Grenoble,74.9,26.9,47.48,69.9,1.65,24.0,Aucun (Normal)
-SNS-0185,0242290004,Free Mobile,Nantes,62.0,37.6,47.67,92.7,0.77,10.4,Aucun (Normal)
-SNS-0186,0522290007,Orange,Lyon,71.6,39.7,47.62,69.2,4.06,29.6,Aucun (Normal)
-SNS-0187,0632290006,Bouygues Telecom,Grenoble,74.0,48.8,47.96,69.2,3.21,42.1,Aucun (Normal)
-SNS-0188,0592290047,Free Mobile,Lyon,67.0,34.6,48.45,87.2,0.46,16.7,Aucun (Normal)
-SNS-0189,0592290042,SFR,Marseille,82.6,66.8,48.11,83.3,0.22,73.8,Ventilateur Baie 3.5GHz
-SNS-0190,0872290006,Free Mobile,Annecy,78.9,87.2,48.61,76.2,1.1,85.5,Carte Alimentation DC
-SNS-0191,0742290009,Free Mobile,Toulouse,55.5,63.8,48.52,86.4,2.15,22.3,Aucun (Normal)
-SNS-0192,0422290189,Free Mobile,Toulouse,54.9,44.3,47.44,98.7,0.4,3.7,Aucun (Normal)
-SNS-0193,0262290011,SFR,Grenoble,61.7,81.9,48.37,90.9,2.96,49.8,Aucun (Normal)
-SNS-0194,0132290039,Orange,Marseille,47.9,61.5,47.35,86.8,2.92,6.6,Aucun (Normal)
-SNS-0195,0062290020,Orange,Paris,66.8,44.6,47.5,90.3,3.05,25.4,Aucun (Normal)
-SNS-0196,0042290004,SFR,Marseille,74.3,29.9,48.43,94.9,2.42,25.6,Aucun (Normal)
-SNS-0197,0832290019,Orange,Strasbourg,63.5,94.4,48.3,81.9,3.7,64.3,Liaison FH Réalignement
-SNS-0198,0112290200,Bouygues Telecom,Rennes,65.0,66.9,47.69,79.3,3.74,42.2,Aucun (Normal)
-SNS-0199,0342290012,Bouygues Telecom,Nantes,54.6,95.7,47.88,87.4,3.01,49.4,Aucun (Normal)
-SNS-0200,0542290018,Bouygues Telecom,Rennes,57.3,77.5,47.7,81.0,1.04,37.9,Aucun (Normal)
-SNS-0201,0442290019,Free Mobile,Rennes,56.6,34.0,47.93,67.7,3.95,2.0,Aucun (Normal)
-SNS-0202,0722290158,Free Mobile,Montpellier,81.1,73.5,48.71,65.2,1.45,77.1,Module Optique SFP+ 10G
-SNS-0203,0282290168,Bouygues Telecom,Lille,43.1,26.0,47.88,99.1,3.84,2.0,Aucun (Normal)
-SNS-0204,0792290085,SFR,Marseille,79.9,85.9,47.9,73.6,2.51,86.1,Module Optique SFP+ 10G
-SNS-0205,0292290256,SFR,Annecy,58.6,78.5,47.32,89.3,1.73,41.1,Aucun (Normal)
-SNS-0206,0222290009,Bouygues Telecom,Marseille,77.8,66.3,48.21,79.5,2.79,64.7,Liaison FH Réalignement
-SNS-0207,0272290009,SFR,Lyon,54.5,34.1,47.47,79.9,0.76,2.0,Aucun (Normal)
-SNS-0208,0672290018,SFR,Marseille,71.6,84.2,47.24,86.5,0.66,69.7,Ventilateur Baie 3.5GHz
-SNS-0209,0312290019,Orange,Lyon,81.4,35.3,47.9,69.1,4.18,43.3,Aucun (Normal)
-SNS-0210,0822290073,Bouygues Telecom,Lille,76.5,37.9,48.09,81.0,3.64,36.8,Aucun (Normal)
-SNS-0211,0322290003,SFR,Nantes,73.7,29.6,48.75,79.6,0.13,24.3,Aucun (Normal)
-SNS-0212,0922290024,SFR,Annecy,69.6,90.7,47.8,66.6,1.61,71.9,Module Optique SFP+ 10G
-SNS-0213,0752290406,SFR,Paris,62.8,79.8,48.26,73.0,2.66,49.9,Aucun (Normal)
-SNS-0214,0752290281,Bouygues Telecom,Toulouse,82.1,29.5,48.11,93.6,0.25,39.3,Aucun (Normal)
-SNS-0215,02B2290010,Free Mobile,Paris,63.9,29.1,47.58,68.9,1.42,6.2,Aucun (Normal)
-SNS-0216,0912290012,Orange,Montpellier,49.1,78.1,48.37,93.9,1.64,23.7,Aucun (Normal)
-SNS-0217,0772290493,Bouygues Telecom,Lille,68.2,80.1,48.07,79.7,2.3,59.9,Aucun (Normal)
-SNS-0218,0782290029,Free Mobile,Rennes,50.1,69.9,47.74,91.2,1.0,18.1,Aucun (Normal)
-SNS-0219,0252290006,Free Mobile,Nantes,72.4,69.4,47.43,96.6,1.48,57.8,Aucun (Normal)
-SNS-0220,0142290191,Free Mobile,Bordeaux,87.5,25.6,48.38,82.6,1.79,45.5,Aucun (Normal)
-SNS-0221,0022290012,Orange,Grenoble,83.2,76.4,47.47,90.3,1.64,83.5,Module Optique SFP+ 10G
-SNS-0222,0642290162,Orange,Rennes,70.5,53.0,47.52,78.3,0.87,39.6,Aucun (Normal)
-SNS-0223,0332290025,SFR,Annecy,86.9,43.0,48.61,71.5,4.2,60.1,Liaison FH Réalignement
-SNS-0224,0522290162,SFR,Nantes,64.3,77.7,47.69,77.8,3.39,50.7,Aucun (Normal)
-SNS-0225,0632290011,Orange,Marseille,54.9,73.1,48.05,95.8,3.06,29.6,Aucun (Normal)
-SNS-0226,0592290498,SFR,Lyon,70.5,34.9,47.43,91.4,1.89,23.3,Aucun (Normal)
-SNS-0227,0592290453,SFR,Montpellier,59.7,83.7,47.49,94.3,0.42,47.8,Aucun (Normal)
-SNS-0228,0622290021,Orange,Nice,78.5,69.1,48.53,87.7,3.09,68.5,Liaison FH Réalignement
-SNS-0229,0192290134,Orange,Marseille,71.9,70.6,47.7,96.5,2.29,58.0,Aucun (Normal)
-SNS-0230,0742290209,SFR,Montpellier,48.9,76.3,47.58,86.9,1.6,21.7,Aucun (Normal)
-SNS-0231,0012290143,Bouygues Telecom,Grenoble,43.8,72.8,48.46,69.4,1.04,9.4,Aucun (Normal)
-SNS-0232,0422290015,Free Mobile,Lyon,77.2,63.1,48.16,67.9,1.03,60.8,Module Optique SFP+ 10G
-SNS-0233,0262290171,Free Mobile,Bordeaux,62.1,73.4,48.07,74.9,1.81,42.8,Aucun (Normal)
-SNS-0234,0132290025,SFR,Nice,62.2,32.9,48.47,66.6,0.66,6.6,Aucun (Normal)
-SNS-0235,0062290029,Bouygues Telecom,Marseille,43.9,57.1,47.89,87.0,2.04,2.0,Aucun (Normal)
-SNS-0236,0042290059,Bouygues Telecom,Annecy,48.1,63.1,47.64,86.3,1.76,8.4,Aucun (Normal)
-SNS-0237,0832290326,SFR,Paris,59.6,53.7,47.48,78.1,0.89,20.6,Aucun (Normal)
-SNS-0238,0112290209,Bouygues Telecom,Lille,72.3,40.6,48.1,87.0,3.23,31.7,Aucun (Normal)
-SNS-0239,0342290283,SFR,Strasbourg,63.2,66.2,48.68,94.6,2.05,38.3,Aucun (Normal)
-SNS-0240,0542290020,Free Mobile,Nice,54.9,81.7,47.97,80.2,1.82,37.4,Aucun (Normal)
-SNS-0241,0442290017,Orange,Lille,79.4,76.3,48.2,88.9,0.61,76.6,Ventilateur Baie 3.5GHz
-SNS-0242,0372290010,Bouygues Telecom,Lille,74.9,82.8,47.66,85.0,2.83,74.3,Liaison FH Réalignement
-SNS-0243,0172290008,Free Mobile,Lille,56.7,76.1,48.13,81.9,1.75,35.5,Aucun (Normal)
-SNS-0244,0292290019,Free Mobile,Strasbourg,63.0,33.6,48.21,81.1,0.95,8.6,Aucun (Normal)
-SNS-0245,0352290011,Free Mobile,Lille,44.7,53.2,47.5,89.2,3.95,2.0,Aucun (Normal)
-SNS-0246,0762290219,Free Mobile,Paris,51.2,39.2,47.83,87.0,1.01,2.0,Aucun (Normal)
-SNS-0247,0682290007,SFR,Rennes,80.7,41.7,48.37,74.6,2.78,47.8,Aucun (Normal)
-SNS-0248,0312290020,Orange,Marseille,64.8,89.8,47.87,78.9,2.26,62.5,Liaison FH Réalignement
-SNS-0249,0462290004,SFR,Marseille,42.4,84.7,47.83,76.2,0.27,17.6,Aucun (Normal)
-SNS-0250,0652290107,Free Mobile,Lyon,60.4,85.4,47.59,95.9,3.09,50.6,Aucun (Normal)
-SNS-0251,0932290015,SFR,Lille,53.4,38.3,47.27,94.0,1.01,2.0,Aucun (Normal)
-SNS-0252,0942290010,Bouygues Telecom,Montpellier,50.2,34.9,47.3,98.0,2.17,2.0,Aucun (Normal)
-SNS-0253,0752291174,Free Mobile,Annecy,49.3,27.5,47.88,86.0,1.72,2.0,Aucun (Normal)
-SNS-0254,0752291529,Free Mobile,Lyon,84.9,31.0,47.55,73.9,2.87,45.7,Aucun (Normal)
-SNS-0255,02B2290011,SFR,Lille,87.8,85.2,47.74,72.3,3.4,98.0,Ventilateur Baie 3.5GHz
-SNS-0256,0912290231,Orange,Grenoble,81.7,36.6,48.25,68.0,3.64,45.0,Aucun (Normal)
-SNS-0257,0772290021,Bouygues Telecom,Rennes,88.1,52.3,48.12,75.3,3.07,70.6,Ventilateur Baie 3.5GHz
-SNS-0258,0702290007,Free Mobile,Montpellier,80.6,51.3,48.5,73.0,1.71,56.2,Aucun (Normal)
-SNS-0259,0142290187,Orange,Nantes,84.6,45.5,47.45,71.4,3.3,58.2,Aucun (Normal)
-SNS-0260,0022290018,Orange,Bordeaux,65.2,84.4,47.29,83.7,3.83,58.3,Aucun (Normal)
-SNS-0261,0402290009,Free Mobile,Nice,46.2,87.6,47.76,90.9,1.66,27.0,Aucun (Normal)
-SNS-0262,0332290029,Free Mobile,Strasbourg,67.3,62.4,48.28,70.0,3.82,42.3,Aucun (Normal)
-SNS-0263,0632290009,Free Mobile,Marseille,78.0,92.0,48.11,76.0,0.39,88.2,Module Optique SFP+ 10G
-SNS-0264,0712290006,SFR,Grenoble,66.0,29.3,47.67,71.3,2.52,10.2,Aucun (Normal)
-SNS-0265,0592290581,Orange,Nice,84.5,30.1,48.64,96.8,3.68,44.2,Aucun (Normal)
-SNS-0266,0622290022,Bouygues Telecom,Strasbourg,83.2,90.0,48.38,99.9,3.17,95.8,Liaison FH Réalignement
-SNS-0267,0192290010,Bouygues Telecom,Paris,42.7,90.7,48.29,90.3,3.67,23.5,Aucun (Normal)
-SNS-0268,0742290295,Orange,Montpellier,76.1,42.7,48.8,83.1,2.6,40.4,Aucun (Normal)
-SNS-0269,0012290202,Bouygues Telecom,Marseille,46.2,95.0,48.25,81.6,3.99,33.7,Aucun (Normal)
-SNS-0270,0422290016,Free Mobile,Grenoble,83.0,67.7,47.29,74.4,3.73,75.3,Liaison FH Réalignement
-SNS-0271,0262290148,SFR,Bordeaux,80.2,82.1,47.36,66.0,2.89,83.2,Module Optique SFP+ 10G
-SNS-0272,0132290024,Bouygues Telecom,Montpellier,76.3,45.6,48.01,84.3,2.68,43.4,Aucun (Normal)
-SNS-0273,0062290032,Free Mobile,Nice,63.1,53.7,47.83,76.2,3.35,26.9,Aucun (Normal)
-SNS-0274,0052290002,SFR,Annecy,82.8,35.9,48.34,79.2,0.38,46.3,Aucun (Normal)
-SNS-0275,0832290387,Orange,Lyon,75.4,52.3,48.1,86.6,2.48,47.8,Aucun (Normal)
-SNS-0276,0662290009,Bouygues Telecom,Lyon,59.9,84.9,48.63,99.0,3.45,49.2,Aucun (Normal)
-SNS-0277,0342290003,Bouygues Telecom,Annecy,62.4,90.0,48.02,74.2,2.48,58.3,Aucun (Normal)
-SNS-0278,0722290010,Orange,Toulouse,62.3,30.1,47.4,70.6,2.08,4.2,Aucun (Normal)
-SNS-0279,0282290009,Orange,Paris,57.4,66.5,48.35,90.6,0.9,28.2,Aucun (Normal)
-SNS-0280,0172290211,Bouygues Telecom,Grenoble,55.4,43.3,48.07,85.6,2.61,3.7,Aucun (Normal)
-SNS-0281,0292290013,SFR,Nice,58.2,84.1,47.49,82.7,3.47,45.5,Aucun (Normal)
-SNS-0282,0352290015,Free Mobile,Nice,86.2,74.8,47.34,85.7,1.04,87.5,Liaison FH Réalignement
-SNS-0283,0762290026,Orange,Lille,68.6,90.0,48.68,96.8,1.19,69.5,Ventilateur Baie 3.5GHz
-SNS-0284,0682290012,Free Mobile,Lille,51.3,65.1,47.65,73.5,0.9,15.9,Aucun (Normal)
-SNS-0285,0312290370,SFR,Paris,80.5,76.3,48.42,93.7,2.91,78.6,Liaison FH Réalignement
-SNS-0286,0462290087,SFR,Bordeaux,60.5,40.4,48.09,88.5,1.48,10.3,Aucun (Normal)
-SNS-0287,0652290010,Bouygues Telecom,Nice,75.2,60.9,47.55,91.0,1.75,55.2,Aucun (Normal)
-SNS-0288,0932290017,SFR,Lille,75.4,72.2,48.72,90.8,3.14,65.7,Ventilateur Baie 3.5GHz
-SNS-0289,0942290013,Orange,Nantes,80.3,52.4,48.07,79.8,1.61,56.7,Aucun (Normal)
-SNS-0290,0752291392,Orange,Toulouse,83.6,67.2,48.31,76.2,1.57,76.0,Liaison FH Réalignement
-SNS-0291,02B2290128,SFR,Grenoble,46.7,59.5,47.93,71.3,0.42,2.6,Aucun (Normal)
-SNS-0292,0912290028,Bouygues Telecom,Montpellier,58.9,91.8,48.0,95.7,3.7,53.6,Aucun (Normal)
-SNS-0293,0772290022,Orange,Lille,69.6,70.2,48.09,65.2,1.83,53.5,Aucun (Normal)
-SNS-0294,0782290027,Bouygues Telecom,Toulouse,50.2,41.1,47.25,92.9,0.93,2.0,Aucun (Normal)
-SNS-0295,0252290013,Free Mobile,Strasbourg,64.9,89.2,47.26,82.3,1.04,62.1,Carte Alimentation DC
-SNS-0296,0142290015,Free Mobile,Marseille,81.1,89.6,47.51,67.7,1.13,91.6,Ventilateur Baie 3.5GHz
-SNS-0297,0022290015,Free Mobile,Marseille,64.5,39.6,48.33,85.2,1.13,16.7,Aucun (Normal)
-SNS-0298,0402290011,Free Mobile,Nantes,79.7,63.6,47.89,65.3,3.15,65.7,Ventilateur Baie 3.5GHz
-SNS-0299,0242290122,Free Mobile,Nantes,53.8,25.9,47.61,80.8,3.57,2.0,Aucun (Normal)
-SNS-0300,0522290008,SFR,Grenoble,43.0,43.7,47.85,96.6,0.96,2.0,Aucun (Normal)
+SNS-0001,0802290015,SFR,Marseille,78.7,94.9,47.93,92.1,1.47,92.1,Ventilateur Baie 3.5GHz
+SNS-0002,0642290151,Orange,Nice,62.4,86.1,48.53,88.7,3.82,54.8,Aucun (Normal)
+SNS-0003,0332290026,Bouygues Telecom,Bordeaux,62.4,50.4,48.2,78.1,2.48,22.7,Aucun (Normal)
+SNS-0004,0472290005,Orange,Grenoble,50.7,68.9,47.93,72.2,2.45,18.3,Aucun (Normal)
+SNS-0005,0512290147,Free Mobile,Montpellier,65.2,53.3,47.96,71.4,1.22,30.3,Aucun (Normal)
+SNS-0006,0632290004,Bouygues Telecom,Toulouse,53.5,83.8,47.61,70.8,3.54,36.7,Aucun (Normal)
+SNS-0007,0212290007,Orange,Rennes,74.2,60.2,47.52,75.1,3.95,52.7,Aucun (Normal)
+SNS-0008,0592290571,SFR,Lille,78.7,35.6,48.7,94.2,3.96,38.7,Aucun (Normal)
+SNS-0009,0592290031,Free Mobile,Strasbourg,81.0,32.8,47.46,66.3,0.44,40.3,Aucun (Normal)
+SNS-0010,0622290020,Free Mobile,Lille,77.7,37.0,48.77,99.6,1.63,38.2,Aucun (Normal)
+SNS-0011,0232290001,Free Mobile,Nice,54.3,41.6,48.25,79.4,2.84,2.0,Aucun (Normal)
+SNS-0012,0732290021,Free Mobile,Strasbourg,75.8,63.2,47.81,74.2,0.51,58.3,Aucun (Normal)
+SNS-0013,0382290010,Bouygues Telecom,Annecy,83.4,54.0,47.66,78.9,2.71,63.7,Carte Alimentation DC
+SNS-0014,0262290005,Orange,Rennes,84.7,86.1,47.89,81.1,3.38,95.0,Carte Alimentation DC
+SNS-0015,0062290019,Free Mobile,Lille,53.5,27.3,48.28,95.6,1.19,2.0,Aucun (Normal)
+SNS-0016,0302290005,Orange,Marseille,85.5,79.9,48.62,81.6,0.62,90.8,Carte Alimentation DC
+SNS-0017,0302290007,Orange,Paris,58.6,33.9,48.52,99.7,3.04,2.0,Aucun (Normal)
+SNS-0018,0542290015,SFR,Annecy,58.7,86.6,48.38,94.2,0.49,48.6,Aucun (Normal)
+SNS-0019,0572290279,Free Mobile,Rennes,53.0,78.0,48.38,99.2,3.83,30.6,Aucun (Normal)
+SNS-0020,0442290012,SFR,Nice,57.2,57.7,48.41,69.9,1.72,19.9,Aucun (Normal)
+SNS-0021,0722290009,SFR,Annecy,76.8,68.4,47.24,81.1,2.63,64.8,Ventilateur Baie 3.5GHz
+SNS-0022,0412290011,Bouygues Telecom,Nantes,88.1,25.6,47.89,70.3,0.68,46.6,Aucun (Normal)
+SNS-0023,0452290010,Bouygues Telecom,Nantes,67.0,59.9,47.29,95.2,0.52,39.5,Aucun (Normal)
+SNS-0024,0862290140,Bouygues Telecom,Lyon,48.5,75.5,47.54,80.4,0.77,20.2,Aucun (Normal)
+SNS-0025,0272290011,Free Mobile,Montpellier,83.5,46.1,48.37,94.1,0.75,56.8,Aucun (Normal)
+SNS-0026,0672290021,Free Mobile,Montpellier,45.2,67.0,47.84,99.1,1.51,6.7,Aucun (Normal)
+SNS-0027,0312290351,Orange,Lyon,45.7,85.6,47.36,97.9,1.84,24.3,Aucun (Normal)
+SNS-0028,0822290004,Orange,Paris,56.4,34.5,48.78,66.4,3.52,2.0,Aucun (Normal)
+SNS-0029,0652290005,Orange,Montpellier,59.6,79.7,48.35,67.0,1.84,44.0,Aucun (Normal)
+SNS-0030,0942290055,SFR,Toulouse,50.3,54.5,48.32,99.3,2.73,4.6,Aucun (Normal)
+SNS-0031,02A2290114,SFR,Nice,44.4,70.3,47.81,71.7,3.05,8.2,Aucun (Normal)
+SNS-0032,0912290007,Bouygues Telecom,Nantes,84.5,25.4,48.35,99.1,0.77,40.0,Aucun (Normal)
+SNS-0033,0902290027,Bouygues Telecom,Annecy,54.0,69.1,48.38,75.1,3.79,24.4,Aucun (Normal)
+SNS-0034,0142290016,Free Mobile,Grenoble,74.6,89.1,48.26,94.7,0.37,79.5,Ventilateur Baie 3.5GHz
+SNS-0035,0802290006,Orange,Annecy,69.3,93.1,48.01,79.7,2.22,73.5,Ventilateur Baie 3.5GHz
+SNS-0036,0642290014,Free Mobile,Annecy,71.1,92.2,47.33,91.9,0.12,76.0,Ventilateur Baie 3.5GHz
+SNS-0037,0332290023,Orange,Nice,86.4,68.3,47.94,82.9,2.66,82.0,Liaison FH Réalignement
+SNS-0038,0472290008,Free Mobile,Montpellier,74.9,57.0,47.21,86.3,0.76,51.1,Aucun (Normal)
+SNS-0039,0512290003,SFR,Nantes,48.9,72.0,48.47,66.3,0.27,17.8,Aucun (Normal)
+SNS-0040,0032290008,Orange,Lille,47.7,88.3,47.23,77.4,1.82,30.3,Aucun (Normal)
+SNS-0041,0592290006,SFR,Bordeaux,49.1,31.7,47.51,99.9,2.82,2.0,Aucun (Normal)
+SNS-0042,0592290030,Orange,Bordeaux,73.0,55.9,47.72,94.8,3.3,46.7,Aucun (Normal)
+SNS-0043,0622290007,Free Mobile,Strasbourg,56.8,45.1,48.51,66.0,1.69,7.8,Aucun (Normal)
+SNS-0044,0872290171,Bouygues Telecom,Paris,85.5,42.0,47.9,88.4,0.45,56.7,Aucun (Normal)
+SNS-0045,0732290022,Orange,Rennes,42.5,75.9,47.5,89.5,3.92,9.8,Aucun (Normal)
+SNS-0046,0692290372,Free Mobile,Rennes,49.1,74.7,48.73,91.2,2.3,20.6,Aucun (Normal)
+SNS-0047,0422290009,Orange,Annecy,83.2,93.7,48.1,71.6,0.33,98.0,Liaison FH Réalignement
+SNS-0048,0132290834,Bouygues Telecom,Lyon,87.3,35.5,47.93,67.9,1.51,54.1,Aucun (Normal)
+SNS-0049,0062290453,Orange,Rennes,84.5,30.1,48.45,84.7,2.75,44.2,Aucun (Normal)
+SNS-0050,0842290007,SFR,Annecy,50.5,81.6,48.76,78.7,2.03,29.3,Aucun (Normal)
+SNS-0051,0832290099,Bouygues Telecom,Paris,54.2,38.1,48.45,75.5,0.58,2.0,Aucun (Normal)
+SNS-0052,0112290206,Bouygues Telecom,Toulouse,61.1,29.7,47.34,87.0,0.76,2.0,Aucun (Normal)
+SNS-0053,0542290016,Bouygues Telecom,Lille,45.8,90.5,48.02,70.1,0.91,28.9,Aucun (Normal)
+SNS-0054,0572290020,Orange,Annecy,85.4,84.1,47.33,96.0,2.6,94.4,Liaison FH Réalignement
+SNS-0055,0442290301,SFR,Montpellier,70.5,35.1,47.96,72.5,2.67,23.5,Aucun (Normal)
+SNS-0056,0452290006,Orange,Grenoble,84.0,59.0,47.24,89.1,1.29,69.3,Module Optique SFP+ 10G
+SNS-0057,0292290180,SFR,Marseille,74.7,82.1,47.68,89.8,1.93,73.4,Module Optique SFP+ 10G
+SNS-0058,0222290007,SFR,Strasbourg,58.8,95.1,48.05,86.8,3.36,56.4,Aucun (Normal)
+SNS-0059,0672290005,Free Mobile,Grenoble,70.4,65.4,48.37,89.9,3.17,50.6,Aucun (Normal)
+SNS-0060,0312290014,Free Mobile,Annecy,43.0,48.6,48.32,80.1,3.89,2.0,Aucun (Normal)
+SNS-0061,0822290003,Free Mobile,Nice,62.7,39.5,47.64,89.1,3.37,13.4,Aucun (Normal)
+SNS-0062,0652290006,Bouygues Telecom,Lyon,53.3,70.2,47.27,80.5,2.51,24.1,Aucun (Normal)
+SNS-0063,0752290181,SFR,Nantes,59.9,69.4,47.66,70.3,3.36,35.3,Aucun (Normal)
+SNS-0064,02A2290015,Free Mobile,Annecy,82.3,59.4,47.54,67.5,3.17,66.6,Carte Alimentation DC
+SNS-0065,0912290013,Free Mobile,Bordeaux,79.8,94.9,48.04,79.3,2.64,94.0,Liaison FH Réalignement
+SNS-0066,0772290290,Orange,Toulouse,78.5,62.1,47.27,72.2,2.37,62.2,Ventilateur Baie 3.5GHz
+SNS-0067,0252290010,SFR,Paris,88.3,45.8,48.1,73.2,0.84,65.2,Ventilateur Baie 3.5GHz
+SNS-0068,0402290221,Orange,Nice,87.7,81.6,48.36,69.4,3.13,96.3,Carte Alimentation DC
+SNS-0069,0332290028,Bouygues Telecom,Marseille,58.5,44.8,47.61,97.5,3.32,10.6,Aucun (Normal)
+SNS-0070,0472290004,Bouygues Telecom,Nice,78.5,87.0,48.75,70.2,3.24,84.6,Module Optique SFP+ 10G
+SNS-0071,0032290169,Orange,Montpellier,48.4,81.5,48.24,66.4,0.47,25.5,Aucun (Normal)
+SNS-0072,0592290482,Orange,Grenoble,50.0,36.9,47.4,96.0,0.81,2.0,Aucun (Normal)
+SNS-0073,0592290039,Bouygues Telecom,Nantes,47.1,77.3,47.55,75.6,3.42,19.3,Aucun (Normal)
+SNS-0074,0622290023,Free Mobile,Rennes,48.2,34.0,47.91,76.2,0.7,2.0,Aucun (Normal)
+SNS-0075,0872290007,Orange,Strasbourg,54.1,29.2,47.35,84.7,1.0,2.0,Aucun (Normal)
+SNS-0076,0742290014,SFR,Toulouse,84.9,31.5,48.62,80.2,3.98,46.2,Aucun (Normal)
+SNS-0077,0012290129,Orange,Lille,80.6,30.6,48.3,91.6,1.42,37.6,Aucun (Normal)
+SNS-0078,0422290012,Free Mobile,Lille,55.7,90.4,48.28,95.4,3.11,46.6,Aucun (Normal)
+SNS-0079,0262290122,SFR,Annecy,69.6,87.0,48.22,71.7,2.67,68.6,Liaison FH Réalignement
+SNS-0080,0132290586,Orange,Lille,74.2,46.2,47.99,78.6,1.26,40.1,Aucun (Normal)
+SNS-0081,0062290030,Orange,Annecy,73.2,43.5,48.39,77.0,3.88,35.9,Aucun (Normal)
+SNS-0082,0832290015,Bouygues Telecom,Marseille,79.6,37.0,48.25,66.3,1.96,41.6,Aucun (Normal)
+SNS-0083,0112290008,SFR,Bordeaux,44.1,29.7,47.77,68.2,3.83,2.0,Aucun (Normal)
+SNS-0084,0302290008,SFR,Grenoble,87.9,46.2,47.67,96.3,0.39,64.8,Ventilateur Baie 3.5GHz
+SNS-0085,0542290014,SFR,Paris,50.8,50.7,48.5,75.8,2.84,2.1,Aucun (Normal)
+SNS-0086,0572290003,Free Mobile,Toulouse,86.5,72.4,48.32,70.3,1.5,85.9,Ventilateur Baie 3.5GHz
+SNS-0087,0442290011,Bouygues Telecom,Paris,82.4,28.2,47.22,98.8,1.07,38.7,Aucun (Normal)
+SNS-0088,0722290011,Orange,Bordeaux,60.2,53.0,48.75,83.3,2.66,21.1,Aucun (Normal)
+SNS-0089,0862290122,Orange,Toulouse,44.4,27.1,48.12,69.2,2.35,2.0,Aucun (Normal)
+SNS-0090,0292290224,Orange,Nice,60.0,57.0,47.56,84.8,1.82,24.3,Aucun (Normal)
+SNS-0091,0222290002,SFR,Grenoble,80.6,42.3,47.64,74.0,2.33,48.1,Aucun (Normal)
+SNS-0092,0762290018,Bouygues Telecom,Annecy,76.1,64.4,47.32,75.3,2.55,59.9,Aucun (Normal)
+SNS-0093,0672290019,Orange,Marseille,68.2,68.4,48.17,89.9,3.84,49.3,Aucun (Normal)
+SNS-0094,0312290009,Free Mobile,Lyon,62.0,32.2,48.34,85.2,1.6,5.6,Aucun (Normal)
+SNS-0095,0812290123,Free Mobile,Annecy,64.7,71.6,47.86,74.6,2.19,45.9,Aucun (Normal)
+SNS-0096,0652290085,Orange,Nice,86.1,91.9,47.25,96.0,3.2,98.0,Liaison FH Réalignement
+SNS-0097,0942290009,Orange,Lyon,56.6,84.8,47.76,67.9,3.66,43.2,Aucun (Normal)
+SNS-0098,0752290285,Free Mobile,Paris,81.8,67.4,47.72,79.5,2.92,72.9,Ventilateur Baie 3.5GHz
+SNS-0099,0752290316,SFR,Toulouse,49.9,75.1,48.79,95.9,3.38,22.4,Aucun (Normal)
+SNS-0100,0952290016,Orange,Strasbourg,72.9,32.5,47.57,84.4,3.85,25.5,Aucun (Normal)
+SNS-0101,0912290257,SFR,Lyon,71.2,80.4,48.66,69.4,3.98,65.5,Liaison FH Réalignement
+SNS-0102,0772290460,Orange,Grenoble,73.3,73.6,48.22,68.8,2.88,63.2,Ventilateur Baie 3.5GHz
+SNS-0103,0782290031,SFR,Grenoble,77.2,63.0,47.88,91.9,1.35,60.7,Carte Alimentation DC
+SNS-0104,0252290130,Free Mobile,Rennes,68.6,67.9,47.65,79.0,1.48,49.6,Aucun (Normal)
+SNS-0105,0022290003,SFR,Marseille,78.6,52.4,48.23,82.3,0.31,53.6,Aucun (Normal)
+SNS-0106,0642290004,SFR,Montpellier,51.9,32.5,48.1,65.4,2.79,2.0,Aucun (Normal)
+SNS-0107,0332290319,SFR,Nice,59.4,30.8,47.94,91.0,0.34,2.0,Aucun (Normal)
+SNS-0108,0242290124,Free Mobile,Paris,78.0,61.1,48.65,69.8,0.57,60.4,Liaison FH Réalignement
+SNS-0109,0512290138,SFR,Rennes,77.7,26.0,47.8,66.7,0.91,28.3,Aucun (Normal)
+SNS-0110,0032290002,Orange,Annecy,70.5,65.5,48.14,71.9,3.42,50.9,Aucun (Normal)
+SNS-0111,0592290033,Free Mobile,Marseille,86.0,89.0,48.42,95.5,1.28,98.0,Module Optique SFP+ 10G
+SNS-0112,0592290032,Free Mobile,Annecy,68.8,81.3,48.34,77.8,1.96,62.0,Carte Alimentation DC
+SNS-0113,0622290018,Free Mobile,Paris,77.0,25.9,48.66,67.2,1.95,26.9,Aucun (Normal)
+SNS-0114,0872290004,SFR,Montpellier,65.8,48.2,48.19,86.6,0.59,26.8,Aucun (Normal)
+SNS-0115,0742290006,SFR,Marseille,48.1,94.0,47.46,92.4,2.69,36.2,Aucun (Normal)
+SNS-0116,0012290130,SFR,Nice,83.2,78.5,48.56,88.0,3.67,85.4,Liaison FH Réalignement
+SNS-0117,0422290011,Orange,Lyon,84.5,27.6,47.75,85.4,2.39,41.9,Aucun (Normal)
+SNS-0118,0262290154,Bouygues Telecom,Paris,43.3,58.6,47.64,98.3,3.24,2.0,Aucun (Normal)
+SNS-0119,0132290639,Free Mobile,Toulouse,44.5,35.5,47.55,69.3,0.69,2.0,Aucun (Normal)
+SNS-0120,0062290311,Orange,Paris,67.1,29.6,47.58,71.8,3.73,12.4,Aucun (Normal)
+SNS-0121,0842290159,Orange,Marseille,71.7,41.6,47.97,76.9,0.43,31.5,Aucun (Normal)
+SNS-0122,0832290017,SFR,Grenoble,71.3,71.7,47.96,91.0,3.02,57.9,Aucun (Normal)
+SNS-0123,0112290007,Bouygues Telecom,Montpellier,66.1,81.3,48.79,80.6,2.44,57.1,Aucun (Normal)
+SNS-0124,0342290337,Bouygues Telecom,Strasbourg,68.1,91.1,48.73,81.5,2.38,69.6,Liaison FH Réalignement
+SNS-0125,0542290017,Free Mobile,Montpellier,61.2,67.3,48.0,68.8,4.01,35.7,Aucun (Normal)
+SNS-0126,0572290251,SFR,Rennes,54.2,77.4,47.41,95.3,0.43,32.2,Aucun (Normal)
+SNS-0127,0442290016,Bouygues Telecom,Lyon,62.5,73.3,47.37,88.4,0.4,43.5,Aucun (Normal)
+SNS-0128,0722290014,Free Mobile,Paris,86.5,47.5,48.0,69.9,1.13,63.5,Module Optique SFP+ 10G
+SNS-0129,0412290010,SFR,Nantes,60.1,93.9,47.94,73.0,1.12,57.7,Aucun (Normal)
+SNS-0130,0862290010,Free Mobile,Nantes,42.0,38.1,47.77,97.4,3.86,2.0,Aucun (Normal)
+SNS-0131,0292290015,Free Mobile,Nice,56.0,26.1,48.52,93.2,3.74,2.0,Aucun (Normal)
+SNS-0132,0222290011,Bouygues Telecom,Strasbourg,56.3,44.5,47.61,86.4,0.96,6.4,Aucun (Normal)
+SNS-0133,0672290003,Bouygues Telecom,Marseille,54.6,46.0,47.47,73.3,1.84,4.7,Aucun (Normal)
+SNS-0134,0312290111,Bouygues Telecom,Toulouse,88.0,79.5,48.0,79.5,2.58,95.0,Carte Alimentation DC
+SNS-0135,0812290001,Free Mobile,Paris,51.7,71.2,47.89,71.5,1.35,22.1,Aucun (Normal)
+SNS-0136,0322290054,SFR,Strasbourg,86.3,51.6,47.79,74.9,3.17,66.8,Liaison FH Réalignement
+SNS-0137,0942290002,SFR,Annecy,43.2,57.0,48.52,76.5,4.19,2.0,Aucun (Normal)
+SNS-0138,0752290341,Orange,Grenoble,55.3,93.9,47.83,83.7,2.8,49.0,Aucun (Normal)
+SNS-0139,02B2290135,Free Mobile,Rennes,54.8,58.3,47.79,70.8,0.58,16.1,Aucun (Normal)
+SNS-0140,0952290015,SFR,Lyon,81.7,63.7,48.65,69.5,2.2,69.4,Liaison FH Réalignement
+SNS-0141,0912290051,Bouygues Telecom,Montpellier,75.3,68.3,48.77,90.7,3.88,62.0,Ventilateur Baie 3.5GHz
+SNS-0142,0772290020,Orange,Marseille,75.5,38.5,47.86,89.1,0.32,35.5,Aucun (Normal)
+SNS-0143,0782290019,Free Mobile,Annecy,64.2,64.1,47.9,83.3,1.64,38.2,Aucun (Normal)
+SNS-0144,0252290008,Free Mobile,Grenoble,72.5,81.7,47.51,66.8,1.66,69.0,Module Optique SFP+ 10G
+SNS-0145,0142290003,Bouygues Telecom,Nantes,52.9,50.5,47.56,97.0,2.5,5.7,Aucun (Normal)
+SNS-0146,0602290169,Free Mobile,Lyon,47.6,38.4,47.36,94.6,0.92,2.0,Aucun (Normal)
+SNS-0147,0642290013,Free Mobile,Toulouse,64.4,49.4,47.37,79.9,3.92,25.4,Aucun (Normal)
+SNS-0148,0242290003,Bouygues Telecom,Paris,63.1,43.7,48.39,80.9,0.81,17.9,Aucun (Normal)
+SNS-0149,0512290221,SFR,Lille,46.9,43.6,48.06,88.1,2.51,2.0,Aucun (Normal)
+SNS-0150,0632290010,Orange,Montpellier,67.8,56.4,48.51,98.6,2.52,37.8,Aucun (Normal)
+SNS-0151,0592290565,SFR,Nantes,58.1,42.4,48.31,84.5,0.11,7.7,Aucun (Normal)
+SNS-0152,0592290003,SFR,Paris,49.6,75.4,47.41,99.4,0.45,22.1,Aucun (Normal)
+SNS-0153,0622290014,SFR,Nantes,54.6,32.9,47.75,78.7,2.47,2.0,Aucun (Normal)
+SNS-0154,0872290101,Free Mobile,Toulouse,50.1,83.5,47.7,84.3,2.4,30.3,Aucun (Normal)
+SNS-0155,0742290326,Bouygues Telecom,Bordeaux,44.6,76.6,47.2,76.5,3.9,14.2,Aucun (Normal)
+SNS-0156,0692290022,Free Mobile,Lille,55.0,55.1,47.59,93.5,1.62,13.6,Aucun (Normal)
+SNS-0157,0382290226,SFR,Montpellier,78.1,73.4,48.75,81.1,2.38,71.6,Module Optique SFP+ 10G
+SNS-0158,0422290013,Free Mobile,Rennes,87.9,31.1,48.32,87.6,2.93,51.2,Aucun (Normal)
+SNS-0159,0262290007,SFR,Grenoble,55.1,48.4,47.39,79.7,1.53,7.7,Aucun (Normal)
+SNS-0160,0132290040,Free Mobile,Annecy,67.8,95.4,47.46,67.4,2.34,72.9,Ventilateur Baie 3.5GHz
+SNS-0161,0062290023,SFR,Paris,74.7,38.3,47.91,88.0,3.96,33.9,Aucun (Normal)
+SNS-0162,0042290001,Bouygues Telecom,Bordeaux,85.8,36.7,48.4,72.0,1.83,52.5,Aucun (Normal)
+SNS-0163,0112290009,SFR,Lyon,54.9,49.8,48.37,87.8,3.95,8.6,Aucun (Normal)
+SNS-0164,0342290266,Bouygues Telecom,Grenoble,51.7,39.0,48.18,65.6,0.84,2.0,Aucun (Normal)
+SNS-0165,0542290006,Bouygues Telecom,Rennes,66.7,73.0,47.87,69.5,3.98,50.8,Aucun (Normal)
+SNS-0166,0572290021,Free Mobile,Nice,67.9,44.8,47.41,82.5,0.7,27.5,Aucun (Normal)
+SNS-0167,0442290020,Orange,Strasbourg,43.9,47.3,47.75,75.6,0.26,2.0,Aucun (Normal)
+SNS-0168,0372290140,SFR,Nice,70.1,73.0,48.78,78.3,0.18,56.9,Aucun (Normal)
+SNS-0169,0282290158,Orange,Toulouse,84.6,30.1,48.31,72.9,0.68,44.4,Aucun (Normal)
+SNS-0170,0792290132,Free Mobile,Bordeaux,62.3,44.7,47.96,87.8,1.53,17.4,Aucun (Normal)
+SNS-0171,0292290033,Bouygues Telecom,Lyon,46.4,59.7,47.58,82.6,1.25,2.2,Aucun (Normal)
+SNS-0172,0672290015,SFR,Lille,76.6,74.9,47.82,75.0,3.83,70.3,Module Optique SFP+ 10G
+SNS-0173,0312290025,Bouygues Telecom,Rennes,61.8,84.8,47.88,86.0,1.65,52.6,Aucun (Normal)
+SNS-0174,0822290048,Bouygues Telecom,Nantes,61.8,27.1,47.99,91.5,0.81,2.0,Aucun (Normal)
+SNS-0175,0322290005,SFR,Lyon,54.8,69.6,48.66,93.7,3.83,26.3,Aucun (Normal)
+SNS-0176,0932290016,SFR,Paris,43.1,83.1,47.72,66.2,0.73,17.4,Aucun (Normal)
+SNS-0177,0752290284,Free Mobile,Nantes,67.2,41.4,47.21,76.4,0.11,23.2,Aucun (Normal)
+SNS-0178,0752290459,SFR,Paris,63.6,41.7,47.42,65.6,2.85,17.0,Aucun (Normal)
+SNS-0179,02B2290017,Free Mobile,Lyon,71.4,78.3,48.29,82.2,0.69,64.0,Carte Alimentation DC
+SNS-0180,0912290126,Bouygues Telecom,Lille,48.3,64.6,47.6,92.6,1.52,10.1,Aucun (Normal)
+SNS-0181,0772290019,Orange,Montpellier,83.6,53.6,47.89,69.4,1.6,63.7,Carte Alimentation DC
+SNS-0182,0142290018,Bouygues Telecom,Nice,44.2,43.4,48.39,72.0,0.79,2.0,Aucun (Normal)
+SNS-0183,0022290014,Bouygues Telecom,Montpellier,53.7,68.9,47.21,89.0,3.77,23.7,Aucun (Normal)
+SNS-0184,0642290007,SFR,Montpellier,53.8,44.5,47.67,71.8,2.88,2.0,Aucun (Normal)
+SNS-0185,0242290004,Free Mobile,Grenoble,69.1,54.4,48.32,89.4,3.66,38.3,Aucun (Normal)
+SNS-0186,0522290007,Orange,Rennes,72.1,53.4,48.65,98.3,2.49,42.8,Aucun (Normal)
+SNS-0187,0632290006,Free Mobile,Annecy,87.2,82.2,47.33,89.9,1.16,95.9,Ventilateur Baie 3.5GHz
+SNS-0188,0592290047,Bouygues Telecom,Lille,52.3,52.5,48.07,97.3,1.78,6.4,Aucun (Normal)
+SNS-0189,0592290042,Free Mobile,Grenoble,70.2,69.6,48.64,72.2,2.52,54.0,Aucun (Normal)
+SNS-0190,0872290006,SFR,Toulouse,67.6,73.0,47.47,94.6,3.6,52.4,Aucun (Normal)
+SNS-0191,0742290009,SFR,Lille,68.3,36.9,48.46,71.9,3.04,21.1,Aucun (Normal)
+SNS-0192,0422290189,Bouygues Telecom,Annecy,45.0,71.5,48.33,90.8,0.63,10.4,Aucun (Normal)
+SNS-0193,0262290011,SFR,Rennes,55.8,86.6,48.22,78.9,3.3,43.4,Aucun (Normal)
+SNS-0194,0132290039,Free Mobile,Nantes,65.6,70.8,47.55,93.9,1.12,46.8,Aucun (Normal)
+SNS-0195,0062290020,SFR,Strasbourg,77.5,58.2,48.34,65.8,0.7,56.9,Aucun (Normal)
+SNS-0196,0042290004,Bouygues Telecom,Strasbourg,57.7,28.8,48.68,66.9,0.48,2.0,Aucun (Normal)
+SNS-0197,0832290019,Free Mobile,Montpellier,76.3,66.2,48.62,88.7,0.52,61.9,Ventilateur Baie 3.5GHz
+SNS-0198,0112290200,SFR,Lyon,55.7,53.3,48.73,89.1,3.67,13.2,Aucun (Normal)
+SNS-0199,0342290012,SFR,Toulouse,51.1,78.3,48.01,83.7,1.85,27.5,Aucun (Normal)
+SNS-0200,0542290018,Free Mobile,Lyon,66.3,47.7,47.27,81.1,1.35,27.3,Aucun (Normal)
+SNS-0201,0442290019,Orange,Marseille,86.8,57.8,48.67,74.9,3.77,73.3,Ventilateur Baie 3.5GHz
+SNS-0202,0722290158,SFR,Rennes,86.8,58.0,47.84,82.2,4.17,73.4,Ventilateur Baie 3.5GHz
+SNS-0203,0282290168,Bouygues Telecom,Annecy,45.2,36.9,48.19,72.1,4.05,2.0,Aucun (Normal)
+SNS-0204,0792290085,Free Mobile,Montpellier,84.7,94.8,48.3,96.9,3.58,98.0,Ventilateur Baie 3.5GHz
+SNS-0205,0292290256,Free Mobile,Nantes,70.8,82.6,48.27,87.4,3.34,66.8,Module Optique SFP+ 10G
+SNS-0206,0222290009,Orange,Marseille,75.9,34.7,47.61,89.5,1.37,32.9,Aucun (Normal)
+SNS-0207,0272290009,Orange,Bordeaux,74.8,33.9,47.29,85.9,2.23,30.1,Aucun (Normal)
+SNS-0208,0672290018,SFR,Marseille,74.6,74.8,47.98,71.1,1.9,66.6,Carte Alimentation DC
+SNS-0209,0312290019,Bouygues Telecom,Montpellier,68.4,90.2,48.52,83.2,2.69,69.3,Carte Alimentation DC
+SNS-0210,0822290073,Orange,Annecy,51.3,90.0,48.09,83.2,3.36,38.3,Aucun (Normal)
+SNS-0211,0322290003,Free Mobile,Toulouse,76.2,48.9,47.34,82.9,2.99,46.2,Aucun (Normal)
+SNS-0212,0922290024,Bouygues Telecom,Montpellier,74.1,33.0,48.29,83.2,2.67,28.1,Aucun (Normal)
+SNS-0213,0752290406,Orange,Marseille,88.4,67.1,47.24,69.6,3.49,84.5,Ventilateur Baie 3.5GHz
+SNS-0214,0752290281,SFR,Nantes,53.0,25.7,47.26,97.9,2.14,2.0,Aucun (Normal)
+SNS-0215,02B2290010,Free Mobile,Strasbourg,70.7,56.5,47.39,98.2,1.53,43.1,Aucun (Normal)
+SNS-0216,0912290012,Bouygues Telecom,Nice,51.4,51.6,48.61,71.8,2.8,4.0,Aucun (Normal)
+SNS-0217,0772290493,Free Mobile,Nice,87.9,88.3,48.16,82.7,2.7,98.0,Carte Alimentation DC
+SNS-0218,0782290029,Bouygues Telecom,Annecy,70.0,27.0,47.31,77.2,0.93,15.3,Aucun (Normal)
+SNS-0219,0252290006,SFR,Grenoble,82.9,86.6,47.57,71.5,2.41,92.2,Ventilateur Baie 3.5GHz
+SNS-0220,0142290191,Orange,Strasbourg,72.8,57.5,48.2,79.3,0.56,47.8,Aucun (Normal)
+SNS-0221,0022290012,Orange,Lille,70.0,53.3,47.53,82.2,0.76,39.0,Aucun (Normal)
+SNS-0222,0642290162,Free Mobile,Lille,75.5,39.6,47.56,65.2,0.29,36.5,Aucun (Normal)
+SNS-0223,0332290025,Bouygues Telecom,Paris,57.3,53.5,48.24,71.4,3.1,16.3,Aucun (Normal)
+SNS-0224,0522290162,SFR,Bordeaux,86.9,39.2,48.07,85.1,2.44,56.7,Aucun (Normal)
+SNS-0225,0632290011,Bouygues Telecom,Nantes,61.5,40.0,48.01,85.8,3.4,11.7,Aucun (Normal)
+SNS-0226,0592290498,Free Mobile,Annecy,59.7,83.2,47.74,90.0,1.59,47.3,Aucun (Normal)
+SNS-0227,0592290453,Free Mobile,Lille,43.3,40.6,48.4,95.9,3.96,2.0,Aucun (Normal)
+SNS-0228,0622290021,Orange,Grenoble,79.3,51.8,47.51,85.5,4.19,54.4,Aucun (Normal)
+SNS-0229,0192290134,Free Mobile,Strasbourg,67.8,64.5,48.05,91.9,0.32,45.1,Aucun (Normal)
+SNS-0230,0742290209,SFR,Bordeaux,65.5,26.4,47.99,82.9,0.36,6.7,Aucun (Normal)
+SNS-0231,0012290143,Free Mobile,Montpellier,82.0,43.6,48.44,67.8,1.43,51.8,Aucun (Normal)
+SNS-0232,0422290015,Orange,Toulouse,57.3,80.3,47.4,93.7,3.54,40.4,Aucun (Normal)
+SNS-0233,0262290171,SFR,Rennes,83.9,93.3,47.92,94.1,4.02,98.0,Liaison FH Réalignement
+SNS-0234,0132290025,Orange,Marseille,71.2,77.2,48.13,79.1,2.98,62.6,Module Optique SFP+ 10G
+SNS-0235,0062290029,SFR,Paris,45.7,72.6,48.32,69.3,2.88,12.6,Aucun (Normal)
+SNS-0236,0042290059,Bouygues Telecom,Montpellier,69.2,42.4,47.51,95.2,3.22,27.7,Aucun (Normal)
+SNS-0237,0832290326,Bouygues Telecom,Nantes,79.3,63.6,47.34,79.4,2.77,65.0,Carte Alimentation DC
+SNS-0238,0112290209,Orange,Annecy,52.2,45.2,47.22,70.4,2.25,2.0,Aucun (Normal)
+SNS-0239,0342290283,Bouygues Telecom,Grenoble,87.1,33.4,47.61,88.0,3.89,51.8,Aucun (Normal)
+SNS-0240,0542290020,Free Mobile,Nice,61.3,58.2,48.03,73.8,3.42,27.7,Aucun (Normal)
+SNS-0241,0442290017,Free Mobile,Paris,58.6,73.5,48.72,99.3,1.19,36.6,Aucun (Normal)
+SNS-0242,0372290010,Orange,Paris,72.1,55.1,47.39,83.8,0.94,44.4,Aucun (Normal)
+SNS-0243,0172290008,Orange,Lille,77.3,69.0,48.61,75.2,2.77,66.2,Module Optique SFP+ 10G
+SNS-0244,0292290019,Bouygues Telecom,Annecy,46.2,47.3,47.37,67.5,2.47,2.0,Aucun (Normal)
+SNS-0245,0352290011,Bouygues Telecom,Bordeaux,80.1,40.2,48.05,98.9,0.53,45.4,Aucun (Normal)
+SNS-0246,0762290219,Orange,Lyon,79.4,84.2,47.44,80.8,1.74,83.7,Carte Alimentation DC
+SNS-0247,0682290007,Bouygues Telecom,Lyon,85.1,57.8,48.18,92.4,3.3,70.2,Module Optique SFP+ 10G
+SNS-0248,0312290020,SFR,Nice,80.8,40.0,48.33,66.9,1.69,46.4,Aucun (Normal)
+SNS-0249,0462290004,SFR,Rennes,69.0,83.1,48.35,66.3,1.13,64.0,Liaison FH Réalignement
+SNS-0250,0652290107,Free Mobile,Lille,72.3,46.0,47.57,65.9,0.17,36.5,Aucun (Normal)
+SNS-0251,0932290015,Free Mobile,Lille,84.7,81.7,47.9,98.4,2.75,91.0,Carte Alimentation DC
+SNS-0252,0942290010,Bouygues Telecom,Toulouse,44.1,65.6,47.75,99.8,1.47,3.4,Aucun (Normal)
+SNS-0253,0752291174,SFR,Nice,75.3,95.3,47.59,68.6,0.88,86.3,Ventilateur Baie 3.5GHz
+SNS-0254,0752291529,Free Mobile,Rennes,70.7,40.7,47.98,86.4,2.34,28.9,Aucun (Normal)
+SNS-0255,02B2290011,Free Mobile,Paris,60.1,71.0,47.61,78.4,1.14,37.1,Aucun (Normal)
+SNS-0256,0912290231,Orange,Lyon,57.7,84.6,47.54,76.0,2.12,45.0,Aucun (Normal)
+SNS-0257,0772290021,SFR,Grenoble,46.5,53.5,47.87,80.8,2.52,2.0,Aucun (Normal)
+SNS-0258,0702290007,SFR,Montpellier,66.3,60.2,48.12,83.3,2.9,38.5,Aucun (Normal)
+SNS-0259,0142290187,Bouygues Telecom,Paris,67.0,62.7,47.66,96.4,3.96,42.0,Aucun (Normal)
+SNS-0260,0022290018,Orange,Montpellier,67.9,74.5,48.2,74.6,0.39,54.3,Aucun (Normal)
+SNS-0261,0402290009,Orange,Nice,68.4,40.8,47.73,65.7,2.91,24.8,Aucun (Normal)
+SNS-0262,0332290029,Orange,Marseille,85.1,40.6,48.42,67.9,1.89,54.7,Aucun (Normal)
+SNS-0263,0632290009,Orange,Marseille,75.9,61.7,47.23,74.4,3.92,57.2,Aucun (Normal)
+SNS-0264,0712290006,SFR,Lyon,56.5,35.9,48.71,95.7,0.94,2.0,Aucun (Normal)
+SNS-0265,0592290581,Orange,Montpellier,85.9,55.4,47.54,74.9,2.45,69.5,Module Optique SFP+ 10G
+SNS-0266,0622290022,Orange,Bordeaux,75.7,72.7,48.24,73.1,3.78,66.7,Liaison FH Réalignement
+SNS-0267,0192290010,Bouygues Telecom,Annecy,60.0,34.8,47.66,87.7,0.55,4.3,Aucun (Normal)
+SNS-0268,0742290295,Orange,Paris,72.6,47.3,47.45,97.1,3.42,38.2,Aucun (Normal)
+SNS-0269,0012290202,Free Mobile,Grenoble,51.3,78.2,48.35,70.6,2.41,27.7,Aucun (Normal)
+SNS-0270,0422290016,Free Mobile,Nice,47.0,59.0,47.39,74.0,2.51,2.7,Aucun (Normal)
+SNS-0271,0262290148,Bouygues Telecom,Annecy,59.2,65.8,47.42,92.1,3.41,30.8,Aucun (Normal)
+SNS-0272,0132290024,Orange,Lyon,58.4,81.2,47.27,88.2,3.02,43.2,Aucun (Normal)
+SNS-0273,0062290032,Bouygues Telecom,Nantes,88.3,49.6,47.36,69.3,3.56,68.6,Module Optique SFP+ 10G
+SNS-0274,0052290002,Bouygues Telecom,Lyon,45.7,26.3,47.88,97.3,1.79,2.0,Aucun (Normal)
+SNS-0275,0832290387,Free Mobile,Lyon,82.4,43.3,47.38,81.4,0.27,52.3,Aucun (Normal)
+SNS-0276,0662290009,Free Mobile,Grenoble,77.7,67.8,48.62,78.4,0.3,65.9,Carte Alimentation DC
+SNS-0277,0342290003,Orange,Annecy,49.7,26.1,47.38,99.7,2.51,2.0,Aucun (Normal)
+SNS-0278,0722290010,SFR,Annecy,66.9,71.4,48.5,81.4,2.97,49.7,Aucun (Normal)
+SNS-0279,0282290009,Free Mobile,Nice,51.2,37.6,47.37,81.9,0.44,2.0,Aucun (Normal)
+SNS-0280,0172290211,Bouygues Telecom,Nice,86.5,51.0,48.04,89.4,2.2,66.6,Carte Alimentation DC
+SNS-0281,0292290013,SFR,Strasbourg,48.8,56.2,48.11,70.0,2.77,3.4,Aucun (Normal)
+SNS-0282,0352290015,Bouygues Telecom,Strasbourg,70.2,90.9,47.42,73.2,1.51,73.2,Liaison FH Réalignement
+SNS-0283,0762290026,Orange,Rennes,44.1,85.1,47.83,80.8,1.37,21.0,Aucun (Normal)
+SNS-0284,0682290012,Free Mobile,Bordeaux,73.7,30.3,48.65,77.0,1.27,24.9,Aucun (Normal)
+SNS-0285,0312290370,Free Mobile,Lille,81.0,30.7,48.39,99.9,3.89,38.4,Aucun (Normal)
+SNS-0286,0462290087,Free Mobile,Bordeaux,49.6,93.4,47.35,77.1,1.94,38.3,Aucun (Normal)
+SNS-0287,0652290010,Bouygues Telecom,Strasbourg,59.7,94.6,48.08,87.0,2.84,57.6,Aucun (Normal)
+SNS-0288,0932290017,Orange,Lille,72.4,44.8,47.51,72.8,3.85,35.6,Aucun (Normal)
+SNS-0289,0942290013,Bouygues Telecom,Strasbourg,60.2,83.0,48.49,66.0,4.1,48.1,Aucun (Normal)
+SNS-0290,0752291392,Bouygues Telecom,Grenoble,70.4,92.1,48.14,81.4,2.07,74.6,Ventilateur Baie 3.5GHz
+SNS-0291,02B2290128,Free Mobile,Bordeaux,84.1,31.2,48.71,86.2,2.61,44.5,Aucun (Normal)
+SNS-0292,0912290028,Bouygues Telecom,Lille,75.9,83.6,47.66,76.2,1.46,76.9,Ventilateur Baie 3.5GHz
+SNS-0293,0772290022,Free Mobile,Nantes,51.3,44.4,47.88,89.6,2.93,2.0,Aucun (Normal)
+SNS-0294,0782290027,Bouygues Telecom,Bordeaux,59.5,37.2,47.84,68.6,3.7,5.6,Aucun (Normal)
+SNS-0295,0252290013,Bouygues Telecom,Montpellier,82.7,49.1,48.09,75.4,2.59,58.1,Aucun (Normal)
+SNS-0296,0142290015,SFR,Bordeaux,85.0,76.3,48.22,80.5,0.96,86.7,Liaison FH Réalignement
+SNS-0297,0022290015,Orange,Nice,51.0,45.9,47.74,98.1,1.85,2.0,Aucun (Normal)
+SNS-0298,0402290011,SFR,Montpellier,43.5,81.1,48.64,79.9,1.05,16.3,Aucun (Normal)
+SNS-0299,0242290122,Orange,Montpellier,52.5,33.3,48.03,98.9,4.01,2.0,Aucun (Normal)
+SNS-0300,0522290008,Bouygues Telecom,Lyon,68.8,80.6,48.32,76.9,2.02,61.4,Module Optique SFP+ 10G

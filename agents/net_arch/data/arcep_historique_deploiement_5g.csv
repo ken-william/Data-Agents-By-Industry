@@ -1,313 +1,313 @@
 date_observation,nom_operateur,niveau_geographique,code_geographique,libelle_zone,nb_sites_5g_700mhz,nb_sites_5g_2100mhz,nb_sites_5g_3500mhz,nb_sites_5g_total
-2024-03-31,Orange,Région,OCC,Occitanie,454,833,701,1988
-2024-03-31,Orange,Région,BRE,Bretagne,511,1503,280,2294
-2024-03-31,Orange,Région,AUV,Auvergne-Rhône-Alpes,1034,1270,118,2422
-2024-03-31,Orange,Région,CEN,Centre-Val de Loire,771,457,757,1985
-2024-03-31,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,934,1642,916,3492
-2024-03-31,Orange,Région,PAY,Pays de la Loire,342,1407,346,2095
-2024-03-31,Orange,Région,ÎLE,Île-de-France,472,1517,669,2658
-2024-03-31,Orange,Région,GRA,Grand Est,680,1146,856,2682
-2024-03-31,Orange,Région,COR,Corse,878,1752,560,3190
-2024-03-31,Orange,Région,BOU,Bourgogne-Franche-Comté,1180,611,815,2606
-2024-03-31,Orange,Région,NOR,Normandie,689,1620,373,2682
-2024-03-31,Orange,Région,HAU,Hauts-de-France,971,892,645,2508
-2024-03-31,Orange,Région,NOU,Nouvelle-Aquitaine,308,709,389,1406
-2024-03-31,SFR,Région,OCC,Occitanie,442,581,160,1183
-2024-03-31,SFR,Région,BRE,Bretagne,1056,1265,512,2833
-2024-03-31,SFR,Région,AUV,Auvergne-Rhône-Alpes,666,933,450,2049
-2024-03-31,SFR,Région,CEN,Centre-Val de Loire,1106,960,261,2327
-2024-03-31,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,404,277,448,1129
-2024-03-31,SFR,Région,PAY,Pays de la Loire,1031,729,138,1898
-2024-03-31,SFR,Région,ÎLE,Île-de-France,1169,1553,524,3246
-2024-03-31,SFR,Région,GRA,Grand Est,183,984,505,1672
-2024-03-31,SFR,Région,COR,Corse,319,1228,840,2387
-2024-03-31,SFR,Région,BOU,Bourgogne-Franche-Comté,286,1338,543,2167
-2024-03-31,SFR,Région,NOR,Normandie,504,371,390,1265
-2024-03-31,SFR,Région,HAU,Hauts-de-France,714,534,344,1592
-2024-03-31,SFR,Région,NOU,Nouvelle-Aquitaine,883,1634,465,2982
-2024-03-31,Bouygues Telecom,Région,OCC,Occitanie,682,241,142,1065
-2024-03-31,Bouygues Telecom,Région,BRE,Bretagne,738,1310,752,2800
-2024-03-31,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,176,1132,311,1619
-2024-03-31,Bouygues Telecom,Région,CEN,Centre-Val de Loire,486,494,329,1309
-2024-03-31,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,837,1574,825,3236
-2024-03-31,Bouygues Telecom,Région,PAY,Pays de la Loire,736,1133,801,2670
-2024-03-31,Bouygues Telecom,Région,ÎLE,Île-de-France,616,339,421,1376
-2024-03-31,Bouygues Telecom,Région,GRA,Grand Est,1021,332,556,1909
-2024-03-31,Bouygues Telecom,Région,COR,Corse,715,880,610,2205
-2024-03-31,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,1086,943,891,2920
-2024-03-31,Bouygues Telecom,Région,NOR,Normandie,1129,1387,282,2798
-2024-03-31,Bouygues Telecom,Région,HAU,Hauts-de-France,867,708,742,2317
-2024-03-31,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,258,897,259,1414
-2024-03-31,Free Mobile,Région,OCC,Occitanie,1109,1676,302,3087
-2024-03-31,Free Mobile,Région,BRE,Bretagne,230,625,811,1666
-2024-03-31,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,1065,915,701,2681
-2024-03-31,Free Mobile,Région,CEN,Centre-Val de Loire,900,1648,243,2791
-2024-03-31,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,535,1042,269,1846
-2024-03-31,Free Mobile,Région,PAY,Pays de la Loire,540,744,736,2020
-2024-03-31,Free Mobile,Région,ÎLE,Île-de-France,1016,1089,686,2791
-2024-03-31,Free Mobile,Région,GRA,Grand Est,777,1220,325,2322
-2024-03-31,Free Mobile,Région,COR,Corse,729,1718,154,2601
-2024-03-31,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,738,371,252,1361
-2024-03-31,Free Mobile,Région,NOR,Normandie,1164,209,396,1769
-2024-03-31,Free Mobile,Région,HAU,Hauts-de-France,552,286,714,1552
-2024-03-31,Free Mobile,Région,NOU,Nouvelle-Aquitaine,234,564,451,1249
-2024-06-30,Orange,Région,OCC,Occitanie,336,776,388,1500
-2024-06-30,Orange,Région,BRE,Bretagne,674,1209,150,2033
-2024-06-30,Orange,Région,AUV,Auvergne-Rhône-Alpes,961,1691,364,3016
-2024-06-30,Orange,Région,CEN,Centre-Val de Loire,778,1539,869,3186
-2024-06-30,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,602,1254,471,2327
-2024-06-30,Orange,Région,PAY,Pays de la Loire,531,1499,524,2554
-2024-06-30,Orange,Région,ÎLE,Île-de-France,958,1371,101,2430
-2024-06-30,Orange,Région,GRA,Grand Est,474,1616,219,2309
-2024-06-30,Orange,Région,COR,Corse,459,370,303,1132
-2024-06-30,Orange,Région,BOU,Bourgogne-Franche-Comté,318,1370,703,2391
-2024-06-30,Orange,Région,NOR,Normandie,774,392,563,1729
-2024-06-30,Orange,Région,HAU,Hauts-de-France,464,1136,810,2410
-2024-06-30,Orange,Région,NOU,Nouvelle-Aquitaine,345,843,663,1851
-2024-06-30,SFR,Région,OCC,Occitanie,825,1601,483,2909
-2024-06-30,SFR,Région,BRE,Bretagne,602,1256,397,2255
-2024-06-30,SFR,Région,AUV,Auvergne-Rhône-Alpes,720,693,736,2149
-2024-06-30,SFR,Région,CEN,Centre-Val de Loire,1126,1387,294,2807
-2024-06-30,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,839,289,903,2031
-2024-06-30,SFR,Région,PAY,Pays de la Loire,849,723,764,2336
-2024-06-30,SFR,Région,ÎLE,Île-de-France,182,1345,315,1842
-2024-06-30,SFR,Région,GRA,Grand Est,725,821,614,2160
-2024-06-30,SFR,Région,COR,Corse,191,1144,528,1863
-2024-06-30,SFR,Région,BOU,Bourgogne-Franche-Comté,1001,1158,183,2342
-2024-06-30,SFR,Région,NOR,Normandie,1079,1413,789,3281
-2024-06-30,SFR,Région,HAU,Hauts-de-France,1163,1355,736,3254
-2024-06-30,SFR,Région,NOU,Nouvelle-Aquitaine,558,861,716,2135
-2024-06-30,Bouygues Telecom,Région,OCC,Occitanie,325,1757,720,2802
-2024-06-30,Bouygues Telecom,Région,BRE,Bretagne,213,1210,110,1533
-2024-06-30,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,830,769,691,2290
-2024-06-30,Bouygues Telecom,Région,CEN,Centre-Val de Loire,1066,572,880,2518
-2024-06-30,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,1033,414,378,1825
-2024-06-30,Bouygues Telecom,Région,PAY,Pays de la Loire,1048,1757,408,3213
-2024-06-30,Bouygues Telecom,Région,ÎLE,Île-de-France,798,1710,117,2625
-2024-06-30,Bouygues Telecom,Région,GRA,Grand Est,341,832,584,1757
-2024-06-30,Bouygues Telecom,Région,COR,Corse,904,1633,754,3291
-2024-06-30,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,725,1503,611,2839
-2024-06-30,Bouygues Telecom,Région,NOR,Normandie,934,268,292,1494
-2024-06-30,Bouygues Telecom,Région,HAU,Hauts-de-France,1142,1251,809,3202
-2024-06-30,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,1072,1233,172,2477
-2024-06-30,Free Mobile,Région,OCC,Occitanie,628,654,139,1421
-2024-06-30,Free Mobile,Région,BRE,Bretagne,1144,920,550,2614
-2024-06-30,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,788,1550,818,3156
-2024-06-30,Free Mobile,Région,CEN,Centre-Val de Loire,1197,906,639,2742
-2024-06-30,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,977,575,591,2143
-2024-06-30,Free Mobile,Région,PAY,Pays de la Loire,697,1495,668,2860
-2024-06-30,Free Mobile,Région,ÎLE,Île-de-France,249,1398,736,2383
-2024-06-30,Free Mobile,Région,GRA,Grand Est,928,1513,260,2701
-2024-06-30,Free Mobile,Région,COR,Corse,1166,1776,867,3809
-2024-06-30,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,244,749,547,1540
-2024-06-30,Free Mobile,Région,NOR,Normandie,563,398,614,1575
-2024-06-30,Free Mobile,Région,HAU,Hauts-de-France,246,1583,605,2434
-2024-06-30,Free Mobile,Région,NOU,Nouvelle-Aquitaine,793,1147,798,2738
-2024-09-30,Orange,Région,OCC,Occitanie,1100,799,356,2255
-2024-09-30,Orange,Région,BRE,Bretagne,1143,1578,637,3358
-2024-09-30,Orange,Région,AUV,Auvergne-Rhône-Alpes,437,204,476,1117
-2024-09-30,Orange,Région,CEN,Centre-Val de Loire,1199,1387,429,3015
-2024-09-30,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,1128,1015,234,2377
-2024-09-30,Orange,Région,PAY,Pays de la Loire,1020,975,208,2203
-2024-09-30,Orange,Région,ÎLE,Île-de-France,871,579,528,1978
-2024-09-30,Orange,Région,GRA,Grand Est,971,1452,662,3085
-2024-09-30,Orange,Région,COR,Corse,246,1428,637,2311
-2024-09-30,Orange,Région,BOU,Bourgogne-Franche-Comté,866,1472,862,3200
-2024-09-30,Orange,Région,NOR,Normandie,507,1409,186,2102
-2024-09-30,Orange,Région,HAU,Hauts-de-France,262,1072,273,1607
-2024-09-30,Orange,Région,NOU,Nouvelle-Aquitaine,1038,289,801,2128
-2024-09-30,SFR,Région,OCC,Occitanie,893,583,262,1738
-2024-09-30,SFR,Région,BRE,Bretagne,735,1441,431,2607
-2024-09-30,SFR,Région,AUV,Auvergne-Rhône-Alpes,670,832,492,1994
-2024-09-30,SFR,Région,CEN,Centre-Val de Loire,572,643,384,1599
-2024-09-30,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,816,259,652,1727
-2024-09-30,SFR,Région,PAY,Pays de la Loire,752,1409,893,3054
-2024-09-30,SFR,Région,ÎLE,Île-de-France,811,878,680,2369
-2024-09-30,SFR,Région,GRA,Grand Est,578,386,123,1087
-2024-09-30,SFR,Région,COR,Corse,912,1406,298,2616
-2024-09-30,SFR,Région,BOU,Bourgogne-Franche-Comté,622,338,826,1786
-2024-09-30,SFR,Région,NOR,Normandie,978,1417,816,3211
-2024-09-30,SFR,Région,HAU,Hauts-de-France,153,448,469,1070
-2024-09-30,SFR,Région,NOU,Nouvelle-Aquitaine,397,1085,814,2296
-2024-09-30,Bouygues Telecom,Région,OCC,Occitanie,738,272,777,1787
-2024-09-30,Bouygues Telecom,Région,BRE,Bretagne,216,854,189,1259
-2024-09-30,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,481,1553,596,2630
-2024-09-30,Bouygues Telecom,Région,CEN,Centre-Val de Loire,379,347,890,1616
-2024-09-30,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,545,375,799,1719
-2024-09-30,Bouygues Telecom,Région,PAY,Pays de la Loire,198,413,321,932
-2024-09-30,Bouygues Telecom,Région,ÎLE,Île-de-France,1168,1245,441,2854
-2024-09-30,Bouygues Telecom,Région,GRA,Grand Est,514,350,183,1047
-2024-09-30,Bouygues Telecom,Région,COR,Corse,600,1614,311,2525
-2024-09-30,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,596,630,524,1750
-2024-09-30,Bouygues Telecom,Région,NOR,Normandie,270,1573,702,2545
-2024-09-30,Bouygues Telecom,Région,HAU,Hauts-de-France,677,1025,609,2311
-2024-09-30,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,1074,1066,131,2271
-2024-09-30,Free Mobile,Région,OCC,Occitanie,445,551,573,1569
-2024-09-30,Free Mobile,Région,BRE,Bretagne,1121,1016,299,2436
-2024-09-30,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,1089,1374,584,3047
-2024-09-30,Free Mobile,Région,CEN,Centre-Val de Loire,218,601,288,1107
-2024-09-30,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,489,1500,627,2616
-2024-09-30,Free Mobile,Région,PAY,Pays de la Loire,986,1262,660,2908
-2024-09-30,Free Mobile,Région,ÎLE,Île-de-France,253,319,235,807
-2024-09-30,Free Mobile,Région,GRA,Grand Est,411,556,782,1749
-2024-09-30,Free Mobile,Région,COR,Corse,430,1120,700,2250
-2024-09-30,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,1196,761,842,2799
-2024-09-30,Free Mobile,Région,NOR,Normandie,683,1290,934,2907
-2024-09-30,Free Mobile,Région,HAU,Hauts-de-France,1014,1501,890,3405
-2024-09-30,Free Mobile,Région,NOU,Nouvelle-Aquitaine,1083,1333,235,2651
-2024-12-31,Orange,Région,OCC,Occitanie,918,1503,921,3342
-2024-12-31,Orange,Région,BRE,Bretagne,878,894,236,2008
-2024-12-31,Orange,Région,AUV,Auvergne-Rhône-Alpes,427,312,758,1497
-2024-12-31,Orange,Région,CEN,Centre-Val de Loire,877,1750,786,3413
-2024-12-31,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,728,1449,489,2666
-2024-12-31,Orange,Région,PAY,Pays de la Loire,686,987,884,2557
-2024-12-31,Orange,Région,ÎLE,Île-de-France,304,1638,334,2276
-2024-12-31,Orange,Région,GRA,Grand Est,864,1448,758,3070
-2024-12-31,Orange,Région,COR,Corse,534,904,735,2173
-2024-12-31,Orange,Région,BOU,Bourgogne-Franche-Comté,567,1387,350,2304
-2024-12-31,Orange,Région,NOR,Normandie,539,916,824,2279
-2024-12-31,Orange,Région,HAU,Hauts-de-France,450,732,602,1784
-2024-12-31,Orange,Région,NOU,Nouvelle-Aquitaine,421,319,204,944
-2024-12-31,SFR,Région,OCC,Occitanie,1109,1407,912,3428
-2024-12-31,SFR,Région,BRE,Bretagne,564,871,288,1723
-2024-12-31,SFR,Région,AUV,Auvergne-Rhône-Alpes,774,1188,856,2818
-2024-12-31,SFR,Région,CEN,Centre-Val de Loire,629,1051,853,2533
-2024-12-31,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,306,243,112,661
-2024-12-31,SFR,Région,PAY,Pays de la Loire,800,800,294,1894
-2024-12-31,SFR,Région,ÎLE,Île-de-France,640,1561,123,2324
-2024-12-31,SFR,Région,GRA,Grand Est,589,432,131,1152
-2024-12-31,SFR,Région,COR,Corse,469,422,521,1412
-2024-12-31,SFR,Région,BOU,Bourgogne-Franche-Comté,610,1101,118,1829
-2024-12-31,SFR,Région,NOR,Normandie,840,1290,518,2648
-2024-12-31,SFR,Région,HAU,Hauts-de-France,1157,1471,242,2870
-2024-12-31,SFR,Région,NOU,Nouvelle-Aquitaine,773,1665,614,3052
-2024-12-31,Bouygues Telecom,Région,OCC,Occitanie,935,1796,205,2936
-2024-12-31,Bouygues Telecom,Région,BRE,Bretagne,812,687,464,1963
-2024-12-31,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,243,1781,799,2823
-2024-12-31,Bouygues Telecom,Région,CEN,Centre-Val de Loire,568,1730,342,2640
-2024-12-31,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,1191,1209,126,2526
-2024-12-31,Bouygues Telecom,Région,PAY,Pays de la Loire,811,1310,480,2601
-2024-12-31,Bouygues Telecom,Région,ÎLE,Île-de-France,1145,406,678,2229
-2024-12-31,Bouygues Telecom,Région,GRA,Grand Est,749,604,535,1888
-2024-12-31,Bouygues Telecom,Région,COR,Corse,655,298,325,1278
-2024-12-31,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,410,459,249,1118
-2024-12-31,Bouygues Telecom,Région,NOR,Normandie,619,900,275,1794
-2024-12-31,Bouygues Telecom,Région,HAU,Hauts-de-France,581,721,820,2122
-2024-12-31,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,222,604,257,1083
-2024-12-31,Free Mobile,Région,OCC,Occitanie,902,271,403,1576
-2024-12-31,Free Mobile,Région,BRE,Bretagne,398,604,298,1300
-2024-12-31,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,833,632,145,1610
-2024-12-31,Free Mobile,Région,CEN,Centre-Val de Loire,221,1500,911,2632
-2024-12-31,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,1171,1239,147,2557
-2024-12-31,Free Mobile,Région,PAY,Pays de la Loire,275,453,842,1570
-2024-12-31,Free Mobile,Région,ÎLE,Île-de-France,1004,543,253,1800
-2024-12-31,Free Mobile,Région,GRA,Grand Est,1110,1760,911,3781
-2024-12-31,Free Mobile,Région,COR,Corse,313,592,670,1575
-2024-12-31,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,1048,761,115,1924
-2024-12-31,Free Mobile,Région,NOR,Normandie,165,1102,126,1393
-2024-12-31,Free Mobile,Région,HAU,Hauts-de-France,949,863,747,2559
-2024-12-31,Free Mobile,Région,NOU,Nouvelle-Aquitaine,343,968,760,2071
-2025-03-31,Orange,Région,OCC,Occitanie,287,849,812,1948
-2025-03-31,Orange,Région,BRE,Bretagne,160,1347,469,1976
-2025-03-31,Orange,Région,AUV,Auvergne-Rhône-Alpes,707,567,105,1379
-2025-03-31,Orange,Région,CEN,Centre-Val de Loire,231,1350,944,2525
-2025-03-31,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,664,529,638,1831
-2025-03-31,Orange,Région,PAY,Pays de la Loire,721,1341,148,2210
-2025-03-31,Orange,Région,ÎLE,Île-de-France,1013,1408,127,2548
-2025-03-31,Orange,Région,GRA,Grand Est,769,479,353,1601
-2025-03-31,Orange,Région,COR,Corse,346,667,728,1741
-2025-03-31,Orange,Région,BOU,Bourgogne-Franche-Comté,707,1652,117,2476
-2025-03-31,Orange,Région,NOR,Normandie,426,605,763,1794
-2025-03-31,Orange,Région,HAU,Hauts-de-France,228,847,920,1995
-2025-03-31,Orange,Région,NOU,Nouvelle-Aquitaine,469,984,298,1751
-2025-03-31,SFR,Région,OCC,Occitanie,172,1270,666,2108
-2025-03-31,SFR,Région,BRE,Bretagne,455,1240,824,2519
-2025-03-31,SFR,Région,AUV,Auvergne-Rhône-Alpes,326,1454,654,2434
-2025-03-31,SFR,Région,CEN,Centre-Val de Loire,698,1754,182,2634
-2025-03-31,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,1038,1245,655,2938
-2025-03-31,SFR,Région,PAY,Pays de la Loire,700,1555,585,2840
-2025-03-31,SFR,Région,ÎLE,Île-de-France,183,1099,582,1864
-2025-03-31,SFR,Région,GRA,Grand Est,949,1376,779,3104
-2025-03-31,SFR,Région,COR,Corse,268,422,477,1167
-2025-03-31,SFR,Région,BOU,Bourgogne-Franche-Comté,506,421,872,1799
-2025-03-31,SFR,Région,NOR,Normandie,1093,365,738,2196
-2025-03-31,SFR,Région,HAU,Hauts-de-France,977,1543,391,2911
-2025-03-31,SFR,Région,NOU,Nouvelle-Aquitaine,974,251,335,1560
-2025-03-31,Bouygues Telecom,Région,OCC,Occitanie,568,1241,142,1951
-2025-03-31,Bouygues Telecom,Région,BRE,Bretagne,734,1314,563,2611
-2025-03-31,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,735,1497,752,2984
-2025-03-31,Bouygues Telecom,Région,CEN,Centre-Val de Loire,906,1468,646,3020
-2025-03-31,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,259,1445,466,2170
-2025-03-31,Bouygues Telecom,Région,PAY,Pays de la Loire,897,1766,753,3416
-2025-03-31,Bouygues Telecom,Région,ÎLE,Île-de-France,1103,1483,231,2817
-2025-03-31,Bouygues Telecom,Région,GRA,Grand Est,711,1321,193,2225
-2025-03-31,Bouygues Telecom,Région,COR,Corse,340,971,521,1832
-2025-03-31,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,405,547,921,1873
-2025-03-31,Bouygues Telecom,Région,NOR,Normandie,152,713,468,1333
-2025-03-31,Bouygues Telecom,Région,HAU,Hauts-de-France,900,571,118,1589
-2025-03-31,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,540,1135,805,2480
-2025-03-31,Free Mobile,Région,OCC,Occitanie,807,1124,548,2479
-2025-03-31,Free Mobile,Région,BRE,Bretagne,217,1657,732,2606
-2025-03-31,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,946,1438,423,2807
-2025-03-31,Free Mobile,Région,CEN,Centre-Val de Loire,530,1029,664,2223
-2025-03-31,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,922,1331,302,2555
-2025-03-31,Free Mobile,Région,PAY,Pays de la Loire,1049,1181,738,2968
-2025-03-31,Free Mobile,Région,ÎLE,Île-de-France,227,1131,345,1703
-2025-03-31,Free Mobile,Région,GRA,Grand Est,244,507,215,966
-2025-03-31,Free Mobile,Région,COR,Corse,626,1693,596,2915
-2025-03-31,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,371,1713,655,2739
-2025-03-31,Free Mobile,Région,NOR,Normandie,542,1620,587,2749
-2025-03-31,Free Mobile,Région,HAU,Hauts-de-France,389,444,347,1180
-2025-03-31,Free Mobile,Région,NOU,Nouvelle-Aquitaine,508,719,179,1406
-2025-06-30,Orange,Région,OCC,Occitanie,716,233,728,1677
-2025-06-30,Orange,Région,BRE,Bretagne,221,777,369,1367
-2025-06-30,Orange,Région,AUV,Auvergne-Rhône-Alpes,663,1733,689,3085
-2025-06-30,Orange,Région,CEN,Centre-Val de Loire,989,1514,810,3313
-2025-06-30,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,300,951,407,1658
-2025-06-30,Orange,Région,PAY,Pays de la Loire,721,586,215,1522
-2025-06-30,Orange,Région,ÎLE,Île-de-France,151,1249,378,1778
-2025-06-30,Orange,Région,GRA,Grand Est,420,1660,834,2914
-2025-06-30,Orange,Région,COR,Corse,485,482,607,1574
-2025-06-30,Orange,Région,BOU,Bourgogne-Franche-Comté,1110,987,549,2646
-2025-06-30,Orange,Région,NOR,Normandie,365,1265,694,2324
-2025-06-30,Orange,Région,HAU,Hauts-de-France,526,1049,559,2134
-2025-06-30,Orange,Région,NOU,Nouvelle-Aquitaine,500,1602,792,2894
-2025-06-30,SFR,Région,OCC,Occitanie,470,902,723,2095
-2025-06-30,SFR,Région,BRE,Bretagne,969,364,535,1868
-2025-06-30,SFR,Région,AUV,Auvergne-Rhône-Alpes,182,305,928,1415
-2025-06-30,SFR,Région,CEN,Centre-Val de Loire,882,1640,321,2843
-2025-06-30,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,263,1365,635,2263
-2025-06-30,SFR,Région,PAY,Pays de la Loire,1036,942,801,2779
-2025-06-30,SFR,Région,ÎLE,Île-de-France,449,1778,671,2898
-2025-06-30,SFR,Région,GRA,Grand Est,1060,1054,586,2700
-2025-06-30,SFR,Région,COR,Corse,686,1731,786,3203
-2025-06-30,SFR,Région,BOU,Bourgogne-Franche-Comté,986,1635,430,3051
-2025-06-30,SFR,Région,NOR,Normandie,580,213,535,1328
-2025-06-30,SFR,Région,HAU,Hauts-de-France,1187,1789,343,3319
-2025-06-30,SFR,Région,NOU,Nouvelle-Aquitaine,801,1519,384,2704
-2025-06-30,Bouygues Telecom,Région,OCC,Occitanie,248,721,821,1790
-2025-06-30,Bouygues Telecom,Région,BRE,Bretagne,826,1353,272,2451
-2025-06-30,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,782,889,718,2389
-2025-06-30,Bouygues Telecom,Région,CEN,Centre-Val de Loire,559,1505,689,2753
-2025-06-30,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,1085,268,782,2135
-2025-06-30,Bouygues Telecom,Région,PAY,Pays de la Loire,570,520,121,1211
-2025-06-30,Bouygues Telecom,Région,ÎLE,Île-de-France,1073,624,788,2485
-2025-06-30,Bouygues Telecom,Région,GRA,Grand Est,829,1157,286,2272
-2025-06-30,Bouygues Telecom,Région,COR,Corse,655,844,127,1626
-2025-06-30,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,726,1509,825,3060
-2025-06-30,Bouygues Telecom,Région,NOR,Normandie,605,1321,195,2121
-2025-06-30,Bouygues Telecom,Région,HAU,Hauts-de-France,865,1434,801,3100
-2025-06-30,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,613,384,484,1481
-2025-06-30,Free Mobile,Région,OCC,Occitanie,1080,796,897,2773
-2025-06-30,Free Mobile,Région,BRE,Bretagne,267,354,185,806
-2025-06-30,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,528,562,294,1384
-2025-06-30,Free Mobile,Région,CEN,Centre-Val de Loire,1193,1669,227,3089
-2025-06-30,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,768,1440,106,2314
-2025-06-30,Free Mobile,Région,PAY,Pays de la Loire,1197,1149,474,2820
-2025-06-30,Free Mobile,Région,ÎLE,Île-de-France,451,355,876,1682
-2025-06-30,Free Mobile,Région,GRA,Grand Est,227,1471,260,1958
-2025-06-30,Free Mobile,Région,COR,Corse,345,961,615,1921
-2025-06-30,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,881,1747,408,3036
-2025-06-30,Free Mobile,Région,NOR,Normandie,1038,1647,941,3626
-2025-06-30,Free Mobile,Région,HAU,Hauts-de-France,288,1254,100,1642
-2025-06-30,Free Mobile,Région,NOU,Nouvelle-Aquitaine,909,1016,476,2401
+2024-03-31,Orange,Région,BRE,Bretagne,780,1667,821,3268
+2024-03-31,Orange,Région,CEN,Centre-Val de Loire,706,336,521,1563
+2024-03-31,Orange,Région,NOR,Normandie,865,686,784,2335
+2024-03-31,Orange,Région,BOU,Bourgogne-Franche-Comté,276,1261,374,1911
+2024-03-31,Orange,Région,NOU,Nouvelle-Aquitaine,524,437,113,1074
+2024-03-31,Orange,Région,ÎLE,Île-de-France,304,1150,894,2348
+2024-03-31,Orange,Région,HAU,Hauts-de-France,702,1404,278,2384
+2024-03-31,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,1068,694,904,2666
+2024-03-31,Orange,Région,PAY,Pays de la Loire,486,656,497,1639
+2024-03-31,Orange,Région,COR,Corse,406,491,849,1746
+2024-03-31,Orange,Région,GRA,Grand Est,560,478,197,1235
+2024-03-31,Orange,Région,OCC,Occitanie,918,1416,339,2673
+2024-03-31,Orange,Région,AUV,Auvergne-Rhône-Alpes,729,1718,304,2751
+2024-03-31,SFR,Région,BRE,Bretagne,1154,1555,718,3427
+2024-03-31,SFR,Région,CEN,Centre-Val de Loire,926,905,754,2585
+2024-03-31,SFR,Région,NOR,Normandie,1175,1447,149,2771
+2024-03-31,SFR,Région,BOU,Bourgogne-Franche-Comté,185,982,833,2000
+2024-03-31,SFR,Région,NOU,Nouvelle-Aquitaine,864,1456,522,2842
+2024-03-31,SFR,Région,ÎLE,Île-de-France,527,1408,672,2607
+2024-03-31,SFR,Région,HAU,Hauts-de-France,1193,1386,194,2773
+2024-03-31,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,920,866,478,2264
+2024-03-31,SFR,Région,PAY,Pays de la Loire,1165,1779,834,3778
+2024-03-31,SFR,Région,COR,Corse,700,225,491,1416
+2024-03-31,SFR,Région,GRA,Grand Est,501,1797,426,2724
+2024-03-31,SFR,Région,OCC,Occitanie,727,372,631,1730
+2024-03-31,SFR,Région,AUV,Auvergne-Rhône-Alpes,414,537,847,1798
+2024-03-31,Bouygues Telecom,Région,BRE,Bretagne,1108,861,884,2853
+2024-03-31,Bouygues Telecom,Région,CEN,Centre-Val de Loire,703,1192,719,2614
+2024-03-31,Bouygues Telecom,Région,NOR,Normandie,364,1771,510,2645
+2024-03-31,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,1095,544,489,2128
+2024-03-31,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,954,1554,536,3044
+2024-03-31,Bouygues Telecom,Région,ÎLE,Île-de-France,984,689,168,1841
+2024-03-31,Bouygues Telecom,Région,HAU,Hauts-de-France,750,1253,894,2897
+2024-03-31,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,171,1404,261,1836
+2024-03-31,Bouygues Telecom,Région,PAY,Pays de la Loire,679,892,906,2477
+2024-03-31,Bouygues Telecom,Région,COR,Corse,828,1146,199,2173
+2024-03-31,Bouygues Telecom,Région,GRA,Grand Est,460,1285,226,1971
+2024-03-31,Bouygues Telecom,Région,OCC,Occitanie,1124,735,856,2715
+2024-03-31,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,899,745,208,1852
+2024-03-31,Free Mobile,Région,BRE,Bretagne,346,952,373,1671
+2024-03-31,Free Mobile,Région,CEN,Centre-Val de Loire,704,1459,722,2885
+2024-03-31,Free Mobile,Région,NOR,Normandie,1003,1343,290,2636
+2024-03-31,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,192,439,676,1307
+2024-03-31,Free Mobile,Région,NOU,Nouvelle-Aquitaine,1184,1077,664,2925
+2024-03-31,Free Mobile,Région,ÎLE,Île-de-France,385,971,872,2228
+2024-03-31,Free Mobile,Région,HAU,Hauts-de-France,1031,653,783,2467
+2024-03-31,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,675,1062,722,2459
+2024-03-31,Free Mobile,Région,PAY,Pays de la Loire,1112,818,387,2317
+2024-03-31,Free Mobile,Région,COR,Corse,351,749,189,1289
+2024-03-31,Free Mobile,Région,GRA,Grand Est,474,570,796,1840
+2024-03-31,Free Mobile,Région,OCC,Occitanie,569,1556,838,2963
+2024-03-31,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,432,372,574,1378
+2024-06-30,Orange,Région,BRE,Bretagne,301,1398,949,2648
+2024-06-30,Orange,Région,CEN,Centre-Val de Loire,241,951,632,1824
+2024-06-30,Orange,Région,NOR,Normandie,939,1086,282,2307
+2024-06-30,Orange,Région,BOU,Bourgogne-Franche-Comté,258,776,934,1968
+2024-06-30,Orange,Région,NOU,Nouvelle-Aquitaine,970,1609,939,3518
+2024-06-30,Orange,Région,ÎLE,Île-de-France,960,1204,766,2930
+2024-06-30,Orange,Région,HAU,Hauts-de-France,589,842,887,2318
+2024-06-30,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,310,867,899,2076
+2024-06-30,Orange,Région,PAY,Pays de la Loire,310,926,339,1575
+2024-06-30,Orange,Région,COR,Corse,712,686,541,1939
+2024-06-30,Orange,Région,GRA,Grand Est,270,881,180,1331
+2024-06-30,Orange,Région,OCC,Occitanie,577,234,552,1363
+2024-06-30,Orange,Région,AUV,Auvergne-Rhône-Alpes,946,203,782,1931
+2024-06-30,SFR,Région,BRE,Bretagne,735,915,325,1975
+2024-06-30,SFR,Région,CEN,Centre-Val de Loire,698,841,188,1727
+2024-06-30,SFR,Région,NOR,Normandie,425,777,428,1630
+2024-06-30,SFR,Région,BOU,Bourgogne-Franche-Comté,985,639,298,1922
+2024-06-30,SFR,Région,NOU,Nouvelle-Aquitaine,830,548,704,2082
+2024-06-30,SFR,Région,ÎLE,Île-de-France,163,999,125,1287
+2024-06-30,SFR,Région,HAU,Hauts-de-France,440,674,389,1503
+2024-06-30,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,1188,1419,173,2780
+2024-06-30,SFR,Région,PAY,Pays de la Loire,1191,1417,128,2736
+2024-06-30,SFR,Région,COR,Corse,207,1366,186,1759
+2024-06-30,SFR,Région,GRA,Grand Est,790,668,147,1605
+2024-06-30,SFR,Région,OCC,Occitanie,747,1551,484,2782
+2024-06-30,SFR,Région,AUV,Auvergne-Rhône-Alpes,273,1716,357,2346
+2024-06-30,Bouygues Telecom,Région,BRE,Bretagne,340,1446,616,2402
+2024-06-30,Bouygues Telecom,Région,CEN,Centre-Val de Loire,869,1152,751,2772
+2024-06-30,Bouygues Telecom,Région,NOR,Normandie,715,1517,348,2580
+2024-06-30,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,450,1354,597,2401
+2024-06-30,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,543,1178,880,2601
+2024-06-30,Bouygues Telecom,Région,ÎLE,Île-de-France,676,1228,157,2061
+2024-06-30,Bouygues Telecom,Région,HAU,Hauts-de-France,164,1748,473,2385
+2024-06-30,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,286,1629,656,2571
+2024-06-30,Bouygues Telecom,Région,PAY,Pays de la Loire,1131,332,771,2234
+2024-06-30,Bouygues Telecom,Région,COR,Corse,558,1257,657,2472
+2024-06-30,Bouygues Telecom,Région,GRA,Grand Est,170,280,766,1216
+2024-06-30,Bouygues Telecom,Région,OCC,Occitanie,637,258,127,1022
+2024-06-30,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,577,996,946,2519
+2024-06-30,Free Mobile,Région,BRE,Bretagne,300,1314,907,2521
+2024-06-30,Free Mobile,Région,CEN,Centre-Val de Loire,820,1261,292,2373
+2024-06-30,Free Mobile,Région,NOR,Normandie,448,1069,220,1737
+2024-06-30,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,570,1605,160,2335
+2024-06-30,Free Mobile,Région,NOU,Nouvelle-Aquitaine,622,403,208,1233
+2024-06-30,Free Mobile,Région,ÎLE,Île-de-France,380,1364,692,2436
+2024-06-30,Free Mobile,Région,HAU,Hauts-de-France,727,1251,422,2400
+2024-06-30,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,289,955,454,1698
+2024-06-30,Free Mobile,Région,PAY,Pays de la Loire,1097,397,367,1861
+2024-06-30,Free Mobile,Région,COR,Corse,155,834,612,1601
+2024-06-30,Free Mobile,Région,GRA,Grand Est,733,746,869,2348
+2024-06-30,Free Mobile,Région,OCC,Occitanie,817,1493,829,3139
+2024-06-30,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,226,430,214,870
+2024-09-30,Orange,Région,BRE,Bretagne,275,1757,620,2652
+2024-09-30,Orange,Région,CEN,Centre-Val de Loire,389,592,556,1537
+2024-09-30,Orange,Région,NOR,Normandie,259,954,301,1514
+2024-09-30,Orange,Région,BOU,Bourgogne-Franche-Comté,747,511,579,1837
+2024-09-30,Orange,Région,NOU,Nouvelle-Aquitaine,193,1070,628,1891
+2024-09-30,Orange,Région,ÎLE,Île-de-France,1102,1249,847,3198
+2024-09-30,Orange,Région,HAU,Hauts-de-France,314,440,911,1665
+2024-09-30,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,645,401,235,1281
+2024-09-30,Orange,Région,PAY,Pays de la Loire,783,964,186,1933
+2024-09-30,Orange,Région,COR,Corse,390,1330,604,2324
+2024-09-30,Orange,Région,GRA,Grand Est,175,470,701,1346
+2024-09-30,Orange,Région,OCC,Occitanie,227,1222,345,1794
+2024-09-30,Orange,Région,AUV,Auvergne-Rhône-Alpes,577,869,273,1719
+2024-09-30,SFR,Région,BRE,Bretagne,404,981,776,2161
+2024-09-30,SFR,Région,CEN,Centre-Val de Loire,431,533,611,1575
+2024-09-30,SFR,Région,NOR,Normandie,890,1057,497,2444
+2024-09-30,SFR,Région,BOU,Bourgogne-Franche-Comté,792,784,316,1892
+2024-09-30,SFR,Région,NOU,Nouvelle-Aquitaine,1167,1118,239,2524
+2024-09-30,SFR,Région,ÎLE,Île-de-France,953,462,247,1662
+2024-09-30,SFR,Région,HAU,Hauts-de-France,1161,458,656,2275
+2024-09-30,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,848,1435,318,2601
+2024-09-30,SFR,Région,PAY,Pays de la Loire,472,289,354,1115
+2024-09-30,SFR,Région,COR,Corse,228,569,864,1661
+2024-09-30,SFR,Région,GRA,Grand Est,181,1171,872,2224
+2024-09-30,SFR,Région,OCC,Occitanie,867,1504,930,3301
+2024-09-30,SFR,Région,AUV,Auvergne-Rhône-Alpes,381,950,181,1512
+2024-09-30,Bouygues Telecom,Région,BRE,Bretagne,700,327,854,1881
+2024-09-30,Bouygues Telecom,Région,CEN,Centre-Val de Loire,877,1170,332,2379
+2024-09-30,Bouygues Telecom,Région,NOR,Normandie,216,909,211,1336
+2024-09-30,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,451,602,880,1933
+2024-09-30,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,229,789,842,1860
+2024-09-30,Bouygues Telecom,Région,ÎLE,Île-de-France,263,586,220,1069
+2024-09-30,Bouygues Telecom,Région,HAU,Hauts-de-France,640,1538,591,2769
+2024-09-30,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,767,1768,316,2851
+2024-09-30,Bouygues Telecom,Région,PAY,Pays de la Loire,869,1244,921,3034
+2024-09-30,Bouygues Telecom,Région,COR,Corse,450,689,415,1554
+2024-09-30,Bouygues Telecom,Région,GRA,Grand Est,949,1268,877,3094
+2024-09-30,Bouygues Telecom,Région,OCC,Occitanie,469,543,908,1920
+2024-09-30,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,850,236,325,1411
+2024-09-30,Free Mobile,Région,BRE,Bretagne,566,1067,432,2065
+2024-09-30,Free Mobile,Région,CEN,Centre-Val de Loire,463,575,942,1980
+2024-09-30,Free Mobile,Région,NOR,Normandie,707,856,532,2095
+2024-09-30,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,726,471,665,1862
+2024-09-30,Free Mobile,Région,NOU,Nouvelle-Aquitaine,944,1059,220,2223
+2024-09-30,Free Mobile,Région,ÎLE,Île-de-France,1045,620,918,2583
+2024-09-30,Free Mobile,Région,HAU,Hauts-de-France,379,921,658,1958
+2024-09-30,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,419,709,751,1879
+2024-09-30,Free Mobile,Région,PAY,Pays de la Loire,511,1748,211,2470
+2024-09-30,Free Mobile,Région,COR,Corse,367,895,388,1650
+2024-09-30,Free Mobile,Région,GRA,Grand Est,523,1184,110,1817
+2024-09-30,Free Mobile,Région,OCC,Occitanie,301,679,569,1549
+2024-09-30,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,677,777,875,2329
+2024-12-31,Orange,Région,BRE,Bretagne,826,453,946,2225
+2024-12-31,Orange,Région,CEN,Centre-Val de Loire,1052,436,701,2189
+2024-12-31,Orange,Région,NOR,Normandie,1156,1559,605,3320
+2024-12-31,Orange,Région,BOU,Bourgogne-Franche-Comté,1199,476,695,2370
+2024-12-31,Orange,Région,NOU,Nouvelle-Aquitaine,954,1441,574,2969
+2024-12-31,Orange,Région,ÎLE,Île-de-France,434,242,264,940
+2024-12-31,Orange,Région,HAU,Hauts-de-France,1014,934,699,2647
+2024-12-31,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,470,636,937,2043
+2024-12-31,Orange,Région,PAY,Pays de la Loire,180,1753,225,2158
+2024-12-31,Orange,Région,COR,Corse,246,1418,101,1765
+2024-12-31,Orange,Région,GRA,Grand Est,406,1286,214,1906
+2024-12-31,Orange,Région,OCC,Occitanie,712,311,176,1199
+2024-12-31,Orange,Région,AUV,Auvergne-Rhône-Alpes,164,1482,524,2170
+2024-12-31,SFR,Région,BRE,Bretagne,1069,1761,468,3298
+2024-12-31,SFR,Région,CEN,Centre-Val de Loire,994,399,231,1624
+2024-12-31,SFR,Région,NOR,Normandie,974,766,608,2348
+2024-12-31,SFR,Région,BOU,Bourgogne-Franche-Comté,190,963,425,1578
+2024-12-31,SFR,Région,NOU,Nouvelle-Aquitaine,256,896,299,1451
+2024-12-31,SFR,Région,ÎLE,Île-de-France,498,1318,623,2439
+2024-12-31,SFR,Région,HAU,Hauts-de-France,404,743,148,1295
+2024-12-31,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,320,878,830,2028
+2024-12-31,SFR,Région,PAY,Pays de la Loire,602,1072,776,2450
+2024-12-31,SFR,Région,COR,Corse,835,1792,162,2789
+2024-12-31,SFR,Région,GRA,Grand Est,1170,1086,733,2989
+2024-12-31,SFR,Région,OCC,Occitanie,679,628,514,1821
+2024-12-31,SFR,Région,AUV,Auvergne-Rhône-Alpes,880,1740,785,3405
+2024-12-31,Bouygues Telecom,Région,BRE,Bretagne,680,935,552,2167
+2024-12-31,Bouygues Telecom,Région,CEN,Centre-Val de Loire,937,1746,763,3446
+2024-12-31,Bouygues Telecom,Région,NOR,Normandie,1088,1367,851,3306
+2024-12-31,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,302,1288,451,2041
+2024-12-31,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,761,967,606,2334
+2024-12-31,Bouygues Telecom,Région,ÎLE,Île-de-France,195,986,155,1336
+2024-12-31,Bouygues Telecom,Région,HAU,Hauts-de-France,440,749,745,1934
+2024-12-31,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,372,679,711,1762
+2024-12-31,Bouygues Telecom,Région,PAY,Pays de la Loire,782,274,759,1815
+2024-12-31,Bouygues Telecom,Région,COR,Corse,319,1342,835,2496
+2024-12-31,Bouygues Telecom,Région,GRA,Grand Est,926,1664,664,3254
+2024-12-31,Bouygues Telecom,Région,OCC,Occitanie,938,1454,304,2696
+2024-12-31,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,438,1376,340,2154
+2024-12-31,Free Mobile,Région,BRE,Bretagne,699,787,906,2392
+2024-12-31,Free Mobile,Région,CEN,Centre-Val de Loire,547,639,735,1921
+2024-12-31,Free Mobile,Région,NOR,Normandie,1161,808,800,2769
+2024-12-31,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,845,1544,156,2545
+2024-12-31,Free Mobile,Région,NOU,Nouvelle-Aquitaine,888,538,856,2282
+2024-12-31,Free Mobile,Région,ÎLE,Île-de-France,1059,989,381,2429
+2024-12-31,Free Mobile,Région,HAU,Hauts-de-France,630,1402,345,2377
+2024-12-31,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,954,494,204,1652
+2024-12-31,Free Mobile,Région,PAY,Pays de la Loire,1094,705,810,2609
+2024-12-31,Free Mobile,Région,COR,Corse,915,834,858,2607
+2024-12-31,Free Mobile,Région,GRA,Grand Est,602,527,475,1604
+2024-12-31,Free Mobile,Région,OCC,Occitanie,302,345,595,1242
+2024-12-31,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,787,536,200,1523
+2025-03-31,Orange,Région,BRE,Bretagne,961,1156,852,2969
+2025-03-31,Orange,Région,CEN,Centre-Val de Loire,891,541,507,1939
+2025-03-31,Orange,Région,NOR,Normandie,955,628,356,1939
+2025-03-31,Orange,Région,BOU,Bourgogne-Franche-Comté,623,1215,130,1968
+2025-03-31,Orange,Région,NOU,Nouvelle-Aquitaine,264,1408,376,2048
+2025-03-31,Orange,Région,ÎLE,Île-de-France,467,600,649,1716
+2025-03-31,Orange,Région,HAU,Hauts-de-France,356,297,692,1345
+2025-03-31,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,231,1295,717,2243
+2025-03-31,Orange,Région,PAY,Pays de la Loire,684,929,804,2417
+2025-03-31,Orange,Région,COR,Corse,988,978,612,2578
+2025-03-31,Orange,Région,GRA,Grand Est,852,327,103,1282
+2025-03-31,Orange,Région,OCC,Occitanie,1003,1219,729,2951
+2025-03-31,Orange,Région,AUV,Auvergne-Rhône-Alpes,339,330,809,1478
+2025-03-31,SFR,Région,BRE,Bretagne,215,807,163,1185
+2025-03-31,SFR,Région,CEN,Centre-Val de Loire,417,1300,786,2503
+2025-03-31,SFR,Région,NOR,Normandie,479,324,331,1134
+2025-03-31,SFR,Région,BOU,Bourgogne-Franche-Comté,1019,987,815,2821
+2025-03-31,SFR,Région,NOU,Nouvelle-Aquitaine,634,1325,150,2109
+2025-03-31,SFR,Région,ÎLE,Île-de-France,530,265,625,1420
+2025-03-31,SFR,Région,HAU,Hauts-de-France,427,227,453,1107
+2025-03-31,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,609,1789,143,2541
+2025-03-31,SFR,Région,PAY,Pays de la Loire,691,1320,423,2434
+2025-03-31,SFR,Région,COR,Corse,308,1462,866,2636
+2025-03-31,SFR,Région,GRA,Grand Est,342,434,857,1633
+2025-03-31,SFR,Région,OCC,Occitanie,523,1569,347,2439
+2025-03-31,SFR,Région,AUV,Auvergne-Rhône-Alpes,1144,1690,262,3096
+2025-03-31,Bouygues Telecom,Région,BRE,Bretagne,793,1783,312,2888
+2025-03-31,Bouygues Telecom,Région,CEN,Centre-Val de Loire,749,1311,850,2910
+2025-03-31,Bouygues Telecom,Région,NOR,Normandie,569,1250,790,2609
+2025-03-31,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,992,1175,205,2372
+2025-03-31,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,783,1322,904,3009
+2025-03-31,Bouygues Telecom,Région,ÎLE,Île-de-France,560,1778,702,3040
+2025-03-31,Bouygues Telecom,Région,HAU,Hauts-de-France,1169,812,274,2255
+2025-03-31,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,492,1034,714,2240
+2025-03-31,Bouygues Telecom,Région,PAY,Pays de la Loire,418,1636,534,2588
+2025-03-31,Bouygues Telecom,Région,COR,Corse,333,465,539,1337
+2025-03-31,Bouygues Telecom,Région,GRA,Grand Est,251,1090,290,1631
+2025-03-31,Bouygues Telecom,Région,OCC,Occitanie,188,1209,906,2303
+2025-03-31,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,874,489,138,1501
+2025-03-31,Free Mobile,Région,BRE,Bretagne,610,1486,556,2652
+2025-03-31,Free Mobile,Région,CEN,Centre-Val de Loire,551,1033,135,1719
+2025-03-31,Free Mobile,Région,NOR,Normandie,778,247,691,1716
+2025-03-31,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,235,780,166,1181
+2025-03-31,Free Mobile,Région,NOU,Nouvelle-Aquitaine,935,401,724,2060
+2025-03-31,Free Mobile,Région,ÎLE,Île-de-France,816,1346,150,2312
+2025-03-31,Free Mobile,Région,HAU,Hauts-de-France,192,923,522,1637
+2025-03-31,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,911,560,640,2111
+2025-03-31,Free Mobile,Région,PAY,Pays de la Loire,996,1421,124,2541
+2025-03-31,Free Mobile,Région,COR,Corse,960,594,301,1855
+2025-03-31,Free Mobile,Région,GRA,Grand Est,471,750,224,1445
+2025-03-31,Free Mobile,Région,OCC,Occitanie,1097,660,231,1988
+2025-03-31,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,454,1767,874,3095
+2025-06-30,Orange,Région,BRE,Bretagne,236,659,701,1596
+2025-06-30,Orange,Région,CEN,Centre-Val de Loire,459,993,180,1632
+2025-06-30,Orange,Région,NOR,Normandie,705,835,725,2265
+2025-06-30,Orange,Région,BOU,Bourgogne-Franche-Comté,893,961,206,2060
+2025-06-30,Orange,Région,NOU,Nouvelle-Aquitaine,977,244,855,2076
+2025-06-30,Orange,Région,ÎLE,Île-de-France,225,1201,485,1911
+2025-06-30,Orange,Région,HAU,Hauts-de-France,1002,274,266,1542
+2025-06-30,Orange,Région,PRO,Provence-Alpes-Côte d'Azur,680,998,847,2525
+2025-06-30,Orange,Région,PAY,Pays de la Loire,1154,1726,658,3538
+2025-06-30,Orange,Région,COR,Corse,676,1452,332,2460
+2025-06-30,Orange,Région,GRA,Grand Est,896,873,405,2174
+2025-06-30,Orange,Région,OCC,Occitanie,183,643,887,1713
+2025-06-30,Orange,Région,AUV,Auvergne-Rhône-Alpes,602,1214,197,2013
+2025-06-30,SFR,Région,BRE,Bretagne,233,978,281,1492
+2025-06-30,SFR,Région,CEN,Centre-Val de Loire,569,1697,365,2631
+2025-06-30,SFR,Région,NOR,Normandie,389,815,810,2014
+2025-06-30,SFR,Région,BOU,Bourgogne-Franche-Comté,391,248,391,1030
+2025-06-30,SFR,Région,NOU,Nouvelle-Aquitaine,910,1774,800,3484
+2025-06-30,SFR,Région,ÎLE,Île-de-France,636,544,923,2103
+2025-06-30,SFR,Région,HAU,Hauts-de-France,327,1188,162,1677
+2025-06-30,SFR,Région,PRO,Provence-Alpes-Côte d'Azur,461,1621,459,2541
+2025-06-30,SFR,Région,PAY,Pays de la Loire,646,491,387,1524
+2025-06-30,SFR,Région,COR,Corse,1083,1035,298,2416
+2025-06-30,SFR,Région,GRA,Grand Est,725,1347,143,2215
+2025-06-30,SFR,Région,OCC,Occitanie,777,1187,455,2419
+2025-06-30,SFR,Région,AUV,Auvergne-Rhône-Alpes,776,540,335,1651
+2025-06-30,Bouygues Telecom,Région,BRE,Bretagne,286,1206,524,2016
+2025-06-30,Bouygues Telecom,Région,CEN,Centre-Val de Loire,235,426,256,917
+2025-06-30,Bouygues Telecom,Région,NOR,Normandie,190,448,822,1460
+2025-06-30,Bouygues Telecom,Région,BOU,Bourgogne-Franche-Comté,824,1624,147,2595
+2025-06-30,Bouygues Telecom,Région,NOU,Nouvelle-Aquitaine,668,721,916,2305
+2025-06-30,Bouygues Telecom,Région,ÎLE,Île-de-France,925,877,427,2229
+2025-06-30,Bouygues Telecom,Région,HAU,Hauts-de-France,359,801,871,2031
+2025-06-30,Bouygues Telecom,Région,PRO,Provence-Alpes-Côte d'Azur,483,1747,645,2875
+2025-06-30,Bouygues Telecom,Région,PAY,Pays de la Loire,319,1397,671,2387
+2025-06-30,Bouygues Telecom,Région,COR,Corse,858,1458,407,2723
+2025-06-30,Bouygues Telecom,Région,GRA,Grand Est,727,852,846,2425
+2025-06-30,Bouygues Telecom,Région,OCC,Occitanie,161,1195,748,2104
+2025-06-30,Bouygues Telecom,Région,AUV,Auvergne-Rhône-Alpes,1199,1717,485,3401
+2025-06-30,Free Mobile,Région,BRE,Bretagne,368,574,859,1801
+2025-06-30,Free Mobile,Région,CEN,Centre-Val de Loire,372,336,286,994
+2025-06-30,Free Mobile,Région,NOR,Normandie,455,802,767,2024
+2025-06-30,Free Mobile,Région,BOU,Bourgogne-Franche-Comté,770,1098,662,2530
+2025-06-30,Free Mobile,Région,NOU,Nouvelle-Aquitaine,682,253,245,1180
+2025-06-30,Free Mobile,Région,ÎLE,Île-de-France,896,1482,600,2978
+2025-06-30,Free Mobile,Région,HAU,Hauts-de-France,1129,725,697,2551
+2025-06-30,Free Mobile,Région,PRO,Provence-Alpes-Côte d'Azur,374,669,634,1677
+2025-06-30,Free Mobile,Région,PAY,Pays de la Loire,882,475,701,2058
+2025-06-30,Free Mobile,Région,COR,Corse,688,1068,592,2348
+2025-06-30,Free Mobile,Région,GRA,Grand Est,1168,958,327,2453
+2025-06-30,Free Mobile,Région,OCC,Occitanie,1036,1798,351,3185
+2025-06-30,Free Mobile,Région,AUV,Auvergne-Rhône-Alpes,268,434,795,1497
