@@ -212,36 +212,40 @@ def main():
     df_ter_maint = pd.DataFrame(ter_maint_rows)
 
     # Step 5: Build Table 4: ter_maintenance_historique_previsions_6mois (3 Months History + 3 Months Forecast)
-    months_series = [
-        ("2026-05-01", "HISTORIQUE (3 Mois Passés)"),
-        ("2026-06-01", "HISTORIQUE (3 Mois Passés)"),
-        ("2026-07-01", "HISTORIQUE (3 Mois Passés)"),
-        ("2026-08-01", "PRÉVISION (3 Mois Futurs)"),
-        ("2026-09-01", "PRÉVISION (3 Mois Futurs)"),
-        ("2026-10-01", "PRÉVISION (3 Mois Futurs)")
+    # Seasonal Wave Profile: Peak in June (0.82), Drop in July summer maintenance (0.42), Rise in August heatwaves (0.74), Peak in September back-to-school (0.94), Drop in October (0.61)
+    seasonal_factors = [
+        ("2026-05-01", "HISTORIQUE (3 Mois Passés)", 0.55, 88.0, 8, "MODÉRÉ", "Maintenance préventive de printemps"),
+        ("2026-06-01", "HISTORIQUE (3 Mois Passés)", 0.82, 95.5, 18, "CRITIQUE (Action urgente)", "Remplacement d'urgence caténaires & Régulation trafic pré-été"),
+        ("2026-07-01", "HISTORIQUE (3 Mois Passés)", 0.42, 82.0, 5, "FAIBLE", "Maintenance lourde estivale & Travaux de renouvellement des voies"),
+        ("2026-08-01", "PRÉVISION (3 Mois Futurs)", 0.74, 91.2, 14, "ÉLEVÉ", "Surveillance canicule & Refroidissement des sous-stations électriques"),
+        ("2026-09-01", "PRÉVISION (3 Mois Futurs)", 0.94, 98.4, 24, "CRITIQUE (Action urgente)", "Renouvellement d'aiguillages & Substitution rames RER/TER rentrée"),
+        ("2026-10-01", "PRÉVISION (3 Mois Futurs)", 0.61, 86.5, 9, "MODÉRÉ", "Calage automatisé des voies & Révision d'automne")
     ]
 
     time_series_rows = []
     for tm in ter_maintenance:
         seg_id, seg_name, reg, lcode = tm[0], tm[1], tm[2], tm[3]
-        base_charge = tm[4]
+        base_factor = tm[8]  # Segment criticality multiplier (e.g. 0.94 for RER C, 0.72 for TER Occitanie)
         
-        for m_idx, (m_date, p_type) in enumerate(months_series):
-            # Progression of traffic overload, track wear, signal outages and failure risk
-            charge = round(base_charge - (5 - m_idx) * 1.5, 1)
-            micro_coupures = int(tm[6] - (5 - m_idx) * 3)
-            usure = round(tm[7] - (5 - m_idx) * 0.4, 1)
-            prob = round(min(0.99, max(0.25, tm[8] - (5 - m_idx) * 0.08)), 2)
+        for m_date, p_type, s_prob, s_charge, s_micro, s_risk, s_act in seasonal_factors:
+            # Scale probability and metrics according to segment criticality
+            prob = round(min(0.99, max(0.20, s_prob * (base_factor / 0.85))), 2)
+            charge = round(min(99.5, max(75.0, s_charge * (tm[4] / 94.0))), 1)
+            micro_coupures = int(s_micro * (tm[6] / 15.0))
+            usure = round(tm[7] + (s_prob - 0.5) * 1.5, 1)
 
-            if prob > 0.85:
+            if prob >= 0.85:
                 risk = "CRITIQUE (Action urgente)"
-                act = "Renouvellement aiguillages & Limitation 80km/h"
-            elif prob > 0.70:
+                act = "Renouvellement d'aiguillages & Limitation 80km/h"
+            elif prob >= 0.70:
                 risk = "ÉLEVÉ"
                 act = "Inspection caténaires & Audit signalisation"
-            else:
+            elif prob >= 0.45:
                 risk = "MODÉRÉ"
                 act = "Maintenance préventive standard"
+            else:
+                risk = "FAIBLE"
+                act = "Contrôle visuel de routine"
 
             time_series_rows.append({
                 "segment_id": seg_id,
