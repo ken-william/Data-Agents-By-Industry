@@ -109,6 +109,7 @@ CREATE OR REPLACE TABLE `public_sector_employment_ds.france_travail_demandeurs` 
   freins_emploi_detail STRING OPTIONS(description="Freins à l'emploi identifiés (Garde d'enfants, Mobilité sans véhicule, Exigence de rémunération)"),
   competences_actuelles STRING OPTIONS(description="Synthèse des compétences acquises et savoir-faire opérationnels"),
   cv_gcs_uri STRING OPTIONS(description="Lien de stockage GCS du CV du candidat (gs://sully-candidate-resumes-data-agents/...)"),
+  cv_preview_image_url STRING OPTIONS(description="Lien de l'aperçu image PNG du CV pour affichage visuel dans l'interface"),
   niveau_etudes STRING OPTIONS(description="Niveau de diplôme (Bac, Bac+2, Bac+3, Bac+5)")
 )
 OPTIONS (

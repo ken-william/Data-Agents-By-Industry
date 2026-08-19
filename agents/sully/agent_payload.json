@@ -60,7 +60,7 @@
         },
         {
           "naturalLanguageQuestion": "Présente moi un rapport synthétique des informations de Anna : FT-99720068 . Ses compétences actuelles, son historique de poste et ses freins à l'emploi.",
-          "sqlQuery": "SELECT demandeur_id, nom_prenom, metier_recherche, anciennete_chomage_mois, freins_emploi_detail, competences_actuelles, cv_gcs_uri, niveau_etudes FROM `${PROJECT_ID}.public_sector_employment_ds.france_travail_demandeurs` WHERE demandeur_id = 'FT-99720068'"
+          "sqlQuery": "SELECT demandeur_id, nom_prenom, metier_recherche, anciennete_chomage_mois, freins_emploi_detail, competences_actuelles, cv_gcs_uri, cv_preview_image_url, niveau_etudes FROM `${PROJECT_ID}.public_sector_employment_ds.france_travail_demandeurs` WHERE demandeur_id = 'FT-99720068'"
         },
         {
           "naturalLanguageQuestion": "Quelles entreprises du secteur de la fabrication de batteries recrutent le plus activement dans les Hauts-de-France ?",

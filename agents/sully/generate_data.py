@@ -122,6 +122,7 @@ def parse_local_pdf_cv(pdf_path):
         "freins_emploi_detail": "Aucun frein majeur identifié, disponible immédiatement.",
         "competences_actuelles": "Maîtrise bureautique, Analyse de données, Gestion de projet",
         "cv_gcs_uri": gcs_uri,
+        "cv_preview_image_url": f"https://storage.googleapis.com/sully-candidate-resumes-data-agents/resumes/{os.path.basename(pdf_path).replace('.pdf', '_preview.png')}",
         "niveau_etudes": degree
     }
 
@@ -452,6 +453,7 @@ def main():
         "freins_emploi_detail": "Garde de 2 enfants en bas âge (contrainte horaire stricte 8h30-17h30), Mobilité en Transports en Commun uniquement (pas de véhicule personnel), Prétentions salariales minimales de 38 000 € bruts/an.",
         "competences_actuelles": "Gestion des stocks et réapprovisionnement, Maîtrise avancée Excel & ERP SAP, Planification de flux de camionnage, Anglais professionnel.",
         "cv_gcs_uri": f"{RESUMES_BUCKET}/resumes/cv_FT-99720068.pdf",
+        "cv_preview_image_url": f"https://storage.googleapis.com/sully-candidate-resumes-data-agents/resumes/cv_FT-99720068_preview.png",
         "niveau_etudes": "Bac+3"
     }
     candidates.append(anna_profile)
@@ -500,6 +502,7 @@ def main():
             "freins_emploi_detail": "Disponible immédiatement, mobilité régionale.",
             "competences_actuelles": "Savoir-faire métier, travail en équipe, autonomie",
             "cv_gcs_uri": f"{RESUMES_BUCKET}/resumes/cv_{dem_id}.pdf",
+            "cv_preview_image_url": f"https://storage.googleapis.com/sully-candidate-resumes-data-agents/resumes/cv_{dem_id}_preview.png",
             "niveau_etudes": random.choice(["Bac", "Bac+2", "Bac+3", "Bac+5"])
         })
 
