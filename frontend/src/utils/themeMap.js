@@ -1,12 +1,12 @@
 import {
-  Briefcase,
+  UserCheck,
   TrendingUp,
-  Radio,
+  Cpu,
   Globe,
-  Train,
+  Navigation,
   Activity,
-  ShoppingCart,
-  Landmark,
+  Package,
+  Award,
   Zap,
   Leaf,
   Film,
@@ -14,101 +14,123 @@ import {
 } from 'lucide-react';
 
 export const ICON_MAP = {
-  Briefcase,
+  sully: UserCheck,
+  credit_advisor: TrendingUp,
+  net_arch: Cpu,
+  earth_intel: Globe,
+  transit_navigator: Navigation,
+  pulse_checker: Activity,
+  shelf_optimizer: Package,
+  arena_manager: Award,
+  helios: Zap,
+  ceres: Leaf,
+  cine_analyst: Film,
+  UserCheck,
   TrendingUp,
-  Radio,
+  Cpu,
   Globe,
-  Train,
+  Navigation,
   Activity,
-  ShoppingCart,
-  Landmark,
+  Package,
+  Award,
   Zap,
   Leaf,
   Film,
   Database
 };
 
-export function getIconComponent(iconName) {
-  return ICON_MAP[iconName] || Database;
+export function getIconComponent(agentKey) {
+  return ICON_MAP[agentKey] || Database;
 }
 
-// Enterprise B2B Clean & Pro Color Mapping
+// Google Fluid Blue Theme Badges & Accents
 export const COLOR_THEMES = {
   indigo: {
     category: "Secteur Public & RH",
-    badge: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
-    border: "border-indigo-500/40",
-    accentBg: "bg-indigo-600",
-    button: "bg-indigo-600 hover:bg-indigo-500 text-white"
+    badge: "bg-blue-500/10 text-blue-300 border-blue-500/20",
+    border: "border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]",
+    accentBg: "bg-blue-600",
+    text: "text-blue-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   emerald: {
     category: "Banque & Finance B2B",
-    badge: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
-    border: "border-emerald-500/40",
-    accentBg: "bg-emerald-600",
-    button: "bg-emerald-600 hover:bg-emerald-500 text-white"
+    badge: "bg-sky-500/10 text-sky-300 border-sky-500/20",
+    border: "border-sky-500/40 shadow-[0_0_15px_rgba(14,165,233,0.15)]",
+    accentBg: "bg-sky-600",
+    text: "text-sky-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   purple: {
-    category: "Télécoms & Infrastructures",
-    badge: "bg-purple-500/10 text-purple-300 border-purple-500/20",
-    border: "border-purple-500/40",
-    accentBg: "bg-purple-600",
-    button: "bg-purple-600 hover:bg-purple-500 text-white"
+    category: "Télécoms & IoT 5G",
+    badge: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
+    border: "border-indigo-500/40 shadow-[0_0_15px_rgba(99,102,241,0.15)]",
+    accentBg: "bg-indigo-600",
+    text: "text-indigo-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   cyan: {
-    category: "Spatial & Imagerie Satellite",
-    badge: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",
-    border: "border-cyan-500/40",
-    accentBg: "bg-cyan-600",
-    button: "bg-cyan-600 hover:bg-cyan-500 text-white"
+    category: "Spatial & Satellite",
+    badge: "bg-teal-500/10 text-teal-300 border-teal-500/20",
+    border: "border-teal-500/40 shadow-[0_0_15px_rgba(20,184,166,0.15)]",
+    accentBg: "bg-teal-600",
+    text: "text-teal-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   sky: {
-    category: "Transports & Mobilité SNCF",
-    badge: "bg-sky-500/10 text-sky-300 border-sky-500/20",
-    border: "border-sky-500/40",
-    accentBg: "bg-sky-600",
-    button: "bg-sky-600 hover:bg-sky-500 text-white"
+    category: "Transports & SNCF",
+    badge: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",
+    border: "border-cyan-500/40 shadow-[0_0_15px_rgba(6,182,212,0.15)]",
+    accentBg: "bg-cyan-600",
+    text: "text-cyan-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   teal: {
-    category: "Santé & Hôpitaux RPPS",
-    badge: "bg-teal-500/10 text-teal-300 border-teal-500/20",
-    border: "border-teal-500/40",
-    accentBg: "bg-teal-600",
-    button: "bg-teal-600 hover:bg-teal-500 text-white"
+    category: "Santé & Urgences",
+    badge: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
+    border: "border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.15)]",
+    accentBg: "bg-emerald-600",
+    text: "text-emerald-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   amber: {
-    category: "Retail & CPG Merchandising",
-    badge: "bg-amber-500/10 text-amber-300 border-amber-500/20",
-    border: "border-amber-500/40",
-    accentBg: "bg-amber-600",
-    button: "bg-amber-600 hover:bg-amber-500 text-white"
+    category: "Retail & CPG Stocks",
+    badge: "bg-blue-500/10 text-blue-300 border-blue-500/20",
+    border: "border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.15)]",
+    accentBg: "bg-blue-600",
+    text: "text-blue-300",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   rose: {
-    category: "Sport & Stades Événementiels",
-    badge: "bg-rose-500/10 text-rose-300 border-rose-500/20",
-    border: "border-rose-500/40",
-    accentBg: "bg-rose-600",
-    button: "bg-rose-600 hover:bg-rose-500 text-white"
+    category: "Sport & Stades RES",
+    badge: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
+    border: "border-indigo-500/40 shadow-[0_0_15px_rgba(99,102,241,0.15)]",
+    accentBg: "bg-indigo-600",
+    text: "text-indigo-300",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   yellow: {
     category: "Énergie & Bornes IRVE",
-    badge: "bg-yellow-500/10 text-yellow-300 border-yellow-500/20",
-    border: "border-yellow-500/40",
-    accentBg: "bg-yellow-600",
-    button: "bg-yellow-600 hover:bg-yellow-500 text-white"
+    badge: "bg-amber-500/10 text-amber-300 border-amber-500/20",
+    border: "border-amber-500/40 shadow-[0_0_15px_rgba(245,158,11,0.15)]",
+    accentBg: "bg-amber-600",
+    text: "text-amber-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   green: {
-    category: "Agriculture & Agroécologie",
+    category: "Agriculture & CO2e",
     badge: "bg-green-500/10 text-green-300 border-green-500/20",
-    border: "border-green-500/40",
+    border: "border-green-500/40 shadow-[0_0_15px_rgba(34,197,94,0.15)]",
     accentBg: "bg-green-600",
-    button: "bg-green-600 hover:bg-green-500 text-white"
+    text: "text-green-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   },
   fuchsia: {
-    category: "Cinéma & Box-Office CNC",
-    badge: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20",
-    border: "border-fuchsia-500/40",
-    accentBg: "bg-fuchsia-600",
-    button: "bg-fuchsia-600 hover:bg-fuchsia-500 text-white"
+    category: "Cinéma & CNC Box-Office",
+    badge: "bg-violet-500/10 text-violet-300 border-violet-500/20",
+    border: "border-violet-500/40 shadow-[0_0_15px_rgba(139,92,246,0.15)]",
+    accentBg: "bg-violet-600",
+    text: "text-violet-400",
+    button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   }
 };

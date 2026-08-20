@@ -1,99 +1,132 @@
-# Master Specification & Prompt System - Talk to Data (Enterprise Grade Dark Mode)
+# Master Specification & Prompt System - Talk to Data (Google Fluid Blue)
 
-Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"**. Il définit les consignes strictes d'architecture, d'UX/UI B2B Enterprise et d'intégration Google Cloud.
-
----
-
-## 1. Vision Globale & Direction Artistique B2B Enterprise
-
-### 🎯 Objectif Métier & Événementiel
-**Talk to Data** est une application web décisionnelle multi-agents déployée sur **Google Cloud Platform (GCP)**. Elle permet aux décideurs d'interagir **en langage naturel à la voix et au texte** avec des données d'entreprise et Open Data via **Vertex AI Data Agents** et **BigQuery**.
-
-### 🎨 Consignes Strictes de Design (Enterprise Grade Dark Mode)
-
-1. **Palette & Fond** :
-   - Fond d'écran : Gris foncé neutre et épuré `bg-[#09090b]` (Zinc 950). Fini le noir total ou les halos lumineux violents.
-   - Cartes (Bento Grid) : Fond légèrement contrasté `bg-[#141417]` avec une bordure fine et sobre `border-[#27272a]`.
-   - Suppression des halos lumineux diffus colorés. Utilisation de liserés discrets pour indiquer l'état actif.
-
-2. **Formes & Coins** :
-   - Utilisation de `rounded-xl` (12px) pour les cartes principales et `rounded-md` (6px) ou `rounded-lg` (8px) pour les boutons et badges.
-
-3. **Typographie & Hiérarchie** :
-   - Titres : Blanc neutre (`text-zinc-50`), taille modérée et graisse semi-bold.
-   - Textes secondaires / Descriptions : Gris clair (`text-zinc-400`), taille réduite `text-xs` / `text-sm`.
-   - Métadonnées (Datasets, IDs) : Discrètes, `text-zinc-500` et `text-[11px]`.
-   - Icônes monocromes (`text-zinc-300`) accompagnées de badges de couleur très légers et discrets pour éliminer l'effet "sapin de Noël".
-
-4. **Layout & Organisation** :
-   - **Phase 1 (Builder)** : Grille dense, aérée et très lisible des 11 agents sectoriels.
-   - **Phase 2 (Live)** : Le panneau central de résultats prend 70% de l'espace visuel (priorité au contenu et aux tableaux Markdown). L'Orbe Gemini est compact, discret et intégré élégamment.
+Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** pour l'événement **BigData Paris 2026**.
 
 ---
 
-## 2. Architecture Métier & Données (Track 1)
+## 🎨 1. Le Design System "Google Fluid Blue" (Inspiré de Gemini)
 
-L'application repose sur **11 Copilotes Décisionnels Sectoriels** interconnectés à BigQuery et Cloud Storage :
+Ce design system abandonne le noir brut au profit d'un environnement sombre à base de bleu marine profond, enrichi par des gradients lumineux inspirés de **Gemini Live**.
 
-| Agent ID | Secteur & Titre | Dataset BigQuery | Source & Spécificités Métiers |
-| :--- | :--- | :--- | :--- |
-| `sully` | Emploi Public, RH & URSSAF | `public_sector_employment_ds` | Audit santé, vacance des postes hospitaliers (+6m), jointure native Object Table GCS vers les CVs PDF d'origine. |
-| `credit_advisor` | Risque Crédit & Finance B2B | `financial_banking_ds` | Scoring de faillite PME/ETI à 6 mois, provisionnement IFRS 9 (ECL), enquêtes BLS Banque de France et upsell trésorerie. |
-| `net_arch` | Télécoms & Réseaux ARCEP | `telecom_network_ds` | ARPU abonnés 5G/Fibre, maintenance prédictive IoT des pylônes (température/batterie), débits QoS et SLA NOC. |
-| `earth_intel` | Spatial & Imagerie Satellite | `skywatch_aerospace_ds` | Télédétection Sentinel-2 (10m), santé chlorophyllienne NDVI, exposition inondation/incendie, preuve Zéro Déforestation CSRD. |
-| `transit_navigator` | Transports Publics & SNCF | `transport_mobility_ds` | Yield Management 1ère classe, diagnostic des retards (Infrastructure vs Matériel), fréquentation 3 000+ gares et objets perdus. |
-| `pulse_checker` | Santé & Hôpitaux RPPS | `public_sector_healthcare_ds` | Régulation des urgences (Plan Blanc), prévention des ruptures de stock de médicaments (≤5j) et opportunités cliniques RPPS. |
-| `shelf_optimizer` | Retail & Merchandising CPG | `retail_cpg_optimization_ds` | Éradication des Shelf-Out, prédiction anti-gaspillage rayon Frais à 14j, bundles cross-selling Marques Nationales vs MDD. |
-| `arena_manager` | Sport & Stades RES | `sports_infrastructure_ds` | Remplissage des loges VIP, panier moyen buvettes/merchandising spectateur, audit énergétique RES des gymnases municipaux. |
-| `helios` | Énergie & Bornes IRVE Enedis | `energy_utilities_ds` | Supervision des 10 000 bornes IRVE, télémesure des postes HTA/BT, injection renouvelable et flexibilité d'effacement B2B. |
-| `ceres` | Agriculture & Agroécologie | `agriculture_rural_ds` | Pilotage des rendements à l'hectare, valorisation Label Bas-Carbone (crédits CO2e) et bilans ACV ADEME Agribalyse 3.1. |
-| `cine_analyst` | Cinéma & Box-Office CNC | `cinema_boxoffice_ds` | Rentabilité Box-Office (ROI), fréquentation des formats immersifs (IMAX/4DX) et part de marché par nationalité. |
+### Palette Chromatique (Gradients & Surfaces)
+
+| Élément UI | Propriété / Classe Tailwind | Rendu Visuel / Description |
+| :--- | :--- | :--- |
+| **Fond Global (Canvas)** | `bg-gradient-to-br from-[#020617] via-[#070F2B] to-[#0A192F]` | Bleu nuit/marine extrêmement profond, offrant un aspect mat et haut de gamme. |
+| **Bento Cards (Surfaces)** | `bg-[#0B132B]/60 border border-slate-800/80 backdrop-blur-md` | Cartes semi-transparentes avec un léger flou d'arrière-plan. |
+| **Liseré Actif / Focus** | `border-sky-500/40 shadow-[0_0_15px_rgba(14,165,233,0.15)]` | Remplacement des gros halos par une lueur fine et chirurgicale de couleur cyan/bleu. |
+| **Gradient Gemini (Accent)** | `from-[#38BDF8] via-[#3B82F6] to-[#6366F1]` | Dégradé fluide signature (Sky Blue ➔ Royal Blue ➔ Indigo). |
+| **Texte Principal** | `text-slate-100` | Blanc cassé doux pour éviter la fatigue oculaire du blanc pur. |
+| **Texte Secondaire** | `text-slate-400` | Gris bleuté pour toutes les descriptions et informations secondaires. |
+
+### Typographie & Formes
+
+| Propriété | Règle Métrique | Justification B2B |
+| :--- | :--- | :--- |
+| **Police Titres** | `Google Sans` / `Inter` (Font-Weight: 600) | Modernité, clarté et lisibilité parfaite à distance sur grand écran. |
+| **Coins (Cards/Bento)** | `rounded-2xl` (16px) | Forme adoucie mais professionnelle. Fini l'aspect "jouet" des coins à 32px. |
+| **Coins (Boutons/Chips)** | `rounded-lg` (8px) | Structure rigoureuse pour les éléments d'action et les filtres. |
 
 ---
 
-## 3. Architecture UX/UI en 2 Phases (Track 2)
+## 🖥️ 2. Architecture Double Écran (Dual-Screen Setup)
+
+Pour une démonstration fluide, les rôles sont strictement répartis entre l'écran public de présentation et le terminal de l'utilisateur.
 
 ```text
-+-----------------------------------------------------------------------------------+
-|                        TALK TO DATA PLATFORM (ENTERPRISE)                         |
-+-----------------------------------------------------------------------------------+
-|  PHASE 1 : WIZARD BUILDER                 |  PHASE 2 : LIVE BENTO GRID BOARD       |
-|  - Grille dense d'agents (#141417)        |  - Orbe Gemini discret & compact       |
-|  - Icônes monocromes + badges discrets    |  - Smart Challenge Chips (Défis B2B)   |
-|  - Toggle BQ Connection + Security Tag    |  - Canvas Résultats (70% Priorité)     |
-|  - [ 🚀 LANCER L'EXPÉRIENCE ]             |  - Inspector SQL sous le capot         |
-+-----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+|                                     DUAL-SCREEN ARCHITECTURE                                   |
++------------------------------------------------------------------------------------------------+
+|  ÉCRAN A : LE GRAND ÉCRAN (SHOWCASE)           |  ÉCRAN B : LE PC CONTRÔLEUR (TACTILE)         |
+|  - Orbe Gemini Géant et Fluide (Centre)         |  - Grille des 11 Agents (Format Compact)     |
+|  - Visualisation des Données (70% Largeur)     |  - Smart Challenge Chips (Défis instantanés)  |
+|  - Requête SQL en Direct (Flip Card Discret)   |  - Console Vocale (Push-to-Talk) / Entrée     |
+|  - Statuts & Indicateurs Clés Métiers          |  - Toggle Sécurité & Mode Démo                |
++------------------------------------------------------------------------------------------------+
 ```
 
+### Spécifications comparatives des deux écrans
+
+| Caractéristique | ÉCRAN A : Le Grand Écran (Showcase / Public) | ÉCRAN B : Le PC / Tablette (Contrôleur) |
+| :--- | :--- | :--- |
+| **Cible** | Le public du salon, les spectateurs. | Le présentateur ou le client manipulant la démo. |
+| **Priorité Visuelle** | L'**Orbe Gemini Live** et les **Résultats de données** (Graphiques et tableaux épurés). | La **sélection rapide d'agents** et la **saisie de questions**. |
+| **Composant Phare** | `DynamicDataCanvas` : Rendu Markdown ultra-pro avec animations d'apparition des lignes. | `AgentSwitcherGrid` + `SmartChips` : Boutons compacts réactifs au clic/tactile. |
+| **Affichage Technique** | `SQLFlipCard` qui se retourne élégamment lors de l'exécution pour montrer la requête BigQuery. | Console de logs simplifiée indiquant l'état de la connexion au Data Agent Kit. |
+| **Taille Textes** | Titres en `text-4xl` ou `text-5xl` pour une lecture à 3 mètres. | Textes compacts en `text-sm` et `text-xs` pour optimiser l'espace. |
+
 ---
 
-## 4. Prompt de Reconstitution Corrigé (Clean & Pro)
+## 🔮 3. L'Orbe Gemini Live : Le "Cœur" de l'Interface
+
+L'avatar vocal est un **orbe fluide vectoriel (Canvas/SVG)** calqué sur l'expérience mobile de **Gemini Live**, avec des vagues organiques oscillantes.
 
 ```text
-Tu es un Senior UX/UI Designer et Développeur Front-End spécialisé dans les interfaces Google Cloud (B2B).
-Ta mission est de reconstruire l'application "Talk to Data" avec un design moderne, épuré, professionnel et hautement lisible ("Enterprise Grade Dark Mode").
+  [Idle State]             [Listening State]           [Thinking State]           [Speaking State]
+    Soft Glow             Active Soundwaves           Spinning Gradients            Pulse Wave
+     (Bleu)                 (Bleu/Indigo)               (Gemini Gradient)           (Cyan/Turquoise)
+```
 
-CONSIGNES STRICTES DE DESIGN (Tailwind CSS préférés) :
+### Les 4 États de l'Orbe Fluidique
 
-1. PALETTE & FOND :
-   - Fini le noir total. Utilise un fond gris foncé neutre et moderne : `bg-[#09090b]` (Zinc 950).
-   - Pour les cartes (Bento), utilise un fond légèrement contrasté : `bg-[#141417]` avec une bordure très fine `border-[#27272a]`.
-   - Supprime les halos lumineux colorés trop voyants. Utilise des liserés discrets pour indiquer l'état actif.
+| État | Comportement de l'Orbe | Palette de Couleurs |
+| :--- | :--- | :--- |
+| **Idle (Attente)** | Pulsation lente et circulaire (effet de respiration). | `#3B82F6` (Bleu Royal) avec opacité à 40%. |
+| **Listening (Écoute)** | L'orbe se transforme en ondes de fréquences vocales (Soundwaves) réactives au volume du micro. | `#38BDF8` (Cyan) fusionnant vers le `#6366F1` (Indigo). |
+| **Thinking (Réflexion SQL)** | Rotation fluide et continue d'un anneau de gradient double (symbole de la génération BigQuery). | Gradient complet Gemini : Rose, Violet, Indigo, Bleu. |
+| **Speaking (Parole / Synthèse)** | Ondulations douces et concentriques s'étendant vers l'extérieur au rythme de la voix (TTS). | `#22C55E` (Émeraude) à `#0EA5E9` (Sky Blue). |
 
-2. FORMES & COINS :
-   - Réduis les arrondis extrêmes. Utilise `rounded-xl` (12px) pour les cartes principales et `rounded-md` (6px) pour les boutons et badges.
+---
 
-3. TYPOGRAPHIE ET HIÉRARCHIE :
-   - Titres : Blanc neutre (`text-zinc-50`), taille modérée.
-   - Textes secondaires / Descriptions : Gris clair (`text-zinc-400`), taille réduite `text-sm`.
-   - Métadonnées (Datasets, IDs) : Discrètes, `text-zinc-500` et `text-xs`.
-   - Réduis la taille des polices globales pour éviter l'effet "gros boutons".
+## 🛠️ 4. La Grille des 11 Agents (Design Épuré)
 
-4. LAYOUT ET ORGANISATION :
-   - Phase 1 (Builder) : Organise les 11 cartes dans une grille dense mais aérée. Cache les informations superflues (ex: chemin exact du dataset) sous un badge ou en très petit.
-   - Phase 2 (Live) : Le panneau central de résultat doit être la priorité visuelle (clair, lisible, fond noir profond). L'Orbe Gemini doit être élégant et petit, pas un avatar géant.
+Chaque agent est affiché sous forme d'une carte Bento sobre avec des **icônes monochromes raffinées** et de subtils badges gris-bleutés.
 
-5. ACCESSIBILITÉ :
-   - Assure un contraste suffisant entre le texte et le fond des cartes.
-   - Les zones cliquables doivent être clairement identifiables sans couleurs flashy.
+| Agent ID | Icône | Couleur Thématique (Subtile) | Positionnement Métier (B2B) |
+| :--- | :--- | :--- | :--- |
+| **sully** | `UserCheck` | `text-blue-400` | RH & Vacance des Postes Publics |
+| **credit_advisor** | `TrendingUp` | `text-sky-400` | Risque Crédit & Provisionnement IFRS 9 |
+| **net_arch** | `Cpu` | `text-indigo-400` | Télécoms & Maintenance IoT 5G |
+| **earth_intel** | `Globe` | `text-teal-400` | Satellite, Télédétection & Déforestation |
+| **transit_navigator** | `Navigation` | `text-cyan-400` | Logistique & Transports Publics |
+| **pulse_checker** | `Activity` | `text-emerald-400` | Santé Publique & Gestion des Urgences |
+| **shelf_optimizer** | `Package` | `text-blue-300` | CPG Retail & Optimisation des Stocks |
+| **arena_manager** | `Award` | `text-indigo-300` | Sport & Performance Énergétique |
+| **helios** | `Zap` | `text-amber-400` | Bornes Électriques & Réseau Intelligent |
+| **ceres** | `Leaf` | `text-green-400` | Bilans ACV & Agroécologie |
+| **cine_analyst** | `Film` | `text-violet-400` | Analyse du Box-Office & ROI Cinéma |
+
+---
+
+## 📋 5. Master Specification & Prompt de Reconstitution (Prompt Maître)
+
+```text
+Tu es Antigravity, un développeur Full-Stack Google Cloud et un Designer UX/UI d'exception.
+Ta mission est de coder l'application web double écran "Talk to Data" connectée aux Vertex AI Data Agents.
+
+CONSIGNES STRICTES DE STYLE & STRUCTURE ("Google Fluid Blue") :
+
+1. ARCHITECTURE D'ÉCRAN DOUBLE :
+   - Écran A (Grand Écran / Présentation) : Épuré, immersif. Met en valeur l'Orbe Gemini (centre) et le Canvas des Résultats (70% de la largeur). Intègre le composant SQLFlipCard qui se retourne pour afficher la requête BigQuery native avec coloration syntaxique SQL.
+   - Écran B (PC / Contrôleur) : Dense et ergonomique. Affiche la grille des 11 agents en cartes compactes, un panneau de Push-to-Talk pour la voix, et les Smart Challenge Chips sous forme de boutons d'action rapide.
+
+2. PALETTE & THÉMATIQUE GEMINI :
+   - Fond global : Dégradé bleu marine mat profond `bg-gradient-to-br from-[#020617] via-[#070F2B] to-[#0A192F]`. Fini le noir absolu ou les halos fluorescents.
+   - Surfaces Bento : `bg-[#0B132B]/60` avec des bordures très fines et élégantes `border-slate-800/80` et un effet de flou backdrop-blur-md.
+   - Accents : Utilise exclusivement un gradient fluide Gemini de bleu royal à indigo pour les actions clés (`from-sky-400 via-blue-500 to-indigo-500`).
+
+3. ORBE GEMINI LIVE VECTOREL :
+   - Coder l'avatar vocal sous forme de composant SVG dynamique simulant l'orbe de Gemini Live.
+   - Implémenter 4 états animés : 
+     * Idle : Pulsation bleue douce circulaire.
+     * Listening : Ondes de fréquences réactives au micro (cyan/indigo).
+     * Thinking : Rotation d'un anneau de gradient Gemini multicolore.
+     * Speaking : Ondulations concentriques fluides vertes/bleues coordonnées avec la synthèse vocale.
+
+4. ICÔNES ET COMPACITÉ :
+   - Utilise des icônes unicolores et sobres.
+   - Masque par défaut les données techniques lourdes (comme le nom complet du Dataset BigQuery) et affiche-les uniquement au survol dans un petit badge de métadonnées discret (`text-slate-500 text-[11px]`).
+
+5. RÉSILIENCE :
+   - Si l'appel API à l'agent échoue (ex: 404/500), affiche une notification d'erreur élégante et propose un mode dégradé gracieux (Visualisation d'exemples hors-ligne).
 ```

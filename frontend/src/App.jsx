@@ -11,6 +11,7 @@ export function App() {
   const [agents, setAgents] = useState([]);
   const [selectedAgent, setSelectedAgent] = useState(null);
   const [viewMode, setViewMode] = useState('builder'); // 'builder' (Phase 1) vs 'live' (Phase 2)
+  const [screenMode, setScreenMode] = useState('showcase'); // 'showcase' (Écran A) vs 'controller' (Écran B)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -73,10 +74,10 @@ export function App() {
   const theme = COLOR_THEMES[colorKey] || COLOR_THEMES.indigo;
 
   return (
-    <div className={`min-h-screen bg-slate-950 text-slate-100 flex flex-col relative transition-all duration-500 bg-gradient-to-b ${theme.gradient}`}>
+    <div className="min-h-screen bg-gradient-to-br from-[#020617] via-[#070F2B] to-[#0A192F] text-slate-100 flex flex-col relative transition-all duration-500">
       
       {/* Background ambient lighting */}
-      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-indigo-500/10 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-sky-500/10 via-transparent to-transparent pointer-events-none" />
 
       {/* App Header */}
       <Header
@@ -85,19 +86,20 @@ export function App() {
         autoSpeechEnabled={speechProps.autoSpeechEnabled}
         setAutoSpeechEnabled={speechProps.setAutoSpeechEnabled}
         isSpeaking={speechProps.isSpeaking}
-        onResetChat={chatProps.clearMessages}
+        screenMode={screenMode}
+        setScreenMode={setScreenMode}
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 lg:px-8 py-6 flex flex-col gap-6 relative z-10">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6 relative z-10">
         
         {loading ? (
           <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-400">
-            <Loader2 className="w-8 h-8 animate-spin text-indigo-400 mb-3" />
+            <Loader2 className="w-8 h-8 animate-spin text-sky-400 mb-3" />
             <p className="text-sm font-medium">Initialisation du Quick Builder & des 11 Agents BigQuery Vertex AI...</p>
           </div>
         ) : error ? (
-          <div className="p-6 rounded-3xl glass-panel border border-rose-500/30 text-rose-300 text-center max-w-lg mx-auto my-12">
+          <div className="p-6 rounded-2xl bg-[#0B132B] border border-rose-500/30 text-rose-300 text-center max-w-lg mx-auto my-12">
             <p className="text-sm font-semibold mb-3">{error}</p>
             <button
               onClick={fetchAgents}
@@ -130,14 +132,15 @@ export function App() {
               transcript: micTranscript
             }}
             onResetChat={chatProps.clearMessages}
+            screenMode={screenMode}
           />
         )}
 
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-4 border-t border-slate-900 glass-panel text-center text-xs text-slate-500 mt-auto">
-        <p>Talk to Data • AI Quick Builder • Google Cloud BigQuery Conversational Analytics • Vertex AI Data Agents</p>
+      <footer className="w-full py-4 border-t border-slate-800/80 bg-[#0B132B]/60 backdrop-blur-md text-center text-xs text-slate-400 mt-auto">
+        <p>Talk to Data • BigData Paris 2026 • Google Cloud BigQuery Conversational Analytics • Vertex AI Data Agents</p>
       </footer>
 
     </div>
