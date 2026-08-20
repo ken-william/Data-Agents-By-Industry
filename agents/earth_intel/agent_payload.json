@@ -63,8 +63,24 @@
       ],
       "glossaryTerms": [
         {
+          "displayName": "Indice de Végétation Normalisé (NDVI)",
+          "description": "Mesure de la vigueur chlorophyllienne et de la santé des cultures par télédétection multispectrale Sentinel-2. [Table: company_assets, Colonne: ndvi_vegetation_index]. Termes associés : Indice NDVI, Vigueur Chlorophyllienne, Stress Hydrique Cultures, Télédétection Agricole. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Scoring d'Exposition aux Risques Climatiques (Inondation & Incendie)",
+          "description": "Évaluation géospatiale de la vulnérabilité des actifs immobiliers et industriels face aux crues et feux de forêt. [Table: company_assets, Colonne: flood_risk_score]. Termes associés : Risque d'Inondation, Risque d'Incendie, Exposition Actifs Assurés, Vulnerabilité Climatique. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Détection de Surcroissance Végétale (Lignes Haute Tension)",
+          "description": "Analyse de la proximité des arbres sous les couloirs de lignes électriques pour planifier l'élagage prédictif. [Table: company_assets, Colonne: powerline_tree_encroachment_m]. Termes associés : Élagage Lignes Électriques, Surcroissance Végétale, Emprise Haute Tension, Maintenance Réseau Énergie. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Vérification Zéro Déforestation CSRD",
+          "description": "Certificat visuel par imagerie satellitaire prouvant l'absence de déforestation sur les zones d'approvisionnement CPG/Retail. [Table: deforestation_csrd_verification, Colonne: statut_conformite_csrd]. Termes associés : Conformité CSRD, Zéro Déforestation, Sourcing Durable, Preuve Satellitaire. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
           "displayName": "Imagerie ESA Sentinel-2 & GCS Object Tables",
-          "description": "Accès direct aux scènes satellitaires de 10m de résolution et fichiers Quicklook PNG affichables. [Table: sentinel_2_index, Colonne: quicklook_image_url]. Termes associés : Clichés Satellites ESA Sentinel-2, Cloud Storage Object Tables, Images Quicklook PNG. Propriétaire : data-governance@data-agents-by-industry.com."
+          "description": "Accès direct aux scènes satellitaires de 10m de résolution et fichiers Quicklook PNG affichables. [Table: sentinel_2_index, Colonne: quicklook_image_url]. Termes associés : Clichés Satellites ESA Sentinel-2, Cloud Storage Object Tables, Images Quicklook PNG, Tuile MGRS. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

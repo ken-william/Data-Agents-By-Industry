@@ -83,6 +83,22 @@
       ],
       "glossaryTerms": [
         {
+          "displayName": "Taux de Régularité & Retards Ferroviaires",
+          "description": "Indicateur officiel de ponctualité mesurant la proportion de trains arrivés à l'heure (retard < 5 min) et les causes des retards. [Table: sncf_regularite_lignes, Colonne: taux_regularite_pct]. Termes associés : Ponctualité Trains, Taux de Régularité, Cause Retard Infrastructure/Matériel, Pertes Financières Retards. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Fréquentation Annuelle des Gares SNCF",
+          "description": "Comptage officiel du nombre de voyageurs transitant annuellement par chacune des 3 021 gares du réseau ferroviaire national. [Table: frequentation_gares_sncf, Colonne: nombre_voyageurs_annuel]. Termes associés : Fréquentation Gares SNCF, Flux Voyageurs Annuel, Classification Gares, Nœuds d'Interconnexion. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Yield Management & Tarification Dynamique 1ère Classe",
+          "description": "Optimisation algorithmique du taux de remplissage des wagons de 1ère classe et ajustement des tarifs dynamiques billetterie. [Table: sncf_yield_management_billetterie, Colonne: hausse_panier_moyen_projete_pct]. Termes associés : Yield Management Billetterie, Tarification Dynamique 1ère Classe, Taux Occupation Wagon, Panier Moyen Voyageur. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Traçabilité & Restitution des Objets Trouvés",
+          "description": "Suivi des déclarations de perte en gare, identification par typologie d'objets et mesure du taux de restitution aux propriétaires. [Table: sncf_objets_trouves, Colonne: statut_restitution]. Termes associés : Objets Trouvés Gare, Taux de Restitution, Qualification Objets, Traçabilité Voyagiste. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
           "displayName": "Historique 3M & Prévisions 3M Maintenance TER",
           "description": "Série temporelle sur 6 mois (Mai à Octobre 2026) mesurant l'évolution passée et future de la probabilité de panne sur les segments TER. [Table: ter_maintenance_historique_previsions_6mois, Colonne: probabilite_panne_materielle]. Termes associés : Historique 3 Mois Passés, Prévision 3 Mois Futurs, Série Temporelle Maintenance TER, Taux de Charge Mensuel %. Propriétaire : data-governance@data-agents-by-industry.com."
         }

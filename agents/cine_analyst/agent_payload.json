@@ -81,16 +81,28 @@
       ],
       "glossaryTerms": [
         {
-          "displayName": "Prédiction de Flops & Buzz Réseaux Sociaux",
-          "description": "Scoring de risque de sous-performance au box-office en pourcentage (%) croisant le budget de production et l'indice de sentiment sur les réseaux sociaux. Termes associés : Flop Box-Office, Budget Production, Sentiment Social Media, Ajustement Horaires."
+          "displayName": "Ratio de Rentabilité Box-Office (ROI)",
+          "description": "Mesure du rendement financier d'un film en comparant ses recettes globales récoltées en salles au budget de production engagé. [Table: cnc_films_nouveautes_titres_boxoffice, Colonne: budget_production_eur]. Termes associés : Rentabilité Film, Box-Office ROI, Recettes Cinéma, Budget de Production. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
-          "displayName": "Taux d'Occupation Fauteuils par Format (IMAX / 4DX)",
-          "description": "Comparatif du taux d'occupation des fauteuils par séance selon le format (IMAX 3D, 4DX Immersif, Dolby Cinema vs Standard) et surcoût tarifaire du billet. Termes associés : Salles Immersives, Formats Premium, Surcoût Billet %, Recette par Fauteuil."
+          "displayName": "Entrées Première Semaine (S1)",
+          "description": "Volume d'entrées comptabilisées lors des 7 premiers jours d'exploitation nationale, indicateur clé du succès de démarrage. [Table: cnc_films_nouveautes_titres_boxoffice, Colonne: entrees_premiere_semaine]. Termes associés : Démarrage S1, Entrées Première Semaine, Succès au Lancement, Démarrage Box-Office. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Taux d'Occupation Fauteuils par Format (IMAX / 4DX / Dolby)",
+          "description": "Comparatif du taux d'occupation des fauteuils par séance selon le format de projection premium et surcoût tarifaire du billet. [Table: salles_formats_projection_frequentation, Colonne: taux_occupation_moyen_seance_pct]. Termes associés : Salles Immersives, Formats Premium, Surcoût Billet %, Recette par Fauteuil. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Coefficient de Maintien à l'Affiche",
-          "description": "Ratio de rétention des entrées entre la 2ème et la 1ère semaine d'exploitation (>0.75 = excellent maintien). Termes associés : Maintien Semaine 2, Entrées Première Semaine, Longévité Affiche."
+          "description": "Ratio de rétention des entrées entre la 2ème et la 1ère semaine d'exploitation (>0.75 = excellent maintien). [Table: cnc_films_nouveautes_titres_boxoffice, Colonne: coefficient_maintien_semaine2]. Termes associés : Maintien Semaine 2, Rétention Spectateurs, Longévité Affiche. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Réseau Salles d'Art et Essai",
+          "description": "Nombre et proportion de salles de cinéma indépendantes bénéficiant du label d'État Art et Essai par région. [Table: salles_cinema_etablissements, Colonne: classification_art_et_essai]. Termes associés : Label Art et Essai, Cinéma Indépendant, Subventions CNC, Densité Culturelle Régionale. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Prédiction de Flops & Buzz Réseaux Sociaux",
+          "description": "Scoring de risque de sous-performance au box-office en pourcentage (%) croisant le budget de production et l'indice de sentiment sur les réseaux sociaux. [Table: cnc_films_nouveautes_titres_boxoffice, Colonne: risque_flop_box_office_pct]. Termes associés : Flop Box-Office, Budget Production, Sentiment Social Media, Ajustement Horaires. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

@@ -98,16 +98,28 @@
       ],
       "glossaryTerms": [
         {
+          "displayName": "Revenu Moyen par Abonné (ARPU) & MRR",
+          "description": "Indicateur financier du chiffre d'affaires mensuel récurrent généré par chaque abonné actif selon son forfait (B2B vs Grand Public). [Table: abonnes_master_customers, Colonne: arpu_mensuel_eur]. Termes associés : ARPU Mensuel, Revenue per User, MRR Récurrent, Valeur Client Télécom. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Mean Time to Recover (MTTR) & Pénalités SLA",
+          "description": "Durée moyenne d'interruption de service lors d'incidents matériels et montant des pénalités financières SLA versées aux clients B2B. [Table: telecom_incidents_equipements_reseau, Colonne: duree_interruption_minutes]. Termes associés : MTTR Délai Rétablissement, Pénalités Contractuelles SLA, Interruption Réseau, Fiabilité NOC. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Pylônes & Stations ANFR Metropole 3.5GHz",
+          "description": "Répertoire officiel ARCEP des 10 000 antennes et pylônes télécoms en France métropolitaine décliné par opérateur et bande de fréquence. [Table: arcep_sites_mobiles_metropole, Colonne: id_station_anfr]. Termes associés : Pylônes 5G 3.5GHz, Couverture Réseau Mobile, Antenne Relais ANFR, Opérateur Télécom. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Score de Qualité d'Expérience (QoE)",
+          "description": "Mesure algorithmique de la qualité de service perçue par l'utilisateur lors de ses sessions de trafic web (Streaming 4K, Visio, Cloud). [Table: sessions_trafic_web_categories, Colonne: qualite_experience_qoe_score]. Termes associés : QoE Quality of Experience, Score NPS Technique, Latence & Débit, Fluidité Streaming. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
           "displayName": "Identifiants Matériels IMEI, IMSI SIM Tag Code & ICCID",
-          "description": "Codes d'identification uniques du terminal (IMEI 15 chiffres), de la carte SIM (IMSI SIM Tag Code) et de la puce (ICCID). [Table: parc_equipements_sim_imei]. Termes associés : IMEI Code, IMSI SIM Tag Code, ICCID Puce SIM, eSIM Virtuelle, 5G Standalone SA."
+          "description": "Codes d'identification uniques du terminal (IMEI 15 chiffres), de la carte SIM (IMSI SIM Tag Code) et de la puce (ICCID). [Table: parc_equipements_sim_imei, Colonne: imei_code]. Termes associés : IMEI Code, IMSI SIM Tag Code, ICCID Puce SIM, eSIM Virtuelle, 5G Standalone SA. Propriétaire : data-governance@data-agents-by-industry.com."
         },
         {
           "displayName": "Maintenance Prédictive Pylônes & Capteurs IoT",
-          "description": "Supervision IoT de la santé des antennes relais : température CPU, charge %, tension Volts, état batterie secours et prédiction de panne sous 7 jours. [Table: maintenance_predictive_pylones]. Termes associés : Maintenance Prédictive IoT, Température Processeur °C, Probabilité Panne 7j %, Composant à Remplacer."
-        },
-        {
-          "displayName": "Sessions de Trafic Web Agrégé & Catégories",
-          "description": "Suivi des volumes Mo téléchargés/émis par domaine de contenu (Streaming 4K, Visio Teams, Cloud GCP/AWS, Gaming) et pylône ANFR connecté. [Table: sessions_trafic_web_categories]. Termes associés : Volume Trafic Mo, Catégories Contenu Visité, Pylône ANFR Connecté, Score QoE."
+          "description": "Supervision IoT de la santé des antennes relais : température CPU, charge %, tension Volts, état batterie secours et prédiction de panne sous 7 jours. [Table: maintenance_predictive_pylones, Colonne: probabilite_panne_7j_pct]. Termes associés : Maintenance Prédictive IoT, Température Processeur °C, Probabilité Panne 7j %, Composant à Remplacer. Propriétaire : data-governance@data-agents-by-industry.com."
         }
       ]
     }

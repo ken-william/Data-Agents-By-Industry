@@ -86,6 +86,22 @@
       ],
       "glossaryTerms": [
         {
+          "displayName": "Besoins en Main d'Œuvre (BMO 2025)",
+          "description": "Enquête officielle annuelle de France Travail mesurant le volume des projets de recrutement et la proportion de recrutements jugés difficiles par les entreprises. [Table: bmo_recrutement_2025, Colonne: recrutements_difficiles_nombre]. Termes associés : BMO 2025 France Travail, Taux de Tension Métier, Projets de Recrutement, Bassin d'Emploi. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Déclarations URSSAF & Masse Salariale",
+          "description": "Données SIRENE/URSSAF des établissements employeurs recensant le nombre de salariés déclarés et la masse salariale brute. [Table: entreprises_urssaf_declarations, Colonne: total_payroll_eur]. Termes associés : Déclaration URSSAF, Masse Salariale Brute, Effectif Salariés, Registre SIRENE. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Subventions Publiques & Formations (POEI / AFPR / PMSMP)",
+          "description": "Dispositifs d'aide à l'embauche et de financement de la formation préalable à l'emploi (POEI, AFPR, immersion PMSMP 15j, CPF). [Table: france_travail_formations_aides, Colonne: montant_aide_accordee_eur]. Termes associés : POEI Formation, Immersion PMSMP 15j, Subvention France Travail, Prise en Charge CPF. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
+          "displayName": "Référentiel Métiers ROME 4.0",
+          "description": "Nomenclature officielle des métiers et des 12 255 appellations professionnelles de France Travail. [Table: rome_arborescence_2024, Colonne: code_rome]. Termes associés : ROME 4.0 France Travail, Appellations Métiers, Classification Domaines, Fiche ROME. Propriétaire : data-governance@data-agents-by-industry.com."
+        },
+        {
           "displayName": "Table d'Objets Native GCS CV (france_travail_cv_object_table)",
           "description": "Table d'objets native BigQuery répertoriant les fichiers CV hébergés sur GCS avec schéma natif d'objets (uri, generation, content_type, size, md5_hash, updated, metadata). [Table: france_travail_cv_object_table, Colonne: uri]. Termes associés : Object Table GCS, Fichier CV PDF, Métadonnées d'Objets, Jointure Demandeur URI. Propriétaire : data-governance@data-agents-by-industry.com."
         },
