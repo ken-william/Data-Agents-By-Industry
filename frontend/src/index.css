@@ -2,102 +2,164 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Palette Chromatique - Google Fluid Blue */
+  --bg-gradient: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%);
+  --bento-bg: rgba(15, 23, 42, 0.45);
+  --bento-border: rgba(51, 65, 85, 0.5);
+  --bento-border-active: rgba(56, 189, 248, 0.55);
+  --gemini-gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
+  
+  /* Typographie Premium */
+  --font-family-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-dark: #0f172a;
+
+  /* Formes et Animations */
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+  --glow-active: 0 0 25px rgba(56, 189, 248, 0.15);
+}
+
 @layer base {
   body {
-    @apply bg-[#F8F9FA] text-[#1F1F1F] font-sans antialiased min-h-screen selection:bg-blue-500 selection:text-white overflow-x-hidden;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    font-family: var(--font-family-google);
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 }
 
-/* NotebookLM & Google Light Workspace Card Styling */
-.notebook-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0; /* border-slate-200 */
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
-  border-radius: 1rem; /* 16px / rounded-2xl */
-  transition: all 0.2s ease-in-out;
+/* Glassmorphism Bento Surfaces */
+.bento-card, .agent-card {
+  background: var(--bento-bg);
+  border: 1px solid var(--bento-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.notebook-card:hover {
-  border-color: #CBD5E1; /* border-slate-300 */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+.bento-card:hover, .agent-card:hover {
+  border-color: var(--bento-border-active);
+  box-shadow: var(--glow-active);
 }
 
-.notebook-card-active {
-  background-color: #FFFFFF;
-  border: 2px solid #2563EB; /* border-blue-600 */
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.12);
-  border-radius: 1rem;
+.agent-card-active {
+  background: rgba(15, 23, 42, 0.75);
+  border: 2px solid #38bdf8;
+  box-shadow: var(--glow-active);
+  border-radius: var(--radius-card);
 }
 
-/* Custom Light Scrollbars */
+/* Gemini Live Physics Waves Animation */
+.gemini-orbe-live {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: var(--radius-pill);
+  background: var(--gemini-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.4);
+}
+
+.gemini-orbe-live.showcase {
+  width: 140px;
+  height: 140px;
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: inherit;
+  opacity: 0.3;
+  animation: wavePulse 3s infinite linear;
+}
+
+.wave-2 { animation-delay: 1s; }
+.wave-3 { animation-delay: 2s; }
+
+@keyframes wavePulse {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+/* 3D Flip Card for SQL Inspector */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-recto, .flip-verso {
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-verso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8F9FA;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #1e293b;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #38bdf8;
 }
 
-/* SVG Keyframe Animations for Glassmorphism Light Gemini Live Orb */
-@keyframes light-orb-pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.85;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-}
-
-@keyframes light-orb-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-light-pulse {
-  animation: light-orb-pulse 3s infinite ease-in-out;
-}
-
-.animate-light-spin {
-  animation: light-orb-spin 10s linear infinite;
-}
-
-/* Markdown Document Styling (Light Mode Clean Report) */
+/* Markdown Content Styling */
 .markdown-content {
-  @apply text-xs sm:text-sm leading-relaxed text-slate-800;
+  @apply text-xs sm:text-sm leading-relaxed text-slate-200;
 }
 
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  @apply font-bold text-slate-900 mt-3 mb-1.5 border-b border-slate-200 pb-1 text-sm sm:text-base;
+  @apply font-semibold text-slate-50 mt-3 mb-1.5 border-b border-slate-800 pb-1 text-sm sm:text-base;
 }
 
 .markdown-content p {
-  @apply my-1.5 text-slate-700;
+  @apply my-1.5;
 }
 
 .markdown-content ul {
-  @apply list-disc list-inside my-1.5 space-y-1 text-slate-700;
+  @apply list-disc list-inside my-1.5 space-y-1 text-slate-300;
 }
 
 .markdown-content ol {
-  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-700;
+  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-300;
 }
 
 .markdown-content li {
@@ -105,29 +167,29 @@
 }
 
 .markdown-content table {
-  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white;
+  @apply w-full my-2.5 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-800/80 shadow-md;
 }
 
 .markdown-content th {
-  @apply bg-slate-100 text-slate-900 font-semibold p-2.5 border-b border-slate-200;
+  @apply bg-slate-900/90 text-slate-100 font-semibold p-2.5 border-b border-slate-800;
 }
 
 .markdown-content td {
-  @apply p-2.5 border-b border-slate-100 bg-white text-slate-700;
+  @apply p-2.5 border-b border-slate-900/60 bg-[#0B132B]/40 text-slate-300;
 }
 
 .markdown-content code {
-  @apply bg-slate-100 text-blue-700 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-200;
+  @apply bg-slate-900 text-sky-300 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-800;
 }
 
 .markdown-content pre {
-  @apply bg-slate-950 text-cyan-300 p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-3 shadow-md;
+  @apply bg-[#020617] p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-2.5 shadow-md;
 }
 
 .markdown-content blockquote {
-  @apply border-l-4 border-blue-500 pl-3 my-2 text-slate-600 italic text-xs bg-blue-50/50 py-1 rounded-r;
+  @apply border-l-4 border-sky-400 pl-3 my-2 text-slate-400 italic text-xs;
 }
 
 .markdown-content a {
-  @apply text-blue-600 hover:text-blue-800 underline font-medium;
+  @apply text-sky-400 hover:text-sky-300 underline font-medium;
 }

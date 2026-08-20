@@ -9,156 +9,52 @@ export function GeminiOrb({
   speechSupported,
   showcaseMode = false
 }) {
-  let stateLabel = "Prêt (Gemini Live)";
-  let stateDesc = speechSupported ? "Cliquez sur l'orbe ou le micro" : "Entrée clavier active";
-
+  let stateLabel = "Prêt pour votre question";
   if (isListening) {
-    stateLabel = "J'écoute votre voix...";
-    stateDesc = "Parlez maintenant à voix haute";
+    stateLabel = "Je vous écoute...";
   } else if (isStreaming) {
-    stateLabel = "Génération BigQuery...";
-    stateDesc = "Analyse Gemini Conversational Analytics";
+    stateLabel = "Analyse des données BigQuery...";
   } else if (isSpeaking) {
-    stateLabel = "Lecture vocale...";
-    stateDesc = "Synthèse sonore en cours";
+    stateLabel = "Génération de la réponse vocale...";
   }
 
-  const orbSizeClass = showcaseMode ? "w-28 h-28 sm:w-36 sm:h-36" : "w-14 h-14 sm:w-16 sm:h-16";
-
   return (
-    <div className="flex flex-col items-center justify-center relative">
+    <div className="flex flex-col items-center justify-center relative my-2">
       
-      {/* Glassmorphism Translucent Light Gemini Orb */}
+      {/* Gemini Live Orbe with Physics Waves */}
       <button
         type="button"
         onClick={onClickMic}
-        title={isListening ? "Arrêter l'écoute" : "Cliquer pour parler à l'agent (Microphone)"}
-        className={`relative ${orbSizeClass} rounded-full p-1 transition-transform duration-300 transform hover:scale-105 active:scale-95 cursor-pointer group flex items-center justify-center`}
+        title={isListening ? "Arrêter l'écoute" : "Cliquer pour parler (Microphone)"}
+        className={`gemini-orbe-live cursor-pointer transition-transform duration-300 transform hover:scale-105 active:scale-95 ${
+          showcaseMode ? 'showcase' : ''
+        }`}
       >
-        {/* Outer Animated SVG Light Waves */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
-          viewBox="0 0 100 100"
-        >
-          <defs>
-            <linearGradient id="lightGeminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#38BDF8" />
-              <stop offset="50%" stopColor="#818CF8" />
-              <stop offset="100%" stopColor="#C084FC" />
-            </linearGradient>
+        {/* Animated Concentric Wave Rings */}
+        <div className="wave wave-1"></div>
+        <div className="wave wave-2"></div>
+        <div className="wave wave-3"></div>
 
-            <linearGradient id="lightSpeakingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#10B981" />
-              <stop offset="100%" stopColor="#0EA5E9" />
-            </linearGradient>
-          </defs>
-
-          {!isListening && !isStreaming && !isSpeaking && (
-            <circle
-              cx="50"
-              cy="50"
-              r="44"
-              fill="none"
-              stroke="url(#lightGeminiGrad)"
-              strokeWidth="2"
-              strokeDasharray="6 4"
-              className="animate-light-spin opacity-70"
-            />
+        {/* Center Icon */}
+        <div className="relative z-10 text-white flex items-center justify-center">
+          {isStreaming ? (
+            <Loader2 className={`${showcaseMode ? 'w-10 h-10' : 'w-7 h-7'} animate-spin text-sky-200`} />
+          ) : isListening ? (
+            <MicOff className={`${showcaseMode ? 'w-10 h-10' : 'w-7 h-7'} text-white animate-pulse`} />
+          ) : isSpeaking ? (
+            <Volume2 className={`${showcaseMode ? 'w-10 h-10' : 'w-7 h-7'} text-white animate-bounce`} />
+          ) : (
+            <Mic className={`${showcaseMode ? 'w-10 h-10' : 'w-7 h-7'} text-white`} />
           )}
-
-          {isListening && (
-            <>
-              <circle
-                cx="50"
-                cy="50"
-                r="46"
-                fill="none"
-                stroke="url(#lightGeminiGrad)"
-                strokeWidth="2.5"
-                className="animate-ping opacity-80"
-              />
-              <circle
-                cx="50"
-                cy="50"
-                r="40"
-                fill="none"
-                stroke="url(#lightGeminiGrad)"
-                strokeWidth="2"
-                strokeDasharray="10 4"
-                className="animate-light-spin"
-              />
-            </>
-          )}
-
-          {isStreaming && (
-            <circle
-              cx="50"
-              cy="50"
-              r="45"
-              fill="none"
-              stroke="url(#lightGeminiGrad)"
-              strokeWidth="3"
-              strokeDasharray="25 15"
-              className="animate-light-spin"
-            />
-          )}
-
-          {isSpeaking && (
-            <circle
-              cx="50"
-              cy="50"
-              r="46"
-              fill="none"
-              stroke="url(#lightSpeakingGrad)"
-              strokeWidth="2.5"
-              className="animate-light-pulse"
-            />
-          )}
-        </svg>
-
-        {/* Translucent Glass Core */}
-        <div className="w-full h-full rounded-full bg-white/60 border border-white/80 backdrop-blur-md flex flex-col items-center justify-center p-2 shadow-lg relative overflow-hidden">
-          
-          {/* Subtle Ambient Light Core Glow */}
-          <div
-            className={`absolute inset-1 rounded-full opacity-30 blur-md ${
-              isListening
-                ? 'bg-sky-400 animate-pulse'
-                : isStreaming
-                ? 'bg-indigo-400 animate-spin'
-                : isSpeaking
-                ? 'bg-emerald-400 animate-pulse'
-                : 'bg-blue-400 animate-light-pulse'
-            }`}
-          />
-
-          {/* Icon Center */}
-          <div className="relative z-10 text-slate-700 flex flex-col items-center">
-            {isStreaming ? (
-              <Loader2 className={`${showcaseMode ? 'w-8 h-8' : 'w-5 h-5'} animate-spin text-blue-600`} />
-            ) : isListening ? (
-              <MicOff className={`${showcaseMode ? 'w-8 h-8' : 'w-5 h-5'} text-rose-500 animate-pulse`} />
-            ) : isSpeaking ? (
-              <Volume2 className={`${showcaseMode ? 'w-8 h-8' : 'w-5 h-5'} text-emerald-600 animate-bounce`} />
-            ) : (
-              <Mic className={`${showcaseMode ? 'w-8 h-8' : 'w-5 h-5'} text-blue-600 group-hover:scale-110 transition-transform`} />
-            )}
-          </div>
-
         </div>
       </button>
 
       {/* State Text Label */}
-      <div className="mt-2 text-center">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-slate-200 text-[11px] font-medium text-slate-700 shadow-sm">
-          <Sparkles className="w-3 h-3 text-blue-600" />
+      <div className="mt-3 text-center">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/80 border border-slate-700/80 text-xs font-medium text-slate-200 shadow-md">
+          <Sparkles className="w-3.5 h-3.5 text-sky-400" />
           <span>{stateLabel}</span>
         </div>
-        {!showcaseMode && (
-          <p className="text-[10px] text-slate-500 mt-0.5">
-            {stateDesc}
-          </p>
-        )}
       </div>
 
     </div>
