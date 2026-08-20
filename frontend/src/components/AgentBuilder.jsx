@@ -18,35 +18,41 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
   const ActiveIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Database;
 
   return (
-    <div className="w-full flex flex-col gap-5 animate-fade-in">
+    <div className="w-full flex flex-col gap-6 animate-fade-in">
       
-      {/* Header Banner - Google Fluid Blue */}
-      <div className="p-6 rounded-2xl bento-card shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 text-xs font-semibold mb-2">
-            <Sparkles className="w-3.5 h-3.5 text-sky-400" />
-            <span>Google Cloud Data Agent Kit • BigData Paris 2026</span>
-          </div>
-
-          <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-50">
-            Plateforme Conversational Analytics Multi-Agents
+      {/* Gemini Header & Greeting - Exact Reproduction */}
+      <div className="fixed-content text-center my-4 flex flex-col items-center justify-center">
+        <div className="flex items-center justify-center gap-3 mb-1">
+          <img
+            className="w-9 h-9 animate-pulse"
+            src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
+            alt="Gemini Sparkle Logo"
+          />
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight bg-gradient-to-r from-[#4285f4] to-[#d96570] bg-clip-text text-transparent">
+            Talk to Data
           </h2>
-
-          <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-2xl">
-            Sélectionnez un copilote sectoriel ci-dessous ou cliquez sur l'une des bulles de scénarios pour vous connecter instantanément.
-          </p>
         </div>
 
-        {/* Search Bar */}
-        <div className="relative w-full sm:w-64">
-          <Search className="w-4 h-4 text-slate-500 absolute left-3 top-2.5" />
+        <div className="greeting-prompt text-slate-400 font-normal text-xl sm:text-2xl">
+          Let's get some work done!
+        </div>
+      </div>
+
+      {/* Gemini Search Bar Wrapper with Radial Glow */}
+      <div className="search-bar-wrapper">
+        <div className="search-bar-glow" />
+        <div className="search-bar-container flex items-center gap-3">
+          <Search className="w-5 h-5 text-slate-400 shrink-0" />
           <input
             type="text"
-            placeholder="Filtrer les agents..."
+            placeholder="Filtrer un agent ou poser une question..."
             value={searchFilter}
             onChange={(e) => setSearchFilter(e.target.value)}
-            className="w-full pl-9 pr-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-sky-500"
+            className="w-full bg-transparent border-none text-slate-100 placeholder-slate-400 focus:outline-none text-sm"
           />
+          <span className="text-[10px] px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 font-mono shrink-0">
+            BigQuery
+          </span>
         </div>
       </div>
 
@@ -59,7 +65,7 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
       />
 
       {/* Main Grid: 11 Dense Clean Agent Cards + Control Panel */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 mt-2">
         
         {/* Left: 11 Sector Cards (8 cols) */}
         <div className="lg:col-span-8 flex flex-col gap-3">
