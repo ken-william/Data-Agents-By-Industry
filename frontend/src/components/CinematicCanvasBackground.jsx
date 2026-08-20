@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 /**
- * Cinematic Canvas Background Component
- * Implements Canvas Rendering, Aspect-Ratio Cover (ZOOM_FACTOR=1.35),
- * GSAP Interactive Mouse Parallax, and Scroll-driven animation (Scrollytelling).
+ * 3D Luminous Google Wave Canvas Component
+ * Renders a high-performance 60FPS 3D Undulating Wave Grid using Google's iconic bright colors
+ * (Blue #4285F4, Red #EA4335, Yellow #FBBC05, Green #34A853) against a bright luminous backdrop.
  */
 export function CinematicCanvasBackground() {
   const canvasRef = useRef(null);
@@ -15,7 +15,7 @@ export function CinematicCanvasBackground() {
   const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    // 1. Simulate Preloading State for 60FPS High-Performance Canvas Scene
+    // 1. Simulate Preloading for 3D Canvas Scene
     let progress = 0;
     const interval = setInterval(() => {
       progress += 10;
@@ -24,7 +24,7 @@ export function CinematicCanvasBackground() {
         clearInterval(interval);
         setIsLoaded(true);
       }
-    }, 40);
+    }, 35);
 
     return () => clearInterval(interval);
   }, []);
@@ -35,26 +35,17 @@ export function CinematicCanvasBackground() {
     const ctx = canvas.getContext('2d');
 
     let animationFrameId;
-    const ZOOM_FACTOR = 1.35;
+    const ZOOM_FACTOR = 1.25;
 
-    // Generate Procedural Google Spectral Nebula Orbs & Particles
-    const numParticles = 80;
-    const particles = Array.from({ length: numParticles }, () => ({
-      x: Math.random(),
-      y: Math.random(),
-      radius: Math.random() * 3 + 1,
-      baseAlpha: Math.random() * 0.7 + 0.3,
-      speed: Math.random() * 0.0005 + 0.0002,
-      color: ['#38BDF8', '#818CF8', '#C084FC', '#EC4899', '#FBBC05'][Math.floor(Math.random() * 5)]
-    }));
-
-    const nebulae = [
-      { cx: 0.3, cy: 0.3, r: 0.4, color1: 'rgba(56, 189, 248, 0.35)', color2: 'rgba(99, 102, 241, 0.05)' },
-      { cx: 0.7, cy: 0.7, r: 0.45, color1: 'rgba(192, 132, 252, 0.3)', color2: 'rgba(236, 72, 153, 0.05)' },
-      { cx: 0.5, cy: 0.2, r: 0.35, color1: 'rgba(251, 188, 5, 0.25)', color2: 'rgba(56, 189, 248, 0.02)' }
+    // Google Luminous 4 Colors
+    const googleColors = [
+      'rgba(66, 133, 244, 0.75)',  // Google Blue
+      'rgba(234, 67, 53, 0.75)',   // Google Red
+      'rgba(251, 188, 5, 0.75)',   // Google Yellow
+      'rgba(52, 168, 83, 0.75)'    // Google Green
     ];
 
-    // Canvas Resize with Aspect Ratio Cover Math & ZOOM_FACTOR
+    // Canvas Resize
     const resizeCanvas = () => {
       const dpr = window.devicePixelRatio || 1;
       canvas.width = window.innerWidth * dpr;
@@ -65,16 +56,15 @@ export function CinematicCanvasBackground() {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
-    // 2. Interactive Mouse Parallax using GSAP
+    // GSAP Mouse Parallax Listener
     const handleMouseMove = (e) => {
       const mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
       const mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
       mouseRef.current = { x: mouseX, y: mouseY };
 
-      // Smooth GSAP Parallax Offset in opposite direction of mouse movement
       gsap.to(canvas, {
-        x: -mouseX * 30,
-        y: -mouseY * 30,
+        x: -mouseX * 25,
+        y: -mouseY * 25,
         duration: 1.2,
         ease: 'power2.out'
       });
@@ -82,7 +72,7 @@ export function CinematicCanvasBackground() {
 
     window.addEventListener('mousemove', handleMouseMove);
 
-    // 3. Scroll-Driven Scrollytelling Fraction
+    // Scroll Listener
     const handleScroll = () => {
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const currentScroll = window.scrollY;
@@ -91,57 +81,70 @@ export function CinematicCanvasBackground() {
 
     window.addEventListener('scroll', handleScroll);
 
-    // 4. Main 60FPS Draw Loop
+    // 3D Wave Calculation Parameters
+    const numLines = 28;
+    const pointsPerLine = 45;
+    const spacing = 35;
+    const fov = 350;
+
     let time = 0;
+
+    // Main 60FPS 3D Wave Render Loop
     const drawFrame = () => {
-      time += 0.01;
+      time += 0.015;
       const scrollFrac = scrollFractionRef.current;
       const width = window.innerWidth;
       const height = window.innerHeight;
 
-      // Solid Black Cinematic Background
-      ctx.fillStyle = '#000000';
+      // Bright Luminous Backdrop (#F8FAFC -> #EFF6FF)
+      const bgGrad = ctx.createLinearGradient(0, 0, width, height);
+      bgGrad.addColorStop(0, '#F8FAFC');
+      bgGrad.addColorStop(0.5, '#EFF6FF');
+      bgGrad.addColorStop(1, '#EEF2FF');
+      ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, width, height);
 
       ctx.save();
-      // Apply Manual object-fit: cover zoom centering math
+      // Apply Manual Cover Zoom Math
       ctx.translate(width / 2, height / 2);
       ctx.scale(ZOOM_FACTOR, ZOOM_FACTOR);
       ctx.translate(-width / 2, -height / 2);
 
-      // Draw Morphing Spectral Nebulae
-      nebulae.forEach((neb, i) => {
-        const offset = Math.sin(time + i + scrollFrac * Math.PI * 2) * 40;
-        const x = neb.cx * width + offset;
-        const y = neb.cy * height + Math.cos(time * 0.8 + i) * 30;
-        const radius = neb.r * Math.min(width, height) * (1 + scrollFrac * 0.2);
+      // Draw 3D Undulating Wave Grid Lines
+      for (let i = 0; i < numLines; i++) {
+        const lineProgress = i / numLines;
+        const color = googleColors[i % googleColors.length];
 
-        const grad = ctx.createRadialGradient(x, y, 0, x, y, radius);
-        grad.addColorStop(0, neb.color1);
-        grad.addColorStop(1, neb.color2);
-
-        ctx.fillStyle = grad;
         ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.fill();
-      });
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2.5 - lineProgress * 1.2;
 
-      // Draw Floating Particles
-      particles.forEach((p) => {
-        p.y -= p.speed;
-        if (p.y < 0) p.y = 1;
+        for (let j = 0; j < pointsPerLine; j++) {
+          const colProgress = j / pointsPerLine;
 
-        const px = p.x * width + Math.sin(time + p.x * 10) * 15;
-        const py = p.y * height;
-        const alpha = p.baseAlpha * (0.6 + Math.sin(time * 2 + p.x * 20) * 0.4);
+          // 3D Coordinates
+          const x3d = (j - pointsPerLine / 2) * spacing;
+          const z3d = (i + 1) * spacing + 120;
+          
+          // 3D Wave Height Equation (Undulating Sine/Cos Physics)
+          const wave1 = Math.sin(colProgress * Math.PI * 3 + time * 1.8 + scrollFrac * Math.PI) * 45;
+          const wave2 = Math.cos(lineProgress * Math.PI * 4 - time * 1.2) * 25;
+          const mouseTilt = mouseRef.current.y * 30;
+          const y3d = wave1 + wave2 + mouseTilt;
 
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = alpha;
-        ctx.beginPath();
-        ctx.arc(px, py, p.radius, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.globalAlpha = 1.0;
-      });
+          // 3D Perspective Projection
+          const scale = fov / (fov + z3d);
+          const x2d = width / 2 + x3d * scale + (mouseRef.current.x * 40 * scale);
+          const y2d = height / 2 + y3d * scale + 60;
+
+          if (j === 0) {
+            ctx.moveTo(x2d, y2d);
+          } else {
+            ctx.lineTo(x2d, y2d);
+          }
+        }
+        ctx.stroke();
+      }
 
       ctx.restore();
       animationFrameId = requestAnimationFrame(drawFrame);
@@ -161,18 +164,18 @@ export function CinematicCanvasBackground() {
     <>
       {/* Loading Overlay */}
       {!isLoaded && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black text-white font-sans transition-opacity duration-500">
-          <div className="w-12 h-12 rounded-full border-2 border-sky-400 border-t-transparent animate-spin mb-4" />
-          <div className="text-sm font-semibold tracking-wider text-slate-300">
-            LOADING CINEMATIC CANVAS ({loadProgress}%)
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#F8FAFC] text-slate-800 font-sans transition-opacity duration-500">
+          <div className="w-12 h-12 rounded-full border-3 border-blue-500 border-t-transparent animate-spin mb-4" />
+          <div className="text-sm font-semibold tracking-wider text-slate-600">
+            CHARGEMENT VAGUES 3D GOOGLE ({loadProgress}%)
           </div>
         </div>
       )}
 
-      {/* Cinematic Fullscreen Canvas with 1.05 Scale & GSAP Parallax */}
+      {/* Fullscreen 3D Wave Canvas */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none -z-10 bg-black transform scale-[1.05] transition-transform"
+        className="fixed inset-0 w-full h-full pointer-events-none -z-10 transform scale-[1.05] transition-transform"
       />
     </>
   );
