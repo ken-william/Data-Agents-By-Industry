@@ -1,85 +1,77 @@
-# Master Specification & Prompt System - Talk to Data (Official Vesper.ai Operational AI Infrastructure Style)
+# Master Specification & Prompt System - Talk to Data (Pure Black Spectral Cosmic Space Design)
 
-Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée selon l'architecture et le design system exacts de **Vesper.ai — Operational AI Infrastructure**.
+Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), repensée selon un style **Pure Black Spectral Cosmic Space** avec formes Googley fluo animées dans l'espace.
 
 ---
 
-# 🌌 1. Tokens & Design System Vesper.ai
+# 🌌 1. Tokens & Design System "Pure Black Spectral Space"
 
 | Token | Valeur | Usage dans l'UI |
 | :--- | :--- | :--- |
-| `--bg` | `#000000` / `radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%)` | Fond de viewport sidéral anti-flash. |
-| `--text` | `#ffffff` | Texte principal haute lisibilité. |
-| `--muted` | `#9a9a9a` (Slate 400) | Descriptions, légendes et métadonnées. |
-| `--stat` | `#d8d8d8` | Valeurs et libellés des statistiques. |
-| `--border` | `rgba(255, 255, 255, 0.16)` | Bordures nettes des cartes et boutons. |
-| `--border-soft` | `rgba(255, 255, 255, 0.12)` | Délimiteurs et liserés de repos. |
+| `--bg` | `#000000` (Noir Absolu) | Fond de viewport noir pur anti-flash. |
+| `--text` | `#F8FAFC` (Slate 50) | Texte principal haute lisibilité. |
+| `--muted` | `#94A3B8` (Slate 400) | Sous-titres et légendes. |
+| `--fluo-cyan` | `#38BDF8` | Accent fluo principal et lueurs. |
+| `--fluo-purple` | `#C084FC` | Gradient secondaire et Orbe. |
+| `--fluo-amber` | `#FBBC05` | Touche de couleur Google. |
 
 ---
 
-# 🎨 2. Typographie & Piles de Polices (Exact)
+# 🔮 2. Animations Spectrales Googley (Cosmic Spectral Orbs)
 
-- **UI / Logo / Nav / Boutons / Badge / Lede / Stats** : `"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
-- **Mots d'Accent du H1 (*AI agents*)** : `"Instrument Serif", "Times New Roman", Times, serif` (Italique)
+Formes organiques flottantes aux couleurs Google (Bleu Ciel `#38BDF8`, Violet `#818CF8`, Rose `#EC4899`, Jaune `#FBBC05`) qui bougent doucement en arrière-plan comme des nébuleuses cosmiques.
 
 ```css
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap');
-
-body {
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: #000000;
-  color: #ffffff;
+@keyframes floatSpectral {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(60px, -40px) scale(1.15);
+    opacity: 0.45;
+  }
 }
 
-h1 em {
-  font-family: "Instrument Serif", serif;
-  font-style: italic;
-  font-weight: 400;
-  color: #9a9a9a;
+.spectral-orb {
+  position: fixed;
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  animation: floatSpectral 18s ease-in-out infinite alternate;
 }
 ```
 
 ---
 
-# 🔮 3. Boutons & Puces Liquid-Metal / Liquid-Glass
+# 💊 3. Bulles Scénarios Agrandies (Large Fluo Capsules)
 
-### Boutons Liquid-Metal Nav (`.btn-nav`)
-- `height: 40px; padding: 0 18px; border-radius: 7px;`
-- `border: 1px solid rgba(198,198,198,0.55);`
-- `background: linear-gradient(105deg, #050505 0%, #2a2a2a 48%, #4a4a4a 100%);`
-- Reflet `::before` qui glisse au survol (`translateX(-120%)` ➔ `translateX(120%)`).
-
-### Boutons Liquid-Glass (`.btn-glass` / `.btn-solid`)
-- `position: relative; isolation: isolate; overflow: hidden; height: 42px; border-radius: 6px;`
-- Reflet `::after` en balayage `linear-gradient(115deg, transparent 20%, rgba(255,255,255,0.45) 48%, transparent 76%)`.
+Les bulles de scénarios sont agrandies pour une lisibilité optimale sur grand écran et PC de contrôle :
+- `height: 52px; padding: 0 22px; gap: 12px; border-radius: 9999px;`
+- Texte clair `font-size: 15px; font-weight: 600;`
+- Icône lumineuse `20px`
 
 ---
 
-# 📊 4. Pied de Page Statistiques (Stats Footer)
+# 🗑️ 4. Éléments Supprimés (Deletions)
 
-1. `4.2M+ workflows automated` (Icone workflow dual-pill)
-2. `92% reduction in manual operations` (Icone carre arrondi blanc avec fleche)
-3. `180+ operational teams onboarded` (Icone 3 avatars)
-
----
-
-# 🔊 5. Purification Vocale Live (`sanitizeForSpeech`)
-
-Toute réponse audio passe par `sanitizeForSpeech()` pour garantir qu'aucun code SQL, JSON brut ou symbole Markdown ne soit lu à haute voix.
+- ❌ Supprimé : Le footer des 3 statistiques (`4.2M+ workflows automated`, etc.).
+- ❌ Supprimé : Les boutons "Start for Free" et "See it in action".
+- ❌ Supprimé : Le badge discret "Copilote Sélectionné : ArenaManager".
+- ❌ Supprimé : Les tags informatiques du Header (`data-agents-by-industry`, `Copilotes Sectoriels (11)`).
 
 ---
 
-# 📋 6. Master Specification & Prompt de Reconstitution (Prompt Maître)
+# 📋 5. Prompt Système de Reconstitution Maître
 
 ```text
-Tu es Antigravity, un développeur UI senior chez Google Cloud.
-Ta mission est de construire l'application web double écran "Talk to Data" selon le design exact Vesper.ai — Operational AI Infrastructure.
+Tu me codes l'application web double écran "Talk to Data" selon le style Pure Black Spectral Cosmic Space.
 
-CONSIGNES STRICTES DE DESIGN :
-1. FOND BLACK ANTI-FLASH : html, body { background: #000000 !important; color: #ffffff; }.
-2. TYPOGRAPHIE : Inter pour tout l'UI et Instrument Serif en italique pour les mots clés h1 em.
-3. BOUTONS LIQUID-METAL & LIQUID-GLASS : Effet de balayage lumineux (shine sweep) au survol.
-4. FOOTER STATS : 3 métriques clés avec icônes SVG custom.
+CONSIGNES STRICTES :
+1. FOND NOIR ABSOLU #000000 avec formes spectrales Googley animées fluo.
+2. TYPOGRAPHIE : Inter + Instrument Serif en italique avec dégradés de texte.
+3. HEADER FLUO GLASS : Barre flottante dépolie en verre fluo.
+4. BULLES SCÉNARIOS AGRANDIES : Capsules fluo de 52px de hauteur avec texte clair et défilement horizontal.
+5. AUCUN FOOTER DE STATS NI BOUTONS INUTILES.
 ```
