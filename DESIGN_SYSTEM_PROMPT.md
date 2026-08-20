@@ -1,132 +1,97 @@
-# Master Specification & Prompt System - Talk to Data (Google Fluid Blue)
+# Master Specification & Prompt System - Talk to Data (Google Light Workspace - NotebookLM Style)
 
-Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** pour l'événement **BigData Paris 2026**.
+Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** inspirée de l'interface officielle **Google NotebookLM** et **Gemini Enterprise**.
 
 ---
 
-## 🎨 1. Le Design System "Google Fluid Blue" (Inspiré de Gemini)
+## 🎨 1. Le Design System "Google Light Workspace" (NotebookLM Style)
 
-Ce design system abandonne le noir brut au profit d'un environnement sombre à base de bleu marine profond, enrichi par des gradients lumineux inspirés de **Gemini Live**.
+Ce système repose sur des surfaces blanches, des ombres ultra-douces, des couleurs pastel pour thématiser les agents, et une typographie très aérée.
 
-### Palette Chromatique (Gradients & Surfaces)
+### Palette Chromatique & Textures
 
 | Élément UI | Propriété / Classe Tailwind | Rendu Visuel / Description |
 | :--- | :--- | :--- |
-| **Fond Global (Canvas)** | `bg-gradient-to-br from-[#020617] via-[#070F2B] to-[#0A192F]` | Bleu nuit/marine extrêmement profond, offrant un aspect mat et haut de gamme. |
-| **Bento Cards (Surfaces)** | `bg-[#0B132B]/60 border border-slate-800/80 backdrop-blur-md` | Cartes semi-transparentes avec un léger flou d'arrière-plan. |
-| **Liseré Actif / Focus** | `border-sky-500/40 shadow-[0_0_15px_rgba(14,165,233,0.15)]` | Remplacement des gros halos par une lueur fine et chirurgicale de couleur cyan/bleu. |
-| **Gradient Gemini (Accent)** | `from-[#38BDF8] via-[#3B82F6] to-[#6366F1]` | Dégradé fluide signature (Sky Blue ➔ Royal Blue ➔ Indigo). |
-| **Texte Principal** | `text-slate-100` | Blanc cassé doux pour éviter la fatigue oculaire du blanc pur. |
-| **Texte Secondaire** | `text-slate-400` | Gris bleuté pour toutes les descriptions et informations secondaires. |
+| **Fond d'Écran Principal** | `bg-[#F8F9FA]` / `bg-slate-50` | Blanc cassé Google officiel, extrêmement propre et reposant. |
+| **Gradients de Fond (Ambient)** | `bg-gradient-to-tr from-[#EEF2F6] via-[#F1F5F9] to-[#E0E7FF]/30` | Dégradés bleus et lavande très subtils et dilués pour donner de la profondeur. |
+| **Cartes Bento & Éléments** | `bg-white border border-slate-100 shadow-[0_2px_12px_rgba(0,0,0,0.03)]` | Blanc pur, se détachant doucement du fond avec une ombre presque invisible. |
+| **Boutons & Actions Clés** | `bg-blue-600 hover:bg-blue-700 text-white` | Bleu Google standard pour les interactions principales. |
+| **Texte Principal** | `text-[#1F1F1F]` / `text-slate-900` | Noir doux (anthracite) pour une lisibilité parfaite sans agressivité. |
+| **Texte Secondaire** | `text-[#5F6368]` / `text-slate-500` | Gris neutre pour les descriptions, tags et métadonnées. |
 
 ### Typographie & Formes
 
-| Propriété | Règle Métrique | Justification B2B |
+| Élément | Règle Métrique | Look & Feel |
 | :--- | :--- | :--- |
-| **Police Titres** | `Google Sans` / `Inter` (Font-Weight: 600) | Modernité, clarté et lisibilité parfaite à distance sur grand écran. |
-| **Coins (Cards/Bento)** | `rounded-2xl` (16px) | Forme adoucie mais professionnelle. Fini l'aspect "jouet" des coins à 32px. |
-| **Coins (Boutons/Chips)** | `rounded-lg` (8px) | Structure rigoureuse pour les éléments d'action et les filtres. |
+| **Typographie** | `Google Sans` (Titres) / `Roboto` (Corps) | Identité Google forte, lisible et épurée. |
+| **Coins (Cartes Carousel)** | `rounded-2xl` (16px) | Coins élégamment arrondis sans tomber dans l'effet "bulle". |
+| **Coins (Conteneurs & Dock)** | `rounded-3xl` (24px) | Courbes plus amples pour le dock de chat et les grands panneaux. |
 
 ---
 
-## 🖥️ 2. Architecture Double Écran (Dual-Screen Setup)
+## 🖥️ 2. L'Architecture Double Écran Réalignée
 
-Pour une démonstration fluide, les rôles sont strictement répartis entre l'écran public de présentation et le terminal de l'utilisateur.
+L'expérience se sépare toujours en deux écrans, mais adopte le style "Document & Carnet de Notes" épuré.
 
 ```text
-+------------------------------------------------------------------------------------------------+
-|                                     DUAL-SCREEN ARCHITECTURE                                   |
-+------------------------------------------------------------------------------------------------+
-|  ÉCRAN A : LE GRAND ÉCRAN (SHOWCASE)           |  ÉCRAN B : LE PC CONTRÔLEUR (TACTILE)         |
-|  - Orbe Gemini Géant et Fluide (Centre)         |  - Grille des 11 Agents (Format Compact)     |
-|  - Visualisation des Données (70% Largeur)     |  - Smart Challenge Chips (Défis instantanés)  |
-|  - Requête SQL en Direct (Flip Card Discret)   |  - Console Vocale (Push-to-Talk) / Entrée     |
-|  - Statuts & Indicateurs Clés Métiers          |  - Toggle Sécurité & Mode Démo                |
-+------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+|                                 DUAL-SCREEN WORKSPACE STRUCTURE                                 |
++-------------------------------------------------------------------------------------------------+
+|  ÉCRAN A : LE GRAND ÉCRAN (SHOWCASE / PUBLIC)      |  ÉCRAN B : LE PC CONTRÔLEUR (PRÉSENTATEUR) |
+|  - Orbe Gemini Translucide (Flottant discret)      |  - Carousel Horizontal Compact des Agents  |
+|  - Zone de Document Active (Rendu clean type PDF)   |  - Zone de Chat et Smart Prompt Chips      |
+|  - Données et Graphiques Minimalistes              |  - Bouton "Settings" (Roue crantée)        |
+|  - État de synchronisation discret                 |  - Sélecteur de scénario d'utilisation     |
++-------------------------------------------------------------------------------------------------+
 ```
 
-### Spécifications comparatives des deux écrans
+---
 
-| Caractéristique | ÉCRAN A : Le Grand Écran (Showcase / Public) | ÉCRAN B : Le PC / Tablette (Contrôleur) |
-| :--- | :--- | :--- |
-| **Cible** | Le public du salon, les spectateurs. | Le présentateur ou le client manipulant la démo. |
-| **Priorité Visuelle** | L'**Orbe Gemini Live** et les **Résultats de données** (Graphiques et tableaux épurés). | La **sélection rapide d'agents** et la **saisie de questions**. |
-| **Composant Phare** | `DynamicDataCanvas` : Rendu Markdown ultra-pro avec animations d'apparition des lignes. | `AgentSwitcherGrid` + `SmartChips` : Boutons compacts réactifs au clic/tactile. |
-| **Affichage Technique** | `SQLFlipCard` qui se retourne élégamment lors de l'exécution pour montrer la requête BigQuery. | Console de logs simplifiée indiquant l'état de la connexion au Data Agent Kit. |
-| **Taille Textes** | Titres en `text-4xl` ou `text-5xl` pour une lecture à 3 mètres. | Textes compacts en `text-sm` et `text-xs` pour optimiser l'espace. |
+## 📦 3. Reconstruction des Composants Clés
+
+### A. Le Carousel de "Scènes" (Agents Sectoriels) - Style NotebookLM
+Les agents s'affichent sous forme de **petits carnets de notes alignés horizontalement** avec un défilement fluide.
+- **Structure des Cartes :** Hauteur limitée (`h-36`), bordure pastel supérieure, icône monochrome, titre (`text-sm font-semibold`), description (`text-xs text-slate-500`) et badge source.
+- **Flèches & Modal Galerie :** Flèches au survol + bouton **"Afficher tout"** (`Grid` icon) ouvrant un catalogue complet.
+
+### B. Le Canvas de Résultats & SQL Inspector
+- Rendu type **page de document épurée** avec lignes séparatrices gris clair.
+- SQL Inspector relégué dans un onglet discret en accordéon *"Détails techniques : Requête générée par Vertex AI"*.
+
+### C. Le Dock d'Entrée & L'Orbe Gemini Live (Version Light)
+- Orbe translucide en verre dépoli (`bg-white/40 backdrop-blur-md border-white/60`) avec vagues en dégradé bleu ciel et violet pastel.
+- Dock arrondi (`rounded-3xl`) inspiré de Gemini Enterprise.
+
+### D. Le Panneau "Settings" (Roue Crantée)
+Tiroir latéral (Drawer) pour ajuster les thèmes visuels, le Text-to-Speech et l'état Dataplex.
 
 ---
 
-## 🔮 3. L'Orbe Gemini Live : Le "Cœur" de l'Interface
-
-L'avatar vocal est un **orbe fluide vectoriel (Canvas/SVG)** calqué sur l'expérience mobile de **Gemini Live**, avec des vagues organiques oscillantes.
+## 📋 4. Master Specification & Prompt de Reconstitution (Prompt Maître)
 
 ```text
-  [Idle State]             [Listening State]           [Thinking State]           [Speaking State]
-    Soft Glow             Active Soundwaves           Spinning Gradients            Pulse Wave
-     (Bleu)                 (Bleu/Indigo)               (Gemini Gradient)           (Cyan/Turquoise)
-```
+Tu es Antigravity, un développeur Full-Stack Google Cloud et un Designer UX/UI d'exception, spécialisé dans les interfaces B2B haut de gamme (style Google Workspace / NotebookLM).
+Ta mission est de reconstruire l'application "Talk to Data" avec une esthétique "Light & Minimalist" moderne, propre, et fluide.
 
-### Les 4 États de l'Orbe Fluidique
+CONSIGNES STRICTES DE DESIGN (Tailwind CSS) :
 
-| État | Comportement de l'Orbe | Palette de Couleurs |
-| :--- | :--- | :--- |
-| **Idle (Attente)** | Pulsation lente et circulaire (effet de respiration). | `#3B82F6` (Bleu Royal) avec opacité à 40%. |
-| **Listening (Écoute)** | L'orbe se transforme en ondes de fréquences vocales (Soundwaves) réactives au volume du micro. | `#38BDF8` (Cyan) fusionnant vers le `#6366F1` (Indigo). |
-| **Thinking (Réflexion SQL)** | Rotation fluide et continue d'un anneau de gradient double (symbole de la génération BigQuery). | Gradient complet Gemini : Rose, Violet, Indigo, Bleu. |
-| **Speaking (Parole / Synthèse)** | Ondulations douces et concentriques s'étendant vers l'extérieur au rythme de la voix (TTS). | `#22C55E` (Émeraude) à `#0EA5E9` (Sky Blue). |
+1. THÈME GLOBAL ("On sort du sombre") :
+   - Fond de l'application : Gris/blanc ultra-pro `bg-[#F8F9FA]` agrémenté de légers dégradés de bleus et de lavande subtils en arrière-plan (`from-[#EEF2F6] to-[#E0E7FF]/30`).
+   - Surfaces et Cartes (Bento) : Blanc pur `bg-white` avec une bordure fine et discrète `border-slate-100` et une ombre douce `shadow-[0_2px_12px_rgba(0,0,0,0.03)]`.
+   - Boutons et puces actives : Bleu Google standard `bg-blue-600 hover:bg-blue-700 text-white`.
+   - Coins : `rounded-2xl` (16px) pour les cartes et `rounded-3xl` (24px) pour les conteneurs majeurs et le dock de chat.
 
----
+2. LE CAROUSEL DE SCÈNES (Format NotebookLM) :
+   - Crée un défilement horizontal fluide des 11 agents sectoriels.
+   - Les cartes doivent être compactes (hauteur limitée, max `h-36`).
+   - Chaque carte affiche une icône monochrome discrète, un liseré pastel thématique selon son secteur, un titre en `text-sm font-semibold`, et une description en `text-xs text-slate-500`.
+   - Ajoute des flèches de navigation gauche/droite discrètes au survol et un bouton "Afficher tout" qui ouvre une vue galerie complète.
 
-## 🛠️ 4. La Grille des 11 Agents (Design Épuré)
+3. LE MODULE LIVE & L'ORBE GEMINI LIGHT :
+   - L'Orbe Gemini adopte un style "Glassmorphism" : une sphère translucide `bg-white/30 backdrop-blur-md` avec de légères vagues ondulantes en dégradé bleu ciel et violet pastel, coordonnées avec l'activité vocale (écoute, réflexion, parole).
+   - Supprime tout bouton "Connecter à BigQuery" ou badge de connexion jaune/fluo. Remplace-le par un indicateur d'état passif et minimaliste : un point vert discret `• Connecté` à côté de la source de données.
+   - Le Canvas de Résultats ressemble à un document PDF/Rapport imprimé épuré, avec des tableaux aux bordures grises ultra-fines.
 
-Chaque agent est affiché sous forme d'une carte Bento sobre avec des **icônes monochromes raffinées** et de subtils badges gris-bleutés.
-
-| Agent ID | Icône | Couleur Thématique (Subtile) | Positionnement Métier (B2B) |
-| :--- | :--- | :--- | :--- |
-| **sully** | `UserCheck` | `text-blue-400` | RH & Vacance des Postes Publics |
-| **credit_advisor** | `TrendingUp` | `text-sky-400` | Risque Crédit & Provisionnement IFRS 9 |
-| **net_arch** | `Cpu` | `text-indigo-400` | Télécoms & Maintenance IoT 5G |
-| **earth_intel** | `Globe` | `text-teal-400` | Satellite, Télédétection & Déforestation |
-| **transit_navigator** | `Navigation` | `text-cyan-400` | Logistique & Transports Publics |
-| **pulse_checker** | `Activity` | `text-emerald-400` | Santé Publique & Gestion des Urgences |
-| **shelf_optimizer** | `Package` | `text-blue-300` | CPG Retail & Optimisation des Stocks |
-| **arena_manager** | `Award` | `text-indigo-300` | Sport & Performance Énergétique |
-| **helios** | `Zap` | `text-amber-400` | Bornes Électriques & Réseau Intelligent |
-| **ceres** | `Leaf` | `text-green-400` | Bilans ACV & Agroécologie |
-| **cine_analyst** | `Film` | `text-violet-400` | Analyse du Box-Office & ROI Cinéma |
-
----
-
-## 📋 5. Master Specification & Prompt de Reconstitution (Prompt Maître)
-
-```text
-Tu es Antigravity, un développeur Full-Stack Google Cloud et un Designer UX/UI d'exception.
-Ta mission est de coder l'application web double écran "Talk to Data" connectée aux Vertex AI Data Agents.
-
-CONSIGNES STRICTES DE STYLE & STRUCTURE ("Google Fluid Blue") :
-
-1. ARCHITECTURE D'ÉCRAN DOUBLE :
-   - Écran A (Grand Écran / Présentation) : Épuré, immersif. Met en valeur l'Orbe Gemini (centre) et le Canvas des Résultats (70% de la largeur). Intègre le composant SQLFlipCard qui se retourne pour afficher la requête BigQuery native avec coloration syntaxique SQL.
-   - Écran B (PC / Contrôleur) : Dense et ergonomique. Affiche la grille des 11 agents en cartes compactes, un panneau de Push-to-Talk pour la voix, et les Smart Challenge Chips sous forme de boutons d'action rapide.
-
-2. PALETTE & THÉMATIQUE GEMINI :
-   - Fond global : Dégradé bleu marine mat profond `bg-gradient-to-br from-[#020617] via-[#070F2B] to-[#0A192F]`. Fini le noir absolu ou les halos fluorescents.
-   - Surfaces Bento : `bg-[#0B132B]/60` avec des bordures très fines et élégantes `border-slate-800/80` et un effet de flou backdrop-blur-md.
-   - Accents : Utilise exclusivement un gradient fluide Gemini de bleu royal à indigo pour les actions clés (`from-sky-400 via-blue-500 to-indigo-500`).
-
-3. ORBE GEMINI LIVE VECTOREL :
-   - Coder l'avatar vocal sous forme de composant SVG dynamique simulant l'orbe de Gemini Live.
-   - Implémenter 4 états animés : 
-     * Idle : Pulsation bleue douce circulaire.
-     * Listening : Ondes de fréquences réactives au micro (cyan/indigo).
-     * Thinking : Rotation d'un anneau de gradient Gemini multicolore.
-     * Speaking : Ondulations concentriques fluides vertes/bleues coordonnées avec la synthèse vocale.
-
-4. ICÔNES ET COMPACITÉ :
-   - Utilise des icônes unicolores et sobres.
-   - Masque par défaut les données techniques lourdes (comme le nom complet du Dataset BigQuery) et affiche-les uniquement au survol dans un petit badge de métadonnées discret (`text-slate-500 text-[11px]`).
-
-5. RÉSILIENCE :
-   - Si l'appel API à l'agent échoue (ex: 404/500), affiche une notification d'erreur élégante et propose un mode dégradé gracieux (Visualisation d'exemples hors-ligne).
+4. PAGE SETTINGS :
+   - Intègre un bouton "Paramètres" (roue crantée) ouvrant un tiroir latéral (Drawer) ou une modal pour configurer le look and feel : changement de pack de couleurs, vitesse d'oscillation de l'orbe, activation du Text-to-Speech et sélection des agents à afficher.
 ```

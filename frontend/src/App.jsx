@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Header } from './components/Header';
 import { AgentBuilder } from './components/AgentBuilder';
 import { LiveCanvas } from './components/LiveCanvas';
+import { SettingsDrawer } from './components/SettingsDrawer';
 import { useSpeech } from './hooks/useSpeech';
 import { useAgentChat } from './hooks/useAgentChat';
 import { COLOR_THEMES } from './utils/themeMap';
@@ -12,6 +13,7 @@ export function App() {
   const [selectedAgent, setSelectedAgent] = useState(null);
   const [viewMode, setViewMode] = useState('builder'); // 'builder' (Phase 1) vs 'live' (Phase 2)
   const [screenMode, setScreenMode] = useState('showcase'); // 'showcase' (Écran A) vs 'controller' (Écran B)
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -70,14 +72,11 @@ export function App() {
     speechProps.stopSpeaking();
   };
 
-  const colorKey = selectedAgent?.theme?.color || 'indigo';
-  const theme = COLOR_THEMES[colorKey] || COLOR_THEMES.indigo;
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#020617] via-[#070F2B] to-[#0A192F] text-slate-100 flex flex-col relative transition-all duration-500">
+    <div className="min-h-screen bg-[#F8F9FA] text-[#1F1F1F] flex flex-col relative transition-all duration-300">
       
-      {/* Background ambient lighting */}
-      <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-sky-500/10 via-transparent to-transparent pointer-events-none" />
+      {/* Subtle Background Ambient Radial Gradient (NotebookLM Style) */}
+      <div className="absolute top-0 inset-x-0 h-[450px] bg-gradient-to-tr from-[#EEF2F6] via-[#F1F5F9] to-[#E0E7FF]/30 pointer-events-none" />
 
       {/* App Header */}
       <Header
@@ -88,18 +87,19 @@ export function App() {
         isSpeaking={speechProps.isSpeaking}
         screenMode={screenMode}
         setScreenMode={setScreenMode}
+        onOpenSettings={() => setIsSettingsOpen(true)}
       />
 
       {/* Main Content Area */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6 relative z-10">
         
         {loading ? (
-          <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-400">
-            <Loader2 className="w-8 h-8 animate-spin text-sky-400 mb-3" />
-            <p className="text-sm font-medium">Initialisation du Quick Builder & des 11 Agents BigQuery Vertex AI...</p>
+          <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-500">
+            <Loader2 className="w-8 h-8 animate-spin text-blue-600 mb-3" />
+            <p className="text-sm font-medium">Chargement du Workspace Google & des 11 Agents BigQuery...</p>
           </div>
         ) : error ? (
-          <div className="p-6 rounded-2xl bg-[#0B132B] border border-rose-500/30 text-rose-300 text-center max-w-lg mx-auto my-12">
+          <div className="p-6 rounded-2xl bg-white border border-rose-200 text-rose-700 text-center max-w-lg mx-auto my-12 shadow-sm">
             <p className="text-sm font-semibold mb-3">{error}</p>
             <button
               onClick={fetchAgents}
@@ -110,7 +110,7 @@ export function App() {
             </button>
           </div>
         ) : viewMode === 'builder' ? (
-          /* Phase 1: AI Quick Builder (Configuration) */
+          /* Phase 1: NotebookLM Style Workspace Carousel & Scene Builder */
           <AgentBuilder
             agents={agents}
             selectedAgent={selectedAgent}
@@ -118,7 +118,7 @@ export function App() {
             onLaunchLive={handleLaunchLive}
           />
         ) : (
-          /* Phase 2: Live Experience (Interactive Bento Grid Game Board) */
+          /* Phase 2: Live Experience (Interactive Bento Grid Board) */
           <LiveCanvas
             selectedAgent={selectedAgent}
             onReturnToBuilder={handleReturnToBuilder}
@@ -138,9 +138,19 @@ export function App() {
 
       </main>
 
+      {/* Settings Drawer Modal */}
+      <SettingsDrawer
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+        autoSpeechEnabled={speechProps.autoSpeechEnabled}
+        setAutoSpeechEnabled={speechProps.setAutoSpeechEnabled}
+        selectedAgent={selectedAgent}
+        agentsCount={agents.length}
+      />
+
       {/* Footer */}
-      <footer className="w-full py-4 border-t border-slate-800/80 bg-[#0B132B]/60 backdrop-blur-md text-center text-xs text-slate-400 mt-auto">
-        <p>Talk to Data • BigData Paris 2026 • Google Cloud BigQuery Conversational Analytics • Vertex AI Data Agents</p>
+      <footer className="w-full py-4 border-t border-slate-200 bg-white text-center text-xs text-slate-500 mt-auto">
+        <p>Talk to Data • Google Light Workspace • BigData Paris 2026 • Vertex AI Data Agents</p>
       </footer>
 
     </div>
