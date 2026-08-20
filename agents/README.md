@@ -1,51 +1,51 @@
-# TalkToData — Directory Architecture & Data Agent Specifications
+# 📂 Architecture du Dossier `agents/` — Spécifications & Valeur Métier
 
-Welcome to the `agents/` core directory of **TalkToData**. This folder contains the 11 specialized AI Data Analytics Agents deployed on **Google Cloud Platform (GCP)** using **Vertex AI Data Agents** (`geminidataanalytics.googleapis.com`), **BigQuery**, **Cloud Storage (GCS)**, and **Dataplex Knowledge Catalog**.
+Bienvenue dans le répertoire cœur `agents/` de **TalkToData**. Ce dossier contient l'ensemble des définitions, schémas DDL, pipelines de données, payloads d'agents et configurations de gouvernance pour les **11 Agents d'Intelligence Décisionnelle** déployés sur **Google Cloud Platform (GCP)** via **Vertex AI Data Agents** (`geminidataanalytics.googleapis.com`), **BigQuery** et **Dataplex Knowledge Catalog**.
 
 ---
 
-## Standard Agent Directory Structure
+## 🏗️ Structure Standardisée d'un Agent
 
-Every Data Agent directory adheres to a strict, standardized production architecture:
+Chaque dossier d'agent suit une architecture de niveau production stricte et homogène :
 
 ```text
-agents/<agent_name>/
-├── ddl_setup.sql              # BigQuery DDL schema script with exact column types, descriptions & GEOGRAPHY points
-├── generate_data.py           # Relational data generator & Open Data ingestion pipeline
-├── agent_payload.json         # Vertex AI Data Agent configuration (System prompt, table refs, natural language queries, glossaries)
-├── business_catalog_config.json # Dataplex / Knowledge Catalog metadata (Overview, Contacts, Labels, Aspects, Rules, FQN)
-├── deploy_agent.py            # Individual deployment script calling geminidataanalytics API
-└── data/                      # Local workspace storing authentic Open Data CSV/XLSX files & exports
+agents/<nom_agent>/
+├── ddl_setup.sql              # Script DDL BigQuery (Tables structurées, typage explicite & points GEOGRAPHY)
+├── generate_data.py           # Pipeline d'ingestion Open Data & Génération de données métiers relationnelles
+├── agent_payload.json         # Payload Vertex AI (Prompts système, tables BQ, requêtes validées & glossaires métiers)
+├── business_catalog_config.json # Configuration Dataplex / Knowledge Catalog (Aperçu, contacts, labels, aspects, règles)
+├── deploy_agent.py            # Script de déploiement individuel appelant l'API geminidataanalytics
+└── data/                      # Stockage des fichiers CSV/XLSX officiels et des tables d'objets GCS
 ```
 
 ---
 
-## Summary of the 11 Industry Data Agents
+## 📊 Matrice d'Impact & Valeur Métier des 11 Agents Data
 
-| Agent Folder | Agent ID | Display Name | Industry Domain & Executive ROI | BigQuery Dataset |
+| Agent | Domaine | Problématique Métier Cible | Valeur Ajoutée & ROI Concret | Dataset BigQuery |
 | :--- | :--- | :--- | :--- | :--- |
-| `pulse_checker` | `pulse-checker-agent` | **PulseChecker - Copilote Santé** | Identifies medical deserts (RPPS), targets private clinic expansion (5-year EBITDA), prevents drug shortages, and regulates ER capacity (Plans Blancs). | `public_sector_healthcare_ds` |
-| `shelf_optimizer` | `shelf-optimizer-agent` | **ShelfOptimizer - Merchandising Retail** | Audits planogram compliance, eliminates visual shelf-outs, reduces fresh food waste (14-day prediction), and optimizes national vs private label margins. | `retail_cpg_optimization_ds` |
-| `sully` | `sully-agent` | **Sully - France Travail & Emploi Public** | Anticipates hiring tensions (BMO 2025), leverages ROME 4.0 (12,243 occupations), audits URSSAF employers, ATS matching, and tracks 300 clean PDF resumes on GCS. | `public_sector_employment_ds` |
-| `transit_navigator` | `transit-navigator-agent` | **TransitNavigator - Transports & Mobilité** | Analyzes traveler volume across 3,000+ SNCF stations, train delays/SLA, tap-in turnstile validations (`ST_GEOGPOINT`), and lost & found item resolution. | `transport_mobility_ds` |
-| `arena_manager` | `arena-manager-agent` | **ArenaManager - Sport & Stades RES** | Maximizes stadium ticket sales & VIP hospitality suites, food/beverage concessions, audits sports facility energy waste (RES census), and ANS grants. | `sports_infrastructure_ds` |
-| `earth_intel` | `earthintel-agent` | **EarthIntel - Imagerie Satellitaire** | Unifies GCS Object Tables & BigQuery for Sentinel-2 satellite imagery (10m), flood/fire hazard scores, NDVI crop stress, and CSRD zero-deforestation. | `skywatch_aerospace_ds` |
-| `helios` | `helios-agent` | **Helios - Énergie & Bornes IRVE Enedis** | Optimizes 10,000 Enedis EV charging stations (IRVE), monitors 30-min transformer load curves, renewable energy injection, and B2B industrial demand response. | `energy_utilities_ds` |
-| `net_arch` | `net-arch-agent` | **NetArch - Architecture Réseau Télécom** | Monitors ARCEP 4G/5G mobile coverage across 10,000 cell towers (Orange, SFR, Bouygues, Free), 3.5 GHz spectrum allocation, QoS latency, and NOC incident resolution. | `telecom_network_ds` |
-| `credit_advisor` | `credit-advisor-agent` | **CreditAdvisor - Risque Crédit & Finance** | Detects corporate insolvency risks before bankruptcy, aligns credit policies with Banque de France BLS surveys, models IFRS 9 ECL staging, and B2B upsell. | `financial_banking_ds` |
-| `ceres` | `ceres-agent` | **Ceres - Transition Agroécologique** | Predicts weather-driven crop yield drops, models ADEME Agribalyse 3.1 ACV lifecycle environmental footprint, Low-Carbon Label credits, and ESG reporting. | `agriculture_rural_ds` |
-| `cine_analyst` | `cine-analyst-agent` | **CineAnalyst - Box-Office Cinéma CNC** | Unifies CNC historical box-office series, theater ticket pricing, regional audience distribution, screen capacity, and movie production profitability. | `cinema_boxoffice_ds` |
+| **Sully** | Emploi & RH | Pénuries de compétences & vacance prolongée (+6m) des postes. | **Réduction des coûts de vacance** (ex: Hôpital national de paris), captation des subventions POEI/AFPR, et jointure native Object Table GCS vers les CVs PDF d'origine. | `public_sector_employment_ds` |
+| **CreditAdvisor** | Banque & Crédit | Risque de défaillance PME/ETI et encours d'impayés. | **Optimisation de la marge d'intérêt (RAROC)**, scoring de faillite prédictif, provisionnement IFRS 9 (ECL) et ciblage d'upsell lignes de trésorerie. | `financial_banking_ds` |
+| **NetArch** | Télécoms ARCEP | Saturation des antennes 5G, pannes matérielles & MTTR. | **Maximisation de l'ARPU**, maintenance prédictive IoT des pylônes à 7 jours, supervision QoS et respect des SLA B2B. | `telecom_network_ds` |
+| **EarthIntel** | Géospatial & Spatial | Exposition aux risques climatiques et exigences CSRD. | **Évaluation des risques du portefeuille d'actifs** via Sentinel-2 (10m), santé chlorophyllienne NDVI, élagage lignes HT et preuve Zéro Déforestation. | `skywatch_aerospace_ds` |
+| **TransitNavigator** | Transports Publics | Retards ferroviaires, pénalités SLA et remplissage 1ère classe. | **Yield Management billetterie** (+12% de panier moyen), isolation des causes de retard (Infra vs Matériel) et fréquentation des 3 000+ gares. | `transport_mobility_ds` |
+| **PulseChecker** | Santé & Hôpitaux | Saturation des urgences, absentéisme & déserts médicaux. | **Régulation des urgences hospitalières** (Plan Blanc), prévention des ruptures de stock de médicaments (≤5 jours) et EBITDA cliniques RPPS. | `public_sector_healthcare_ds` |
+| **ShelfOptimizer** | Retail & CPG | Ruptures visuelles (Shelf-Out) et démarque rayon Frais. | **Éradication des Shelf-Out**, prédiction du gâchis produits frais à 14 jours, et bundles cross-selling Marques Nationales vs MDD. | `retail_cpg_ds` |
+| **ArenaManager** | Sport & Stades | Sous-remplissage des loges VIP et gaspillage énergétique. | **Maximisation des recettes de billetterie/buvettes**, audit énergétique des complexes sportifs (RES) et suivi des subventions ANS. | `sports_infrastructure_ds` |
+| **Helios** | Énergie & IRVE Enedis | Saturation des transformateurs et raccordement des bornes EV. | **Supervision des 10 000 bornes IRVE**, télémesure des charges HTA/BT, injection d'énergies renouvelables et flexibilité d'effacement B2B. | `power_energy_ds` |
+| **Ceres** | Agroécologie | Aléas climatiques sur les récoltes et reporting ESG. | **Pilotage des rendements à l'hectare**, valorisation du Label Bas-Carbone (crédits CO2e) et bilan ACV ADEME Agribalyse 3.1. | `agriculture_rurality_ds` |
+| **CineAnalyst** | Cinéma & Box-Office | Arbitrage des sorties de films et rentabilité des salles. | **Analyse de la rentabilité Box-Office (ROI)**, fréquentation des formats immersifs (IMAX/4DX) et part de marché par nationalité. | `cinema_boxoffice_ds` |
 
 ---
 
-## How to Add a New Industry Data Agent
+## 🛠️ Guide de Création d'un Nouvel Agent Métier
 
-To add a 12th Data Agent to TalkToData:
+Pour ajouter un 12ème Agent d'Intelligence Décisionnelle à la plateforme :
 
-1. **Create Directory** : `mkdir agents/my_new_agent`
-2. **Define DDL Schema** : Write `agents/my_new_agent/ddl_setup.sql` with strict BigQuery column types and descriptions.
-3. **Data Generator** : Create `agents/my_new_agent/generate_data.py` to ingest Open Data CSVs and load BigQuery.
-4. **Agent Payload** : Create `agents/my_new_agent/agent_payload.json` with system prompt, table references, high-ROI natural language queries, and glossary terms.
-5. **Business Catalog Config** : Write `agents/my_new_agent/business_catalog_config.json` with Overview, Contacts, Labels, Aspects, Data Quality Rules, and FQN.
-6. **Deployment Script** : Create `agents/my_new_agent/deploy_agent.py` calling `geminidataanalytics.googleapis.com`.
-7. **Register in Master Pipeline** : Add `my_new_agent` to `deploy_all.py` and `download_authentic_opendata.py`.
+1. **Créer le dossier** : `mkdir agents/nom_de_mon_agent`
+2. **Écrire le schéma DDL** : Créer `agents/nom_de_mon_agent/ddl_setup.sql` avec le typage BigQuery et les descriptions de colonnes.
+3. **Ingérer les données** : Créer `agents/nom_de_mon_agent/generate_data.py` pour ingérer les bases Open Data et alimenter BigQuery.
+4. **Configurer le Payload Vertex AI** : Rédiger `agents/nom_de_mon_agent/agent_payload.json` avec les consignes métier, les requêtes validées (en tête les questions réelles métiers) et les termes du Knowledge Catalog.
+5. **Gouvernance Dataplex** : Créer `agents/nom_de_mon_agent/business_catalog_config.json` pour la gouvernance de données.
+6. **Script de Déploiement** : Créer `agents/nom_de_mon_agent/deploy_agent.py` interagissant avec l'API `geminidataanalytics.googleapis.com`.
+7. **Enregistrer l'Agent** : Ajouter l'agent dans `deploy_all_agents.py`.
