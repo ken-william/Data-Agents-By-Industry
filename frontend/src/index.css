@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 :root {
-  /* Palette Chromatique - Google Fluid Blue */
-  --bg-gradient: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%);
-  --bento-bg: rgba(15, 23, 42, 0.45);
-  --bento-border: rgba(51, 65, 85, 0.5);
-  --bento-border-active: rgba(56, 189, 248, 0.55);
+  /* Palette Chromatique - Google Fluid Blue Aurora */
+  --bento-bg: rgba(15, 23, 42, 0.55);
+  --bento-border: rgba(51, 65, 85, 0.6);
+  --bento-border-active: rgba(56, 189, 248, 0.7);
   --gemini-gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
   
   /* Typographie Google Flex */
@@ -21,12 +20,27 @@
   --lumi-shape-corner-full: 9999px;
   --radius-card: 16px;
   --radius-pill: 9999px;
-  --glow-active: 0 0 25px rgba(56, 189, 248, 0.15);
+  --glow-active: 0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+@keyframes aurora-mesh {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.google-aurora-bg {
+  background: linear-gradient(-45deg, #020617, #070F2B, #0F172A, #1E1B4B, #0A192F);
+  background-size: 400% 400%;
+  animation: aurora-mesh 18s ease infinite;
 }
 
 @layer base {
   body {
-    background: var(--bg-gradient);
+    @apply google-aurora-bg;
     color: var(--text-primary);
     font-family: var(--font-family-google);
     min-height: 100vh;
@@ -59,7 +73,7 @@
   margin-top: 4px;
 }
 
-/* Barre de recherche Gemini avec Glow Radial */
+/* Barre de recherche Gemini avec Glow Radial Ultra-Subtil */
 .search-bar-wrapper {
   position: relative;
   width: 100%;
@@ -72,80 +86,81 @@
 
 .search-bar-glow {
   position: absolute;
-  top: -30px;
+  top: -25px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  height: 70px;
+  width: 90%;
+  height: 60px;
   border-radius: var(--lumi-shape-corner-full);
-  background: radial-gradient(100% 100% at 50% 8%, rgba(56, 189, 248, 0.35) 0%, rgba(99, 102, 241, 0.2) 50%, transparent 100%);
-  opacity: 0.7;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(99, 102, 241, 0.15) 60%, transparent 100%);
+  opacity: 0.8;
   pointer-events: none;
-  filter: blur(10px);
+  filter: blur(15px);
 }
 
 .search-bar-container {
   width: 100%;
-  background-color: rgba(30, 41, 59, 0.75);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 28px;
-  padding: 14px 22px;
-  font-size: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+  padding: 10px 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar-container:focus-within {
   border-color: #38bdf8;
-  box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
   background-color: rgba(15, 23, 42, 0.9);
 }
 
-/* Extension Chips (Bulles Capsules Compactes Single-Row Exact Image Match) */
+/* Extension Chips (Bulles Capsules Compactes Single-Row) */
 .extension-chips-container {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: 14px;
-  margin-bottom: 14px;
   overflow-x: auto;
   padding: 4px 2px;
   scrollbar-width: none;
-  justify-content: center;
+}
+
+.extension-chips-container::-webkit-scrollbar {
+  display: none;
 }
 
 .chip {
   display: flex;
   align-items: center;
   white-space: nowrap;
-  padding: 6px 14px;
+  padding: 7px 15px;
   background-color: rgba(15, 23, 42, 0.65);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid rgba(148, 163, 184, 0.25);
   border-radius: 9999px; /* Forme capsule officielle Gemini */
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   shrink: 0;
+  backdrop-filter: blur(8px);
 }
 
 .chip.active {
-  background-color: rgba(56, 189, 248, 0.15);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.25);
+  background-color: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
 }
 
 .chip:hover {
-  background-color: rgba(30, 41, 59, 0.85);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  background-color: rgba(30, 41, 59, 0.9);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transform: translateY(-1px);
 }
 
 .img-container {
   width: 18px;
   height: 18px;
-  margin-right: 7px;
+  margin-right: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,8 +188,8 @@
 .bento-card, .agent-card {
   background: var(--bento-bg);
   border: 1px solid var(--bento-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: var(--radius-card);
   padding: 20px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -186,7 +201,7 @@
 }
 
 .agent-card-active {
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(15, 23, 42, 0.85);
   border: 2px solid #38bdf8;
   box-shadow: var(--glow-active);
   border-radius: var(--radius-card);

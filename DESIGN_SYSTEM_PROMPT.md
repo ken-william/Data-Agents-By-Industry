@@ -1,67 +1,87 @@
-# Master Specification & Prompt System - Talk to Data (Google Fluid Blue Minimalist Landing Page)
+# Master Specification & Prompt System - Talk to Data (Google Fluid Blue Aurora)
 
 Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** pour les événements B2B (BigData Paris 2026, Google Cloud Next).
 
 ---
 
-# 🎨 1. Le Design System "Google Fluid Blue" (Minimalist Landing Page)
+# 🎨 1. Le Design System "Google Fluid Blue Aurora" (CSS Mesh Gradient & Frosted Glass)
 
 ```css
 :root {
-  /* Palette Chromatique - Google Fluid Blue */
-  --bg-gradient: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%);
-  --bento-bg: rgba(15, 23, 42, 0.45);
-  --bento-border: rgba(51, 65, 85, 0.5);
-  --bento-border-active: rgba(56, 189, 248, 0.55);
+  /* Palette Chromatique - Google Fluid Blue Aurora */
+  --bento-bg: rgba(15, 23, 42, 0.55);
+  --bento-border: rgba(51, 65, 85, 0.6);
+  --bento-border-active: rgba(56, 189, 248, 0.7);
   --gemini-gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
   
-  /* Typographie Premium */
+  /* Typographie Google Flex */
   --font-family-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --text-dark: #0f172a;
 
   /* Formes et Animations */
   --radius-card: 16px;
-  --radius-pill: 9999px; /* Forme capsule officielle Gemini */
-  --glow-active: 0 0 25px rgba(56, 189, 248, 0.15);
+  --radius-pill: 9999px;
+  --glow-active: 0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+/* Animation Mesh Gradient Ultra-Lisse (Aucune ligne de coupure) */
+@keyframes aurora-mesh {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.google-aurora-bg {
+  background: linear-gradient(-45deg, #020617, #070F2B, #0F172A, #1E1B4B, #0A192F);
+  background-size: 400% 400%;
+  animation: aurora-mesh 18s ease infinite;
 }
 ```
 
 ---
 
-# 🖥️ 2. Architecture Double Écran & Landing Page Simplifiée
+# 🖥️ 2. Header Épuré & Configuration Écran A / B via Paramètres
 
-### Phase 1 : Landing Page Épurée Gemini (Page 1)
-La première vue est entièrement centrée, aérée et minimale :
-1. **Logo Sparkle Aurora & Titre Dégradé** : Logo Gemini + "Talk to Data" (dégradé bleu/rose) + "Let's get some work done!".
-2. **Barre de Recherche Centrale & Bouton Rond Bleu** :
-   - Champ de recherche avec halo lumineux radial (`search-bar-glow`).
-   - Bouton rond bleu à droite de la barre pour lancer l'expérience Live (`Rocket` icon).
-3. **Rangée de Capsules Scénarios (`ScenarioChips`)** :
-   - Rangée horizontale de puces capsules compactes (`rounded-full`) servant de sélecteur d'agent direct.
+### Header Minimaliste sans Boutons d'Écran
+Le Header ne contient plus les boutons de basculement Écran A / Écran B :
+- Logo + Titre "Talk to Data | BigData Paris 2026".
+- Bouton Synthèse Vocale (Voix Active / Muette).
+- Bouton Paramètres (Roue Crantée `Settings`).
 
-### Phase 2 : Live Experience (Page 2 - Dual Screen)
-- **ÉCRAN A (Showcase Public)** : Orbe Gemini Live à vagues physiques (Centre) + Data Canvas 70% largeur + SQLFlipCard 3D (Looker KPI vs SQL néon BigQuery).
-- **ÉCRAN B (Contrôleur Tactile)** : Dock d'entrée fixe anti-bruit + Push-to-Talk + Smart Chips.
+### Configuration Écran A / Écran B dans le Tiroir Settings
+Le choix de l'écran se fait exclusivement dans le panneau **Paramètres** (`SettingsDrawer.jsx`) :
+- **Bouton Écran A : Showcase (Grand Écran)** : Bascule la fenêtre courante sur le mode Showcase avec l'Orbe Gemini Live géant et le Data Canvas 70%.
+- **Bouton Écran B : Contrôleur Tactile (PC / Tablette)** : Bascule la fenêtre sur la vue console présentateur.
+- **Lien Ouvrir dans un nouvel onglet** (`?screen=showcase` ou `?screen=controller`) pour attribuer un écran physique distinct à chaque moniteur.
 
 ---
 
-# 📋 3. Master Specification & Prompt de Reconstitution (Prompt Maître)
+# 🛠️ 3. Navigation par Flèches sur les Capsules Scénarios (`ScenarioChips`)
+
+Le composant `ScenarioChips` intègre des boutons de défilement gauche et droite (`ChevronLeft`, `ChevronRight`) survolants et cliquables pour faire défiler de manière fluide l'ensemble des 11 capsules d'agents sur tous les types d'écrans.
+
+---
+
+# 📋 4. Master Specification & Prompt de Reconstitution (Prompt Maître)
 
 ```text
 Tu es Antigravity, un développeur Full-Stack Google Cloud et un Designer UX/UI d'exception.
 Ta mission est de coder l'application web double écran "Talk to Data" connectée aux Vertex AI Data Agents.
 
-CONSIGNES STRICTES DE DESIGN POUR LA LANDING PAGE (Phase 1) :
+CONSIGNES STRICTES DE DESIGN DE FINITION :
 
-1. SUPPRESSION DU CATALOGUE EN BAS :
-   - Supprime la grille des 11 cartes d'agents et le panneau latéral de connexion.
-   - La sélection d'agent se fait exclusivement via les bulles de scénarios horizontales compactes (ScenarioChips).
+1. ARRIÈRE-PLAN ANIMÉ AURORA SMOOTH :
+   - Supprime tout radial-gradient créant une ligne visible au milieu.
+   - Utilise un dégradé animé linéaire multi-couches fluide (linear-gradient(-45deg, #020617, #070F2B, #0F172A, #1E1B4B, #0A192F)) avec animation mesh 18s.
 
-2. COMPOSITION CENTRÉE ÉPURÉE :
-   - Centrage vertical et horizontal complet de la page 1.
-   - Logo Gemini Sparkle Aurora + Titre dégradé "Talk to Data" + "Let's get some work done!".
-   - Barre de recherche avec halo lumineux et bouton rond bleu à droite pour déclencher l'expérience Live.
-   - Rangée de capsules scénarios juste en-dessous.
+2. HEADER & CONFIGURATION DES ÉCRANS :
+   - Supprime les boutons Écran A / Écran B du Header.
+   - Intègre la sélection d'écran (Écran A Showcase / Écran B Contrôleur) et le lien "Ouvrir dans un nouvel onglet" uniquement dans le panneau Paramètres (SettingsDrawer).
+
+3. SCROLL FLUIDE SUR LES CAPSULES :
+   - Ajoute des flèches de défilement gauche et droite sur la barre de puces capsules d'agents.
 ```

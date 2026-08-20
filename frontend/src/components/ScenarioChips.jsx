@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { getIconComponent } from '../utils/themeMap';
 
 export const SCENARIOS = [
@@ -16,9 +17,34 @@ export const SCENARIOS = [
 ];
 
 export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMessage }) {
+  const containerRef = useRef(null);
+
+  const scroll = (direction) => {
+    if (containerRef.current) {
+      const amount = direction === 'left' ? -260 : 260;
+      containerRef.current.scrollBy({ left: amount, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="w-full flex items-center justify-center py-1">
-      <div className="extension-chips-container max-w-full" id="scenariosContainer">
+    <div className="w-full flex items-center justify-center gap-2 py-1 max-w-4xl mx-auto px-2 relative group">
+      
+      {/* Scroll Left Button */}
+      <button
+        type="button"
+        onClick={() => scroll('left')}
+        className="p-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all shadow-md shrink-0 opacity-80 hover:opacity-100"
+        title="Défiler vers la gauche"
+      >
+        <ChevronLeft className="w-4 h-4" />
+      </button>
+
+      {/* Extension Chips Scrollable Container */}
+      <div
+        ref={containerRef}
+        className="extension-chips-container max-w-full scroll-smooth"
+        id="scenariosContainer"
+      >
         {SCENARIOS.map((sc) => {
           const isSelected = selectedAgent?.id === sc.id;
           const IconComp = getIconComponent(sc.id);
@@ -45,6 +71,17 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
           );
         })}
       </div>
+
+      {/* Scroll Right Button */}
+      <button
+        type="button"
+        onClick={() => scroll('right')}
+        className="p-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all shadow-md shrink-0 opacity-80 hover:opacity-100"
+        title="Défiler vers la droite"
+      >
+        <ChevronRight className="w-4 h-4" />
+      </button>
+
     </div>
   );
 }

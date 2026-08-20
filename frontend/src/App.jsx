@@ -5,7 +5,6 @@ import { LiveCanvas } from './components/LiveCanvas';
 import { SettingsDrawer } from './components/SettingsDrawer';
 import { useSpeech } from './hooks/useSpeech';
 import { useAgentChat } from './hooks/useAgentChat';
-import { COLOR_THEMES } from './utils/themeMap';
 import { Loader2, RefreshCw } from 'lucide-react';
 
 export function App() {
@@ -16,6 +15,15 @@ export function App() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Read ?screen= URL parameter on initial load
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const screenParam = params.get('screen');
+    if (screenParam === 'showcase' || screenParam === 'controller') {
+      setScreenMode(screenParam);
+    }
+  }, []);
 
   // Voice recognition transcript state
   const [micTranscript, setMicTranscript] = useState('');
@@ -73,11 +81,8 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F9FA] text-[#1F1F1F] flex flex-col relative transition-all duration-300">
+    <div className="min-h-screen google-aurora-bg text-slate-100 flex flex-col relative transition-all duration-300">
       
-      {/* Subtle Background Ambient Radial Gradient (NotebookLM Style) */}
-      <div className="absolute top-0 inset-x-0 h-[450px] bg-gradient-to-tr from-[#EEF2F6] via-[#F1F5F9] to-[#E0E7FF]/30 pointer-events-none" />
-
       {/* App Header */}
       <Header
         selectedAgent={selectedAgent}
@@ -85,8 +90,6 @@ export function App() {
         autoSpeechEnabled={speechProps.autoSpeechEnabled}
         setAutoSpeechEnabled={speechProps.setAutoSpeechEnabled}
         isSpeaking={speechProps.isSpeaking}
-        screenMode={screenMode}
-        setScreenMode={setScreenMode}
         onOpenSettings={() => setIsSettingsOpen(true)}
       />
 
@@ -94,14 +97,15 @@ export function App() {
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6 relative z-10">
         
         {loading ? (
-          <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-500">
-            <Loader2 className="w-8 h-8 animate-spin text-blue-600 mb-3" />
+          <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-400">
+            <Loader2 className="w-8 h-8 animate-spin text-sky-400 mb-3" />
             <p className="text-sm font-medium">Chargement du Workspace Google & des 11 Agents BigQuery...</p>
           </div>
         ) : error ? (
-          <div className="p-6 rounded-2xl bg-white border border-rose-200 text-rose-700 text-center max-w-lg mx-auto my-12 shadow-sm">
+          <div className="p-6 rounded-2xl bg-slate-900 border border-rose-500/40 text-rose-300 text-center max-w-lg mx-auto my-12 shadow-xl">
             <p className="text-sm font-semibold mb-3">{error}</p>
             <button
+              type="button"
               onClick={fetchAgents}
               className="px-4 py-2 rounded-xl bg-rose-600 text-white text-xs font-semibold hover:bg-rose-500 transition-all flex items-center gap-2 mx-auto"
             >
@@ -110,7 +114,7 @@ export function App() {
             </button>
           </div>
         ) : viewMode === 'builder' ? (
-          /* Phase 1: NotebookLM Style Workspace Carousel & Scene Builder */
+          /* Phase 1: Gemini Minimalist Landing Page */
           <AgentBuilder
             agents={agents}
             selectedAgent={selectedAgent}
@@ -144,13 +148,15 @@ export function App() {
         onClose={() => setIsSettingsOpen(false)}
         autoSpeechEnabled={speechProps.autoSpeechEnabled}
         setAutoSpeechEnabled={speechProps.setAutoSpeechEnabled}
+        screenMode={screenMode}
+        setScreenMode={setScreenMode}
         selectedAgent={selectedAgent}
         agentsCount={agents.length}
       />
 
       {/* Footer */}
-      <footer className="w-full py-4 border-t border-slate-200 bg-white text-center text-xs text-slate-500 mt-auto">
-        <p>Talk to Data • Google Light Workspace • BigData Paris 2026 • Vertex AI Data Agents</p>
+      <footer className="w-full py-4 border-t border-slate-800/80 bg-[#020617]/60 text-center text-xs text-slate-500 mt-auto backdrop-blur-md">
+        <p>Talk to Data • Google Fluid Blue Aurora • BigData Paris 2026 • Vertex AI Data Agents</p>
       </footer>
 
     </div>
