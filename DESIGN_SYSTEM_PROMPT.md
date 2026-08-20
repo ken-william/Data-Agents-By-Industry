@@ -1,76 +1,85 @@
-# Master Specification & Prompt System - Talk to Data (Official Google Gemini AI Visual Design)
+# Master Specification & Prompt System - Talk to Data (Vesper x Google Fluid Blue Hybrid Style)
 
-Ce document constitue la **Spécification Complète et le Prompt Système Maître** fondé sur le manifeste officiel de Google Design : *"Illustrating the Gemini App: How dynamic cues help users discover, learn, and master our AI assistant’s evolving features"*.
-
----
-
-# 🎨 1. Les 4 Piliers du Design Visuel Google Gemini AI
-
-### 1. La Directionnalité des Dégradés & Momentum d'Énergie (Gradient Physics)
-* **Vecteurs de Transfert d'Énergie** : Les dégradés possèdent un bord d'attaque net et lumineux qui se diffuse vers l'arrière-plan. Ils agissent comme un **pointeur visuel directionnel** canalisant l'énergie de l'utilisateur vers la barre de recherche et l'Orbe Live.
-* **Le Sparkle & les 4 Couleurs Optimistes Google** : Référence directe aux 4 couleurs emblématiques de Google (Bleu `#4285F4`, Rouge `#EA4335`, Jaune `#FBBC05`, Vert `#34A853`) déclinées en dégradés dynamiques.
-
-### 2. La Symbolique des Formes Circulaires (Foundational Circles)
-* **Cercles, Puces et Formes Spheriques** : La géométrie du cercle transmet simplicité, harmonie et sérénité. Le logo Gemini lui-même est sculpté à partir de l'espace négatif de 4 cercles adjacents.
-* **Boutons, Puces & Dock (`rounded-full` / `border-radius: 9999px`)** : Les capsules de scénarios (`md-menu-item` Material 3) et la barre de recherche adoptent des courbes circulaires ultra-douces.
-
-### 3. Le Mouvement Intentionnel & Réactivité Active (Intentional Motion)
-* **Mouvement comme Guide Visuel** : Chaque animation possède un point de départ et d'arrivée défini pour refléter les actions de l'utilisateur.
-* **Reflet du Raisonnement IA** : La pulsation de l'Orbe et les halos lumineux (`search-bar-glow`) visualisent l'état de réflexion, d'écoute et de synthèse de Gemini.
-
-### 4. La Douceur Éthérée & la Clarté (Embracing Softness)
-* **Surfaces Floues et Spatialisées (`backdrop-blur`)** : Des surfaces dépolies et des lueurs adoucies créent un espace sécurisant et chaleureux, rendant l'IA immédiatement abordable et conviviale.
+Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), combinant la structure épurée et la physique de mouvement de **Vesper.ai** avec le design system **Google Fluid Blue** de Gemini et Gemini Live.
 
 ---
 
-# 🖥️ 2. Spécification Technique Material 3 & Luminous UI
+# 🌌 1. Palette Chromatique & Tokens (Google Fluid Blue)
+
+| Token | Valeur | Rôle dans l'UI |
+| :--- | :--- | :--- |
+| `--bg` | `radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%)` | Fond de viewport sidéral anti-flash. |
+| `--text` | `#f8fafc` (Slate 50) | Texte principal haute lisibilité. |
+| `--muted` | `#94a3b8` (Slate 400) | Descriptions, légendes et métadonnées. |
+| `--border` | `rgba(56, 189, 248, 0.16)` | Bordures actives des cartes et puces. |
+| `--border-soft` | `rgba(99, 102, 241, 0.12)` | Délimiteurs et liserés de repos. |
+| `--gemini-glow` | `rgba(56, 189, 248, 0.15)` | Halo de l'Orbe et de la barre de recherche. |
+| `--gradient-active`| `linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%)` | Accent Gemini pour les boutons principaux. |
+
+---
+
+# 🔮 2. Effets "Liquid-Glass" & Reflet (Shine Sweep)
+
+Les boutons et les capsules de scénarios utilisent un verre semi-transparent avec flou d'arrière-plan (`backdrop-filter: blur(16px)`), réhaussé par un effet de balayage lumineux (*shine transition*) au survol.
 
 ```css
-body {
-  font-family: "Google Sans Flex", "Google Sans", Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: rgb(31, 31, 31); /* #1F1F1F Noir adouci Google */
-  background-color: #ffffff;
-  background-image: radial-gradient(circle at 50% -20%, #eff6ff 0%, #ffffff 100%);
+.btn-glass {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(15, 23, 42, 0.45) 50%, rgba(99, 102, 241, 0.05));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.greeting {
-  font-size: 36px;
-  font-weight: 400;
-  color: #757575;
+.btn-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.25) 48%, transparent 76%);
+  transform: translateX(-130%);
+  transition: transform 0.65s ease;
+  z-index: -1;
 }
 
-.search-bar-container {
-  background-color: #f0f4f9;
-  border-radius: 28px;
-  padding: 12px 20px;
-  font-size: 16px;
+.btn-glass:hover::after {
+  transform: translateX(130%);
 }
 
-.bubble {
-  height: 48px;
-  padding: 0 12px;
-  border-radius: 12px;
-  background: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+.btn-glass:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
 }
 ```
 
 ---
 
-# 🔊 3. Purification de la Synthèse Vocale Live (`sanitizeForSpeech`)
+# 🔊 3. Purification Vocale Live (`sanitizeForSpeech`)
 
-Toute réponse orale est filtrée par `sanitizeForSpeech()` pour exclure le code SQL, les objets JSON et la syntaxe Markdown, afin d'offrir une conversation naturelle en français.
+Toute réponse audio passe par `sanitizeForSpeech()` pour garantir qu'aucun code SQL, JSON brut ou symbole Markdown ne soit lu à haute voix.
 
 ---
 
-# 📋 4. Master Specification & Prompt de Reconstitution (Prompt Maître)
+# 📋 4. Prompt Système de Reconstitution Maître
 
 ```text
-Tu me codes l'application web double écran "Talk to Data" connectée aux Vertex AI Data Agents selon le manifeste officiel Google Gemini AI Visual Design.
+Tu es Antigravity, un développeur UI senior chez Google Cloud.
+Ta mission est de construire l'application web double écran "Talk to Data" en combinant la structure Vesper.ai (single-viewport bloqué, grain et lueurs) et le design system Google Fluid Blue (dégradés bleus profonds, verre liquid-glass, et Orbe Gemini Live central interactif).
 
-CONSIGNES STRICTES DE DESIGN :
-1. Dégradés directionnels d'énergie et formes circulaires arrondies.
-2. Interface épurée Material 3 Luminous (#1F1F1F texte, #F0F4F9 barre de recherche, #0B57D0 accent bleu).
-3. Synthèse vocale live purifiée (résumé français naturel sans SQL ni JSON).
+CONSIGNES STRICTES :
+1. FOND SIDÉRAL : radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%).
+2. LIQUID-GLASS : Boutons et puces avec flou de 16px, bordures semi-transparentes et effet de brillance (shine) glissant au survol.
+3. TYPOGRAPHIE : Police Inter avec mise en valeur en italique Instrument Serif pour "Data".
+4. VOCAL PURIFIÉ : Seul le résumé français naturel est lu par la synthèse vocale.
 ```

@@ -1,57 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Palette Chromatique - Google Material 3 / Gemini Luminous */
-  --google-text-primary: rgb(31, 31, 31); /* #1F1F1F Noir adouci */
-  --google-text-secondary: #757575; /* Gris neutre */
-  --google-search-bg: #f0f4f9; /* Bleu-gris très clair */
-  --google-blue-accent: #0b57d0; /* Accent Bleu Google Material 3 */
+  /* Palette Chromatique - Hybridation Vesper x Google Fluid Blue */
+  --bg: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%);
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: rgba(56, 189, 248, 0.16);
+  --border-soft: rgba(99, 102, 241, 0.12);
+  --gemini-glow: rgba(56, 189, 248, 0.15);
+  --gradient-active: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
   
-  --font-family-google: "Google Sans Flex", "Google Sans", Roboto, sans-serif;
-  --radius-card: 16px;
-  --radius-bubble: 12px;
+  --font-inter: 'Inter', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
 }
 
 @layer base {
-  body {
-    background-color: #ffffff;
-    background-image: radial-gradient(circle at 50% -20%, #eff6ff 0%, #ffffff 100%);
-    color: var(--google-text-primary);
-    font-family: var(--font-family-google);
+  html, body {
+    background: #020617 !important;
+    background: var(--bg) !important;
+    color: var(--text);
+    font-family: var(--font-inter);
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
     overflow-x: hidden;
-    font-variation-settings: "wght" 400, "wdth" 100;
   }
 }
 
-/* Greeting Header avec texte dégradé Google */
-.greeting {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 20px;
-  font-size: 36px;
-  font-weight: 400;
-  color: var(--google-text-secondary);
-  line-height: 1.2;
+/* Texture Grain Vesper à l'arrière-plan */
+.grain {
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
 }
 
-.greeting.colored {
-  background: linear-gradient(to right, #4285f4, #d96570);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Boutons Liquid-Glass Vesper x Google Fluid Blue */
+.btn-glass {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(15, 23, 42, 0.45) 50%, rgba(99, 102, 241, 0.05));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.greeting-prompt {
-  font-size: 28px;
-  color: var(--google-text-secondary);
-  font-weight: 400;
-  margin-top: 4px;
+.btn-glass::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.25) 48%, transparent 76%);
+  transform: translateX(-130%);
+  transition: transform 0.65s ease;
+  z-index: -1;
 }
 
-/* Barre de recherche Glassmorphism Gemini Material 3 */
+.btn-glass:hover::after {
+  transform: translateX(130%);
+}
+
+.btn-glass:hover {
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+/* Barre de recherche Glassmorphism Gemini Vesper */
 .search-bar-wrapper {
   position: relative;
   width: 100%;
@@ -64,41 +93,41 @@
 
 .search-bar-glow {
   position: absolute;
-  top: -35px;
+  top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  height: 70px;
+  width: 95%;
+  height: 65px;
   border-radius: 9999px;
-  background: radial-gradient(100% 100% at 50% 8%, #ffffff 0%, #9dd2ff 50%);
-  filter: blur(15px);
-  opacity: 0.5;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.35) 0%, rgba(99, 102, 241, 0.2) 60%, transparent 100%);
+  filter: blur(18px);
+  opacity: 0.7;
   pointer-events: none;
 }
 
 .search-bar-container {
   width: 100%;
-  background-color: var(--google-search-bg);
-  border-radius: 28px;
-  padding: 12px 20px;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--google-text-primary);
-  border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(7, 15, 43, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+  padding: 10px 18px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar-container:focus-within {
-  box-shadow: 0 4px 20px rgba(11, 87, 208, 0.18);
-  background-color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.7);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+  background: rgba(15, 23, 42, 0.95);
 }
 
-/* Bulles Scénarios (md-menu-item Material 3) */
+/* Extension Chips (Liquid Glass Scénarios) */
 .extension-chips-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   overflow-x: auto;
   padding: 6px 2px;
   scrollbar-width: none;
@@ -109,36 +138,54 @@
 }
 
 .bubble, .chip {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 0 14px;
-  height: 48px;
+  padding: 0 16px;
+  height: 44px;
   gap: 10px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px; /* Material 3 Standard */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(15, 23, 42, 0.6));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
   cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   white-space: nowrap;
   shrink: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
 }
 
-.bubble:hover, .chip:hover:not(.active) {
-  background-color: rgba(31, 31, 31, 0.08);
-  border-color: #cbd5e1;
+.bubble::after, .chip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.2) 48%, transparent 76%);
+  transform: translateX(-130%);
+  transition: transform 0.6s ease;
+  z-index: -1;
+}
+
+.bubble:hover::after, .chip:hover::after {
+  transform: translateX(130%);
+}
+
+.bubble:hover:not(.active), .chip:hover:not(.active) {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+  transform: translateY(-1px);
 }
 
 .bubble.active, .chip.active {
-  background-color: var(--google-blue-accent);
-  color: #ffffff;
-  border-color: var(--google-blue-accent);
-  box-shadow: 0 4px 12px rgba(11, 87, 208, 0.25);
+  background: var(--gradient-active);
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
 }
 
 .bubble.active .chip-text, .chip.active .chip-text {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .bubble.active .img-container, .chip.active .img-container {
@@ -146,43 +193,45 @@
 }
 
 .img-container {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--google-blue-accent);
+  color: #38bdf8;
   transition: color 0.2s;
 }
 
 .chip-text {
-  font-size: 14px;
-  color: var(--google-text-primary);
-  font-family: var(--font-family-google);
+  font-size: 13px;
+  color: #f8fafc;
+  font-family: var(--font-inter);
   font-weight: 500;
   transition: color 0.2s;
 }
 
-/* Surfaces Bento Material 3 Luminous */
+/* Surfaces Bento Liquid Glass */
 .bento-card, .agent-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: var(--radius-card);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.75), rgba(7, 15, 43, 0.85));
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
   padding: 20px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bento-card:hover, .agent-card:hover {
-  border-color: #cbd5e1;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
 }
 
 .agent-card-active {
-  background: #ffffff;
-  border: 2px solid var(--google-blue-accent);
-  box-shadow: 0 6px 20px rgba(11, 87, 208, 0.15);
-  border-radius: var(--radius-card);
+  background: rgba(15, 23, 42, 0.95);
+  border: 2px solid #38bdf8;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+  border-radius: 20px;
 }
 
 /* Gemini Live Physics Waves Animation */
@@ -191,11 +240,11 @@
   width: 110px;
   height: 110px;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 100%);
+  background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.4);
 }
 
 .gemini-orbe-live.showcase {
@@ -250,46 +299,46 @@
   transform: rotateY(180deg);
 }
 
-/* Custom Light Scrollbars */
+/* Custom Dark Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #1e293b;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #38bdf8;
 }
 
-/* Markdown Content Styling (Light Mode Clean Report) */
+/* Markdown Content Styling */
 .markdown-content {
-  @apply text-xs sm:text-sm leading-relaxed text-slate-800;
+  @apply text-xs sm:text-sm leading-relaxed text-slate-200;
 }
 
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  @apply font-bold text-slate-900 mt-3 mb-1.5 border-b border-slate-200 pb-1 text-sm sm:text-base;
+  @apply font-semibold text-slate-50 mt-3 mb-1.5 border-b border-slate-800 pb-1 text-sm sm:text-base;
 }
 
 .markdown-content p {
-  @apply my-1.5 text-slate-700;
+  @apply my-1.5;
 }
 
 .markdown-content ul {
-  @apply list-disc list-inside my-1.5 space-y-1 text-slate-700;
+  @apply list-disc list-inside my-1.5 space-y-1 text-slate-300;
 }
 
 .markdown-content ol {
-  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-700;
+  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-300;
 }
 
 .markdown-content li {
@@ -297,29 +346,29 @@
 }
 
 .markdown-content table {
-  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white;
+  @apply w-full my-2.5 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-800/80 shadow-md;
 }
 
 .markdown-content th {
-  @apply bg-slate-100 text-slate-900 font-semibold p-2.5 border-b border-slate-200;
+  @apply bg-slate-900/90 text-slate-100 font-semibold p-2.5 border-b border-slate-800;
 }
 
 .markdown-content td {
-  @apply p-2.5 border-b border-slate-100 bg-white text-slate-700;
+  @apply p-2.5 border-b border-slate-900/60 bg-[#0B132B]/40 text-slate-300;
 }
 
 .markdown-content code {
-  @apply bg-slate-100 text-blue-700 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-200;
+  @apply bg-slate-900 text-sky-300 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-800;
 }
 
 .markdown-content pre {
-  @apply bg-slate-950 text-cyan-300 p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-3 shadow-md;
+  @apply bg-[#020617] p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-2.5 shadow-md;
 }
 
 .markdown-content blockquote {
-  @apply border-l-4 border-blue-500 pl-3 my-2 text-slate-600 italic text-xs bg-blue-50/50 py-1 rounded-r;
+  @apply border-l-4 border-sky-400 pl-3 my-2 text-slate-400 italic text-xs;
 }
 
 .markdown-content a {
-  @apply text-blue-600 hover:text-blue-800 underline font-medium;
+  @apply text-sky-400 hover:text-sky-300 underline font-medium;
 }
