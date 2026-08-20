@@ -1,23 +1,23 @@
-# Master Specification & Prompt System - Talk to Data (Awwwards & Magnific.ai Luminous Style)
+# Master Specification & Prompt System - Talk to Data (Vivid Magnific.ai & Awwwards Style)
 
-Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** inspirée des meilleures interfaces web primées (**Awwwards & Magnific.ai**).
+Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** inspirée des meilleures interfaces web ludiques, immersives et primées (**Magnific.ai & Awwwards**).
 
 ---
 
-# 🎨 1. Design System "Luminous Awwwards & Magnific.ai"
+# 🎨 1. Design System "Vivid Magnific.ai & Awwwards"
 
-### Palette Chromatique & Texture Lumineuse
+### Palette Chromatique & Textures Vibrantes
 
 | Élément UI | Classe Tailwind / CSS | Rendu Visuel / Description |
 | :--- | :--- | :--- |
-| **Fond Global** | `bg-[#F8FAFC]` + `aurora-luminous-mesh` | Fond ultra-clair lumineux avec dégradé fluide animé bleu ciel, lavande et azur. |
-| **Surfaces Bento** | `bg-white/80 border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.04)]` | Verre dépoli givré translucide haut de gamme. |
-| **Boutons Principaux** | `bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 shadow-blue-500/20 text-white` | Boutons dégradés iridescents inspirés de Magnific.ai. |
-| **Capsules Scénarios** | `bg-white/90 border border-slate-200/90 text-slate-700 hover:border-blue-500/50 hover:bg-blue-50/50` | Puces capsules fluides `rounded-full` inspirées de NotebookLM. |
-| **Capsule Active** | `bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.3)]` | Pill active bleu vif avec lueur douce. |
+| **Fond Global** | `bg-[#0B0F19]` + `magnific-vivid-bg` | Fond sombre profond bleu nuit & violet mat avec animation fluide de gradient électrique. |
+| **Surfaces Bento** | `bg-[#111827]/80 border border-slate-700/60 shadow-[0_10px_30px_rgba(0,0,0,0.4)]` | Verre dépoli profond givré avec ombres 3D et lueur au survol. |
+| **Boutons Principaux** | `bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-500 shadow-[0_0_25px_rgba(99,102,241,0.4)]` | Bouton néon iridescent vibrant et ludique. |
+| **Capsules Scénarios** | `bg-[#0F172A]/80 border border-slate-700/80 text-slate-200 hover:border-sky-400 hover:bg-slate-800` | Capsules `rounded-full` avec effet lueur néon au survol. |
+| **Capsule Active** | `bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-bold shadow-[0_0_18px_rgba(56,189,248,0.4)]` | Capsule active vive avec lueur cyan néon. |
 
 ```css
-@keyframes luminous-aurora {
+@keyframes vivid-aurora {
   0%, 100% {
     background-position: 0% 50%;
   }
@@ -26,70 +26,42 @@ Ce document constitue la **Spécification Complète et le Prompt Système Maîtr
   }
 }
 
-.aurora-luminous-mesh {
-  background: linear-gradient(-45deg, #F8FAFC, #EFF6FF, #EEF2FF, #E0F2FE, #F0F9FF);
+.magnific-vivid-bg {
+  background: linear-gradient(-45deg, #0B0F19, #0F172A, #1E1B4B, #0A192F, #111827);
   background-size: 400% 400%;
-  animation: luminous-aurora 20s ease infinite;
+  animation: vivid-aurora 18s ease infinite;
 }
 ```
 
 ---
 
-# 🔊 2. Nettoyage de la Synthèse Vocale (Cloud TTS Conversation Live)
+# 🖥️ 2. Épurage du Header & Approche Business Ludique
 
-Pour garantir une expérience conversationnelle fluide avec l'agent Vertex AI Gemini, le Text-to-Speech **ne doit jamais lire le code SQL, le JSON brut ou la syntaxe Markdown** out loud.
-
-### Algorithme de Nettoyage `sanitizeForSpeech(text)`
-
-```javascript
-export function sanitizeForSpeech(rawMarkdown) {
-  if (!rawMarkdown) return '';
-  let cleaned = rawMarkdown;
-  
-  // 1. Supprimer les blocs de code SQL / JSON ```sql ... ```
-  cleaned = cleaned.replace(/```[\s\S]*?```/g, '');
-  
-  // 2. Supprimer les objets JSON ou crochets [{...}]
-  cleaned = cleaned.replace(/[\{\}\[\]"']/g, ' ');
-  
-  // 3. Nettoyer les caractères Markdown (#, *, _, `, links)
-  cleaned = cleaned.replace(/#{1,6}\s?/g, '');
-  cleaned = cleaned.replace(/\*{1,3}([^*]+)\*{1,3}/g, '$1');
-  cleaned = cleaned.replace(/_([^_]+)_/g, '$1');
-  cleaned = cleaned.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
-  cleaned = cleaned.replace(/`([^`]+)`/g, '$1');
-  cleaned = cleaned.replace(/^[\s-*+]+/gm, '');
-  
-  // 4. Supprimer les espaces et sauts de ligne superflus
-  cleaned = cleaned.replace(/\s+/g, ' ').trim();
-  
-  return cleaned;
-}
-```
+- **Suppression du jargon technique** : Retrait des tags `data-agents-by-industry`, des badges "Voix Muette" / "Voix Active" informatiques.
+- **Header Épuré** : Logo TD dégradé iridescent, Titre "Talk to Data | BigData Paris 2026", icône audio et roue crantée `Settings`.
+- **Navigation Ludique** : 11 puces capsules horizontales sectorielles cliquables (`ScenarioChips`) et bouton rond néon pour lancer l'expérience Live d'un simple clic !
 
 ---
 
-# 🖥️ 3. Architecture Double Écran (Showcase vs Contrôleur)
+# 🔊 3. Purification de la Conversation Vocale (Live TTS)
 
-- **ÉCRAN A (Showcase Public)** : Orbe Gemini Live translucide en verre dépoli avec vagues physiques pastel + Data Canvas 70% largeur + SQLFlipCard 3D (Looker KPI Recto / SQL Néon Verso).
-- **ÉCRAN B (Contrôleur Tactile)** : Barre de recherche centrale avec bouton rond bleu iridescent + capsules scénarios compactes + dock d'entrée anti-bruit.
+Seule une synthèse orale conversationnelle et naturelle en français est lue à l'utilisateur via `sanitizeForSpeech()` (suppression du code SQL, du JSON brut, des crochets et de la syntaxe Markdown).
 
 ---
 
 # 📋 4. Master Specification & Prompt de Reconstitution (Prompt Maître)
 
 ```text
-Tu es Antigravity, un développeur Full-Stack Google Cloud et un Designer UX/UI d'exception.
-Ta mission est de coder l'application web double écran "Talk to Data" connectée aux Vertex AI Data Agents.
+Tu me codes l'application web double écran "Talk to Data" connectée aux Vertex AI Data Agents.
 
-CONSIGNES STRICTES DE DESIGN ET VOCAL :
+CONSIGNES STRICTES DE FINITION (Magnific.ai & Awwwards) :
 
-1. STYLE LUMINEUX AWWWARDS & MAGNIFIC.AI :
-   - Fond ultra-clair lumineux avec dégradé mesh animé bleu et lavande (#F8FAFC -> #EFF6FF -> #E0F2FE).
-   - Surfaces en verre dépoli givré blanc (bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-sm).
-   - Boutons dégradés iridescents bleu/indigo/sky.
+1. LOOK & FEEL VIVANT, SOMBRE & ÉLECTRIQUE :
+   - Fond sombre bleu nuit & violet mat profond (#0B0F19 -> #0F172A -> #1E1B4B) avec animation fluide.
+   - Surfaces en verre 3D profondes (bg-[#111827]/80 backdrop-blur-xl border border-slate-700/60 shadow-xl).
+   - Boutons et accents iridescents néon (from-sky-400 via-indigo-500 to-fuchsia-500).
 
-2. SYNTHÈSE VOCALE PURIFIÉE (TTS CONVERSATIONAL LIVE) :
-   - Assure-toi que Web Speech TTS filtre systématiquement le code SQL, le JSON brut, et les symboles Markdown via sanitizeForSpeech().
-   - Seul le résumé conversationnel naturel en français doit être lu à l'utilisateur.
+2. EXPÉRIENCE LUDIQUE & BUSINESS :
+   - Interface intuitive sans jargon informatique de développeur.
+   - Sélection d'agents directe par puces capsules néon et bouton rond de lancement iridescent.
 ```
