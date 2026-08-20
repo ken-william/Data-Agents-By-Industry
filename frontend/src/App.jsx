@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Header } from './components/Header';
-import { AgentSelector } from './components/AgentSelector';
-import { ExampleQueries } from './components/ExampleQueries';
-import { ChatPanel } from './components/ChatPanel';
+import { AgentBuilder } from './components/AgentBuilder';
+import { LiveCanvas } from './components/LiveCanvas';
 import { useSpeech } from './hooks/useSpeech';
 import { useAgentChat } from './hooks/useAgentChat';
 import { COLOR_THEMES } from './utils/themeMap';
-import { Sparkles, Loader2, RefreshCw } from 'lucide-react';
+import { Loader2, RefreshCw } from 'lucide-react';
 
 export function App() {
   const [agents, setAgents] = useState([]);
   const [selectedAgent, setSelectedAgent] = useState(null);
+  const [viewMode, setViewMode] = useState('builder'); // 'builder' (Phase 1) vs 'live' (Phase 2)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Callback when voice recognition receives transcript
+  // Voice recognition transcript state
   const [micTranscript, setMicTranscript] = useState('');
   const handleTranscript = useCallback((text) => {
     setMicTranscript(text);
@@ -23,7 +23,7 @@ export function App() {
   const speechProps = useSpeech(handleTranscript);
   const chatProps = useAgentChat(selectedAgent, speechProps.speakText);
 
-  // Fetch agents from backend API
+  // Fetch 11 Agents from backend API
   const fetchAgents = async () => {
     setLoading(true);
     setError(null);
@@ -36,7 +36,7 @@ export function App() {
       const list = data.agents || [];
       setAgents(list);
 
-      // Default select first agent (Sully or CreditAdvisor)
+      // Default select first agent
       if (list.length > 0 && !selectedAgent) {
         setSelectedAgent(list[0]);
       }
@@ -58,8 +58,15 @@ export function App() {
     speechProps.stopSpeaking();
   };
 
-  const handleSelectExampleQuery = (queryText) => {
-    chatProps.sendMessage(queryText);
+  const handleLaunchLive = () => {
+    if (selectedAgent) {
+      setViewMode('live');
+    }
+  };
+
+  const handleReturnToBuilder = () => {
+    setViewMode('builder');
+    speechProps.stopSpeaking();
   };
 
   const colorKey = selectedAgent?.theme?.color || 'indigo';
@@ -87,10 +94,10 @@ export function App() {
         {loading ? (
           <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-400">
             <Loader2 className="w-8 h-8 animate-spin text-indigo-400 mb-3" />
-            <p className="text-sm font-medium">Chargement des 11 Agents BigQuery Vertex AI...</p>
+            <p className="text-sm font-medium">Initialisation du Quick Builder & des 11 Agents BigQuery Vertex AI...</p>
           </div>
         ) : error ? (
-          <div className="p-6 rounded-2xl glass-panel border border-rose-500/30 text-rose-300 text-center max-w-lg mx-auto my-12">
+          <div className="p-6 rounded-3xl glass-panel border border-rose-500/30 text-rose-300 text-center max-w-lg mx-auto my-12">
             <p className="text-sm font-semibold mb-3">{error}</p>
             <button
               onClick={fetchAgents}
@@ -100,46 +107,37 @@ export function App() {
               Réessayer la connexion
             </button>
           </div>
+        ) : viewMode === 'builder' ? (
+          /* Phase 1: AI Quick Builder (Configuration) */
+          <AgentBuilder
+            agents={agents}
+            selectedAgent={selectedAgent}
+            onSelectAgent={handleSelectAgent}
+            onLaunchLive={handleLaunchLive}
+          />
         ) : (
-          <>
-            {/* Agent Selector Grid */}
-            <AgentSelector
-              agents={agents}
-              selectedAgent={selectedAgent}
-              onSelectAgent={handleSelectAgent}
-            />
-
-            {/* Example Queries for Active Agent */}
-            {selectedAgent && (
-              <ExampleQueries
-                queries={selectedAgent.exampleQueries}
-                selectedAgent={selectedAgent}
-                onSelectQuery={handleSelectExampleQuery}
-                disabled={chatProps.isStreaming}
-              />
-            )}
-
-            {/* Main Streaming Chat Panel */}
-            <ChatPanel
-              selectedAgent={selectedAgent}
-              messages={chatProps.messages}
-              isStreaming={chatProps.isStreaming}
-              thoughts={chatProps.thoughts}
-              error={chatProps.error}
-              onSendMessage={chatProps.sendMessage}
-              voiceProps={{
-                ...speechProps,
-                transcript: micTranscript
-              }}
-            />
-          </>
+          /* Phase 2: Live Experience (Interactive Bento Grid Game Board) */
+          <LiveCanvas
+            selectedAgent={selectedAgent}
+            onReturnToBuilder={handleReturnToBuilder}
+            messages={chatProps.messages}
+            isStreaming={chatProps.isStreaming}
+            thoughts={chatProps.thoughts}
+            error={chatProps.error}
+            onSendMessage={chatProps.sendMessage}
+            voiceProps={{
+              ...speechProps,
+              transcript: micTranscript
+            }}
+            onResetChat={chatProps.clearMessages}
+          />
         )}
 
       </main>
 
       {/* Footer */}
       <footer className="w-full py-4 border-t border-slate-900 glass-panel text-center text-xs text-slate-500 mt-auto">
-        <p>Talk to Data - Google Cloud BigQuery Conversational Analytics - Vertex AI Data Agents</p>
+        <p>Talk to Data • AI Quick Builder • Google Cloud BigQuery Conversational Analytics • Vertex AI Data Agents</p>
       </footer>
 
     </div>
