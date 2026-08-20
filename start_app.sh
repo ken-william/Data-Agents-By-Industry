@@ -14,6 +14,10 @@ echo "==========================================================================
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$BASE_DIR"
 
+# Free up port 8000 if occupied by previous run
+fuser -k 8000/tcp 2>/dev/null || pkill -f uvicorn 2>/dev/null || true
+sleep 1
+
 # Ensure python virtualenv is active
 if [ -d ".venv" ]; then
     source .venv/bin/activate
