@@ -17,7 +17,7 @@ def deploy_ceres_agent():
     print(f"Deploying Ceres Data Agent to Project: '{project_id}', Location: '{location}', Agent ID: '{agent_id}'...")
 
     # Load payload configuration
-    payload_path = os.path.join(os.path.dirname(__file__), "ceres_payload.json")
+    payload_path = os.path.join(os.path.dirname(__file__), "agent_payload.json")
     with open(payload_path, "r", encoding="utf-8") as f:
         raw_payload = f.read()
 
