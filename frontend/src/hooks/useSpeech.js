@@ -15,8 +15,8 @@ export function useSpeech(onTranscriptReceived) {
     }
 
     const recognition = new SpeechRecognition();
-    recognition.continuous = False;
-    recognition.interimResults = True;
+    recognition.continuous = false;
+    recognition.interimResults = true;
     recognition.lang = 'fr-FR';
 
     recognition.onresult = (event) => {
