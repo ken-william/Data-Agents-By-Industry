@@ -1,32 +1,23 @@
-# Master Specification & Prompt System - Talk to Data (Google Fluid Blue Aurora)
+# Master Specification & Prompt System - Talk to Data (Awwwards & Magnific.ai Luminous Style)
 
-Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** pour les événements B2B (BigData Paris 2026, Google Cloud Next).
+Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"** inspirée des meilleures interfaces web primées (**Awwwards & Magnific.ai**).
 
 ---
 
-# 🎨 1. Le Design System "Google Fluid Blue Aurora" (CSS Mesh Gradient & Frosted Glass)
+# 🎨 1. Design System "Luminous Awwwards & Magnific.ai"
+
+### Palette Chromatique & Texture Lumineuse
+
+| Élément UI | Classe Tailwind / CSS | Rendu Visuel / Description |
+| :--- | :--- | :--- |
+| **Fond Global** | `bg-[#F8FAFC]` + `aurora-luminous-mesh` | Fond ultra-clair lumineux avec dégradé fluide animé bleu ciel, lavande et azur. |
+| **Surfaces Bento** | `bg-white/80 border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.04)]` | Verre dépoli givré translucide haut de gamme. |
+| **Boutons Principaux** | `bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 shadow-blue-500/20 text-white` | Boutons dégradés iridescents inspirés de Magnific.ai. |
+| **Capsules Scénarios** | `bg-white/90 border border-slate-200/90 text-slate-700 hover:border-blue-500/50 hover:bg-blue-50/50` | Puces capsules fluides `rounded-full` inspirées de NotebookLM. |
+| **Capsule Active** | `bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.3)]` | Pill active bleu vif avec lueur douce. |
 
 ```css
-:root {
-  /* Palette Chromatique - Google Fluid Blue Aurora */
-  --bento-bg: rgba(15, 23, 42, 0.55);
-  --bento-border: rgba(51, 65, 85, 0.6);
-  --bento-border-active: rgba(56, 189, 248, 0.7);
-  --gemini-gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
-  
-  /* Typographie Google Flex */
-  --font-family-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-
-  /* Formes et Animations */
-  --radius-card: 16px;
-  --radius-pill: 9999px;
-  --glow-active: 0 0 25px rgba(56, 189, 248, 0.2);
-}
-
-/* Animation Mesh Gradient Ultra-Lisse (Aucune ligne de coupure) */
-@keyframes aurora-mesh {
+@keyframes luminous-aurora {
   0%, 100% {
     background-position: 0% 50%;
   }
@@ -35,34 +26,53 @@ Ce document constitue la **Spécification Complète et le Prompt Système Maîtr
   }
 }
 
-.google-aurora-bg {
-  background: linear-gradient(-45deg, #020617, #070F2B, #0F172A, #1E1B4B, #0A192F);
+.aurora-luminous-mesh {
+  background: linear-gradient(-45deg, #F8FAFC, #EFF6FF, #EEF2FF, #E0F2FE, #F0F9FF);
   background-size: 400% 400%;
-  animation: aurora-mesh 18s ease infinite;
+  animation: luminous-aurora 20s ease infinite;
 }
 ```
 
 ---
 
-# 🖥️ 2. Header Épuré & Configuration Écran A / B via Paramètres
+# 🔊 2. Nettoyage de la Synthèse Vocale (Cloud TTS Conversation Live)
 
-### Header Minimaliste sans Boutons d'Écran
-Le Header ne contient plus les boutons de basculement Écran A / Écran B :
-- Logo + Titre "Talk to Data | BigData Paris 2026".
-- Bouton Synthèse Vocale (Voix Active / Muette).
-- Bouton Paramètres (Roue Crantée `Settings`).
+Pour garantir une expérience conversationnelle fluide avec l'agent Vertex AI Gemini, le Text-to-Speech **ne doit jamais lire le code SQL, le JSON brut ou la syntaxe Markdown** out loud.
 
-### Configuration Écran A / Écran B dans le Tiroir Settings
-Le choix de l'écran se fait exclusivement dans le panneau **Paramètres** (`SettingsDrawer.jsx`) :
-- **Bouton Écran A : Showcase (Grand Écran)** : Bascule la fenêtre courante sur le mode Showcase avec l'Orbe Gemini Live géant et le Data Canvas 70%.
-- **Bouton Écran B : Contrôleur Tactile (PC / Tablette)** : Bascule la fenêtre sur la vue console présentateur.
-- **Lien Ouvrir dans un nouvel onglet** (`?screen=showcase` ou `?screen=controller`) pour attribuer un écran physique distinct à chaque moniteur.
+### Algorithme de Nettoyage `sanitizeForSpeech(text)`
+
+```javascript
+export function sanitizeForSpeech(rawMarkdown) {
+  if (!rawMarkdown) return '';
+  let cleaned = rawMarkdown;
+  
+  // 1. Supprimer les blocs de code SQL / JSON ```sql ... ```
+  cleaned = cleaned.replace(/```[\s\S]*?```/g, '');
+  
+  // 2. Supprimer les objets JSON ou crochets [{...}]
+  cleaned = cleaned.replace(/[\{\}\[\]"']/g, ' ');
+  
+  // 3. Nettoyer les caractères Markdown (#, *, _, `, links)
+  cleaned = cleaned.replace(/#{1,6}\s?/g, '');
+  cleaned = cleaned.replace(/\*{1,3}([^*]+)\*{1,3}/g, '$1');
+  cleaned = cleaned.replace(/_([^_]+)_/g, '$1');
+  cleaned = cleaned.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+  cleaned = cleaned.replace(/`([^`]+)`/g, '$1');
+  cleaned = cleaned.replace(/^[\s-*+]+/gm, '');
+  
+  // 4. Supprimer les espaces et sauts de ligne superflus
+  cleaned = cleaned.replace(/\s+/g, ' ').trim();
+  
+  return cleaned;
+}
+```
 
 ---
 
-# 🛠️ 3. Navigation par Flèches sur les Capsules Scénarios (`ScenarioChips`)
+# 🖥️ 3. Architecture Double Écran (Showcase vs Contrôleur)
 
-Le composant `ScenarioChips` intègre des boutons de défilement gauche et droite (`ChevronLeft`, `ChevronRight`) survolants et cliquables pour faire défiler de manière fluide l'ensemble des 11 capsules d'agents sur tous les types d'écrans.
+- **ÉCRAN A (Showcase Public)** : Orbe Gemini Live translucide en verre dépoli avec vagues physiques pastel + Data Canvas 70% largeur + SQLFlipCard 3D (Looker KPI Recto / SQL Néon Verso).
+- **ÉCRAN B (Contrôleur Tactile)** : Barre de recherche centrale avec bouton rond bleu iridescent + capsules scénarios compactes + dock d'entrée anti-bruit.
 
 ---
 
@@ -72,16 +82,14 @@ Le composant `ScenarioChips` intègre des boutons de défilement gauche et droit
 Tu es Antigravity, un développeur Full-Stack Google Cloud et un Designer UX/UI d'exception.
 Ta mission est de coder l'application web double écran "Talk to Data" connectée aux Vertex AI Data Agents.
 
-CONSIGNES STRICTES DE DESIGN DE FINITION :
+CONSIGNES STRICTES DE DESIGN ET VOCAL :
 
-1. ARRIÈRE-PLAN ANIMÉ AURORA SMOOTH :
-   - Supprime tout radial-gradient créant une ligne visible au milieu.
-   - Utilise un dégradé animé linéaire multi-couches fluide (linear-gradient(-45deg, #020617, #070F2B, #0F172A, #1E1B4B, #0A192F)) avec animation mesh 18s.
+1. STYLE LUMINEUX AWWWARDS & MAGNIFIC.AI :
+   - Fond ultra-clair lumineux avec dégradé mesh animé bleu et lavande (#F8FAFC -> #EFF6FF -> #E0F2FE).
+   - Surfaces en verre dépoli givré blanc (bg-white/80 backdrop-blur-xl border border-slate-200/80 shadow-sm).
+   - Boutons dégradés iridescents bleu/indigo/sky.
 
-2. HEADER & CONFIGURATION DES ÉCRANS :
-   - Supprime les boutons Écran A / Écran B du Header.
-   - Intègre la sélection d'écran (Écran A Showcase / Écran B Contrôleur) et le lien "Ouvrir dans un nouvel onglet" uniquement dans le panneau Paramètres (SettingsDrawer).
-
-3. SCROLL FLUIDE SUR LES CAPSULES :
-   - Ajoute des flèches de défilement gauche et droite sur la barre de puces capsules d'agents.
+2. SYNTHÈSE VOCALE PURIFIÉE (TTS CONVERSATIONAL LIVE) :
+   - Assure-toi que Web Speech TTS filtre systématiquement le code SQL, le JSON brut, et les symboles Markdown via sanitizeForSpeech().
+   - Seul le résumé conversationnel naturel en français doit être lu à l'utilisateur.
 ```

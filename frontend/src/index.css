@@ -3,27 +3,24 @@
 @tailwind utilities;
 
 :root {
-  /* Palette Chromatique - Google Fluid Blue Aurora */
-  --bento-bg: rgba(15, 23, 42, 0.55);
-  --bento-border: rgba(51, 65, 85, 0.6);
-  --bento-border-active: rgba(56, 189, 248, 0.7);
-  --gemini-gradient: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #6366f1 100%);
+  /* Palette Chromatique Lumineuse - Awwwards & Magnific.ai Style */
+  --bento-bg: rgba(255, 255, 255, 0.85);
+  --bento-border: rgba(226, 232, 240, 0.9);
+  --bento-border-active: rgba(37, 99, 235, 0.8);
+  --gemini-gradient: linear-gradient(135deg, #2563EB 0%, #4F46E5 50%, #0EA5E9 100%);
   
   /* Typographie Google Flex */
   --font-family-google: "Google Sans Flex", "Google Sans", "Google Sans Text", Roboto, sans-serif;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-dark: #0f172a;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
 
   /* Formes et Spacements */
-  --lumi-shape-corner-medium: 12px;
-  --lumi-shape-corner-full: 9999px;
-  --radius-card: 16px;
+  --radius-card: 20px;
   --radius-pill: 9999px;
-  --glow-active: 0 0 25px rgba(56, 189, 248, 0.2);
+  --glow-active: 0 10px 30px rgba(37, 99, 235, 0.15);
 }
 
-@keyframes aurora-mesh {
+@keyframes luminous-aurora {
   0%, 100% {
     background-position: 0% 50%;
   }
@@ -32,15 +29,15 @@
   }
 }
 
-.google-aurora-bg {
-  background: linear-gradient(-45deg, #020617, #070F2B, #0F172A, #1E1B4B, #0A192F);
+.aurora-luminous-mesh {
+  background: linear-gradient(-45deg, #F8FAFC, #EFF6FF, #EEF2FF, #E0F2FE, #F0F9FF);
   background-size: 400% 400%;
-  animation: aurora-mesh 18s ease infinite;
+  animation: luminous-aurora 20s ease infinite;
 }
 
 @layer base {
   body {
-    @apply google-aurora-bg;
+    @apply aurora-luminous-mesh;
     color: var(--text-primary);
     font-family: var(--font-family-google);
     min-height: 100vh;
@@ -49,31 +46,31 @@
   }
 }
 
-/* Greeting Header avec texte dégradé Gemini */
+/* Greeting Header avec texte dégradé Magnific.ai */
 .greeting {
   display: flex;
   flex-direction: column;
   margin: 0 0 20px;
   font-size: 36px;
   font-weight: 400;
-  color: #94a3b8;
+  color: #475569;
   line-height: 1.2;
 }
 
 .greeting.colored {
-  background: linear-gradient(to right, #4285f4, #d96570);
+  background: linear-gradient(to right, #2563EB, #4F46E5, #0EA5E9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .greeting-prompt {
   font-size: 28px;
-  color: #94a3b8;
+  color: #64748B;
   font-weight: 400;
   margin-top: 4px;
 }
 
-/* Barre de recherche Gemini avec Glow Radial Ultra-Subtil */
+/* Barre de recherche Gemini Lumineuse Awwwards */
 .search-bar-wrapper {
   position: relative;
   width: 100%;
@@ -92,31 +89,31 @@
   width: 90%;
   height: 60px;
   border-radius: var(--lumi-shape-corner-full);
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, rgba(99, 102, 241, 0.15) 60%, transparent 100%);
-  opacity: 0.8;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.4) 0%, rgba(99, 102, 241, 0.2) 60%, transparent 100%);
+  opacity: 0.7;
   pointer-events: none;
   filter: blur(15px);
 }
 
 .search-bar-container {
   width: 100%;
-  background-color: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(148, 163, 184, 0.25);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 9999px;
-  padding: 10px 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  padding: 10px 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar-container:focus-within {
-  border-color: #38bdf8;
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
-  background-color: rgba(15, 23, 42, 0.9);
+  border-color: #2563EB;
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.18);
+  background-color: #FFFFFF;
 }
 
-/* Extension Chips (Bulles Capsules Compactes Single-Row) */
+/* Extension Chips (Bulles Capsules Lumineuses Awwwards) */
 .extension-chips-container {
   display: flex;
   align-items: center;
@@ -135,25 +132,34 @@
   align-items: center;
   white-space: nowrap;
   padding: 7px 15px;
-  background-color: rgba(15, 23, 42, 0.65);
-  border: 1px solid rgba(148, 163, 184, 0.25);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 9999px; /* Forme capsule officielle Gemini */
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   shrink: 0;
-  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(10px);
 }
 
 .chip.active {
-  background-color: rgba(56, 189, 248, 0.18);
-  border-color: rgba(56, 189, 248, 0.7);
-  box-shadow: 0 0 16px rgba(56, 189, 248, 0.3);
+  background-color: #2563EB;
+  border-color: #2563EB;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
-.chip:hover {
-  background-color: rgba(30, 41, 59, 0.9);
-  border-color: rgba(56, 189, 248, 0.5);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+.chip.active .chip-text {
+  color: #FFFFFF;
+}
+
+.chip.active .img-container {
+  color: #FFFFFF;
+}
+
+.chip:hover:not(.active) {
+  background-color: rgba(239, 246, 255, 0.8);
+  border-color: rgba(147, 197, 253, 0.8);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
   transform: translateY(-1px);
 }
 
@@ -164,60 +170,61 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #94a3b8;
+  color: #64748B;
   transition: color 0.2s;
 }
 
-.chip.active .img-container, .chip:hover .img-container {
-  color: #38bdf8;
+.chip:hover .img-container {
+  color: #2563EB;
 }
 
 .chip-text {
   font-size: 13px;
-  color: #94a3b8;
+  color: #334155;
   font-family: "Google Sans Text", "Google Sans", sans-serif;
   font-weight: 500;
   transition: color 0.2s;
 }
 
-.chip.active .chip-text, .chip:hover .chip-text {
-  color: #f8fafc;
+.chip:hover .chip-text {
+  color: #0F172A;
 }
 
-/* Glassmorphism Bento Surfaces */
+/* Glassmorphism Bento Surfaces Lumineuses */
 .bento-card, .agent-card {
-  background: var(--bento-bg);
-  border: 1px solid var(--bento-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: var(--radius-card);
   padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bento-card:hover, .agent-card:hover {
-  border-color: var(--bento-border-active);
-  box-shadow: var(--glow-active);
+  border-color: rgba(147, 197, 253, 0.8);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.08);
 }
 
 .agent-card-active {
-  background: rgba(15, 23, 42, 0.85);
-  border: 2px solid #38bdf8;
-  box-shadow: var(--glow-active);
+  background: #FFFFFF;
+  border: 2px solid #2563EB;
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
   border-radius: var(--radius-card);
 }
 
-/* Gemini Live Physics Waves Animation */
+/* Gemini Live Physics Waves Animation Lumineux */
 .gemini-orbe-live {
   position: relative;
   width: 110px;
   height: 110px;
   border-radius: 9999px;
-  background: var(--gemini-gradient);
+  background: linear-gradient(135deg, #38BDF8 0%, #818CF8 50%, #C084FC 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 35px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.25);
 }
 
 .gemini-orbe-live.showcase {
@@ -231,7 +238,7 @@
   height: 100%;
   border-radius: 9999px;
   background: inherit;
-  opacity: 0.3;
+  opacity: 0.35;
   animation: wavePulse 3s infinite linear;
 }
 
@@ -243,7 +250,7 @@
   100% { transform: scale(1.6); opacity: 0; }
 }
 
-/* 3D Flip Card for SQL Inspector */
+/* 3D Flip Card for SQL Inspector Lumineux */
 .flip-card {
   perspective: 1000px;
 }
@@ -272,46 +279,46 @@
   transform: rotateY(180deg);
 }
 
-/* Custom Scrollbars */
+/* Custom Light Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: #F8FAFC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #CBD5E1;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
+  background: #94A3B8;
 }
 
-/* Markdown Content Styling */
+/* Markdown Content Styling (Light Mode Clean Report) */
 .markdown-content {
-  @apply text-xs sm:text-sm leading-relaxed text-slate-200;
+  @apply text-xs sm:text-sm leading-relaxed text-slate-800;
 }
 
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  @apply font-semibold text-slate-50 mt-3 mb-1.5 border-b border-slate-800 pb-1 text-sm sm:text-base;
+  @apply font-bold text-slate-900 mt-3 mb-1.5 border-b border-slate-200 pb-1 text-sm sm:text-base;
 }
 
 .markdown-content p {
-  @apply my-1.5;
+  @apply my-1.5 text-slate-700;
 }
 
 .markdown-content ul {
-  @apply list-disc list-inside my-1.5 space-y-1 text-slate-300;
+  @apply list-disc list-inside my-1.5 space-y-1 text-slate-700;
 }
 
 .markdown-content ol {
-  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-300;
+  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-700;
 }
 
 .markdown-content li {
@@ -319,29 +326,29 @@
 }
 
 .markdown-content table {
-  @apply w-full my-2.5 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-800/80 shadow-md;
+  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white;
 }
 
 .markdown-content th {
-  @apply bg-slate-900/90 text-slate-100 font-semibold p-2.5 border-b border-slate-800;
+  @apply bg-slate-100 text-slate-900 font-semibold p-2.5 border-b border-slate-200;
 }
 
 .markdown-content td {
-  @apply p-2.5 border-b border-slate-900/60 bg-[#0B132B]/40 text-slate-300;
+  @apply p-2.5 border-b border-slate-100 bg-white text-slate-700;
 }
 
 .markdown-content code {
-  @apply bg-slate-900 text-sky-300 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-800;
+  @apply bg-slate-100 text-blue-700 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-200;
 }
 
 .markdown-content pre {
-  @apply bg-[#020617] p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-2.5 shadow-md;
+  @apply bg-slate-950 text-cyan-300 p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-3 shadow-md;
 }
 
 .markdown-content blockquote {
-  @apply border-l-4 border-sky-400 pl-3 my-2 text-slate-400 italic text-xs;
+  @apply border-l-4 border-blue-500 pl-3 my-2 text-slate-600 italic text-xs bg-blue-50/50 py-1 rounded-r;
 }
 
 .markdown-content a {
-  @apply text-sky-400 hover:text-sky-300 underline font-medium;
+  @apply text-blue-600 hover:text-blue-800 underline font-medium;
 }

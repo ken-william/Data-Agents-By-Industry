@@ -20,20 +20,20 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
             src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
             alt="Gemini Sparkle Logo"
           />
-          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-[#4285f4] via-[#9b51e0] to-[#d96570] bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent">
             Talk to Data
           </h2>
         </div>
 
-        <div className="text-slate-400 font-normal text-xl sm:text-2xl mt-1 tracking-wide">
+        <div className="text-slate-600 font-medium text-xl sm:text-2xl mt-1 tracking-wide">
           Let's get some work done!
         </div>
       </div>
 
-      {/* 2. Search Bar & Round Blue Launch Button */}
+      {/* 2. Luminous Search Bar & Round Blue Launch Button */}
       <div className="search-bar-wrapper w-full max-w-2xl px-2">
         <div className="search-bar-glow" />
-        <div className="search-bar-container flex items-center gap-3 py-2 px-4 bg-slate-900/85 border border-slate-700/80 rounded-full shadow-2xl backdrop-blur-md">
+        <div className="search-bar-container flex items-center gap-3 py-2 px-4 bg-white/90 border border-slate-200/90 rounded-full shadow-lg backdrop-blur-2xl">
           <Search className="w-5 h-5 text-slate-400 shrink-0 ml-1" />
           
           <input
@@ -41,7 +41,7 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
             placeholder="Rechercher un agent ou poser une question..."
             value={searchFilter}
             onChange={(e) => setSearchFilter(e.target.value)}
-            className="w-full bg-transparent border-none text-slate-100 placeholder-slate-400 focus:outline-none text-xs sm:text-sm"
+            className="w-full bg-transparent border-none text-slate-900 placeholder-slate-400 focus:outline-none text-xs sm:text-sm font-medium"
           />
 
           {/* Round Blue Launch Button */}
@@ -51,8 +51,8 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
             disabled={!selectedAgent}
             className={`w-10 h-10 rounded-full flex items-center justify-center text-white shrink-0 shadow-lg transition-all transform hover:scale-105 active:scale-95 ${
               selectedAgent
-                ? 'bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:shadow-sky-500/20'
-                : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
+                ? 'bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 hover:shadow-blue-500/30'
+                : 'bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300'
             }`}
             title="Lancer l'expérience Live Agent"
           >
@@ -71,10 +71,10 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
 
       {/* 4. Active Agent Discrete Badge */}
       {selectedAgent && (
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs text-slate-300 backdrop-blur-md shadow-md animate-fade-in">
-          <ActiveIcon className="w-3.5 h-3.5 text-sky-400" />
-          <span>Agent Sélectionné : <strong className="text-white font-semibold">{selectedAgent.displayName?.split(' - ')[0]}</strong></span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-slate-200/90 text-xs text-slate-700 backdrop-blur-xl shadow-xs animate-fade-in">
+          <ActiveIcon className="w-3.5 h-3.5 text-blue-600" />
+          <span>Agent Sélectionné : <strong className="text-slate-900 font-bold">{selectedAgent.displayName?.split(' - ')[0]}</strong></span>
+          <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-mono font-semibold">
             {selectedAgent.datasetId}
           </span>
         </div>

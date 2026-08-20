@@ -1,5 +1,34 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
+/**
+ * Sanitizes markdown/JSON text into clean natural spoken French prose.
+ * Removes code blocks, JSON structures, raw brackets, markdown symbols and SQL out loud.
+ */
+export function sanitizeForSpeech(rawText) {
+  if (!rawText) return '';
+  let text = rawText;
+
+  // 1. Remove Markdown code blocks ```sql ... ``` or ```json ... ```
+  text = text.replace(/```[\s\S]*?```/g, '');
+
+  // 2. Remove JSON structure objects or raw array data
+  text = text.replace(/[\{\}\[\]"']/g, ' ');
+
+  // 3. Remove Markdown headings, bold, italics, links, inline code, table pipes
+  text = text.replace(/#{1,6}\s?/g, '');
+  text = text.replace(/\*{1,3}([^*]+)\*{1,3}/g, '$1');
+  text = text.replace(/_([^_]+)_/g, '$1');
+  text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
+  text = text.replace(/`([^`]+)`/g, '$1');
+  text = text.replace(/\|/g, ' ');
+  text = text.replace(/^[\s-*+]+/gm, '');
+
+  // 4. Clean extra spaces
+  text = text.replace(/\s+/g, ' ').trim();
+
+  return text;
+}
+
 export function useSpeech(onTranscriptReceived) {
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -62,18 +91,13 @@ export function useSpeech(onTranscriptReceived) {
   const speakText = useCallback((text) => {
     if (!window.speechSynthesis || !autoSpeechEnabled) return;
 
-    // Strip markdown formatting for cleaner speech output
-    const cleanText = text
-      .replace(/#+\s+/g, '')
-      .replace(/\*\*([^*]+)\*\*/g, '$1')
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-      .replace(/```[\s\S]*?```/g, '')
-      .replace(/`([^`]+)`/g, '$1')
-      .replace(/\|/g, ' ');
+    // Purify text for natural live AI agent conversation
+    const cleanText = sanitizeForSpeech(text);
+    if (!cleanText) return;
 
     window.speechSynthesis.cancel(); // Stop any ongoing speech
 
-    const utterance = new SpeechSynthesisUtterance(cleanText.slice(0, 500)); // Limit duration for kiosk comfort
+    const utterance = new SpeechSynthesisUtterance(cleanText.slice(0, 600)); // Limit duration for natural comfort
     utterance.lang = 'fr-FR';
     utterance.rate = 1.05;
 
