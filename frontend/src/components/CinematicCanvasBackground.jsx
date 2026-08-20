@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 /**
- * 3D Luminous Google Wave Canvas Component
+ * 3D Luminous Google Wave Canvas Component (Bright Luminous Gradient - NO BLACK)
  * Renders a high-performance 60FPS 3D Undulating Wave Grid using Google's iconic bright colors
- * (Blue #4285F4, Red #EA4335, Yellow #FBBC05, Green #34A853) against a bright luminous backdrop.
+ * (Blue #4285F4, Red #EA4335, Yellow #FBBC05, Green #34A853) against a bright luminous animated backdrop.
  */
 export function CinematicCanvasBackground() {
   const canvasRef = useRef(null);
@@ -15,7 +15,7 @@ export function CinematicCanvasBackground() {
   const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    // 1. Simulate Preloading for 3D Canvas Scene
+    // Simulate Preloading for 3D Canvas Scene
     let progress = 0;
     const interval = setInterval(() => {
       progress += 10;
@@ -24,7 +24,7 @@ export function CinematicCanvasBackground() {
         clearInterval(interval);
         setIsLoaded(true);
       }
-    }, 35);
+    }, 30);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,10 +39,10 @@ export function CinematicCanvasBackground() {
 
     // Google Luminous 4 Colors
     const googleColors = [
-      'rgba(66, 133, 244, 0.75)',  // Google Blue
-      'rgba(234, 67, 53, 0.75)',   // Google Red
-      'rgba(251, 188, 5, 0.75)',   // Google Yellow
-      'rgba(52, 168, 83, 0.75)'    // Google Green
+      'rgba(66, 133, 244, 0.8)',  // Google Blue #4285F4
+      'rgba(234, 67, 53, 0.8)',   // Google Red #EA4335
+      'rgba(251, 188, 5, 0.8)',   // Google Yellow #FBBC05
+      'rgba(52, 168, 83, 0.8)'    // Google Green #34A853
     ];
 
     // Canvas Resize
@@ -82,25 +82,26 @@ export function CinematicCanvasBackground() {
     window.addEventListener('scroll', handleScroll);
 
     // 3D Wave Calculation Parameters
-    const numLines = 28;
-    const pointsPerLine = 45;
+    const numLines = 30;
+    const pointsPerLine = 48;
     const spacing = 35;
-    const fov = 350;
+    const fov = 360;
 
     let time = 0;
 
-    // Main 60FPS 3D Wave Render Loop
+    // Main 60FPS 3D Wave Render Loop (Bright Luminous Gradient Backdrop - NO BLACK)
     const drawFrame = () => {
       time += 0.015;
       const scrollFrac = scrollFractionRef.current;
       const width = window.innerWidth;
       const height = window.innerHeight;
 
-      // Bright Luminous Backdrop (#F8FAFC -> #EFF6FF)
+      // Bright Luminous Backdrop Gradient (NO BLACK)
       const bgGrad = ctx.createLinearGradient(0, 0, width, height);
       bgGrad.addColorStop(0, '#F8FAFC');
-      bgGrad.addColorStop(0.5, '#EFF6FF');
-      bgGrad.addColorStop(1, '#EEF2FF');
+      bgGrad.addColorStop(0.35, '#EFF6FF');
+      bgGrad.addColorStop(0.7, '#EEF2FF');
+      bgGrad.addColorStop(1, '#E0F2FE');
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, width, height);
 
@@ -117,25 +118,25 @@ export function CinematicCanvasBackground() {
 
         ctx.beginPath();
         ctx.strokeStyle = color;
-        ctx.lineWidth = 2.5 - lineProgress * 1.2;
+        ctx.lineWidth = 2.6 - lineProgress * 1.2;
 
         for (let j = 0; j < pointsPerLine; j++) {
           const colProgress = j / pointsPerLine;
 
           // 3D Coordinates
           const x3d = (j - pointsPerLine / 2) * spacing;
-          const z3d = (i + 1) * spacing + 120;
+          const z3d = (i + 1) * spacing + 110;
           
           // 3D Wave Height Equation (Undulating Sine/Cos Physics)
-          const wave1 = Math.sin(colProgress * Math.PI * 3 + time * 1.8 + scrollFrac * Math.PI) * 45;
-          const wave2 = Math.cos(lineProgress * Math.PI * 4 - time * 1.2) * 25;
-          const mouseTilt = mouseRef.current.y * 30;
+          const wave1 = Math.sin(colProgress * Math.PI * 3 + time * 1.8 + scrollFrac * Math.PI) * 48;
+          const wave2 = Math.cos(lineProgress * Math.PI * 4 - time * 1.2) * 28;
+          const mouseTilt = mouseRef.current.y * 32;
           const y3d = wave1 + wave2 + mouseTilt;
 
           // 3D Perspective Projection
           const scale = fov / (fov + z3d);
           const x2d = width / 2 + x3d * scale + (mouseRef.current.x * 40 * scale);
-          const y2d = height / 2 + y3d * scale + 60;
+          const y2d = height / 2 + y3d * scale + 50;
 
           if (j === 0) {
             ctx.moveTo(x2d, y2d);
@@ -165,9 +166,9 @@ export function CinematicCanvasBackground() {
       {/* Loading Overlay */}
       {!isLoaded && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#F8FAFC] text-slate-800 font-sans transition-opacity duration-500">
-          <div className="w-12 h-12 rounded-full border-3 border-blue-500 border-t-transparent animate-spin mb-4" />
-          <div className="text-sm font-semibold tracking-wider text-slate-600">
-            CHARGEMENT VAGUES 3D GOOGLE ({loadProgress}%)
+          <div className="w-12 h-12 rounded-full border-3 border-blue-600 border-t-transparent animate-spin mb-4" />
+          <div className="text-sm font-semibold tracking-wider text-slate-700">
+            CHARGEMENT DÉGRADÉ 3D GOOGLE ({loadProgress}%)
           </div>
         </div>
       )}

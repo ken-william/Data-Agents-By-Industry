@@ -14,7 +14,7 @@ import {
   Send,
   ArrowRight,
   RotateCcw,
-  Zap,
+  Sparkles,
   ChevronLeft,
   Mic,
   Volume2
@@ -60,12 +60,12 @@ export function LiveCanvas({
     <div className="w-full flex flex-col gap-4 animate-fade-in relative pb-24">
       
       {/* Top Bar Navigation */}
-      <div className="px-4 py-3 rounded-2xl bg-white/90 border border-slate-200/90 backdrop-blur-xl flex items-center justify-between gap-4 shadow-xs">
+      <div className="px-5 py-3 rounded-2xl bg-white/90 border border-slate-200/90 backdrop-blur-xl flex items-center justify-between gap-4 shadow-sm">
         <div className="flex items-center gap-3">
           <button
             type="button"
             onClick={onReturnToBuilder}
-            className="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1.5 text-xs font-semibold"
+            className="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1.5 text-xs font-semibold"
           >
             <ChevronLeft className="w-4 h-4" />
             <span>Changer d'Espace</span>
@@ -73,8 +73,8 @@ export function LiveCanvas({
 
           <div className="h-4 w-px bg-slate-200 hidden sm:block" />
 
-          <div className="flex items-center gap-2">
-            <div className="p-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-600">
+          <div className="flex items-center gap-2.5">
+            <div className="p-1.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-600">
               <AgentIcon className="w-4 h-4" />
             </div>
             <div>
@@ -98,21 +98,21 @@ export function LiveCanvas({
             type="button"
             onClick={onResetChat}
             title="Effacer la conversation"
-            className="p-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 border border-slate-200 text-xs"
+            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 border border-slate-200 text-xs"
           >
             <RotateCcw className="w-4 h-4" />
           </button>
         </div>
       </div>
 
-      {/* Main Dual Screen Bento Grid */}
+      {/* Main Gemini Chat Bento Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
         
-        {/* Left Column: Orbe Gemini Live + Smart Chips (4 cols) */}
+        {/* Left Column: Orbe Gemini Live + Gemini Suggestion Cards (4 cols) */}
         <div className="lg:col-span-4 flex flex-col gap-4">
           
-          {/* Gemini Live Luminous Physics Wave Orb */}
-          <div className="p-6 rounded-2xl bg-white/90 border border-slate-200/90 shadow-xs backdrop-blur-xl flex flex-col items-center justify-center text-center">
+          {/* Gemini Live Physics Wave Orb */}
+          <div className="p-6 rounded-2xl bg-white/90 border border-slate-200/90 shadow-sm backdrop-blur-xl flex flex-col items-center justify-center text-center">
             <div className="mb-2">
               <span className="text-xs font-medium text-slate-500 block">
                 Copilote Conversational Analytics
@@ -131,21 +131,21 @@ export function LiveCanvas({
               showcaseMode={isShowcase}
             />
 
-            <div className="mt-3 flex items-center gap-1.5 text-[11px] text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200 font-medium">
+            <div className="mt-3 flex items-center gap-1.5 text-[11px] text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 font-medium">
               <Volume2 className="w-3.5 h-3.5" />
               <span>Synthèse vocale purifiée active</span>
             </div>
           </div>
 
-          {/* Smart Challenge Chips */}
-          <div className="p-4 rounded-2xl bg-white/90 border border-slate-200/90 shadow-xs flex flex-col gap-3">
+          {/* Gemini Chat Suggestion Cards (Style officiel Gemini Material 3) */}
+          <div className="p-4 rounded-2xl bg-white/90 border border-slate-200/90 shadow-sm flex flex-col gap-3">
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
-                <Zap className="w-4 h-4 text-blue-600" />
-                Questions Clés Métiers
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
+                <Sparkles className="w-4 h-4 text-blue-600" />
+                Suggestions Gemini
               </h4>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono font-semibold">
-                {selectedAgent?.exampleQueries?.length || 0} Suggestions
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-semibold">
+                {selectedAgent?.exampleQueries?.length || 0} Questions
               </span>
             </div>
 
@@ -155,13 +155,13 @@ export function LiveCanvas({
                   key={idx}
                   disabled={isStreaming}
                   onClick={() => onSendMessage(q)}
-                  className={`p-3 rounded-xl border text-xs text-left transition-all flex items-start justify-between gap-2.5 ${
+                  className={`p-3.5 rounded-2xl border text-xs text-left transition-all flex items-start justify-between gap-3 ${
                     isStreaming
                       ? 'opacity-50 cursor-not-allowed bg-slate-50 border-slate-200 text-slate-400'
-                      : 'bg-slate-50 hover:bg-white border-slate-200 hover:border-blue-400 text-slate-800 hover:text-slate-900 shadow-xs'
+                      : 'bg-white hover:bg-blue-50/80 border-slate-200 hover:border-blue-400 text-slate-800 hover:text-blue-900 shadow-xs transform hover:-translate-y-0.5'
                   }`}
                 >
-                  <span className="line-clamp-2 leading-relaxed">{q}</span>
+                  <span className="line-clamp-2 leading-relaxed font-semibold">{q}</span>
                   <ArrowRight className="w-4 h-4 shrink-0 text-blue-600 mt-0.5" />
                 </button>
               ))}
@@ -184,16 +184,16 @@ export function LiveCanvas({
             </div>
           )}
 
-          {/* Clean Light Report Document Canvas (70% priority) */}
+          {/* Clean Light Report Document Canvas (Gemini Chat UI) */}
           <div className="p-6 rounded-2xl bg-white/95 border border-slate-200/90 min-h-[440px] max-h-[580px] overflow-y-auto space-y-4 shadow-sm backdrop-blur-xl">
             {messages.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center p-8 text-slate-400 my-auto">
-                <Bot className="w-10 h-10 text-slate-400 mb-2 animate-bounce" />
+                <Bot className="w-10 h-10 text-blue-600 mb-2 animate-bounce" />
                 <h4 className="text-sm font-bold text-slate-800">
                   Espace de travail prêt pour {selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}
                 </h4>
                 <p className="text-xs text-slate-500 max-w-sm mt-1">
-                  Posez votre question à l'oral ou cliquez sur une puce de scénario pour déclencher l'analyse décisionnelle BigQuery.
+                  Posez votre question à l'oral ou cliquez sur une suggestion ci-contre pour déclencher l'analyse décisionnelle BigQuery.
                 </p>
               </div>
             ) : (
@@ -208,13 +208,13 @@ export function LiveCanvas({
                       {isUser ? (
                         <>
                           <span className="text-slate-700 font-medium">Vous</span>
-                          <div className="p-1 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                          <div className="p-1 rounded-lg bg-slate-100 text-slate-600 border border-slate-200">
                             <User className="w-3 h-3" />
                           </div>
                         </>
                       ) : (
                         <>
-                          <div className="p-1 rounded bg-blue-50 text-blue-600 border border-blue-200">
+                          <div className="p-1 rounded-lg bg-blue-50 text-blue-600 border border-blue-200">
                             <AgentIcon className="w-3 h-3" />
                           </div>
                           <span className="font-semibold text-slate-800">
@@ -226,7 +226,7 @@ export function LiveCanvas({
 
                     {/* Reasoning Accordion */}
                     {!isUser && msg.thoughts && msg.thoughts.length > 0 && (
-                      <div className="w-full max-w-3xl rounded-xl bg-slate-50 border border-slate-200 text-xs overflow-hidden">
+                      <div className="w-full max-w-3xl rounded-2xl bg-slate-50 border border-slate-200 text-xs overflow-hidden">
                         <button
                           type="button"
                           onClick={() => toggleThought(idx)}
@@ -262,10 +262,10 @@ export function LiveCanvas({
 
                     {/* Message Bubble */}
                     <div
-                      className={`max-w-3xl rounded-2xl px-5 py-4 leading-relaxed shadow-xs ${
+                      className={`max-w-3xl rounded-2xl px-5 py-4 leading-relaxed shadow-sm ${
                         isUser
-                          ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-tr-none text-xs sm:text-sm font-medium'
-                          : 'bg-white border border-slate-200 text-slate-800 rounded-tl-none markdown-content'
+                          ? 'bg-[#0B57D0] text-white rounded-tr-none text-xs sm:text-sm font-medium'
+                          : 'bg-white border border-slate-200/90 text-slate-800 rounded-tl-none markdown-content'
                       }`}
                     >
                       {isUser ? (
@@ -292,8 +292,8 @@ export function LiveCanvas({
             )}
           </div>
 
-          {/* Floating Input Dock */}
-          <form onSubmit={handleFormSubmit} className="p-3.5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-md backdrop-blur-xl">
+          {/* Floating Input Dock Gemini Material 3 (#F0F4F9) */}
+          <form onSubmit={handleFormSubmit} className="p-3 rounded-full bg-[#F0F4F9] border border-slate-200/80 shadow-md backdrop-blur-xl">
             <div className="flex items-center gap-3">
               <button
                 type="button"
@@ -301,11 +301,11 @@ export function LiveCanvas({
                 className={`p-2.5 rounded-full transition-all ${
                   voiceProps.isListening
                     ? 'bg-rose-500 text-white animate-pulse'
-                    : 'bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-200'
+                    : 'bg-white text-blue-600 hover:bg-blue-50 border border-slate-200 shadow-xs'
                 }`}
                 title="Microphone Push-to-Talk"
               >
-                <Mic className="w-4 h-4" />
+                <Mic className="w-4.5 h-4.5" />
               </button>
 
               <textarea
@@ -318,8 +318,8 @@ export function LiveCanvas({
                     handleFormSubmit(e);
                   }
                 }}
-                placeholder="Posez votre question décisionnelle (Entrée pour envoyer)..."
-                className="w-full px-2 py-1 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none bg-transparent resize-none font-medium"
+                placeholder="Entrez votre message ici..."
+                className="w-full px-2 py-1 text-xs sm:text-sm text-slate-900 placeholder-slate-500 focus:outline-none bg-transparent resize-none font-medium"
               />
 
               <button
@@ -327,8 +327,8 @@ export function LiveCanvas({
                 disabled={!inputPrompt.trim() || isStreaming}
                 className={`px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all ${
                   !inputPrompt.trim() || isStreaming
-                    ? 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
-                    : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:opacity-90 text-white shadow-md'
+                    ? 'bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300'
+                    : 'bg-[#0B57D0] hover:bg-blue-800 text-white shadow-md'
                 }`}
               >
                 {isStreaming ? (
