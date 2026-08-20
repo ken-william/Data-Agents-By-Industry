@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { AgentBuilder } from './components/AgentBuilder';
 import { LiveCanvas } from './components/LiveCanvas';
 import { SettingsDrawer } from './components/SettingsDrawer';
+import { CinematicCanvasBackground } from './components/CinematicCanvasBackground';
 import { useSpeech } from './hooks/useSpeech';
 import { useAgentChat } from './hooks/useAgentChat';
 import { Loader2, RefreshCw } from 'lucide-react';
@@ -81,8 +82,11 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen google-aurora-bg text-slate-100 flex flex-col relative transition-all duration-300">
+    <div className="min-h-screen bg-black text-slate-100 flex flex-col relative transition-all duration-300">
       
+      {/* HTML5 Canvas Cinematic Background with GSAP Parallax & Scrollytelling */}
+      <CinematicCanvasBackground />
+
       {/* App Header */}
       <Header
         selectedAgent={selectedAgent}
@@ -155,8 +159,8 @@ export function App() {
       />
 
       {/* Footer */}
-      <footer className="w-full py-4 border-t border-slate-800/80 bg-[#020617]/60 text-center text-xs text-slate-500 mt-auto backdrop-blur-md">
-        <p>Talk to Data • Google Fluid Blue Aurora • BigData Paris 2026 • Vertex AI Data Agents</p>
+      <footer className="w-full py-4 border-t border-slate-900/80 bg-black/60 text-center text-xs text-slate-500 mt-auto backdrop-blur-md">
+        <p>Talk to Data • Cinematic Canvas GSAP • BigData Paris 2026 • Vertex AI Data Agents</p>
       </footer>
 
     </div>
