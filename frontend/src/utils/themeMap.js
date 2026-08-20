@@ -28,119 +28,87 @@ export const ICON_MAP = {
   Database
 };
 
-export const getIconComponent = (iconName) => {
+export function getIconComponent(iconName) {
   return ICON_MAP[iconName] || Database;
-};
+}
 
+// Enterprise B2B Clean & Pro Color Mapping
 export const COLOR_THEMES = {
   indigo: {
-    badge: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/30',
-    border: 'border-indigo-500/40',
-    ring: 'focus:ring-indigo-500',
-    button: 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-900/50',
-    glow: 'shadow-[0_0_25px_rgba(99,102,241,0.25)]',
-    text: 'text-indigo-400',
-    bgLight: 'bg-indigo-950/40',
-    gradient: 'from-indigo-900/40 via-slate-900 to-slate-950',
+    category: "Secteur Public & RH",
+    badge: "bg-indigo-500/10 text-indigo-300 border-indigo-500/20",
+    border: "border-indigo-500/40",
+    accentBg: "bg-indigo-600",
+    button: "bg-indigo-600 hover:bg-indigo-500 text-white"
   },
   emerald: {
-    badge: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30',
-    border: 'border-emerald-500/40',
-    ring: 'focus:ring-emerald-500',
-    button: 'bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-900/50',
-    glow: 'shadow-[0_0_25px_rgba(16,185,129,0.25)]',
-    text: 'text-emerald-400',
-    bgLight: 'bg-emerald-950/40',
-    gradient: 'from-emerald-900/40 via-slate-900 to-slate-950',
+    category: "Banque & Finance B2B",
+    badge: "bg-emerald-500/10 text-emerald-300 border-emerald-500/20",
+    border: "border-emerald-500/40",
+    accentBg: "bg-emerald-600",
+    button: "bg-emerald-600 hover:bg-emerald-500 text-white"
   },
   purple: {
-    badge: 'bg-purple-500/10 text-purple-300 border-purple-500/30',
-    border: 'border-purple-500/40',
-    ring: 'focus:ring-purple-500',
-    button: 'bg-purple-600 hover:bg-purple-500 text-white shadow-purple-900/50',
-    glow: 'shadow-[0_0_25px_rgba(168,85,247,0.25)]',
-    text: 'text-purple-400',
-    bgLight: 'bg-purple-950/40',
-    gradient: 'from-purple-900/40 via-slate-900 to-slate-950',
+    category: "Télécoms & Infrastructures",
+    badge: "bg-purple-500/10 text-purple-300 border-purple-500/20",
+    border: "border-purple-500/40",
+    accentBg: "bg-purple-600",
+    button: "bg-purple-600 hover:bg-purple-500 text-white"
   },
   cyan: {
-    badge: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/30',
-    border: 'border-cyan-500/40',
-    ring: 'focus:ring-cyan-500',
-    button: 'bg-cyan-600 hover:bg-cyan-500 text-white shadow-cyan-900/50',
-    glow: 'shadow-[0_0_25px_rgba(6,182,212,0.25)]',
-    text: 'text-cyan-400',
-    bgLight: 'bg-cyan-950/40',
-    gradient: 'from-cyan-900/40 via-slate-900 to-slate-950',
+    category: "Spatial & Imagerie Satellite",
+    badge: "bg-cyan-500/10 text-cyan-300 border-cyan-500/20",
+    border: "border-cyan-500/40",
+    accentBg: "bg-cyan-600",
+    button: "bg-cyan-600 hover:bg-cyan-500 text-white"
   },
   sky: {
-    badge: 'bg-sky-500/10 text-sky-300 border-sky-500/30',
-    border: 'border-sky-500/40',
-    ring: 'focus:ring-sky-500',
-    button: 'bg-sky-600 hover:bg-sky-500 text-white shadow-sky-900/50',
-    glow: 'shadow-[0_0_25px_rgba(14,165,233,0.25)]',
-    text: 'text-sky-400',
-    bgLight: 'bg-sky-950/40',
-    gradient: 'from-sky-900/40 via-slate-900 to-slate-950',
+    category: "Transports & Mobilité SNCF",
+    badge: "bg-sky-500/10 text-sky-300 border-sky-500/20",
+    border: "border-sky-500/40",
+    accentBg: "bg-sky-600",
+    button: "bg-sky-600 hover:bg-sky-500 text-white"
   },
-  rose: {
-    badge: 'bg-rose-500/10 text-rose-300 border-rose-500/30',
-    border: 'border-rose-500/40',
-    ring: 'focus:ring-rose-500',
-    button: 'bg-rose-600 hover:bg-rose-500 text-white shadow-rose-900/50',
-    glow: 'shadow-[0_0_25px_rgba(244,63,94,0.25)]',
-    text: 'text-rose-400',
-    bgLight: 'bg-rose-950/40',
-    gradient: 'from-rose-900/40 via-slate-900 to-slate-950',
+  teal: {
+    category: "Santé & Hôpitaux RPPS",
+    badge: "bg-teal-500/10 text-teal-300 border-teal-500/20",
+    border: "border-teal-500/40",
+    accentBg: "bg-teal-600",
+    button: "bg-teal-600 hover:bg-teal-500 text-white"
   },
   amber: {
-    badge: 'bg-amber-500/10 text-amber-300 border-amber-500/30',
-    border: 'border-amber-500/40',
-    ring: 'focus:ring-amber-500',
-    button: 'bg-amber-600 hover:bg-amber-500 text-white shadow-amber-900/50',
-    glow: 'shadow-[0_0_25px_rgba(245,158,11,0.25)]',
-    text: 'text-amber-400',
-    bgLight: 'bg-amber-950/40',
-    gradient: 'from-amber-900/40 via-slate-900 to-slate-950',
+    category: "Retail & CPG Merchandising",
+    badge: "bg-amber-500/10 text-amber-300 border-amber-500/20",
+    border: "border-amber-500/40",
+    accentBg: "bg-amber-600",
+    button: "bg-amber-600 hover:bg-amber-500 text-white"
   },
-  red: {
-    badge: 'bg-red-500/10 text-red-300 border-red-500/30',
-    border: 'border-red-500/40',
-    ring: 'focus:ring-red-500',
-    button: 'bg-red-600 hover:bg-red-500 text-white shadow-red-900/50',
-    glow: 'shadow-[0_0_25px_rgba(239,68,68,0.25)]',
-    text: 'text-red-400',
-    bgLight: 'bg-red-950/40',
-    gradient: 'from-red-900/40 via-slate-900 to-slate-950',
+  rose: {
+    category: "Sport & Stades Événementiels",
+    badge: "bg-rose-500/10 text-rose-300 border-rose-500/20",
+    border: "border-rose-500/40",
+    accentBg: "bg-rose-600",
+    button: "bg-rose-600 hover:bg-rose-500 text-white"
   },
   yellow: {
-    badge: 'bg-yellow-500/10 text-yellow-300 border-yellow-500/30',
-    border: 'border-yellow-500/40',
-    ring: 'focus:ring-yellow-500',
-    button: 'bg-yellow-600 hover:bg-yellow-500 text-white shadow-yellow-900/50',
-    glow: 'shadow-[0_0_25px_rgba(234,179,8,0.25)]',
-    text: 'text-yellow-400',
-    bgLight: 'bg-yellow-950/40',
-    gradient: 'from-yellow-900/40 via-slate-900 to-slate-950',
+    category: "Énergie & Bornes IRVE",
+    badge: "bg-yellow-500/10 text-yellow-300 border-yellow-500/20",
+    border: "border-yellow-500/40",
+    accentBg: "bg-yellow-600",
+    button: "bg-yellow-600 hover:bg-yellow-500 text-white"
   },
   green: {
-    badge: 'bg-green-500/10 text-green-300 border-green-500/30',
-    border: 'border-green-500/40',
-    ring: 'focus:ring-green-500',
-    button: 'bg-green-600 hover:bg-green-500 text-white shadow-green-900/50',
-    glow: 'shadow-[0_0_25px_rgba(34,197,94,0.25)]',
-    text: 'text-green-400',
-    bgLight: 'bg-green-950/40',
-    gradient: 'from-green-900/40 via-slate-900 to-slate-950',
+    category: "Agriculture & Agroécologie",
+    badge: "bg-green-500/10 text-green-300 border-green-500/20",
+    border: "border-green-500/40",
+    accentBg: "bg-green-600",
+    button: "bg-green-600 hover:bg-green-500 text-white"
   },
   fuchsia: {
-    badge: 'bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/30',
-    border: 'border-fuchsia-500/40',
-    ring: 'focus:ring-fuchsia-500',
-    button: 'bg-fuchsia-600 hover:bg-fuchsia-500 text-white shadow-fuchsia-900/50',
-    glow: 'shadow-[0_0_25px_rgba(217,70,239,0.25)]',
-    text: 'text-fuchsia-400',
-    bgLight: 'bg-fuchsia-950/40',
-    gradient: 'from-fuchsia-900/40 via-slate-900 to-slate-950',
+    category: "Cinéma & Box-Office CNC",
+    badge: "bg-fuchsia-500/10 text-fuchsia-300 border-fuchsia-500/20",
+    border: "border-fuchsia-500/40",
+    accentBg: "bg-fuchsia-600",
+    button: "bg-fuchsia-600 hover:bg-fuchsia-500 text-white"
   }
 };

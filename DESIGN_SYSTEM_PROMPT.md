@@ -1,23 +1,33 @@
-# Master Specification & Prompt System - Talk to Data (AI Quick Builder)
+# Master Specification & Prompt System - Talk to Data (Enterprise Grade Dark Mode)
 
-Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"**. Il peut servir de cahier des charges, de prompt de reconstruction pour une IA, ou de guide de personnalisation pour ajuster l'application à vos attentes exactes.
+Ce document constitue la **Spécification Complète et le Prompt Système Maître** ayant permis la conception, le design et le développement de la plateforme **"Talk to Data"**. Il définit les consignes strictes d'architecture, d'UX/UI B2B Enterprise et d'intégration Google Cloud.
 
 ---
 
-## 1. Vision Globale & Concept "AI Quick Builder"
+## 1. Vision Globale & Direction Artistique B2B Enterprise
 
 ### 🎯 Objectif Métier & Événementiel
-**Talk to Data** est une application web décisionnelle multi-agents déployée sur **Google Cloud Platform (GCP)**. Conçue pour les événements B2B (salons, démos Google Cloud Next, stands interactifs), elle permet à des décideurs d'interagir **en langage naturel à la voix et au texte** avec des données d'entreprise et des bases Open Data via **Vertex AI Data Agents** et **BigQuery**.
+**Talk to Data** est une application web décisionnelle multi-agents déployée sur **Google Cloud Platform (GCP)**. Elle permet aux décideurs d'interagir **en langage naturel à la voix et au texte** avec des données d'entreprise et Open Data via **Vertex AI Data Agents** et **BigQuery**.
 
-### 🎨 Direction Artistique & Style "Gamifié B2B"
-1. **Esthétique Modulaire "Soft Corners"** :
-   - Coins extrêmement arrondis (`border-radius: 24px` à `32px` / `rounded-3xl`).
-   - Style "Bento Grid" épuré inspiré des interfaces Google Cloud modernes.
-2. **Gradients & Ambiance Lumineuse Google AI** :
-   - Fond sombre haut de gamme (`#030712` / `bg-slate-950`).
-   - Accents lumineux et gradients fluides inspirés des couleurs de Gemini (Bleu, Indigo, Violet, Émeraude, Rose, Ambre).
-3. **Thématisation Dynamique par Industrie** :
-   - Chaque agent possède son propre sous-système de couleurs, d'icônes et de cartes d'arrière-plan adaptées à son secteur d'activité (Santé, Retail, Finance, Télécom, Agriculture, Cinéma, etc.).
+### 🎨 Consignes Strictes de Design (Enterprise Grade Dark Mode)
+
+1. **Palette & Fond** :
+   - Fond d'écran : Gris foncé neutre et épuré `bg-[#09090b]` (Zinc 950). Fini le noir total ou les halos lumineux violents.
+   - Cartes (Bento Grid) : Fond légèrement contrasté `bg-[#141417]` avec une bordure fine et sobre `border-[#27272a]`.
+   - Suppression des halos lumineux diffus colorés. Utilisation de liserés discrets pour indiquer l'état actif.
+
+2. **Formes & Coins** :
+   - Utilisation de `rounded-xl` (12px) pour les cartes principales et `rounded-md` (6px) ou `rounded-lg` (8px) pour les boutons et badges.
+
+3. **Typographie & Hiérarchie** :
+   - Titres : Blanc neutre (`text-zinc-50`), taille modérée et graisse semi-bold.
+   - Textes secondaires / Descriptions : Gris clair (`text-zinc-400`), taille réduite `text-xs` / `text-sm`.
+   - Métadonnées (Datasets, IDs) : Discrètes, `text-zinc-500` et `text-[11px]`.
+   - Icônes monocromes (`text-zinc-300`) accompagnées de badges de couleur très légers et discrets pour éliminer l'effet "sapin de Noël".
+
+4. **Layout & Organisation** :
+   - **Phase 1 (Builder)** : Grille dense, aérée et très lisible des 11 agents sectoriels.
+   - **Phase 2 (Live)** : Le panneau central de résultats prend 70% de l'espace visuel (priorité au contenu et aux tableaux Markdown). L'Orbe Gemini est compact, discret et intégré élégamment.
 
 ---
 
@@ -43,97 +53,47 @@ L'application repose sur **11 Copilotes Décisionnels Sectoriels** interconnect�
 
 ## 3. Architecture UX/UI en 2 Phases (Track 2)
 
-L'expérience utilisateur est structurée en deux phases distinctes :
-
 ```text
 +-----------------------------------------------------------------------------------+
-|                               TALK TO DATA PLATFORM                               |
+|                        TALK TO DATA PLATFORM (ENTERPRISE)                         |
 +-----------------------------------------------------------------------------------+
-|  PHASE 1 : WIZARD BUILDER                 |  PHASE 2 : LIVE EXPERIENCE BENTO GRID  |
-|  - Choix du secteur (Cartes Lego 3D)      |  - Orbe Vocal Réactif Gemini           |
-|  - Inspection du Dataset & Object Table   |  - Panneau des Défis (Smart Chips)    |
-|  - Interrupteur LED "Connecter à BQ"      |  - Dock Hybride (Voix + Clavier)       |
-|  - [ 🚀 LANCER L'EXPÉRIENCE ]             |  - Canvas Résultats + SQL Flip Card    |
+|  PHASE 1 : WIZARD BUILDER                 |  PHASE 2 : LIVE BENTO GRID BOARD       |
+|  - Grille dense d'agents (#141417)        |  - Orbe Gemini discret & compact       |
+|  - Icônes monocromes + badges discrets    |  - Smart Challenge Chips (Défis B2B)   |
+|  - Toggle BQ Connection + Security Tag    |  - Canvas Résultats (70% Priorité)     |
+|  - [ 🚀 LANCER L'EXPÉRIENCE ]             |  - Inspector SQL sous le capot         |
 +-----------------------------------------------------------------------------------+
 ```
 
-### 🎚️ Phase 1 : Le Wizard Builder
-1. **Cartes Sectorielles Soft-Corners** : Grille dynamique des 11 agents avec icônes métiers, description synthétique et badge dataset.
-2. **Sélecteur de Connexion** : Toggle switch vert simulant la connexion active avec Vertex AI et BigQuery.
-3. **Bouton d'Action** : Un bouton principal lumineux `[ 🚀 LANCER L'EXPÉRIENCE LIVE ]` basculant l'écran vers la Phase 2.
-
-### 🎙️ Phase 2 : Le Plateau de Jeu Live (Bento Grid)
-1. **L'Orbe Vocal Réactif Gemini (`GeminiOrb`)** :
-   - Avatar sphérique animé réagissant aux 4 états du système :
-     - **Calme (Idle)** : Halo bleu/indigo flottant.
-     - **À l'écoute (STT)** : Pulsations et onde sonore rose/rouge réactive au micro.
-     - **En réflexion (BigQuery)** : Rotation rapide multicolore d'analyse SQL.
-     - **S'exprime (TTS)** : Pulsation douce verte/émeraude avec restitution audio.
-2. **Panneau des Défis (`ExampleQueries`)** :
-   - Cartes cliquables contenant les questions métiers pré-validées par secteur.
-3. **Dock d'Entrée Hybride (Voix + Clavier)** :
-   - Microphone Web Speech API + Zone de texte multi-lignes.
-   - Mode anti-bruit pour les environnements bruyants (salons/démos).
-4. **Canvas des Résultats & SQL Inspector (`SQLFlipCard`)** :
-   - Rendu Markdown fluide avec tableaux de synthèses de données.
-   - Séparation stricte du raisonnement de l'IA (accordéon repliable `Raisonnement & Requête SQL`).
-   - Bouton d'inspection sous le capot permettant aux profils techniques de pivoter la carte pour voir la requête SQL BigQuery native.
-
 ---
 
-## 4. Stratégie de Résilience & Haute Disponibilité (Failover)
-
-1. **Isolation des Pannes** :
-   - Si un agent Vertex AI est temporairement indisponible ou retourne un code HTTP 404/500, l'application ne crashe pas.
-   - Le backend FastAPI intercepte l'erreur et envoie un flux SSE d'erreur bienveillant.
-2. **Mode Dégradé Gracieux** :
-   - Une alerte système s'affiche de manière élégante, proposant au participant de réessayer ou de consulter la synthèse d'exemple.
-3. **Chargement Relatif des Assets Vite** :
-   - Utilisation de `base: './'` dans `vite.config.js` garantissant le chargement des scripts JS et CSS en chemins relatifs, quel que soit le port, le proxy (Cloud Shell Web Preview, Cloud Run, App Engine).
-
----
-
-## 5. Comment Modifier et Personnaliser l'Application ?
-
-Si vous souhaitez ajuster la réponse des agents, modifier le style visuel ou ajouter un 12ème agent :
-
-### A. Modifier les Instructions ou Descriptions d'un Agent
-Éditez le fichier `agents/<nom_agent>/agent_payload.json` :
-- `description` : Texte de présentation de l'agent.
-- `systemInstruction` : Prompt système définissant la personnalité, les règles strictes de réponse et l'interdiction du code SQL dans la réponse finale.
-- `exampleQueries` : Questions métiers pré-validées.
-
-Puis ré-exécutez le redéploiement :
-```bash
-python deploy_all_agents.py
-```
-
-### B. Ajouter un 12ème Agent Sectoriel
-1. Créez le dossier `agents/mon_nouvel_agent/`.
-2. Ajoutez les fichiers `ddl_setup.sql`, `generate_data.py`, `agent_payload.json` et `deploy_agent.py`.
-3. Ajoutez l'agent au dictionnaire `AGENT_THEMES` dans `backend/agent_manager.py` avec sa couleur et son icône.
-
-### C. Déployer sur Google Cloud Run (us-central1)
-Pour obtenir une URL HTTPS publique dans la même région que BigQuery :
-```bash
-./deploy_cloudrun.sh
-```
-
----
-
-## 6. Prompt d'Instruction Maître (Reconstitution de l'IA)
-
-Le bloc ci-dessous résume le prompt système à transmettre à l'IA pour générer ou modifier cette application :
+## 4. Prompt de Reconstitution Corrigé (Clean & Pro)
 
 ```text
-Tu es Antigravity, un développeur Full-Stack & Lead Data Architect Google Cloud.
-Ta mission est de construire une application web nommée "Talk to Data" exposant 11 agents d'intelligence décisionnelle BigQuery via Vertex AI Data Agents.
+Tu es un Senior UX/UI Designer et Développeur Front-End spécialisé dans les interfaces Google Cloud (B2B).
+Ta mission est de reconstruire l'application "Talk to Data" avec un design moderne, épuré, professionnel et hautement lisible ("Enterprise Grade Dark Mode").
 
-CONSIGNES UX/UI :
-1. Adopte une esthétique "AI Quick Builder" gamifiée avec des coins très arrondis (rounded-3xl), des fonds sombres (bg-slate-950) et des ombres halo colorées.
-2. Sépare l'application en 2 phases : Phase 1 (Wizard Configuration Pas-à-Pas avec cartes sectorielles) et Phase 2 (Live Bento Grid Board avec Orbe Vocal réactif).
-3. Intègre un avatar vocal Gemini (GeminiOrb) qui change d'animation selon l'état : Idle (bleu), Écoute (rose), Réflexion (multicolore), Parole (vert).
-4. Implémente un dock hybride (Bouton Micro STT + Zone texte + Smart Challenge Chips) pour garantir le fonctionnement en environnement bruyant.
-5. Intègre la synthèse vocale (Web Speech TTS) et un bouton d'inspection du code SQL sous le capot (SQLFlipCard).
-6. Assure une résilience totale : si un agent retourne une erreur, affiche un message d'erreur gracieux sans crasher l'application.
+CONSIGNES STRICTES DE DESIGN (Tailwind CSS préférés) :
+
+1. PALETTE & FOND :
+   - Fini le noir total. Utilise un fond gris foncé neutre et moderne : `bg-[#09090b]` (Zinc 950).
+   - Pour les cartes (Bento), utilise un fond légèrement contrasté : `bg-[#141417]` avec une bordure très fine `border-[#27272a]`.
+   - Supprime les halos lumineux colorés trop voyants. Utilise des liserés discrets pour indiquer l'état actif.
+
+2. FORMES & COINS :
+   - Réduis les arrondis extrêmes. Utilise `rounded-xl` (12px) pour les cartes principales et `rounded-md` (6px) pour les boutons et badges.
+
+3. TYPOGRAPHIE ET HIÉRARCHIE :
+   - Titres : Blanc neutre (`text-zinc-50`), taille modérée.
+   - Textes secondaires / Descriptions : Gris clair (`text-zinc-400`), taille réduite `text-sm`.
+   - Métadonnées (Datasets, IDs) : Discrètes, `text-zinc-500` et `text-xs`.
+   - Réduis la taille des polices globales pour éviter l'effet "gros boutons".
+
+4. LAYOUT ET ORGANISATION :
+   - Phase 1 (Builder) : Organise les 11 cartes dans une grille dense mais aérée. Cache les informations superflues (ex: chemin exact du dataset) sous un badge ou en très petit.
+   - Phase 2 (Live) : Le panneau central de résultat doit être la priorité visuelle (clair, lisible, fond noir profond). L'Orbe Gemini doit être élégant et petit, pas un avatar géant.
+
+5. ACCESSIBILITÉ :
+   - Assure un contraste suffisant entre le texte et le fond des cartes.
+   - Les zones cliquables doivent être clairement identifiables sans couleurs flashy.
 ```

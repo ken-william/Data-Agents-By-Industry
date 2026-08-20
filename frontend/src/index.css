@@ -4,60 +4,93 @@
 
 @layer base {
   body {
-    background-color: #030712;
-    color: #f3f4f6;
+    @apply bg-[#09090b] text-zinc-100 font-sans antialiased min-h-screen selection:bg-indigo-500 selection:text-white overflow-x-hidden;
   }
 }
 
-/* Glassmorphism custom utilities */
-.glass-panel {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Enterprise Grade Card & Panel Styling */
+.enterprise-card {
+  background-color: #141417;
+  border: 1px solid #27272a;
+  border-radius: 0.75rem; /* 12px / rounded-xl */
 }
 
-.glass-card {
-  background: rgba(30, 41, 59, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+.enterprise-card-active {
+  background-color: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 0.75rem;
 }
 
-/* Markdown table styling */
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Markdown Content Styling */
+.markdown-content {
+  @apply text-xs leading-relaxed text-zinc-200;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  @apply font-semibold text-zinc-50 mt-3 mb-1.5 border-b border-zinc-800 pb-1 text-sm;
+}
+
+.markdown-content p {
+  @apply my-1.5;
+}
+
+.markdown-content ul {
+  @apply list-disc list-inside my-1.5 space-y-1 text-zinc-300;
+}
+
+.markdown-content ol {
+  @apply list-decimal list-inside my-1.5 space-y-1 text-zinc-300;
+}
+
+.markdown-content li {
+  @apply my-0.5;
+}
+
 .markdown-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
+  @apply w-full my-2 border-collapse text-xs text-left rounded-lg overflow-hidden border border-zinc-800;
 }
 
 .markdown-content th {
-  background-color: rgba(30, 41, 59, 0.9);
-  color: #38bdf8;
-  font-weight: 600;
-  text-align: left;
-  padding: 0.625rem 0.875rem;
-  border-bottom: 2px solid rgba(56, 189, 248, 0.2);
+  @apply bg-zinc-900 text-zinc-200 font-medium p-2 border-b border-zinc-800;
 }
 
 .markdown-content td {
-  padding: 0.625rem 0.875rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  @apply p-2 border-b border-zinc-900/60 bg-zinc-950/40 text-zinc-300;
 }
 
-.markdown-content tr:hover {
-  background-color: rgba(51, 65, 85, 0.3);
+.markdown-content code {
+  @apply bg-zinc-900 text-cyan-300 font-mono text-[11px] px-1.5 py-0.5 rounded border border-zinc-800;
 }
 
-/* Pulse animation for active voice input */
-@keyframes pulse-ring {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  50% { transform: scale(1.15); opacity: 0.4; }
-  100% { transform: scale(0.95); opacity: 0.8; }
+.markdown-content pre {
+  @apply bg-zinc-950 p-3 rounded-lg border border-zinc-800 overflow-x-auto my-2;
 }
 
-.animate-pulse-ring {
-  animation: pulse-ring 1.8s infinite ease-in-out;
+.markdown-content blockquote {
+  @apply border-l-2 border-indigo-500 pl-3 my-2 text-zinc-400 italic text-xs;
+}
+
+.markdown-content a {
+  @apply text-cyan-400 hover:text-cyan-300 underline font-medium;
 }
