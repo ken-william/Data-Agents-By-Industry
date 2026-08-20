@@ -33,7 +33,7 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
       <button
         type="button"
         onClick={() => scroll('left')}
-        className="p-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all shadow-md shrink-0 opacity-80 hover:opacity-100"
+        className="p-2 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 transition-all shadow-xs shrink-0"
         title="Défiler vers la gauche"
       >
         <ChevronLeft className="w-4 h-4" />
@@ -61,10 +61,10 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
                   onSendMessage(sc.prompt);
                 }
               }}
-              className={`chip ${isSelected ? 'active' : ''}`}
+              className={`bubble ${isSelected ? 'active' : ''}`}
             >
               <div className="img-container">
-                <IconComp className="w-3.5 h-3.5" />
+                <IconComp className="w-4 h-4" />
               </div>
               <span className="chip-text">{sc.name}</span>
             </div>
@@ -76,7 +76,7 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
       <button
         type="button"
         onClick={() => scroll('right')}
-        className="p-1.5 rounded-full bg-slate-900/90 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-all shadow-md shrink-0 opacity-80 hover:opacity-100"
+        className="p-2 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 transition-all shadow-xs shrink-0"
         title="Défiler vers la droite"
       >
         <ChevronRight className="w-4 h-4" />

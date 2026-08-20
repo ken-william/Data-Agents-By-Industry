@@ -3,74 +3,55 @@
 @tailwind utilities;
 
 :root {
-  /* Palette Chromatique Vivid Magnific.ai & Awwwards */
-  --bento-bg: rgba(17, 24, 39, 0.8);
-  --bento-border: rgba(51, 65, 85, 0.7);
-  --bento-border-active: rgba(56, 189, 248, 0.85);
-  --gemini-gradient: linear-gradient(135deg, #38BDF8 0%, #6366F1 50%, #EC4899 100%);
+  /* Palette Chromatique - Google Material 3 / Gemini Luminous */
+  --google-text-primary: rgb(31, 31, 31); /* #1F1F1F Noir adouci */
+  --google-text-secondary: #757575; /* Gris neutre */
+  --google-search-bg: #f0f4f9; /* Bleu-gris très clair */
+  --google-blue-accent: #0b57d0; /* Accent Bleu Google Material 3 */
   
-  /* Typographie Google Flex */
-  --font-family-google: "Google Sans Flex", "Google Sans", "Google Sans Text", Roboto, sans-serif;
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-
-  /* Formes et Spacements */
-  --radius-card: 20px;
-  --radius-pill: 9999px;
-  --glow-active: 0 0 30px rgba(56, 189, 248, 0.3);
-}
-
-@keyframes vivid-aurora {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-.magnific-vivid-bg {
-  background: linear-gradient(-45deg, #0B0F19, #0F172A, #1E1B4B, #0A192F, #111827);
-  background-size: 400% 400%;
-  animation: vivid-aurora 18s ease infinite;
+  --font-family-google: "Google Sans Flex", "Google Sans", Roboto, sans-serif;
+  --radius-card: 16px;
+  --radius-bubble: 12px;
 }
 
 @layer base {
   body {
-    @apply magnific-vivid-bg;
-    color: var(--text-primary);
+    background-color: #ffffff;
+    background-image: radial-gradient(circle at 50% -20%, #eff6ff 0%, #ffffff 100%);
+    color: var(--google-text-primary);
     font-family: var(--font-family-google);
+    -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     overflow-x: hidden;
     font-variation-settings: "wght" 400, "wdth" 100;
   }
 }
 
-/* Greeting Header avec texte dégradé Magnific.ai */
+/* Greeting Header avec texte dégradé Google */
 .greeting {
   display: flex;
   flex-direction: column;
   margin: 0 0 20px;
   font-size: 36px;
   font-weight: 400;
-  color: #94A3B8;
+  color: var(--google-text-secondary);
   line-height: 1.2;
 }
 
 .greeting.colored {
-  background: linear-gradient(to right, #38BDF8, #8B5CF6, #EC4899);
+  background: linear-gradient(to right, #4285f4, #d96570);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .greeting-prompt {
   font-size: 28px;
-  color: #94A3B8;
+  color: var(--google-text-secondary);
   font-weight: 400;
   margin-top: 4px;
 }
 
-/* Barre de recherche Gemini Lumineuse Magnific.ai */
+/* Barre de recherche Glassmorphism Gemini Material 3 */
 .search-bar-wrapper {
   position: relative;
   width: 100%;
@@ -83,43 +64,43 @@
 
 .search-bar-glow {
   position: absolute;
-  top: -25px;
+  top: -35px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  height: 60px;
-  border-radius: var(--lumi-shape-corner-full);
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(139, 92, 246, 0.3) 60%, transparent 100%);
-  opacity: 0.85;
+  width: 100%;
+  height: 70px;
+  border-radius: 9999px;
+  background: radial-gradient(100% 100% at 50% 8%, #ffffff 0%, #9dd2ff 50%);
+  filter: blur(15px);
+  opacity: 0.5;
   pointer-events: none;
-  filter: blur(16px);
 }
 
 .search-bar-container {
   width: 100%;
-  background-color: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(51, 65, 85, 0.8);
-  border-radius: 9999px;
-  padding: 10px 18px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background-color: var(--google-search-bg);
+  border-radius: 28px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--google-text-primary);
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar-container:focus-within {
-  border-color: #38BDF8;
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.35);
-  background-color: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 4px 20px rgba(11, 87, 208, 0.18);
+  background-color: #ffffff;
 }
 
-/* Extension Chips (Bulles Capsules Vibrantes Magnific.ai) */
+/* Bulles Scénarios (md-menu-item Material 3) */
 .extension-chips-container {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   overflow-x: auto;
-  padding: 4px 2px;
+  padding: 6px 2px;
   scrollbar-width: none;
 }
 
@@ -127,105 +108,94 @@
   display: none;
 }
 
-.chip {
+.bubble, .chip {
   display: flex;
   align-items: center;
-  white-space: nowrap;
-  padding: 7px 16px;
-  background-color: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(51, 65, 85, 0.8);
-  border-radius: 9999px; /* Forme capsule officielle Gemini */
+  padding: 0 14px;
+  height: 48px;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px; /* Material 3 Standard */
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
   shrink: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(12px);
+  transition: all 0.2s ease-in-out;
 }
 
-.chip.active {
-  background: linear-gradient(135deg, #0284C7 0%, #4F46E5 100%);
-  border-color: #38BDF8;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+.bubble:hover, .chip:hover:not(.active) {
+  background-color: rgba(31, 31, 31, 0.08);
+  border-color: #cbd5e1;
 }
 
-.chip.active .chip-text {
-  color: #FFFFFF;
-  font-weight: 600;
+.bubble.active, .chip.active {
+  background-color: var(--google-blue-accent);
+  color: #ffffff;
+  border-color: var(--google-blue-accent);
+  box-shadow: 0 4px 12px rgba(11, 87, 208, 0.25);
 }
 
-.chip.active .img-container {
-  color: #38BDF8;
+.bubble.active .chip-text, .chip.active .chip-text {
+  color: #ffffff;
+  font-weight: 500;
 }
 
-.chip:hover:not(.active) {
-  background-color: rgba(30, 41, 59, 0.9);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
-  transform: translateY(-1px);
+.bubble.active .img-container, .chip.active .img-container {
+  color: #ffffff;
 }
 
 .img-container {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
+  width: 20px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #94A3B8;
+  color: var(--google-blue-accent);
   transition: color 0.2s;
 }
 
-.chip:hover .img-container {
-  color: #38BDF8;
-}
-
 .chip-text {
-  font-size: 13px;
-  color: #CBD5E1;
-  font-family: "Google Sans Text", "Google Sans", sans-serif;
+  font-size: 14px;
+  color: var(--google-text-primary);
+  font-family: var(--font-family-google);
   font-weight: 500;
   transition: color 0.2s;
 }
 
-.chip:hover .chip-text {
-  color: #F8FAFC;
-}
-
-/* Glassmorphism Bento Surfaces Vibrantes */
+/* Surfaces Bento Material 3 Luminous */
 .bento-card, .agent-card {
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid rgba(51, 65, 85, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--radius-card);
   padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bento-card:hover, .agent-card:hover {
-  border-color: rgba(56, 189, 248, 0.7);
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.25);
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
 .agent-card-active {
-  background: rgba(15, 23, 42, 0.95);
-  border: 2px solid #38BDF8;
-  box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+  background: #ffffff;
+  border: 2px solid var(--google-blue-accent);
+  box-shadow: 0 6px 20px rgba(11, 87, 208, 0.15);
   border-radius: var(--radius-card);
 }
 
-/* Gemini Live Physics Waves Animation Vibrantes */
+/* Gemini Live Physics Waves Animation */
 .gemini-orbe-live {
   position: relative;
   width: 110px;
   height: 110px;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #38BDF8 0%, #6366F1 50%, #EC4899 100%);
+  background: linear-gradient(135deg, #4285F4 0%, #34A853 50%, #FBBC05 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 40px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 8px 24px rgba(66, 133, 244, 0.3);
 }
 
 .gemini-orbe-live.showcase {
@@ -280,46 +250,46 @@
   transform: rotateY(180deg);
 }
 
-/* Custom Dark Scrollbars */
+/* Custom Light Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0F19;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
+  background: #cbd5e1;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #38BDF8;
+  background: #94a3b8;
 }
 
-/* Markdown Content Styling */
+/* Markdown Content Styling (Light Mode Clean Report) */
 .markdown-content {
-  @apply text-xs sm:text-sm leading-relaxed text-slate-200;
+  @apply text-xs sm:text-sm leading-relaxed text-slate-800;
 }
 
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  @apply font-semibold text-slate-50 mt-3 mb-1.5 border-b border-slate-800 pb-1 text-sm sm:text-base;
+  @apply font-bold text-slate-900 mt-3 mb-1.5 border-b border-slate-200 pb-1 text-sm sm:text-base;
 }
 
 .markdown-content p {
-  @apply my-1.5;
+  @apply my-1.5 text-slate-700;
 }
 
 .markdown-content ul {
-  @apply list-disc list-inside my-1.5 space-y-1 text-slate-300;
+  @apply list-disc list-inside my-1.5 space-y-1 text-slate-700;
 }
 
 .markdown-content ol {
-  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-300;
+  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-700;
 }
 
 .markdown-content li {
@@ -327,29 +297,29 @@
 }
 
 .markdown-content table {
-  @apply w-full my-2.5 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-800/80 shadow-md;
+  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white;
 }
 
 .markdown-content th {
-  @apply bg-slate-900/90 text-slate-100 font-semibold p-2.5 border-b border-slate-800;
+  @apply bg-slate-100 text-slate-900 font-semibold p-2.5 border-b border-slate-200;
 }
 
 .markdown-content td {
-  @apply p-2.5 border-b border-slate-900/60 bg-[#0B132B]/40 text-slate-300;
+  @apply p-2.5 border-b border-slate-100 bg-white text-slate-700;
 }
 
 .markdown-content code {
-  @apply bg-slate-900 text-sky-300 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-800;
+  @apply bg-slate-100 text-blue-700 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-200;
 }
 
 .markdown-content pre {
-  @apply bg-[#020617] p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-2.5 shadow-md;
+  @apply bg-slate-950 text-cyan-300 p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-3 shadow-md;
 }
 
 .markdown-content blockquote {
-  @apply border-l-4 border-sky-400 pl-3 my-2 text-slate-400 italic text-xs;
+  @apply border-l-4 border-blue-500 pl-3 my-2 text-slate-600 italic text-xs bg-blue-50/50 py-1 rounded-r;
 }
 
 .markdown-content a {
-  @apply text-sky-400 hover:text-sky-300 underline font-medium;
+  @apply text-blue-600 hover:text-blue-800 underline font-medium;
 }
