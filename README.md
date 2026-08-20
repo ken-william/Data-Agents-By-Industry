@@ -1,4 +1,4 @@
-# 💡 TalkToData — Plateforme Multi-Agents d'Intelligence Décisionnelle Entreprise
+# TalkToData - Plateforme Multi-Agents d'Intelligence Décisionnelle Entreprise
 
 **TalkToData** est une plateforme décisionnelle multi-agents déployée sur **Google Cloud Platform (GCP)**. Elle transforme les données d'entreprise et les bases officielles d'Open Data en **décisions stratégiques, financières et opérationnelles à fort ROI**, directement accessibles en langage naturel via **Vertex AI Data Agents**.
 
@@ -6,14 +6,14 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-## 🎯 La Valeur Métier des 11 Agents Spécialisés
+## La Valeur Métier des 11 Agents Spécialisés
 
 ---
 
-### 1. 🏥 **Sully** — *Copilote Emploi Public, RH & URSSAF*
+### 1. **Sully** - *Copilote Emploi Public, RH & URSSAF*
 * **Problématique** : Les pénuries de compétences techniques menacent la réindustrialisation (ex: usines de batteries en Hauts-de-France) et la vacance prolongée de postes hospitaliers (> 6 mois) génère des surcoûts financiers majeurs.
 * **Valeur Ajoutée & ROI** :
-  - **Réduction des coûts de vacance** : Identification des postes vacants à fort impact financier (ex: Hôpital national de paris à 380-650 €/jour de perte) pour déclencher des plans de recrutement d'urgence.
+  - **Réduction des coûts de vacance** : Identification des postes vacants à fort impact financier pour déclencher des plans de recrutement d'urgence.
   - **Péréquation des aides à l'embauche** : Mobilisation ciblée des subventions publiques (POEI, AFPR, CPF) à coût zéro pour l'employeur.
   - **Rapprochement candidat sur-mesure** : Analyse des freins à l'emploi (garde d'enfants, mobilité) et accès direct aux CVs PDF d'origine sur Cloud Storage via les tables d'objets natives BigQuery.
 * **3 Questions Métier Clés** :
@@ -23,7 +23,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 2. 🏦 **CreditAdvisor** — *Copilote Risque Crédit & Finance B2B*
+### 2. **CreditAdvisor** - *Copilote Risque Crédit & Finance B2B*
 * **Problématique** : La hausse des taux d'intérêt et les chocs sectoriels augmentent le risque de faillites PME/ETI et compliquent l'arbitrage entre maîtrise du risque d'impayés et développement commercial.
 * **Valeur Ajoutée & ROI** :
   - **Détection préventive du risque de défaillance** : Identification des entreprises à risque de liquidation judiciaire d'ici 6 mois pour ajuster les exigences de garanties.
@@ -36,7 +36,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 3. 📡 **NetArch** — *Copilote Architecture Réseau Télécom & Abonnés ARCEP*
+### 3. **NetArch** - *Copilote Architecture Réseau Télécom & Abonnés ARCEP*
 * **Problématique** : La saturation des antennes 5G, les pannes d'équipements sous SLA et l'attrition des abonnés B2B pénalisent le chiffre d'affaires des opérateurs.
 * **Valeur Ajoutée & ROI** :
   - **Suivi de l'ARPU & Rétention B2B** : Analyse du chiffre d'affaires mensuel récurrent par type de forfait (5G Pro, Fibre 2Gbps) pour cibler les campagnes d'upsell 5G Max.
@@ -49,7 +49,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 4. 🛰️ **EarthIntel** — *Copilote Imagerie Satellitaire & Risques Géospatiaux*
+### 4. **EarthIntel** - *Copilote Imagerie Satellitaire & Risques Géospatiaux*
 * **Problématique** : L'exposition aux risques climatiques (inondations, sécheresse, incendies) et les exigences réglementaires de durabilité (CSRD Zéro Déforestation) nécessitent une vérification visuelle incontestable.
 * **Valeur Ajoutée & ROI** :
   - **Évaluation des risques du portefeuille d'actifs** : Croisement des localisations géographiques d'actifs avec l'imagerie spatiale ESA Sentinel-2 (10m).
@@ -62,11 +62,11 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 5. 🚆 **TransitNavigator** — *Copilote Transports Publics & Régularité SNCF*
+### 5. **TransitNavigator** - *Copilote Transports Publics & Régularité SNCF*
 * **Problématique** : Les retards ferroviaires entraînent des pénalités financières et une baisse de satisfaction usagers, tandis que les wagons de 1ère classe souffrent parfois d'un sous-remplissage.
 * **Valeur Ajoutée & ROI** :
   - **Diagnostic des causes de retard** : Isolation des retards imputables aux pannes d'infrastructures (voies, signalisation) vs matériel roulant pour arbitrer les investissements.
-  - **Yield Management & Optimisation tarifaire** : Ajustement dynamique des billets 1ère classe pour augmenter le panier moyen de +12 %.
+  - **Yield Management & Optimisation tarifaire** : Ajustement dynamique des billets 1ère classe pour augmenter le panier moyen.
   - **Gestion des flux usagers & Objets trouvés** : Analyse de la fréquentation des 3 021 gares de France et amélioration du taux de restitution des objets oubliés.
 * **3 Questions Métier Clés** :
   1. *« Quels sont les 5 axes ferroviaires qui enregistrent le plus fort taux de retards de trains et quelle en est la cause principale ? »*
@@ -75,7 +75,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 6. 🏥 **PulseChecker** — *Copilote Santé & Gestion Hospitalière*
+### 6. **PulseChecker** - *Copilote Santé & Gestion Hospitalière*
 * **Problématique** : La saturation des urgences, l'absentéisme soignant et les ruptures de stock de médicaments critiques (antibiotiques, insuline) mettent en péril la continuité des soins.
 * **Valeur Ajoutée & ROI** :
   - **Régulation des urgences & Plans Blancs** : Détection en temps réel des établissements sous tension extrême (>110 % d'occupation).
@@ -88,7 +88,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 7. 🛒 **ShelfOptimizer** — *Copilote Merchandising & Supply Chain Retail*
+### 7. **ShelfOptimizer** - *Copilote Merchandising & Supply Chain Retail*
 * **Problématique** : Les ruptures visuelles en rayon (Shelf-Out) et la casse sur les produits frais génèrent des pertes de chiffre d'affaires et de marge brute irrécupérables.
 * **Valeur Ajoutée & ROI** :
   - **Éradication des Shelf-Out** : Audit de conformité des planogrammes et détection des trous en linéaire pour réapprovisionner les rayons prioritaires.
@@ -101,7 +101,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 8. 🏟️ **ArenaManager** — *Copilote Événementiel, Stades & Arenas*
+### 8. **ArenaManager** - *Copilote Événementiel, Stades & Arenas*
 * **Problématique** : Le sous-remplissage des enceintes sportives, la lenteur d'accès aux portillons et le gaspillage énergétique des gymnases municipaux pèsent sur les bilans financiers.
 * **Valeur Ajoutée & ROI** :
   - **Maximisation des recettes billetterie & VIP** : Optimisation du taux de remplissage des loges d'hospitalité prestige lors des matchs et concerts.
@@ -114,7 +114,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 9. ☀️ **Helios** — *Copilote Énergie & Bornes IRVE Enedis*
+### 9. **Helios** - *Copilote Énergie & Bornes IRVE Enedis*
 * **Problématique** : L'explosion du parc de véhicules électriques crée des risques de saturation des transformateurs de quartier lors des pics de recharge.
 * **Valeur Ajoutée & ROI** :
   - **Supervision du réseau d'IRVE (10 000 bornes)** : Suivi de la puissance nominale (kW), des connecteurs (Combo CCS) et du taux d'utilisation par opérateur.
@@ -127,7 +127,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 10. 🌾 **Ceres** — *Copilote Transition Agroécologique & Exploitations*
+### 10. **Ceres** - *Copilote Transition Agroécologique & Exploitations*
 * **Problématique** : Les alés météorologiques menacent les récoltes et la pression ESG des investisseurs exige une preuve mesurable de décarbonation agricole.
 * **Valeur Ajoutée & ROI** :
   - **Pilotage des rendements à l'hectare** : Analyse des volumes récoltés (Blé, Maïs, Colza) par région et suivi des sondes IoT d'humidité des sols.
@@ -140,7 +140,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-### 🎬 11. **CineAnalyst** — *Copilote Cinéma, Box-Office & Exploitation*
+### 11. **CineAnalyst** - *Copilote Cinéma, Box-Office & Exploitation*
 * **Problématique** : Les arbitrages de programmation des films en salles doivent concilier potentiel au box-office, budget engagé et durée de maintien à l'affiche.
 * **Valeur Ajoutée & ROI** :
   - **Analyse du ROI des productions** : Évaluation du ratio recettes au box-office / budget de production par film et distributeur.
@@ -153,7 +153,7 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
-## 🛠️ Architecture Technique GCP
+## Architecture Technique GCP
 
 La plateforme s'appuie sur une stack Google Cloud d'entreprise automatisée :
 - **Vertex AI Data Agents** (`geminidataanalytics.googleapis.com`) : Moteur de raisonnement naturel et de génération de requêtes analytiques sécurisées.
@@ -163,7 +163,7 @@ La plateforme s'appuie sur une stack Google Cloud d'entreprise automatisée :
 
 ---
 
-## 🚀 Installation & Déploiement
+## Installation & Déploiement
 
 ### Prérequis
 - Python 3.10+

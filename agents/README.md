@@ -1,10 +1,10 @@
-# 📂 Architecture du Dossier `agents/` — Spécifications & Valeur Métier
+# Architecture du Dossier `agents/` - Spécifications & Valeur Métier
 
 Bienvenue dans le répertoire cœur `agents/` de **TalkToData**. Ce dossier contient l'ensemble des définitions, schémas DDL, pipelines de données, payloads d'agents et configurations de gouvernance pour les **11 Agents d'Intelligence Décisionnelle** déployés sur **Google Cloud Platform (GCP)** via **Vertex AI Data Agents** (`geminidataanalytics.googleapis.com`), **BigQuery** et **Dataplex Knowledge Catalog**.
 
 ---
 
-## 🏗️ Structure Standardisée d'un Agent
+## Structure Standardisée d'un Agent
 
 Chaque dossier d'agent suit une architecture de niveau production stricte et homogène :
 
@@ -20,15 +20,15 @@ agents/<nom_agent>/
 
 ---
 
-## 📊 Matrice d'Impact & Valeur Métier des 11 Agents Data
+## Matrice d'Impact & Valeur Métier des 11 Agents Data
 
 | Agent | Domaine | Problématique Métier Cible | Valeur Ajoutée & ROI Concret | Dataset BigQuery |
 | :--- | :--- | :--- | :--- | :--- |
-| **Sully** | Emploi & RH | Pénuries de compétences & vacance prolongée (+6m) des postes. | **Réduction des coûts de vacance** (ex: Hôpital national de paris), captation des subventions POEI/AFPR, et jointure native Object Table GCS vers les CVs PDF d'origine. | `public_sector_employment_ds` |
+| **Sully** | Emploi & RH | Pénuries de compétences & vacance prolongée (+6m) des postes. | **Réduction des coûts de vacance**, captation des subventions POEI/AFPR, et jointure native Object Table GCS vers les CVs PDF d'origine. | `public_sector_employment_ds` |
 | **CreditAdvisor** | Banque & Crédit | Risque de défaillance PME/ETI et encours d'impayés. | **Optimisation de la marge d'intérêt (RAROC)**, scoring de faillite prédictif, provisionnement IFRS 9 (ECL) et ciblage d'upsell lignes de trésorerie. | `financial_banking_ds` |
 | **NetArch** | Télécoms ARCEP | Saturation des antennes 5G, pannes matérielles & MTTR. | **Maximisation de l'ARPU**, maintenance prédictive IoT des pylônes à 7 jours, supervision QoS et respect des SLA B2B. | `telecom_network_ds` |
 | **EarthIntel** | Géospatial & Spatial | Exposition aux risques climatiques et exigences CSRD. | **Évaluation des risques du portefeuille d'actifs** via Sentinel-2 (10m), santé chlorophyllienne NDVI, élagage lignes HT et preuve Zéro Déforestation. | `skywatch_aerospace_ds` |
-| **TransitNavigator** | Transports Publics | Retards ferroviaires, pénalités SLA et remplissage 1ère classe. | **Yield Management billetterie** (+12% de panier moyen), isolation des causes de retard (Infra vs Matériel) et fréquentation des 3 000+ gares. | `transport_mobility_ds` |
+| **TransitNavigator** | Transports Publics | Retards ferroviaires, pénalités SLA et remplissage 1ère classe. | **Yield Management billetterie**, isolation des causes de retard (Infra vs Matériel) et fréquentation des 3 000+ gares. | `transport_mobility_ds` |
 | **PulseChecker** | Santé & Hôpitaux | Saturation des urgences, absentéisme & déserts médicaux. | **Régulation des urgences hospitalières** (Plan Blanc), prévention des ruptures de stock de médicaments (≤5 jours) et EBITDA cliniques RPPS. | `public_sector_healthcare_ds` |
 | **ShelfOptimizer** | Retail & CPG | Ruptures visuelles (Shelf-Out) et démarque rayon Frais. | **Éradication des Shelf-Out**, prédiction du gâchis produits frais à 14 jours, et bundles cross-selling Marques Nationales vs MDD. | `retail_cpg_ds` |
 | **ArenaManager** | Sport & Stades | Sous-remplissage des loges VIP et gaspillage énergétique. | **Maximisation des recettes de billetterie/buvettes**, audit énergétique des complexes sportifs (RES) et suivi des subventions ANS. | `sports_infrastructure_ds` |
@@ -38,7 +38,7 @@ agents/<nom_agent>/
 
 ---
 
-## 🛠️ Guide de Création d'un Nouvel Agent Métier
+## Guide de Création d'un Nouvel Agent Métier
 
 Pour ajouter un 12ème Agent d'Intelligence Décisionnelle à la plateforme :
 
