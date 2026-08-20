@@ -37,6 +37,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quels sont les rayons (Épicerie, Frais, Boissons, Hygiène) qui comptabilisent le plus grand nombre de références et leur taux moyen de rupture visuelle ?",
+          "sqlQuery": "SELECT rayon_categorie, COUNT(code_barre_ean) AS nombre_references, ROUND(AVG(taux_rupture_lineaire_pct), 1) AS rupture_moyenne_pct FROM `${PROJECT_ID}.retail_cpg_ds.retail_analyse_lineaire_ruptures` GROUP BY rayon_categorie ORDER BY nombre_references DESC LIMIT 5"
+        },
+        {
+          "naturalLanguageQuestion": "Quelles sont les références produits qui connaissent les plus forts taux de rupture visuelle (Shelf Out) en linéaire magasin ?",
+          "sqlQuery": "SELECT l.id_magasin, c.nom_produit, l.rayon_categorie, l.nombre_facings_theorique, l.nombre_facings_constate, l.taux_rupture_lineaire_pct, l.statut_stock_lineaire FROM `${PROJECT_ID}.retail_cpg_ds.retail_analyse_lineaire_ruptures` l JOIN `${PROJECT_ID}.retail_cpg_ds.openfoodfacts_catalog` c ON l.code_barre_ean = c.code_barre_ean WHERE l.statut_stock_lineaire = 'RUPTURE_SHELF_OUT' ORDER BY l.taux_rupture_lineaire_pct DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quelles sont les meilleures associations de produits (Marques Nationales vs MDD) qui génèrent la plus forte hausse de ticket moyen ?",
+          "sqlQuery": "SELECT nom_produit_principal, nom_produit_mdd_associe, indice_confiance_association_pct, hausse_ticket_moyen_projete_pct, offre_bundle_recommandee FROM `${PROJECT_ID}.retail_cpg_ds.retail_cross_selling_associations` ORDER BY hausse_ticket_moyen_projete_pct DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Prédis quels magasins et références de produits frais risquent le plus de pertes par démarque au cours des 14 prochains jours, et quelles consignes de réassort automatique doivent être envoyées.",
           "sqlQuery": "SELECT nom_magasin, enseigne, commune, tranche_horaire, demarque_pertes_produits_frais_14j_eur, consigne_reassort_automatique FROM `${PROJECT_ID}.retail_cpg_ds.retail_frequentation_magasins` WHERE demarque_pertes_produits_frais_14j_eur > 10000.0 ORDER BY demarque_pertes_produits_frais_14j_eur DESC LIMIT 25"
         },

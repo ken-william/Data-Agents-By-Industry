@@ -72,6 +72,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quel est l'ARPU (Revenu Moyen par Utilisateur) et le chiffre d'affaires mensuel généré par catégorie de forfaits (B2B Entreprises vs Grand Public) ?",
+          "sqlQuery": "SELECT type_client, nom_forfait_actuel, COUNT(id_client) AS nombre_abonnes, ROUND(AVG(arpu_mensuel_eur), 2) AS arpu_moyen_eur, ROUND(SUM(arpu_mensuel_eur), 2) AS chiffre_affaires_mensuel_total_eur FROM `${PROJECT_ID}.telecom_network_ds.abonnes_master_customers` GROUP BY type_client, nom_forfait_actuel ORDER BY chiffre_affaires_mensuel_total_eur DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Identifie les 10 antennes 5G qui enregistrent le plus fort volume de trafic de données (en Gigaoctets) et leur score de qualité d'expérience.",
+          "sqlQuery": "SELECT s.id_station_anfr, a.nom_operateur, a.nom_region, ROUND(SUM(s.volume_download_mb + s.volume_upload_mb)/1024.0, 1) AS volume_trafic_total_gb, ROUND(AVG(s.qualite_experience_qoe_score), 2) AS score_qoe_moyen FROM `${PROJECT_ID}.telecom_network_ds.sessions_trafic_web_categories` s JOIN `${PROJECT_ID}.telecom_network_ds.arcep_sites_mobiles_metropole` a ON s.id_station_anfr = a.id_station_anfr GROUP BY s.id_station_anfr, a.nom_operateur, a.nom_region ORDER BY volume_trafic_total_gb DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les équipements réseau ayant subi le plus grand nombre d'incidents techniques ce trimestre et quel est le délai moyen de rétablissement (MTTR) ?",
+          "sqlQuery": "SELECT type_equipement_concerne, nom_region_impactee, COUNT(id_incident) AS total_incidents, ROUND(AVG(duree_interruption_minutes), 1) AS mttr_moyen_minutes, SUM(penalites_financieres_sla_eur) AS total_penalites_sla_eur FROM `${PROJECT_ID}.telecom_network_ds.telecom_incidents_equipements_reseau` GROUP BY type_equipement_concerne, nom_region_impactee ORDER BY total_incidents DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Aide moi à identifier nos cibles prioritaires pour la 5G. Peux-tu me lister tous les clients qui possèdent déjà un appareil compatible 5G mais pas de forfait 5G avec leur IMEI et SIM Tag Code ?",
           "sqlQuery": "SELECT c.id_client, c.nom_client, c.type_client, h.constructeur, h.modele_terminal, h.imei_code, h.imsi_sim_tag_code, c.nom_forfait_actuel, c.consommation_donnees_mensuelle_gb FROM `${PROJECT_ID}.telecom_network_ds.abonnes_master_customers` c JOIN `${PROJECT_ID}.telecom_network_ds.parc_equipements_sim_imei` h ON c.id_client = h.id_client WHERE h.compatible_5g = TRUE AND c.id_forfait_actuel NOT LIKE '%5G%' LIMIT 20"
         },

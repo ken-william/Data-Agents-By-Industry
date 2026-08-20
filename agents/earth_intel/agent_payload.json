@@ -37,6 +37,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quels sont les départements agricoles affichant la plus forte baisse de l'indice NDVI (santé de la végétation) sur les derniers clichés Sentinel-2 ?",
+          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.region, c.ndvi_vegetation_index, s.acquisition_date, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.ndvi_vegetation_index IS NOT NULL ORDER BY c.ndvi_vegetation_index ASC LIMIT 5"
+        },
+        {
+          "naturalLanguageQuestion": "Liste tous les actifs immobiliers et industriels de notre portefeuille situés dans des zones à fort score d'exposition aux inondations ou feux de forêt.",
+          "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.region, c.flood_risk_score, c.fire_risk_score, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.flood_risk_score = 'Très Élevé' OR c.fire_risk_score = 'Élevé' ORDER BY s.acquisition_date DESC LIMIT 5"
+        },
+        {
+          "naturalLanguageQuestion": "Combien d'acquisitions satellites Sentinel-2 disposons-nous avec une couverture nuageuse inférieure à 5 % sur la région PACA ce trimestre ?",
+          "sqlQuery": "SELECT s.scene_id, s.mgrs_tile, s.acquisition_date, s.cloud_cover_pct, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s WHERE s.cloud_cover_pct <= 5.0 ORDER BY s.acquisition_date DESC LIMIT 5"
+        },
+        {
           "naturalLanguageQuestion": "Banque & Assurance : Évalue le risque d'inondation et d'incendie sur notre portefeuille d'actifs immobiliers assurés en PACA et affiche le cliché satellite Sentinel-2 de confirmation.",
           "sqlQuery": "SELECT c.company_name, c.asset_name, c.city, c.region, c.flood_risk_score, c.fire_risk_score, s.acquisition_date, s.quicklook_image_url FROM `${PROJECT_ID}.skywatch_aerospace_ds.company_assets` c JOIN `${PROJECT_ID}.skywatch_aerospace_ds.sentinel_2_index` s ON c.mgrs_tile = s.mgrs_tile WHERE c.region = 'PACA' AND c.industry_sector = 'Banque & Assurance' ORDER BY s.acquisition_date DESC LIMIT 5"
         },

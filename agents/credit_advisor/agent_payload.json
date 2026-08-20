@@ -57,6 +57,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quelle est la répartition des encours de crédit de notre portefeuille d'entreprises par classe de risque et par secteur d'activité ?",
+          "sqlQuery": "SELECT e.secteur_activite, c.stage_ifrs9, COUNT(e.id_entreprise) AS nombre_entreprises, SUM(c.montant_encours_eur) AS encours_total_eur, ROUND(AVG(c.probabilite_defaillance_6m), 3) AS pd_moyenne FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit` c JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises` e ON c.id_entreprise = e.id_entreprise GROUP BY e.secteur_activite, c.stage_ifrs9 ORDER BY encours_total_eur DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les 10 clients professionnels qui génèrent le plus grand montant d'encours de crédit et leur taux d'intérêt moyen ?",
+          "sqlQuery": "SELECT e.nom_entreprise, e.siren, e.secteur_activite, c.montant_encours_eur, c.taux_interet_actuel, c.stage_ifrs9 FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit` c JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises` e ON c.id_entreprise = e.id_entreprise ORDER BY c.montant_encours_eur DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quel est le montant global des provisions IFRS 9 (ECL) et des encours par région administrative ?",
+          "sqlQuery": "SELECT e.nom_region, COUNT(e.id_entreprise) AS nombre_entreprises, SUM(c.montant_encours_eur) AS encours_total_eur, SUM(c.montant_ecl_ifrs9_eur) AS total_ecl_provisionne_eur FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit` c JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises` e ON c.id_entreprise = e.id_entreprise GROUP BY e.nom_region ORDER BY encours_total_eur DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Analyse nos encours de crédit et prédis quelles entreprises de notre portefeuille ont un risque de défaillance supérieur à 75 % d'ici 6 mois face aux taux d'intérêt actuels.",
           "sqlQuery": "SELECT e.nom_entreprise, e.siren, e.categorie_entreprise, e.secteur_activite, b.ratio_dscr, c.montant_encours_eur, c.taux_interet_actuel, c.probabilite_defaillance_6m, c.stage_ifrs9, c.montant_ecl_ifrs9_eur FROM `${PROJECT_ID}.fsi_creditadvisor_dataset.encours_credit` c JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.entreprises` e ON c.id_entreprise = e.id_entreprise JOIN `${PROJECT_ID}.fsi_creditadvisor_dataset.bilans_financiers` b ON e.id_entreprise = b.id_entreprise AND b.annee_exercice = 2025 WHERE c.probabilite_defaillance_6m > 0.75 ORDER BY c.probabilite_defaillance_6m DESC"
         },

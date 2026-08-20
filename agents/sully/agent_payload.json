@@ -52,6 +52,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quels sont les 10 métiers qui comptabilisent le plus grand nombre de projets de recrutement jugés difficiles par les employeurs dans la région Île-de-France ?",
+          "sqlQuery": "SELECT nom_metier_bmo, famille_metier_libelle, SUM(projets_recrutement_nombre) AS total_projets, SUM(recrutements_difficiles_nombre) AS total_difficiles, ROUND(SUM(recrutements_difficiles_nombre) * 100.0 / NULLIF(SUM(projets_recrutement_nombre), 0), 1) AS taux_tension_pct FROM `${PROJECT_ID}.public_sector_employment_ds.bmo_recrutement_2025` WHERE nom_region = 'Île-de-France' GROUP BY nom_metier_bmo, famille_metier_libelle ORDER BY total_difficiles DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quelle est la masse salariale globale déclarée et le nombre total de salariés par secteur d'activité dans nos registres URSSAF ?",
+          "sqlQuery": "SELECT secteur_activite_libelle, COUNT(siret) AS nombre_etablissements, SUM(employee_count) AS total_salaries, SUM(total_payroll_eur) AS masse_salariale_totale_eur FROM `${PROJECT_ID}.public_sector_employment_ds.entreprises_urssaf_declarations` GROUP BY secteur_activite_libelle ORDER BY masse_salariale_totale_eur DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quel est le montant total des aides publiques accordées (POEI, AFPR, CPF, Agefiph) et le nombre de bénéficiaires accompagnés par organisme financeur ?",
+          "sqlQuery": "SELECT organisme_financeur, nom_aide_dispositif, COUNT(aide_id) AS nombre_dossiers, SUM(montant_aide_accordee_eur) AS montant_total_accorde_eur FROM `${PROJECT_ID}.public_sector_employment_ds.france_travail_formations_aides` GROUP BY organisme_financeur, nom_aide_dispositif ORDER BY montant_total_accorde_eur DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Présente moi un rapport synthétique des informations de Anna : FT-99720068 avec le lien de son CV PDF hébergé sur GCS.",
           "sqlQuery": "SELECT d.demandeur_id, d.nom_prenom, d.metier_recherche, d.anciennete_chomage_mois, d.freins_emploi_detail, d.competences_actuelles, d.niveau_etudes, o.uri AS cv_gcs_uri, o.content_type, o.size FROM `${PROJECT_ID}.public_sector_employment_ds.france_travail_demandeurs` d LEFT JOIN `${PROJECT_ID}.public_sector_employment_ds.france_travail_cv_object_table` o ON d.demandeur_id = o.demandeur_id WHERE d.demandeur_id = 'FT-99720068'"
         },

@@ -47,6 +47,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quel est le taux d'occupation et d'utilisation moyen des blocs opératoires par spécialité chirurgicale ?",
+          "sqlQuery": "SELECT specialite_chirurgicale, COUNT(salle_id) AS nombre_salles, ROUND(AVG(taux_occupation_salle_pct), 1) AS taux_occupation_moyen_pct, SUM(nombre_interventions_mois) AS total_interventions_mois FROM `${PROJECT_ID}.healthcare_medical_ds.hopitaux_blocs_operatoires_chirurgie` GROUP BY specialite_chirurgicale ORDER BY total_interventions_mois DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les produits pharmaceutiques et médicaments vitaux dont le niveau de stock actuel est critique (< 5 jours d'autonomie) ?",
+          "sqlQuery": "SELECT nom_etablissement, nom_substance_active, quantite_en_stock_doses, jours_autonomie_restants, statut_approvisionnement FROM `${PROJECT_ID}.healthcare_medical_ds.pharmacie_stock_medicaments_tension` WHERE jours_autonomie_restants <= 5 ORDER BY jours_autonomie_restants ASC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quel est le nombre total d'heures de garde effectuées et le taux d'absentéisme soignant par service hospitalier ?",
+          "sqlQuery": "SELECT service_hospitalier, COUNT(personnel_id) AS total_personnel, SUM(heures_garde_effectuees) AS total_heures_garde, ROUND(AVG(taux_absenteisme_pct), 1) AS absenteisme_moyen_pct FROM `${PROJECT_ID}.healthcare_medical_ds.personnel_medical_garde_planning` GROUP BY service_hospitalier ORDER BY total_heures_garde DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Quels départements en désert médical RPPS représentent les meilleures opportunités pour implanter une nouvelle clinique privée avec les plus forts projets d'EBITDA sur 5 ans ?",
           "sqlQuery": "SELECT nom_departement, nom_region, population_totale, densite_medecins_pour_100k_hab, indice_tension_desert_medical, ebitda_projete_5ans_eur FROM `${PROJECT_ID}.healthcare_medical_ds.demographie_medecins_rpps` WHERE opportunite_implantation_clinique = 'PRIORITE_FORTE_INVESTISSEMENT' ORDER BY ebitda_projete_5ans_eur DESC LIMIT 10"
         },

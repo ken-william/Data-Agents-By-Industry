@@ -57,6 +57,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quels sont les 5 axes ferroviaires qui enregistrent le plus fort taux de retards de trains et quelle en est la cause principale ?",
+          "sqlQuery": "SELECT axe, nombre_trains_programmes, nombre_trains_en_retard, taux_regularite_pct, cause_principale_retard FROM `${PROJECT_ID}.transport_mobility_ds.sncf_regularite_lignes` ORDER BY taux_regularite_pct ASC LIMIT 5"
+        },
+        {
+          "naturalLanguageQuestion": "Quelles sont les 10 gares de voyageurs enregistrant la plus forte fréquentation annuelle et leur nombre de voyageurs ?",
+          "sqlQuery": "SELECT nom_gare, code_insee_commune, region_sncf, nombre_voyageurs_annuel, classification_gare FROM `${PROJECT_ID}.transport_mobility_ds.frequentation_gares_sncf` ORDER BY nombre_voyageurs_annuel DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quel est le nombre total d'objets trouvés déclarés en gare par type d'objet et quel est le taux de restitution aux usagers ?",
+          "sqlQuery": "SELECT type_objet, COUNT(id_objet) AS nombre_objets_trouves, COUNTIF(statut_restitution = 'Restitué') AS restitues, ROUND(COUNTIF(statut_restitution = 'Restitué') * 100.0 / COUNT(id_objet), 1) AS taux_restitution_pct FROM `${PROJECT_ID}.transport_mobility_ds.sncf_objets_trouves` GROUP BY type_objet ORDER BY nombre_objets_trouves DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Affiche le graphique temporel des 3 derniers mois passés et les prévisions sur les 3 prochains mois de la probabilité de panne sur nos segments TER.",
           "sqlQuery": "SELECT nom_segment_ferroviaire, region, line_code, mois_date, periode_type, charge_trafic_mensuelle_pct, probabilite_panne_materielle, risque_ralentissement_majeur, action_maintenance_recommandee FROM `${PROJECT_ID}.transport_mobility_ds.ter_maintenance_historique_previsions_6mois` ORDER BY nom_segment_ferroviaire, mois_date ASC"
         },

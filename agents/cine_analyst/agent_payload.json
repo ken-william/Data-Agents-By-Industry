@@ -47,6 +47,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quels sont les 5 films sortis cette année qui affichent le meilleur ratio de rentabilité (recettes au box-office vs budget de production) et leur budget ?",
+          "sqlQuery": "SELECT titre_film, genre, nationalite, budget_production_eur, recettes_cumulees_total_eur, ROUND((recettes_cumulees_total_eur / NULLIF(budget_production_eur, 0)), 2) AS ratio_rentabilite_roi FROM `${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice` WHERE budget_production_eur > 0 ORDER BY ratio_rentabilite_roi DESC LIMIT 5"
+        },
+        {
+          "naturalLanguageQuestion": "Quelle est la moyenne de fréquentation et le taux d'occupation des fauteuils par séance selon le format de projection (IMAX, 4DX, Standard) ?",
+          "sqlQuery": "SELECT nom_format_projection, taux_occupation_moyen_seance_pct, prix_moyen_billet_format_eur, recette_annuelle_par_fauteuil_eur FROM `${PROJECT_ID}.cinema_boxoffice_ds.salles_formats_projection_frequentation` ORDER BY taux_occupation_moyen_seance_pct DESC"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les films sortis cette année enregistrant le plus grand nombre total d'entrées cumulées au box-office ?",
+          "sqlQuery": "SELECT titre_film, genre, nationalite, entrees_premiere_semaine, entrees_cumulees_total, semaines_affiche, coefficient_maintien_semaine2 FROM `${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice` ORDER BY entrees_cumulees_total DESC LIMIT 5"
+        },
+        {
           "naturalLanguageQuestion": "Prédis quels films à gros budget programmés risquent de faire un flop en salles au vu des tendances actuelles sur les réseaux sociaux, pour réajuster nos horaires de diffusion.",
           "sqlQuery": "SELECT titre_film, genre, nationalite, budget_production_eur, index_buzz_reseaux_sociaux, risque_flop_box_office_pct FROM `${PROJECT_ID}.cinema_boxoffice_ds.cnc_films_nouveautes_titres_boxoffice` WHERE budget_production_eur > 20000000 ORDER BY risque_flop_box_office_pct DESC LIMIT 5"
         },

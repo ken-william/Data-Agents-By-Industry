@@ -57,6 +57,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quel est le rendement moyen constaté en tonnes par hectare pour les principales cultures par région agricole ?",
+          "sqlQuery": "SELECT culture_principale, nom_region, COUNT(id_recolte) AS nombre_recoltes, ROUND(AVG(rendement_tonnes_par_ha), 2) AS rendement_moyen_ha, SUM(volume_total_recolte_tonnes) AS volume_total_tonnes FROM `${PROJECT_ID}.agriculture_rurality_ds.recoltes_rendements` GROUP BY culture_principale, nom_region ORDER BY volume_total_tonnes DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quelle est l'humidité moyenne des sols et la pluviométrie mesurée par nos capteurs IoT par station météo ?",
+          "sqlQuery": "SELECT station_id, commune, code_departement, ROUND(AVG(humidite_sol_pct), 1) AS humidite_sol_moyenne_pct, ROUND(SUM(pluviometrie_cumulee_mm), 1) AS pluviometrie_totale_mm FROM `${PROJECT_ID}.agriculture_rurality_ds.capteurs_iot_sols_meteo` GROUP BY station_id, commune, code_departement ORDER BY humidite_sol_moyenne_pct ASC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quel est le chiffre d'affaires annuel et le nombre d'adhérents des coopératives agricoles par région ?",
+          "sqlQuery": "SELECT nom_cooperative, nom_region, nombre_adherents_exploitations, chiffre_affaires_annuel_eur FROM `${PROJECT_ID}.agriculture_rurality_ds.cooperatives_agricoles` ORDER BY chiffre_affaires_annuel_eur DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Croise les anomalies météo prévues avec nos surfaces de cultures pour prédire quelles coopératives agricoles vont subir une baisse de rendement de plus de 20 % cet été.",
           "sqlQuery": "SELECT c.nom_cooperative, c.nom_region, m.annee_saison, m.temperature_anomalie_c, m.precipitations_anomalie_pct, m.baisse_rendement_predite_pct, COUNT(DISTINCT e.id_exploitation) AS nb_exploitations_impactees, ROUND(SUM(p.surface_ha), 1) AS surface_totale_impactee_ha FROM `${PROJECT_ID}.agriculture_rurality_ds.cooperatives_agricoles` c JOIN `${PROJECT_ID}.agriculture_rurality_ds.exploitations_agricoles` e ON c.id_cooperative = e.id_cooperative JOIN `${PROJECT_ID}.agriculture_rurality_ds.parcelles_agricoles` p ON e.id_exploitation = p.id_exploitation JOIN `${PROJECT_ID}.agriculture_rurality_ds.previsions_anomalies_meteo_ete` m ON e.code_departement = m.code_departement WHERE m.baisse_rendement_predite_pct > 20.0 GROUP BY c.nom_cooperative, c.nom_region, m.annee_saison, m.temperature_anomalie_c, m.precipitations_anomalie_pct, m.baisse_rendement_predite_pct ORDER BY m.baisse_rendement_predite_pct DESC"
         },

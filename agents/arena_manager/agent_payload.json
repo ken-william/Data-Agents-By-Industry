@@ -42,6 +42,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quel est le taux de remplissage moyen et le chiffre d'affaires billetterie réalisé par catégorie d'événement (Concerts, Matchs, Spectacles) ?",
+          "sqlQuery": "SELECT categorie_evenement, COUNT(id_evenement) AS nombre_evenements, ROUND(AVG(taux_remplissage_pct), 1) AS remplissage_moyen_pct, SUM(recette_billetterie_brute_eur) AS total_recette_billetterie_eur FROM `${PROJECT_ID}.sports_infrastructure_ds.stades_evenements_billetterie` GROUP BY categorie_evenement ORDER BY total_recette_billetterie_eur DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quel est le chiffre d'affaires moyen généré par les buvettes et points de restauration rapide par spectateur lors des événements ?",
+          "sqlQuery": "SELECT type_stand, nom_stand, SUM(recette_nourriture_boisson_eur) AS total_nourriture_boisson_eur, SUM(recette_merchandising_eur) AS total_merchandising_eur, ROUND(AVG(panier_moyen_par_spectateur_eur), 2) AS panier_moyen_spectateur_eur FROM `${PROJECT_ID}.sports_infrastructure_ds.stades_concessions_buvettes` GROUP BY type_stand, nom_stand ORDER BY total_nourriture_boisson_eur DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quels complexes sportifs affichent la plus forte consommation énergétique annuelle (en MWh) et leur état de vétusté ?",
+          "sqlQuery": "SELECT nom_equipement, type_equipement, region, commune, etat_vetuste, consommation_energetique_annuelle_mwh, gaspillage_kwh_par_m2 FROM `${PROJECT_ID}.sports_infrastructure_ds.ministere_sports_equipements` ORDER BY consommation_energetique_annuelle_mwh DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Quels sont les événements en stade ou arena qui ont généré le plus fort chiffre d'affaires de billetterie brute et d'hospitalité VIP ?",
           "sqlQuery": "SELECT nom_evenement, nom_equipement, commune, categorie_evenement, billets_vendus_grand_public, billets_vip_hospitalite_vendus, taux_remplissage_pct, recette_billetterie_brute_eur FROM `${PROJECT_ID}.sports_infrastructure_ds.stades_evenements_billetterie` ORDER BY recette_billetterie_brute_eur DESC LIMIT 10"
         },

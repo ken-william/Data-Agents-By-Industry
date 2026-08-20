@@ -32,6 +32,18 @@
       },
       "exampleQueries": [
         {
+          "naturalLanguageQuestion": "Quelle a été la production électrique totale raccordée (en kW) par filière d'énergie renouvelable (Solaire, Éolien, Hydraulique) ?",
+          "sqlQuery": "SELECT filiere_energie, COUNT(id_installation) AS nombre_centrales, SUM(puissance_raccordee_kw) AS puissance_totale_raccordee_kw, ROUND(AVG(taux_charge_moyen_pct), 1) AS taux_charge_moyen_pct FROM `${PROJECT_ID}.power_energy_ds.enedis_production_renouvelable` GROUP BY filiere_energie ORDER BY puissance_totale_raccordee_kw DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quels sont les principaux opérateurs de bornes de recharge IRVE et la puissance moyenne installée par région ?",
+          "sqlQuery": "SELECT nom_region, nom_operateur, COUNT(DISTINCT id_station_itinerance) AS nb_stations, SUM(nbre_pdc) AS total_prises, ROUND(AVG(puissance_nominale_kw), 1) AS puissance_moyenne_kw FROM `${PROJECT_ID}.power_energy_ds.enedis_bornes_irve` GROUP BY nom_region, nom_operateur ORDER BY total_prises DESC LIMIT 10"
+        },
+        {
+          "naturalLanguageQuestion": "Quels transformateurs de quartier enregistrent le plus fort taux de charge et leur niveau de risque de saturation ?",
+          "sqlQuery": "SELECT commune, code_departement, nom_transformateur_quartier, pic_consommation_kw, capacite_max_transformateur_kw, taux_charge_transformateur_pct, risque_tension_reseau FROM `${PROJECT_ID}.power_energy_ds.enedis_consommation_inf36` ORDER BY taux_charge_transformateur_pct DESC LIMIT 10"
+        },
+        {
           "naturalLanguageQuestion": "Quels transformateurs Enedis présentent un risque élevé de saturation (> 88 % de charge) en raison de la forte concentration de bornes IRVE rapides ?",
           "sqlQuery": "SELECT c.commune, c.code_departement, c.nom_transformateur_quartier, c.pic_consommation_kw, c.capacite_max_transformateur_kw, c.taux_charge_transformateur_pct, c.risque_tension_reseau FROM `${PROJECT_ID}.power_energy_ds.enedis_consommation_inf36` c WHERE c.taux_charge_transformateur_pct > 88.0 ORDER BY c.taux_charge_transformateur_pct DESC LIMIT 25"
         },
