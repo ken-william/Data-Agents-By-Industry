@@ -15,12 +15,9 @@ import {
   ArrowRight,
   RotateCcw,
   Zap,
-  ChevronLeft,
-  Sparkles,
-  Monitor,
-  Smartphone
+  ChevronLeft
 } from 'lucide-react';
-import { COLOR_THEMES, getIconComponent } from '../utils/themeMap';
+import { COLOR_THEMES, getIconComponent, getAgentTheme } from '../utils/themeMap';
 
 export function LiveCanvas({
   selectedAgent,
@@ -32,13 +29,12 @@ export function LiveCanvas({
   onSendMessage,
   voiceProps,
   onResetChat,
-  screenMode = 'showcase' // 'showcase' (Écran A) vs 'controller' (Écran B)
+  screenMode = 'showcase'
 }) {
   const [inputPrompt, setInputPrompt] = useState('');
   const [showThoughtsMap, setShowThoughtsMap] = useState({});
 
-  const colorKey = selectedAgent?.theme?.color || 'indigo';
-  const theme = COLOR_THEMES[colorKey] || COLOR_THEMES.indigo;
+  const theme = getAgentTheme(selectedAgent?.theme);
   const AgentIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Bot;
 
   const handleInputChange = (e) => {
@@ -80,7 +76,7 @@ export function LiveCanvas({
             </div>
             <div>
               <h3 className="text-xs sm:text-sm font-bold text-slate-50 flex items-center gap-2">
-                {selectedAgent?.displayName.split(' - ')[0]}
+                {selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}
                 <span className={`text-[10px] px-2 py-0.5 rounded-lg font-mono ${theme.badge}`}>
                   {selectedAgent?.datasetId}
                 </span>
@@ -109,7 +105,7 @@ export function LiveCanvas({
       {/* Main Dual Screen Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
         
-        {/* Left Column: Challenge Chips & Voice Controller (3 cols in Controller mode, top in Showcase mode) */}
+        {/* Left Column: Challenge Chips & Voice Controller */}
         <div className={`${isShowcase ? 'lg:col-span-4' : 'lg:col-span-4'} flex flex-col gap-4`}>
           
           {/* Gemini Live SVG Animated Orb Card */}
@@ -120,7 +116,7 @@ export function LiveCanvas({
                 Copilote Conversational Analytics
               </span>
               <h4 className="text-sm font-bold text-slate-100">
-                {selectedAgent?.displayName.split(' - ')[0]}
+                {selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}
               </h4>
             </div>
 
@@ -135,7 +131,7 @@ export function LiveCanvas({
 
           </div>
 
-          {/* Smart Challenge Chips (Défis Métiers) */}
+          {/* Smart Challenge Chips */}
           <div className="p-4 rounded-2xl bg-[#0B132B]/70 border border-slate-800/80 backdrop-blur-md flex flex-col gap-3 shadow-xl">
             <div className="flex items-center justify-between pb-2 border-b border-slate-800">
               <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
@@ -168,7 +164,7 @@ export function LiveCanvas({
 
         </div>
 
-        {/* Right Column: 70% Result Canvas Priority & Hybrid Input Dock (8 cols) */}
+        {/* Right Column: 70% Result Canvas Priority & Hybrid Input Dock */}
         <div className="lg:col-span-8 flex flex-col gap-4">
           
           {/* Error Notification */}
@@ -182,12 +178,14 @@ export function LiveCanvas({
             </div>
           )}
 
-          {/* Dynamic Result Canvas (70% priority, clear readable typography) */}
+          {/* Dynamic Result Canvas */}
           <div className="p-6 rounded-2xl bg-[#0B132B]/70 border border-slate-800/80 backdrop-blur-md min-h-[440px] max-h-[580px] overflow-y-auto space-y-4 shadow-xl">
             {messages.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center p-8 text-slate-500 my-auto">
                 <Bot className="w-10 h-10 text-slate-600 mb-2 animate-bounce" />
-                <h4 className="text-sm font-bold text-slate-300">Session démarrée avec l'agent {selectedAgent?.displayName.split(' - ')[0]}</h4>
+                <h4 className="text-sm font-bold text-slate-300">
+                  Session démarrée avec l'agent {selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}
+                </h4>
                 <p className="text-xs text-slate-400 max-w-sm mt-1">
                   Posez votre question à l'oral ou sélectionnez un défi à gauche pour déclencher l'analyse décisionnelle BigQuery.
                 </p>
@@ -213,7 +211,9 @@ export function LiveCanvas({
                           <div className={`p-1 rounded bg-[#020617] border border-slate-800 ${theme.text}`}>
                             <AgentIcon className="w-3 h-3" />
                           </div>
-                          <span className="font-semibold text-slate-200">{selectedAgent?.displayName.split(' - ')[0]}</span>
+                          <span className="font-semibold text-slate-200">
+                            {selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}
+                          </span>
                         </>
                       )}
                     </div>
@@ -277,7 +277,7 @@ export function LiveCanvas({
             )}
           </div>
 
-          {/* Hybrid Dock: Voice STT + Multiline Text Input */}
+          {/* Hybrid Input Dock */}
           <form onSubmit={handleFormSubmit} className="p-3.5 rounded-2xl bg-[#0B132B]/70 border border-slate-800/80 backdrop-blur-md shadow-xl">
             <div className="flex items-center gap-2.5">
               <textarea
@@ -300,7 +300,7 @@ export function LiveCanvas({
                 className={`h-full px-5 py-3 rounded-xl font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all ${
                   !inputPrompt.trim() || isStreaming
                     ? 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
-                    : 'bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white shadow-lg'
+                    : theme.button
                 }`}
               >
                 {isStreaming ? (

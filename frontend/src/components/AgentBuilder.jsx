@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Sparkles, Database, CheckCircle2, Rocket, ShieldCheck, Search } from 'lucide-react';
-import { getIconComponent, COLOR_THEMES } from '../utils/themeMap';
+import { getIconComponent, getAgentTheme } from '../utils/themeMap';
 
 export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLive }) {
   const [isConnected, setIsConnected] = useState(true);
@@ -8,10 +8,12 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
 
   const filteredAgents = agents.filter(a => {
     const q = searchFilter.toLowerCase();
-    return a.displayName.toLowerCase().includes(q) || a.theme.category.toLowerCase().includes(q);
+    const nameMatch = a.displayName ? a.displayName.toLowerCase().includes(q) : false;
+    const catMatch = a.theme && a.theme.category ? a.theme.category.toLowerCase().includes(q) : false;
+    return nameMatch || catMatch;
   });
 
-  const activeTheme = COLOR_THEMES[selectedAgent?.theme?.color || 'indigo'];
+  const activeTheme = getAgentTheme(selectedAgent?.theme);
   const ActiveIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Database;
 
   return (
@@ -63,7 +65,7 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
             {filteredAgents.map((agent) => {
               const isSelected = selectedAgent?.id === agent.id;
               const IconComp = getIconComponent(agent.id);
-              const theme = COLOR_THEMES[agent.theme.color] || COLOR_THEMES.indigo;
+              const theme = getAgentTheme(agent.theme);
 
               return (
                 <div
@@ -82,12 +84,12 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
                       </div>
                       
                       <span className={`text-[10px] px-2 py-0.5 rounded-lg font-medium border ${theme.badge}`}>
-                        {agent.theme.category}
+                        {theme.category}
                       </span>
                     </div>
 
                     <h4 className="text-xs font-bold text-slate-50 mb-1 line-clamp-1">
-                      {agent.displayName.split(' - ')[0]}
+                      {agent.displayName ? agent.displayName.split(' - ')[0] : agent.id}
                     </h4>
 
                     <p className="text-[11px] text-slate-400 line-clamp-2 leading-relaxed mb-3">
@@ -157,7 +159,7 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
               disabled={!selectedAgent || !isConnected}
               className={`w-full py-3 px-4 rounded-lg font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 ${
                 selectedAgent && isConnected
-                  ? `${activeTheme.button} shadow-lg`
+                  ? activeTheme.button
                   : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
               }`}
             >

@@ -134,3 +134,20 @@ export const COLOR_THEMES = {
     button: "bg-gradient-to-r from-sky-400 via-blue-500 to-indigo-500 hover:opacity-90 text-white font-semibold"
   }
 };
+
+/**
+ * Safely resolves an agent's theme object, guaranteeing non-null properties.
+ */
+export function getAgentTheme(themeObj) {
+  const colorKey = typeof themeObj === 'string' ? themeObj : (themeObj?.color || 'indigo');
+  const matched = COLOR_THEMES[colorKey] || COLOR_THEMES.indigo;
+
+  return {
+    category: themeObj?.category || matched.category,
+    badge: matched.badge,
+    border: matched.border,
+    accentBg: matched.accentBg,
+    text: matched.text,
+    button: matched.button
+  };
+}
