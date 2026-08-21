@@ -1,13 +1,13 @@
 import React from 'react';
-import { Mic, MicOff, Sparkles, Volume2 } from 'lucide-react';
 import { cn } from '../utils/cn';
 
 /**
- * Gemini Live Chroma Physics Wave Orb
- * 4-Color Google Fusion Blob featuring 3 organic physics states:
- * 1. Listening: Wave pulse reacting to voice.
- * 2. Thinking: Spinning multicolor gradient ring.
- * 3. Speaking: Emerald & Cyan expanding shockwaves.
+ * Gemini Live Slime Liquid 3D Mesh Orb
+ * Fluid organic living AI character without static microphone icon.
+ * Features 3 liquid physics states:
+ * 1. Listening: Liquid mesh expands & ripples to human voice.
+ * 2. Thinking: Inner spinning multicolor ring & cell contraction.
+ * 3. Speaking: Organic emerald & cyan shockwaves pulsating with voice.
  */
 export function GeminiOrb({
   isListening,
@@ -20,16 +20,16 @@ export function GeminiOrb({
   const isThinking = isStreaming && !isSpeaking;
 
   return (
-    <div className="flex flex-col items-center justify-center py-4 relative group">
+    <div className="flex flex-col items-center justify-center py-2 relative group">
       
-      {/* Orb Physics Container */}
+      {/* Liquid Slime Physics Container */}
       <div
         onClick={speechSupported ? onClickMic : undefined}
         className={cn(
           "gemini-orb-container cursor-pointer transition-all duration-500",
           showcaseMode ? "scale-110" : "scale-100"
         )}
-        title={isListening ? "Arrêter l'écoute" : "Démarrer l'écoute"}
+        title={isListening ? "Cliquer pour désactiver l'écoute active" : "Cliquer pour activer l'écoute active"}
       >
 
         {/* State 1: Thinking Spinning Multicolor Gradient Ring */}
@@ -44,50 +44,43 @@ export function GeminiOrb({
           </>
         )}
 
-        {/* State 3: Listening Wave Pulse */}
+        {/* State 3: Listening Wave Ripple */}
         {isListening && !isSpeaking && !isThinking && (
-          <div className="absolute inset-0 rounded-full border-2 border-white/60 animate-ping" />
+          <div className="absolute inset-0 rounded-full border-2 border-[#0B57D0]/60 animate-ping" />
         )}
 
-        {/* Living Chroma Core Sphere */}
+        {/* Slime Fluid Liquid 3D Core Blob (No static microphone icon inside!) */}
         <div className={cn(
-          "gemini-orb-chroma flex items-center justify-center transition-all duration-300",
-          isListening && "scale-110 shadow-[0_0_50px_rgba(56,189,248,0.8)]",
-          isThinking && "scale-95 opacity-90",
-          isSpeaking && "scale-105 shadow-[0_0_50px_rgba(16,185,129,0.8)]"
+          "gemini-orb-chroma flex items-center justify-center transition-all duration-500 rounded-[45%_55%_60%_40%/50%_45%_55%_50%] animate-pulse",
+          isListening && "scale-110 shadow-[0_0_50px_rgba(11,87,208,0.6)] animate-bounce",
+          isThinking && "scale-95 opacity-90 rotate-45",
+          isSpeaking && "scale-105 shadow-[0_0_50px_rgba(16,185,129,0.6)]"
         )}>
-          {isSpeaking ? (
-            <Volume2 className="size-8 text-white animate-pulse" />
-          ) : isThinking ? (
-            <Sparkles className="size-8 text-white animate-spin" />
-          ) : isListening ? (
-            <Mic className="size-8 text-white animate-bounce" />
-          ) : (
-            <Mic className="size-8 text-white/90" />
-          )}
+          {/* Inner Liquid Fusion Glow Dot */}
+          <div className="size-5 rounded-full bg-white/80 blur-xs shadow-inner animate-ping" />
         </div>
 
       </div>
 
       {/* Dynamic Status Text */}
-      <div className="mt-3 text-center">
+      <div className="mt-2 text-center">
         <span className={cn(
-          "text-xs font-semibold tracking-wide px-3 py-1 rounded-full border transition-all inline-block",
+          "text-xs font-semibold tracking-wide px-3 py-1 rounded-full border transition-all inline-block shadow-2xs",
           isSpeaking
-            ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/40 animate-pulse"
+            ? "bg-emerald-50 text-emerald-700 border-emerald-200 animate-pulse"
             : isThinking
-            ? "bg-sky-500/20 text-sky-300 border-sky-400/40"
+            ? "bg-blue-50 text-[#0B57D0] border-blue-200"
             : isListening
-            ? "bg-rose-500/20 text-rose-300 border-rose-500/40"
-            : "bg-slate-800/80 text-slate-300 border-slate-700"
+            ? "bg-rose-50 text-rose-700 border-rose-200"
+            : "bg-slate-100 text-slate-600 border-slate-200"
         )}>
           {isSpeaking
-            ? "• Synthèse Vocale Active (Ondes Émeraude)"
+            ? "• Agent Hôte : Synthèse Vocale Active"
             : isThinking
-            ? "• Réflexion BigQuery (Anneau Tourbillonnant)"
+            ? "• Agent Hôte : Consultation BigQuery..."
             : isListening
-            ? "• Écoute en Cours..."
-            : "• Cliquer pour Parler"}
+            ? "• Agent Hôte : Écoute Active Gemini Live"
+            : "• Micro Désactivé (Cliquer pour Activer)"}
         </span>
       </div>
 
