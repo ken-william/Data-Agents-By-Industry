@@ -1,22 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700;800&family=Google+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700;800&family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --bg-fluid-blue: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%);
-  --cyan-glow: #38BDF8;
-  --blue-vivid: #2563EB;
-  --emerald-wave: #10B981;
-  
+/* ==========================================================================
+   1. Google Luminous Aurora Dynamic Themes Engine
+   ========================================================================== */
+
+/* Theme 1: Cloud Next (Google 4 Colors Official - Default) */
+:root, :root[data-theme="cloud-next"] {
+  --aurora-1: #4285F4; /* Google Blue */
+  --aurora-2: #EA4335; /* Google Red */
+  --aurora-3: #FBBC05; /* Google Yellow */
+  --aurora-4: #34A853; /* Google Green */
+  --aurora-bg: #050b24;
+  --accent-theme: #4285F4;
   --font-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
   --font-serif: "Instrument Serif", serif;
 }
 
+/* Theme 2: Gemini Aurora (Cyan, Indigo, Violet & Rose Coral) */
+:root[data-theme="gemini-aurora"] {
+  --aurora-1: #38BDF8;
+  --aurora-2: #818CF8;
+  --aurora-3: #C084FC;
+  --aurora-4: #EC4899;
+  --aurora-bg: #07091E;
+  --accent-theme: #38BDF8;
+}
+
+/* Theme 3: Tech Sunset (Magenta, Orange, Amber & Warm Violet) */
+:root[data-theme="tech-sunset"] {
+  --aurora-1: #E11D48;
+  --aurora-2: #F97316;
+  --aurora-3: #F59E0B;
+  --aurora-4: #7C3AED;
+  --aurora-bg: #110515;
+  --accent-theme: #F97316;
+}
+
+/* Theme 4: Eco-System (Emerald, Mint, Teal & Sky Cyan) */
+:root[data-theme="eco-system"] {
+  --aurora-1: #10B981;
+  --aurora-2: #34D399;
+  --aurora-3: #14B8A6;
+  --aurora-4: #06B6D4;
+  --aurora-bg: #031412;
+  --accent-theme: #10B981;
+}
+
 @layer base {
   html, body {
-    background: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%) !important;
+    background-color: var(--aurora-bg) !important;
     color: #F8FAFC;
     font-family: var(--font-google);
     -webkit-font-smoothing: antialiased;
@@ -26,34 +62,139 @@
   }
 }
 
-/* Header Flottant en Verre Dépoli Fluo */
+/* ==========================================================================
+   2. Fluid CSS Aurora Borealis Background Engine
+   ========================================================================== */
+
+.aurora-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -10;
+  overflow: hidden;
+  background-color: var(--aurora-bg);
+}
+
+.aurora-blur-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(120px);
+  -webkit-backdrop-filter: blur(120px);
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  opacity: 0.65;
+  filter: blur(60px);
+  mix-blend-mode: screen;
+}
+
+.aurora-blob-1 {
+  top: -10%;
+  left: 15%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, var(--aurora-1) 0%, transparent 70%);
+  animation: auroraFloat1 22s ease-in-out infinite alternate;
+}
+
+.aurora-blob-2 {
+  bottom: -15%;
+  right: 10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--aurora-2) 0%, transparent 70%);
+  animation: auroraFloat2 26s ease-in-out infinite alternate;
+}
+
+.aurora-blob-3 {
+  top: 30%;
+  right: 25%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, var(--aurora-3) 0%, transparent 70%);
+  animation: auroraFloat3 20s ease-in-out infinite alternate;
+}
+
+.aurora-blob-4 {
+  bottom: 20%;
+  left: 10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--aurora-4) 0%, transparent 70%);
+  animation: auroraFloat4 24s ease-in-out infinite alternate;
+}
+
+@keyframes auroraFloat1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(12%, 15%) scale(1.15); }
+  100% { transform: translate(-10%, 8%) scale(0.9); }
+}
+
+@keyframes auroraFloat2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-15%, -10%) scale(1.1); }
+  100% { transform: translate(8%, -18%) scale(0.95); }
+}
+
+@keyframes auroraFloat3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10%, 18%) scale(1.2); }
+  100% { transform: translate(15%, -10%) scale(0.85); }
+}
+
+@keyframes auroraFloat4 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(18%, -15%) scale(1.1); }
+  100% { transform: translate(-12%, 12%) scale(0.95); }
+}
+
+/* ==========================================================================
+   3. Glassmorphism Bento Cards & Navigation
+   ========================================================================== */
+
 .fluo-header {
   width: 100%;
   max-width: 1100px;
   margin: 12px auto 0;
-  background: rgba(15, 23, 42, 0.65);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 9999px;
   padding: 8px 24px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
-/* Accroche Hero avec Dégradé Pastel Fluide */
-.pastel-gradient-text {
-  background: linear-gradient(135deg, #A5F3FC 0%, #38BDF8 40%, #818CF8 75%, #C084FC 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.aurora-glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gradient-serif {
+.aurora-glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Typographie Hybride Stylisée */
+.gradient-metallic {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  background: linear-gradient(135deg, #A5F3FC 0%, #38BDF8 50%, #C084FC 100%);
+  background: linear-gradient(135deg, #FDE047 0%, #F97316 40%, #EC4899 80%, #F472B6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 25px rgba(251, 191, 36, 0.3);
 }
 
 /* Barre de recherche Iconique avec Lueur Supérieure Diffuse Cyan */
@@ -75,32 +216,32 @@
   width: 90%;
   height: 55px;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(99, 102, 241, 0.2) 60%, transparent 100%);
-  filter: blur(20px);
-  opacity: 0.85;
+  background: radial-gradient(circle, var(--aurora-1) 0%, var(--aurora-2) 60%, transparent 100%);
+  filter: blur(22px);
+  opacity: 0.75;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .search-bar-container {
   width: 100%;
-  background: rgba(15, 23, 42, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 9999px;
   padding: 12px 24px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar-container:focus-within {
-  border-color: #38BDF8;
-  box-shadow: 0 12px 35px rgba(56, 189, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-/* Capsules de Scénarios (Pills Compactes aux dimensions rigoureuses 50px height) */
+/* Capsules de Scénarios (Pills Compactes aux dimensions rigoureuses) */
 .extension-chips-container {
   display: flex;
   align-items: center;
@@ -121,40 +262,40 @@
   max-width: max-content;
   shrink: 0;
   padding: 0 20px;
-  height: 50px;
+  height: 48px;
   gap: 12px;
-  background: rgba(15, 23, 42, 0.75);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 9999px;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   white-space: nowrap;
   font-family: var(--font-google);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 500;
-  color: #94A3B8;
+  color: #CBD5E1;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bubble:hover, .chip:hover:not(.active) {
-  background: rgba(30, 41, 59, 0.9);
-  border-color: #38BDF8;
-  color: #F8FAFC;
-  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
 .bubble:hover .img-container, .chip:hover:not(.active) .img-container {
-  color: #38BDF8;
+  color: var(--aurora-1);
 }
 
 .bubble.active, .chip.active {
-  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #38BDF8 100%);
+  background: linear-gradient(135deg, var(--aurora-1) 0%, var(--aurora-2) 100%);
   color: #FFFFFF;
-  border-color: #38BDF8;
-  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.45);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
 }
 
 .bubble.active .chip-text, .chip.active .chip-text {
@@ -172,19 +313,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #64748B;
+  color: #94A3B8;
   transition: color 0.2s;
 }
 
 .chip-text {
   font-size: 13.5px;
-  color: #CBD5E1;
+  color: #E2E8F0;
   font-family: var(--font-google);
   font-weight: 500;
   transition: color 0.2s;
 }
 
-/* 3D Flip Card CSS (Effet de Rotation 3D SQL Inspector) */
+/* ==========================================================================
+   4. 3D Flip Card CSS (SQL Inspector Rotation)
+   ========================================================================== */
+
 .flip-card {
   perspective: 1000px;
   width: 100%;
@@ -216,7 +360,7 @@
   transform: rotateY(180deg);
 }
 
-/* Orbe Conversationnel Organique (Gemini Orb) */
+/* Orbe Live Chroma 3D (Gemini Orb Chroma) */
 .gemini-orb-container {
   position: relative;
   width: 130px;
@@ -227,12 +371,12 @@
   justify-content: center;
 }
 
-.gemini-orb-core {
+.gemini-orb-chroma {
   width: 90px;
   height: 90px;
   border-radius: 9999px;
-  background: radial-gradient(circle at 35% 35%, #60A5FA 0%, #2563EB 50%, #1E1B4B 100%);
-  box-shadow: 0 0 35px rgba(56, 189, 248, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  background: radial-gradient(circle at 35% 35%, var(--aurora-1) 0%, var(--aurora-2) 40%, var(--aurora-3) 75%, var(--aurora-4) 100%);
+  box-shadow: 0 0 40px var(--aurora-1), inset 0 0 20px rgba(255, 255, 255, 0.4);
   transition: all 0.4s ease;
 }
 
@@ -242,24 +386,24 @@
   width: 100%;
   height: 100%;
   border-radius: 9999px;
-  border: 2px solid rgba(16, 185, 129, 0.6);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  border: 2px solid var(--aurora-4);
+  box-shadow: 0 0 20px var(--aurora-1);
   animation: shockwavePulse 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
 }
 
 .speaking-wave-2 {
   animation-delay: 0.8s;
-  border-color: rgba(56, 189, 248, 0.6);
+  border-color: var(--aurora-1);
 }
 
 .speaking-wave-3 {
   animation-delay: 1.6s;
-  border-color: rgba(192, 132, 252, 0.5);
+  border-color: var(--aurora-3);
 }
 
 @keyframes shockwavePulse {
   0% { transform: scale(0.8); opacity: 0.9; }
-  100% { transform: scale(1.8); opacity: 0; }
+  100% { transform: scale(1.85); opacity: 0; }
 }
 
 /* Anneau Multicolore Tourbillonnant lors de la Réflexion */
@@ -267,8 +411,8 @@
   position: absolute;
   inset: -6px;
   border-radius: 9999px;
-  background: conic-gradient(from 0deg, #38BDF8, #818CF8, #C084FC, #EC4899, #10B981, #38BDF8);
-  animation: spinRing 2s linear infinite;
+  background: conic-gradient(from 0deg, var(--aurora-1), var(--aurora-2), var(--aurora-3), var(--aurora-4), var(--aurora-1));
+  animation: spinRing 1.8s linear infinite;
   mask: radial-gradient(transparent 58px, #000 59px);
   -webkit-mask: radial-gradient(transparent 58px, #000 59px);
 }
@@ -285,19 +429,19 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
+  background: rgba(5, 11, 36, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #38BDF8;
+  background: var(--aurora-1);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563EB;
+  background: var(--aurora-2);
 }
 
-/* Markdown Content Styling (Dark Mode Clean Report) */
+/* Markdown Content Styling */
 .markdown-content {
   @apply text-xs sm:text-sm leading-relaxed text-slate-200;
 }

@@ -12,21 +12,21 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
   return (
     <div className="w-full min-h-[78vh] flex flex-col items-center justify-center gap-8 animate-fade-in my-auto py-8 relative px-4">
       
-      {/* 1. Hero Headline with Pastel Gradient Text */}
+      {/* 1. Hero Headline with Google Sans Flex + Instrument Serif Metallic Gradient */}
       <div className="text-center flex flex-col items-center justify-center max-w-4xl px-4 z-10">
         <div className="flex items-center justify-center gap-3 mb-3">
           <img
-            className="size-12 sm:size-14 animate-pulse drop-shadow-[0_0_20px_rgba(56,189,248,0.6)]"
+            className="size-12 sm:size-14 animate-pulse drop-shadow-[0_0_25px_rgba(56,189,248,0.7)]"
             src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
             alt="Gemini Sparkle Logo"
           />
           <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight font-['Google_Sans_Flex']">
-            Talk to <em className="gradient-serif not-italic">Data</em> live using
+            Talk to Data live using
           </h2>
         </div>
 
         <h3 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-          <span className="pastel-gradient-text">conversational AI agents</span>.
+          <span className="gradient-metallic">conversational AI agents</span>.
         </h3>
 
         <p className="text-slate-300 font-normal text-sm sm:text-base mt-4 max-w-xl leading-relaxed text-balance">
@@ -54,9 +54,9 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
             aria-label="Lancer l'expérience Live Agent"
             onClick={onLaunchLive}
             disabled={!selectedAgent}
-            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_25px_rgba(56,189,248,0.4)] transition-all transform hover:scale-105 active:scale-95 ${
+            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_25px_rgba(56,189,248,0.5)] transition-all transform hover:scale-105 active:scale-95 ${
               selectedAgent
-                ? 'bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-500 hover:shadow-sky-500/50'
+                ? 'bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-500 hover:shadow-sky-500/60'
                 : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
             }`}
             title="Lancer l'expérience Live Agent"

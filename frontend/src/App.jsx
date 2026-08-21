@@ -12,9 +12,15 @@ export function App() {
   const [selectedAgent, setSelectedAgent] = useState(null);
   const [viewMode, setViewMode] = useState('builder'); // 'builder' (Page 1) vs 'live' (Page 2)
   const [screenMode, setScreenMode] = useState('showcase'); // 'showcase' (Écran A) vs 'controller' (Écran B)
+  const [activeTheme, setActiveTheme] = useState('cloud-next'); // 'cloud-next' | 'gemini-aurora' | 'tech-sunset' | 'eco-system'
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Inject active theme into root element data-theme attribute
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', activeTheme);
+  }, [activeTheme]);
 
   // Read ?screen= URL parameter on initial load
   useEffect(() => {
@@ -83,6 +89,15 @@ export function App() {
   return (
     <div className="min-h-screen text-slate-100 flex flex-col relative transition-all duration-300">
       
+      {/* Google Luminous Aurora Fluid Background Engine */}
+      <div className="aurora-container">
+        <div className="aurora-blob aurora-blob-1" />
+        <div className="aurora-blob aurora-blob-2" />
+        <div className="aurora-blob aurora-blob-3" />
+        <div className="aurora-blob aurora-blob-4" />
+        <div className="aurora-blur-overlay" />
+      </div>
+
       {/* App Header */}
       <Header
         selectedAgent={selectedAgent}
@@ -114,7 +129,7 @@ export function App() {
             </button>
           </div>
         ) : viewMode === 'builder' ? (
-          /* Page 1: Gemini Enterprise Landing Page */
+          /* Page 1: Gemini Enterprise Luminous Aurora Landing Page */
           <AgentBuilder
             agents={agents}
             selectedAgent={selectedAgent}
@@ -122,7 +137,7 @@ export function App() {
             onLaunchLive={handleLaunchLive}
           />
         ) : (
-          /* Page 2: Live Experience (Data Canvas Showcase & Gemini Orb) */
+          /* Page 2: Live Experience (Data Canvas Showcase & Chroma Orb) */
           <LiveCanvas
             selectedAgent={selectedAgent}
             onReturnToBuilder={handleReturnToBuilder}
@@ -150,13 +165,15 @@ export function App() {
         setAutoSpeechEnabled={speechProps.setAutoSpeechEnabled}
         screenMode={screenMode}
         setScreenMode={setScreenMode}
+        activeTheme={activeTheme}
+        setActiveTheme={setActiveTheme}
         selectedAgent={selectedAgent}
         agentsCount={agents.length}
       />
 
       {/* Footer */}
       <footer className="w-full py-4 border-t border-slate-800/80 bg-slate-950/80 text-center text-xs text-slate-400 mt-auto backdrop-blur-md">
-        <p>Talk to Data • Google Fluid Blue Vesper • BigData Paris 2026 • Vertex AI Data Agents</p>
+        <p>Talk to Data • Google Luminous Aurora • BigData Paris 2026 • Vertex AI Data Agents</p>
       </footer>
 
     </div>

@@ -3,8 +3,8 @@ import { Mic, MicOff, Sparkles, Volume2 } from 'lucide-react';
 import { cn } from '../utils/cn';
 
 /**
- * Gemini Live Physics Wave Orb
- * Implements 3 organic states:
+ * Gemini Live Chroma Physics Wave Orb
+ * 4-Color Google Fusion Blob featuring 3 organic physics states:
  * 1. Listening: Wave pulse reacting to voice.
  * 2. Thinking: Spinning multicolor gradient ring.
  * 3. Speaking: Emerald & Cyan expanding shockwaves.
@@ -46,24 +46,24 @@ export function GeminiOrb({
 
         {/* State 3: Listening Wave Pulse */}
         {isListening && !isSpeaking && !isThinking && (
-          <div className="absolute inset-0 rounded-full border-2 border-sky-400/60 animate-ping" />
+          <div className="absolute inset-0 rounded-full border-2 border-white/60 animate-ping" />
         )}
 
-        {/* Living Core Sphere */}
+        {/* Living Chroma Core Sphere */}
         <div className={cn(
-          "gemini-orb-core flex items-center justify-center transition-all duration-300",
-          isListening && "scale-110 shadow-[0_0_40px_rgba(56,189,248,0.7)]",
+          "gemini-orb-chroma flex items-center justify-center transition-all duration-300",
+          isListening && "scale-110 shadow-[0_0_50px_rgba(56,189,248,0.8)]",
           isThinking && "scale-95 opacity-90",
-          isSpeaking && "scale-105 shadow-[0_0_40px_rgba(16,185,129,0.7)]"
+          isSpeaking && "scale-105 shadow-[0_0_50px_rgba(16,185,129,0.8)]"
         )}>
           {isSpeaking ? (
-            <Volume2 className="size-8 text-emerald-300 animate-pulse" />
+            <Volume2 className="size-8 text-white animate-pulse" />
           ) : isThinking ? (
-            <Sparkles className="size-8 text-sky-200 animate-spin" />
+            <Sparkles className="size-8 text-white animate-spin" />
           ) : isListening ? (
             <Mic className="size-8 text-white animate-bounce" />
           ) : (
-            <Mic className="size-8 text-sky-200/90" />
+            <Mic className="size-8 text-white/90" />
           )}
         </div>
 
@@ -79,7 +79,7 @@ export function GeminiOrb({
             ? "bg-sky-500/20 text-sky-300 border-sky-400/40"
             : isListening
             ? "bg-rose-500/20 text-rose-300 border-rose-500/40"
-            : "bg-slate-800/80 text-slate-400 border-slate-700"
+            : "bg-slate-800/80 text-slate-300 border-slate-700"
         )}>
           {isSpeaking
             ? "• Synthèse Vocale Active (Ondes Émeraude)"
