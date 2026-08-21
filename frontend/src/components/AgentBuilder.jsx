@@ -9,7 +9,7 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
   return (
     <div className="w-full min-h-[78vh] flex flex-col items-center justify-center gap-8 animate-fade-in my-auto py-8 relative px-4">
       
-      {/* 1. Hero Headline: Talk to Data live using conversational AI agents */}
+      {/* 1. Hero Headline: Talk to Data live using conversational AI agents (Matching media_1787323624232.png) */}
       <div className="text-center flex flex-col items-center justify-center max-w-4xl px-4 z-10">
         <div className="flex items-center justify-center gap-3 mb-3">
           <img
@@ -31,10 +31,10 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
         </p>
       </div>
 
-      {/* 2. Iconic Search Bar with Top Diffuse Cyan Glow */}
+      {/* 2. Iconic Search Bar with Top Diffuse Cyan Glow (Matching media_1787323624232.png) */}
       <div className="search-bar-wrapper w-full max-w-2xl px-2 z-10">
         <div className="search-bar-glow" />
-        <div className="search-bar-container flex items-center gap-3 py-2.5 px-5">
+        <div className="search-bar-container flex items-center gap-3 py-2.5 px-5 bg-white border border-slate-200/90 rounded-full shadow-md">
           <Search className="size-5 text-[#0B57D0] shrink-0 ml-1" />
           
           <input
@@ -45,13 +45,13 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
             className="w-full bg-transparent border-none text-slate-900 placeholder-slate-400 focus:outline-none text-sm sm:text-base font-medium font-['Google_Sans']"
           />
 
-          {/* Round Blue Launch Button */}
+          {/* Round Blue Launch Button with Rocket Icon (Matching media_1787323624232.png) */}
           <button
             type="button"
             aria-label="Lancer l'expérience Live Agent"
             onClick={onLaunchLive}
             disabled={!selectedAgent}
-            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-md transition-all transform hover:scale-105 active:scale-95 ${
+            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-md transition-all transform hover:scale-105 active:scale-95 cursor-pointer ${
               selectedAgent
                 ? 'bg-[#0B57D0] hover:bg-blue-800 shadow-blue-900/20'
                 : 'bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300'
@@ -63,7 +63,7 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
         </div>
       </div>
 
-      {/* 3. Scenario Chips (11 Sector Pills) */}
+      {/* 3. Scenario Chips (11 Sector Pills with Dark Circular Navigation Arrows) */}
       <div className="w-full z-10">
         <ScenarioChips
           agents={agents}

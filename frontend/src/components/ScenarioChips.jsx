@@ -22,29 +22,29 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
 
   const scroll = (direction) => {
     if (containerRef.current) {
-      const amount = direction === 'left' ? -280 : 280;
+      const amount = direction === 'left' ? -300 : 300;
       containerRef.current.scrollBy({ left: amount, behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="w-full flex items-center justify-center gap-2 py-1 max-w-full mx-auto relative group">
+    <div className="w-full flex items-center justify-center gap-3 py-2 max-w-5xl mx-auto px-2 relative">
       
-      {/* Scroll Left Button */}
+      {/* Dark Circular Scroll Left Button (Matching media_1787323624232.png) */}
       <button
         type="button"
         aria-label="Défiler les puces vers la gauche"
         onClick={() => scroll('left')}
-        className="size-8 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-all shadow-2xs shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
+        className="size-9 rounded-full bg-[#334155] hover:bg-[#1E293B] text-white border-none transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95 cursor-pointer z-10"
         title="Défiler vers la gauche"
       >
-        <ChevronLeft className="size-4" />
+        <ChevronLeft className="size-5" />
       </button>
 
       {/* Extension Chips Scrollable Container */}
       <div
         ref={containerRef}
-        className="extension-chips-container max-w-full scroll-smooth flex items-center gap-2.5 py-1"
+        className="extension-chips-container max-w-full scroll-smooth flex items-center gap-3 py-1"
         id="scenariosContainer"
       >
         {SCENARIOS.map((sc) => {
@@ -53,8 +53,9 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
           const targetAgent = agents.find(a => a.id === sc.id) || selectedAgent;
 
           return (
-            <div
+            <button
               key={sc.id}
+              type="button"
               onClick={() => {
                 if (targetAgent) {
                   onSelectAgent(targetAgent);
@@ -63,24 +64,29 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
                   onSendMessage(sc.prompt);
                 }
               }}
-              className={cn("awwwards-pill", isSelected && "active")}
+              className={cn(
+                "inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border text-xs sm:text-sm font-semibold transition-all whitespace-nowrap shrink-0 shadow-2xs cursor-pointer",
+                isSelected
+                  ? "bg-[#0B57D0] text-white border-[#0B57D0] shadow-md scale-[1.02]"
+                  : "bg-white text-slate-800 border-slate-200/90 hover:bg-slate-50 hover:border-slate-300"
+              )}
             >
               <IconComp className={cn("size-4 shrink-0", isSelected ? "text-white" : "text-[#0B57D0]")} />
               <span>{sc.name}</span>
-            </div>
+            </button>
           );
         })}
       </div>
 
-      {/* Scroll Right Button */}
+      {/* Dark Circular Scroll Right Button (Matching media_1787323624232.png) */}
       <button
         type="button"
         aria-label="Défiler les puces vers la droite"
         onClick={() => scroll('right')}
-        className="size-8 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-all shadow-2xs shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
+        className="size-9 rounded-full bg-[#334155] hover:bg-[#1E293B] text-white border-none transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95 cursor-pointer z-10"
         title="Défiler vers la droite"
       >
-        <ChevronRight className="size-4" />
+        <ChevronRight className="size-5" />
       </button>
 
     </div>
