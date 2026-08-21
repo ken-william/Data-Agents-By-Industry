@@ -1,22 +1,23 @@
-# Master Specification & Prompt System - Talk to Data (Google Deep Blue Gradient System)
+# Master Specification & Prompt System - Talk to Data (Bright Luminous Ice-Blue Theme - NO BLACK)
 
-Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour appliquer fidèlement l'arrière-plan dégradé bleu profond d'après la référence visuelle (`media_1787312920884.png`).
+Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour bannir tout fond noir ou sombre et garantir un arrière-plan clair, lumineux et céleste.
 
 ---
 
-# 🎨 1. Palette & Arrière-plan "Google Deep Blue"
+# 🎨 1. Palette & Arrière-plan Lumineux (NO BLACK / NO DARK)
 
-| Étape du Dégradé | Code Hexadécimal | Rôle dans l'UI |
-| :--- | :--- | :--- |
-| **Bleu Ciel Lumineux (Haut-Gauche)** | `#38BDF8` | Touche de lumière angulaire. |
-| **Bleu Google Royal (Milieu)** | `#2563EB` | Cœur vibrant de l'arrière-plan. |
-| **Bleu Saphir Profond (Centre)** | `#1D4ED8` | Profondeur et transition visuelle. |
-| **Bleu Nuit Sidéral (Bas-Droit)** | `#030712` | Ancrage sombre et contraste élevé. |
+| Élément UI | Spécification Visuelle |
+| :--- | :--- |
+| **Fond Global** | Dégradé lumineux céleste bleu ciel / blanc argenté (`radial-gradient(circle at 50% 35%, #E0F2FE 0%, #DBEAFE 45%, #EFF6FF 80%, #FFFFFF 100%)`). |
+| **Navbar** | Verre dépoli clair `bg-white/80 border-b border-slate-200/80 backdrop-blur-xl text-slate-900`. |
+| **Cartes d'Agents Sectoriels** | Cartes blanc pur `#FFFFFF` avec bordures fines `border-slate-200` et ombres adoucies. |
+| **Carte Sélectionnée** | Bleu Google `#0B57D0` intense avec texte blanc pur `#FFFFFF`. |
+| **Bouton d'Action** | Bouton bleu Google `#0B57D0` avec flèche `→`. |
 
 ```css
-body {
-  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 35%, #1d4ed8 70%, #030712 100%) !important;
-  color: #FFFFFF;
+html, body {
+  background: radial-gradient(circle at 50% 35%, #E0F2FE 0%, #DBEAFE 45%, #EFF6FF 80%, #FFFFFF 100%) !important;
+  color: #0F172A;
   font-family: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
   min-height: 100dvh;
 }
@@ -24,21 +25,13 @@ body {
 
 ---
 
-# 🔮 2. Composants & Contrastes Verre Dépoli
-
-- **Navbar Flottante** : Verre dépoli translucide `bg-white/15 border-b border-white/20 backdrop-blur-2xl text-white`.
-- **Cartes & Conteneurs** : Verre dépoli blanc argenté `bg-white/95 text-slate-900 rounded-3xl p-6 shadow-2xl border border-white/80`.
-- **Boutons d'Action** : Boutons capsules noirs ou bleus vibrants avec surbrillance au survol.
-
----
-
-# 📋 3. Prompt Système de Reconstitution Maître
+# 📋 2. Prompt Système de Reconstitution Maître
 
 ```text
-Tu me codes l'application web double écran "Talk to Data" avec l'arrière-plan dégradé Google Deep Blue (media_1787312920884.png).
+Tu me codes l'application web double écran "Talk to Data" avec un thème clair lumineux bleu céleste (SANS AUCUN NOIR).
 
 CONSIGNES STRICTES :
-1. FOND GOOGLE DEEP BLUE DEGRADÉ : linear-gradient(135deg, #38bdf8 0%, #2563eb 35%, #1d4ed8 70%, #030712 100%).
-2. NAVBAR VERRE TRANSLUCIDE : bg-white/15, backdrop-blur-2xl, text-white.
-3. CARTES VERRE DÉPOLI : bg-white/95, rounded-3xl, shadow-2xl.
+1. AUCUN FOND SOMBRE NI NOIR : background radial-gradient(circle at 50% 35%, #E0F2FE 0%, #DBEAFE 45%, #EFF6FF 80%, #FFFFFF 100%).
+2. CARTES BLANCHES PUR : bg-white avec bordures border-slate-200.
+3. BOUTONS BLEU GOOGLE : bg-[#0B57D0] pour l'agent actif et le bouton de lancement.
 ```

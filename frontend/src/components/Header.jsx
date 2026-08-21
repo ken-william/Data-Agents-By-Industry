@@ -9,15 +9,15 @@ export function Header({
   onOpenSettings
 }) {
   return (
-    <header className="glass-header-deepblue sticky top-0 z-40">
+    <header className="glass-header-light sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         
         {/* Clean Logo & Title */}
         <div className="flex items-center gap-3">
-          <div className="size-8 rounded-lg bg-white text-blue-700 flex items-center justify-center font-extrabold text-xs shadow-md border border-white/60">
+          <div className="size-8 rounded-lg bg-[#0B57D0] text-white flex items-center justify-center font-bold text-xs shadow-md">
             TD
           </div>
-          <h1 className="text-base font-bold text-white tracking-tight">
+          <h1 className="text-base font-bold text-slate-900 tracking-tight font-['Google_Sans_Flex']">
             Talk to Data
           </h1>
         </div>
@@ -31,14 +31,14 @@ export function Header({
             className={cn(
               "size-9 rounded-full border flex items-center justify-center transition-all text-xs shadow-xs",
               autoSpeechEnabled
-                ? "bg-white text-blue-700 border-white/80 shadow-md"
-                : "bg-white/20 border-white/30 text-white/80 hover:bg-white/30 hover:text-white"
+                ? "bg-blue-50 border-blue-200 text-[#0B57D0]"
+                : "bg-white border-slate-200 text-slate-400 hover:text-slate-700"
             )}
           >
             {autoSpeechEnabled ? (
-              <Volume2 className={cn("size-4", isSpeaking && "text-emerald-400 animate-bounce")} />
+              <Volume2 className={cn("size-4", isSpeaking && "text-emerald-600 animate-bounce")} />
             ) : (
-              <VolumeX className="size-4 text-white/70" />
+              <VolumeX className="size-4" />
             )}
           </button>
 
@@ -46,9 +46,9 @@ export function Header({
             type="button"
             aria-label="Paramètres"
             onClick={onOpenSettings}
-            className="size-9 rounded-full bg-white/20 hover:bg-white/30 text-white border border-white/30 flex items-center justify-center transition-all text-xs shadow-xs"
+            className="size-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 flex items-center justify-center transition-all text-xs shadow-xs"
           >
-            <Settings className="size-4 text-white" />
+            <Settings className="size-4 text-slate-700" />
           </button>
         </div>
 
