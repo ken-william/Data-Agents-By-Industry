@@ -1,79 +1,81 @@
 import React, { useState } from 'react';
-import { Rocket, Search, Sparkles } from 'lucide-react';
+import { ArrowRight, Search, Sparkles } from 'lucide-react';
 import { ScenarioChips } from './ScenarioChips';
 import { getIconComponent, getAgentTheme } from '../utils/themeMap';
 
 export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLive }) {
   const [searchFilter, setSearchFilter] = useState('');
 
-  const activeTheme = getAgentTheme(selectedAgent?.theme);
-  const ActiveIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Sparkles;
-
   return (
-    <div className="w-full min-h-[78vh] flex flex-col items-center justify-center gap-8 animate-fade-in my-auto py-8 relative px-4">
+    <div className="w-full min-h-[82vh] flex flex-col items-center justify-center gap-8 animate-fade-in my-auto py-6 relative px-4">
       
-      {/* 1. Hero Headline with Google Sans Flex + Instrument Serif Metallic Gradient */}
-      <div className="text-center flex flex-col items-center justify-center max-w-4xl px-4 z-10">
-        <div className="flex items-center justify-center gap-3 mb-3">
-          <img
-            className="size-12 sm:size-14 animate-pulse drop-shadow-[0_0_25px_rgba(56,189,248,0.5)]"
-            src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
-            alt="Gemini Sparkle Logo"
-          />
-          <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight font-['Google_Sans_Flex']">
-            Talk to Data live using
-          </h2>
+      {/* Floating Awwwards / JetAI Glass Card (Reference Image 2 media_1787323076388.png) */}
+      <div className="awwwards-card w-full max-w-3xl p-8 sm:p-12 flex flex-col gap-8 shadow-2xl relative overflow-hidden">
+        
+        {/* Top Decorative Sparkle Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0B57D0] text-xs font-bold w-fit shadow-2xs">
+          <Sparkles className="size-3.5 text-[#0B57D0]" />
+          <span>Vertex AI Data Agents • BigData Paris 2026</span>
         </div>
 
-        <h3 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-          <span className="gradient-metallic">conversational AI agents</span>.
-        </h3>
+        {/* 1. Hero Headline Matching Image 2 (media_1787323076388.png) */}
+        <div className="space-y-1 text-left">
+          <h2 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight font-['Google_Sans_Flex']">
+            How can I help
+          </h2>
+          <h3 className="text-3xl sm:text-5xl font-medium text-slate-400 tracking-tight leading-tight font-['Google_Sans']">
+            explore your data?
+          </h3>
+        </div>
 
-        <p className="text-slate-600 font-medium text-sm sm:text-base mt-4 max-w-xl leading-relaxed text-balance">
-          Interagissez en langage naturel avec 11 copilotes décisionnels sectoriels directement connectés à vos tables BigQuery.
-        </p>
-      </div>
+        {/* 2. Iconic Search Bar Console Matching Image 2 (media_1787323076388.png) */}
+        <div className="w-full flex items-center justify-between gap-3 py-2 border-b border-slate-200/90 focus-within:border-[#0B57D0] transition-all">
+          <div className="flex items-center gap-3 flex-1">
+            <Search className="size-5 text-slate-400 shrink-0" />
+            <input
+              type="text"
+              placeholder="Ask a question or select a scenario below..."
+              value={searchFilter}
+              onChange={(e) => setSearchFilter(e.target.value)}
+              className="w-full bg-transparent border-none text-slate-900 placeholder-slate-400 focus:outline-none text-base sm:text-lg font-medium font-['Google_Sans']"
+            />
+          </div>
 
-      {/* 2. Iconic Search Bar with Top Diffuse Cyan Glow */}
-      <div className="search-bar-wrapper w-full max-w-2xl px-2 z-10">
-        <div className="search-bar-glow" />
-        <div className="search-bar-container flex items-center gap-3 py-2.5 px-5">
-          <Search className="size-5 text-[#0B57D0] shrink-0 ml-1" />
-          
-          <input
-            type="text"
-            placeholder="Posez une question ou sélectionnez un scénario ci-dessous..."
-            value={searchFilter}
-            onChange={(e) => setSearchFilter(e.target.value)}
-            className="w-full bg-transparent border-none text-slate-900 placeholder-slate-400 focus:outline-none text-sm sm:text-base font-medium font-['Google_Sans']"
-          />
-
-          {/* Round Blue Launch Button */}
+          {/* Solid Google Blue Arrow Action Button (Image 2 style) */}
           <button
             type="button"
             aria-label="Lancer l'expérience Live Agent"
             onClick={onLaunchLive}
             disabled={!selectedAgent}
-            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-md transition-all transform hover:scale-105 active:scale-95 ${
+            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 transition-all transform hover:scale-105 active:scale-95 shadow-md ${
               selectedAgent
                 ? 'bg-[#0B57D0] hover:bg-blue-800 shadow-blue-900/20'
-                : 'bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300'
+                : 'bg-slate-300 text-slate-500 cursor-not-allowed'
             }`}
             title="Lancer l'expérience Live Agent"
           >
-            <Rocket className="size-5" />
+            <ArrowRight className="size-5" />
           </button>
         </div>
-      </div>
 
-      {/* 3. Scenario Chips (Compact Pills with Monochrome Icons) */}
-      <div className="w-full z-10">
-        <ScenarioChips
-          agents={agents}
-          selectedAgent={selectedAgent}
-          onSelectAgent={onSelectAgent}
-          onSendMessage={null}
-        />
+        {/* Subtle Waveform Line Accent */}
+        <div className="w-full h-1 bg-gradient-to-r from-transparent via-blue-200 to-transparent rounded-full opacity-60" />
+
+        {/* 3. Scenario Chips (Reference Image 2 media_1787323076388.png) */}
+        <div className="w-full">
+          <ScenarioChips
+            agents={agents}
+            selectedAgent={selectedAgent}
+            onSelectAgent={onSelectAgent}
+            onSendMessage={null}
+          />
+        </div>
+
+        {/* Footer Subtext */}
+        <div className="text-right text-[11px] text-slate-400 font-medium tracking-wide pt-2">
+          Powered by Vertex AI & BigQuery Conversational Analytics
+        </div>
+
       </div>
 
     </div>

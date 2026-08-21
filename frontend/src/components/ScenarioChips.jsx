@@ -22,29 +22,29 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
 
   const scroll = (direction) => {
     if (containerRef.current) {
-      const amount = direction === 'left' ? -320 : 320;
+      const amount = direction === 'left' ? -280 : 280;
       containerRef.current.scrollBy({ left: amount, behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="w-full flex items-center justify-center gap-3 py-2 max-w-5xl mx-auto px-2 relative group">
+    <div className="w-full flex items-center justify-center gap-2 py-1 max-w-full mx-auto relative group">
       
       {/* Scroll Left Button */}
       <button
         type="button"
         aria-label="Défiler les puces vers la gauche"
         onClick={() => scroll('left')}
-        className="size-10 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-sky-400 transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
+        className="size-8 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-all shadow-2xs shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
         title="Défiler vers la gauche"
       >
-        <ChevronLeft className="size-5" />
+        <ChevronLeft className="size-4" />
       </button>
 
       {/* Extension Chips Scrollable Container */}
       <div
         ref={containerRef}
-        className="extension-chips-container max-w-full scroll-smooth"
+        className="extension-chips-container max-w-full scroll-smooth flex items-center gap-2.5 py-1"
         id="scenariosContainer"
       >
         {SCENARIOS.map((sc) => {
@@ -63,12 +63,10 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
                   onSendMessage(sc.prompt);
                 }
               }}
-              className={cn("bubble", isSelected && "active")}
+              className={cn("awwwards-pill", isSelected && "active")}
             >
-              <div className="img-container">
-                <IconComp className="size-5" />
-              </div>
-              <span className="chip-text">{sc.name}</span>
+              <IconComp className={cn("size-4 shrink-0", isSelected ? "text-white" : "text-[#0B57D0]")} />
+              <span>{sc.name}</span>
             </div>
           );
         })}
@@ -79,10 +77,10 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
         type="button"
         aria-label="Défiler les puces vers la droite"
         onClick={() => scroll('right')}
-        className="size-10 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-sky-400 transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
+        className="size-8 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 transition-all shadow-2xs shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
         title="Défiler vers la droite"
       >
-        <ChevronRight className="size-5" />
+        <ChevronRight className="size-4" />
       </button>
 
     </div>

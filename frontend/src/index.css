@@ -5,54 +5,22 @@
 @tailwind utilities;
 
 /* ==========================================================================
-   1. Google Luminous Aurora Dynamic Themes Engine (BRIGHT & VIBRANT ONLY)
+   1. Google Design x Awwwards Visual System
    ========================================================================== */
 
-/* Theme 1: Cloud Next (Google 4 Colors Official - Bright White Base) */
 :root, :root[data-theme="cloud-next"] {
-  --aurora-1: #4285F4; /* Google Blue */
-  --aurora-2: #EA4335; /* Google Red */
-  --aurora-3: #FBBC05; /* Google Yellow */
-  --aurora-4: #34A853; /* Google Green */
+  --aurora-1: #4285F4;
+  --aurora-2: #38BDF8;
+  --aurora-3: #818CF8;
+  --aurora-4: #34A853;
   --aurora-bg: #F8FAFC;
-  --accent-theme: #4285F4;
+  --accent-theme: #0B57D0;
   --font-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
-  --font-serif: "Instrument Serif", serif;
-}
-
-/* Theme 2: Gemini Aurora (Cyan, Indigo, Violet & Rose Coral - Ice Blue Base) */
-:root[data-theme="gemini-aurora"] {
-  --aurora-1: #38BDF8;
-  --aurora-2: #818CF8;
-  --aurora-3: #C084FC;
-  --aurora-4: #EC4899;
-  --aurora-bg: #F0F9FF;
-  --accent-theme: #38BDF8;
-}
-
-/* Theme 3: Tech Sunset (Magenta, Orange, Amber & Warm Violet - Warm Amber Base) */
-:root[data-theme="tech-sunset"] {
-  --aurora-1: #E11D48;
-  --aurora-2: #F97316;
-  --aurora-3: #F59E0B;
-  --aurora-4: #7C3AED;
-  --aurora-bg: #FFF7ED;
-  --accent-theme: #F97316;
-}
-
-/* Theme 4: Eco-System (Emerald, Mint, Teal & Sky Cyan - Mint Base) */
-:root[data-theme="eco-system"] {
-  --aurora-1: #10B981;
-  --aurora-2: #34D399;
-  --aurora-3: #14B8A6;
-  --aurora-4: #06B6D4;
-  --aurora-bg: #F0FDF4;
-  --accent-theme: #10B981;
 }
 
 @layer base {
   html, body {
-    background-color: var(--aurora-bg) !important;
+    background-color: #F8FAFC !important;
     color: #0F172A;
     font-family: var(--font-google);
     -webkit-font-smoothing: antialiased;
@@ -62,10 +30,7 @@
   }
 }
 
-/* ==========================================================================
-   2. Fluid CSS Aurora Borealis Background Engine (Bright Luminous)
-   ========================================================================== */
-
+/* Fluid Background Aurora */
 .aurora-container {
   position: fixed;
   inset: 0;
@@ -74,7 +39,7 @@
   pointer-events: none;
   z-index: -10;
   overflow: hidden;
-  background-color: var(--aurora-bg);
+  background-color: #F8FAFC;
 }
 
 .aurora-blur-overlay {
@@ -82,282 +47,111 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(100px);
-  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(110px);
+  -webkit-backdrop-filter: blur(110px);
 }
 
 .aurora-blob {
   position: absolute;
   border-radius: 9999px;
   opacity: 0.75;
-  filter: blur(50px);
+  filter: blur(60px);
 }
 
 .aurora-blob-1 {
   top: -10%;
-  left: 15%;
-  width: 55vw;
-  height: 55vw;
-  background: radial-gradient(circle, var(--aurora-1) 0%, transparent 70%);
+  left: 20%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, transparent 70%);
   animation: auroraFloat1 22s ease-in-out infinite alternate;
 }
 
 .aurora-blob-2 {
   bottom: -15%;
-  right: 10%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, var(--aurora-2) 0%, transparent 70%);
+  right: 15%;
+  width: 55vw;
+  height: 55vw;
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.4) 0%, transparent 70%);
   animation: auroraFloat2 26s ease-in-out infinite alternate;
-}
-
-.aurora-blob-3 {
-  top: 30%;
-  right: 25%;
-  width: 45vw;
-  height: 45vw;
-  background: radial-gradient(circle, var(--aurora-3) 0%, transparent 70%);
-  animation: auroraFloat3 20s ease-in-out infinite alternate;
-}
-
-.aurora-blob-4 {
-  bottom: 20%;
-  left: 10%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(circle, var(--aurora-4) 0%, transparent 70%);
-  animation: auroraFloat4 24s ease-in-out infinite alternate;
 }
 
 @keyframes auroraFloat1 {
   0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(12%, 15%) scale(1.15); }
-  100% { transform: translate(-10%, 8%) scale(0.9); }
+  50% { transform: translate(10%, 12%) scale(1.1); }
+  100% { transform: translate(-8%, 6%) scale(0.95); }
 }
 
 @keyframes auroraFloat2 {
   0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-15%, -10%) scale(1.1); }
-  100% { transform: translate(8%, -18%) scale(0.95); }
-}
-
-@keyframes auroraFloat3 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-10%, 18%) scale(1.2); }
-  100% { transform: translate(15%, -10%) scale(0.85); }
-}
-
-@keyframes auroraFloat4 {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(18%, -15%) scale(1.1); }
-  100% { transform: translate(-12%, 12%) scale(0.95); }
+  50% { transform: translate(-12%, -8%) scale(1.08); }
+  100% { transform: translate(6%, -15%) scale(0.95); }
 }
 
 /* ==========================================================================
-   3. Glassmorphism Bento Cards & Navigation (Bright Light Theme)
+   2. Google Design Awwwards Floating Card (Reference Image 2 media_1787323076388.png)
    ========================================================================== */
+
+.awwwards-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 36px;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.07), 0 10px 25px -5px rgba(11, 87, 208, 0.05);
+}
 
 .fluo-header {
   width: 100%;
-  max-width: 1100px;
-  margin: 12px auto 0;
+  max-width: 1050px;
+  margin: 14px auto 0;
   background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 9999px;
-  padding: 8px 24px;
+  padding: 10px 28px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 4px 20px rgba(11, 87, 208, 0.06);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
 }
 
-.aurora-glass-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: 24px;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 10px 30px rgba(11, 87, 208, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
-  color: #0F172A;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.aurora-glass-card:hover {
-  border-color: #A0C3FF;
-  box-shadow: 0 15px 35px rgba(11, 87, 208, 0.12);
-}
-
-/* Typographie Gradient Bright Google */
-.gradient-metallic {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 40%, #7C3AED 80%, #DB2777 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Barre de recherche Iconique avec Lueur Supérieure Diffuse Cyan */
-.search-bar-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.search-bar-glow {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 55px;
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(160, 195, 255, 0.5) 0%, rgba(226, 240, 253, 0.25) 60%, transparent 100%);
-  filter: blur(20px);
-  opacity: 0.8;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.search-bar-container {
-  width: 100%;
-  background: #FFFFFF;
-  border: 1px solid rgba(226, 232, 240, 0.95);
-  border-radius: 9999px;
-  padding: 12px 24px;
-  box-shadow: 0 10px 30px rgba(11, 87, 208, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.search-bar-container:focus-within {
-  border-color: #A0C3FF;
-  box-shadow: 0 12px 35px rgba(11, 87, 208, 0.16);
-}
-
-/* Capsules de Scénarios (Pills Compactes aux dimensions rigoureuses) */
-.extension-chips-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 8px 4px;
-  scrollbar-width: none;
-}
-
-.extension-chips-container::-webkit-scrollbar {
-  display: none;
-}
-
-.bubble, .chip {
+/* Floating Scenario Pill Buttons (Awwwards Chip Style) */
+.awwwards-pill {
   display: inline-flex;
   align-items: center;
-  width: auto;
-  max-width: max-content;
-  shrink: 0;
-  padding: 0 18px;
-  height: 46px;
   gap: 10px;
+  padding: 12px 20px;
   background: #FFFFFF;
-  border: 1px solid rgba(226, 232, 240, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 9999px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  white-space: nowrap;
   font-family: var(--font-google);
   font-size: 13.5px;
-  font-weight: 500;
+  font-weight: 700;
   color: #0F172A;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-.bubble:hover, .chip:hover:not(.active) {
-  background-color: #F8FAFC;
-  border-color: #CBD5E1;
-  box-shadow: 0 4px 15px rgba(11, 87, 208, 0.1);
-  transform: translateY(-1px);
+.awwwards-pill:hover {
+  background: #F8FAFC;
+  border-color: #A0C3FF;
+  box-shadow: 0 8px 25px rgba(11, 87, 208, 0.12);
+  transform: translateY(-2px);
 }
 
-.bubble:hover .img-container, .chip:hover:not(.active) .img-container {
-  color: #0B57D0;
-}
-
-.bubble.active, .chip.active {
+.awwwards-pill.active {
   background: #0B57D0;
   color: #FFFFFF;
   border-color: #0B57D0;
-  box-shadow: 0 4px 15px rgba(11, 87, 208, 0.3);
+  box-shadow: 0 8px 25px rgba(11, 87, 208, 0.3);
 }
 
-.bubble.active .chip-text, .chip.active .chip-text {
-  color: #FFFFFF;
-  font-weight: 600;
-}
-
-.bubble.active .img-container, .chip.active .img-container {
-  color: #FFFFFF;
-}
-
-.img-container {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #0B57D0;
-  transition: color 0.2s;
-}
-
-.chip-text {
-  font-size: 13.5px;
-  color: #0F172A;
-  font-family: var(--font-google);
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-/* ==========================================================================
-   4. 3D Flip Card CSS (SQL Inspector Rotation)
-   ========================================================================== */
-
-.flip-card {
-  perspective: 1000px;
-  width: 100%;
-}
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-}
-
-.flip-card.flipped .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-  width: 100%;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  border-radius: 24px;
-}
-
-.flip-card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotateY(180deg);
-}
-
-/* Orbe Live Chroma 3D (Gemini Orb Chroma Bright) */
+/* Orbe Slime Liquide 3D (Reference Image 1 media_1787322711999.png) */
 .gemini-orb-container {
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -365,54 +159,12 @@
 }
 
 .gemini-orb-chroma {
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   border-radius: 9999px;
-  background: linear-gradient(135deg, var(--aurora-1) 0%, var(--aurora-2) 40%, var(--aurora-3) 75%, var(--aurora-4) 100%);
-  box-shadow: 0 0 35px var(--aurora-1), inset 0 0 15px rgba(255, 255, 255, 0.6);
+  background: radial-gradient(circle at 35% 35%, #38BDF8 0%, #2563EB 50%, #0B57D0 100%);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.6);
   transition: all 0.4s ease;
-}
-
-/* Ondes de Choc Émeraude & Cyan lors de la Parole */
-.speaking-wave {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 9999px;
-  border: 2px solid var(--aurora-4);
-  box-shadow: 0 0 20px var(--aurora-1);
-  animation: shockwavePulse 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
-}
-
-.speaking-wave-2 {
-  animation-delay: 0.8s;
-  border-color: var(--aurora-1);
-}
-
-.speaking-wave-3 {
-  animation-delay: 1.6s;
-  border-color: var(--aurora-3);
-}
-
-@keyframes shockwavePulse {
-  0% { transform: scale(0.8); opacity: 0.9; }
-  100% { transform: scale(1.85); opacity: 0; }
-}
-
-/* Anneau Multicolore Tourbillonnant lors de la Réflexion */
-.thinking-ring {
-  position: absolute;
-  inset: -6px;
-  border-radius: 9999px;
-  background: conic-gradient(from 0deg, var(--aurora-1), var(--aurora-2), var(--aurora-3), var(--aurora-4), var(--aurora-1));
-  animation: spinRing 1.8s linear infinite;
-  mask: radial-gradient(transparent 58px, #000 59px);
-  -webkit-mask: radial-gradient(transparent 58px, #000 59px);
-}
-
-@keyframes spinRing {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 /* Custom Light Scrollbars */
@@ -458,15 +210,15 @@
 }
 
 .markdown-content table {
-  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white;
+  @apply w-full my-3 border-collapse text-xs text-left rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white;
 }
 
 .markdown-content th {
-  @apply bg-slate-100 text-slate-900 font-semibold p-2.5 border-b border-slate-200;
+  @apply bg-slate-100 text-slate-900 font-semibold p-3 border-b border-slate-200;
 }
 
 .markdown-content td {
-  @apply p-2.5 border-b border-slate-100 bg-white text-slate-700;
+  @apply p-3 border-b border-slate-100 bg-white text-slate-700;
 }
 
 .markdown-content code {
@@ -474,7 +226,7 @@
 }
 
 .markdown-content pre {
-  @apply bg-slate-950 text-cyan-300 p-3.5 rounded-xl border border-slate-800 overflow-x-auto my-3 shadow-md;
+  @apply bg-slate-950 text-cyan-300 p-4 rounded-2xl border border-slate-800 overflow-x-auto my-3 shadow-md;
 }
 
 .markdown-content blockquote {
