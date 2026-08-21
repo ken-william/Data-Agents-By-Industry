@@ -1,71 +1,80 @@
-import React from 'react';
-import { ArrowRight, Bot, Sparkles } from 'lucide-react';
-import { cn } from '../utils/cn';
+import React, { useState } from 'react';
+import { Rocket, Search, Sparkles } from 'lucide-react';
+import { ScenarioChips } from './ScenarioChips';
+import { getIconComponent, getAgentTheme } from '../utils/themeMap';
 
 export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLive }) {
+  const [searchFilter, setSearchFilter] = useState('');
+
+  const activeTheme = getAgentTheme(selectedAgent?.theme);
+  const ActiveIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Sparkles;
+
   return (
-    <div className="w-full max-w-4xl mx-auto py-10 px-4 flex flex-col items-center justify-center text-center gap-8 my-auto">
+    <div className="w-full min-h-[78vh] flex flex-col items-center justify-center gap-8 animate-fade-in my-auto py-8 relative px-4">
       
-      {/* Title */}
-      <div className="space-y-3">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-blue-200 text-[#0B57D0] text-xs font-semibold shadow-xs">
-          <Sparkles className="size-3.5 text-[#0B57D0]" />
-          <span>Vertex AI Data Agents • BigData 2026</span>
+      {/* 1. Hero Headline with Pastel Gradient Text */}
+      <div className="text-center flex flex-col items-center justify-center max-w-4xl px-4 z-10">
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <img
+            className="size-12 sm:size-14 animate-pulse drop-shadow-[0_0_20px_rgba(56,189,248,0.6)]"
+            src="https://www.gstatic.com/lamda/images/gemini_sparkle_aurora_33f86dc0c0257da337c63.svg"
+            alt="Gemini Sparkle Logo"
+          />
+          <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight font-['Google_Sans_Flex']">
+            Talk to <em className="gradient-serif not-italic">Data</em> live using
+          </h2>
         </div>
 
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight font-['Google_Sans_Flex']">
-          Talk to <span className="text-[#0B57D0]">Data</span>
-        </h2>
-        
-        <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto font-medium leading-relaxed">
-          Sélectionnez un agent sectoriel ci-dessous pour démarrer une nouvelle conversation décisionnelle BigQuery en langage naturel.
+        <h3 className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+          <span className="pastel-gradient-text">conversational AI agents</span>.
+        </h3>
+
+        <p className="text-slate-300 font-normal text-sm sm:text-base mt-4 max-w-xl leading-relaxed text-balance">
+          Interagissez en langage naturel avec 11 copilotes décisionnels sectoriels directement connectés à vos tables BigQuery.
         </p>
       </div>
 
-      {/* Agents Selection Grid */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 text-left">
-        {agents.map((agent) => {
-          const isSelected = selectedAgent?.id === agent.id;
+      {/* 2. Iconic Search Bar with Top Diffuse Cyan Glow */}
+      <div className="search-bar-wrapper w-full max-w-2xl px-2 z-10">
+        <div className="search-bar-glow" />
+        <div className="search-bar-container flex items-center gap-3 py-2.5 px-5">
+          <Search className="size-5 text-sky-400 shrink-0 ml-1" />
+          
+          <input
+            type="text"
+            placeholder="Posez une question ou sélectionnez un scénario ci-dessous..."
+            value={searchFilter}
+            onChange={(e) => setSearchFilter(e.target.value)}
+            className="w-full bg-transparent border-none text-white placeholder-slate-400 focus:outline-none text-sm sm:text-base font-medium font-['Google_Sans']"
+          />
 
-          return (
-            <button
-              key={agent.id}
-              type="button"
-              onClick={() => onSelectAgent(agent)}
-              className={cn(
-                "p-4 rounded-2xl border text-xs flex flex-col justify-between gap-3 transition-all shadow-sm",
-                isSelected
-                  ? "bg-[#0B57D0] text-white border-[#0B57D0] shadow-md scale-[1.02]"
-                  : "bg-white text-slate-800 border-slate-200 hover:border-blue-300 hover:bg-slate-50"
-              )}
-            >
-              <div className="flex items-center gap-2">
-                <Bot className={cn("size-4 shrink-0", isSelected ? "text-white" : "text-[#0B57D0]")} />
-                <span className="font-bold truncate">{agent.displayName ? agent.displayName.split(' - ')[0] : agent.id}</span>
-              </div>
-              <span className={cn("text-[11px] line-clamp-2 leading-relaxed", isSelected ? "text-blue-100" : "text-slate-500")}>
-                {agent.description}
-              </span>
-            </button>
-          );
-        })}
+          {/* Round Fluo Neon Launch Button */}
+          <button
+            type="button"
+            aria-label="Lancer l'expérience Live Agent"
+            onClick={onLaunchLive}
+            disabled={!selectedAgent}
+            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-[0_0_25px_rgba(56,189,248,0.4)] transition-all transform hover:scale-105 active:scale-95 ${
+              selectedAgent
+                ? 'bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-500 hover:shadow-sky-500/50'
+                : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
+            }`}
+            title="Lancer l'expérience Live Agent"
+          >
+            <Rocket className="size-5" />
+          </button>
+        </div>
       </div>
 
-      {/* Start Button */}
-      <button
-        type="button"
-        onClick={onLaunchLive}
-        disabled={!selectedAgent}
-        className={cn(
-          "px-7 py-3.5 rounded-full font-bold text-sm flex items-center gap-2.5 transition-all shadow-md",
-          selectedAgent
-            ? "bg-[#0B57D0] text-white hover:bg-blue-800 shadow-blue-900/20 hover:scale-105 active:scale-95"
-            : "bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300"
-        )}
-      >
-        <span>Lancer la conversation</span>
-        <ArrowRight className="size-4" />
-      </button>
+      {/* 3. Scenario Chips (Compact Pills with Monochrome Icons) */}
+      <div className="w-full z-10">
+        <ScenarioChips
+          agents={agents}
+          selectedAgent={selectedAgent}
+          onSelectAgent={onSelectAgent}
+          onSendMessage={null}
+        />
+      </div>
 
     </div>
   );

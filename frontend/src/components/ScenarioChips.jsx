@@ -35,13 +35,13 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
         type="button"
         aria-label="Défiler les puces vers la gauche"
         onClick={() => scroll('left')}
-        className="size-10 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-blue-700 transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
+        className="size-10 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-sky-400 transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
         title="Défiler vers la gauche"
       >
         <ChevronLeft className="size-5" />
       </button>
 
-      {/* Extension Chips Scrollable Container (Material 3 md-menu-item Allongées) */}
+      {/* Extension Chips Scrollable Container */}
       <div
         ref={containerRef}
         className="extension-chips-container max-w-full scroll-smooth"
@@ -79,7 +79,7 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
         type="button"
         aria-label="Défiler les puces vers la droite"
         onClick={() => scroll('right')}
-        className="size-10 rounded-full bg-white hover:bg-slate-100 border border-slate-200 text-blue-700 transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
+        className="size-10 rounded-full bg-slate-900/80 hover:bg-slate-800 border border-slate-700 text-sky-400 transition-all shadow-md shrink-0 flex items-center justify-center hover:scale-105 active:scale-95"
         title="Défiler vers la droite"
       >
         <ChevronRight className="size-5" />

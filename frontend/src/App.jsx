@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { AgentBuilder } from './components/AgentBuilder';
 import { LiveCanvas } from './components/LiveCanvas';
 import { SettingsDrawer } from './components/SettingsDrawer';
-import { CinematicCanvasBackground } from './components/CinematicCanvasBackground';
 import { useSpeech } from './hooks/useSpeech';
 import { useAgentChat } from './hooks/useAgentChat';
 import { Loader2, RefreshCw } from 'lucide-react';
@@ -11,7 +10,7 @@ import { Loader2, RefreshCw } from 'lucide-react';
 export function App() {
   const [agents, setAgents] = useState([]);
   const [selectedAgent, setSelectedAgent] = useState(null);
-  const [viewMode, setViewMode] = useState('builder'); // 'builder' (Phase 1) vs 'live' (Phase 2)
+  const [viewMode, setViewMode] = useState('builder'); // 'builder' (Page 1) vs 'live' (Page 2)
   const [screenMode, setScreenMode] = useState('showcase'); // 'showcase' (Écran A) vs 'controller' (Écran B)
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -82,11 +81,8 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-slate-100 flex flex-col relative transition-all duration-300">
+    <div className="min-h-screen text-slate-100 flex flex-col relative transition-all duration-300">
       
-      {/* HTML5 Canvas Cinematic Background with GSAP Parallax & Scrollytelling */}
-      <CinematicCanvasBackground />
-
       {/* App Header */}
       <Header
         selectedAgent={selectedAgent}
@@ -102,7 +98,7 @@ export function App() {
         
         {loading ? (
           <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-400">
-            <Loader2 className="w-8 h-8 animate-spin text-sky-400 mb-3" />
+            <Loader2 className="size-8 animate-spin text-sky-400 mb-3" />
             <p className="text-sm font-medium">Chargement du Workspace Google & des 11 Agents BigQuery...</p>
           </div>
         ) : error ? (
@@ -113,12 +109,12 @@ export function App() {
               onClick={fetchAgents}
               className="px-4 py-2 rounded-xl bg-rose-600 text-white text-xs font-semibold hover:bg-rose-500 transition-all flex items-center gap-2 mx-auto"
             >
-              <RefreshCw className="w-4 h-4" />
+              <RefreshCw className="size-4" />
               Réessayer la connexion
             </button>
           </div>
         ) : viewMode === 'builder' ? (
-          /* Phase 1: Gemini Minimalist Landing Page */
+          /* Page 1: Gemini Enterprise Landing Page */
           <AgentBuilder
             agents={agents}
             selectedAgent={selectedAgent}
@@ -126,7 +122,7 @@ export function App() {
             onLaunchLive={handleLaunchLive}
           />
         ) : (
-          /* Phase 2: Live Experience (Interactive Bento Grid Board) */
+          /* Page 2: Live Experience (Data Canvas Showcase & Gemini Orb) */
           <LiveCanvas
             selectedAgent={selectedAgent}
             onReturnToBuilder={handleReturnToBuilder}
@@ -159,8 +155,8 @@ export function App() {
       />
 
       {/* Footer */}
-      <footer className="w-full py-4 border-t border-slate-900/80 bg-black/60 text-center text-xs text-slate-500 mt-auto backdrop-blur-md">
-        <p>Talk to Data • Cinematic Canvas GSAP • BigData Paris 2026 • Vertex AI Data Agents</p>
+      <footer className="w-full py-4 border-t border-slate-800/80 bg-slate-950/80 text-center text-xs text-slate-400 mt-auto backdrop-blur-md">
+        <p>Talk to Data • Google Fluid Blue Vesper • BigData Paris 2026 • Vertex AI Data Agents</p>
       </footer>
 
     </div>

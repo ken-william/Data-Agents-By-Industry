@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700;800&family=Google+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700;800&family=Google+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Palette Bright Luminous Ice-Blue (NO BLACK AT ALL) */
-  --bg-ice-light: radial-gradient(circle at 50% 35%, #E0F2FE 0%, #DBEAFE 45%, #EFF6FF 80%, #FFFFFF 100%);
-  --blue-google: #0B57D0;
-  --text-dark: #0F172A;
+  --bg-fluid-blue: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%);
+  --cyan-glow: #38BDF8;
+  --blue-vivid: #2563EB;
+  --emerald-wave: #10B981;
   
   --font-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
+  --font-serif: "Instrument Serif", serif;
 }
 
 @layer base {
   html, body {
-    background: radial-gradient(circle at 50% 35%, #E0F2FE 0%, #DBEAFE 45%, #EFF6FF 80%, #FFFFFF 100%) !important;
-    color: #0F172A;
+    background: radial-gradient(circle at 50% 30%, #070f2b 0%, #020617 70%, #000000 100%) !important;
+    color: #F8FAFC;
     font-family: var(--font-google);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -25,52 +26,298 @@
   }
 }
 
-/* Header Translucide Verre Dépoli Clair */
-.glass-header-light {
+/* Header Flottant en Verre Dépoli Fluo */
+.fluo-header {
   width: 100%;
-  background: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  max-width: 1100px;
+  margin: 12px auto 0;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 9999px;
+  padding: 8px 24px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 4px 20px rgba(11, 87, 208, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.15);
 }
 
-/* Custom Scrollbar */
+/* Accroche Hero avec Dégradé Pastel Fluide */
+.pastel-gradient-text {
+  background: linear-gradient(135deg, #A5F3FC 0%, #38BDF8 40%, #818CF8 75%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  background: linear-gradient(135deg, #A5F3FC 0%, #38BDF8 50%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Barre de recherche Iconique avec Lueur Supérieure Diffuse Cyan */
+.search-bar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar-glow {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 55px;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, rgba(99, 102, 241, 0.2) 60%, transparent 100%);
+  filter: blur(20px);
+  opacity: 0.85;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.search-bar-container {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 9999px;
+  padding: 12px 24px;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-bar-container:focus-within {
+  border-color: #38BDF8;
+  box-shadow: 0 12px 35px rgba(56, 189, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.95);
+}
+
+/* Capsules de Scénarios (Pills Compactes aux dimensions rigoureuses 50px height) */
+.extension-chips-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 8px 4px;
+  scrollbar-width: none;
+}
+
+.extension-chips-container::-webkit-scrollbar {
+  display: none;
+}
+
+.bubble, .chip {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  max-width: max-content;
+  shrink: 0;
+  padding: 0 20px;
+  height: 50px;
+  gap: 12px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  white-space: nowrap;
+  font-family: var(--font-google);
+  font-size: 14px;
+  font-weight: 500;
+  color: #94A3B8;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bubble:hover, .chip:hover:not(.active) {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: #38BDF8;
+  color: #F8FAFC;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+  transform: translateY(-2px);
+}
+
+.bubble:hover .img-container, .chip:hover:not(.active) .img-container {
+  color: #38BDF8;
+}
+
+.bubble.active, .chip.active {
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #38BDF8 100%);
+  color: #FFFFFF;
+  border-color: #38BDF8;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.45);
+}
+
+.bubble.active .chip-text, .chip.active .chip-text {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.bubble.active .img-container, .chip.active .img-container {
+  color: #FFFFFF;
+}
+
+.img-container {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #64748B;
+  transition: color 0.2s;
+}
+
+.chip-text {
+  font-size: 13.5px;
+  color: #CBD5E1;
+  font-family: var(--font-google);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+/* 3D Flip Card CSS (Effet de Rotation 3D SQL Inspector) */
+.flip-card {
+  perspective: 1000px;
+  width: 100%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 24px;
+}
+
+.flip-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+/* Orbe Conversationnel Organique (Gemini Orb) */
+.gemini-orb-container {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gemini-orb-core {
+  width: 90px;
+  height: 90px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 35%, #60A5FA 0%, #2563EB 50%, #1E1B4B 100%);
+  box-shadow: 0 0 35px rgba(56, 189, 248, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+/* Ondes de Choc Émeraude & Cyan lors de la Parole */
+.speaking-wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  border: 2px solid rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+  animation: shockwavePulse 2.4s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.speaking-wave-2 {
+  animation-delay: 0.8s;
+  border-color: rgba(56, 189, 248, 0.6);
+}
+
+.speaking-wave-3 {
+  animation-delay: 1.6s;
+  border-color: rgba(192, 132, 252, 0.5);
+}
+
+@keyframes shockwavePulse {
+  0% { transform: scale(0.8); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Anneau Multicolore Tourbillonnant lors de la Réflexion */
+.thinking-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, #38BDF8, #818CF8, #C084FC, #EC4899, #10B981, #38BDF8);
+  animation: spinRing 2s linear infinite;
+  mask: radial-gradient(transparent 58px, #000 59px);
+  -webkit-mask: radial-gradient(transparent 58px, #000 59px);
+}
+
+@keyframes spinRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Custom Dark Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0B57D0;
+  background: #38BDF8;
   border-radius: 9999px;
 }
 
-/* Markdown Content Styling */
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Markdown Content Styling (Dark Mode Clean Report) */
 .markdown-content {
-  @apply text-xs sm:text-sm leading-relaxed text-slate-800;
+  @apply text-xs sm:text-sm leading-relaxed text-slate-200;
 }
 
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  @apply font-bold text-slate-900 mt-3 mb-1.5 border-b border-slate-200 pb-1 text-sm sm:text-base;
+  @apply font-bold text-white mt-3 mb-1.5 border-b border-slate-700/80 pb-1 text-sm sm:text-base;
 }
 
 .markdown-content p {
-  @apply my-1.5 text-slate-700;
+  @apply my-1.5 text-slate-300;
 }
 
 .markdown-content ul {
-  @apply list-disc list-inside my-1.5 space-y-1 text-slate-700;
+  @apply list-disc list-inside my-1.5 space-y-1 text-slate-300;
 }
 
 .markdown-content ol {
-  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-700;
+  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-300;
 }
 
 .markdown-content li {
@@ -78,19 +325,19 @@
 }
 
 .markdown-content table {
-  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white;
+  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-700/80 shadow-md bg-slate-900/90;
 }
 
 .markdown-content th {
-  @apply bg-slate-100 text-slate-900 font-semibold p-2.5 border-b border-slate-200;
+  @apply bg-slate-800 text-white font-semibold p-2.5 border-b border-slate-700;
 }
 
 .markdown-content td {
-  @apply p-2.5 border-b border-slate-100 bg-white text-slate-700;
+  @apply p-2.5 border-b border-slate-800/80 bg-slate-900/60 text-slate-300;
 }
 
 .markdown-content code {
-  @apply bg-slate-100 text-blue-700 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-200;
+  @apply bg-slate-800 text-sky-300 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-700;
 }
 
 .markdown-content pre {
@@ -98,9 +345,9 @@
 }
 
 .markdown-content blockquote {
-  @apply border-l-4 border-blue-500 pl-3 my-2 text-slate-600 italic text-xs bg-blue-50/50 py-1 rounded-r;
+  @apply border-l-4 border-sky-400 pl-3 my-2 text-slate-400 italic text-xs bg-slate-900/50 py-1 rounded-r;
 }
 
 .markdown-content a {
-  @apply text-blue-600 hover:text-blue-800 underline font-medium;
+  @apply text-sky-400 hover:text-sky-300 underline font-medium;
 }
