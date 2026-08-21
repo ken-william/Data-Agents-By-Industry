@@ -1,25 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&family=Google+Sans:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Palette 3D Google Luminous Wave */
-  --google-blue: #4285F4;
-  --google-red: #EA4335;
-  --google-yellow: #FBBC05;
-  --google-green: #34A853;
+  /* Palette Gemini Enterprise Exact Replica */
+  --bg-gemini: radial-gradient(circle at 50% 45%, #E2F0FD 0%, #F4F8fd 45%, #FFFFFF 85%);
+  --text-primary: #1F1F1F;
+  --text-secondary: #757575;
+  --border-light: rgba(226, 232, 240, 0.9);
+  --blue-gemini: #0B57D0;
   
-  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
-  --font-serif: "Instrument Serif", serif;
+  --font-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
 }
 
 @layer base {
   html, body {
-    background: transparent !important;
-    color: #0F172A;
-    font-family: var(--font-inter);
+    background: var(--bg-gemini) !important;
+    color: var(--text-primary);
+    font-family: var(--font-google);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height: 100vh;
@@ -27,202 +27,66 @@
   }
 }
 
-/* Header Flottant Verre Lumineux Google */
-.luminous-header {
-  width: 100%;
-  max-width: 1100px;
-  margin: 12px auto 0;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(66, 133, 244, 0.3);
-  border-radius: 9999px;
-  padding: 8px 24px;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 8px 30px rgba(66, 133, 244, 0.15);
+/* Container de fond radial halo Gemini */
+.gemini-halo-bg {
+  background: var(--bg-gemini);
 }
 
-/* Typographie H1 & H2 avec style Instrument Serif & Dégradé Google 4 Couleurs */
-h1 em, h2 em, .gradient-serif {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.1em;
-  background: linear-gradient(135deg, #4285F4 0%, #EA4335 35%, #FBBC05 70%, #34A853 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Barre de recherche Glassmorphism Google 3D Wave */
-.search-bar-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 780px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.search-bar-glow {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 95%;
-  height: 65px;
-  border-radius: 9999px;
-  background: radial-gradient(circle, rgba(66, 133, 244, 0.4) 0%, rgba(234, 67, 53, 0.25) 60%, transparent 100%);
-  filter: blur(20px);
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.search-bar-container {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(66, 133, 244, 0.4);
-  border-radius: 9999px;
-  padding: 12px 22px;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 10px 30px rgba(66, 133, 244, 0.15);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.search-bar-container:focus-within {
-  border-color: #4285F4;
-  box-shadow: 0 12px 35px rgba(66, 133, 244, 0.3);
+/* Card Barre de recherche Gemini Enterprise */
+.gemini-search-card {
   background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease-in-out;
 }
 
-/* Extension Chips (Bulles Scénarios Material 3 Allongées height: 54px, min-width: 220px) */
-.extension-chips-container {
-  display: flex;
+.gemini-search-card:focus-within {
+  border-color: #A0C3FF;
+  box-shadow: 0 12px 35px rgba(11, 87, 208, 0.12);
+}
+
+/* Bannière "NEW: Try Gemini 3.6 Flash" */
+.gemini-banner-new {
+  background: rgba(235, 243, 254, 0.85);
+  border: 1px solid rgba(200, 223, 255, 0.8);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+}
+
+/* Chips d'Extension Google (Google, NotebookLM, Drive, Buganizer, Gmail, YAQS) */
+.gemini-chip {
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  overflow-x: auto;
-  padding: 8px 4px;
-  scrollbar-width: none;
-}
-
-.extension-chips-container::-webkit-scrollbar {
-  display: none;
-}
-
-.bubble, .chip {
-  display: flex;
-  align-items: center;
-  padding: 0 20px;
-  height: 54px;
-  min-width: 220px;
-  gap: 14px;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(66, 133, 244, 0.3);
-  border-radius: 12px; /* Material 3 Standard */
+  gap: 8px;
+  padding: 8px 16px;
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   white-space: nowrap;
-  shrink: 0;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease-in-out;
 }
 
-.bubble:hover, .chip:hover:not(.active) {
-  background-color: #FFFFFF;
-  border-color: #4285F4;
-  box-shadow: 0 8px 25px rgba(66, 133, 244, 0.25);
-  transform: translateY(-2px);
+.gemini-chip:hover {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-.bubble.active, .chip.active {
-  background: linear-gradient(135deg, #4285F4 0%, #1A56DB 100%);
+.gemini-chip.active {
+  background: #0B57D0;
   color: #FFFFFF;
-  border-color: #4285F4;
-  box-shadow: 0 8px 25px rgba(66, 133, 244, 0.35);
+  border-color: #0B57D0;
+  box-shadow: 0 4px 15px rgba(11, 87, 208, 0.3);
 }
 
-.bubble.active .chip-text, .chip.active .chip-text {
-  color: #FFFFFF;
-  font-weight: 700;
-}
-
-.bubble.active .img-container, .chip.active .img-container {
-  color: #FFFFFF;
-}
-
-.img-container {
-  width: 22px;
-  height: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #4285F4;
-  transition: color 0.2s;
-}
-
-.chip-text {
-  font-size: 14px;
-  color: #0F172A;
-  font-family: var(--font-inter);
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-/* Surfaces Bento Lumineuses */
-.bento-card, .agent-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(66, 133, 244, 0.3);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 10px 30px rgba(66, 133, 244, 0.12);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.bento-card:hover, .agent-card:hover {
-  border-color: #4285F4;
-  box-shadow: 0 15px 35px rgba(66, 133, 244, 0.2);
-}
-
-/* Gemini Live Physics Waves Animation */
-.gemini-orbe-live {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  border-radius: 9999px;
-  background: linear-gradient(135deg, #4285F4 0%, #EA4335 35%, #FBBC05 70%, #34A853 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 35px rgba(66, 133, 244, 0.35);
-}
-
-.gemini-orbe-live.showcase {
-  width: 150px;
-  height: 150px;
-}
-
-.wave {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 9999px;
-  background: inherit;
-  opacity: 0.4;
-  animation: wavePulse 3s infinite linear;
-}
-
-.wave-2 { animation-delay: 1s; }
-.wave-3 { animation-delay: 2s; }
-
-@keyframes wavePulse {
-  0% { transform: scale(1); opacity: 0.5; }
-  100% { transform: scale(1.6); opacity: 0; }
-}
-
-/* Custom Light Scrollbars */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -233,15 +97,11 @@ h1 em, h2 em, .gradient-serif {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4285F4;
+  background: #CBD5E1;
   border-radius: 9999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #1A56DB;
-}
-
-/* Markdown Content Styling (Light Mode Clean Report) */
+/* Markdown Content Styling */
 .markdown-content {
   @apply text-xs sm:text-sm leading-relaxed text-slate-800;
 }

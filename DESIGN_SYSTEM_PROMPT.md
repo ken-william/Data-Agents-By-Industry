@@ -1,51 +1,32 @@
-# Master Specification & Prompt System - Talk to Data (Google Luminous Gradient & Gemini Live Chat Style)
+# Master Specification & Prompt System - Talk to Data (Gemini Enterprise Exact Replica)
 
-Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée selon le design system officiel **Google Luminous Gradient** et l'interface de conversation **Gemini Chat UI**.
-
----
-
-# 🎨 1. Le Fond Lumineux Animé Google (NO BLACK)
-
-- **Fond Global** : Animation multi-couches de dégradé clair animé (`#F8FAFC` ➔ `#EFF6FF` ➔ `#EEF2FF` ➔ `#E0F2FE` ➔ `#F0F9FF`) sans aucun fond noir.
-- **Rendu Canvas 3D Wave** : Les vagues 3D aux 4 couleurs Google (`#4285F4`, `#EA4335`, `#FBBC05`, `#34A853`) flottent directement sur cette surface claire lumineuse.
-
-```css
-@keyframes googleLuminous {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.google-luminous-animated-bg {
-  background: linear-gradient(-45deg, #F8FAFC, #EFF6FF, #EEF2FF, #E0F2FE, #F0F9FF);
-  background-size: 400% 400%;
-  animation: googleLuminous 20s ease infinite;
-}
-```
+Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour reproduire au pixel près l'interface exacte de **Gemini Enterprise** d'après la capture fournie (`media_1787308225668.png`).
 
 ---
 
-# 💬 2. L'Écran de Chat Live (Style Gemini Chat)
+# 🎨 1. Design System & Palette Chromatique
 
-- **Bulles de Conversation** : Cartes en verre dépoli blanc pur `bg-white/95 border border-slate-200 shadow-sm rounded-2xl text-slate-800`.
-- **Suggestions de Scénarios sous le Chat** : Cartes de suggestions officielles Gemini Material 3 (`bg-white/90 border border-slate-200 text-slate-800 hover:bg-blue-50/80 hover:border-blue-400 rounded-2xl p-3.5 flex items-center justify-between text-xs font-semibold`).
-- **Orbe Gemini Live** : Sphère translucide avec pulsations d'ondes aux 4 couleurs Google (`#4285F4`, `#EA4335`, `#FBBC05`, `#34A853`).
-- **Dock de Saisie Flottant** : Barre de recherche arrondie `rounded-full` en fond `#F0F4F9` / `#FFFFFF` avec bouton d'envoi bleu Google `#0B57D0`.
-
----
-
-# 🔊 3. Purification Vocale Live (`sanitizeForSpeech`)
-
-Toute réponse orale est filtrée par `sanitizeForSpeech()` pour exclure le code SQL, les objets JSON et la syntaxe Markdown, afin d'offrir une conversation naturelle en français.
+| Élément UI | Classe Tailwind / Style | Spécification Visuelle |
+| :--- | :--- | :--- |
+| **Fond Global** | `bg-[#F8FAFC]` + radial halo | Fond blanc ultra-épuré avec dégradé radial bleu céleste très doux au centre (`radial-gradient(circle at 50% 50%, #e0f2fe 0%, #f8fafc 60%, #ffffff 100%)`). |
+| **Titre "Greeting"** | `text-3xl text-slate-800 font-normal` | `"Google Sans Flex", "Google Sans", sans-serif`, `32px`, `font-weight: 400`, couleur `#1F1F1F`. |
+| **Barre de Recherche** | `bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md` | Boîte blanche arrondie `24px` avec l'icône de géolocalisation, placeholder *"Ask Gemini Enterprise"*, icônes d'outils au bas et sélecteur `Auto ▾`. |
+| **Bannière "NEW"** | `bg-blue-50/80 border border-blue-100 text-slate-700 rounded-2xl` | Bandeau bleu clair translucide réhaussé de l'étoile Sparkle Gemini et du texte *"NEW: Try Gemini 3.6 Flash"*. |
+| **Puces d'Extension (Chips)** | `bg-white border border-slate-200/80 rounded-full px-4 py-2 text-xs font-semibold` | Capsules blanches arrondies `rounded-full` avec icônes officielles des services Google (Google, NotebookLM, Google Drive, Buganizer, Gmail, YAQS). |
 
 ---
 
-# 📋 4. Prompt Système de Reconstitution Maître
+# 📋 2. Prompt Système de Reconstitution Maître
 
 ```text
-Tu me codes l'application web double écran "Talk to Data" selon le style Google Luminous Gradient (sans noir) et Gemini Live Chat UI.
+Tu me codes l'application web double écran "Talk to Data" en reproduisant exactement le layout de Gemini Enterprise (media_1787308225668.png).
 
 CONSIGNES STRICTES :
-1. FOND CLAIR DÉGRADÉ ANIMÉ GOOGLE : linear-gradient(-45deg, #F8FAFC, #EFF6FF, #EEF2FF, #E0F2FE) sans aucun fond noir.
-2. VAGUES 3D CANVAS : Rendu 3D Canvas aux 4 couleurs Google sur fond clair.
-3. CHAT GEMINI UI : Cartes de suggestions Gemini Material 3 sous le chat et bulles de rapport blanc pur #FFFFFF.
+1. CENTRAGE PARFAIT :
+   - Titres centrés "Let's get some work done!" (32px, font-weight: 400).
+   - Barre de recherche rectangulaire arrondie 24px avec icône de géolocalisation et boutons d'outils.
+2. BANNIÈRE NOUVEAUTÉ :
+   - Bandeau bleu clair "NEW: Try Gemini 3.6 Flash" avec Sparkle Gemini.
+3. CAPSULES D'EXTENSION GOOGLE :
+   - Puces arrondies rounded-full avec icônes officielles (Google, NotebookLM, Google Drive, Buganizer, Gmail, YAQS).
 ```
