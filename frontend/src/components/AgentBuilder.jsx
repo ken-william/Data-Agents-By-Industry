@@ -6,10 +6,13 @@ import { getIconComponent, getAgentTheme } from '../utils/themeMap';
 export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLive }) {
   const [searchFilter, setSearchFilter] = useState('');
 
+  const activeTheme = getAgentTheme(selectedAgent?.theme);
+  const ActiveIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Sparkles;
+
   return (
     <div className="w-full min-h-[78vh] flex flex-col items-center justify-center gap-8 animate-fade-in my-auto py-8 relative px-4">
       
-      {/* 1. Hero Headline: Talk to Data live using conversational AI agents (Matching media_1787323624232.png) */}
+      {/* 1. Hero Headline with Google Sans Flex + Instrument Serif Metallic Gradient */}
       <div className="text-center flex flex-col items-center justify-center max-w-4xl px-4 z-10">
         <div className="flex items-center justify-center gap-3 mb-3">
           <img
@@ -31,10 +34,10 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
         </p>
       </div>
 
-      {/* 2. Iconic Search Bar with Top Diffuse Cyan Glow (Matching media_1787323624232.png) */}
+      {/* 2. Iconic Search Bar with Top Diffuse Cyan Glow */}
       <div className="search-bar-wrapper w-full max-w-2xl px-2 z-10">
         <div className="search-bar-glow" />
-        <div className="search-bar-container flex items-center gap-3 py-2.5 px-5 bg-white border border-slate-200/90 rounded-full shadow-md">
+        <div className="search-bar-container flex items-center gap-3 py-2.5 px-5">
           <Search className="size-5 text-[#0B57D0] shrink-0 ml-1" />
           
           <input
@@ -45,13 +48,13 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
             className="w-full bg-transparent border-none text-slate-900 placeholder-slate-400 focus:outline-none text-sm sm:text-base font-medium font-['Google_Sans']"
           />
 
-          {/* Round Blue Launch Button with Rocket Icon (Matching media_1787323624232.png) */}
+          {/* Round Blue Launch Button */}
           <button
             type="button"
             aria-label="Lancer l'expérience Live Agent"
             onClick={onLaunchLive}
             disabled={!selectedAgent}
-            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-md transition-all transform hover:scale-105 active:scale-95 cursor-pointer ${
+            className={`size-11 rounded-full flex items-center justify-center text-white shrink-0 shadow-md transition-all transform hover:scale-105 active:scale-95 ${
               selectedAgent
                 ? 'bg-[#0B57D0] hover:bg-blue-800 shadow-blue-900/20'
                 : 'bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300'
@@ -63,7 +66,7 @@ export function AgentBuilder({ agents, selectedAgent, onSelectAgent, onLaunchLiv
         </div>
       </div>
 
-      {/* 3. Scenario Chips (11 Sector Pills with Dark Circular Navigation Arrows) */}
+      {/* 3. Scenario Chips (Compact Pills with Monochrome Icons) */}
       <div className="w-full z-10">
         <ScenarioChips
           agents={agents}
