@@ -24,25 +24,25 @@ export function SettingsDrawer({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex justify-end bg-slate-900/30 backdrop-blur-sm animate-fade-in">
       
       {/* Drawer Panel */}
-      <div className="w-full max-w-md bg-slate-900 border-l border-slate-800 h-full p-6 flex flex-col justify-between overflow-y-auto text-slate-100 shadow-2xl">
+      <div className="w-full max-w-md bg-white/95 border-l border-slate-200/90 h-full p-6 flex flex-col justify-between overflow-y-auto text-slate-900 shadow-2xl backdrop-blur-xl">
         
         <div className="space-y-6">
           
           {/* Header */}
-          <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div className="flex items-center justify-between pb-4 border-b border-slate-200">
             <div className="flex items-center gap-2">
-              <Sparkles className="size-5 text-sky-400" />
-              <h3 className="text-base font-bold text-white font-['Google_Sans_Flex']">
+              <Sparkles className="size-5 text-[#0B57D0]" />
+              <h3 className="text-base font-bold text-slate-900 font-['Google_Sans_Flex']">
                 Paramètres & Thèmes Événementiels
               </h3>
             </div>
             <button
               type="button"
               onClick={onClose}
-              className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
+              className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 transition-colors"
             >
               <X className="size-5" />
             </button>
@@ -50,8 +50,8 @@ export function SettingsDrawer({
 
           {/* Theme Selector Section */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-400">
-              <Palette className="size-4 text-sky-400" />
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500">
+              <Palette className="size-4 text-[#0B57D0]" />
               <span>Thèmes Visuels Événementiels</span>
             </div>
 
@@ -65,22 +65,22 @@ export function SettingsDrawer({
                     type="button"
                     onClick={() => setActiveTheme(t.id)}
                     className={cn(
-                      "p-3.5 rounded-2xl border text-left transition-all flex items-center justify-between gap-3",
+                      "p-3.5 rounded-2xl border text-left transition-all flex items-center justify-between gap-3 shadow-xs",
                       isSelected
-                        ? "bg-slate-800 border-sky-400 shadow-md"
-                        : "bg-slate-950/60 border-slate-800 hover:border-slate-700 hover:bg-slate-800/50 text-slate-300"
+                        ? "bg-blue-50 border-[#0B57D0] shadow-sm text-slate-900"
+                        : "bg-slate-50 border-slate-200 hover:border-blue-300 hover:bg-white text-slate-700"
                     )}
                   >
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className={cn("size-3 rounded-full bg-gradient-to-r shrink-0", t.colorPreview)} />
-                        <span className="text-xs font-bold text-white">{t.name}</span>
+                        <span className={cn("size-3 rounded-full bg-gradient-to-r shrink-0 shadow-xs", t.colorPreview)} />
+                        <span className="text-xs font-bold text-slate-900">{t.name}</span>
                       </div>
-                      <span className="text-[11px] text-slate-400 block mt-0.5">{t.desc}</span>
+                      <span className="text-[11px] text-slate-500 block mt-0.5">{t.desc}</span>
                     </div>
 
                     {isSelected && (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-400/40 font-bold shrink-0">
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#0B57D0] text-white font-bold shrink-0 shadow-xs">
                         • Actif
                       </span>
                     )}
@@ -91,9 +91,9 @@ export function SettingsDrawer({
           </div>
 
           {/* Screen Mode Section */}
-          <div className="space-y-3 pt-2 border-t border-slate-800">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-400">
-              <Monitor className="size-4 text-sky-400" />
+          <div className="space-y-3 pt-2 border-t border-slate-200">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500">
+              <Monitor className="size-4 text-[#0B57D0]" />
               <span>Mode d'Affichage Double Écran</span>
             </div>
 
@@ -102,10 +102,10 @@ export function SettingsDrawer({
                 type="button"
                 onClick={() => setScreenMode('showcase')}
                 className={cn(
-                  "p-3 rounded-xl border text-xs font-semibold text-center transition-all",
+                  "p-3 rounded-xl border text-xs font-semibold text-center transition-all shadow-xs",
                   screenMode === 'showcase'
-                    ? "bg-sky-500/20 border-sky-400 text-sky-300 shadow-sm"
-                    : "bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200"
+                    ? "bg-[#0B57D0] border-[#0B57D0] text-white shadow-sm"
+                    : "bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100"
                 )}
               >
                 Écran A : Showcase
@@ -115,10 +115,10 @@ export function SettingsDrawer({
                 type="button"
                 onClick={() => setScreenMode('controller')}
                 className={cn(
-                  "p-3 rounded-xl border text-xs font-semibold text-center transition-all",
+                  "p-3 rounded-xl border text-xs font-semibold text-center transition-all shadow-xs",
                   screenMode === 'controller'
-                    ? "bg-sky-500/20 border-sky-400 text-sky-300 shadow-sm"
-                    : "bg-slate-950/60 border-slate-800 text-slate-400 hover:text-slate-200"
+                    ? "bg-[#0B57D0] border-[#0B57D0] text-white shadow-sm"
+                    : "bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100"
                 )}
               >
                 Écran B : Contrôleur
@@ -127,13 +127,13 @@ export function SettingsDrawer({
           </div>
 
           {/* Voice Output Toggle */}
-          <div className="space-y-3 pt-2 border-t border-slate-800">
-            <div className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-950/60 border border-slate-800">
+          <div className="space-y-3 pt-2 border-t border-slate-200">
+            <div className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
               <div className="flex items-center gap-3">
-                {autoSpeechEnabled ? <Volume2 className="size-5 text-emerald-400" /> : <VolumeX className="size-5 text-slate-500" />}
+                {autoSpeechEnabled ? <Volume2 className="size-5 text-emerald-600" /> : <VolumeX className="size-5 text-slate-400" />}
                 <div>
-                  <span className="text-xs font-bold text-white block">Synthèse Vocale Live</span>
-                  <span className="text-[11px] text-slate-400">Lecture orale automatique des réponses</span>
+                  <span className="text-xs font-bold text-slate-900 block">Synthèse Vocale Live</span>
+                  <span className="text-[11px] text-slate-500">Lecture orale automatique des réponses</span>
                 </div>
               </div>
 
@@ -141,7 +141,7 @@ export function SettingsDrawer({
                 type="checkbox"
                 checked={autoSpeechEnabled}
                 onChange={(e) => setAutoSpeechEnabled(e.target.checked)}
-                className="size-5 rounded border-slate-700 text-sky-500 focus:ring-sky-400 cursor-pointer"
+                className="size-5 rounded border-slate-300 text-[#0B57D0] focus:ring-[#0B57D0] cursor-pointer"
               />
             </div>
           </div>
@@ -149,7 +149,7 @@ export function SettingsDrawer({
         </div>
 
         {/* Footer Info */}
-        <div className="pt-4 border-t border-slate-800 text-center text-[11px] text-slate-500">
+        <div className="pt-4 border-t border-slate-200 text-center text-[11px] text-slate-500 font-medium">
           <p>Talk to Data • Google Luminous Aurora Engine</p>
         </div>
 

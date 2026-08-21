@@ -87,7 +87,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen text-slate-100 flex flex-col relative transition-all duration-300">
+    <div className="min-h-screen text-slate-900 flex flex-col relative transition-all duration-300">
       
       {/* Google Luminous Aurora Fluid Background Engine */}
       <div className="aurora-container">
@@ -112,17 +112,17 @@ export function App() {
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6 relative z-10">
         
         {loading ? (
-          <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-400">
-            <Loader2 className="size-8 animate-spin text-sky-400 mb-3" />
-            <p className="text-sm font-medium">Chargement du Workspace Google & des 11 Agents BigQuery...</p>
+          <div className="flex-1 flex flex-col items-center justify-center p-12 text-slate-600">
+            <Loader2 className="size-8 animate-spin text-[#0B57D0] mb-3" />
+            <p className="text-sm font-semibold">Chargement du Workspace Google & des 11 Agents BigQuery...</p>
           </div>
         ) : error ? (
-          <div className="p-6 rounded-2xl bg-slate-900 border border-rose-500/40 text-rose-300 text-center max-w-lg mx-auto my-12 shadow-xl">
+          <div className="p-6 rounded-2xl bg-white/95 border border-rose-200 text-rose-700 text-center max-w-lg mx-auto my-12 shadow-md">
             <p className="text-sm font-semibold mb-3">{error}</p>
             <button
               type="button"
               onClick={fetchAgents}
-              className="px-4 py-2 rounded-xl bg-rose-600 text-white text-xs font-semibold hover:bg-rose-500 transition-all flex items-center gap-2 mx-auto"
+              className="px-4 py-2 rounded-xl bg-rose-600 text-white text-xs font-semibold hover:bg-rose-500 transition-all flex items-center gap-2 mx-auto shadow-xs"
             >
               <RefreshCw className="size-4" />
               Réessayer la connexion
@@ -171,8 +171,8 @@ export function App() {
         agentsCount={agents.length}
       />
 
-      {/* Footer */}
-      <footer className="w-full py-4 border-t border-slate-800/80 bg-slate-950/80 text-center text-xs text-slate-400 mt-auto backdrop-blur-md">
+      {/* Bright Light White Footer */}
+      <footer className="w-full py-4 border-t border-slate-200/80 bg-white/80 text-center text-xs text-slate-600 font-medium mt-auto backdrop-blur-md">
         <p>Talk to Data • Google Luminous Aurora • BigData Paris 2026 • Vertex AI Data Agents</p>
       </footer>
 
