@@ -89,16 +89,33 @@
 }
 
 /* ==========================================================================
-   2. Google Design Awwwards Floating Card (Reference Image 2 media_1787323076388.png)
+   2. Search Bar Glow & Header
    ========================================================================== */
 
-.awwwards-card {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  border-radius: 36px;
-  backdrop-filter: blur(32px);
-  -webkit-backdrop-filter: blur(32px);
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.07), 0 10px 25px -5px rgba(11, 87, 208, 0.05);
+.search-bar-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-bar-glow {
+  position: absolute;
+  top: -14px;
+  left: 15%;
+  right: 15%;
+  height: 35px;
+  background: radial-gradient(ellipse at center, rgba(56, 189, 248, 0.55) 0%, rgba(59, 130, 246, 0.25) 50%, transparent 75%);
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.search-bar-container {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px -5px rgba(11, 87, 208, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .fluo-header {
@@ -114,40 +131,40 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
 }
 
-/* Floating Scenario Pill Buttons (Awwwards Chip Style) */
-.awwwards-pill {
-  display: inline-flex;
+/* ==========================================================================
+   3. Scenario Chips Slider (Scroll Constrained Container)
+   ========================================================================== */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.extension-chips-container {
+  display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  border-radius: 9999px;
-  font-family: var(--font-google);
-  font-size: 13.5px;
-  font-weight: 700;
-  color: #0F172A;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  white-space: nowrap;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px 2px;
 }
 
-.awwwards-pill:hover {
-  background: #F8FAFC;
-  border-color: #A0C3FF;
-  box-shadow: 0 8px 25px rgba(11, 87, 208, 0.12);
-  transform: translateY(-2px);
+/* Awwwards Floating Card */
+.awwwards-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 36px;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.07), 0 10px 25px -5px rgba(11, 87, 208, 0.05);
 }
 
-.awwwards-pill.active {
-  background: #0B57D0;
-  color: #FFFFFF;
-  border-color: #0B57D0;
-  box-shadow: 0 8px 25px rgba(11, 87, 208, 0.3);
-}
-
-/* Orbe Slime Liquide 3D (Reference Image 1 media_1787322711999.png) */
+/* Orbe Slime Liquide 3D */
 .gemini-orb-container {
   position: relative;
   width: 120px;

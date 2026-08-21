@@ -22,15 +22,15 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
 
   const scroll = (direction) => {
     if (containerRef.current) {
-      const amount = direction === 'left' ? -300 : 300;
+      const amount = direction === 'left' ? -280 : 280;
       containerRef.current.scrollBy({ left: amount, behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="w-full flex items-center justify-center gap-3 py-2 max-w-5xl mx-auto px-2 relative">
+    <div className="w-full max-w-2xl mx-auto flex items-center justify-between gap-2 py-2 px-1 relative">
       
-      {/* Dark Circular Scroll Left Button (Matching media_1787323624232.png) */}
+      {/* Dark Circular Scroll Left Button (Matching media_1787324043805.png) */}
       <button
         type="button"
         aria-label="Défiler les puces vers la gauche"
@@ -41,44 +41,46 @@ export function ScenarioChips({ agents, selectedAgent, onSelectAgent, onSendMess
         <ChevronLeft className="size-5" />
       </button>
 
-      {/* Extension Chips Scrollable Container */}
-      <div
-        ref={containerRef}
-        className="extension-chips-container max-w-full scroll-smooth flex items-center gap-3 py-1"
-        id="scenariosContainer"
-      >
-        {SCENARIOS.map((sc) => {
-          const isSelected = selectedAgent?.id === sc.id;
-          const IconComp = getIconComponent(sc.id);
-          const targetAgent = agents.find(a => a.id === sc.id) || selectedAgent;
+      {/* Strictly Constrained Scroll Mask Wrapper (Prevents Overflow Bleed) */}
+      <div className="flex-1 min-w-0 overflow-hidden relative">
+        <div
+          ref={containerRef}
+          className="extension-chips-container flex items-center gap-3 overflow-x-auto scroll-smooth no-scrollbar py-1 px-1"
+          id="scenariosContainer"
+        >
+          {SCENARIOS.map((sc) => {
+            const isSelected = selectedAgent?.id === sc.id;
+            const IconComp = getIconComponent(sc.id);
+            const targetAgent = agents.find(a => a.id === sc.id) || selectedAgent;
 
-          return (
-            <button
-              key={sc.id}
-              type="button"
-              onClick={() => {
-                if (targetAgent) {
-                  onSelectAgent(targetAgent);
-                }
-                if (onSendMessage) {
-                  onSendMessage(sc.prompt);
-                }
-              }}
-              className={cn(
-                "inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border text-xs sm:text-sm font-semibold transition-all whitespace-nowrap shrink-0 shadow-2xs cursor-pointer",
-                isSelected
-                  ? "bg-[#0B57D0] text-white border-[#0B57D0] shadow-md scale-[1.02]"
-                  : "bg-white text-slate-800 border-slate-200/90 hover:bg-slate-50 hover:border-slate-300"
-              )}
-            >
-              <IconComp className={cn("size-4 shrink-0", isSelected ? "text-white" : "text-[#0B57D0]")} />
-              <span>{sc.name}</span>
-            </button>
-          );
-        })}
+            return (
+              <button
+                key={sc.id}
+                type="button"
+                onClick={() => {
+                  if (targetAgent) {
+                    onSelectAgent(targetAgent);
+                  }
+                  if (onSendMessage) {
+                    onSendMessage(sc.prompt);
+                  }
+                }}
+                className={cn(
+                  "inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full border text-xs sm:text-sm font-semibold transition-all whitespace-nowrap shrink-0 shadow-2xs cursor-pointer select-none",
+                  isSelected
+                    ? "bg-[#0B57D0] text-white border-[#0B57D0] shadow-md scale-[1.02]"
+                    : "bg-white text-slate-800 border-slate-200/90 hover:bg-slate-50 hover:border-slate-300"
+                )}
+              >
+                <IconComp className={cn("size-4 shrink-0", isSelected ? "text-white" : "text-[#0B57D0]")} />
+                <span>{sc.name}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      {/* Dark Circular Scroll Right Button (Matching media_1787323624232.png) */}
+      {/* Dark Circular Scroll Right Button (Matching media_1787324043805.png) */}
       <button
         type="button"
         aria-label="Défiler les puces vers la droite"
