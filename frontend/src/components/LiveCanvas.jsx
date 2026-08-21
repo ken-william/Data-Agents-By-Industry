@@ -40,6 +40,7 @@ export function LiveCanvas({
   const [showThoughts, setShowThoughts] = useState(false);
 
   const AgentIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Bot;
+  const isSpeaking = voiceProps?.isSpeaking;
 
   // Zero-Chat Scroll Architecture: Get only the LATEST assistant response & user prompt
   const lastUserMessage = [...messages].reverse().find(m => m.role === 'user');
