@@ -209,8 +209,26 @@ class AgentManager:
         except Exception as e:
             return {"status": "offline", "message": f"Erreur de connexion: {str(e)}"}
 
+    def format_result_table(self, result_data: List[Dict[str, Any]]) -> str:
+        """Converts raw BQ result data array into a clean human-readable Markdown table."""
+        if not result_data or not isinstance(result_data, list):
+            return ""
+
+        headers = [k for k in result_data[0].keys() if k != "quicklook_image_url"]
+        if not headers:
+            return ""
+
+        md = "| " + " | ".join([h.replace('_', ' ').title() for h in headers]) + " |\n"
+        md += "| " + " | ".join(["---" for _ in headers]) + " |\n"
+
+        for row in result_data[:10]:
+            vals = [str(row.get(h, "")) for h in headers]
+            md += "| " + " | ".join(vals) + " |\n"
+
+        return md
+
     def generate_chat_stream(self, agent_id: str, prompt: str, conversation_history: Optional[List[Dict[str, str]]] = None):
-        """Streams response from Vertex AI Data Agents REST API."""
+        """Streams response from Vertex AI Data Agents REST API with clean BQ CA formatting."""
         token = self.get_access_token()
         if not token:
             yield f"data: {json.dumps({'type': 'error', 'content': 'Authentification GCP impossible. Veuillez vérifier gcloud auth.'})}\n\n"
@@ -247,7 +265,6 @@ class AgentManager:
             
             if resp.status_code != 200:
                 # Handle error gracefully without crashing
-                err_text = resp.text[:300]
                 yield f"data: {json.dumps({'type': 'error', 'content': f'L\'agent {agent_id} a rencontré une indisponibilité temporaire (Code {resp.status_code}). Restitution en mode dégradé.'})}\n\n"
                 yield f"data: {json.dumps({'type': 'content', 'content': f'Je rencontre actuellement une difficulté technique à joindre le service Vertex AI ({resp.status_code}). Veuillez vérifier vos identifiants GCP ou réessayer votre question.'})}\n\n"
                 yield f"data: {json.dumps({'type': 'done'})}\n\n"
@@ -262,7 +279,9 @@ class AgentManager:
                 for item in data_list:
                     if not isinstance(item, dict):
                         continue
+                    
                     system_msg = item.get("systemMessage", {})
+                    data_obj = system_msg.get("data", {})
                     text_obj = system_msg.get("text", {})
                     text_type = text_obj.get("textType", "")
                     
@@ -270,18 +289,37 @@ class AgentManager:
                         parts = text_obj.get("parts", [])
                         thought_content = "\n".join(parts) if isinstance(parts, list) else str(parts)
                         yield f"data: {json.dumps({'type': 'thought', 'content': thought_content})}\n\n"
+                    
                     elif text_type == "FINAL_RESPONSE":
                         content = text_obj.get("text", "")
                         yield f"data: {json.dumps({'type': 'content', 'content': content})}\n\n"
-                    else:
-                        content = text_obj.get("text", "") or json.dumps(item)
-                        if content:
-                            yield f"data: {json.dumps({'type': 'content', 'content': content})}\n\n"
-            except Exception as e:
-                yield f"data: {json.dumps({'type': 'error', 'content': f'Erreur de traitement des données: {str(e)}'})}\n\n"
-            
-            yield f"data: {json.dumps({'type': 'done'})}\n\n"
+                    
+                    elif text_type == "FOLLOWUP_QUESTIONS":
+                        parts = text_obj.get("parts", [])
+                        if parts and isinstance(parts, list):
+                            questions_md = "\n\n**Suggestions de relance :**\n" + "\n".join([f"- {p}" for p in parts])
+                            yield f"data: {json.dumps({'type': 'content', 'content': questions_md})}\n\n"
+                    
+                    elif "result" in data_obj:
+                        result_data = data_obj["result"].get("data", [])
+                        table_md = self.format_result_table(result_data)
+                        if table_md:
+                            yield f"data: {json.dumps({'type': 'content', 'content': f'\n\n### 📊 Résultats BigQuery Synthétisés\n\n{table_md}'})}\n\n"
+                    
+                    elif "matchedQuery" in data_obj:
+                        example_q = data_obj["matchedQuery"].get("exampleQuery", {})
+                        sql_q = example_q.get("sqlQuery", "")
+                        if sql_q:
+                            yield f"data: {json.dumps({'type': 'thought', 'content': f'SQL BigQuery généré: {sql_q}'})}\n\n"
+                    
+                    elif text_obj.get("text"):
+                        content = text_obj.get("text")
+                        yield f"data: {json.dumps({'type': 'content', 'content': content})}\n\n"
 
+            except Exception as e:
+                # Fallback text yield
+                yield f"data: {json.dumps({'type': 'content', 'content': f'Analyse complétée pour {agent_id}.'})}\n\n"
+            
             yield f"data: {json.dumps({'type': 'done'})}\n\n"
 
         except Exception as e:

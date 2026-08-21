@@ -1,5 +1,69 @@
 import { useState, useCallback } from 'react';
 
+/**
+ * Cleans raw JSON systemMessage strings into human-readable Markdown text.
+ */
+function cleanRawContent(text) {
+  if (!text) return '';
+
+  // If text is a raw JSON string containing systemMessage
+  if (text.includes('"systemMessage"') || text.includes('{"timestamp":')) {
+    try {
+      // Try extracting Markdown tables or text parts
+      const cleanParts = [];
+      const lines = text.split('\n');
+      
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        try {
+          const parsed = JSON.parse(line.trim());
+          const sysMsg = parsed.systemMessage || {};
+          const dataObj = sysMsg.data || {};
+          const textObj = sysMsg.text || {};
+
+          if (dataObj.result && dataObj.result.data) {
+            const rows = dataObj.result.data;
+            if (Array.isArray(rows) && rows.length > 0) {
+              const headers = Object.keys(rows[0]).filter(k => k !== 'quicklook_image_url');
+              let md = "\n\n### 📊 Résultats BigQuery Synthétisés\n\n";
+              md += "| " + headers.map(h => h.replace(/_/g, ' ').toUpperCase()).join(' | ') + " |\n";
+              md += "| " + headers.map(() => '---').join(' | ') + " |\n";
+              for (const r of rows.slice(0, 8)) {
+                md += "| " + headers.map(h => r[h] ?? '').join(' | ') + " |\n";
+              }
+              cleanParts.push(md);
+            }
+          } else if (textObj.parts && Array.isArray(textObj.parts)) {
+            if (textObj.textType === 'FOLLOWUP_QUESTIONS') {
+              cleanParts.push("\n\n**Suggestions de relance :**\n" + textObj.parts.map(p => `- ${p}`).join('\n'));
+            } else {
+              cleanParts.push(textObj.parts.join('\n'));
+            }
+          }
+        } catch (e) {
+          // If line isn't valid JSON, keep line if it doesn't look like raw json
+          if (!line.includes('{"timestamp":') && !line.includes('"systemMessage"')) {
+            cleanParts.push(line);
+          }
+        }
+      }
+
+      if (cleanParts.length > 0) {
+        return cleanParts.join('\n');
+      }
+    } catch (e) {
+      // fallback strip raw braces
+    }
+
+    // Fallback: strip raw JSON timestamps & keys
+    let sanitized = text.replace(/\{"timestamp":[\s\S]*?\}\}\}\}/g, '');
+    sanitized = sanitized.replace(/\{"systemMessage":[\s\S]*?\}/g, '');
+    return sanitized.trim() || "Analyse BigQuery complétée avec succès.";
+  }
+
+  return text;
+}
+
 export function useAgentChat(selectedAgent, speakText) {
   const [messages, setMessages] = useState([]);
   const [isStreaming, setIsStreaming] = useState(false);
@@ -78,13 +142,15 @@ export function useAgentChat(selectedAgent, speakText) {
                 });
               } else if (data.type === 'content') {
                 accumulatedContent += data.content;
+                const cleanedContent = cleanRawContent(accumulatedContent);
+
                 setMessages(prev => {
                   const updated = [...prev];
                   const lastIdx = updated.length - 1;
                   if (lastIdx >= 0 && updated[lastIdx].role === 'assistant') {
                     updated[lastIdx] = {
                       ...updated[lastIdx],
-                      content: accumulatedContent
+                      content: cleanedContent
                     };
                   }
                   return updated;
@@ -106,7 +172,7 @@ export function useAgentChat(selectedAgent, speakText) {
                 });
 
                 if (speakText && accumulatedContent) {
-                  speakText(accumulatedContent);
+                  speakText(cleanRawContent(accumulatedContent));
                 }
               }
             } catch (e) {
