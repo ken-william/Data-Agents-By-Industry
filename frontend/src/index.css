@@ -5,55 +5,55 @@
 @tailwind utilities;
 
 /* ==========================================================================
-   1. Google Luminous Aurora Dynamic Themes Engine
+   1. Google Luminous Aurora Dynamic Themes Engine (BRIGHT & VIBRANT ONLY)
    ========================================================================== */
 
-/* Theme 1: Cloud Next (Google 4 Colors Official - Default) */
+/* Theme 1: Cloud Next (Google 4 Colors Official - Bright White Base) */
 :root, :root[data-theme="cloud-next"] {
   --aurora-1: #4285F4; /* Google Blue */
   --aurora-2: #EA4335; /* Google Red */
   --aurora-3: #FBBC05; /* Google Yellow */
   --aurora-4: #34A853; /* Google Green */
-  --aurora-bg: #050b24;
+  --aurora-bg: #F8FAFC;
   --accent-theme: #4285F4;
   --font-google: "Google Sans Flex", "Google Sans", "Inter", sans-serif;
   --font-serif: "Instrument Serif", serif;
 }
 
-/* Theme 2: Gemini Aurora (Cyan, Indigo, Violet & Rose Coral) */
+/* Theme 2: Gemini Aurora (Cyan, Indigo, Violet & Rose Coral - Ice Blue Base) */
 :root[data-theme="gemini-aurora"] {
   --aurora-1: #38BDF8;
   --aurora-2: #818CF8;
   --aurora-3: #C084FC;
   --aurora-4: #EC4899;
-  --aurora-bg: #07091E;
+  --aurora-bg: #F0F9FF;
   --accent-theme: #38BDF8;
 }
 
-/* Theme 3: Tech Sunset (Magenta, Orange, Amber & Warm Violet) */
+/* Theme 3: Tech Sunset (Magenta, Orange, Amber & Warm Violet - Warm Amber Base) */
 :root[data-theme="tech-sunset"] {
   --aurora-1: #E11D48;
   --aurora-2: #F97316;
   --aurora-3: #F59E0B;
   --aurora-4: #7C3AED;
-  --aurora-bg: #110515;
+  --aurora-bg: #FFF7ED;
   --accent-theme: #F97316;
 }
 
-/* Theme 4: Eco-System (Emerald, Mint, Teal & Sky Cyan) */
+/* Theme 4: Eco-System (Emerald, Mint, Teal & Sky Cyan - Mint Base) */
 :root[data-theme="eco-system"] {
   --aurora-1: #10B981;
   --aurora-2: #34D399;
   --aurora-3: #14B8A6;
   --aurora-4: #06B6D4;
-  --aurora-bg: #031412;
+  --aurora-bg: #F0FDF4;
   --accent-theme: #10B981;
 }
 
 @layer base {
   html, body {
     background-color: var(--aurora-bg) !important;
-    color: #F8FAFC;
+    color: #0F172A;
     font-family: var(--font-google);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -63,7 +63,7 @@
 }
 
 /* ==========================================================================
-   2. Fluid CSS Aurora Borealis Background Engine
+   2. Fluid CSS Aurora Borealis Background Engine (Bright Luminous)
    ========================================================================== */
 
 .aurora-container {
@@ -82,16 +82,15 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(120px);
-  -webkit-backdrop-filter: blur(120px);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
 }
 
 .aurora-blob {
   position: absolute;
   border-radius: 9999px;
-  opacity: 0.65;
-  filter: blur(60px);
-  mix-blend-mode: screen;
+  opacity: 0.75;
+  filter: blur(50px);
 }
 
 .aurora-blob-1 {
@@ -155,46 +154,46 @@
 }
 
 /* ==========================================================================
-   3. Glassmorphism Bento Cards & Navigation
+   3. Glassmorphism Bento Cards & Navigation (Bright Light Theme)
    ========================================================================== */
 
 .fluo-header {
   width: 100%;
   max-width: 1100px;
   margin: 12px auto 0;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
   border-radius: 9999px;
   padding: 8px 24px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(11, 87, 208, 0.06);
 }
 
 .aurora-glass-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.95);
   border-radius: 24px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(11, 87, 208, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+  color: #0F172A;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .aurora-glass-card:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.05);
+  border-color: #A0C3FF;
+  box-shadow: 0 15px 35px rgba(11, 87, 208, 0.12);
 }
 
-/* Typographie Hybride Stylisée */
+/* Typographie Gradient Bright Google */
 .gradient-metallic {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  background: linear-gradient(135deg, #FDE047 0%, #F97316 40%, #EC4899 80%, #F472B6 100%);
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 40%, #7C3AED 80%, #DB2777 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 25px rgba(251, 191, 36, 0.3);
 }
 
 /* Barre de recherche Iconique avec Lueur Supérieure Diffuse Cyan */
@@ -216,29 +215,26 @@
   width: 90%;
   height: 55px;
   border-radius: 9999px;
-  background: radial-gradient(circle, var(--aurora-1) 0%, var(--aurora-2) 60%, transparent 100%);
-  filter: blur(22px);
-  opacity: 0.75;
+  background: radial-gradient(circle, rgba(160, 195, 255, 0.5) 0%, rgba(226, 240, 253, 0.25) 60%, transparent 100%);
+  filter: blur(20px);
+  opacity: 0.8;
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
 .search-bar-container {
   width: 100%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.95);
   border-radius: 9999px;
   padding: 12px 24px;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(11, 87, 208, 0.08);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar-container:focus-within {
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: #A0C3FF;
+  box-shadow: 0 12px 35px rgba(11, 87, 208, 0.16);
 }
 
 /* Capsules de Scénarios (Pills Compactes aux dimensions rigoureuses) */
@@ -261,46 +257,43 @@
   width: auto;
   max-width: max-content;
   shrink: 0;
-  padding: 0 20px;
-  height: 48px;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0 18px;
+  height: 46px;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.95);
   border-radius: 9999px;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
   white-space: nowrap;
   font-family: var(--font-google);
   font-size: 13.5px;
   font-weight: 500;
-  color: #CBD5E1;
+  color: #0F172A;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bubble:hover, .chip:hover:not(.active) {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #FFFFFF;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
-  transform: translateY(-2px);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 15px rgba(11, 87, 208, 0.1);
+  transform: translateY(-1px);
 }
 
 .bubble:hover .img-container, .chip:hover:not(.active) .img-container {
-  color: var(--aurora-1);
+  color: #0B57D0;
 }
 
 .bubble.active, .chip.active {
-  background: linear-gradient(135deg, var(--aurora-1) 0%, var(--aurora-2) 100%);
+  background: #0B57D0;
   color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.25);
+  border-color: #0B57D0;
+  box-shadow: 0 4px 15px rgba(11, 87, 208, 0.3);
 }
 
 .bubble.active .chip-text, .chip.active .chip-text {
   color: #FFFFFF;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .bubble.active .img-container, .chip.active .img-container {
@@ -313,13 +306,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #94A3B8;
+  color: #0B57D0;
   transition: color 0.2s;
 }
 
 .chip-text {
   font-size: 13.5px;
-  color: #E2E8F0;
+  color: #0F172A;
   font-family: var(--font-google);
   font-weight: 500;
   transition: color 0.2s;
@@ -360,7 +353,7 @@
   transform: rotateY(180deg);
 }
 
-/* Orbe Live Chroma 3D (Gemini Orb Chroma) */
+/* Orbe Live Chroma 3D (Gemini Orb Chroma Bright) */
 .gemini-orb-container {
   position: relative;
   width: 130px;
@@ -375,8 +368,8 @@
   width: 90px;
   height: 90px;
   border-radius: 9999px;
-  background: radial-gradient(circle at 35% 35%, var(--aurora-1) 0%, var(--aurora-2) 40%, var(--aurora-3) 75%, var(--aurora-4) 100%);
-  box-shadow: 0 0 40px var(--aurora-1), inset 0 0 20px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, var(--aurora-1) 0%, var(--aurora-2) 40%, var(--aurora-3) 75%, var(--aurora-4) 100%);
+  box-shadow: 0 0 35px var(--aurora-1), inset 0 0 15px rgba(255, 255, 255, 0.6);
   transition: all 0.4s ease;
 }
 
@@ -422,46 +415,42 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Custom Dark Scrollbars */
+/* Custom Light Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(5, 11, 36, 0.5);
+  background: #F8FAFC;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--aurora-1);
+  background: #0B57D0;
   border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--aurora-2);
 }
 
 /* Markdown Content Styling */
 .markdown-content {
-  @apply text-xs sm:text-sm leading-relaxed text-slate-200;
+  @apply text-xs sm:text-sm leading-relaxed text-slate-800;
 }
 
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  @apply font-bold text-white mt-3 mb-1.5 border-b border-slate-700/80 pb-1 text-sm sm:text-base;
+  @apply font-bold text-slate-900 mt-3 mb-1.5 border-b border-slate-200 pb-1 text-sm sm:text-base;
 }
 
 .markdown-content p {
-  @apply my-1.5 text-slate-300;
+  @apply my-1.5 text-slate-700;
 }
 
 .markdown-content ul {
-  @apply list-disc list-inside my-1.5 space-y-1 text-slate-300;
+  @apply list-disc list-inside my-1.5 space-y-1 text-slate-700;
 }
 
 .markdown-content ol {
-  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-300;
+  @apply list-decimal list-inside my-1.5 space-y-1 text-slate-700;
 }
 
 .markdown-content li {
@@ -469,19 +458,19 @@
 }
 
 .markdown-content table {
-  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-700/80 shadow-md bg-slate-900/90;
+  @apply w-full my-3 border-collapse text-xs text-left rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white;
 }
 
 .markdown-content th {
-  @apply bg-slate-800 text-white font-semibold p-2.5 border-b border-slate-700;
+  @apply bg-slate-100 text-slate-900 font-semibold p-2.5 border-b border-slate-200;
 }
 
 .markdown-content td {
-  @apply p-2.5 border-b border-slate-800/80 bg-slate-900/60 text-slate-300;
+  @apply p-2.5 border-b border-slate-100 bg-white text-slate-700;
 }
 
 .markdown-content code {
-  @apply bg-slate-800 text-sky-300 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-700;
+  @apply bg-slate-100 text-blue-700 font-mono text-[11px] px-1.5 py-0.5 rounded border border-slate-200;
 }
 
 .markdown-content pre {
@@ -489,9 +478,9 @@
 }
 
 .markdown-content blockquote {
-  @apply border-l-4 border-sky-400 pl-3 my-2 text-slate-400 italic text-xs bg-slate-900/50 py-1 rounded-r;
+  @apply border-l-4 border-blue-500 pl-3 my-2 text-slate-600 italic text-xs bg-blue-50/50 py-1 rounded-r;
 }
 
 .markdown-content a {
-  @apply text-sky-400 hover:text-sky-300 underline font-medium;
+  @apply text-blue-600 hover:text-blue-800 underline font-medium;
 }
