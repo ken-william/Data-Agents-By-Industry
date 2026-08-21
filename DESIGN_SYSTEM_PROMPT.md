@@ -1,32 +1,56 @@
-# Master Specification & Prompt System - Talk to Data (Gemini Enterprise Exact Replica)
+# Master Specification & Prompt System - Talk to Data (Google Blue Luminous Gradient & Glass Navbar)
 
-Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour reproduire au pixel près l'interface exacte de **Gemini Enterprise** d'après la capture fournie (`media_1787308225668.png`).
+Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée selon le design system **Google Blue Luminous Gradient** avec navbar en verre dépoli translucide et puces des 11 agents sectoriels.
 
 ---
 
-# 🎨 1. Design System & Palette Chromatique
+# 🎨 1. Palette Chromatique & Fond Céleste (NO BLACK)
 
-| Élément UI | Classe Tailwind / Style | Spécification Visuelle |
+| Étape | Code Hexadécimal | Rôle dans l'UI |
 | :--- | :--- | :--- |
-| **Fond Global** | `bg-[#F8FAFC]` + radial halo | Fond blanc ultra-épuré avec dégradé radial bleu céleste très doux au centre (`radial-gradient(circle at 50% 50%, #e0f2fe 0%, #f8fafc 60%, #ffffff 100%)`). |
-| **Titre "Greeting"** | `text-3xl text-slate-800 font-normal` | `"Google Sans Flex", "Google Sans", sans-serif`, `32px`, `font-weight: 400`, couleur `#1F1F1F`. |
-| **Barre de Recherche** | `bg-white rounded-3xl p-5 border border-slate-200/80 shadow-md` | Boîte blanche arrondie `24px` avec l'icône de géolocalisation, placeholder *"Ask Gemini Enterprise"*, icônes d'outils au bas et sélecteur `Auto ▾`. |
-| **Bannière "NEW"** | `bg-blue-50/80 border border-blue-100 text-slate-700 rounded-2xl` | Bandeau bleu clair translucide réhaussé de l'étoile Sparkle Gemini et du texte *"NEW: Try Gemini 3.6 Flash"*. |
-| **Puces d'Extension (Chips)** | `bg-white border border-slate-200/80 rounded-full px-4 py-2 text-xs font-semibold` | Capsules blanches arrondies `rounded-full` avec icônes officielles des services Google (Google, NotebookLM, Google Drive, Buganizer, Gmail, YAQS). |
+| **Bleu Google Clair (Départ)** | `#79A7F7` | Haut du dégradé de fond. |
+| **Bleu Google (Milieu)** | `#4285F4` | Cœur du dégradé. |
+| **Bleu Foncé (Fin)** | `#1A56DB` | Bas du dégradé. |
+| **Navbar Verre Translucide** | `rgba(255, 255, 255, 0.35)` | Flou dépoli éthéré `backdrop-filter: blur(24px)`. |
+| **Puces d'Agents Sectoriels** | `#FFFFFF` / `rgba(255, 255, 255, 0.95)` | Capsules blanches dépolies avec les 11 noms d'agents sectoriels. |
+
+```css
+.google-blue-gradient-bg {
+  background: linear-gradient(135deg, #79A7F7 0%, #4285F4 50%, #1A56DB 100%) !important;
+  min-height: 100vh;
+}
+```
 
 ---
 
-# 📋 2. Prompt Système de Reconstitution Maître
+# 🔮 2. Navbar en Verre Translucide (`.glass-navbar`)
+
+```css
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+```
+
+---
+
+# 💊 3. Puces d'Agents Sectoriels (11 Copilotes Métiers)
+
+Puces de taille généreuse avec icônes métier et noms d'agents réels (*RH & Emploi Public*, *Risque Crédit & Finance*, *Télécoms & Réseau 5G*, *Spatial & Satellite*, *Transports & SNCF*, *Santé Publique*, *CPG & Grande Distribution*, *Sport, Stades & VIP*, *Énergie & Bornes IRVE*, *Agriculture & Bilan Carbone*, *Box-Office & Cinéma*).
+
+---
+
+# 📋 4. Prompt Système de Reconstitution Maître
 
 ```text
-Tu me codes l'application web double écran "Talk to Data" en reproduisant exactement le layout de Gemini Enterprise (media_1787308225668.png).
+Tu me codes l'application web double écran "Talk to Data" selon le style Google Blue Luminous Gradient.
 
 CONSIGNES STRICTES :
-1. CENTRAGE PARFAIT :
-   - Titres centrés "Let's get some work done!" (32px, font-weight: 400).
-   - Barre de recherche rectangulaire arrondie 24px avec icône de géolocalisation et boutons d'outils.
-2. BANNIÈRE NOUVEAUTÉ :
-   - Bandeau bleu clair "NEW: Try Gemini 3.6 Flash" avec Sparkle Gemini.
-3. CAPSULES D'EXTENSION GOOGLE :
-   - Puces arrondies rounded-full avec icônes officielles (Google, NotebookLM, Google Drive, Buganizer, Gmail, YAQS).
+1. FOND BLEU GOOGLE DEGRADÉ : linear-gradient(135deg, #79A7F7 0%, #4285F4 50%, #1A56DB 100%) sans aucun fond noir.
+2. NAVBAR VERRE TRANSLUCIDE : Header en verre dépoli transparent (bg-white/35, backdrop-blur-2xl).
+3. BARRE DE RECHERCHE CAPSULE : Barre de recherche épurée avec bouton d'envoi rond bleu.
+4. PUCES DES 11 AGENTS SECTORIELS : Puces blanches avec les noms des 11 copilotes métiers BigQuery.
 ```
