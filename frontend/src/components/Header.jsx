@@ -1,5 +1,6 @@
 import React from 'react';
 import { Volume2, VolumeX, Settings } from 'lucide-react';
+import { cn } from '../utils/cn';
 
 export function Header({
   selectedAgent,
@@ -10,16 +11,16 @@ export function Header({
   onOpenSettings
 }) {
   return (
-    <header className="w-full px-4 sticky top-3 z-50">
-      <div className="fluo-header flex items-center justify-between gap-4">
+    <header className="w-full bg-white/90 border-b border-white/80 sticky top-0 z-40 backdrop-blur-xl shadow-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-4">
         
         {/* Brand Logo & Clean Title */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-sky-400 via-indigo-500 to-fuchsia-500 flex items-center justify-center text-white font-extrabold text-xs shadow-[0_0_15px_rgba(56,189,248,0.4)]">
+          <div className="size-8 rounded-lg bg-gradient-to-r from-[#79A7F7] via-[#4285F4] to-[#1A56DB] flex items-center justify-center text-white font-extrabold text-xs shadow-md shrink-0">
             TD
           </div>
-          <h1 className="text-base font-bold text-white tracking-tight">
-            Talk to <em className="font-['Instrument_Serif'] italic font-normal text-sky-300 not-italic">Data</em>
+          <h1 className="text-base font-bold text-slate-900 tracking-tight text-balance">
+            Talk to <em className="font-['Instrument_Serif'] italic font-normal text-blue-700 not-italic">Data</em>
           </h1>
         </div>
 
@@ -29,29 +30,32 @@ export function Header({
           {/* Audio Speech Switch Icon */}
           <button
             type="button"
+            aria-label={autoSpeechEnabled ? "Désactiver la synthèse vocale" : "Activer la synthèse vocale"}
             onClick={() => setAutoSpeechEnabled(!autoSpeechEnabled)}
-            className={`p-2.5 rounded-full border transition-all ${
+            className={cn(
+              "size-9 rounded-full border flex items-center justify-center transition-all",
               autoSpeechEnabled
-                ? 'bg-slate-900 border-sky-400 text-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.3)]'
-                : 'bg-slate-950/80 border-slate-800 text-slate-500 hover:text-slate-300'
-            }`}
+                ? "bg-blue-50 border-blue-300 text-blue-700 shadow-xs"
+                : "bg-white border-slate-200 text-slate-400 hover:text-slate-700"
+            )}
             title={autoSpeechEnabled ? "Désactiver la voix de l'agent" : "Activer la voix de l'agent"}
           >
             {autoSpeechEnabled ? (
-              <Volume2 className={`w-4 h-4 ${isSpeaking ? 'text-sky-300 animate-bounce' : 'text-sky-400'}`} />
+              <Volume2 className={cn("size-4", isSpeaking && "text-emerald-600 animate-bounce")} />
             ) : (
-              <VolumeX className="w-4 h-4 text-slate-500" />
+              <VolumeX className="size-4 text-slate-400" />
             )}
           </button>
 
           {/* Settings Drawer Button */}
           <button
             type="button"
+            aria-label="Ouvrir le panneau de configuration"
             onClick={onOpenSettings}
-            className="p-2.5 rounded-full bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white border border-sky-500/30 transition-all shadow-md"
+            className="size-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 border border-slate-200 flex items-center justify-center transition-all shadow-xs"
             title="Paramètres de l'application & Mode Écran"
           >
-            <Settings className="w-4 h-4 text-slate-300" />
+            <Settings className="size-4 text-slate-700" />
           </button>
 
         </div>
