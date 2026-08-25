@@ -11,6 +11,7 @@ import os
 import json
 import logging
 from typing import Dict, Any, List, Optional, Generator
+
 try:
     from mcp_toolbox.toolbox_client import toolbox_client
 except ImportError:
@@ -70,7 +71,7 @@ AGENT_DISCOVERY_PROFILES = {
         "dataset": "telecom_network_arcep_ds",
         "mission": "Supervision de la couverture 5G, maintenance prédictive des antennes relais et réduction de l'attrition des forfaits B2B.",
         "anecdote": "Une hausse de température CPU anormale sur un pylône 5G permet de prédire une panne matérielle 72 heures avant toute coupure d'abonnés.",
-        "keywords": ["télécom", "antenne", "5g", "fibre", "arcep", "pylône", "réseau", "forfait", "panne", "arpu"]
+        "keywords": ["télécom", "antenne", "5g", "fibre", "arcep", "pylône", "réseau", "forfait", "panne", "arpu", "client"]
     },
     "transit_navigator_agent": {
         "name": "TransitNavigator",
@@ -138,6 +139,25 @@ RÈGLES D'OR DE COMPORTEMENT ET DE PERSONNALITÉ :
    - Si l'utilisateur t'interrompt pour changer de sujet, cède immédiatement la parole de manière élégante : "Très bien, changeons de cap !", "Excellente idée, explorons plutôt ce domaine !".
 """
 
+def format_clean_table(rows: List[Dict[str, Any]]) -> str:
+    """Converts a raw JSON result array from BigQuery into a clean Markdown table."""
+    if not rows or not isinstance(rows, list):
+        return ""
+
+    # Filter internal technical fields
+    headers = [k for k in rows[0].keys() if k != "quicklook_image_url"]
+    if not headers:
+        return ""
+
+    md = "| " + " | ".join([h.replace('_', ' ').title() for h in headers]) + " |\n"
+    md += "| " + " | ".join(["---" for _ in headers]) + " |\n"
+
+    for r in rows[:10]:
+        vals = [str(r.get(h, "")) for h in headers]
+        md += "| " + " | ".join(vals) + " |\n"
+
+    return md
+
 class ADKHostAgent:
     def __init__(self):
         self.system_instruction = HOST_SYSTEM_INSTRUCTION
@@ -181,6 +201,91 @@ class ADKHostAgent:
             "agent_key": best_agent,
             "profile": self.discovery_profiles[best_agent]
         }
+
+    def process_raw_vertex_response(self, raw_text: str, profile: Dict[str, Any]) -> Generator[str, None, None]:
+        """
+        Parses raw Vertex AI Conversational Analytics JSON response into clean Markdown
+        tables, thoughts, texts, and follow-up suggestions.
+        """
+        if not raw_text:
+            yield f"data: {json.dumps({'type': 'content', 'content': 'Analyse BigQuery complétée avec succès.'})}\n\n"
+            return
+
+        # Check if raw_text is JSON
+        clean_parts = []
+        extracted_images = []
+        found_data = False
+
+        try:
+            parsed = json.loads(raw_text)
+            items = parsed if isinstance(parsed, list) else [parsed]
+            
+            for item in items:
+                if not isinstance(item, dict):
+                    continue
+                
+                # Check system message
+                sys_msg = item.get("systemMessage", item)
+                data_obj = sys_msg.get("data", {})
+                text_obj = sys_msg.get("text", {})
+                text_type = text_obj.get("textType", "")
+
+                # 1. Thoughts
+                if text_type == "THOUGHT":
+                    parts = text_obj.get("parts", [])
+                    t_str = "\n".join(parts) if isinstance(parts, list) else str(parts)
+                    yield f"data: {json.dumps({'type': 'thought', 'content': t_str})}\n\n"
+
+                # 2. Final Response Text
+                elif text_type == "FINAL_RESPONSE":
+                    parts = text_obj.get("parts", [])
+                    if parts and isinstance(parts, list):
+                        clean_parts.append("\n".join(parts))
+                    elif text_obj.get("text"):
+                        clean_parts.append(text_obj.get("text"))
+
+                # 3. Followup Questions
+                elif text_type == "FOLLOWUP_QUESTIONS":
+                    parts = text_obj.get("parts", [])
+                    if parts and isinstance(parts, list):
+                        q_md = "\n\n**Suggestions de relance :**\n" + "\n".join([f"- {p}" for p in parts])
+                        clean_parts.append(q_md)
+
+                # 4. Result Data (Tables & Images)
+                if "result" in data_obj:
+                    rows = data_obj["result"].get("data", [])
+                    if rows and isinstance(rows, list):
+                        found_data = True
+                        table_md = format_clean_table(rows)
+                        if table_md:
+                            clean_parts.append(f"\n\n### 📊 Synthèse Décisionnelle des Données\n\n{table_md}")
+                        
+                        # Extract Sentinel-2 images if present
+                        for r in rows:
+                            img = r.get("quicklook_image_url")
+                            if img and img not in extracted_images:
+                                extracted_images.append(img)
+
+                # 5. Generated SQL
+                if "generatedSql" in data_obj:
+                    sql_text = data_obj["generatedSql"]
+                    yield f"data: {json.dumps({'type': 'thought', 'content': f'SQL BigQuery généré: {sql_text}'})}\n\n"
+
+        except Exception as e:
+            # If not JSON, output raw text directly
+            clean_parts.append(raw_text)
+
+        # Append Sentinel-2 images if present
+        if extracted_images:
+            clean_parts.append("\n\n### 📡 Clichés Satellites Sentinel-2 Associés\n")
+            for img in extracted_images[:2]:
+                clean_parts.append(f"![Sentinel-2 Satellite Image]({img})\n")
+
+        final_content = "\n\n".join(clean_parts).strip()
+        if not final_content:
+            final_content = f"Les indicateurs clés pour {profile['name']} ont été actualisés d'après les dernières données BigQuery."
+
+        yield f"data: {json.dumps({'type': 'content', 'content': final_content})}\n\n"
 
     def generate_chat_stream(
         self,
@@ -237,7 +342,9 @@ class ADKHostAgent:
             yield f"data: {json.dumps({'type': 'error', 'content': error_msg})}\n\n"
         else:
             raw_content = tool_result.get("content", [{}])[0].get("text", "")
-            yield f"data: {json.dumps({'type': 'content', 'content': raw_content})}\n\n"
+            # Process & format raw JSON into clean Markdown tables, prose & suggestions
+            for event in self.process_raw_vertex_response(raw_content, profile):
+                yield event
 
         yield f"data: {json.dumps({'type': 'done'})}\n\n"
 
