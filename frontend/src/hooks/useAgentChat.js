@@ -76,14 +76,14 @@ function cleanRawContent(text) {
   return text;
 }
 
-export function useAgentChat(selectedAgent, speakText) {
+export function useAgentChat(selectedAgent, speakText, onVoiceSwitchAgent) {
   const [messages, setMessages] = useState([]);
   const [isStreaming, setIsStreaming] = useState(false);
   const [thoughts, setThoughts] = useState([]);
   const [error, setError] = useState(null);
 
   const sendMessage = useCallback(async (userPrompt) => {
-    if (!userPrompt.trim() || !selectedAgent || isStreaming) return;
+    if (!userPrompt.trim() || isStreaming) return;
 
     setError(null);
     setThoughts([]);
@@ -103,12 +103,13 @@ export function useAgentChat(selectedAgent, speakText) {
     setMessages(prev => [...prev, assistantMsgPlaceholder]);
 
     try {
-      const response = await fetch('/api/chat', {
+      // Direct call to ADK Orchestrator endpoint
+      const response = await fetch('/api/orchestrator/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          agent_id: selectedAgent.id,
           prompt: userPrompt,
+          target_agent_id: selectedAgent?.id,
           history: messages.slice(-4).map(m => ({ role: m.role, content: m.content }))
         })
       });
@@ -152,6 +153,11 @@ export function useAgentChat(selectedAgent, speakText) {
                   }
                   return updated;
                 });
+              } else if (data.type === 'switch_agent') {
+                // Hands-free Voice Agent Switch Triggered by Master Host
+                if (onVoiceSwitchAgent) {
+                  onVoiceSwitchAgent(data.agent_id);
+                }
               } else if (data.type === 'content') {
                 accumulatedContent += data.content;
                 const cleanedContent = cleanRawContent(accumulatedContent);
@@ -195,14 +201,14 @@ export function useAgentChat(selectedAgent, speakText) {
       }
     } catch (err) {
       console.error('Chat error:', err);
-      setError(`Erreur lors de la communication avec l'agent: ${err.message}`);
+      setError(`Erreur lors de la communication avec l'orchestrateur: ${err.message}`);
       setMessages(prev => {
         const updated = [...prev];
         const lastIdx = updated.length - 1;
         if (lastIdx >= 0 && updated[lastIdx].role === 'assistant') {
           updated[lastIdx] = {
             ...updated[lastIdx],
-            content: updated[lastIdx].content || "L'agent est temporairement indisponible. Veuillez réessayer votre question.",
+            content: updated[lastIdx].content || "L'Agent Hôte est temporairement indisponible. Veuillez réessayer votre question.",
             isStreaming: false
           };
         }
@@ -211,7 +217,7 @@ export function useAgentChat(selectedAgent, speakText) {
     } finally {
       setIsStreaming(false);
     }
-  }, [selectedAgent, isStreaming, messages, speakText]);
+  }, [selectedAgent, isStreaming, messages, speakText, onVoiceSwitchAgent]);
 
   const clearMessages = useCallback(() => {
     setMessages([]);

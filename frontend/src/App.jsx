@@ -37,8 +37,16 @@ export function App() {
     setMicTranscript(text);
   }, []);
 
+  const handleVoiceSwitchAgent = useCallback((agentId) => {
+    const cleanId = agentId.replace(/_agent$/, '');
+    const target = agents.find(a => a.id === agentId || a.id === cleanId);
+    if (target) {
+      setSelectedAgent(target);
+    }
+  }, [agents]);
+
   const speechProps = useSpeech(handleTranscript);
-  const chatProps = useAgentChat(selectedAgent, speechProps.speakText);
+  const chatProps = useAgentChat(selectedAgent, speechProps.speakText, handleVoiceSwitchAgent);
 
   // Fetch 11 Agents from backend API
   const fetchAgents = async () => {
