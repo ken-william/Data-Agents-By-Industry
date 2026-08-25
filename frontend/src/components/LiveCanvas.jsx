@@ -264,7 +264,7 @@ export function LiveCanvas({
               isSpeaking={isSpeaking}
               isStreaming={isStreaming}
               onClickMic={voiceProps.isListening ? voiceProps.stopListening : voiceProps.startListening}
-              speechSupported={speechSupported}
+              speechSupported={voiceProps?.speechSupported}
               showcaseMode={isShowcase}
             />
 
