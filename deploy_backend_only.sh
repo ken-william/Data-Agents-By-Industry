@@ -22,14 +22,17 @@ gcloud config set project "$PROJECT_ID"
 # Enable Cloud Run & Cloud Build APIs
 gcloud services enable run.googleapis.com cloudbuild.googleapis.com
 
+SA_EMAIL="talktodata-runner@${PROJECT_ID}.iam.gserviceaccount.com"
+
 # Deploy headless backend using Dockerfile.backend
 echo "Construction de l'image backend et déploiement sur Cloud Run..."
 gcloud run deploy "$SERVICE_NAME" \
     --source . \
     --region "$REGION" \
+    --service-account "$SA_EMAIL" \
     --allow-unauthenticated \
     --port 8080 \
-    --set-env-vars "GOOGLE_CLOUD_PROJECT=$PROJECT_ID" \
+    --set-env-vars "GOOGLE_CLOUD_PROJECT=$PROJECT_ID,GOOGLE_GENAI_USE_VERTEXAI=1,GOOGLE_CLOUD_LOCATION=us-central1" \
     --memory 2Gi \
     --cpu 2 \
     --min-instances 0 \
