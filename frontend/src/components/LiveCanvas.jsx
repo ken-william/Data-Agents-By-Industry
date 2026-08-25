@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { GeminiOrb } from './GeminiOrb';
@@ -46,6 +46,13 @@ export function LiveCanvas({
   const lastUserMessage = [...messages].reverse().find(m => m.role === 'user');
   const lastAssistantMessage = [...messages].reverse().find(m => m.role === 'assistant');
 
+  // Trigger Host AI Storytelling Speech out loud during BigQuery 2-3s execution
+  useEffect(() => {
+    if (isStreaming && voiceProps?.speakText) {
+      voiceProps.speakText("Je consulte à l'instant vos tables BigQuery... Synthèse immédiate des métriques clés.");
+    }
+  }, [isStreaming, voiceProps]);
+
   const handleInputChange = (e) => {
     setInputPrompt(e.target.value);
   };
@@ -60,7 +67,7 @@ export function LiveCanvas({
   const isShowcase = screenMode === 'showcase';
 
   return (
-    <div className="w-full flex flex-col gap-6 animate-fade-in relative pb-8 px-4 max-w-4xl mx-auto">
+    <div className="w-full flex flex-col gap-6 animate-fade-in relative pb-8 px-4 max-w-4xl mx-auto font-['Google_Sans']">
       
       {/* Top Header Navbar */}
       <div className="fluo-header flex items-center justify-between gap-4">
@@ -68,7 +75,7 @@ export function LiveCanvas({
           <button
             type="button"
             onClick={onReturnToBuilder}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1.5 text-xs font-semibold"
+            className="px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1.5 text-xs font-semibold cursor-pointer"
           >
             <ChevronLeft className="size-4" />
             <span>Accueil</span>
@@ -102,23 +109,34 @@ export function LiveCanvas({
             onClick={onResetChat}
             aria-label="Recommencer"
             title="Effacer et recommencer"
-            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 border border-slate-200 text-xs"
+            className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 border border-slate-200 text-xs cursor-pointer"
           >
             <RotateCcw className="size-4" />
           </button>
         </div>
       </div>
 
-      {/* Top Centered Slime Liquid Gemini Orb */}
+      {/* Top Centered Slime Liquid Gemini Orb & Master Host Narrator Speech Bubble */}
       <div className="flex flex-col items-center justify-center text-center space-y-2 py-1">
         <GeminiOrb
           isListening={voiceProps.isListening}
           isSpeaking={isSpeaking}
           isStreaming={isStreaming}
           onClickMic={voiceProps.isListening ? voiceProps.stopListening : voiceProps.startListening}
-          speechSupported={voiceProps.speechSupported}
+          speechSupported={voiceProps?.speechSupported}
           showcaseMode={isShowcase}
         />
+
+        {/* Master AI Host Storytelling Narrator Bubble */}
+        <p className="text-xs sm:text-sm font-medium text-slate-600 max-w-lg leading-relaxed italic bg-white/80 px-4 py-2 rounded-full border border-slate-200/80 shadow-2xs">
+          {isSpeaking
+            ? '"J\'analyse votre demande et je synthétise le rapport d\'affaires..."'
+            : isStreaming
+            ? '"Connexion aux tables BigQuery... Synthèse immédiate des métriques clés."'
+            : lastUserMessage
+            ? `"${lastUserMessage.content}"`
+            : '"Bonjour ! Je suis votre Agent Hôte. Posez-moi une question ou sélectionnez un scénario ci-dessous."'}
+        </p>
       </div>
 
       {/* Main JetAI Awwwards Card (Reference Image 2 media_1787323076388.png) */}
@@ -156,7 +174,7 @@ export function LiveCanvas({
               </div>
               
               <h4 className="text-xl font-bold text-slate-900 font-['Google_Sans_Flex']">
-                {selectedAgent?.displayName || 'Agent Hôte Decisionnel'}
+                {selectedAgent?.displayName || 'Agent Hôte Décisionnel'}
               </h4>
               
               <p className="text-sm text-slate-600 max-w-md leading-relaxed">
@@ -188,7 +206,7 @@ export function LiveCanvas({
                   <button
                     type="button"
                     onClick={() => setShowThoughts(!showThoughts)}
-                    className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200/80 flex items-center justify-between text-slate-700 font-medium transition-colors text-xs"
+                    className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200/80 flex items-center justify-between text-slate-700 font-medium transition-colors text-xs cursor-pointer"
                   >
                     <div className="flex items-center gap-2">
                       <Brain className="size-4 text-[#0B57D0]" />
@@ -237,7 +255,7 @@ export function LiveCanvas({
               type="button"
               aria-label={voiceProps.isListening ? "Coupure Micro (Mute)" : "Activer Micro (Unmute)"}
               onClick={voiceProps.isListening ? voiceProps.stopListening : voiceProps.startListening}
-              className={`p-2 rounded-full transition-all ${
+              className={`p-2 rounded-full transition-all cursor-pointer ${
                 voiceProps.isListening
                   ? 'bg-rose-500 text-white animate-pulse'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200 border border-slate-200'
@@ -263,7 +281,7 @@ export function LiveCanvas({
             type="submit"
             disabled={!inputPrompt.trim() || isStreaming}
             aria-label="Envoyer"
-            className={`size-10 rounded-full flex items-center justify-center text-white shrink-0 transition-all transform hover:scale-105 active:scale-95 shadow-md ${
+            className={`size-10 rounded-full flex items-center justify-center text-white shrink-0 transition-all transform hover:scale-105 active:scale-95 shadow-md cursor-pointer ${
               !inputPrompt.trim() || isStreaming
                 ? 'bg-slate-200 text-slate-400 cursor-not-allowed border border-slate-300'
                 : 'bg-[#0B57D0] hover:bg-blue-800 text-white shadow-blue-900/20'

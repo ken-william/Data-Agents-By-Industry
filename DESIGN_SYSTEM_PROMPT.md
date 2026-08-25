@@ -1,29 +1,27 @@
-# Master Specification & Prompt System - Talk to Data (Apple x Emil Kowalski Specification)
+# Master Specification & Prompt System - Talk to Data (Master AI Host & Speech Sanitizer)
 
-Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour intégrer les principes de purification visuelle et de micro-interactions fluides inspirés du design **Apple** et d'**Emil Kowalski** (Framer Motion spring physics & Shared Layout Morphing).
+Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour orchestrer l'Agent Hôte Virtuel ("Maître de Jeu"), le filtre de nettoyage vocal (**Speech Sanitizer**), le storytelling actif durant l'exécution BigQuery, et le contrôle hybride voix/tactile (**Gemini Live Always-On**).
 
 ---
 
-# 🎨 1. Architecture Visuelle Purifiée (Page 2 Layout 70% / 30%)
+# 🎭 1. Fonctionnalités de l'Agent Hôte & Sanitizer
 
-| Zone / Composant | Composition Visuelle & Comportement |
+| Module | Rôle & Comportement Système |
 | :--- | :--- |
-| **70% Gauche / Centre (Data Visual Bento Card)** | Panneau central unique en verre dépoli (`rounded-[36px] bg-white/85 backdrop-blur-3xl`). Affiche uniquement la synthèse d'affaires nettoyée et les tableaux Markdown épurés. **Aucun log technique ou JSON brut**. |
-| **Bouton d'Inspection Discret `[⚡ Inspecter le SQL]`** | Bouton subtil situé en haut à droite. Déclenche une rotation 3D Apple (`SQLFlipCard`) pour faire pivoter la carte et révéler la requête SQL en néon phosphorescent sous le capot. |
-| **30% Droite (L'Agent Compagnon Hôte & Slime Orb)** | L'Orbe Slime 3D Gemini Live en lévitation gravitationnelle fluide (`framer-motion` spring physics) avec sa bulle de storytelling sous l'orbe. |
-| **Orbe Slime 3D Gemini Live** | Pure sphère de lumière liquide en fusion (**aucun icône de micro à l'intérieur**). Dégradés chromatiques en mouvement continu (Perlin noise mesh). |
-| **Puces de Suggestion Spacieuses** | Capsules aérées flottantes inspirées de Gemini Enterprise (`gap-4`, `padding: 12px 24px`). |
+| **Speech Sanitizer (Filtre Vocal)** | Intercepte toutes les réponses brutes de Conversational Analytics. **Élimine totalement les JSON, accolades, requêtes SQL, identifiants GCP et balises Markdown à la synthèse vocale (TTS)**. |
+| **Storytelling Actif (Attente BQ)** | Durant les 2 à 3 secondes d'exécution de requêtes BigQuery, l'Hôte meuble l'attente à voix haute : *"Je consulte à l'instant vos tables BigQuery... Synthèse immédiate des métriques clés."* |
+| **Contrôle Vocale Continu (Gemini Live)** | L'orbe écoute en continu (mode Always-On) dès l'arrivée sur l'écran. |
+| **Bouton Mute & Secours Tactile** | Un clic sur le bouton Mute permet de couper le micro en environnement bruyant et de piloter l'interface via les puces de suggestion ou le clavier. |
 
 ---
 
 # 📋 2. Prompt Système de Reconstitution Maître
 
 ```text
-Tu me codes l'application web double écran "Talk to Data" avec la refonte visuelle Apple x Emil Kowalski (Purification & Mouvement Fluide).
+Tu me codes l'application web double écran "Talk to Data" avec l'Agent Hôte Traducteur, le Speech Sanitizer vocal et l'écoute continue Gemini Live.
 
 CONSIGNES STRICTES :
-1. LAYOUT 70%/30% PAGE 2 : 70% Bento Card de données unique en verre dépoli, 30% Compagnon Hôte & Orbe Slime 3D.
-2. BOUTON DISCRET [⚡ Inspecter le SQL] : Pivote la carte en 3D (Rotation Apple 180deg) pour inspecter le SQL néon.
-3. ORBE SLIME SANS MICRO : Sphère liquide 3D avec lévitation gravitationnelle et physique de ressorts framer-motion.
-4. SPEECH SANITIZER : Intercepte les JSON bruts et génère une prose d'affaires naturelle en français.
+1. SPEECH SANITATION STRICTE : Aucun JSON, code SQL, ou timestamp ne doit être lu par la synthèse vocale TTS.
+2. STORYTELLING PENDANT L'ATTENTE : Pendant le chargement BigQuery (2-3s), l'Agent Hôte émet un message de storytelling à voix haute.
+3. ÉCOUTE CONTINU ALWAYS-ON : Activation automatique du micro en continu avec bouton Mute de secours.
 ```
