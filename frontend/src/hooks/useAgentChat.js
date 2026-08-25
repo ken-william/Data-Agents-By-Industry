@@ -76,6 +76,44 @@ function cleanRawContent(text) {
   return text;
 }
 
+/**
+ * Extracts a concise, high-level verbal commentary from the full analytical result.
+ * Eradicates whole data tables, raw numbers lists, and followup questions.
+ * Produces 2-3 sharp sentences of business insight suitable for live oral commentary.
+ */
+export function extractConciseVocalSummary(rawContent) {
+  if (!rawContent) return '';
+
+  // 1. Strip markdown tables completely
+  let text = rawContent.replace(/\|[^\n]+\|/g, '');
+  // 2. Strip headers, images, suggestions, code
+  text = text.replace(/#{1,6}\s*[^\n]+/g, '');
+  text = text.replace(/!\[[^\]]*\]\([^)]*\)/g, '');
+  text = text.replace(/\*\*Suggestions[^\n]*\*\*[\s\S]*/gi, '');
+  text = text.replace(/```[\s\S]*?```/g, '');
+
+  // 3. Clean and extract the first 1-2 key takeaway sentences
+  const sentences = text
+    .split(/(?<=[.!?])\s+/)
+    .map(s => s.trim())
+    .filter(s => s.length > 15 && !s.startsWith('-') && !s.startsWith('*'));
+
+  if (sentences.length === 0) {
+    return "Les indicateurs clés ont été calculés d'après nos tables BigQuery. Tous les détails chiffrés sont affichés à l'écran.";
+  }
+
+  let vocalSummary = sentences.slice(0, 2).join(' ');
+  if (vocalSummary.length > 260) {
+    vocalSummary = vocalSummary.slice(0, 250).replace(/\s+\S*$/, '') + '...';
+  }
+
+  if (!vocalSummary.toLowerCase().includes('tableau') && !vocalSummary.toLowerCase().includes('écran')) {
+    vocalSummary += " Tous les détails sont dans le tableau à l'écran.";
+  }
+
+  return vocalSummary;
+}
+
 export function useAgentChat(selectedAgent, speakText, onVoiceSwitchAgent) {
   const [messages, setMessages] = useState([]);
   const [isStreaming, setIsStreaming] = useState(false);
@@ -189,8 +227,10 @@ export function useAgentChat(selectedAgent, speakText, onVoiceSwitchAgent) {
                   return updated;
                 });
 
+                // Speak ONLY the concise executive summary commentary (never read raw tables!)
                 if (speakText && accumulatedContent) {
-                  speakText(cleanRawContent(accumulatedContent));
+                  const conciseVocalSummary = extractConciseVocalSummary(accumulatedContent);
+                  speakText(conciseVocalSummary);
                 }
               }
             } catch (e) {
