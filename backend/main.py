@@ -55,6 +55,27 @@ def get_agent_status(agent_id: str):
     status_info = agent_manager.get_agent_status(agent_id)
     return {"agentId": agent_id, **status_info}
 
+@app.get("/api/mcp/tools")
+def get_mcp_tools():
+    """Discover all 11 BigQuery Data Agent tools exposed via MCP Toolbox."""
+    from mcp_toolbox.toolbox_client import toolbox_client
+    return {
+        "source": "Google Cloud MCP Toolbox",
+        "tools": toolbox_client.get_tool_definitions(),
+        "count": len(toolbox_client.get_tool_definitions())
+    }
+
+class MCPCallRequest(BaseModel):
+    tool_name: str
+    arguments: Optional[Dict[str, Any]] = {}
+
+@app.post("/api/mcp/call")
+def call_mcp_tool(req: MCPCallRequest):
+    """Directly invoke an MCP BigQuery Tool via REST/JSON."""
+    from mcp_toolbox.toolbox_client import toolbox_client
+    result = toolbox_client.call_tool(req.tool_name, req.arguments)
+    return result
+
 @app.post("/api/chat")
 def chat_endpoint(req: ChatRequest):
     """
