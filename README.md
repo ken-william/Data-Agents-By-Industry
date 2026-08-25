@@ -195,4 +195,21 @@ pip install -r requirements.txt
 
 # 5. Déployer l'intégralité des datasets et des 11 agents en 1 commande
 python deploy_all_agents.py
+
+# 6. Démarrer l'application en local (FastAPI + ADK + React)
+./start_app.sh
+```
+
+---
+
+## 🚀 Déploiement sur Google Cloud Run
+
+### Option A : Déploiement Complet (Backend + Frontend Web React)
+```bash
+./deploy_cloud_run.sh
+```
+
+### Option B : Déploiement Modulaire Backend Découplé (Headless API / ADK / MCP)
+```bash
+./deploy_backend_only.sh
 ```
