@@ -206,7 +206,10 @@ class MCPToolboxServer:
                 }
             else:
                 # Fallback to simulated business data from agent manager
-                from ..agent_manager import agent_manager
+                try:
+                    from agent_manager import agent_manager
+                except ImportError:
+                    from backend.agent_manager import agent_manager
                 clean_id = tool_name.replace("_agent", "")
                 simulated_response = agent_manager._generate_fallback_response(clean_id, prompt)
                 return {
@@ -217,8 +220,10 @@ class MCPToolboxServer:
                 }
         except Exception as e:
             logger.error(f"Error querying agent {agent_id}: {str(e)}")
-            # Resilient fallback
-            from ..agent_manager import agent_manager
+            try:
+                from agent_manager import agent_manager
+            except ImportError:
+                from backend.agent_manager import agent_manager
             clean_id = tool_name.replace("_agent", "")
             simulated_response = agent_manager._generate_fallback_response(clean_id, prompt)
             return {
