@@ -24,3 +24,4 @@ frontend/node_modules/
 # GCS & BQ local temporary export caches
 raw_export/
 generated_data/
+backend/orchestrator/.adk/

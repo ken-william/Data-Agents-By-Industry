@@ -4,6 +4,12 @@ Directly compatible with `adk web` CLI and Google Agent Engine.
 """
 
 import os
+
+# Enable Vertex AI mode natively for Google ADK / google-genai
+os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "1"
+os.environ.setdefault("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
+os.environ.setdefault("GOOGLE_CLOUD_LOCATION", "us-central1")
+
 from google.adk import Agent
 from .host_agent import HOST_SYSTEM_INSTRUCTION
 try:
