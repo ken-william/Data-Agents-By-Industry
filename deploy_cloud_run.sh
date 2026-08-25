@@ -8,7 +8,7 @@
 set -e
 
 PROJECT_ID=${GOOGLE_CLOUD_PROJECT:-"data-agents-by-industry"}
-REGION=${REGION:-"europe-west9"}
+REGION=${REGION:-"us-central1"}
 SERVICE_NAME="talktodata"
 
 echo "================================================================================"
