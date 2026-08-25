@@ -76,6 +76,27 @@ def call_mcp_tool(req: MCPCallRequest):
     result = toolbox_client.call_tool(req.tool_name, req.arguments)
     return result
 
+class OrchestratorChatRequest(BaseModel):
+    prompt: str
+    target_agent_id: Optional[str] = None
+    history: Optional[List[ChatMessage]] = []
+
+@app.post("/api/orchestrator/chat")
+def orchestrator_chat_endpoint(req: OrchestratorChatRequest):
+    """
+    Universal Chat endpoint with the ADK Master Host Orchestrator.
+    Automatically routes intents across all 11 BigQuery MCP Data Agents.
+    """
+    from orchestrator.host_agent import host_orchestrator
+    history_dict = [{"role": msg.role, "content": msg.content} for msg in req.history] if req.history else []
+    
+    stream_gen = host_orchestrator.generate_chat_stream(
+        prompt=req.prompt,
+        target_agent_id=req.target_agent_id,
+        conversation_history=history_dict
+    )
+    return StreamingResponse(stream_gen, media_type="text/event-stream")
+
 @app.post("/api/chat")
 def chat_endpoint(req: ChatRequest):
     """
