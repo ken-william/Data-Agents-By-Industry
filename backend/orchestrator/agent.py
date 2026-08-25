@@ -5,10 +5,13 @@ Directly compatible with `adk web` CLI and Google Agent Engine.
 
 import os
 
-# Enable Vertex AI mode natively for Google ADK / google-genai
-os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "1"
-os.environ.setdefault("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
-os.environ.setdefault("GOOGLE_CLOUD_LOCATION", "us-central1")
+# Use Google AI Studio if GEMINI_API_KEY is provided, else use Vertex AI
+if os.environ.get("GEMINI_API_KEY"):
+    os.environ.pop("GOOGLE_GENAI_USE_VERTEXAI", None)
+else:
+    os.environ["GOOGLE_GENAI_USE_VERTEXAI"] = "1"
+    os.environ.setdefault("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
+    os.environ.setdefault("GOOGLE_CLOUD_LOCATION", "us-central1")
 
 from google.adk import Agent
 from .host_agent import HOST_SYSTEM_INSTRUCTION
@@ -37,7 +40,7 @@ def query_bigquery_data_agent(agent_name: str, prompt: str) -> str:
 agent = Agent(
     name="talktodata_host_orchestrator",
     description="Agent Hôte et Maître de Cérémonie Talk to Data connecté à la flotte de 11 Data Agents BigQuery via MCP Toolbox.",
-    model="gemini-2.0-flash",
+    model="gemini-3-flash-preview",
     instruction=HOST_SYSTEM_INSTRUCTION,
     tools=[query_bigquery_data_agent]
 )
