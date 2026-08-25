@@ -1,24 +1,29 @@
-# Master Specification & Prompt System - Talk to Data (Page 1 Classic & Page 2 Awwwards JetAI Hybrid)
+# Master Specification & Prompt System - Talk to Data (Apple x Emil Kowalski Specification)
 
-Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour rétablir la Page 1 classique ("Talk to Data live using conversational AI agents") et intégrer le design JetAI / Awwwards ("How can I help explore your data?") sur la Page 2 avec l'Orbe Slime Liquide 3D.
+Ce document constitue la **Spécification Maître Complète** de la plateforme **"Talk to Data"** (BigData Paris 2026), rédigée pour intégrer les principes de purification visuelle et de micro-interactions fluides inspirés du design **Apple** et d'**Emil Kowalski** (Framer Motion spring physics & Shared Layout Morphing).
 
 ---
 
-# 🎨 1. Répartition des Écrans (Page 1 vs Page 2)
+# 🎨 1. Architecture Visuelle Purifiée (Page 2 Layout 70% / 30%)
 
-| Écran | Titre & Composition Visuelle | Style & Composants |
-| :--- | :--- | :--- |
-| **Page 1 (Portail d'Accueil)** | **"Talk to Data live using *conversational AI agents*"** | Logo Gemini Sparkle Aurora, barre de recherche centrale avec lueur supérieure cyan (`search-bar-glow`) et grille des 11 puces sectorielles. |
-| **Page 2 (Live Experience)** | **"How can I help *explore your data?*"** | Carte Awwwards / JetAI en verre dépoli (`rounded-[36px] bg-white/85 backdrop-blur-3xl`), Orbe Slime 3D au sommet, barre de saisie JetAI et Canvas Actif à État Unique. |
+| Zone / Composant | Composition Visuelle & Comportement |
+| :--- | :--- |
+| **70% Gauche / Centre (Data Visual Bento Card)** | Panneau central unique en verre dépoli (`rounded-[36px] bg-white/85 backdrop-blur-3xl`). Affiche uniquement la synthèse d'affaires nettoyée et les tableaux Markdown épurés. **Aucun log technique ou JSON brut**. |
+| **Bouton d'Inspection Discret `[⚡ Inspecter le SQL]`** | Bouton subtil situé en haut à droite. Déclenche une rotation 3D Apple (`SQLFlipCard`) pour faire pivoter la carte et révéler la requête SQL en néon phosphorescent sous le capot. |
+| **30% Droite (L'Agent Compagnon Hôte & Slime Orb)** | L'Orbe Slime 3D Gemini Live en lévitation gravitationnelle fluide (`framer-motion` spring physics) avec sa bulle de storytelling sous l'orbe. |
+| **Orbe Slime 3D Gemini Live** | Pure sphère de lumière liquide en fusion (**aucun icône de micro à l'intérieur**). Dégradés chromatiques en mouvement continu (Perlin noise mesh). |
+| **Puces de Suggestion Spacieuses** | Capsules aérées flottantes inspirées de Gemini Enterprise (`gap-4`, `padding: 12px 24px`). |
 
 ---
 
 # 📋 2. Prompt Système de Reconstitution Maître
 
 ```text
-Tu me codes l'application web double écran "Talk to Data" avec la Page 1 classique et la Page 2 au style JetAI Awwwards.
+Tu me codes l'application web double écran "Talk to Data" avec la refonte visuelle Apple x Emil Kowalski (Purification & Mouvement Fluide).
 
 CONSIGNES STRICTES :
-1. PAGE 1 (ACCUEIL) : Titre "Talk to Data live using conversational AI agents", logo Sparkle Aurora, lueur cyan search-bar-glow, puces sectorielles.
-2. PAGE 2 (LIVE CANVAS) : Titre JetAI "How can I help explore your data?", Carte Awwwards rounded-[36px], Orbe Slime Liquide 3D, Canvas Unique et Dock d'Extensions.
+1. LAYOUT 70%/30% PAGE 2 : 70% Bento Card de données unique en verre dépoli, 30% Compagnon Hôte & Orbe Slime 3D.
+2. BOUTON DISCRET [⚡ Inspecter le SQL] : Pivote la carte en 3D (Rotation Apple 180deg) pour inspecter le SQL néon.
+3. ORBE SLIME SANS MICRO : Sphère liquide 3D avec lévitation gravitationnelle et physique de ressorts framer-motion.
+4. SPEECH SANITIZER : Intercepte les JSON bruts et génère une prose d'affaires naturelle en français.
 ```
