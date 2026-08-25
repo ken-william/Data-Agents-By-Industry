@@ -27,11 +27,11 @@ fi
 if [ -d "frontend" ]; then
     if [ ! -d "frontend/node_modules" ]; then
         echo "Installing frontend dependencies (npm install)..."
-        (cd frontend && npm install)
+        cd frontend && npm install && cd "$BASE_DIR"
     fi
     if [ ! -d "frontend/dist" ]; then
         echo "Building frontend static assets..."
-        (cd frontend && npm run build)
+        cd frontend && npm run build && cd "$BASE_DIR"
     fi
 fi
 
