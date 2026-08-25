@@ -97,15 +97,6 @@ def orchestrator_chat_endpoint(req: OrchestratorChatRequest):
     )
     return StreamingResponse(stream_gen, media_type="text/event-stream")
 
-@app.get("/adk")
-@app.get("/adk/")
-def get_adk_playground():
-    """Direct standalone web console for testing the Google ADK Master Host Orchestrator."""
-    html_path = os.path.join(os.path.dirname(__file__), "orchestrator", "adk_playground.html")
-    if os.path.exists(html_path):
-        return FileResponse(html_path, media_type="text/html")
-    raise HTTPException(status_code=404, detail="ADK playground HTML not found.")
-
 @app.websocket("/ws/live")
 async def websocket_live_endpoint(websocket: WebSocket):
     """
