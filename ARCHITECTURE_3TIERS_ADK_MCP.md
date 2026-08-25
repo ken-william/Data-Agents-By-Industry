@@ -126,35 +126,25 @@ talktodata/
 ```yaml
 # backend/mcp_toolbox/tools.yaml
 sources:
-  bigquery_source:
+  my-bigquery-source:
     kind: bigquery
     project: data-agents-by-industry
+    location: global
 
 tools:
-  query_arena_stadiums:
-    kind: bigquery-sql
-    source: bigquery_source
-    description: "Interroge les taux d'occupation et revenus VIP des stades pour l'agent ArenaManager."
-    statement: |
-      SELECT stadium_name, occupancy_rate, vip_lounge_revenue
-      FROM `data-agents-by-industry.arena_manager_ds.stadium_kpis`
-      WHERE occupancy_rate >= @min_occupancy
-      ORDER BY occupancy_rate DESC
-      LIMIT 10
-    parameters:
-      - name: min_occupancy
-        type: float64
-        description: "Taux d'occupation minimal (ex: 0.70)"
+  arena_manager_agent:
+    kind: bigquery-conversational-analytics
+    source: my-bigquery-source
+    agent_id: "arena-manager-agent"
+    dataset: "arena_manager_ds"
+    description: "Gestionnaire de Stades : analyse les taux d'occupation, revenus VIP et flux de spectateurs."
 
-  query_cine_boxoffice:
-    kind: bigquery-sql
-    source: bigquery_source
-    description: "Analyse les performances box-office et retours sur investissement cinéma pour CineAnalyst."
-    statement: |
-      SELECT title, box_office_revenue, roi_percentage
-      FROM `data-agents-by-industry.cine_analyst_ds.box_office_rankings`
-      ORDER BY box_office_revenue DESC
-      LIMIT 10
+  cine_analyst_agent:
+    kind: bigquery-conversational-analytics
+    source: my-bigquery-source
+    agent_id: "cine-analyst-agent"
+    dataset: "cine_analyst_ds"
+    description: "Analyste Box-Office : analyse la rentabilité, entrées en salles et ROI des films."
 ```
 
 ---
