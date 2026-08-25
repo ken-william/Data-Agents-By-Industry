@@ -18,21 +18,9 @@ cd "$BASE_DIR"
 fuser -k 8000/tcp 2>/dev/null || pkill -f uvicorn 2>/dev/null || true
 sleep 1
 
-# Ensure python virtualenv is active
+# Ensure python virtualenv is active if present
 if [ -d ".venv" ]; then
     source .venv/bin/activate
-fi
-
-# Ensure frontend dependencies & static build assets exist
-if [ -d "frontend" ]; then
-    if [ ! -d "frontend/node_modules" ]; then
-        echo "Installing frontend dependencies (npm install)..."
-        cd frontend && npm install && cd "$BASE_DIR"
-    fi
-    if [ ! -d "frontend/dist" ]; then
-        echo "Building frontend static assets..."
-        cd frontend && npm run build && cd "$BASE_DIR"
-    fi
 fi
 
 echo "Starting Uvicorn Server on http://0.0.0.0:8000..."
