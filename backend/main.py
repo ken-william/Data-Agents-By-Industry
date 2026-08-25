@@ -85,9 +85,22 @@ if os.path.exists(DIST_DIR):
     async def serve_frontend(full_path: str):
         if full_path.startswith("api"):
             raise HTTPException(status_code=404, detail="API route not found")
+        
         file_path = os.path.join(DIST_DIR, full_path)
         if os.path.exists(file_path) and os.path.isfile(file_path):
-            return FileResponse(file_path)
+            media_type = None
+            if file_path.endswith(".js"):
+                media_type = "application/javascript"
+            elif file_path.endswith(".css"):
+                media_type = "text/css"
+            elif file_path.endswith(".svg"):
+                media_type = "image/svg+xml"
+            return FileResponse(file_path, media_type=media_type)
+        
+        # If static asset is missing, return 404 error instead of index.html to prevent JS MIME type mismatch
+        if full_path.startswith("assets") or full_path.endswith((".js", ".css", ".png", ".jpg", ".svg", ".ico")):
+            raise HTTPException(status_code=404, detail="Static asset not found")
+            
         return FileResponse(os.path.join(DIST_DIR, "index.html"))
 
 if __name__ == "__main__":
