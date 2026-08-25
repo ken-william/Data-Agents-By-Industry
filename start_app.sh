@@ -23,10 +23,16 @@ if [ -d ".venv" ]; then
     source .venv/bin/activate
 fi
 
-# Always build fresh frontend static assets to prevent stale asset 404 errors on CloudShell
+# Ensure frontend dependencies & static build assets exist
 if [ -d "frontend" ]; then
-    echo "Building fresh frontend static assets..."
-    (cd frontend && npx vite build)
+    if [ ! -d "frontend/node_modules" ]; then
+        echo "Installing frontend dependencies (npm install)..."
+        (cd frontend && npm install)
+    fi
+    if [ ! -d "frontend/dist" ]; then
+        echo "Building frontend static assets..."
+        (cd frontend && npm run build)
+    fi
 fi
 
 echo "Starting Uvicorn Server on http://0.0.0.0:8000..."
