@@ -1,17 +1,18 @@
 import { useState, useCallback } from 'react';
 
 /**
- * Cleans raw JSON systemMessage strings into human-readable Markdown text.
+ * Cleans raw JSON systemMessage strings into human-readable Markdown text, images & tables.
+ * Strips raw JSON hashes, project IDs, and technical noise while preserving complete real data.
  */
 function cleanRawContent(text) {
   if (!text) return '';
 
-  // If text is a raw JSON string containing systemMessage
+  // If text contains raw JSON systemMessage strings
   if (text.includes('"systemMessage"') || text.includes('{"timestamp":')) {
     try {
-      // Try extracting Markdown tables or text parts
       const cleanParts = [];
       const lines = text.split('\n');
+      let extractedImages = [];
       
       for (const line of lines) {
         if (!line.trim()) continue;
@@ -28,8 +29,11 @@ function cleanRawContent(text) {
               let md = "\n\n### 📊 Résultats BigQuery Synthétisés\n\n";
               md += "| " + headers.map(h => h.replace(/_/g, ' ').toUpperCase()).join(' | ') + " |\n";
               md += "| " + headers.map(() => '---').join(' | ') + " |\n";
-              for (const r of rows.slice(0, 8)) {
+              for (const r of rows.slice(0, 10)) {
                 md += "| " + headers.map(h => r[h] ?? '').join(' | ') + " |\n";
+                if (r.quicklook_image_url && !extractedImages.includes(r.quicklook_image_url)) {
+                  extractedImages.push(r.quicklook_image_url);
+                }
               }
               cleanParts.push(md);
             }
@@ -41,18 +45,26 @@ function cleanRawContent(text) {
             }
           }
         } catch (e) {
-          // If line isn't valid JSON, keep line if it doesn't look like raw json
+          // Keep normal non-JSON lines
           if (!line.includes('{"timestamp":') && !line.includes('"systemMessage"')) {
             cleanParts.push(line);
           }
         }
       }
 
+      // Append extracted images if available
+      if (extractedImages.length > 0) {
+        cleanParts.push("\n\n### 📡 Clichés Satellite Sentinel-2\n");
+        extractedImages.slice(0, 2).forEach(imgUrl => {
+          cleanParts.push(`![Sentinel-2 Satellite Image](${imgUrl})\n`);
+        });
+      }
+
       if (cleanParts.length > 0) {
         return cleanParts.join('\n');
       }
     } catch (e) {
-      // fallback strip raw braces
+      // fallback
     }
 
     // Fallback: strip raw JSON timestamps & keys

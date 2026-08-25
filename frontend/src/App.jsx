@@ -139,7 +139,9 @@ export function App() {
         ) : (
           /* Page 2: Live Experience (Data Canvas Showcase & Chroma Orb) */
           <LiveCanvas
+            agents={agents}
             selectedAgent={selectedAgent}
+            onSelectAgent={handleSelectAgent}
             onReturnToBuilder={handleReturnToBuilder}
             messages={chatProps.messages}
             isStreaming={chatProps.isStreaming}

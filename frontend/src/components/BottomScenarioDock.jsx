@@ -7,8 +7,9 @@ import { cn } from '../utils/cn';
 /**
  * Minimalist Gemini Extension Scenario Dock (Bottom of Page 2)
  * Aligns the 11 sector scenarios as compact horizontal pills inside a smooth slider.
+ * Clicking a scenario chip switches to that agent's space & suggested questions without auto-querying!
  */
-export function BottomScenarioDock({ agents, selectedAgent, onSelectAgent, onSendMessage }) {
+export function BottomScenarioDock({ agents, selectedAgent, onSelectAgent, onResetChat }) {
   const containerRef = useRef(null);
 
   const scroll = (direction) => {
@@ -41,24 +42,24 @@ export function BottomScenarioDock({ agents, selectedAgent, onSelectAgent, onSen
           {SCENARIOS.map((sc) => {
             const isSelected = selectedAgent?.id === sc.id;
             const IconComp = getIconComponent(sc.id);
-            const targetAgent = agents.find(a => a.id === sc.id) || selectedAgent;
+            const targetAgent = agents.find(a => a.id === sc.id) || { id: sc.id, displayName: sc.name, datasetId: sc.id };
 
             return (
               <button
                 key={sc.id}
                 type="button"
                 onClick={() => {
-                  if (targetAgent) {
+                  if (onSelectAgent) {
                     onSelectAgent(targetAgent);
                   }
-                  if (onSendMessage) {
-                    onSendMessage(sc.prompt);
+                  if (onResetChat) {
+                    onResetChat();
                   }
                 }}
                 className={cn(
-                  "inline-flex items-center gap-2 px-3.5 py-2 rounded-full border text-xs font-medium transition-all shadow-2xs whitespace-nowrap shrink-0 cursor-pointer select-none",
+                  "inline-flex items-center gap-2 px-3.5 py-2 rounded-full border text-xs font-semibold transition-all shadow-2xs whitespace-nowrap shrink-0 cursor-pointer select-none",
                   isSelected
-                    ? "bg-[#0B57D0] text-white border-[#0B57D0] shadow-xs"
+                    ? "bg-[#0B57D0] text-white border-[#0B57D0] shadow-xs scale-[1.02]"
                     : "bg-white/90 hover:bg-blue-50 text-slate-800 border-slate-200/90 hover:border-blue-300"
                 )}
               >

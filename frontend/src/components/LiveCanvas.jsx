@@ -20,12 +20,15 @@ import {
   ChevronLeft,
   Mic,
   MicOff,
-  Search
+  Search,
+  Code2
 } from 'lucide-react';
 import { getIconComponent } from '../utils/themeMap';
 
 export function LiveCanvas({
+  agents = [],
   selectedAgent,
+  onSelectAgent,
   onReturnToBuilder,
   messages,
   isStreaming,
@@ -38,6 +41,7 @@ export function LiveCanvas({
 }) {
   const [inputPrompt, setInputPrompt] = useState('');
   const [showThoughts, setShowThoughts] = useState(false);
+  const [showSQLInspector, setShowSQLInspector] = useState(false);
 
   const AgentIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Bot;
   const isSpeaking = voiceProps?.isSpeaking;
@@ -99,10 +103,19 @@ export function LiveCanvas({
         </div>
 
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#0B57D0] text-xs font-semibold">
-            <span className="size-2 rounded-full bg-[#0B57D0] animate-pulse" />
-            <span>{isShowcase ? 'ÉCRAN A : AWWWARDS CANVAS' : 'ÉCRAN B : CONTRÔLEUR TACTILE'}</span>
-          </div>
+          {/* Subtle Discrete SQL Inspector Button */}
+          <button
+            type="button"
+            onClick={() => setShowSQLInspector(!showSQLInspector)}
+            className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer ${
+              showSQLInspector
+                ? 'bg-slate-900 text-cyan-300 shadow-md'
+                : 'bg-blue-50 hover:bg-blue-100 text-[#0B57D0] border border-blue-200'
+            }`}
+          >
+            <Code2 className="size-3.5" />
+            <span>{showSQLInspector ? 'Vue Métier' : '⚡ Inspecter le SQL'}</span>
+          </button>
 
           <button
             type="button"
@@ -135,7 +148,7 @@ export function LiveCanvas({
             ? '"Connexion aux tables BigQuery... Synthèse immédiate des métriques clés."'
             : lastUserMessage
             ? `"${lastUserMessage.content}"`
-            : '"Bonjour ! Je suis votre Agent Hôte. Posez-moi une question ou sélectionnez un scénario ci-dessous."'}
+            : `"Bonjour ! Je suis votre Agent Hôte pour ${selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : 'BigQuery'}. Posez-moi une question ou sélectionnez un scénario ci-dessous."`}
         </p>
       </div>
 
@@ -148,7 +161,7 @@ export function LiveCanvas({
             How can I help
           </h2>
           <h3 className="text-2xl sm:text-4xl font-medium text-slate-400 tracking-tight leading-tight font-['Google_Sans']">
-            explore your data?
+            explore {selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : 'your data'}?
           </h3>
         </div>
 
@@ -163,90 +176,92 @@ export function LiveCanvas({
           </div>
         )}
 
-        {/* Single Active Business Result Presentation Box */}
-        <div className="min-h-[280px] max-h-[440px] overflow-y-auto space-y-4">
-          
-          {/* Case A: Initial State (Host Agent Greetings) */}
-          {!lastUserMessage && !isStreaming && (
-            <div className="h-full flex flex-col items-center justify-center text-center p-8 text-slate-700 my-auto animate-fade-in space-y-3">
-              <div className="p-3 rounded-2xl bg-blue-50 border border-blue-200 text-[#0B57D0] shadow-sm">
-                <AgentIcon className="size-10" />
-              </div>
-              
-              <h4 className="text-xl font-bold text-slate-900 font-['Google_Sans_Flex']">
-                {selectedAgent?.displayName || 'Agent Hôte Décisionnel'}
-              </h4>
-              
-              <p className="text-sm text-slate-600 max-w-md leading-relaxed">
-                "Nous sommes connectés au jeu de données BigQuery pour <strong>{selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}</strong>. Posez votre question ou cliquez sur une suggestion ci-dessous."
-              </p>
-
-              <div className="pt-2 flex items-center gap-2 text-xs font-semibold text-[#0B57D0]">
-                <Sparkles className="size-4" />
-                <span>Exploration conversationnelle active</span>
-              </div>
-            </div>
-          )}
-
-          {/* Case B: BigQuery Execution Visualizer (During Loading) */}
-          {isStreaming && (
-            <BigQuerySchemaVisualizer
-              datasetId={selectedAgent?.datasetId}
-              agentName={selectedAgent?.displayName}
-            />
-          )}
-
-          {/* Case C: Active Result Presentation (Single Active State) */}
-          {lastAssistantMessage && !isStreaming && (
-            <div className="space-y-4 animate-fade-in">
-              
-              {/* Reasoning Accordion */}
-              {lastAssistantMessage.thoughts && lastAssistantMessage.thoughts.length > 0 && (
-                <div className="w-full rounded-2xl bg-slate-50 border border-slate-200 text-xs overflow-hidden">
-                  <button
-                    type="button"
-                    onClick={() => setShowThoughts(!showThoughts)}
-                    className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200/80 flex items-center justify-between text-slate-700 font-medium transition-colors text-xs cursor-pointer"
-                  >
-                    <div className="flex items-center gap-2">
-                      <Brain className="size-4 text-[#0B57D0]" />
-                      <span>Raisonnement de l'agent ({lastAssistantMessage.thoughts.length} étapes)</span>
-                    </div>
-                    {showThoughts ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
-                  </button>
-
-                  {showThoughts && (
-                    <div className="p-3.5 font-mono text-[11px] text-slate-800 bg-white border-t border-slate-200 space-y-2">
-                      {lastAssistantMessage.thoughts.map((t, tIdx) => (
-                        <div key={tIdx} className="p-3 rounded-xl bg-white text-slate-800 border border-slate-200/90 shadow-2xs overflow-x-auto font-mono font-medium">
-                          {t}
-                        </div>
-                      ))}
-                    </div>
-                  )}
+        {/* Discrete SQL Inspector View Mode */}
+        {showSQLInspector ? (
+          <SQLFlipCard
+            datasetId={selectedAgent?.datasetId}
+            sqlQuery={`SELECT * FROM \`data-agents-by-industry.${selectedAgent?.datasetId || 'public_sector_employment_ds'}.business_kpi_summary\` WHERE 1=1 LIMIT 10;`}
+            executionTime="1.24s"
+          />
+        ) : (
+          /* Single Active Business Result Presentation Box (Clean Data Only) */
+          <div className="min-h-[280px] max-h-[440px] overflow-y-auto space-y-4">
+            
+            {/* Case A: Initial State (Host Agent Greetings & Example Queries) */}
+            {!lastUserMessage && !isStreaming && (
+              <div className="h-full flex flex-col items-center justify-center text-center p-8 text-slate-700 my-auto animate-fade-in space-y-3">
+                <div className="p-3 rounded-2xl bg-blue-50 border border-blue-200 text-[#0B57D0] shadow-sm">
+                  <AgentIcon className="size-10" />
                 </div>
-              )}
+                
+                <h4 className="text-xl font-bold text-slate-900 font-['Google_Sans_Flex']">
+                  {selectedAgent?.displayName || 'Agent Hôte Décisionnel'}
+                </h4>
+                
+                <p className="text-sm text-slate-600 max-w-md leading-relaxed font-medium">
+                  "Nous sommes connectés au jeu de données BigQuery pour <strong>{selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}</strong>. Sélectionnez une question suggérée ci-dessous."
+                </p>
 
-              {/* 3D SQL Inspector Flip Card */}
-              <SQLFlipCard
-                datasetId={selectedAgent?.datasetId}
-                sqlQuery={`SELECT * FROM \`${selectedAgent?.datasetId || 'public_sector_employment_ds'}\` WHERE 1=1 LIMIT 10;`}
-                executionTime="1.24s"
-              />
-
-              {/* Active Result Report Presentation */}
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-xs markdown-content">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                  {lastAssistantMessage.content}
-                </ReactMarkdown>
+                <div className="pt-2 flex items-center gap-2 text-xs font-semibold text-[#0B57D0]">
+                  <Sparkles className="size-4" />
+                  <span>Exploration conversationnelle active</span>
+                </div>
               </div>
+            )}
 
-            </div>
-          )}
+            {/* Case B: BigQuery Execution Visualizer (During Loading) */}
+            {isStreaming && (
+              <BigQuerySchemaVisualizer
+                datasetId={selectedAgent?.datasetId}
+                agentName={selectedAgent?.displayName}
+              />
+            )}
 
-        </div>
+            {/* Case C: Active Result Presentation (Clean Markdown Table, Images & Prose Only) */}
+            {lastAssistantMessage && !isStreaming && (
+              <div className="space-y-4 animate-fade-in">
+                
+                {/* Reasoning Accordion */}
+                {lastAssistantMessage.thoughts && lastAssistantMessage.thoughts.length > 0 && (
+                  <div className="w-full rounded-2xl bg-slate-50 border border-slate-200 text-xs overflow-hidden">
+                    <button
+                      type="button"
+                      onClick={() => setShowThoughts(!showThoughts)}
+                      className="w-full px-3.5 py-2.5 bg-slate-100 hover:bg-slate-200/80 flex items-center justify-between text-slate-700 font-medium transition-colors text-xs cursor-pointer"
+                    >
+                      <div className="flex items-center gap-2">
+                        <Brain className="size-4 text-[#0B57D0]" />
+                        <span>Raisonnement de l'agent ({lastAssistantMessage.thoughts.length} étapes)</span>
+                      </div>
+                      {showThoughts ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
+                    </button>
 
-        {/* JetAI Floating Input Bar Console Matching Image 2 (media_1787323076388.png) */}
+                    {showThoughts && (
+                      <div className="p-3.5 font-mono text-[11px] text-slate-800 bg-white border-t border-slate-200 space-y-2">
+                        {lastAssistantMessage.thoughts.map((t, tIdx) => (
+                          <div key={tIdx} className="p-3 rounded-xl bg-white text-slate-800 border border-slate-200/90 shadow-2xs overflow-x-auto font-mono font-medium">
+                            {t}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Clean Result Presentation (Text, Markdown Tables & Images) */}
+                <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-xs markdown-content">
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {lastAssistantMessage.content}
+                  </ReactMarkdown>
+                </div>
+
+              </div>
+            )}
+
+          </div>
+        )}
+
+        {/* JetAI Floating Input Bar Console */}
         <form onSubmit={handleFormSubmit} className="w-full flex items-center justify-between gap-3 pt-3 border-t border-slate-100">
           <div className="flex items-center gap-3 flex-1">
             
@@ -276,7 +291,7 @@ export function LiveCanvas({
             />
           </div>
 
-          {/* Solid Google Blue Arrow Button (Image 2 style) */}
+          {/* Solid Google Blue Arrow Button */}
           <button
             type="submit"
             disabled={!inputPrompt.trim() || isStreaming}
@@ -295,14 +310,14 @@ export function LiveCanvas({
           </button>
         </form>
 
-        {/* Floating Scenario Pills Matching Image 2 (media_1787323076388.png) */}
+        {/* Floating Scenario Pills Specific to Selected Agent */}
         <div className="flex items-center gap-2 flex-wrap pt-1">
-          {selectedAgent?.exampleQueries?.slice(0, 3).map((q, idx) => (
+          {selectedAgent?.exampleQueries?.slice(0, 4).map((q, idx) => (
             <button
               key={idx}
               disabled={isStreaming}
               onClick={() => onSendMessage(q)}
-              className="awwwards-pill text-xs py-2 px-4 shadow-2xs"
+              className="awwwards-pill text-xs py-2 px-4 shadow-2xs cursor-pointer"
             >
               <span>💡 "{q}"</span>
             </button>
@@ -311,12 +326,12 @@ export function LiveCanvas({
 
       </div>
 
-      {/* Bottom Scenario Extension Dock */}
+      {/* Minimalist Bottom Scenario Extension Dock */}
       <BottomScenarioDock
-        agents={[]}
+        agents={agents}
         selectedAgent={selectedAgent}
-        onSelectAgent={onReturnToBuilder ? () => {} : null}
-        onSendMessage={onSendMessage}
+        onSelectAgent={onSelectAgent}
+        onResetChat={onResetChat}
       />
 
     </div>
