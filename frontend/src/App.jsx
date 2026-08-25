@@ -77,10 +77,25 @@ export function App() {
     fetchAgents();
   }, []);
 
+  const hasWelcomedRef = useRef(false);
+
+  // Proactive warm welcome on initial application load
+  useEffect(() => {
+    if (agents.length > 0 && !hasWelcomedRef.current) {
+      hasWelcomedRef.current = true;
+      const welcomeText = "Bonjour et bienvenue sur Talk to Data ! Je suis votre hôte connecté à votre flotte de onze agents BigQuery sur Google Cloud. Parlez-moi directement ou choisissez un secteur à explorer.";
+      speechProps.speakText(welcomeText);
+    }
+  }, [agents, speechProps]);
+
   const handleSelectAgent = (agent) => {
     setSelectedAgent(agent);
     chatProps.clearMessages();
     speechProps.stopSpeaking();
+
+    // Proactive scenario storytelling when switching agents
+    const sectorIntro = `Regardons de plus près ${agent.name}. ${agent.description || ''}. Que souhaitez-vous analyser ensemble ?`;
+    speechProps.speakText(sectorIntro);
   };
 
   const handleLaunchLive = () => {

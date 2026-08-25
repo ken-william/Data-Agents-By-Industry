@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 /**
- * Sanitizes markdown/JSON/SQL text into clean natural spoken French prose.
- * Eradicates raw JSON structures, brackets, project IDs, dataset IDs, SQL keywords, and markdown formatting.
+ * Sanitizes markdown/JSON/SQL text into clean, warm, natural spoken French prose.
+ * Eradicates raw JSON structures, brackets, project IDs, dataset IDs, SQL keywords, and symbols.
+ * Replaces abbreviations, currencies, and percentages with natural human words.
  */
 export function sanitizeForSpeech(rawText) {
   if (!rawText) return '';
@@ -14,22 +15,27 @@ export function sanitizeForSpeech(rawText) {
   // 2. Eradicate GCP Project IDs, Dataset IDs, and SQL keywords
   text = text.replace(/data-agents-by-industry/gi, '');
   text = text.replace(/[a-z0-9_]+_ds\.[a-z0-9_]+/gi, '');
-  text = text.replace(/\b(SELECT|FROM|WHERE|JOIN|GROUP BY|ORDER BY|LIMIT|INNER JOIN|LEFT JOIN|HAVING)\b/gi, '');
+  text = text.replace(/\b(SELECT|FROM|WHERE|JOIN|GROUP BY|ORDER BY|LIMIT|INNER JOIN|LEFT JOIN|HAVING|COUNT|SUM|AVG)\b/gi, '');
 
-  // 3. Eradicate JSON structures, raw brackets, quotes, timestamps
+  // 3. Convert symbols to spoken French
+  text = text.replace(/(\d+(?:[.,]\d+)?)\s*%/g, '$1 pour cent');
+  text = text.replace(/(\d+(?:[.,]\d+)?)\s*€/g, '$1 euros');
+  text = text.replace(/(\d+(?:[.,]\d+)?)\s*\$/g, '$1 dollars');
+  text = text.replace(/(\d+)\s*k€/gi, '$1 mille euros');
+  text = text.replace(/(\d+)\s*M€/gi, '$1 millions d\'euros');
+
+  // 4. Eradicate JSON structures, raw brackets, quotes, timestamps, markdown formatting
   text = text.replace(/\{"timestamp":[\s\S]*?\}/g, '');
   text = text.replace(/[\{\}\[\]"']/g, ' ');
-
-  // 4. Eradicate Markdown headings, bold, italics, links, inline code, table pipes
   text = text.replace(/#{1,6}\s?/g, '');
   text = text.replace(/\*{1,3}([^*]+)\*{1,3}/g, '$1');
   text = text.replace(/_([^_]+)_/g, '$1');
   text = text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
   text = text.replace(/`([^`]+)`/g, '$1');
   text = text.replace(/\|/g, ' ');
-  text = text.replace(/^[\s-*+]+/gm, '');
+  text = text.replace(/^[\s-*+>]+/gm, '');
 
-  // 5. Clean extra spaces
+  // 5. Clean extra spaces & punctuation
   text = text.replace(/\s+/g, ' ').trim();
 
   return text;
@@ -41,9 +47,40 @@ export function useSpeech(onTranscriptReceived) {
   const [autoSpeechEnabled, setAutoSpeechEnabled] = useState(true);
   const [speechSupported, setSpeechSupported] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
-  
+  const [availableVoices, setAvailableVoices] = useState([]);
+  const [selectedVoice, setSelectedVoice] = useState(null);
+
   const recognitionRef = useRef(null);
 
+  // Load and pick best natural human French voice
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.speechSynthesis) return;
+
+    const updateVoices = () => {
+      const voices = window.speechSynthesis.getVoices();
+      if (!voices || voices.length === 0) return;
+      setAvailableVoices(voices);
+
+      // Prioritize natural neural human French voices
+      const frenchVoices = voices.filter(v => v.lang && (v.lang.startsWith('fr') || v.lang.startsWith('FR')));
+      
+      const bestVoice = 
+        frenchVoices.find(v => v.name.includes('Google') || v.name.includes('français') || v.name.includes('French')) ||
+        frenchVoices.find(v => v.name.includes('Natural') || v.name.includes('Denise') || v.name.includes('Henri')) ||
+        frenchVoices.find(v => v.name.includes('Neural') || v.name.includes('Amelie') || v.name.includes('Thomas') || v.name.includes('Audrey')) ||
+        frenchVoices[0] ||
+        voices[0];
+
+      if (bestVoice) {
+        setSelectedVoice(bestVoice);
+      }
+    };
+
+    updateVoices();
+    window.speechSynthesis.onvoiceschanged = updateVoices;
+  }, []);
+
+  // Web Speech Recognition (Microphone)
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
@@ -52,7 +89,7 @@ export function useSpeech(onTranscriptReceived) {
     }
 
     const recognition = new SpeechRecognition();
-    recognition.continuous = true; // Always-on Gemini Live Voice Mode
+    recognition.continuous = true;
     recognition.interimResults = true;
     recognition.lang = 'fr-FR';
 
@@ -69,7 +106,6 @@ export function useSpeech(onTranscriptReceived) {
     };
 
     recognition.onend = () => {
-      // Auto-restart recognition if not muted (Gemini Live continuous mode)
       if (!isMuted && recognitionRef.current) {
         try {
           recognitionRef.current.start();
@@ -83,7 +119,9 @@ export function useSpeech(onTranscriptReceived) {
     };
 
     recognition.onerror = (event) => {
-      console.warn('Speech recognition error:', event.error);
+      if (event.error !== 'no-speech') {
+        console.warn('Speech recognition warning:', event.error);
+      }
       setIsListening(false);
     };
 
@@ -112,25 +150,43 @@ export function useSpeech(onTranscriptReceived) {
     }
   }, []);
 
-  const speakText = useCallback((text) => {
-    if (!window.speechSynthesis || !autoSpeechEnabled) return;
+  // Warm natural human voice synthesis
+  const speakText = useCallback((text, onComplete) => {
+    if (!window.speechSynthesis || !autoSpeechEnabled) {
+      if (onComplete) onComplete();
+      return;
+    }
 
-    // Purify text for natural live AI agent conversation
     const cleanText = sanitizeForSpeech(text);
-    if (!cleanText) return;
+    if (!cleanText) {
+      if (onComplete) onComplete();
+      return;
+    }
 
-    window.speechSynthesis.cancel(); // Stop any ongoing speech
+    window.speechSynthesis.cancel(); // Stop any overlapping speech
 
-    const utterance = new SpeechSynthesisUtterance(cleanText.slice(0, 500)); // Limit duration for natural speech cadence
+    const utterance = new SpeechSynthesisUtterance(cleanText.slice(0, 600));
     utterance.lang = 'fr-FR';
-    utterance.rate = 1.05;
+    utterance.rate = 1.0;   // Natural human conversational rate
+    utterance.pitch = 1.0;  // Balanced warm tone
+    utterance.volume = 0.95;
+
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
+    }
 
     utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
+    utterance.onend = () => {
+      setIsSpeaking(false);
+      if (onComplete) onComplete();
+    };
+    utterance.onerror = () => {
+      setIsSpeaking(false);
+      if (onComplete) onComplete();
+    };
 
     window.speechSynthesis.speak(utterance);
-  }, [autoSpeechEnabled]);
+  }, [autoSpeechEnabled, selectedVoice]);
 
   const stopSpeaking = useCallback(() => {
     if (window.speechSynthesis) {
@@ -145,6 +201,8 @@ export function useSpeech(onTranscriptReceived) {
     isMuted,
     autoSpeechEnabled,
     speechSupported,
+    availableVoices,
+    selectedVoice,
     startListening,
     stopListening,
     speakText,

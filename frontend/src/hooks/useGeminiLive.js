@@ -33,7 +33,7 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
     return audioContextRef.current;
   }, []);
 
-  // Play incoming 24kHz 16-bit PCM audio chunk smoothly in time
+  // Play incoming 24kHz 16-bit PCM audio chunk smoothly in time with anti-clipping filter
   const playAudioChunk = useCallback((base64Data) => {
     try {
       const ctx = getAudioContext();
@@ -56,7 +56,19 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
 
       const source = ctx.createBufferSource();
       source.buffer = audioBuffer;
-      source.connect(ctx.destination);
+
+      // Soft Limiter Gain Node (0.90) to prevent clipping distortion
+      const gainNode = ctx.createGain();
+      gainNode.gain.setValueAtTime(0.90, ctx.currentTime);
+
+      // Lowpass anti-aliasing filter to remove high-frequency digital noise
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(9500, ctx.currentTime);
+
+      source.connect(gainNode);
+      gainNode.connect(filter);
+      filter.connect(ctx.destination);
 
       const now = ctx.currentTime;
       const startTime = Math.max(now, nextPlayTimeRef.current);
