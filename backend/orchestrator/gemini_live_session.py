@@ -10,7 +10,10 @@ import asyncio
 import logging
 from typing import Dict, Any, Optional
 from fastapi import WebSocket, WebSocketDisconnect
-from ..mcp_toolbox.toolbox_client import toolbox_client
+try:
+    from mcp_toolbox.toolbox_client import toolbox_client
+except ImportError:
+    from backend.mcp_toolbox.toolbox_client import toolbox_client
 from .host_agent import HOST_SYSTEM_INSTRUCTION
 
 logger = logging.getLogger("gemini_live_session")

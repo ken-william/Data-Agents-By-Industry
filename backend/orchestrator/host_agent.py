@@ -11,7 +11,10 @@ import os
 import json
 import logging
 from typing import Dict, Any, List, Optional, Generator
-from ..mcp_toolbox.toolbox_client import toolbox_client
+try:
+    from mcp_toolbox.toolbox_client import toolbox_client
+except ImportError:
+    from backend.mcp_toolbox.toolbox_client import toolbox_client
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("adk_orchestrator")
