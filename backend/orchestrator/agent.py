@@ -40,7 +40,7 @@ def query_bigquery_data_agent(agent_name: str, prompt: str) -> str:
 agent = Agent(
     name="talktodata_host_orchestrator",
     description="Agent Hôte et Maître de Cérémonie Talk to Data connecté à la flotte de 11 Data Agents BigQuery via MCP Toolbox.",
-    model="gemini-3-flash-preview",
+    model="gemini-2.0-flash",
     instruction=HOST_SYSTEM_INSTRUCTION,
     tools=[query_bigquery_data_agent]
 )
