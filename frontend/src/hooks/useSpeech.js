@@ -61,18 +61,19 @@ export function useSpeech(onTranscriptReceived) {
       if (!voices || voices.length === 0) return;
       setAvailableVoices(voices);
 
-      // Prioritize natural neural human French voices
+      // Prioritize natural warm feminine neural French voices
       const frenchVoices = voices.filter(v => v.lang && (v.lang.startsWith('fr') || v.lang.startsWith('FR')));
       
-      const bestVoice = 
-        frenchVoices.find(v => v.name.includes('Google') || v.name.includes('français') || v.name.includes('French')) ||
-        frenchVoices.find(v => v.name.includes('Natural') || v.name.includes('Denise') || v.name.includes('Henri')) ||
-        frenchVoices.find(v => v.name.includes('Neural') || v.name.includes('Amelie') || v.name.includes('Thomas') || v.name.includes('Audrey')) ||
+      const bestFemaleVoice = 
+        frenchVoices.find(v => v.name.includes('Denise') || v.name.includes('Amelie') || v.name.includes('Audrey') || v.name.includes('Celine') || v.name.includes('Julie') || v.name.includes('Hortense')) ||
+        frenchVoices.find(v => v.name.includes('Google français') || v.name.includes('Google French')) ||
+        frenchVoices.find(v => (v.name.includes('Natural') || v.name.includes('Neural')) && !v.name.toLowerCase().includes('male') && !v.name.toLowerCase().includes('henri')) ||
+        frenchVoices.find(v => !v.name.toLowerCase().includes('male') && !v.name.toLowerCase().includes('david') && !v.name.toLowerCase().includes('paul') && !v.name.toLowerCase().includes('henri') && !v.name.toLowerCase().includes('thomas')) ||
         frenchVoices[0] ||
         voices[0];
 
-      if (bestVoice) {
-        setSelectedVoice(bestVoice);
+      if (bestFemaleVoice) {
+        setSelectedVoice(bestFemaleVoice);
       }
     };
 
@@ -165,11 +166,11 @@ export function useSpeech(onTranscriptReceived) {
 
     window.speechSynthesis.cancel(); // Stop any overlapping speech
 
-    const utterance = new SpeechSynthesisUtterance(cleanText.slice(0, 600));
+    const utterance = new SpeechSynthesisUtterance(cleanText.slice(0, 400));
     utterance.lang = 'fr-FR';
-    utterance.rate = 1.0;   // Natural human conversational rate
-    utterance.pitch = 1.0;  // Balanced warm tone
-    utterance.volume = 0.95;
+    utterance.rate = 0.96;   // Soft, relaxed, clear conversational cadence
+    utterance.pitch = 1.05;  // Warm natural feminine pitch
+    utterance.volume = 0.90; // Balanced output preventing distortion
 
     if (selectedVoice) {
       utterance.voice = selectedVoice;

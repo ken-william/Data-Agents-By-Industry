@@ -93,8 +93,10 @@ export function App() {
     chatProps.clearMessages();
     speechProps.stopSpeaking();
 
-    // Proactive scenario storytelling when switching agents
-    const sectorIntro = `Regardons de plus près ${agent.name}. ${agent.description || ''}. Que souhaitez-vous analyser ensemble ?`;
+    const name = agent.displayName || agent.name || "cet agent";
+    const category = agent.theme?.category || "ce secteur";
+    // Concise, elegant, natural intro (1 sentence + short question, ~5 seconds)
+    const sectorIntro = `Nous sommes sur ${name}, dédié à ${category}. Que souhaitez-vous analyser ?`;
     speechProps.speakText(sectorIntro);
   };
 
