@@ -6,6 +6,13 @@ Chaque agent est un **Copilote Métier Spécialisé** qui répond aux vraies que
 
 ---
 
+## 📚 Documentation & Architecture du Projet
+
+* 🏛️ **[Architecture 3 Tiers (ADK + MCP Toolbox)](ARCHITECTURE_3TIERS_ADK_MCP.md)** : Vision complète du découplage Frontend / Orchestrateur ADK Gemini Live / Data Agents MCP Toolbox.
+* 🛠️ **[Guide de Création d'un Nouvel Agent BigQuery](GUIDE_CREATION_AGENTS.md)** : Tutoriel pas-à-pas pour créer, déployer sur GCP et brancher n'importe quel agent métier en 5 minutes.
+
+---
+
 ## La Valeur Métier des 11 Agents Spécialisés
 
 ---
