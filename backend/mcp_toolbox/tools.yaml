@@ -1,133 +1,100 @@
 # ==============================================================================
-# Google Cloud MCP Toolbox - Declarative BigQuery Industry Data Tools
-# Project: data-agents-by-industry
+# Google Cloud MCP Toolbox - BigQuery Conversational Analytics & SQL Tools
+# Official Docs: https://mcp-toolbox.dev/integrations/bigquery/tools/bigquery-conversational-analytics/
+# Project: data-agents-by-industry (GCP Vertex AI Data Agents)
 # ==============================================================================
 
 sources:
-  bigquery_default:
+  bigquery_source:
     kind: bigquery
     project: data-agents-by-industry
-    location: EU
+    location: global
 
 tools:
-  # 1. Sully - Secteur Public & RH
-  sully_analyze_hospital_jobs:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Analyse les vacances de postes hospitaliers et tensions de recrutement dans le secteur public."
-    statement: |
-      SELECT establishment_name, job_category, region, vacancy_count, average_fill_delay_days
-      FROM `data-agents-by-industry.public_sector_employment_ds.hospital_job_vacancies`
-      ORDER BY vacancy_count DESC
-      LIMIT 15
+  # 1. Sully (Secteur Public & RH)
+  sully_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "sully-public-sector-agent"
+    dataset: "public_sector_employment_ds"
+    description: "Copilote RH & Secteur Public : analyse les tensions de recrutement hospitalier, grilles indiciaires et vacances de postes."
 
-  # 2. CreditAdvisor - Banque & Finance B2B
-  credit_advisor_evaluate_risk:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Évalue les scores de risque de crédit des entreprises et les montants d'exposition financière."
-    statement: |
-      SELECT company_siren, company_name, sector, risk_score, max_exposure_k_eur, default_probability
-      FROM `data-agents-by-industry.credit_risk_scoring_ds.company_credit_scores`
-      ORDER BY default_probability DESC
-      LIMIT 15
+  # 2. CreditAdvisor (Banque & Finance B2B)
+  credit_advisor_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "credit-advisor-agent"
+    dataset: "credit_risk_scoring_ds"
+    description: "Copilote Risque de Crédit B2B : analyse les scores de défaillance, ratios financiers et plafonds d'exposition."
 
-  # 3. NetArch - Télécoms & Réseaux ARCEP
-  net_arch_audit_coverage:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Audite la couverture 5G, la qualité de service mobile et le déploiement fibre selon les données ARCEP."
-    statement: |
-      SELECT operator_name, department_code, coverage_5g_percentage, fiber_eligibility_rate
-      FROM `data-agents-by-industry.telecom_network_arcep_ds.network_coverage_summary`
-      ORDER BY coverage_5g_percentage DESC
-      LIMIT 15
+  # 3. NetArch (Télécoms & Réseaux ARCEP)
+  net_arch_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "net-arch-agent"
+    dataset: "telecom_network_arcep_ds"
+    description: "Architecte Réseaux & Télécoms : analyse la couverture 5G, pannes de pylônes et éligibilité fibre selon l'ARCEP."
 
-  # 4. EarthIntel - Spatial & Imagerie Satellite
-  earth_intel_query_ndvi_assets:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Analyse l'indice de végétation NDVI et récupère les clichés satellites Sentinel-2 récents."
-    statement: |
-      SELECT c.company_name, c.asset_name, c.city, c.region, c.ndvi_vegetation_index, s.acquisition_date, s.quicklook_image_url
-      FROM `data-agents-by-industry.skywatch_aerospace_ds.company_assets` c
-      INNER JOIN `data-agents-by-industry.skywatch_aerospace_ds.sentinel_2_index` s ON c.city = s.closest_city
-      ORDER BY c.ndvi_vegetation_index ASC
-      LIMIT 10
+  # 4. EarthIntel (Spatial & Imagerie Satellite)
+  earth_intel_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "earth-intel-agent"
+    dataset: "skywatch_aerospace_ds"
+    description: "Copilote Spatial & Imagerie : analyse les indices de végétation NDVI et fournit les clichés satellites Sentinel-2."
 
-  # 5. TransitNavigator - Transports & Mobilité SNCF
-  transit_navigator_punctuality_stats:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Fournit les taux de ponctualité des lignes TGV/TER et les causes majeures de retard."
-    statement: |
-      SELECT train_line, departure_station, arrival_station, punctuality_rate, avg_delay_minutes
-      FROM `data-agents-by-industry.sncf_gtfs_mobility_ds.line_punctuality`
-      ORDER BY avg_delay_minutes DESC
-      LIMIT 15
+  # 5. TransitNavigator (Transports & Mobilité SNCF)
+  transit_navigator_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "sncf-agent"
+    dataset: "sncf_gtfs_mobility_ds"
+    description: "Copilote Mobilité & Ponctualité SNCF : analyse les retards de trains, causes d'incidents et flux de voyageurs."
 
-  # 6. PulseChecker - Santé & Hôpitaux RPPS
-  pulse_checker_specialist_density:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Analyse la densité médicale par région et identifie les déserts médicaux par spécialité."
-    statement: |
-      SELECT region, specialty, practitioners_per_100k, avg_wait_time_days
-      FROM `data-agents-by-industry.health_care_france_ds.medical_demography`
-      ORDER BY practitioners_per_100k ASC
-      LIMIT 15
+  # 6. PulseChecker (Santé & Hôpitaux RPPS)
+  pulse_checker_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "pulse-checker-agent"
+    dataset: "health_care_france_ds"
+    description: "Observatoire de Santé : analyse la densité médicale RPPS, temps d'attente et déserts médicaux par région."
 
-  # 7. ShelfOptimizer - Retail & Merchandising
-  shelf_optimizer_inventory_turnover:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Optimise la rotation des stocks, le taux de rupture et le chiffre d'affaires par rayon."
-    statement: |
-      SELECT department, category, turnover_rate, stockout_risk_score, revenue_eur
-      FROM `data-agents-by-industry.retail_merchandising_ds.shelf_performance`
-      ORDER BY stockout_risk_score DESC
-      LIMIT 15
+  # 7. ShelfOptimizer (Retail & Merchandising)
+  shelf_optimizer_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "shelf-optimizer-agent"
+    dataset: "retail_merchandising_ds"
+    description: "Copilote Merchandising : optimise la rotation de stock, chiffre d'affaires par rayon et risques de rupture."
 
-  # 8. ArenaManager - Sport & Stades
-  arena_manager_stadium_occupancy:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Pilote les taux d'occupation, les revenus VIP et la gestion des flux dans les stades."
-    statement: |
-      SELECT stadium_name, city, total_capacity, occupancy_rate, vip_lounge_revenue_k_eur
-      FROM `data-agents-by-industry.arena_manager_ds.stadium_kpis`
-      ORDER BY occupancy_rate DESC
-      LIMIT 15
+  # 8. ArenaManager (Sport & Stades)
+  arena_manager_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "arena-manager-agent"
+    dataset: "arena_manager_ds"
+    description: "Gestionnaire de Stades : analyse les taux d'occupation, revenus VIP et flux de spectateurs."
 
-  # 9. Helios - Énergie & Bornes IRVE Enedis
-  helios_charging_station_availability:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Analyse la disponibilité, la puissance installée et les pannes sur le réseau de bornes IRVE."
-    statement: |
-      SELECT operator, region, total_charging_points, available_points_rate, peak_utilization_kw
-      FROM `data-agents-by-industry.ev_charging_network_ds.charging_stations_kpis`
-      ORDER BY available_points_rate ASC
-      LIMIT 15
+  # 9. Helios (Énergie & Bornes IRVE Enedis)
+  helios_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "helios-agent"
+    dataset: "ev_charging_network_ds"
+    description: "Copilote Énergie & IRVE : analyse la disponibilité des bornes de recharge, puissance et pannes électriques."
 
-  # 10. CineAnalyst - Cinéma & Box-Office
-  cine_analyst_box_office_roi:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Analyse la rentabilité, les entrées au box-office et le retour sur investissement des productions cinéma."
-    statement: |
-      SELECT movie_title, genre, budget_m_eur, box_office_entries_m, roi_ratio
-      FROM `data-agents-by-industry.cine_analyst_ds.box_office_performance`
-      ORDER BY box_office_entries_m DESC
-      LIMIT 15
+  # 10. CineAnalyst (Cinéma & Box-Office)
+  cine_analyst_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "cine-analyst-agent"
+    dataset: "cine_analyst_ds"
+    description: "Analyste Box-Office : analyse la rentabilité, entrées en salles et retour sur investissement des films."
 
-  # 11. JurisPilot - Juridique & Conformité
-  juris_pilot_contract_compliance:
-    kind: bigquery-sql
-    source: bigquery_default
-    description: "Évalue la conformité RGPD/DORA et les risques juridiques sur le portefeuille de contrats."
-    statement: |
-      SELECT contract_id, counterparty_name, compliance_score, risk_level, renewal_date
-      FROM `data-agents-by-industry.legal_contracts_ds.contract_portfolio`
-      ORDER BY risk_level DESC
-      LIMIT 15
+  # 11. JurisPilot (Juridique & Conformité)
+  juris_pilot_agent:
+    kind: bigquery-conversational-analytics
+    source: bigquery_source
+    agent_id: "juris-pilot-agent"
+    dataset: "legal_contracts_ds"
+    description: "Copilote Juridique : analyse la conformité contractuelle RGPD/DORA et les dates de renouvellement critique."
