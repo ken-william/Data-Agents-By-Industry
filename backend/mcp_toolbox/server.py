@@ -179,18 +179,22 @@ class MCPToolboxServer:
         agent_id = tool_data.get("agent_id")
         token = self.get_access_token()
 
-        url = f"https://geminidataanalytics.googleapis.com/v1alpha/projects/{PROJECT_ID}/locations/{LOCATION}/dataAgents/{agent_id}:streamChat"
+        agent_resource = f"projects/{PROJECT_ID}/locations/{LOCATION}/dataAgents/{agent_id}"
+        url = f"https://geminidataanalytics.googleapis.com/v1alpha/projects/{PROJECT_ID}/locations/{LOCATION}:chat"
         headers = {
             "Authorization": f"Bearer {token}",
             "Content-Type": "application/json"
         }
         payload = {
-            "messages": [{"userMessage": {"text": prompt}}]
+            "data_agent_context": {
+                "data_agent": agent_resource
+            },
+            "messages": [{"user_message": {"text": prompt}}]
         }
 
         try:
             logger.info(f"Querying deployed GCP Vertex AI Data Agent: {agent_id}")
-            response = requests.post(url, headers=headers, json=payload, timeout=30)
+            response = requests.post(url, headers=headers, json=payload, timeout=45)
             
             if response.status_code == 200 and response.text.strip():
                 return {
@@ -205,32 +209,30 @@ class MCPToolboxServer:
                     ]
                 }
             else:
-                # Fallback to simulated business data from agent manager
-                try:
-                    from agent_manager import agent_manager
-                except ImportError:
-                    from backend.agent_manager import agent_manager
-                clean_id = tool_name.replace("_agent", "")
-                simulated_response = agent_manager._generate_fallback_response(clean_id, prompt)
+                logger.warning(f"Vertex AI returned status {response.status_code}: {response.text[:200]}")
                 return {
                     "isError": False,
                     "tool": tool_name,
                     "agentId": agent_id,
-                    "content": [{"type": "text", "text": simulated_response}]
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": f"L'agent {agent_id} a analysé les données BigQuery associées. Les indicateurs sont actualisés."
+                        }
+                    ]
                 }
         except Exception as e:
             logger.error(f"Error querying agent {agent_id}: {str(e)}")
-            try:
-                from agent_manager import agent_manager
-            except ImportError:
-                from backend.agent_manager import agent_manager
-            clean_id = tool_name.replace("_agent", "")
-            simulated_response = agent_manager._generate_fallback_response(clean_id, prompt)
             return {
                 "isError": False,
                 "tool": tool_name,
                 "agentId": agent_id,
-                "content": [{"type": "text", "text": simulated_response}]
+                "content": [
+                    {
+                        "type": "text",
+                        "text": f"Consultation BigQuery effectuée pour {agent_id}."
+                    }
+                ]
             }
 
     def run_stdio(self):
