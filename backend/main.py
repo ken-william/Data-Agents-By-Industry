@@ -1,7 +1,7 @@
 import os
 import sys
 from typing import List, Optional, Dict, Any
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -96,6 +96,15 @@ def orchestrator_chat_endpoint(req: OrchestratorChatRequest):
         conversation_history=history_dict
     )
     return StreamingResponse(stream_gen, media_type="text/event-stream")
+
+@app.websocket("/ws/live")
+async def websocket_live_endpoint(websocket: WebSocket):
+    """
+    Gemini Multimodal Live API WebSocket Endpoint.
+    Enables continuous bidirectional streaming audio and live MCP tool execution.
+    """
+    from orchestrator.gemini_live_session import handle_gemini_live_websocket
+    await handle_gemini_live_websocket(websocket)
 
 @app.post("/api/chat")
 def chat_endpoint(req: ChatRequest):
