@@ -30,7 +30,17 @@ logger = logging.getLogger("gemini_live_session")
 
 PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
 LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
-GEMINI_LIVE_MODEL = "gemini-2.0-flash-exp"
+
+# Supported ADK Native-Audio Live Models
+VERTEX_LIVE_MODELS = [
+    "gemini-live-2.5-flash-native-audio",
+    "gemini-2.0-flash-exp",
+    "gemini-2.0-flash"
+]
+GEMINI_API_LIVE_MODELS = [
+    "gemini-2.5-flash-native-audio-preview-12-2025",
+    "gemini-2.0-flash-exp"
+]
 DEFAULT_VOICE = "Aoede"  # Warm, charismatic, professional voice for French & English storytelling
 
 class GeminiLiveSessionManager:
@@ -39,6 +49,7 @@ class GeminiLiveSessionManager:
         self.voice = voice if voice in ["Aoede", "Puck", "Charon", "Kore", "Fenrir"] else "Aoede"
         self.is_active = True
         self.client: Optional[genai.Client] = None
+        self.is_vertex = False
         self._init_genai_client()
 
     def _init_genai_client(self):
@@ -47,9 +58,11 @@ class GeminiLiveSessionManager:
         if api_key:
             logger.info("Initializing Gemini Live client with Google AI Studio API Key.")
             self.client = genai.Client(api_key=api_key, http_options={"api_version": "v1alpha"})
+            self.is_vertex = False
         else:
             logger.info(f"Initializing Gemini Live client with GCP Vertex AI ({PROJECT_ID}, {LOCATION}).")
             self.client = genai.Client(vertexai=True, project=PROJECT_ID, location=LOCATION)
+            self.is_vertex = True
 
     def _get_live_tools(self):
         """Builds Gemini Live Function Declarations from MCP Toolbox."""
@@ -94,30 +107,60 @@ class GeminiLiveSessionManager:
             tools=self._get_live_tools()
         )
 
+        candidate_models = VERTEX_LIVE_MODELS if self.is_vertex else GEMINI_API_LIVE_MODELS
+        connected_session = None
+        active_model_name = candidate_models[0]
+
+        for model_name in candidate_models:
+            try:
+                logger.info(f"Attempting connection to Gemini Live model: {model_name}...")
+                session_cm = self.client.aio.live.connect(model=model_name, config=config)
+                live_session = await session_cm.__aenter__()
+                connected_session = (session_cm, live_session)
+                active_model_name = model_name
+                logger.info(f"✅ Successfully connected to Gemini Live model: {model_name}")
+                break
+            except Exception as conn_err:
+                logger.warning(f"Could not connect with model {model_name}: {conn_err}. Trying fallback...")
+
+        if not connected_session:
+            err_msg = "Impossible de se connecter aux modèles Gemini Live API. Vérifiez votre configuration GCP ou clé API."
+            logger.error(err_msg)
+            await self.client_ws.send_json({"type": "error", "content": err_msg})
+            return
+
+        session_cm, live_session = connected_session
+
         try:
-            # Connect to Gemini Multimodal Live API
-            async with self.client.aio.live.connect(model=GEMINI_LIVE_MODEL, config=config) as live_session:
-                logger.info(f"Connected to Gemini Live model: {GEMINI_LIVE_MODEL}")
+            # Send session confirmation to client
+            await self.client_ws.send_json({
+                "type": "session_ready",
+                "model": active_model_name,
+                "voice": self.voice,
+                "status": "connected"
+            })
 
-                # Send confirmation to client
-                await self.client_ws.send_json({
-                    "type": "session_ready",
-                    "model": GEMINI_LIVE_MODEL,
-                    "voice": DEFAULT_VOICE,
-                    "status": "connected"
-                })
+            # Proactive Initial Greeting: Host welcomes the user
+            await live_session.send(
+                input=types.Content(
+                    parts=[types.Part.from_text(
+                        text="Accueille chaleureusement l'utilisateur en français avec ta voix en te présentant comme l'Hôte de Talk to Data et invite-le à explorer la flotte de 11 agents BigQuery."
+                    )]
+                ),
+                end_of_turn=True
+            )
 
-                # Launch concurrent Upstream and Downstream tasks
-                upstream_task = asyncio.create_task(self._upstream_handler(live_session))
-                downstream_task = asyncio.create_task(self._downstream_handler(live_session))
+            # Launch concurrent Upstream and Downstream tasks
+            upstream_task = asyncio.create_task(self._upstream_handler(live_session))
+            downstream_task = asyncio.create_task(self._downstream_handler(live_session))
 
-                done, pending = await asyncio.wait(
-                    [upstream_task, downstream_task],
-                    return_when=asyncio.FIRST_COMPLETED
-                )
+            done, pending = await asyncio.wait(
+                [upstream_task, downstream_task],
+                return_when=asyncio.FIRST_COMPLETED
+            )
 
-                for task in pending:
-                    task.cancel()
+            for task in pending:
+                task.cancel()
 
         except WebSocketDisconnect:
             logger.info("Client disconnected from Gemini Live.")
@@ -132,6 +175,10 @@ class GeminiLiveSessionManager:
                 pass
         finally:
             self.is_active = False
+            try:
+                await session_cm.__aexit__(None, None, None)
+            except Exception:
+                pass
 
     async def _upstream_handler(self, live_session):
         """Reads audio chunks and text commands from client WebSocket and forwards to Gemini Live."""
@@ -160,7 +207,7 @@ class GeminiLiveSessionManager:
                             }
                         )
 
-                # 2. Text Input / Interrupt command
+                # 2. Text Input / Scenario selection command
                 elif msg_type == "user_text":
                     text = data.get("text", "")
                     if text:
@@ -186,7 +233,7 @@ class GeminiLiveSessionManager:
                     model_turn = server_content.model_turn
                     if model_turn is not None:
                         for part in model_turn.parts:
-                            # 1. Native 24kHz PCM Audio Stream from Gemini Live Voice (Aoede)
+                            # 1. Native 24kHz PCM Audio Stream from Gemini Live Voice
                             if part.inline_data:
                                 audio_b64 = base64.b64encode(part.inline_data.data).decode("utf-8")
                                 await self.client_ws.send_json({
@@ -195,7 +242,7 @@ class GeminiLiveSessionManager:
                                     "mimeType": part.inline_data.mime_type
                                 })
 
-                            # 2. Real-time Text Transcription
+                            # 2. Real-time Audio Transcription Text
                             if part.text:
                                 await self.client_ws.send_json({
                                     "type": "content",
@@ -208,7 +255,7 @@ class GeminiLiveSessionManager:
                     if server_content.interrupted:
                         await self.client_ws.send_json({"type": "interrupted"})
 
-                # 3. Real-time Tool Call from Gemini Live -> Execute MCP Tool on BigQuery
+                # 3. Streaming Tools Execution: Real-time Tool Call -> MCP Toolbox BigQuery
                 tool_call = response.tool_call
                 if tool_call is not None:
                     for call in tool_call.function_calls:
@@ -216,18 +263,30 @@ class GeminiLiveSessionManager:
                         func_name = call.name
                         func_args = call.args or {}
 
-                        # Notify client of tool execution
+                        # Notify client in real-time that BigQuery is being queried
                         await self.client_ws.send_json({
                             "type": "thought",
                             "content": f"Consultation en direct de l'agent BigQuery : {func_name}..."
                         })
+                        await self.client_ws.send_json({
+                            "type": "tool_executing",
+                            "tool": func_name,
+                            "args": dict(func_args)
+                        })
 
-                        # Execute tool via MCP Toolbox
-                        logger.info(f"Gemini Live executing MCP Tool: {func_name} with args {func_args}")
+                        # Execute tool asynchronously via MCP Toolbox
+                        logger.info(f"Gemini Live executing Streaming Tool: {func_name} with args {func_args}")
                         tool_result = toolbox_client.call_tool(func_name, dict(func_args))
-                        raw_result_text = tool_result.get("content", [{}])[0].get("text", "Données récupérées.")
+                        raw_result_text = tool_result.get("content", [{}])[0].get("text", "Données récupérées avec succès.")
 
-                        # Send Tool Response back into the Gemini Live Session so Gemini speaks the result!
+                        # Broadcast data payload to UI for immediate chart & table rendering
+                        await self.client_ws.send_json({
+                            "type": "tool_completed",
+                            "tool": func_name,
+                            "content": raw_result_text
+                        })
+
+                        # Send Tool Response back into Gemini Live so Gemini speaks the analytical summary!
                         await live_session.send(
                             types.LiveClientToolResponse(
                                 function_responses=[
