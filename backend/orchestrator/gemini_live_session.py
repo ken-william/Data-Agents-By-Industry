@@ -34,8 +34,9 @@ GEMINI_LIVE_MODEL = "gemini-2.0-flash-exp"
 DEFAULT_VOICE = "Aoede"  # Warm, charismatic, professional voice for French & English storytelling
 
 class GeminiLiveSessionManager:
-    def __init__(self, websocket: WebSocket):
+    def __init__(self, websocket: WebSocket, voice: str = "Aoede"):
         self.client_ws = websocket
+        self.voice = voice if voice in ["Aoede", "Puck", "Charon", "Kore", "Fenrir"] else "Aoede"
         self.is_active = True
         self.client: Optional[genai.Client] = None
         self._init_genai_client()
@@ -75,15 +76,15 @@ class GeminiLiveSessionManager:
     async def start_session(self):
         """Starts bidirectional live streaming between browser client and Gemini Live."""
         await self.client_ws.accept()
-        logger.info("Client connected to Gemini Live WebSocket.")
+        logger.info(f"Client connected to Gemini Live WebSocket with voice: {self.voice}.")
 
-        # Live Config with 24kHz Audio synthesis & Prebuilt Voice
+        # Live Config with 24kHz Audio synthesis & Selected Prebuilt Voice
         config = types.LiveConnectConfig(
             response_modalities=[types.LiveModality.AUDIO],
             speech_config=types.SpeechConfig(
                 voice_config=types.VoiceConfig(
                     prebuilt_voice_config=types.PrebuiltVoiceConfig(
-                        voice_name=DEFAULT_VOICE
+                        voice_name=self.voice
                     )
                 )
             ),
@@ -245,5 +246,6 @@ class GeminiLiveSessionManager:
             pass
 
 async def handle_gemini_live_websocket(websocket: WebSocket):
-    session = GeminiLiveSessionManager(websocket)
+    voice = websocket.query_params.get("voice", "Aoede")
+    session = GeminiLiveSessionManager(websocket, voice=voice)
     await session.start_session()

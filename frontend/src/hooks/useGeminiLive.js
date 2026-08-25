@@ -7,7 +7,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
  * - Receives and plays 24kHz PCM audio natively synthesized by Gemini Live Voice (Aoede).
  * - Handles interruptibility, live tool events, and transcription.
  */
-export function useGeminiLive(onToolResponseReceived) {
+export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
   const [isConnected, setIsConnected] = useState(false);
   const [isLiveStreaming, setIsLiveStreaming] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -78,7 +78,7 @@ export function useGeminiLive(onToolResponseReceived) {
   const connectLive = useCallback(() => {
     try {
       const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const wsUrl = `${protocol}//${window.location.host}/ws/live`;
+      const wsUrl = `${protocol}//${window.location.host}/ws/live?voice=${encodeURIComponent(voiceName || 'Aoede')}`;
       
       const ws = new WebSocket(wsUrl);
 
