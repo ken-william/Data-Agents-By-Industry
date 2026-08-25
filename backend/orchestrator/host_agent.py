@@ -112,22 +112,27 @@ AGENT_DISCOVERY_PROFILES = {
 }
 
 HOST_SYSTEM_INSTRUCTION = """
-Tu es l'Agent Hôte Virtuel et Maître de Cérémonie de prestige de la plateforme Talk to Data (présenté à Google Cloud Next / BigData Paris).
-Tu es doté d'une personnalité charismatique, chaleureuse, intelligente, bilingue et toujours captivante.
+RÈGLES D'OR DE COMPORTEMENT ET DE PERSONNALITÉ :
 
-Tes supers-pouvoirs et règles d'or :
-1. NAVIGATION 100% VOCALE SANS SOURIS :
-   - L'utilisateur peut piloter toute l'application à la voix ("Présente-moi ArenaManager", "Passe sur les télécoms", "Je veux voir la météo spatiale").
-   - Quand l'utilisateur nomme un domaine ou un agent, fais-lui d'abord le DISCOVERY complet : son rôle, son jeu de données et sa valeur business avant d'exécuter la requête.
+1. POSTURE DU PRÉSENTATEUR D'ÉLITE (TON ET CADENCE) :
+   - Ton style est chaleureux, captivant et hautement professionnel. Ne sois pas un robot qui liste des faits ; raconte une histoire.
+   - Utilise des connecteurs logiques élégants : "Regardons de plus près...", "C'est fascinant car...", "Les chiffres nous révèlent une tendance claire...".
+   - Tu interagis par défaut en français d'une élégance parfaite (sans anglicismes inutiles), mais tu adaptes instantanément ta langue si le participant s'adresse à toi dans une autre langue.
 
-2. STORYTELLING ACTIF DURANT LE CALCUL BIGQUERY :
-   - Pendant les 2 à 3 secondes d'exécution d'une requête, ne laisse aucun silence : raconte une anecdote passionnante et vivante sur le jeu de données pour immerger l'auditoire.
+2. NAVIGATION ET DÉCOUVERTE 100% VOCALES :
+   - L'utilisateur pilote tout à la voix. Quand il demande à découvrir ou basculer vers un agent (ex: Sully, CreditAdvisor), commence par célébrer ce choix : présente brièvement le secteur, sa mission stratégique et l'anecdote percutante associée pour éveiller sa curiosité.
 
-3. POLYGLOTTE NATUREL :
-   - Tu interagis par défaut en français d'une élégance parfaite, mais si l'utilisateur te parle en anglais, espagnol ou autre, tu adaptes instantanément ta langue sans casser ta posture d'hôte d'exception.
+3. STORYTELLING INTÉGRÉ DURANT LE CHARGEMENT (ZÉRO LATENCE PERÇUE) :
+   - Lorsque tu lances une requête BigQuery sous le capot (ce qui prend 2 à 3 secondes), ne laisse aucun silence s'installer.
+   - Profite de ce temps pour installer l'ambiance et raconter l'histoire du jeu de données en direct : "Pendant que je consulte nos tables BigQuery d'historique... Saviez-vous que [insérer l'anecdote de l'agent] ? C'est incroyable, et voici justement les résultats qui s'affichent à l'écran !"
 
-4. SPEECH SANITIZER STRICT :
-   - Aucun JSON brut, aucun code SQL, aucun timestamp technique n'est lu à voix haute. Traduis toujours les métriques en décisions stratégiques percutantes.
+4. LE FILTRE METIER STRICT (SPEECH SANITIZER) :
+   - Tu es un traducteur de données. Tu ne lis JAMAIS de code SQL, de JSON brut, d'accolades, de tirets, ou d'abréviations techniques de colonnes à voix haute.
+   - Si tu reçois "arpu_moyen_eur: 45.99", tu dis : "Le revenu moyen par utilisateur s'établit à près de 46 euros."
+   - Si tu reçois "total_abonnes: 1500", tu dis : "Nous enregistrons un parc solide de 1 500 abonnés."
+
+5. INTERRUPTIBILITÉ ET BIENVEILLANCE :
+   - Si l'utilisateur t'interrompt pour changer de sujet, cède immédiatement la parole de manière élégante : "Très bien, changeons de cap !", "Excellente idée, explorons plutôt ce domaine !".
 """
 
 class ADKHostAgent:
@@ -181,34 +186,34 @@ class ADKHostAgent:
         conversation_history: Optional[List[Dict[str, str]]] = None
     ) -> Generator[str, None, None]:
         """
-        Processes voice/text through the Master Host Agent.
+        Processes voice/text through the Master Host Agent applying the 5 Golden Rules.
         Emits rich Discovery, Storytelling, and Data synthesis events.
         """
         command = self.identify_voice_command(prompt)
         profile = command["profile"]
         agent_key = command["agent_key"]
 
-        # Case 1: Voice Discovery Request
+        # Case 1: Voice Discovery Request (Règle d'or 2)
         if command["action"] == "discover_agent":
-            discovery_text = f"### 🌟 Présentation : {profile['name']} ({profile['sector']})\n\n"
-            discovery_text += f"**Mission Décisionnelle :** {profile['mission']}\n\n"
-            discovery_text += f"**Jeu de Données BigQuery :** `{profile['dataset']}`\n\n"
-            discovery_text += f"💡 *Le saviez-vous ?* {profile['anecdote']}\n\n"
-            discovery_text += "**Exemples de questions à me poser :**\n"
-            discovery_text += f"- *\"Présente-moi les indicateurs clés pour {profile['name']}\"*\n"
-            discovery_text += f"- *\"Quels sont les signaux d'alerte prioritaires ce trimestre ?\"*"
+            discovery_text = f"### 🌟 Regardons de plus près : {profile['name']} ({profile['sector']})\n\n"
+            discovery_text += f"**Mission Stratégique :** {profile['mission']}\n\n"
+            discovery_text += f"**Jeu de Données BigQuery Connecté :** `{profile['dataset']}`\n\n"
+            discovery_text += f"💡 *C'est fascinant car :* {profile['anecdote']}\n\n"
+            discovery_text += "**Voici les questions clés que nous pouvons explorer ensemble :**\n"
+            discovery_text += f"- *\"Présente-moi les indicateurs de performance pour {profile['name']}\"*\n"
+            discovery_text += f"- *\"Quelles sont les anomalies majeures détectées ce trimestre ?\"*"
 
             yield f"data: {json.dumps({'type': 'thought', 'content': f'Discovery vocal de l’agent : {profile['name']}'})}\n\n"
             yield f"data: {json.dumps({'type': 'content', 'content': discovery_text})}\n\n"
             yield f"data: {json.dumps({'type': 'done'})}\n\n"
             return
 
-        # Case 2: Voice Switch Agent Command
+        # Case 2: Voice Switch Agent Command (Règle d'or 2 & 5)
         elif command["action"] == "switch_agent":
-            switch_text = f"🔄 **Connexion établie avec l'agent {profile['name']}** ({profile['sector']}).\n\n"
+            switch_text = f"🔄 **Excellente idée ! Connectons-nous immédiatement à {profile['name']}** ({profile['sector']}).\n\n"
             switch_text += f"{profile['mission']}\n\n"
             switch_text += f"*{profile['anecdote']}*\n\n"
-            switch_text += "Je suis prêt ! Quelle analyse souhaitez-vous lancer ?"
+            switch_text += "Je suis prêt ! Quelle analyse de données souhaitez-vous lancer ?"
 
             yield f"data: {json.dumps({'type': 'thought', 'content': f'Bascule vocale vers {profile['name']}'})}\n\n"
             yield f"data: {json.dumps({'type': 'switch_agent', 'agent_id': agent_key, 'agent_name': profile['name']})}\n\n"
@@ -216,9 +221,10 @@ class ADKHostAgent:
             yield f"data: {json.dumps({'type': 'done'})}\n\n"
             return
 
-        # Case 3: Data Analytics Query with Storytelling
-        # 1. Yield Active Storytelling Thought
-        yield f"data: {json.dumps({'type': 'thought', 'content': f'Consultation BigQuery ({profile['dataset']}) : {profile['anecdote']}'})}\n\n"
+        # Case 3: Data Analytics Query with Storytelling (Règle d'or 1, 3, 4)
+        # 1. Yield Active Storytelling Thought to eliminate perceived latency
+        storytelling_phrase = f"Pendant que je consulte nos tables BigQuery d'historique... Saviez-vous que {profile['anecdote'].lower()} C'est fascinant, et voici justement les chiffres qui s'affichent à l'écran !"
+        yield f"data: {json.dumps({'type': 'thought', 'content': storytelling_phrase})}\n\n"
 
         # 2. Invoke MCP Tool
         tool_result = toolbox_client.call_tool(agent_key, {"prompt": prompt})
