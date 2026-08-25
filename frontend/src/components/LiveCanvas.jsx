@@ -218,7 +218,7 @@ export function LiveCanvas({
                   {showThoughts && (
                     <div className="p-3.5 font-mono text-[11px] text-slate-800 bg-white border-t border-slate-200 space-y-2">
                       {lastAssistantMessage.thoughts.map((t, tIdx) => (
-                        <div key={tIdx} className="p-2.5 rounded-lg bg-slate-900 text-cyan-300 border border-slate-800 overflow-x-auto">
+                        <div key={tIdx} className="p-3 rounded-xl bg-white text-slate-800 border border-slate-200/90 shadow-2xs overflow-x-auto font-mono font-medium">
                           {t}
                         </div>
                       ))}
