@@ -110,8 +110,11 @@ export function App() {
   const handleLaunchLive = () => {
     if (selectedAgent) {
       setViewMode('live');
-      if (geminiLiveProps.isConnected && !geminiLiveProps.isLiveStreaming) {
-        geminiLiveProps.startMicStreaming();
+      if (geminiLiveProps.isConnected) {
+        if (!geminiLiveProps.isLiveStreaming) {
+          geminiLiveProps.startMicStreaming();
+        }
+        geminiLiveProps.sendLivePrompt(`Présente brièvement le scénario ${selectedAgent.displayName || selectedAgent.name} en 1 phrase d'accueil et demande ce que l'utilisateur souhaite explorer, sans exécuter de requête SQL.`);
       }
     }
   };
@@ -185,7 +188,7 @@ export function App() {
             onSelectAgent={handleSelectAgent}
             onReturnToBuilder={handleReturnToBuilder}
             messages={chatProps.messages}
-            isStreaming={chatProps.isStreaming || geminiLiveProps.isLiveStreaming}
+            isStreaming={chatProps.isStreaming || Boolean(geminiLiveProps.currentTool)}
             thoughts={chatProps.thoughts}
             error={chatProps.error || geminiLiveProps.error}
             onSendMessage={(text) => {

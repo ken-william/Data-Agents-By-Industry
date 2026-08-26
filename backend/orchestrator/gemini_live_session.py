@@ -219,12 +219,14 @@ class GeminiLiveSessionManager:
                     if raw_base64:
                         audio_bytes = base64.b64decode(raw_base64)
                         await live_session.send(
-                            input=[
-                                types.Blob(
-                                    mime_type="audio/pcm;rate=16000",
-                                    data=audio_bytes
-                                )
-                            ]
+                            input=types.LiveClientRealtimeInput(
+                                media_chunks=[
+                                    types.Blob(
+                                        mime_type="audio/pcm;rate=16000",
+                                        data=audio_bytes
+                                    )
+                                ]
+                            )
                         )
 
                 # 2. Text Input / Scenario selection command

@@ -172,7 +172,12 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, sampleRate: 16000 } });
       micStreamRef.current = stream;
 
-      const inputCtx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 });
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      const inputCtx = new AudioCtx({ sampleRate: 16000 });
+      if (inputCtx.state === 'suspended') {
+        await inputCtx.resume();
+      }
+
       const micSource = inputCtx.createMediaStreamSource(stream);
       const processor = inputCtx.createScriptProcessor(4096, 1, 1);
 
@@ -190,7 +195,8 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
         // Base64 encode
         const bytes = new Uint8Array(pcm16.buffer);
         let binary = '';
-        for (let i = 0; i < bytes.length; i++) {
+        const len = bytes.byteLength;
+        for (let i = 0; i < len; i++) {
           binary += String.fromCharCode(bytes[i]);
         }
         const b64 = window.btoa(binary);
@@ -205,6 +211,7 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
       processor.connect(inputCtx.destination);
       micProcessorRef.current = { inputCtx, processor, micSource };
       setIsLiveStreaming(true);
+      console.log("🎙️ Microphone stream actively streaming 16kHz PCM to Gemini Live");
     } catch (err) {
       console.warn("Microphone access error for Live API:", err);
       setError("Microphone inaccessible. Veuillez autoriser l'accès micro dans votre navigateur.");
