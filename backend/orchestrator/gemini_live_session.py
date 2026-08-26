@@ -166,13 +166,9 @@ class GeminiLiveSessionManager:
                 "status": "connected"
             })
 
-            # Proactive Initial Greeting: Host welcomes the user
+            # Proactive Initial Greeting: Host welcomes the user with voice
             await live_session.send(
-                input=types.Content(
-                    parts=[types.Part.from_text(
-                        text="Accueille chaleureusement l'utilisateur en français avec ta voix en te présentant comme l'Hôte de Talk to Data et invite-le à explorer la flotte de 11 agents BigQuery."
-                    )]
-                ),
+                input="Accueille chaleureusement l'utilisateur en français avec ta voix en te présentant comme l'Hôte de Talk to Data et invite-le à explorer la flotte de 11 agents BigQuery.",
                 end_of_turn=True
             )
 
@@ -223,14 +219,12 @@ class GeminiLiveSessionManager:
                     if raw_base64:
                         audio_bytes = base64.b64decode(raw_base64)
                         await live_session.send(
-                            realtime_input={
-                                "media_chunks": [
-                                    types.Blob(
-                                        mime_type="audio/pcm;rate=16000",
-                                        data=audio_bytes
-                                    )
-                                ]
-                            }
+                            input=[
+                                types.Blob(
+                                    mime_type="audio/pcm;rate=16000",
+                                    data=audio_bytes
+                                )
+                            ]
                         )
 
                 # 2. Text Input / Scenario selection command
@@ -238,9 +232,7 @@ class GeminiLiveSessionManager:
                     text = data.get("text", "")
                     if text:
                         await live_session.send(
-                            input=types.Content(
-                                parts=[types.Part.from_text(text=text)]
-                            ),
+                            input=text,
                             end_of_turn=True
                         )
 
