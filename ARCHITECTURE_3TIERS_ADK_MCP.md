@@ -160,7 +160,7 @@ from .host_agent import HOST_SYSTEM_INSTRUCTION
 
 # Configuration Live Bidi-Streaming avec Synthèse Vocale 24kHz
 config = types.LiveConnectConfig(
-    response_modalities=[types.LiveModality.AUDIO],
+    response_modalities=["AUDIO"],
     speech_config=types.SpeechConfig(
         voice_config=types.VoiceConfig(
             prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name="Aoede")
@@ -174,8 +174,9 @@ config = types.LiveConnectConfig(
 
 # Connexion asynchrone WebSocket avec cascade de résilience
 async with client.aio.live.connect(model="gemini-live-2.5-flash-native-audio", config=config) as session:
-    # Traitement bidi-streaming : audio PCM entrant 16kHz, audio sortant 24kHz,
-    # détection d'interruption VAD (Barge-in), et exécution streaming des outils MCP BigQuery.
+    # 1. Envoi du prompt d'accueil ou de l'audio micro (PCM 16kHz)
+    await session.send(input="Accueille chaleureusement l'utilisateur...", end_of_turn=True)
+    # 2. Réception du flux audio natif 24kHz et des appels d'outils BigQuery en streaming
     pass
 ```
 
