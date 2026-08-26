@@ -21,6 +21,14 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
   const micStreamRef = useRef(null);
   const micProcessorRef = useRef(null);
 
+  const reconnectTimeoutRef = useRef(null);
+
+  // Keep a stable ref to avoid re-triggering connection effects
+  const onToolResponseRef = useRef(onToolResponseReceived);
+  useEffect(() => {
+    onToolResponseRef.current = onToolResponseReceived;
+  }, [onToolResponseReceived]);
+
   // Initialize Web Audio Context for 24kHz Output Playback
   const getAudioContext = useCallback(() => {
     if (!audioContextRef.current) {
@@ -88,6 +96,10 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
 
   // Connect WebSocket to /ws/live
   const connectLive = useCallback(() => {
+    if (socketRef.current && (socketRef.current.readyState === WebSocket.CONNECTING || socketRef.current.readyState === WebSocket.OPEN)) {
+      return;
+    }
+
     try {
       const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
       const wsUrl = `${protocol}//${window.location.host}/ws/live?voice=${encodeURIComponent(voiceName || 'Aoede')}`;
@@ -115,10 +127,10 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
           } else if (data.type === 'tool_call') {
             setCurrentTool(data.tool);
             setIsLiveStreaming(true);
-          } else if (data.type === 'tool_response') {
+          } else if (data.type === 'tool_response' || data.type === 'tool_completed') {
             setIsLiveStreaming(false);
-            if (onToolResponseReceived) {
-              onToolResponseReceived(data.content, data.tool);
+            if (onToolResponseRef.current) {
+              onToolResponseRef.current(data.content, data.tool);
             }
           } else if (data.type === 'interrupted') {
             // Stop current audio output immediately on interrupt
@@ -135,23 +147,23 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
         }
       };
 
-      ws.onclose = () => {
+      ws.onclose = (event) => {
         setIsConnected(false);
         setIsLiveStreaming(false);
+        if (event.code !== 1000 && event.code !== 1001) {
+          console.log(`WebSocket closed with code ${event.code}.`);
+        }
       };
 
       ws.onerror = (err) => {
-        console.error("Gemini Live WebSocket error:", err);
-        setError("Erreur de connexion avec le serveur Gemini Live.");
-        setIsConnected(false);
+        console.warn("Gemini Live WebSocket connection notice:", err);
       };
 
       socketRef.current = ws;
     } catch (err) {
-      console.error("Failed to connect to Gemini Live:", err);
-      setError(err.message);
+      console.warn("Failed to initiate Gemini Live WebSocket:", err);
     }
-  }, [onToolResponseReceived, playAudioChunk]);
+  }, [voiceName, playAudioChunk]);
 
   // Start continuous microphone stream (16kHz mono PCM)
   const startMicStreaming = useCallback(async () => {
@@ -194,8 +206,8 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
       micProcessorRef.current = { inputCtx, processor, micSource };
       setIsLiveStreaming(true);
     } catch (err) {
-      console.error("Error accessing microphone for Live API:", err);
-      setError("Microphone inaccessible pour Gemini Live.");
+      console.warn("Microphone access error for Live API:", err);
+      setError("Microphone inaccessible. Veuillez autoriser l'accès micro dans votre navigateur.");
     }
   }, [getAudioContext]);
 
@@ -216,8 +228,12 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
 
   const disconnectLive = useCallback(() => {
     stopMicStreaming();
+    if (reconnectTimeoutRef.current) {
+      clearTimeout(reconnectTimeoutRef.current);
+      reconnectTimeoutRef.current = null;
+    }
     if (socketRef.current) {
-      socketRef.current.close();
+      socketRef.current.close(1000, "Normal Closure");
       socketRef.current = null;
       setIsConnected(false);
       setIsLiveStreaming(false);
