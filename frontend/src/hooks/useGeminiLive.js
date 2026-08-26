@@ -18,6 +18,7 @@ export function useGeminiLive(onToolResponseReceived, onUIControl = null, voiceN
   const socketRef = useRef(null);
   const audioContextRef = useRef(null);
   const nextPlayTimeRef = useRef(0);
+  const activeSourcesRef = useRef([]);
   const micStreamRef = useRef(null);
   const micProcessorRef = useRef(null);
 
@@ -46,7 +47,7 @@ export function useGeminiLive(onToolResponseReceived, onUIControl = null, voiceN
     return audioContextRef.current;
   }, []);
 
-  // Play incoming 24kHz 16-bit PCM audio chunk smoothly in time with anti-clipping filter
+  // Play incoming 24kHz 16-bit PCM audio chunk smoothly with safe DataView decoding & jitter scheduling
   const playAudioChunk = useCallback((base64Data) => {
     if (!base64Data) return;
     try {
@@ -58,11 +59,12 @@ export function useGeminiLive(onToolResponseReceived, onUIControl = null, voiceN
         bytes[i] = binaryString.charCodeAt(i);
       }
 
-      // Convert 16-bit PCM to Float32
-      const int16Array = new Int16Array(bytes.buffer);
-      const float32Array = new Float32Array(int16Array.length);
-      for (let i = 0; i < int16Array.length; i++) {
-        float32Array[i] = int16Array[i] / 32768.0;
+      // Safe Little-Endian 16-bit PCM decoding via DataView
+      const dataView = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+      const numSamples = Math.floor(bytes.byteLength / 2);
+      const float32Array = new Float32Array(numSamples);
+      for (let i = 0; i < numSamples; i++) {
+        float32Array[i] = dataView.getInt16(i * 2, true) / 32768.0;
       }
 
       const audioBuffer = ctx.createBuffer(1, float32Array.length, 24000);
@@ -73,13 +75,21 @@ export function useGeminiLive(onToolResponseReceived, onUIControl = null, voiceN
       source.connect(ctx.destination);
 
       const currentTime = ctx.currentTime;
-      const startTime = Math.max(currentTime, nextPlayTimeRef.current);
+      // If playback has fallen behind real-time, reset schedule with 20ms jitter cushion
+      if (nextPlayTimeRef.current < currentTime) {
+        nextPlayTimeRef.current = currentTime + 0.02;
+      }
+
+      const startTime = nextPlayTimeRef.current;
       source.start(startTime);
       nextPlayTimeRef.current = startTime + audioBuffer.duration;
 
+      activeSourcesRef.current.push(source);
       setIsSpeaking(true);
+
       source.onended = () => {
-        if (ctx.currentTime >= nextPlayTimeRef.current - 0.05) {
+        activeSourcesRef.current = activeSourcesRef.current.filter(s => s !== source);
+        if (activeSourcesRef.current.length === 0 || ctx.currentTime >= nextPlayTimeRef.current - 0.05) {
           setIsSpeaking(false);
         }
       };
@@ -132,7 +142,11 @@ export function useGeminiLive(onToolResponseReceived, onUIControl = null, voiceN
               onToolResponseRef.current(data.content, data.tool);
             }
           } else if (data.type === 'interrupted') {
-            // Stop current audio output immediately on interrupt
+            // Immediate hardware Barge-in: Stop all active and scheduled audio nodes
+            activeSourcesRef.current.forEach(src => {
+              try { src.stop(); } catch(e) {}
+            });
+            activeSourcesRef.current = [];
             if (audioContextRef.current) {
               nextPlayTimeRef.current = audioContextRef.current.currentTime;
             }
