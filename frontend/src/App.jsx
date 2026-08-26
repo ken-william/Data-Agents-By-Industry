@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { AgentBuilder } from './components/AgentBuilder';
 import { LiveCanvas } from './components/LiveCanvas';
 import { SettingsDrawer } from './components/SettingsDrawer';
+import { useGeminiLive } from './hooks/useGeminiLive';
 import { useSpeech } from './hooks/useSpeech';
 import { useAgentChat } from './hooks/useAgentChat';
 import { Loader2, RefreshCw } from 'lucide-react';
@@ -31,12 +32,6 @@ export function App() {
     }
   }, []);
 
-  // Voice recognition transcript state
-  const [micTranscript, setMicTranscript] = useState('');
-  const handleTranscript = useCallback((text) => {
-    setMicTranscript(text);
-  }, []);
-
   const handleVoiceSwitchAgent = useCallback((agentId) => {
     const cleanId = agentId.replace(/_agent$/, '');
     const target = agents.find(a => a.id === agentId || a.id === cleanId);
@@ -45,8 +40,15 @@ export function App() {
     }
   }, [agents]);
 
-  const speechProps = useSpeech(handleTranscript);
-  const chatProps = useAgentChat(selectedAgent, speechProps.speakText, handleVoiceSwitchAgent);
+  const speechProps = useSpeech(() => {});
+  const chatProps = useAgentChat(selectedAgent, null, handleVoiceSwitchAgent);
+
+  // Gemini Live Native Multimodal Hook (PCM 16kHz Streaming & 24kHz Native Audio Output)
+  const handleToolResponseReceived = useCallback((toolResult, toolName) => {
+    chatProps.addAssistantMessage(toolResult);
+  }, [chatProps]);
+
+  const geminiLiveProps = useGeminiLive(handleToolResponseReceived, 'Aoede');
 
   // Fetch 11 Agents from backend API
   const fetchAgents = async () => {
@@ -77,38 +79,31 @@ export function App() {
     fetchAgents();
   }, []);
 
-  const hasWelcomedRef = useRef(false);
-
-  // Proactive warm welcome on initial application load
-  useEffect(() => {
-    if (agents.length > 0 && !hasWelcomedRef.current) {
-      hasWelcomedRef.current = true;
-      const welcomeText = "Bonjour et bienvenue sur Talk to Data ! Je suis votre hôte connecté à votre flotte de onze agents BigQuery sur Google Cloud. Parlez-moi directement ou choisissez un secteur à explorer.";
-      speechProps.speakText(welcomeText);
-    }
-  }, [agents, speechProps]);
-
   const handleSelectAgent = (agent) => {
     setSelectedAgent(agent);
     chatProps.clearMessages();
-    speechProps.stopSpeaking();
-
-    const name = agent.displayName || agent.name || "cet agent";
-    const category = agent.theme?.category || "ce secteur";
-    // Concise, elegant, natural intro (1 sentence + short question, ~5 seconds)
-    const sectorIntro = `Nous sommes sur ${name}, dédié à ${category}. Que souhaitez-vous analyser ?`;
-    speechProps.speakText(sectorIntro);
+    
+    // Notify Gemini Live session about agent selection
+    if (geminiLiveProps.isConnected) {
+      geminiLiveProps.sendLivePrompt(`Connecte-toi à l'agent sectoriel ${agent.displayName || agent.name}.`);
+    }
   };
 
   const handleLaunchLive = () => {
     if (selectedAgent) {
       setViewMode('live');
+      // Auto-start Gemini Live microphone streaming on entering live canvas
+      if (geminiLiveProps.isConnected && !geminiLiveProps.isLiveStreaming) {
+        geminiLiveProps.startMicStreaming();
+      }
     }
   };
 
   const handleReturnToBuilder = () => {
     setViewMode('builder');
-    speechProps.stopSpeaking();
+    if (geminiLiveProps.isLiveStreaming) {
+      geminiLiveProps.stopMicStreaming();
+    }
   };
 
   return (
@@ -129,7 +124,7 @@ export function App() {
         agentsCount={agents.length}
         autoSpeechEnabled={speechProps.autoSpeechEnabled}
         setAutoSpeechEnabled={speechProps.setAutoSpeechEnabled}
-        isSpeaking={speechProps.isSpeaking}
+        isSpeaking={geminiLiveProps.isSpeaking}
         onOpenSettings={() => setIsSettingsOpen(true)}
       />
 
@@ -169,14 +164,17 @@ export function App() {
             onSelectAgent={handleSelectAgent}
             onReturnToBuilder={handleReturnToBuilder}
             messages={chatProps.messages}
-            isStreaming={chatProps.isStreaming}
+            isStreaming={chatProps.isStreaming || geminiLiveProps.isLiveStreaming}
             thoughts={chatProps.thoughts}
-            error={chatProps.error}
-            onSendMessage={chatProps.sendMessage}
-            voiceProps={{
-              ...speechProps,
-              transcript: micTranscript
+            error={chatProps.error || geminiLiveProps.error}
+            onSendMessage={(text) => {
+              chatProps.sendMessage(text);
+              if (geminiLiveProps.isConnected) {
+                geminiLiveProps.sendLivePrompt(text);
+              }
             }}
+            geminiLiveProps={geminiLiveProps}
+            voiceProps={geminiLiveProps}
             onResetChat={chatProps.clearMessages}
             screenMode={screenMode}
           />

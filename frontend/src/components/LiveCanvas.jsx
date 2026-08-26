@@ -35,6 +35,7 @@ export function LiveCanvas({
   thoughts,
   error,
   onSendMessage,
+  geminiLiveProps,
   voiceProps,
   onResetChat,
   screenMode = 'showcase'
@@ -44,7 +45,25 @@ export function LiveCanvas({
   const [showSQLInspector, setShowSQLInspector] = useState(false);
 
   const AgentIcon = selectedAgent ? getIconComponent(selectedAgent.id) : Bot;
-  const isSpeaking = voiceProps?.isSpeaking;
+  
+  const liveActive = geminiLiveProps?.isLiveStreaming || voiceProps?.isLiveStreaming || voiceProps?.isListening;
+  const isSpeaking = geminiLiveProps?.isSpeaking || voiceProps?.isSpeaking;
+
+  const handleToggleMic = () => {
+    if (geminiLiveProps) {
+      if (geminiLiveProps.isLiveStreaming) {
+        geminiLiveProps.stopMicStreaming();
+      } else {
+        geminiLiveProps.startMicStreaming();
+      }
+    } else if (voiceProps) {
+      if (voiceProps.isListening) {
+        voiceProps.stopListening();
+      } else {
+        voiceProps.startListening();
+      }
+    }
+  };
 
   // Zero-Chat Scroll Architecture: Get only the LATEST assistant response & user prompt
   const lastUserMessage = [...messages].reverse().find(m => m.role === 'user');
@@ -88,7 +107,7 @@ export function LiveCanvas({
               <h3 className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-2 font-['Google_Sans_Flex']">
                 {selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : selectedAgent?.id}
                 <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium">
-                  • Connecté BigQuery
+                  • Gemini Live 24kHz
                 </span>
               </h3>
             </div>
@@ -125,23 +144,23 @@ export function LiveCanvas({
       {/* Top Centered Slime Liquid Gemini Orb & Master Host Narrator Speech Bubble */}
       <div className="flex flex-col items-center justify-center text-center space-y-2 py-1">
         <GeminiOrb
-          isListening={voiceProps.isListening}
+          isListening={liveActive}
           isSpeaking={isSpeaking}
           isStreaming={isStreaming}
-          onClickMic={voiceProps.isListening ? voiceProps.stopListening : voiceProps.startListening}
-          speechSupported={voiceProps?.speechSupported}
+          onClickMic={handleToggleMic}
+          speechSupported={true}
           showcaseMode={isShowcase}
         />
 
         {/* Master AI Host Storytelling Narrator Bubble */}
         <p className="text-xs sm:text-sm font-medium text-slate-600 max-w-lg leading-relaxed italic bg-white/80 px-4 py-2 rounded-full border border-slate-200/80 shadow-2xs">
           {isSpeaking
-            ? '"J\'analyse votre demande et je synthétise le rapport d\'affaires..."'
+            ? '"Dialogue Gemini Live en direct..."'
             : isStreaming
-            ? '"Connexion aux tables BigQuery... Synthèse immédiate des métriques clés."'
+            ? '"Raisonnement et consultation BigQuery en cours..."'
             : lastUserMessage
             ? `"${lastUserMessage.content}"`
-            : `"Bonjour ! Je suis votre Agent Hôte pour ${selectedAgent?.displayName ? selectedAgent.displayName.split(' - ')[0] : 'BigQuery'}. Posez-moi une question ou sélectionnez un scénario ci-dessous."`}
+            : `"Bonjour ! Je suis connecté en direct avec Gemini Live. Parlez-moi ou posez votre question."`}
         </p>
       </div>
 

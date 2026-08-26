@@ -259,6 +259,15 @@ export function useAgentChat(selectedAgent, speakText, onVoiceSwitchAgent) {
     }
   }, [selectedAgent, isStreaming, messages, speakText, onVoiceSwitchAgent]);
 
+  const addAssistantMessage = useCallback((content) => {
+    const cleaned = cleanRawContent(content);
+    setMessages(prev => [...prev, {
+      role: 'assistant',
+      content: cleaned,
+      timestamp: new Date().toLocaleTimeString('fr-FR')
+    }]);
+  }, []);
+
   const clearMessages = useCallback(() => {
     setMessages([]);
     setThoughts([]);
@@ -271,6 +280,7 @@ export function useAgentChat(selectedAgent, speakText, onVoiceSwitchAgent) {
     thoughts,
     error,
     sendMessage,
+    addAssistantMessage,
     clearMessages
   };
 }
