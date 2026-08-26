@@ -149,42 +149,44 @@ tools:
 
 ---
 
-### Tier 2 : Orchestrateur ADK avec Chargement des Outils MCP Toolbox
+### Tier 2 : Orchestrateur ADK & Gemini Live WebSocket (`backend/orchestrator/`)
 
 ```python
-# backend/orchestrator/host_agent.py
+# backend/orchestrator/gemini_live_session.py
+from google import genai
 from google.genai import types
-from google.genai.agents import Agent
-from google.cloud.toolbox import ToolboxClient
+from mcp_toolbox.toolbox_client import toolbox_client
+from .host_agent import HOST_SYSTEM_INSTRUCTION
 
-# Connexion au serveur MCP Toolbox local ou distant
-toolbox = ToolboxClient(config_path="backend/mcp_toolbox/tools.yaml")
-toolbox_tools = toolbox.get_tools()
-
-HOST_SYSTEM_INSTRUCTION = """
-Tu es l'Agent Hôte Virtuel de la démonstration Talk to Data.
-Tu accueilles chaleureusement l'utilisateur en français.
-Lorsque l'utilisateur te pose une question sur un secteur (sport, cinéma, santé, aéronautique...),
-utilise les outils MCP Toolbox à ta disposition pour interroger les bases BigQuery.
-Pendant le temps d'exécution, maintiens une conversation naturelle et agréable.
-Ne lis jamais de JSON brut ou de code SQL technique à la voix : traduis toujours en synthèse d'affaires élégante.
-"""
-
-# Définition de l'Agent Hôte ADK avec injection native des outils MCP Toolbox
-host_agent = Agent(
-    model="gemini-2.0-flash-exp",
-    system_instruction=HOST_SYSTEM_INSTRUCTION,
-    tools=toolbox_tools
+# Configuration Live Bidi-Streaming avec Synthèse Vocale 24kHz
+config = types.LiveConnectConfig(
+    response_modalities=[types.LiveModality.AUDIO],
+    speech_config=types.SpeechConfig(
+        voice_config=types.VoiceConfig(
+            prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name="Aoede")
+        )
+    ),
+    system_instruction=types.Content(
+        parts=[types.Part.from_text(text=HOST_SYSTEM_INSTRUCTION)]
+    ),
+    tools=toolbox_client.get_adk_function_declarations()
 )
+
+# Connexion asynchrone WebSocket avec cascade de résilience
+async with client.aio.live.connect(model="gemini-live-2.5-flash-native-audio", config=config) as session:
+    # Traitement bidi-streaming : audio PCM entrant 16kHz, audio sortant 24kHz,
+    # détection d'interruption VAD (Barge-in), et exécution streaming des outils MCP BigQuery.
+    pass
 ```
 
 ---
 
-## 🚀 5. Plan de Migration Progressif (Roadmap)
+## 🚀 5. État d'Implémentation & Production
 
-| Phase | Objectif | Livrables Clés |
-| :--- | :--- | :--- |
-| **Étape 1** | **Packaging MCP Toolbox (Tier 3)** | Définir les `tools.yaml` pour les 11 jeux de données BigQuery avec MCP Toolbox. |
-| **Étape 2** | **Orchestrateur ADK (Tier 2)** | Créer l'Agent Hôte central avec Google ADK et charger les outils Toolbox. |
-| **Étape 3** | **Streaming Gemini Live Audio** | Brancher la session WebSocket Gemini Multimodal Live API pour la voix bidirectionnelle. |
-| **Étape 4** | **Branchement Frontend (Tier 1)** | Connecter l'interface React au flux WebSocket / Audio de l'Orchestrateur. |
+| Phase | Objectif | Statut | Livrables Réalisés |
+| :--- | :--- | :--- | :--- |
+| **Tier 3** | **Packaging MCP Toolbox** | ✅ **Opérationnel** | 11 Data Agents BigQuery exposés via `mcp_toolbox.toolbox_client` et testables en direct. |
+| **Tier 2** | **Orchestrateur ADK & Host Agent** | ✅ **Opérationnel** | `ADKHostAgent` avec base de connaissances des 11 secteurs (`AGENT_KNOWLEDGE_BASE`), banques de thinking dynamiques, et filtre d'élocution exécutif. |
+| **Tier 2** | **Streaming Gemini Live Audio** | ✅ **Opérationnel** | WebSocket plein duplex `/ws/live`, cascade de modèles native-audio (`gemini-live-2.5-flash-native-audio` $\rightarrow$ `gemini-2.0-flash-exp`), Barge-in instantané, audio PCM 24kHz. |
+| **Tier 1** | **Interface UI Découplée** | ✅ **Opérationnel** | Frontend React avec `useGeminiLive` (Web Audio API, filtre passe-bas 9.5 kHz anti-clipping), `useAgentChat` et commutation d'agents 100% mains libres. |
+

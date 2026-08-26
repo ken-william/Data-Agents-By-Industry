@@ -109,7 +109,31 @@ python agents/ceres/deploy_agent.py
 
 ---
 
-## 4. Verification & Testing
+## 4. Launching the Application & Testing Gemini Live
+
+### Start the Full-Stack Platform
+To launch the FastAPI backend, ADK Orchestrator, Gemini Live WebSocket (`/ws/live`), and React frontend:
+
+```bash
+./start_app.sh
+```
+
+The application is immediately available at `http://localhost:8000`.
+
+### Configure Environment Variables (`.env`)
+Ensure your `.env` configuration file is configured for Vertex AI Live Native-Audio:
+
+```ini
+GOOGLE_GENAI_USE_VERTEXAI=1
+GOOGLE_CLOUD_PROJECT=data-agents-by-industry
+GOOGLE_CLOUD_LOCATION=us-central1
+DEFAULT_VERTEX_AGENT_MODEL=gemini-live-2.5-flash-native-audio
+DEFAULT_GEMINI_AGENT_MODEL=gemini-2.5-flash-native-audio-preview-12-2025
+```
+
+---
+
+## 5. Verification & Testing
 
 ### Test BigQuery Query Execution
 
@@ -125,9 +149,9 @@ bq query --use_legacy_sql=false \
    WHERE m.baisse_rendement_predite_pct > 20.0"
 ```
 
-### Test Cloud Storage Storage Buckets
+### Test Cloud Storage Buckets
 
-Verify that Cloud Storage dedicated buckets are populated with authentic CSV files:
+Verify that Cloud Storage dedicated buckets are populated with authentic CSV and object files:
 
 ```bash
 gcloud storage ls "gs://talktodata-*-raw-data/**"
