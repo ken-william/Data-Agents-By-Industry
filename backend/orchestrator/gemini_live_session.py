@@ -165,7 +165,7 @@ class GeminiLiveSessionManager:
         await self.client_ws.accept()
         logger.info(f"Client connected to Gemini Live WebSocket with voice: {self.voice}.")
 
-        # Live Config with 24kHz Audio synthesis, Affective Dialog & Real-Time Transcriptions
+        # Live Config with 24kHz Audio synthesis & Selected Prebuilt Voice
         config = types.LiveConnectConfig(
             response_modalities=["AUDIO"],
             speech_config=types.SpeechConfig(
@@ -175,9 +175,6 @@ class GeminiLiveSessionManager:
                     )
                 )
             ),
-            enable_affective_dialog=True,
-            input_audio_transcription=types.AudioTranscriptionConfig(),
-            output_audio_transcription=types.AudioTranscriptionConfig(),
             system_instruction=types.Content(
                 parts=[types.Part.from_text(text=HOST_SYSTEM_INSTRUCTION)]
             ),
