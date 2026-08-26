@@ -105,11 +105,6 @@ export function App() {
   const handleSelectAgent = (agent) => {
     setSelectedAgent(agent);
     chatProps.clearMessages();
-    
-    // Notify Gemini Live session about agent selection
-    if (geminiLiveProps.isConnected) {
-      geminiLiveProps.sendLivePrompt(`Connecte-toi à l'agent sectoriel ${agent.displayName || agent.name}.`);
-    }
   };
 
   const handleLaunchLive = () => {

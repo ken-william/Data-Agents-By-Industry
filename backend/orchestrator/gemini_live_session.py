@@ -119,7 +119,7 @@ class GeminiLiveSessionManager:
 
         # Live Config with 24kHz Audio synthesis & Selected Prebuilt Voice
         config = types.LiveConnectConfig(
-            response_modalities=[types.LiveModality.AUDIO],
+            response_modalities=["AUDIO"],
             speech_config=types.SpeechConfig(
                 voice_config=types.VoiceConfig(
                     prebuilt_voice_config=types.PrebuiltVoiceConfig(
