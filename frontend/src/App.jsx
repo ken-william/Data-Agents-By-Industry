@@ -11,7 +11,7 @@ import { Loader2, RefreshCw } from 'lucide-react';
 export function App() {
   const [agents, setAgents] = useState([]);
   const [selectedAgent, setSelectedAgent] = useState(null);
-  const [viewMode, setViewMode] = useState('live'); // Default directly to Live Experience
+  const [viewMode, setViewMode] = useState('builder'); // Land on Home Screen with Live Voice Active
   const [screenMode, setScreenMode] = useState('showcase'); // 'showcase' (Écran A) vs 'controller' (Écran B)
   const [activeTheme, setActiveTheme] = useState('cloud-next'); // 'cloud-next' | 'gemini-aurora' | 'tech-sunset' | 'eco-system'
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -37,6 +37,7 @@ export function App() {
     const target = agents.find(a => a.id === agentId || a.id === cleanId);
     if (target) {
       setSelectedAgent(target);
+      setViewMode('live'); // Automatically open scenario canvas on voice demand!
     }
   }, [agents]);
 
@@ -167,12 +168,19 @@ export function App() {
             </button>
           </div>
         ) : viewMode === 'builder' ? (
-          /* Page 1: Gemini Enterprise Luminous Aurora Landing Page */
+          /* Page 1: Gemini Enterprise Luminous Aurora Landing Page with Live Voice */
           <AgentBuilder
             agents={agents}
             selectedAgent={selectedAgent}
             onSelectAgent={handleSelectAgent}
             onLaunchLive={handleLaunchLive}
+            geminiLiveProps={geminiLiveProps}
+            onSendMessage={(text) => {
+              chatProps.sendMessage(text);
+              if (geminiLiveProps.isConnected) {
+                geminiLiveProps.sendLivePrompt(text);
+              }
+            }}
           />
         ) : (
           /* Page 2: Live Experience (Data Canvas Showcase & Chroma Orb) */
