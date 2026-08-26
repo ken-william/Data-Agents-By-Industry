@@ -7,7 +7,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
  * - Receives and plays 24kHz PCM audio natively synthesized by Gemini Live Voice (Aoede).
  * - Handles interruptibility, live tool events, and transcription.
  */
-export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
+export function useGeminiLive(onToolResponseReceived, onUIControl = null, voiceName = 'Aoede') {
   const [isConnected, setIsConnected] = useState(false);
   const [isLiveStreaming, setIsLiveStreaming] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -23,11 +23,16 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
 
   const reconnectTimeoutRef = useRef(null);
 
-  // Keep a stable ref to avoid re-triggering connection effects
+  // Keep stable refs to avoid re-triggering connection effects
   const onToolResponseRef = useRef(onToolResponseReceived);
   useEffect(() => {
     onToolResponseRef.current = onToolResponseReceived;
   }, [onToolResponseReceived]);
+
+  const onUIControlRef = useRef(onUIControl);
+  useEffect(() => {
+    onUIControlRef.current = onUIControl;
+  }, [onUIControl]);
 
   // Initialize Web Audio Context for 24kHz Output Playback
   const getAudioContext = useCallback(() => {
@@ -43,6 +48,7 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
 
   // Play incoming 24kHz 16-bit PCM audio chunk smoothly in time with anti-clipping filter
   const playAudioChunk = useCallback((base64Data) => {
+    if (!base64Data) return;
     try {
       const ctx = getAudioContext();
       const binaryString = window.atob(base64Data);
@@ -52,7 +58,7 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
         bytes[i] = binaryString.charCodeAt(i);
       }
 
-      // Convert 16-bit signed integer PCM to Float32 [-1.0, 1.0]
+      // Convert 16-bit PCM to Float32
       const int16Array = new Int16Array(bytes.buffer);
       const float32Array = new Float32Array(int16Array.length);
       for (let i = 0; i < int16Array.length; i++) {
@@ -60,37 +66,25 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
       }
 
       const audioBuffer = ctx.createBuffer(1, float32Array.length, 24000);
-      audioBuffer.copyToChannel(float32Array, 0);
+      audioBuffer.getChannelData(0).set(float32Array);
 
       const source = ctx.createBufferSource();
       source.buffer = audioBuffer;
+      source.connect(ctx.destination);
 
-      // Soft Limiter Gain Node (0.90) to prevent clipping distortion
-      const gainNode = ctx.createGain();
-      gainNode.gain.setValueAtTime(0.90, ctx.currentTime);
-
-      // Lowpass anti-aliasing filter to remove high-frequency digital noise
-      const filter = ctx.createBiquadFilter();
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(9500, ctx.currentTime);
-
-      source.connect(gainNode);
-      gainNode.connect(filter);
-      filter.connect(ctx.destination);
-
-      const now = ctx.currentTime;
-      const startTime = Math.max(now, nextPlayTimeRef.current);
+      const currentTime = ctx.currentTime;
+      const startTime = Math.max(currentTime, nextPlayTimeRef.current);
       source.start(startTime);
       nextPlayTimeRef.current = startTime + audioBuffer.duration;
-      setIsSpeaking(true);
 
+      setIsSpeaking(true);
       source.onended = () => {
         if (ctx.currentTime >= nextPlayTimeRef.current - 0.05) {
           setIsSpeaking(false);
         }
       };
     } catch (e) {
-      console.warn("Audio playback error:", e);
+      console.warn("Audio playback chunk error:", e);
     }
   }, [getAudioContext]);
 
@@ -124,6 +118,11 @@ export function useGeminiLive(onToolResponseReceived, voiceName = 'Aoede') {
             setLiveTranscript(prev => prev + data.content);
           } else if (data.type === 'thought') {
             console.log("Live Orchestrator Thought:", data.content);
+          } else if (data.type === 'ui_control') {
+            console.log("🎯 UI Control command received from Gemini Live:", data);
+            if (onUIControlRef.current) {
+              onUIControlRef.current(data);
+            }
           } else if (data.type === 'tool_call') {
             setCurrentTool(data.tool);
             setIsLiveStreaming(true);

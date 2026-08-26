@@ -49,7 +49,20 @@ export function App() {
     chatProps.addAssistantMessage(toolResult);
   }, [chatProps]);
 
-  const geminiLiveProps = useGeminiLive(handleToolResponseReceived, 'Aoede');
+  const handleUIControl = useCallback((command) => {
+    if (command.action === 'switch_agent' && command.agent_id) {
+      const cleanId = command.agent_id.replace(/_agent$/, '');
+      const target = agents.find(a => a.id === command.agent_id || a.id === cleanId);
+      if (target) {
+        setSelectedAgent(target);
+        setViewMode('live');
+      }
+    } else if (command.action === 'home') {
+      setViewMode('builder');
+    }
+  }, [agents]);
+
+  const geminiLiveProps = useGeminiLive(handleToolResponseReceived, handleUIControl, 'Aoede');
 
   // Auto-activate microphone as soon as Gemini Live WebSocket is ready
   useEffect(() => {

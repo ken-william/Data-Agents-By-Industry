@@ -91,10 +91,11 @@ class GeminiLiveSessionManager:
             self.is_vertex = True
 
     def _get_live_tools(self):
-        """Builds Gemini Live Function Declarations from MCP Toolbox."""
+        """Builds Gemini Live Function Declarations from MCP Toolbox and UI Control Actions."""
         raw_tools = toolbox_client.get_tool_definitions()
         function_declarations = []
 
+        # 1. Specialized BigQuery MCP Tools
         for t in raw_tools:
             function_declarations.append(
                 types.FunctionDeclaration(
@@ -109,6 +110,53 @@ class GeminiLiveSessionManager:
                     })
                 )
             )
+
+        # 2. UI Control & Navigation Tools
+        function_declarations.append(
+            types.FunctionDeclaration(
+                name="switch_agent_view",
+                description="Bascule visuellement l'application sur un secteur ou agent spécifique (sully, arena_manager, earth_intel, credit_advisor, cine_analyst, net_arch, transit_navigator, pulse_checker, shelf_optimizer, helios, juris_pilot).",
+                parameters={
+                    "type": "object",
+                    "properties": {
+                        "agent_id": {
+                            "type": "string",
+                            "description": "Identifiant de l'agent cible (ex: 'sully_agent', 'arena_manager_agent', 'earth_intel_agent', 'credit_advisor_agent', 'cine_analyst_agent', 'net_arch_agent', 'transit_navigator_agent', 'pulse_checker_agent', 'shelf_optimizer_agent', 'helios_agent', 'juris_pilot_agent')."
+                        },
+                        "sector_name": {
+                            "type": "string",
+                            "description": "Nom convivial du secteur d'activité."
+                        }
+                    },
+                    "required": ["agent_id"]
+                }
+            )
+        )
+
+        function_declarations.append(
+            types.FunctionDeclaration(
+                name="toggle_sql_inspector",
+                description="Ouvre ou ferme le volet d'inspection SQL BigQuery sur l'écran pour afficher la requête SQL exacte.",
+                parameters={
+                    "type": "object",
+                    "properties": {
+                        "visible": {
+                            "type": "boolean",
+                            "description": "True pour afficher l'inspecteur SQL, False pour masquer."
+                        }
+                    },
+                    "required": ["visible"]
+                }
+            )
+        )
+
+        function_declarations.append(
+            types.FunctionDeclaration(
+                name="return_to_home_view",
+                description="Revient à l'écran d'accueil principal de l'application.",
+                parameters={"type": "object", "properties": {}}
+            )
+        )
 
         return [types.Tool(function_declarations=function_declarations)] if function_declarations else []
 
@@ -275,7 +323,7 @@ class GeminiLiveSessionManager:
                     if server_content.interrupted:
                         await self.client_ws.send_json({"type": "interrupted"})
 
-                # 3. Streaming Tools Execution: Real-time Tool Call -> MCP Toolbox BigQuery
+                # 3. Streaming Tools Execution: Real-time Tool Call -> MCP Toolbox BigQuery & UI Controls
                 tool_call = response.tool_call
                 if tool_call is not None:
                     for call in tool_call.function_calls:
@@ -283,6 +331,69 @@ class GeminiLiveSessionManager:
                         func_name = call.name
                         func_args = call.args or {}
 
+                        # A. Handle UI Control & Interface Navigation Tools
+                        if func_name == "switch_agent_view":
+                            target_id = str(func_args.get("agent_id", ""))
+                            logger.info(f"Gemini Live triggered UI Control: switch_agent_view -> {target_id}")
+                            await self.client_ws.send_json({
+                                "type": "ui_control",
+                                "action": "switch_agent",
+                                "agent_id": target_id
+                            })
+                            await live_session.send(
+                                types.LiveClientToolResponse(
+                                    function_responses=[
+                                        types.FunctionResponse(
+                                            name=func_name,
+                                            id=call_id,
+                                            response={"status": "success", "message": f"Écran basculé sur {target_id}."}
+                                        )
+                                    ]
+                                )
+                            )
+                            continue
+
+                        elif func_name == "toggle_sql_inspector":
+                            visible = bool(func_args.get("visible", True))
+                            logger.info(f"Gemini Live triggered UI Control: toggle_sql_inspector -> {visible}")
+                            await self.client_ws.send_json({
+                                "type": "ui_control",
+                                "action": "toggle_sql",
+                                "visible": visible
+                            })
+                            await live_session.send(
+                                types.LiveClientToolResponse(
+                                    function_responses=[
+                                        types.FunctionResponse(
+                                            name=func_name,
+                                            id=call_id,
+                                            response={"status": "success", "message": "Inspecteur SQL mis à jour."}
+                                        )
+                                    ]
+                                )
+                            )
+                            continue
+
+                        elif func_name == "return_to_home_view":
+                            logger.info("Gemini Live triggered UI Control: return_to_home_view")
+                            await self.client_ws.send_json({
+                                "type": "ui_control",
+                                "action": "home"
+                            })
+                            await live_session.send(
+                                types.LiveClientToolResponse(
+                                    function_responses=[
+                                        types.FunctionResponse(
+                                            name=func_name,
+                                            id=call_id,
+                                            response={"status": "success", "message": "Retour à l'accueil effectué."}
+                                        )
+                                    ]
+                                )
+                            )
+                            continue
+
+                        # B. Handle BigQuery MCP Analytical Tools
                         # Notify client in real-time that BigQuery is being queried
                         await self.client_ws.send_json({
                             "type": "thought",
