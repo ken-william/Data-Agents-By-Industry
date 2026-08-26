@@ -11,7 +11,7 @@ import { Loader2, RefreshCw } from 'lucide-react';
 export function App() {
   const [agents, setAgents] = useState([]);
   const [selectedAgent, setSelectedAgent] = useState(null);
-  const [viewMode, setViewMode] = useState('builder'); // 'builder' (Page 1) vs 'live' (Page 2)
+  const [viewMode, setViewMode] = useState('live'); // Default directly to Live Experience
   const [screenMode, setScreenMode] = useState('showcase'); // 'showcase' (Écran A) vs 'controller' (Écran B)
   const [activeTheme, setActiveTheme] = useState('cloud-next'); // 'cloud-next' | 'gemini-aurora' | 'tech-sunset' | 'eco-system'
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -49,6 +49,28 @@ export function App() {
   }, [chatProps]);
 
   const geminiLiveProps = useGeminiLive(handleToolResponseReceived, 'Aoede');
+
+  // Auto-activate microphone as soon as Gemini Live WebSocket is ready
+  useEffect(() => {
+    if (geminiLiveProps.isConnected && !geminiLiveProps.isLiveStreaming) {
+      geminiLiveProps.startMicStreaming();
+    }
+  }, [geminiLiveProps.isConnected, geminiLiveProps.isLiveStreaming]);
+
+  // Browser Autoplay Fallback: activate mic on first user click if browser policy paused it
+  useEffect(() => {
+    const handleFirstUserGesture = () => {
+      if (geminiLiveProps.isConnected && !geminiLiveProps.isLiveStreaming) {
+        geminiLiveProps.startMicStreaming();
+      }
+    };
+    window.addEventListener('click', handleFirstUserGesture, { once: true });
+    window.addEventListener('touchstart', handleFirstUserGesture, { once: true });
+    return () => {
+      window.removeEventListener('click', handleFirstUserGesture);
+      window.removeEventListener('touchstart', handleFirstUserGesture);
+    };
+  }, [geminiLiveProps.isConnected, geminiLiveProps.isLiveStreaming]);
 
   // Fetch 11 Agents from backend API
   const fetchAgents = async () => {
@@ -92,7 +114,6 @@ export function App() {
   const handleLaunchLive = () => {
     if (selectedAgent) {
       setViewMode('live');
-      // Auto-start Gemini Live microphone streaming on entering live canvas
       if (geminiLiveProps.isConnected && !geminiLiveProps.isLiveStreaming) {
         geminiLiveProps.startMicStreaming();
       }
@@ -101,9 +122,6 @@ export function App() {
 
   const handleReturnToBuilder = () => {
     setViewMode('builder');
-    if (geminiLiveProps.isLiveStreaming) {
-      geminiLiveProps.stopMicStreaming();
-    }
   };
 
   return (
