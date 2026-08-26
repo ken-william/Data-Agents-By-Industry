@@ -126,14 +126,14 @@ export function SettingsDrawer({
             </div>
           </div>
 
-          {/* Voice Output Toggle */}
+          {/* Gemini Live Native Audio Toggle */}
           <div className="space-y-3 pt-2 border-t border-slate-200">
             <div className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 border border-slate-200">
               <div className="flex items-center gap-3">
-                {autoSpeechEnabled ? <Volume2 className="size-5 text-emerald-600" /> : <VolumeX className="size-5 text-slate-400" />}
+                {autoSpeechEnabled ? <Volume2 className="size-5 text-emerald-600" /> : <VolumeX className="size-4 text-slate-400" />}
                 <div>
-                  <span className="text-xs font-bold text-slate-900 block">Synthèse Vocale Live</span>
-                  <span className="text-[11px] text-slate-500">Lecture orale automatique des réponses</span>
+                  <span className="text-xs font-bold text-slate-900 block">Gemini Live Audio Natif</span>
+                  <span className="text-[11px] text-slate-500">Dialogue vocal bidirectionnel 24 kHz & raisonnement</span>
                 </div>
               </div>
 

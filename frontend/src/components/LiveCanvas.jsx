@@ -50,13 +50,6 @@ export function LiveCanvas({
   const lastUserMessage = [...messages].reverse().find(m => m.role === 'user');
   const lastAssistantMessage = [...messages].reverse().find(m => m.role === 'assistant');
 
-  // Trigger Host AI Storytelling Speech out loud during BigQuery 2-3s execution
-  useEffect(() => {
-    if (isStreaming && voiceProps?.speakText) {
-      voiceProps.speakText("Je consulte à l'instant vos tables BigQuery... Synthèse immédiate des métriques clés.");
-    }
-  }, [isStreaming, voiceProps]);
-
   const handleInputChange = (e) => {
     setInputPrompt(e.target.value);
   };
