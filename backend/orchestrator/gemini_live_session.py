@@ -14,11 +14,17 @@ import json
 import base64
 import asyncio
 import logging
+from pathlib import Path
 from typing import Dict, Any, Optional
+from dotenv import load_dotenv
 from fastapi import WebSocket, WebSocketDisconnect
 
 from google import genai
 from google.genai import types
+
+# Load .env file from project root or current folder
+load_dotenv(Path(__file__).parents[2] / ".env", override=True)
+load_dotenv(Path(__file__).parent / ".env", override=True)
 
 try:
     from mcp_toolbox.toolbox_client import toolbox_client
@@ -28,16 +34,36 @@ from .host_agent import HOST_SYSTEM_INSTRUCTION
 
 logger = logging.getLogger("gemini_live_session")
 
-PROJECT_ID = os.environ.get("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
-LOCATION = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
+def _env_flag(name: str, default: bool = False) -> bool:
+    value = os.getenv(name)
+    if value is None:
+        return default
+    return value.strip().lower() in {"1", "true", "yes", "on"}
+
+def _ignore_normal_live_close(record: logging.LogRecord) -> bool:
+    exc = record.exc_info[1] if record.exc_info else None
+    return not (
+        isinstance(exc, genai.errors.APIError) and exc.code == 1000
+    )
+
+logging.getLogger("google_adk.google.adk.flows.llm_flows.base_llm_flow").addFilter(_ignore_normal_live_close)
+
+PROJECT_ID = os.getenv("GOOGLE_CLOUD_PROJECT", "data-agents-by-industry")
+LOCATION = os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1")
+LIVE_USE_VERTEXAI = _env_flag("GOOGLE_GENAI_USE_VERTEXAI", default=True)
 
 # Supported ADK Native-Audio Live Models
+DEFAULT_VERTEX_AGENT_MODEL = os.getenv("DEFAULT_VERTEX_AGENT_MODEL", "gemini-live-2.5-flash-native-audio")
+DEFAULT_GEMINI_AGENT_MODEL = os.getenv("DEFAULT_GEMINI_AGENT_MODEL", "gemini-2.5-flash-native-audio-preview-12-2025")
+
 VERTEX_LIVE_MODELS = [
+    DEFAULT_VERTEX_AGENT_MODEL,
     "gemini-live-2.5-flash-native-audio",
     "gemini-2.0-flash-exp",
     "gemini-2.0-flash"
 ]
 GEMINI_API_LIVE_MODELS = [
+    DEFAULT_GEMINI_AGENT_MODEL,
     "gemini-2.5-flash-native-audio-preview-12-2025",
     "gemini-2.0-flash-exp"
 ]
@@ -49,13 +75,13 @@ class GeminiLiveSessionManager:
         self.voice = voice if voice in ["Aoede", "Puck", "Charon", "Kore", "Fenrir"] else "Aoede"
         self.is_active = True
         self.client: Optional[genai.Client] = None
-        self.is_vertex = False
+        self.is_vertex = LIVE_USE_VERTEXAI
         self._init_genai_client()
 
     def _init_genai_client(self):
         """Initializes the google-genai client with Vertex AI or AI Studio API Key."""
-        api_key = os.environ.get("GEMINI_API_KEY")
-        if api_key:
+        api_key = os.getenv("GEMINI_API_KEY")
+        if not self.is_vertex and api_key:
             logger.info("Initializing Gemini Live client with Google AI Studio API Key.")
             self.client = genai.Client(api_key=api_key, http_options={"api_version": "v1alpha"})
             self.is_vertex = False
